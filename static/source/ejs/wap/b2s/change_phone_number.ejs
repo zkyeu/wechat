@@ -1,0 +1,36 @@
+<% include ../common/top.ejs %>
+<body data-init="studentEnter">
+	<div class="main-wrap login-wrap pb100 change_number">
+		<!-- <div class="student-enter-wrap">
+			<p><span>王诗龄</span>同学</p>
+			<img src="<%= imagessrc%>student_enter.png" alt="logo" />
+		</div> -->
+		<p class="change_number_text">验证手机号码</p>
+		<div class="form-wrap reg-step1">
+			<form action="#" autocomplete="off" rel="studentEnter" formtype="studentEnter2" name="formType">
+				<dl class="cfix unchange_number">
+					<dt></dt>
+					<dd >
+						<input type="tel" rel="phone" class="input-t-style" value="17778039761" readonly="true" />
+					</dd>
+				</dl>
+				<p class="error-tips"></p>
+				<dl class="cfix">
+					<dt class="dt1"></dt>
+					<dd>
+						<input type="tel" rel="verifycode" class="input-t-style" placeholder="请输入验证码" maxlength="6" />
+					</dd>
+					<dd class="send-verify">
+						<input type="button" value="获取验证码" send-url="http://www.baidu.com" send-type="2" />
+					</dd>
+				</dl>
+				<p class="error-tips"></p>
+				<P class="">收不到验证码，请致电：010-56164362</P>
+				<div class="submit-btn change_number" codeurl="333">
+					<input type="submit" class="input-submit" value="提交" />
+				</div>
+			</form>
+		</div>		
+	</div>
+</body>
+<% include ../common/bottom.ejs %>

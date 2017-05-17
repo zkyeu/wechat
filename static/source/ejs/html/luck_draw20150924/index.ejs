@@ -1,0 +1,302 @@
+<% include ../common/luck_top.ejs %>
+<body>
+	<div class="duck" data-init="luck" id="container">
+		<div class="d_topB">
+			<div class="d_topC minW">
+				<ul class="dt_left">
+					<li><a href="javascript:;">hi,mikel!</a></li>
+					<li><span class="dt_border"></span></li>
+					<li><a href="javascript:;">消息</a></li>
+					<li><span class="dt_border"></span></li>
+					<li><a href="javascript:;">退出</a></li>
+				</ul>
+				<ul class="dt_right">
+					<li><a href="javascript:;">官网首页</a></li>
+					<li><a href="javascript:;">价格体系</a></li>
+					<li><a href="javascript:;">课程介绍</a></li>
+					<li><a href="javascript:;">英语水平</a></li>
+					<li><a href="javascript:;">企业培训</a></li>
+					<li><a href="javascript:;">关注我们</a></li>
+					<li class="dt_marginN"><a href="javascript:;">邀请有礼</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="d_cont">
+			<div class="dc_top minW">
+				<p class="dc_topTit">你还有<span id="rest" class="dc_also" data-over-url="http://www.baidu.com">3</span>次抽奖机会<a id="overUrl" href="javascript:;" class="iconT3 dc_draw"></a></p>
+				<!-- 鸭子 -->
+				<div class="dc_topC">
+					<ul class="dc_topListT">
+						<li><a href="javascript:;" class="iconTd" data-gift-type="1"></a></li>
+						<li><a href="javascript:;" class="iconTd" data-gift-type="2"></a></li>
+						<li><a href="javascript:;" class="iconTd" data-gift-type="3"></a></li>
+						<li><a href="javascript:;" class="iconTd" data-gift-type="1"></a></li>
+					</ul>
+					<ul class="dc_topListB">
+						<li><a href="javascript:;" class="iconTd" data-gift-type="1"></a></li>
+						<li><a href="javascript:;" class="iconTd" data-gift-type="2"></a></li>
+						<li><a href="javascript:;" class="iconTd" data-gift-type="3"></a></li>
+						<li><a href="javascript:;" class="iconTd" data-gift-type="1"></a></li>
+						<li><a href="javascript:;" class="iconTd" data-gift-type="1"></a></li>
+					</ul>
+					<a href="javascript:;" class="iconT1 dc_rule"></a>
+				</div>
+				<!-- Tips -->
+				<div class="iconT3 dc_tips">
+					<ul class="dc_tipsL">
+						<li><a href="javascript:;">Tip：时长券攒够25分钟，可以兑换一张免费次卡！</a></li>
+						<li><a href="javascript:;">Tip：听说活动期间上课越多，中间几率越大哦！</a></li>
+						<li><a href="javascript:;">Tip：每完成一节1对1课程都能增加一次抽奖机会！</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="dc_bottom">
+				<!-- 我的奖品 -->
+				<div class="dc_prize minW">
+					<h3 class="dc_Tit"><span class="iconT1 iconPrize"></span><span class="iconPt">我的奖品</span></h3>
+					<ul class="dc_prizeL">
+						<li class="iconT2 iphone6s">
+							<p>Iphone6s</p>
+							<i class="iconT1 dc_prizeNw">0</i>
+						</li>
+						<li class="iconT2 fuji">
+							<p>FUJI拍立得</p>
+							<i class="iconT1 dc_prizeNw">0</i>
+						</li>
+						<li class="iconT2 mousePad">
+							<p>51Talk鼠标垫</p>
+							<i id="padNum" class="iconT1 dc_prizeNw">0</i>
+						</li>
+						<li class="iconT2 freeCard">
+							<p>免费次卡</p>
+							<i class="iconT1 dc_prizeNw">0</i>
+						</li>
+						<li class="iconT2 tenM">
+							<p>10分钟时长券</p>
+							<i class="iconT1 dc_prizeNw">0</i>
+						</li>
+						<li class="iconT2 twoM">
+							<p>2分钟时长券</p>
+							<i id="2minNum" class="iconT1 dc_prizeNw">0</i>
+						</li>
+						<li class="iconT2 oneM">
+							<p>1分钟时长券</p>
+							<i id="1minNum" class="iconT1 dc_prizeNw">0</i>
+						</li>
+					</ul>
+				</div>
+				<!-- 中奖播报 -->
+				<div class="dc_win minW">
+					<h3 class="dc_Tit"><span class="iconT1 iconWin"></span><span class="iconPt">中奖播报</span></h3>
+					<ul class="dc_winL">
+						<li class="iconT3">
+							<dl>
+								<dt class="iconT1 icon6"></dt>
+								<dd>
+									<h3 class="dc_winTit">Lucia</h3>
+									<p class="dc_textB">刚刚抽中了<span>Iphone6s</span></p>
+								</dd>
+							</dl>
+						</li>
+						<li class="iconT3 dc_winLm">
+							<dl>
+								<dt class="iconT1 iconF"></dt>
+								<dd>
+									<h3 class="dc_winTit">Lucia</h3>
+									<p class="dc_textB">刚刚抽中了<span>免费次卡</span></p>
+								</dd>
+							</dl>
+						</li>
+						<li class="iconT3">
+							<dl>
+								<dt class="iconT1 icon2m"></dt>
+								<dd>
+									<h3 class="dc_winTit">Lucia</h3>
+									<p class="dc_textB">刚刚抽中了<span>2分钟时长券</span></p>
+								</dd>
+							</dl>
+						</li>
+						<li class="iconT3 dc_winLm">
+							<dl>
+								<dt class="iconT1 icon10m"></dt>
+								<dd>
+									<h3 class="dc_winTit">Lucia</h3>
+									<p class="dc_textB">刚刚抽中了<span>10分钟时长券</span></p>
+								</dd>
+							</dl>
+						</li>
+						<li class="iconT3">
+							<dl>
+								<dt class="iconT1 iconFu"></dt>
+								<dd>
+									<h3 class="dc_winTit">Lucia</h3>
+									<p class="dc_textB">刚刚抽中了<span>FUJI拍立得</span></p>
+								</dd>
+							</dl>
+						</li>
+						<li class="iconT3 dc_winLm">
+							<dl>
+								<dt class="iconT1 icon1m"></dt>
+								<dd>
+									<h3 class="dc_winTit">Lucia</h3>
+									<p class="dc_textB">刚刚抽中了<span>1分钟时长券</span></p>
+								</dd>
+							</dl>
+						</li>
+						<li class="iconT3">
+							<dl>
+								<dt class="iconT1 iconM"></dt>
+								<dd>
+									<h3 class="dc_winTit">Lucia</h3>
+									<p class="dc_textB">刚刚抽中了<span>51Talk鼠标垫</span></p>
+								</dd>
+							</dl>
+						</li>
+						<li class="iconT3 dc_winLm">
+							<dl>
+								<dt class="iconT1 icon6"></dt>
+								<dd>
+									<h3 class="dc_winTit">Lucia</h3>
+									<p class="dc_textB">刚刚抽中了<span>Iphone6s</span></p>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 机会完了 -->
+	<div id="gameOver" class="runOut hide">
+		<div class="runOut_b marginO">
+			<div class="iconTd runOut_duck"></div>
+			<h3 class="runOut_tit">抽奖机会用完了!</h3>
+			<p class="runOut_text">上课可以增加抽奖机会哦！</p>
+			<a href="javascript:;" class="iconT3 runOut_ok">好的</a>
+			<span class="iconT3 runOut_pp"></span>
+		</div>
+	</div>
+	<!-- 不符信息 -->
+	<div id="info" class="runOut hide">
+		<div class="runOut_b marginO">
+			<div class="iconTd runOut_duck"></div>
+			<h3 class="runOut_tit"></h3>
+			<p class="runOut_text"></p>
+			<a href="javascript:;" class="iconT3 runOut_ok">好的</a>
+			<span class="iconT3 runOut_pp"></span>
+		</div>
+	</div>
+	<!-- 活动规则 -->
+	<div class="rule hide">
+		<div class="rule_b marginO">
+			<div class="iconTd rule_duck"></div>
+			<ul class="rule_list">
+				<li><span>一、</span>随便选一只小鸭子就可以参与抽奖。</li>
+				<li><span>二、</span>关于抽奖机会：<br>每完成一节1对1课程，可以增加1次抽奖机会（上的越多，机会越多，无上限）。</li>
+				<li><span>三、</span>关于奖品：<br>1、获得实物奖品的用户，客服mm会在活动结束后一周内联系您并快递奖品。<br>2、免费次卡会在10月8日自动发放到账户中，无需操作。<br>3、时长券攒够25分钟，可以自动兑换为一张免费次卡,在10月8日自动发放到您的账户中，不满25分钟的不能兑换。以上均无需操作，系统自动完成。
+				</li>
+			</ul>
+			<p class="rule_text">活动最终解释权归51Talk所有。</p>
+			<a href="javascript:;" class="iconT3 runOut_ok">知道啦</a>
+		</div>
+	</div>
+	<!-- 获得奖品 鼠标垫-->
+	<div id="pad" class="getPrize hide">
+		<div class="getPrize_b marginO">
+			<div class="iconTd getPrize_duck"></div>
+			<div class="getPrize_img"></div>
+			<div class="getPrize_text">
+				<h3>51Talk鼠标垫</h3>
+				<p>客服MM将在10月8日后<br>联系您确认快递地址。</p>
+			</div>
+			<a href="javascript:;" class="iconT3 runOut_ok">领 取</a>
+		</div>
+	</div>
+	<!-- 2分钟时长劵 -->
+	<div id="2min" class="getPrize hide">
+		<div class="getPrize_b marginO">
+			<div class="iconTd getPrize_duck"></div>
+			<div class="getPrize_img2">2分钟</div>
+			<div class="getPrize_text getPrize_mt">
+				<h3>2分钟时长券</h3>
+				<p class="getPrize_p2">时长券攒够25分钟，可以<br>自动兑换为一张免费次卡,<br>统一在10月8日发放到您<br>的账户中</p>
+			</div>
+			<a href="javascript:;" class="iconT3 runOut_ok">领 取</a>
+		</div>
+	</div>
+	<!-- 1分钟时长劵 -->
+	<div id="1min" class="getPrize hide">
+		<div class="getPrize_b marginO">
+			<div class="iconTd getPrize_duck"></div>
+			<div class="getPrize_img2 get_3">1分钟</div>
+			<div class="getPrize_text getPrize_mt">
+				<h3>1分钟时长券</h3>
+				<p class="getPrize_p2">时长券攒够25分钟，可以<br>自动兑换为一张免费次卡,<br>统一在10月8日发放到您<br>的账户中</p>
+			</div>
+			<a href="javascript:;" class="iconT3 runOut_ok">领 取</a>
+		</div>
+	</div>
+
+	<!-- Iphone6s -->
+	<div id="i6s" class="getPrize hide">
+		<div class="getPrize_b marginO">
+			<div class="iconTd getPrize_duck"></div>
+			<div class="getPrize_img2 get_3">Iphone6s</div>
+			<div class="getPrize_text getPrize_mt">
+				<h3>Iphone6s</h3>
+				<p class="getPrize_p2">时长券攒够25分钟，可以<br>自动兑换为一张免费次卡,<br>统一在10月8日发放到您<br>的账户中</p>
+			</div>
+			<a href="javascript:;" class="iconT3 runOut_ok">领 取</a>
+		</div>
+	</div>
+	<!-- FUJI拍立得 -->
+	<div id="pld" class="getPrize hide">
+		<div class="getPrize_b marginO">
+			<div class="iconTd getPrize_duck"></div>
+			<div class="getPrize_img2 get_3">FUJI拍立得</div>
+			<div class="getPrize_text getPrize_mt">
+				<h3>FUJI拍立得</h3>
+				<p class="getPrize_p2">时长券攒够25分钟，可以<br>自动兑换为一张免费次卡,<br>统一在10月8日发放到您<br>的账户中</p>
+			</div>
+			<a href="javascript:;" class="iconT3 runOut_ok">领 取</a>
+		</div>
+	</div>
+	<!-- 免费次卡 -->
+	<div id="fc" class="getPrize hide">
+		<div class="getPrize_b marginO">
+			<div class="iconTd getPrize_duck"></div>
+			<div class="getPrize_img2 get_3">免费次卡</div>
+			<div class="getPrize_text getPrize_mt">
+				<h3>免费次卡</h3>
+				<p class="getPrize_p2">时长券攒够25分钟，可以<br>自动兑换为一张免费次卡,<br>统一在10月8日发放到您<br>的账户中</p>
+			</div>
+			<a href="javascript:;" class="iconT3 runOut_ok">领 取</a>
+		</div>
+	</div>
+	<!-- 10分钟时长劵 -->
+	<div id="10min" class="getPrize hide">
+		<div class="getPrize_b marginO">
+			<div class="iconTd getPrize_duck"></div>
+			<div class="getPrize_img2 get_3">10分钟</div>
+			<div class="getPrize_text getPrize_mt">
+				<h3>10分钟时长券</h3>
+				<p class="getPrize_p2">时长券攒够25分钟，可以<br>自动兑换为一张免费次卡,<br>统一在10月8日发放到您<br>的账户中</p>
+			</div>
+			<a href="javascript:;" class="iconT3 runOut_ok">领 取</a>
+		</div>
+	</div>
+<div id="duckBz" class="duckBz"></div>
+<script>
+window.onload = function(){
+  var oTop = document.getElementById("duckBz");
+  document.onmousemove = function(evt){
+    var oEvent = evt || window.event;
+    var scrollleft = document.documentElement.scrollLeft || document.body.scrollLeft;
+    var scrolltop = document.documentElement.scrollTop || document.body.scrollTop;
+    oTop.style.left = oEvent.clientX + scrollleft + 2 + "px";
+    oTop.style.top = oEvent.clientY + scrolltop + 2 + "px";
+  }
+}
+</script>
+</body>
+<% include ../common/uc_bottom.ejs %>

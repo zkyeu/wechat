@@ -1,0 +1,31 @@
+<% include ../common/top.ejs %>
+<body>
+<!-- public top -->
+<% include top.ejs %>  
+<!-- center -->
+<div class="reps">
+  <!-- 我有idea -->
+  <div class="re-nav hide"><span>我有Idea</span></div>
+  <!-- 广告图 -->
+  <img src="<%= imagessrc%>/ceo_email.jpg">
+  <div class="re-nr">
+    <div class="r-input">
+      <input type="text" placeholder="请在这里输入标题">
+      <span>还可输入30个字符</span>
+    </div>
+    <div class="re-text">
+      <img src="<%= imagessrc%>/reps.jpg">  
+    </div>
+  </div>
+  <div class="re-btn">
+    <span class="cbox">
+      <input type="checkbox" checked="checked">
+      启用匿名
+    </span>
+    <a href="javascript:;" class="btn">发送</a>
+  </div>
+</div>
+<!-- public bottom -->
+<% include bottom.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

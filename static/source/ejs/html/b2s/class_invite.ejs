@@ -1,0 +1,27 @@
+<% include ../common/top.ejs %>
+<body >
+<input id="container" data-init="invite_class" type="hidden"/>
+<!-- 公共头 -->
+<% include ../common/b2s/b2s_header.ejs %>
+<!-- 中间内容 -->
+<div class="ce-content">
+	<div class="widthMain">
+		<div class="perfect-info">
+			<h3 class="invite_class">请验证手机并填写班级邀请码</h3>
+			<form action="http://www.baidu.com" method="get" id="invite_Form">
+				<p class="invite_error hide">请填写有效信息</p>
+				<div class="pd15 phone_co clearfix">
+					<span>手机号：13466799465</span>
+					<a class="sendCode" href="javascript:;" data-tel="13466799465">获取验证码</a>
+				</div>
+				<div class="pd15"><input placeholder="请输入手机验证码" type="text" class="invit_code"></div>
+				<div class="pd15"><input placeholder="请输入老师给的班级邀请码" type="text" class="invit_code"></div>
+				<div class="sub_btn"><button type="button" value="确定" class="invite-submit">进入班级</button></div>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

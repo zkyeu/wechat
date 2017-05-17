@@ -1,0 +1,724 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Thu Apr 28 2016 17:36:19 GMT+0800 (中国标准时间)
+ */
+/**
+ * 默认样式
+ * @file：   base.less
+ * @author:  chenxiaosong（chenxiaosong@51talk.com）
+ * @update:  2015-10-12
+ * @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  background-color: #fff;
+  _background-image: url(about:blank);
+  _background-attachment: fixed;
+  _overflow-x: hidden;
+}
+body {
+  font: 13px 'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial, Verdana, Tahoma;
+  color: #1e1e1e;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+}
+input,
+button,
+select,
+textarea {
+  font-family: 'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial, Verdana, Tahoma;
+  outline: none;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 0;
+}
+a {
+  color: #1e1e1e;
+  text-decoration: none;
+  outline: none;
+}
+a:hover {
+  color: #ff9600;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  vertical-align: middle;
+}
+::-moz-selection {
+  background-color: #ff9600;
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background-color: #ff9600;
+  color: white;
+  text-shadow: none;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  *zoom: 1;
+  *display: inline;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.relative {
+  position: relative;
+}
+.relativez {
+  position: relative;
+  zoom: 1;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.hidden {
+  overflow: hidden;
+}
+.ft12 {
+  font-size: 12px;
+}
+.ft13 {
+  font-size: 13px;
+}
+.ft14 {
+  font-size: 14px;
+}
+.ft15 {
+  font-size: 15px;
+}
+.ft16 {
+  font-size: 16px;
+}
+.ft18 {
+  font-size: 18px;
+}
+.ft19 {
+  font-size: 19px;
+}
+.ft20 {
+  font-size: 20px;
+}
+.normal {
+  font-weight: normal;
+}
+.bold {
+  font-weight: bold;
+}
+.tal {
+  text-align: left;
+}
+.tac {
+  text-align: center;
+}
+.tar {
+  text-align: right;
+}
+.f-taj {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+.f-vam,
+.f-vama * {
+  vertical-align: middle;
+}
+.f-wsn {
+  word-wrap: normal;
+  white-space: nowrap;
+}
+.f-pre {
+  overflow: hidden;
+  text-align: left;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.f-wwb {
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.f-ti {
+  overflow: hidden;
+  text-indent: -30000px;
+}
+.f-ti2 {
+  text-indent: 2em;
+}
+.f-lhn {
+  line-height: normal;
+}
+.f-tdu,
+.f-tdu:hover {
+  text-decoration: underline;
+}
+.f-tdn,
+.f-tdn:hover {
+  text-decoration: none;
+}
+.f-toe {
+  overflow: hidden;
+  word-wrap: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.f-csp {
+  cursor: pointer;
+}
+.f-csd {
+  cursor: default;
+}
+.f-csh {
+  cursor: hand;
+}
+.f-csm {
+  cursor: move;
+}
+.f-usn {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.fm-arrow-pos {
+  border-style: solid;
+  border-color: #ffa800;
+  border-width: 1px;
+}
+body,
+ul,
+ol,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+input,
+select,
+textarea,
+form {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+img {
+  border: none;
+}
+input,
+select,
+textarea {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+textarea {
+  resize: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1em;
+}
+em {
+  font-style: normal;
+}
+/*浮动*/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix:after,
+.clearfix:before {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+.reg {
+  width: 100%;
+  height: 68px;
+  background: #303030;
+}
+.reg li {
+  float: left;
+}
+.reg li span {
+  line-height: 68px;
+  color: #fff;
+  font-size: 18px;
+}
+.reg li .f_l {
+  width: 152px;
+  height: 38px;
+  line-height: 38px;
+  border: 1px #e7e7e7 solid;
+  margin: 14px 0 0 14px;
+  padding: 0 9px;
+  background: #fff;
+}
+.reg li .f_l:focus {
+  border: 1px #ffa800 solid;
+  color: #1e1e1e;
+  background: #fff9f1;
+}
+.reg .reg-li {
+  float: right;
+  margin-top: 14px;
+}
+.reg .reg-li .reg-btn {
+  float: left;
+  text-align: center;
+  width: 170px;
+  height: 40px;
+  line-height: 40px;
+  background: #ff4C4C;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.reg .reg-li .reg-btn:hover {
+  background: #ff7676;
+}
+.reg .reg-li .reg-btn:active {
+  background: #ff3434;
+}
+.info {
+  background: #303030;
+  color: #888;
+  padding: 30px 0 60px 0;
+}
+.info .tc_p {
+  text-align: center;
+}
+.info .tc_p a {
+  color: #888;
+  margin: 0 12px;
+}
+.info .tc_p a:hover {
+  color: #ff9600;
+}
+.info .link-word {
+  position: relative;
+  height: 18px;
+  margin-top: 30px;
+  border-top: 1px #424242 solid;
+}
+.info .link-word em {
+  position: absolute;
+  text-align: center;
+  top: -10px;
+  left: 50%;
+  margin-left: -36px;
+  width: 72px;
+  background: #303030;
+}
+.info .link-info {
+  line-height: 22px;
+}
+.info .link-info a {
+  margin-left: 10px;
+  color: #888;
+}
+.info .link-ti {
+  border-top: 1px #424242 solid;
+  margin-top: 15px;
+  padding-top: 30px;
+}
+.info .link-ti .link-ul {
+  width: 610px;
+  height: 49px;
+  margin: 0px auto;
+}
+.info .link-ti .link-ul li {
+  float: left;
+  width: 152px;
+}
+.info .link-ft {
+  text-align: center;
+  margin-top: 20px;
+}
+.info .link-ft em {
+  margin: 0 5px;
+}
+.info .link-ft a {
+  color: #888;
+}
+#u-gotop {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  _position: absolute;
+  _top: expression(eval(document.documentElement.clientHeight-100+document.documentElement.scrollTop));
+  display: none;
+  text-indent: -99999px;
+}
+#u-gotop a {
+  display: block;
+  width: 48px;
+  height: 48px;
+  background: url(../../../images/html/cartoonNetgotop.png?v=2016-04-28) no-repeat;
+}
+#u-gotop a:hover {
+  background-position: -50px 0;
+}
+body {
+  font-family: "Microsoft YaHei";
+}
+.cartoonNet .cn_header {
+  height: 80px;
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+.cartoonNet .cn_header .cn_logo {
+  display: block;
+  height: 50px;
+  width: 306px;
+  position: absolute;
+  left: 0;
+  top: 15px;
+}
+.cartoonNet .cn_header i {
+  display: block;
+  height: 55px;
+  width: 155px;
+  background: url(../../../images/html/cartoonNet/icon.png?v=K02xj%2F2p0sD0ZcrzJsLeBw%3D%3D) no-repeat left top;
+}
+.cartoonNet .cn_header span {
+  position: absolute;
+  right: 0;
+  top: 26%;
+  font-size: 19px;
+}
+.cartoonNet .cn_header span em {
+  display: inline-block;
+  height: 20px;
+  width: 16px;
+  background: url(../../../images/html/cartoonNet/icon.png?v=K02xj%2F2p0sD0ZcrzJsLeBw%3D%3D) no-repeat -189px -14px;
+}
+.cartoonNet .cn_white {
+  height: 70px;
+}
+.cartoonNet .cn_title {
+  height: 120px;
+  background: #ccc;
+  text-align: center;
+  line-height: 120px;
+  font-size: 38px;
+  border-top: 3px solid #FF8201;
+}
+.cartoonNet .reg li .f_email {
+  margin-left: 10px;
+}
+.cartoonNet .reg li .f_password {
+  margin-left: 10px;
+  width: 142px;
+}
+.cartoonNet .reg li .f_mobile {
+  margin-left: 10px;
+  width: 142px;
+}
+.cartoonNet .reg li .jscheckbox {
+  float: left;
+  margin: 24px 0 0 10px;
+}
+.cartoonNet .reg li .jscheckbox a {
+  color: #fff;
+}
+.cartoonNet .centerMth {
+  width: 1000px;
+  margin: 0 auto;
+}
+.cartoonNet .cn_banner {
+  height: 520px;
+  width: 100%;
+  background: url(../../../images/html/cartoonNet/cn_banner.jpg?v=dhnJOISTJf%2FPcdd%2BUUScxg%3D%3D) no-repeat center top;
+}
+.cartoonNet .cn_nav {
+  height: 80px;
+  width: 100%;
+  background: #e0e0e0;
+  margin-bottom: 80px;
+}
+.cartoonNet .cn_nav .cn_navIn {
+  width: 999px;
+  height: 80px;
+  margin: 0 auto;
+}
+.cartoonNet .cn_nav .cn_navIn a {
+  display: block;
+  float: left;
+  height: 50px;
+  width: 249px;
+  text-align: center;
+  font-size: 30px;
+  color: #1e1e1e;
+  margin-top: 15px;
+  border-right: 1px solid #ccc;
+  line-height: 50px;
+}
+.cartoonNet .cn_nav .cn_navIn .border0 {
+  border: 0;
+}
+.cartoonNet .cn_nav .cn_navIn .cn_active {
+  height: 76px;
+  line-height: 71px;
+  border-top: 5px solid #ffa800;
+  margin-top: 0;
+  background: #fff;
+  margin-left: -1px;
+  border-right: 0;
+  width: 240px;
+}
+.cartoonNet .cn_picList {
+  width: 1000px;
+  height: 368px;
+  margin: 0 auto;
+}
+.cartoonNet .cn_picList .cn_picLists {
+  height: 100%;
+  width: 300px;
+  float: left;
+}
+.cartoonNet .cn_picList .cn_picLists .cn_picList_img {
+  height: 265px;
+  width: 100%;
+}
+.cartoonNet .cn_picList .cn_picLists .cn_picList_txt {
+  height: 84px;
+  width: 100%;
+  text-align: center;
+  line-height: 84px;
+  color: #1e1e1e;
+  font-size: 24px;
+}
+.cartoonNet .cn_picList .cn_picList_center {
+  margin: 0 50px;
+}
+.cartoonNet .cn_footer {
+  margin-top: 30px;
+  height: 70px;
+  width: 100%;
+  padding-top: 60px;
+  background: #303030;
+}
+.cartoonNet .cn_footer p {
+  color: #888;
+  text-align: center;
+}
+.cartoonNet .g-list {
+  background-color: #efefef;
+  padding-top: 80px;
+  padding-bottom: 30px;
+}
+.cartoonNet .g-list .list-width {
+  width: 1000px;
+  margin: 0 auto;
+}
+.cartoonNet .g-list ul {
+  margin-right: -50px;
+}
+.cartoonNet .g-list li {
+  width: 475px;
+  float: left;
+  height: 359px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+}
+.cartoonNet .g-list .l-text {
+  font-size: 18px;
+  line-height: 88px;
+  height: 88px;
+  background-color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+.cartoonNet .g-list .l-text1 {
+  font-size: 18px;
+  line-height: 30px;
+  background-color: #fff;
+  text-align: center;
+  overflow: hidden;
+  padding-top: 20px;
+}
+.cartoonNet .g-list .l-text2 {
+  color: #999999;
+  font-size: 16px;
+  padding-top: 0;
+  padding-bottom: 25px;
+}

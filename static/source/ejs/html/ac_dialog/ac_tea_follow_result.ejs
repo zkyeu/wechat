@@ -1,0 +1,26 @@
+<% include ../common/top.ejs %>
+<body data-init="acteaFollow">
+    <div class="ac-dialog-wrap">
+        <div class="ac-dialog-header clearfix">
+            <p class="fl">Quiz</p>
+            <p class="fr">
+                <a href="javascript:void(0);" class="a-close">Go back to class</a>
+            </p>
+        </div>
+        <div class="ac-dialog-content">
+            <div class="ac-tea ac-follow-tea ac-follow-tea-result">
+                <p class="follow-tips follow-timmer">The student is reading and recording the sentences. He/She will finish in <span>5</span> seconds.</p>
+                <div class="follow-play">
+                    <span yinpin="http://sdk.cloud.chivox.com/chivoxsdk-js/v3.0/Examples/static/mp3/en/past.mp3" swfHref=""></span>
+                </div>
+                <div class="follow-img">
+                    <img src="<%= imagessrc%>ac-follow.jpg" />
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="ac-dialog-bottom">
+        </div>
+    </div>
+</body>
+<% include ../common/bottom.ejs %>

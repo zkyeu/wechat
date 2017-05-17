@@ -1,0 +1,79 @@
+<% include ../common/top_b2s_n.ejs %>
+<link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>start_class.css">
+</head>
+<body data-init="startClass" class="start_class">
+     <script type="text/javascript">
+        window.onload = function(){
+            document.documentElement.style.fontSize = document.body.clientWidth / 6.4 + "px";
+             document.getElementsByClassName("fontSizeLoding")[0].style.display = "none";
+        };
+    </script> 
+    <img src="<%= imagessrc%>top_title.png" class="class_top_img">
+    <div class="start_class_content">
+        <div class="text_title">欢迎领取中外教联合授课的秋季口语集训课！集训课程包含2节中教课串讲知识，6节外教一对一开心畅聊，让孩子沟通无忧。</div>
+        <img src="<%= imagessrc%>start_class_title_1.png" class="class_title_img">
+        <div class="text_title_time">
+            中教固定时间段：1对10,  1次/周，50min/
+            外教自选时间段：1对1，3次/周，25min/课
+        </div>
+        <img src="<%= imagessrc%>start_class_title_2.png" class="class_title_img">
+        <ul class="grade_part">
+            <li class="cfix">
+               <P class="left">年级</P>
+               <p class="right">教学内容</p> 
+            </li>
+            <li class="cfix">
+               <P class="left">一年级</P>
+               <p class="right">身体部位、家庭成员、水果、文具、数字、动作等主题词汇24-26个；功能句型6-10个；26个英文字母</p> 
+            </li>
+            <li class="cfix">
+               <P class="left">二年级</P>
+               <p class="right">家庭成员、动物、食物、动作、交通等主题词汇24-28个；功能句型8-10个；二合辅音、二合元音和简单的辅音丛拼读。</p> 
+            </li>
+            <li class="cfix">
+               <P class="left">三年级</P>
+               <p class="right">动词词组、动物、数学运算、校园等核心词汇20-24个；功能句型8-10个；CVC单词和CVCE单词的拼读。</p> 
+            </li>
+            <li class="cfix">
+               <P class="left">四年级</P>
+               <p class="right">房间、生活用品、食物、描述类形容词、科目、动词词组等核心词汇36-40个；重点句型10-12个；主要语法知识点6个。</p> 
+            </li>
+            <li class="cfix">
+               <P class="left">五年级</P>
+               <p class="right">重点词汇36-40个；重点句型8-10个；主要语法知识点6个。</p> 
+            </li>
+            <li class="cfix">
+               <P class="left">六年级</P>
+               <p class="right">重点词汇36-40个；重点句型8-10个；主要语法知识点6个。</p> 
+            </li>
+        </ul>
+        <img src="<%= imagessrc%>start_class_title_3.png" class="class_title_img">
+        <div class="text_title_list">
+             <img src="<%= imagessrc%>list_img.png" >
+             <p>每天作业打卡，成长曲线看得见</p>
+        </div>
+        <img src="<%= imagessrc%>start_class_title_4.png" class="class_title_img">
+        <form  action="" rel="startClass" autocomplete="off">
+            <div class="text_title_class">
+                <p class="out_title">出席承诺</p>
+                <p class="out_text">我承诺，领取课程后确定孩子可以按时出席，如因个人原因缺席课程，自愿每节缺席扣除互联网+外教进校工程VIP精品课1节。</p>
+                <textarea></textarea>
+                <p class="agree">(请认真阅读承诺内容，并手动输入到内容框内，遵守承诺)</p>
+                <p class="cfix checked"><span class=""></span>我确定遵守承诺，督促孩子按时上课。</p>
+            </div>
+            <div class="text_title_login">
+              <input type="submit" class="sub_account" value="申请" />
+              <input type="hidden" id="isLogin" value="1">
+              <input type="hidden" id="mobile" value="">
+              <input type="hidden" id="loginAction" value="">
+              <input type="hidden" id="logoutAction" value="">
+              <input type="hidden" id="saveAction" value="">
+            </div>
+      </form>
+    </div>
+    <div class="fontSizeLoding">
+        <img src="<%= imagessrc%>eff_loading.gif">
+    </div>
+</body>
+<!--公共尾部结束-->
+<% include ../common/bottom.ejs %>

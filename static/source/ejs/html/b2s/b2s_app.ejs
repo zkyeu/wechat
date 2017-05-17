@@ -1,0 +1,37 @@
+<% include ../common/top_b2s.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>b2s_index.css">
+</head>
+<body id="container" data-init="b2sApp" class="b2s-app">
+<div id="fullpage" class="fullpage" qrIndex="1">
+    <div class="section">
+		<% include b2s_common/header.ejs %>
+    	<div class="fullpage-con fullpage-con1">
+            <div class="app-download">
+                <a href="" target="_blank"></a>
+                <a href="" target="_blank"></a>
+            </div>
+    	</div>
+    </div>
+    <div class="section">
+    	<div class="fullpage-con fullpage-con2"></div>
+    </div>
+    <div class="section">
+    	<div class="fullpage-con fullpage-con3"></div>
+    </div>
+    <div class="section">
+    	<div class="fullpage-con fullpage-con4"></div>
+    </div>
+    <div class="section">
+    	<div class="fullpage-con fullpage-con5"></div>
+        <% include b2s_common/footer.ejs %>
+    </div>
+</div>
+<div class="app-download-qrcode">
+	<img src="<%= imagessrc%>fullpage-qrcode.png" width="127" height="127" />
+	<p>手机扫描二维码下载</p>
+</div>
+<div class="b2s-app-back b2s-app-back-app">
+    <img src="<%= imagessrc%>index-back.png" width="48" />
+</div>
+</body>
+<% include ../common/bottom.ejs %>

@@ -1,0 +1,32 @@
+<% include ../common/top.ejs %>
+<body>
+	<%include ../common/uc_header.ejs %>
+	<!-- 青少 -->
+	<div class="young-wrap clearfix" data-init="certificate">
+		<div class="placeholder">这里是左侧栏占位</div>
+		<div class="container">
+			<div class="banner">
+				<img src="<%=imagessrc%>banner-young.jpg">
+			</div>
+			<div class="tips">
+				<h6>亲爱的学员：</h6>
+				<h6>在51Talk每个level阶段都有针对性级别测试，通过不同阶段的级别测试将获得等级证书。</h6>
+			</div>
+			<div class="show">
+				<h1 class="title">证书展示</h1>
+				<div class="img-lst">
+					<img src="<%=imagessrc%>cert-young.jpg">
+				</div>
+			</div>
+			<!--获取方式-->
+			<% include ./module/all_introduce.ejs%>
+			<!--晋级体系-->
+			<% include ./module/all_access.ejs%>
+			<!--立即约课赢取级别证书-->
+			<% include ./module/earn.ejs%>
+		</div>
+	</div>
+	<% include ../common/uc_footer.ejs %>
+	<script src="<%=jssrc%>"></script>
+</body>
+</html>

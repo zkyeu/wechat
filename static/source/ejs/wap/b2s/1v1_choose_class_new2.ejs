@@ -1,0 +1,38 @@
+<% include ../common/top_b2s_n.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>1v1_choose_class_new2.css">
+</head>
+<body data-init="" class="choose_class">
+<div class="top_message">
+    <p><span>中教预习课</span>剩余 5课次  每周六10:00</p>
+    <p><span>1对1外教课</span>剩余 15课次 自主预约外教</p>
+</div>
+<!-- about_class_app -->
+<div class="about_class">
+    <p class="text_title">中教预习课</p>
+    <p class="text_mes_show">每周六10:00 上课周期：<br>2017年3月10日-2017年9月10日</p>
+    <p class="text_mes_show">如缺席上课，可提前在微信服务群与中教老师联系，由老师录制视频，课后视频学习。</p>
+    <p class="text_title">1对1外教课</p>
+    <p class="text_mes_show">需要家长自主预约，点击查看约课流程</p>
+    <p class="text_mes_show">外教专属1对1课程预约请提前30分钟，取消课程请提前1小时。</p>
+    <p class="text_title">上课软件</p>
+    <p class="text_mes_show">电脑端上课软件AC可以上所有课程，屏幕更大，体验更好，推荐用AC上课。</p>
+    <p class="text_mes_show">手机客户端“51Talk无忧英语”APP可以完成中教预习课和1对1外教课上课。</p>
+    <p class="text_mes_show">手机客户端“无忧课堂”APP可以上无忧课堂免费的精品课和校园公开课。</p>
+    <p class="text_title">其他服务</p>
+    <p class="text_mes_show">1对1外教全程托管班，中外教课程不能单独退费，并只可在上课前申请退费。</p>
+    <p class="text_mes_show">如有问题请咨询中教班级微信群，或咨询客服电话：4006635151</p>
+</div>
+
+<!-- loading -->
+<div id="fontSizeLoding">
+    <img src="<%= imagessrc%>eff_loading.gif">
+</div>
+<script type="text/javascript">
+window.onload = function(){
+    document.documentElement.style.fontSize = document.body.clientWidth / 6.4 + "px";
+    document.getElementById("fontSizeLoding").style.display = "none";
+}
+</script>
+</body>
+<!--公共尾部结束-->
+<% include ../common/bottom.ejs %>

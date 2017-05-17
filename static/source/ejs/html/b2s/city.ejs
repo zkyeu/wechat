@@ -1,0 +1,44 @@
+<% include ../common/top.ejs %>
+<body>
+<input type="hidden" id="container" data-init="agentLogin" />
+<!-- 公共头 -->
+<% include ../common/b2s/b2s_header.ejs %>
+<div class="agent-login widthMain">
+  <div class="agent-login-wrap">
+    <h3 class="agent-login-t">
+      城市经理登录
+    </h3>
+    <div class="agent-login-form form-style-1">
+      <form action="#" autocomplete="off" rel="agentLogin">
+        <dl>
+          <dt><label for="mobile">手机号：</label></dt>
+          <dd class="input-dd"><input type="text" id="phone" rel="phone" /></dd>
+          <dd><p class="error-tip"></p></dd>
+        </dl>
+        <dl>
+          <dt><label for="password">密&nbsp;&nbsp;&nbsp;码：</label></dt>
+          <dd class="input-dd"><input type="password" id="password" rel="password" /></dd>
+          <dd><p class="error-tip"></p></dd>
+        </dl>
+        <dl class="autoLogin">
+          <dt>&nbsp;</dt>
+          <dd class="pass_input">
+            <input type="checkbox" id="autoLogin" />
+            <label for="autoLogin">下次自动登录</label>
+            <a href="javascript:;" class="foget_pass">忘记密码</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>&nbsp;</dt>
+          <dd>
+            <input type="submit" class="sub-btn" value="立即登录" />
+          </dd>
+        </dl>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

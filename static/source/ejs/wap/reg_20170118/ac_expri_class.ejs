@@ -1,0 +1,74 @@
+<% include ../common/reg_top.ejs %>
+<body>
+	<header>
+		<img src="<%= imagessrc%>logo.png">
+	</header>
+	<span class="hd_word"><a href="javascript:;" class="lt"><img src="<%= imagessrc%>nav_lt.png"></a>修改课程信息</span>
+	<section class="cha-course" data-init="reg" id="container">
+		<p>外教老师：Noble</p>
+		<p>预约时间：2015/09／28  22:30－23:00</p> 
+		<p><em>课程和教材：</em><b>Travel plans  教你轻松出境游教你轻松自助游</b></p>    
+		<h3>修改课程和教材：</h3>
+		<div class="ac-change">
+			<div class="ac-sect">
+				<div class="lt">Please Select</div>
+				<i class="rt"></i>
+				<ul class="ac-down">
+					<li data-course-id=""><a href="javascript:;">Please Select</a></li>
+					<li data-course-id="8595"><a href="javascript:;">经典英语 Level 3</a></li>
+					<li data-course-id="24"><a href="javascript:;">商务英语・Business English Conversation</a></li>
+					<li data-course-id="27"><a href="javascript:;">青少年英语・Kids English</a></li>
+					<li data-course-id="28"><a href="javascript:;">雅思口语・IELTS Speaking</a></li>
+					<li data-course-id="3623"><a href="javascript:;">新托福口语・TOEFL Speaking</a></li>
+					<li data-course-id="6961"><a href="javascript:;">面试口语・Interview English</a></li>
+					<li data-course-id="23"><a href="javascript:;">综合英语・Comprehensive English</a></li>
+				</ul>
+			</div>
+			<div class="ac-sect" style="display: none;">
+				<div class="lt">Please Select</div>
+				<i class="rt"></i>
+				<ul class="ac-down">
+				</ul>
+			</div>
+<!-- 			<div class="ac-sect" style="display: none;">
+				<div class="lt">Please Select</div>
+				<i class="rt"></i>
+				<ul class="ac-down">
+				</ul>
+			</div> -->
+		</div>
+		<h3>上课方式：</h3>
+		<div class="ac-change">
+			<div class="ac-sect ac-new-sect" id="ac-lt">
+				<div class="lt">51Talk AC</div>
+				<i class="rt"></i>
+			</div>
+			<ul class="ac-down-new">
+				<li><a href="javascript:;" data-listen-type="1">QQ</a></li>
+				<li><a href="javascript:;" data-listen-type="2">51Talk</a></li>
+				<li><a href="javascript:;" data-listen-type="3">Skype</a></li>
+			</ul>
+		</div>
+		<h3>修改给老师的留言：</h3>
+		<h4>(我们的老师为外教，请使用英语留言）</h4>
+		<form id="regForm">
+			<div class="textarea">
+				<textarea id="Desc" name="Desc" class="text" placeholder="不超过300个字"></textarea>
+			</div>
+			<input id="old_course_sub" type="hidden" value="1"/>
+			<input id="old_lesson_type" type="hidden" value="2"/>
+			<aside class="ac-btn">
+					<input id="course_top" name="course_top" type="hidden" value="1"/>
+					<input id="course_sub" name="course_sub" type="hidden" value="1"/>
+					<input id="lesson_type" name="lesson_type" type="hidden" value="1"/>
+					<a id="changeBtn" href="javascript:;">确认修改</a>
+			</aside>
+		</form>
+	</section>
+	<footer>
+	    <aside class="second">   
+	        <p><span>客服热线：</span>4000-51-51-51</p>
+	    </aside>
+	</footer>
+</body>
+<% include ../common/reg_bottom.ejs %>

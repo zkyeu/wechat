@@ -1,0 +1,630 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Wed Sep 07 2016 19:11:42 GMT+0800 (中国标准时间)
+ */
+.first-grade {
+  position: relative;
+  height: 600px;
+}
+.first-grade .play {
+  height: 80px;
+  margin-top: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #666;
+}
+.first-grade .play .play-btn {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin-left: 5px;
+  background: url(../../../images/html/group_class/play-normal.png?v=KgBV7B9aigCpOcy4ArmUiQ%3D%3D) no-repeat;
+  vertical-align: middle;
+}
+.first-grade .play .play-btn:hover {
+  margin-top: -3px;
+}
+.first-grade .play .playing {
+  background: url(../../../images/html/group_class/playing.gif?v=b56%2FHGtlMFJgIcVxsLhJ2A%3D%3D) no-repeat;
+}
+.first-grade .common-bg {
+  position: absolute;
+  width: 785px;
+  height: 540px;
+  padding: 60px 85px 0 130px;
+}
+.first-grade .common-bg h2 {
+  font-size: 24px;
+  color: #ff6d02;
+  font-weight: bold;
+}
+.first-grade .first-question ul {
+  margin: 30px 0 0 20px;
+  counter-reset: li;
+}
+.first-grade .first-question li {
+  float: left;
+  position: relative;
+  width: 140px;
+  height: 120px;
+  margin-right: 22px;
+  border: #dec125 solid 2px;
+  background: url(../../../images/html/group_class/first_grade.png?v=XTBtfSdBjRTaYMe7ig%2Fq9g%3D%3D) 0 0 no-repeat;
+}
+.first-grade .first-question li::after {
+  position: absolute;
+  left: -15px;
+  top: -10px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: #dec125;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 50%;
+  content: counter(li, upper-latin);
+  counter-increment: li;
+  text-align: center;
+}
+.first-grade .first-question li:hover {
+  margin-top: -3px;
+}
+.first-grade .first-question .current {
+  margin-top: -3px;
+  border: #ea7118 solid 2px;
+}
+.first-grade .first-question .current::after {
+  background: #ea7118;
+}
+.first-grade .first-question .current:hover {
+  margin-top: -3px;
+}
+.first-grade .first-question .wrong {
+  background-position: 0 0;
+}
+.first-grade .first-question .right {
+  background-position: -318px 0;
+}
+.first-grade .second-question ul {
+  margin: 30px 0 0 20px;
+  counter-reset: li;
+}
+.first-grade .second-question li {
+  float: left;
+  position: relative;
+  width: 140px;
+  height: 120px;
+  margin-right: 22px;
+  border: #dec125 solid 2px;
+  background: url(../../../images/html/group_class/first_grade.png?v=XTBtfSdBjRTaYMe7ig%2Fq9g%3D%3D) 0 0 no-repeat;
+}
+.first-grade .second-question li::after {
+  position: absolute;
+  left: -15px;
+  top: -10px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: #dec125;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 50%;
+  content: counter(li, upper-latin);
+  counter-increment: li;
+  text-align: center;
+}
+.first-grade .second-question li:hover {
+  margin-top: -3px;
+}
+.first-grade .second-question .current {
+  margin-top: -3px;
+  border: #ea7118 solid 2px;
+}
+.first-grade .second-question .current::after {
+  background: #ea7118;
+}
+.first-grade .second-question .current:hover {
+  margin-top: -3px;
+}
+.first-grade .second-question .wrong {
+  background-position: -470px 0;
+}
+.first-grade .second-question .right {
+  background-position: -160px 0;
+}
+.first-grade .third-question ul {
+  margin: 30px 0 0 20px;
+  counter-reset: li;
+}
+.first-grade .third-question li {
+  float: left;
+  position: relative;
+  width: 140px;
+  height: 120px;
+  margin-right: 22px;
+  border: #dec125 solid 2px;
+  background: url(../../../images/html/group_class/first_grade.png?v=XTBtfSdBjRTaYMe7ig%2Fq9g%3D%3D) 0 0 no-repeat;
+}
+.first-grade .third-question li::after {
+  position: absolute;
+  left: -15px;
+  top: -10px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: #dec125;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 50%;
+  content: counter(li, upper-latin);
+  counter-increment: li;
+  text-align: center;
+}
+.first-grade .third-question li:hover {
+  margin-top: -3px;
+}
+.first-grade .third-question .current {
+  margin-top: -3px;
+  border: #ea7118 solid 2px;
+}
+.first-grade .third-question .current::after {
+  background: #ea7118;
+}
+.first-grade .third-question .current:hover {
+  margin-top: -3px;
+}
+.first-grade .third-question .wrong {
+  background-position: -790px 0;
+}
+.first-grade .third-question .right {
+  background-position: -628px 0;
+}
+.first-grade .fourth-question ul {
+  margin: 30px 0 0 20px;
+  counter-reset: li;
+}
+.first-grade .fourth-question li {
+  float: left;
+  position: relative;
+  width: 140px;
+  height: 120px;
+  margin-right: 22px;
+  border: #dec125 solid 2px;
+  background: url(../../../images/html/group_class/first_grade.png?v=XTBtfSdBjRTaYMe7ig%2Fq9g%3D%3D) 0 0 no-repeat;
+}
+.first-grade .fourth-question li::after {
+  position: absolute;
+  left: -15px;
+  top: -10px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: #dec125;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 50%;
+  content: counter(li, upper-latin);
+  counter-increment: li;
+  text-align: center;
+}
+.first-grade .fourth-question li:hover {
+  margin-top: -3px;
+}
+.first-grade .fourth-question .current {
+  margin-top: -3px;
+  border: #ea7118 solid 2px;
+}
+.first-grade .fourth-question .current::after {
+  background: #ea7118;
+}
+.first-grade .fourth-question .current:hover {
+  margin-top: -3px;
+}
+.first-grade .fourth-question .wrong {
+  background-position: -792px -143px;
+}
+.first-grade .fourth-question .right {
+  background-position: -631px -143px;
+}
+.first-grade .fifth-question ul {
+  margin: 30px 0 0 20px;
+  counter-reset: li;
+}
+.first-grade .fifth-question li {
+  float: left;
+  position: relative;
+  width: 140px;
+  height: 120px;
+  margin-right: 22px;
+  border: #dec125 solid 2px;
+  background: url(../../../images/html/group_class/first_grade.png?v=XTBtfSdBjRTaYMe7ig%2Fq9g%3D%3D) 0 0 no-repeat;
+}
+.first-grade .fifth-question li::after {
+  position: absolute;
+  left: -15px;
+  top: -10px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: #dec125;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 50%;
+  content: counter(li, upper-latin);
+  counter-increment: li;
+  text-align: center;
+}
+.first-grade .fifth-question li:hover {
+  margin-top: -3px;
+}
+.first-grade .fifth-question .current {
+  margin-top: -3px;
+  border: #ea7118 solid 2px;
+}
+.first-grade .fifth-question .current::after {
+  background: #ea7118;
+}
+.first-grade .fifth-question .current:hover {
+  margin-top: -3px;
+}
+.first-grade .fifth-question .wrong {
+  background-position: -478px -141px;
+}
+.first-grade .fifth-question .right {
+  background-position: -317px -141px;
+}
+.first-grade .sixth-question ul {
+  margin: 30px 0 0 20px;
+  counter-reset: li;
+}
+.first-grade .sixth-question li {
+  float: left;
+  position: relative;
+  width: 140px;
+  height: 120px;
+  margin-right: 22px;
+  border: #dec125 solid 2px;
+  background: url(../../../images/html/group_class/first_grade.png?v=XTBtfSdBjRTaYMe7ig%2Fq9g%3D%3D) 0 0 no-repeat;
+}
+.first-grade .sixth-question li::after {
+  position: absolute;
+  left: -15px;
+  top: -10px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: #dec125;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 50%;
+  content: counter(li, upper-latin);
+  counter-increment: li;
+  text-align: center;
+}
+.first-grade .sixth-question li:hover {
+  margin-top: -3px;
+}
+.first-grade .sixth-question .current {
+  margin-top: -3px;
+  border: #ea7118 solid 2px;
+}
+.first-grade .sixth-question .current::after {
+  background: #ea7118;
+}
+.first-grade .sixth-question .current:hover {
+  margin-top: -3px;
+}
+.first-grade .sixth-question .wrong {
+  background-position: -2px -284px;
+}
+.first-grade .sixth-question .right {
+  background-position: -163px -284px;
+}
+.first-grade .seventh-question ul {
+  margin: 30px 0 0 20px;
+  counter-reset: li;
+}
+.first-grade .seventh-question li {
+  float: left;
+  position: relative;
+  width: 140px;
+  height: 120px;
+  margin-right: 22px;
+  border: #dec125 solid 2px;
+  background: url(../../../images/html/group_class/first_grade.png?v=XTBtfSdBjRTaYMe7ig%2Fq9g%3D%3D) 0 0 no-repeat;
+}
+.first-grade .seventh-question li::after {
+  position: absolute;
+  left: -15px;
+  top: -10px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: #dec125;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 50%;
+  content: counter(li, upper-latin);
+  counter-increment: li;
+  text-align: center;
+}
+.first-grade .seventh-question li:hover {
+  margin-top: -3px;
+}
+.first-grade .seventh-question .current {
+  margin-top: -3px;
+  border: #ea7118 solid 2px;
+}
+.first-grade .seventh-question .current::after {
+  background: #ea7118;
+}
+.first-grade .seventh-question .current:hover {
+  margin-top: -3px;
+}
+.first-grade .seventh-question .wrong {
+  background-position: -478px -287px;
+}
+.first-grade .seventh-question .right {
+  background-position: -317px -287px;
+}
+.first-grade .eighth-question h2 {
+  -webkit-user-select: none;
+}
+.first-grade .eighth-question ul {
+  margin: 30px 0 0 20px;
+  counter-reset: li;
+}
+.first-grade .eighth-question li {
+  float: left;
+  position: relative;
+  width: 140px;
+  height: 120px;
+  margin-right: 22px;
+  border: #dec125 solid 2px;
+  background: url(../../../images/html/group_class/first_grade.png?v=XTBtfSdBjRTaYMe7ig%2Fq9g%3D%3D) 0 0 no-repeat;
+}
+.first-grade .eighth-question li::after {
+  position: absolute;
+  left: -15px;
+  top: -10px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: #dec125;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 50%;
+  content: counter(li, upper-latin);
+  counter-increment: li;
+  text-align: center;
+}
+.first-grade .eighth-question li:hover {
+  margin-top: -3px;
+}
+.first-grade .eighth-question .current {
+  margin-top: -3px;
+  border: #ea7118 solid 2px;
+}
+.first-grade .eighth-question .current::after {
+  background: #ea7118;
+}
+.first-grade .eighth-question .current:hover {
+  margin-top: -3px;
+}
+.first-grade .eighth-question .wrong {
+  background-position: -632px -286px;
+}
+.first-grade .eighth-question .right {
+  background-position: -793px -286px;
+}
+.first-grade .ninth-question ul {
+  margin: 30px 0 0 20px;
+  counter-reset: li;
+}
+.first-grade .ninth-question li {
+  float: left;
+  position: relative;
+  width: 140px;
+  height: 120px;
+  margin-right: 22px;
+  border: #dec125 solid 2px;
+  background: url(../../../images/html/group_class/first_grade.png?v=XTBtfSdBjRTaYMe7ig%2Fq9g%3D%3D) 0 0 no-repeat;
+}
+.first-grade .ninth-question li::after {
+  position: absolute;
+  left: -15px;
+  top: -10px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: #dec125;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 50%;
+  content: counter(li, upper-latin);
+  counter-increment: li;
+  text-align: center;
+}
+.first-grade .ninth-question li:hover {
+  margin-top: -3px;
+}
+.first-grade .ninth-question .current {
+  margin-top: -3px;
+  border: #ea7118 solid 2px;
+}
+.first-grade .ninth-question .current::after {
+  background: #ea7118;
+}
+.first-grade .ninth-question .current:hover {
+  margin-top: -3px;
+}
+.first-grade .ninth-question .wrong {
+  background-position: 0 0;
+}
+.first-grade .ninth-question .right {
+  background-position: 0 0;
+}
+.first-grade .ninth-question li {
+  line-height: 120px;
+  background: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+.first-grade .tenth-question ul {
+  margin: 30px 0 0 20px;
+  counter-reset: li;
+}
+.first-grade .tenth-question li {
+  float: left;
+  position: relative;
+  width: 140px;
+  height: 120px;
+  margin-right: 22px;
+  border: #dec125 solid 2px;
+  background: url(../../../images/html/group_class/first_grade.png?v=XTBtfSdBjRTaYMe7ig%2Fq9g%3D%3D) 0 0 no-repeat;
+}
+.first-grade .tenth-question li::after {
+  position: absolute;
+  left: -15px;
+  top: -10px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: #dec125;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 50%;
+  content: counter(li, upper-latin);
+  counter-increment: li;
+  text-align: center;
+}
+.first-grade .tenth-question li:hover {
+  margin-top: -3px;
+}
+.first-grade .tenth-question .current {
+  margin-top: -3px;
+  border: #ea7118 solid 2px;
+}
+.first-grade .tenth-question .current::after {
+  background: #ea7118;
+}
+.first-grade .tenth-question .current:hover {
+  margin-top: -3px;
+}
+.first-grade .tenth-question .wrong {
+  background-position: -2px -138px;
+}
+.first-grade .tenth-question .right {
+  background-position: -163px -138px;
+}
+.first-grade .eleventh-question .question-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.first-grade .eleventh-question .question-wrap li {
+  margin-top: 10px;
+  height: 60px;
+  border: #dec125 dashed 2px;
+  background: #fff;
+  text-align: center;
+}
+.first-grade .eleventh-question .question-wrap .move {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.first-grade .eleventh-question .ask-wrap {
+  width: 80px;
+  margin-right: 40px;
+}
+.first-grade .eleventh-question .ask-wrap li {
+  width: 80px;
+  border-style: solid;
+  background: url(../../../images/html/group_class/first_grade.png?v=XTBtfSdBjRTaYMe7ig%2Fq9g%3D%3D) no-repeat;
+}
+.first-grade .eleventh-question .ask-wrap .gray {
+  background-position: -189px -446px;
+}
+.first-grade .eleventh-question .ask-wrap .red {
+  background-position: -832px -443px;
+}
+.first-grade .eleventh-question .ask-wrap .green {
+  background-position: -346px -447px;
+}
+.first-grade .eleventh-question .ask-wrap .yellow {
+  background-position: -667px -442px;
+}
+.first-grade .eleventh-question .ask-wrap .blue {
+  background-position: -503px -446px;
+}
+.first-grade .eleventh-question .answer-wrap {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  margin-right: 20px;
+}
+.first-grade .eleventh-question .answer-wrap .current {
+  border-color: #dec125;
+  border-style: solid;
+}
+.first-grade .eleventh-question .option-wrap {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  margin-right: 20px;
+}
+.first-grade .eleventh-question .option-wrap li {
+  border-style: solid;
+}
+.first-grade .twelfth-question .question-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.first-grade .twelfth-question .question-wrap li {
+  margin-top: 10px;
+  height: 60px;
+  border: #dec125 dashed 2px;
+  background: #fff;
+  text-align: center;
+}
+.first-grade .twelfth-question .ask-wrap {
+  width: 80px;
+  margin-right: 40px;
+}
+.first-grade .twelfth-question .ask-wrap li {
+  line-height: 60px;
+  font-size: 36px;
+  color: #666;
+  font-weight: bold;
+  border-style: solid;
+}
+.first-grade .twelfth-question .answer-wrap {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  margin-right: 20px;
+}
+.first-grade .twelfth-question .answer-wrap .current {
+  border-style: solid;
+}
+.first-grade .twelfth-question .option-wrap {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+.first-grade .twelfth-question .option-wrap li {
+  border-style: solid;
+}

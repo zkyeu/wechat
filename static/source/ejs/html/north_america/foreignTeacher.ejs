@@ -1,0 +1,315 @@
+<!-- meta -->
+<% include inc/meta.ejs %>
+<!-- meta end -->
+<body>
+<!-- 顶部 -->
+<%- include("../www_new/common/w_nav.ejs",{
+  wrapClass:"north-nav-list",
+  navList:[
+    {
+      className:"crt",
+      text:"51Talk美国小学",
+      url:"http://usa.51talk.com/"
+    },
+    {
+      className:"",
+      text:"教学理念",
+      url:"http://usa.51talk.com/index/teachingPhilosophy"
+    },
+    {
+      className:"",
+      text:"北美外教",
+      url:"http://usa.51talk.com/index/teacher"
+    },
+    {
+      className:"",
+      text:"美国小学课程",
+      url:"http://usa.51talk.com/index/course"
+    }
+  ],
+  isIndex:false, //判断是否为首页
+  isNorth:true //判断是否为美小
+
+  }) %>
+<!-- 回到顶部-->
+<div id="u-gotop" style="disblpay:block;">
+    <a href="javascript:;" title="回到顶部">回到顶部</a>
+</div>
+	<!-- container -->
+	 <div class="foreignTeacher" id="container" data-init="north_america">
+	 		<div class="f_banner"></div>
+	 		<div class="t_features">
+				 <h1 class="title">北美金牌教师</h1>
+				 <div class="t_pc cls-top" data-vedio="http://media.51talk.com/upload/media/lina.flv" data-width="780" data-height="">
+				 		<img src="<%=imagessrc%>f_pc.jpg" />
+				 		<div class="video_play" >
+						 		<a href="javscript:;" class="video">
+						 			<i></i>
+						 		</a>
+						 </div>
+				 </div>
+				 <ul class="t_list clearfix">
+				 		<li>
+				 				<dl>
+				 					<dt>
+				 							<img src="<%=imagessrc%>f_feature1.jpg" />
+				 					</dt>
+				 					<dd>
+				 							<h3>懂孩子</h3>
+				 							<p>
+				 								100%具有丰富的<br />
+				 								少儿教学经验
+				 							</p>
+				 					</dd>
+				 				</dl>
+				 		</li>
+				 		<li>
+				 				<dl>
+				 					<dt>
+				 							<img src="<%=imagessrc%>f_feature2.jpg" />
+				 					</dt>
+				 					<dd>
+				 							<h3>沉浸式</h3>
+				 							<p>
+				 								美国和加拿大本土教师<br />
+				 								全英文沉浸式环境
+				 							</p>
+				 					</dd>
+				 				</dl>
+				 		</li>
+				 		<li>
+				 				<dl>
+				 					<dt>
+				 							<img src="<%=imagessrc%>f_feature3.jpg" />
+				 					</dt>
+				 					<dd>
+				 							<h3>爱孩子</h3>
+				 							<p>
+				 								优选高亲和力的老师<br />
+				 								授课形式活泼，孩子更爱
+				 							</p>
+				 					</dd>
+				 				</dl>
+				 		</li>
+				 		<li class="margin0">
+				 				<dl>
+				 					<dt>
+				 							<img src="<%=imagessrc%>f_feature4.jpg" />
+				 					</dt>
+				 					<dd>
+				 							<h3>高学历</h3>
+				 							<p>
+				 								全部本科及以上学历<br />
+				 								教师综合素质行业第一
+				 							</p>
+				 					</dd>
+				 				</dl>
+				 		</li>
+				 </ul>
+			</div>
+			<div class="f_standards">
+					<h1 class="title">严格录用标准</h1>
+					<ul class="f_btn clearfix">
+							<li class="hover">
+									<i class="i1"></i>
+									<span class="arr"></span>
+							</li>
+							<li>
+									<i class="i2"></i>
+									<span class="arr"></span>
+							</li>
+							<li>
+									<i class="i3"></i>
+									<span class="arr"></span>
+							</li>
+							<li class="border0">
+									<i class="i4"></i>
+									<span class="arr"></span>
+							</li>
+					</ul>
+					<ul class="f_content">
+							<li class="show">
+									<img src="<%=imagessrc%>base_01.jpg" />
+							</li>
+							<li>
+									<img src="<%=imagessrc%>base_02.jpg" />
+							</li>
+							<li>
+									<img src="<%=imagessrc%>base_03.jpg" />
+							</li>
+							<li>
+									<img src="<%=imagessrc%>base_04.jpg" />
+							</li>
+					</ul>
+			</div>
+			<div class="f_rank">
+					<h1 class="title">北美金牌超强教师阵容</h1>
+					<ul class="teachers clearfix">
+							<li>
+									<div class="icon">
+											<img src="<%=imagessrc%>f_teacher.png" class="hat1" />
+									</div>
+									<h3>Andrew</h3>	
+									<h4>美国  加州</h4>
+									<p>
+											<img src="<%=imagessrc%>f_hat.png" />
+											<span>阿姆斯特丹大学</span>
+									</p>
+									<div class="mask">
+											<p>
+											美国小学教师<br />
+											4年教学经验<br />
+											喜欢音乐、阅读，标准孩子王
+											</p>
+									</div>
+							</li>
+							<li>
+									<div class="icon">
+											<img src="<%=imagessrc%>f_teacher.png" class="hat2" />
+									</div>
+									<h3>Gianne</h3>	
+									<h4>美国  堪萨斯</h4>
+									<p>
+											<img src="<%=imagessrc%>f_hat.png" />
+											<span>旧金山州立大学</span>
+									</p>
+									<div class="mask">
+											<p>
+											美国小学教师<br />
+											12年教学经验<br />
+											做妈妈和做老师同样优秀
+											</p>
+									</div>
+							</li>
+							<li>
+									<div class="icon">
+											<img src="<%=imagessrc%>f_teacher.png" class="hat3" />
+									</div>
+									<h3>Nicole</h3>	
+									<h4>美国  新泽西州</h4>
+									<p>
+											<img src="<%=imagessrc%>f_hat.png" />
+											<span>西东大学</span>
+									</p>
+									<div class="mask">
+											<p>
+											美国小学教师<br />
+											7年教学经验<br />
+											教育学硕士，全能教师
+											</p>
+									</div>
+							</li>
+							<li>
+									<div class="icon">
+											<img src="<%=imagessrc%>f_teacher.png" class="hat4" />
+									</div>
+									<h3>Rhonda</h3>	
+									<h4>美国  弗吉尼亚</h4>
+									<p>
+											<img src="<%=imagessrc%>f_hat.png" />
+											<span>纽约大学</span>
+									</p>
+									<div class="mask">
+											<p>
+											美国小学教师<br />
+											9年教学经验<br />
+											曾在英国小学任教
+											</p>
+									</div>
+							</li>
+							<!-- 第二排 -->
+							<li>
+									<div class="icon">
+											<img src="<%=imagessrc%>f_teacher.png" class="hat5" />
+									</div>
+									<h3>Will</h3>	
+									<h4>美国  加州</h4>
+									<p>
+											<img src="<%=imagessrc%>f_hat.png" />
+											<span>美国  亚利桑那州</span>
+									</p>
+									<div class="mask">
+											<p>
+											美国小学教师<br />
+											1年教学经验<br />
+											爱旅行、爱阅读、爱生活
+											</p>
+									</div>
+							</li>
+							<li>
+									<div class="icon">
+											<img src="<%=imagessrc%>f_teacher.png" class="hat6" />
+									</div>
+									<h3>Bailey</h3>	
+									<h4>美国  宾夕法尼亚州</h4>
+									<p>
+											<img src="<%=imagessrc%>f_hat.png" />
+											<span>宾州滑石大学</span>
+									</p>
+									<div class="mask">
+											<p>
+											美国小学教师<br />
+											1年教学经验<br />
+											拥有TEFL证书，全能教师
+											</p>
+									</div>
+							</li>
+							<li>
+									<div class="icon">
+											<img src="<%=imagessrc%>f_teacher.png" class="hat7" />
+									</div>
+									<h3>Mallory</h3>	
+									<h4>美国 弗雷德里克斯堡</h4>
+									<p>
+											<img src="<%=imagessrc%>f_hat.png" />
+											<span>加州多明尼克大学</span>
+									</p>
+									<div class="mask">
+											<p>
+											美国小学教师<br />
+											6年教学经验<br />
+											喜欢教小孩子、热情开朗
+											</p>
+									</div>
+							</li>
+							<li>
+									<div class="icon">
+											<img src="<%=imagessrc%>f_teacher.png" class="hat8" />
+									</div>
+									<h3>Daniel</h3>	
+									<h4>美国  爱荷华州</h4>
+									<p>
+											<img src="<%=imagessrc%>f_hat.png" />
+											<span>爱荷华州立大学</span>
+									</p>
+									<div class="mask">
+											<p>
+											美国小学教师<br />
+											7年教学经验<br />
+											幽默风趣、孩子王
+											</p>
+									</div>
+							</li>
+					</ul>
+			</div>
+			<div class="f_team">
+					<h1 class="title">51Talk专业贴心的助教团队</h1>
+					<div class="txt clearfix">
+							<p>
+									在51Talk，每一位学员都能享受<br />
+									到专业的助教老师的全程陪伴和<br />
+									协助，为孩子提供“全程无忧”<br />
+									的学习体验!
+							</p>
+					</div>
+			</div>
+
+	 </div>
+	<!-- container end -->
+</body>
+<!-- footer -->
+<% include ../www_new/common/w_footer_home.ejs %>
+<!-- footer end -->
+<script src="http://static.51talk.com/js/new_user/ckplayer/ckplayer.js?v=1439877955695"></script>
+<script src="<%= jssrc%>" id="seajsnode"></script>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="app下载专页">
+    <meta name="keywords" content="app下载专页">
+    <title>欢迎下载51Talk App</title>
+    <link rel="stylesheet" type="text/css" href="/css/html/b2s/b2s.css">
+</head>
+<script type="text/javascript">
+  
+window.T = {};
+T.allDate = [
+
+              {
+                  "name":"海淀区海淀区",
+                  "id" : 1,
+                  "value":0,
+                  "schoollist":[
+                      {
+                          "schoolName" : "南皮一中",
+                          "id" : 11
+                      },
+                       {
+                          "schoolName" : "沧州一中",
+                          "id" : 22
+                      }
+                  ]
+              },
+              {
+                  "name":"昌平区",
+                  "id" : 2,
+                  "value":1,
+                  "schoollist":[
+                      {
+                          "schoolName" : "衡水一中",
+                          "id" : 33
+                      },
+                       {
+                          "schoolName" : "五一一中",
+                          "id" : 44
+                      }
+                  ]
+              }
+          ];
+
+// T.newData = "昌平区";
+// T.newschool = "衡水一中";
+
+
+</script>
+<body>
+<input type="hidden" id="container" data-init="vueProject" />
+<!-- 公共头 -->
+<div class="header">
+  <div class="widthMain">
+    <div class="hd-lt">
+      <i class="tenIcon h-icon"></i>
+      <b></b>
+    </div>
+    <div class="hd-rt">
+      <a href="javascript:;" class="a_color">AC客户端</a> 
+      <a href="javascript:;" class="com-hr-a show-img">微信服务号
+        <img src="/images/html/b2s/home_code.png" />
+      </a>
+      <b>林徽因</b>
+      <a href="javascript:;" class="sign">退出</a> 
+    </div>
+  </div>
+</div>
+<!-- 中间内容 -->
+<div class="mycls mycls-agent">
+  <div class="widthMain">
+    <!-- banner -->
+    <div class="central">
+       <div class="stu_tit">
+        <dl>
+          <dt><img src="/images/html/b2s/tea.jpg" alt=""></dt>
+          <dd class="intro_one"><span>代理商</span> 呵呵</dd>
+          <dd class="wel-login">欢迎登录</dd>
+        </dl>
+        <p class="stu_number">学生邀请码：123456</p>
+      </div>
+      <!-- 侧栏 -->
+      <div class="cls-side cls-side2">
+  <ul class="side-tit">
+      <li class="side-down"><a href="javascript:;"><i class="smlIcon home-page-icon"></i>首页</a></li>
+      <li><a href="javascript:;"><i class="smlIcon nr-icon"></i>外教辅导课</a></li>
+      <li><a href="javascript:;"><i class="smlIcon free-icon"></i>免费外教课</a></li>
+      <li><a href="javascript:;"><i class="smlIcon mess-icon"></i>我的账户</a></li>
+      <li><a href="javascript:;"><i class="smlIcon cas-icon"></i>常见问题</a></li>
+      <li><a href="javascript:;"><i class="smlIcon cla-icon"></i>我的班级</a></li>
+      <li><a href="javascript:;"><i class="smlIcon tea-icon"></i>我的账户</a></li>
+  </ul>
+  <i class="tenIcon side-icon"></i>
+  <div class="com_code">
+  	<img src="/images/html/b2s/com_code.jpg" alt="" />
+  	<p>关注“51talk中小学英语”</p>
+  	<p>获取上课信息</p>
+  </div>
+</div>
+      <div class="cls-main">
+        <div class="agent-list">
+    <!-- vue部分 -->
+          <div class=" choose_school" >
+            <form id="app" style="height:50px;">
+                <P class="left border_p">区域名：</P>
+                <div class="normal_list grad_name">
+                    <P class="left grad_part" v-on:click="showgradData()" v-cloak>{{showgradText}}<span></span></P>
+                    <ul v-show="showgrad">
+                        <li v-for="item in productList" v-on:click="showSchool(item)" v-cloak>
+                            {{item.name}}
+                        </li>
+                    </ul>
+                </div>
+                <div class="normal_list school_list">
+                    <p class="left school_name border_p" >学校：<input type="text" v-model="seachValue" v-on:focus="foucuShow(seachValue)" ><span></sapn></p>
+                    <ul v-show="showList">
+                        <li v-for="obj in schoolIndex.schoollist"  v-on:click="returnMes(obj)" v-cloak>
+                            {{obj.schoolName}}
+                        </li>
+                    </ul>
+                    <ul v-show="search_box">
+                      <li v-for="sName in seachList" v-on:click="returnData(sName)" v-cloak>{{sName.schoolName}}</li>
+                    </ul>
+
+                </div>
+                <!-- <div class="normal_list">
+                    标题：<input type ="text">
+                </div>
+                <div class="normal_list">
+                    标题：<input type ="text">
+                </div>
+                <div class="normal_list">
+                    标题：<input type ="text">
+                </div> -->
+              <input type="hidden" v-model="region" name="region">
+              <input type="hidden" v-model="test" name="school" >
+              <button class="sea_btn" type="text" v-on:click="onSubmit()">查询</button>
+            </form>
+          </div>
+
+
+
+          <ul class="agent-list-tit clearfixed">
+            <li>我绑定的学校：4所</li>
+            <li>我发展的老师：50人</li>
+            <li>班级：48个</li>
+            <li>学生总数：99人</li>
+            <li>付费学生人数：10102人</li>
+          </ul>
+          <div class="agent-list-con">
+            <table>
+              <thead>
+                <tr>
+                  <td>我的学校</td>
+                  <td>老师</td>
+                  <td>班级</td>
+                  <td>学生总数</td>
+                  <td>付费学生人数</td>
+                  <td>操作</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>北京101小学</td>
+                  <td>11人</td>
+                  <td>10个</td>
+                  <td>399人</td>
+                  <td>320人</td>
+                  <td><a href="agent_school_detail.html" class="check-detail">详情</a></td>
+                </tr>               
+                <tr>
+                  <td>北京101小学</td>
+                  <td>11人</td>
+                  <td>10个</td>
+                  <td>399人</td>
+                  <td>320人</td>
+                  <td><a href="agent_school_detail.html" class="check-detail">详情</a></td>
+                </tr>
+                <tr>
+                  <td>北京101小学</td>
+                  <td>11人</td>
+                  <td>10个</td>
+                  <td>399人</td>
+                  <td>320人</td>
+                  <td><a href="agent_school_detail.html" class="check-detail">详情</a></td>
+                </tr>
+                <tr>
+                  <td>北京101小学</td>
+                  <td>11人</td>
+                  <td>10个</td>
+                  <td>399人</td>
+                  <td>320人</td>
+                  <td><a href="agent_school_detail.html" class="check-detail">详情</a></td>
+                </tr>
+                <tr>
+                  <td>北京101小学</td>
+                  <td>11人</td>
+                  <td>10个</td>
+                  <td>399人</td>
+                  <td>320人</td>
+                  <td><a href="agent_school_detail.html" class="check-detail">详情</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div> 
+        </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 公共尾部 -->
+<div class="footer">
+  <div class="widthMain">
+    <p class="link-ft">
+      Copyright©北京大生知行科技有限公司<em>|</em>
+      <a href="/page/privacy/" target="_blank" title="隐私声明">隐私声明</a><em>|</em>
+      <a href="/page/terms/" target="_blank" title="用户协议">用户协议</a><em>|</em>
+      京ICP证110696号 京ICP备11031999号
+    </p>
+  </div>  
+</div>
+</body>
+<!--公共尾部结束-->
+<script src="/js/html/project/b2s/vendor.js"></script>
+</html>

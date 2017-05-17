@@ -1,0 +1,1 @@
+define("countDalasi",[],function(s,i,n){var c=$(".chart-btn div");c.on("click",function(){$(this).addClass("cut-sel").siblings().removeClass("cut-sel")})});

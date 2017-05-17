@@ -1,0 +1,209 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Thu Nov 17 2016 18:02:33 GMT+0800 (中国标准时间)
+ */
+/*
+* 默认样式
+* @file：   base.less
+* @author:  huhaili（huhaili@51talk.com）
+* @update:  2015-07-08
+* @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+*/
+html {
+  font-size: 62.5%;
+}
+@media only screen and (min-width: 481px) {
+  html {
+    font-size: 94%;
+  }
+}
+@media only screen and (min-width: 561px) {
+  html {
+    font-size: 109%;
+  }
+}
+@media only screen and (min-width: 641px) {
+  html {
+    font-size: 125%;
+  }
+}
+/*variable*/
+/*custom*/
+body {
+  font: 1.4rem;
+  font-family: "Microsoft YaHei";
+  color: #666;
+  padding: 0px;
+  margin: 0px;
+  background: #ecf0f1;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+}
+input,
+button,
+select,
+textarea,
+dl,
+dd,
+dt {
+  font-family: "Microsoft YaHei";
+  outline: none;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 0;
+  padding: 0px;
+  margin: 0px;
+}
+ul,
+li {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  vertical-align: middle;
+}
+b {
+  font-weight: normal;
+}
+::-moz-selection {
+  background-color: #fff;
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background-color: #fff;
+  color: white;
+  text-shadow: none;
+}
+strong {
+  font-weight: normal;
+}
+/*nav*/
+header {
+  background: #fff;
+  padding: 1rem;
+}
+header img {
+  width: 8.65rem;
+  height: 2.95rem;
+}
+header .rt {
+  float: right;
+  background: url(../../../images/wap/reg_20161109/pre02.png?v=pUS96XARnem5IEfztf%2BPUQ%3D%3D);
+  background-size: 2.3rem 2.3rem;
+  width: 2.3rem;
+  height: 2.3rem;
+  margin-top: 0.3rem;
+}
+header .rt:active {
+  background: url(../../../images/wap/reg_20161109/pre01.png?v=LPDV9AtfnBeh83NEV9MZqg%3D%3D);
+  background-size: 100%;
+}
+.hd_word {
+  display: block;
+  position: relative;
+  background: #ffa800;
+  color: #fff;
+  font-size: 1.6rem;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+}
+.hd_word .lt {
+  position: absolute;
+  left: 1rem;
+  top: 0;
+}
+.hd_word .lt img {
+  width: 0.9rem;
+  height: 1.8rem;
+}
+footer {
+  color: #fff;
+}
+footer dl {
+  display: block;
+  padding: 1.5rem 0.2rem;
+}
+footer dl dd {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+footer dl dd img {
+  width: 6.25rem;
+  height: 2.25rem;
+}
+footer b {
+  display: block;
+  padding: 2rem 0 1rem 0;
+  text-align: center;
+  line-height: 1.8rem;
+  font-size: 1rem;
+}
+footer .second {
+  font-size: 1.4rem;
+  position: fixed;
+  bottom: 0;
+  min-width: 320px;
+  max-width: 640px;
+  width: 100%;
+}
+footer .second p {
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  background: #edbc30;
+}
+footer .second p span {
+  color: #333;
+}
+footer .second img {
+  width: 100%;
+}
+.btn {
+  margin: 2.8rem 1rem 0 1rem;
+  background: #edaf00;
+  display: block;
+  border-radius: 0.3rem;
+  color: #fff;
+  text-align: center;
+  padding: 0.6rem 0;
+  font-size: 1.6rem;
+  margin-bottom: 13rem;
+}
+.btns {
+  margin: 2.8rem 1rem 0 1rem;
+  background: #edaf00;
+  display: block;
+  border-radius: 0.3rem;
+  color: #fff;
+  text-align: center;
+  padding: 0.6rem 0;
+  font-size: 1.6rem;
+  margin-bottom: 5rem;
+}

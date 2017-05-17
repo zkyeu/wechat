@@ -1,0 +1,24 @@
+<% include ../common/top_b2s_n.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>app_home_work.css">
+</head>
+<body data-init="" class="app_home_work">
+    <div class="img_bg">
+        <p class="text_1">出席4月12日 19:00-19:25的外教课 </p>
+        <p class="text_2"> - 我的家庭 My Family  -</p>
+        <P class="text_3">并在课后完成<span>随堂作业</span>和<span>配音作业</span></P>
+        <a href="">查看作业详情</a>
+    </div>
+</body>
+<!-- loading -->
+<div id="fontSizeLoding">
+    <img src="<%= imagessrc%>eff_loading.gif">
+</div>
+<script type="text/javascript">
+window.onload = function(){
+    document.documentElement.style.fontSize = document.body.clientWidth / 7.5 + "px";
+    document.getElementById("fontSizeLoding").style.display = "none";
+}
+</script>
+</body>
+<!--公共尾部结束-->
+<% include ../common/bottom.ejs %>

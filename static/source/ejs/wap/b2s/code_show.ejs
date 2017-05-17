@@ -1,0 +1,31 @@
+<% include ../common/top_b2s_n.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>code_show.css">
+</head>
+<body data-init="code_show">
+<div class="code_show">
+    <div class="code_box swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="<%= imagessrc%>down_app.png">
+            </div>
+            <div class="swiper-slide">
+                <img src="<%= imagessrc%>down_app.png">
+            </div>
+        </div>
+        <P>长按二维码,可保存图片</P>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+<!-- loading -->
+<div id="fontSizeLoding">
+    <img src="<%= imagessrc%>eff_loading.gif">
+</div>
+<script type="text/javascript">
+window.onload = function(){
+    document.documentElement.style.fontSize = document.body.clientWidth / 7.5 + "px";
+    document.getElementById("fontSizeLoding").style.display = "none";
+}
+</script>
+</body>
+<!--公共尾部结束-->
+<% include ../common/bottom.ejs %>

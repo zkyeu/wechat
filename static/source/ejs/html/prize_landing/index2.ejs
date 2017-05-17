@@ -1,0 +1,175 @@
+<% include ../common/top.ejs %>
+<body>
+<!-- 顶部 -->
+<% include ../common/www/w_header.ejs %>
+<div class="pri-main">
+  <div class="banner">
+    <div class="widthMain">
+      <img src="<%= imagessrc%>pe_bar_img.png" class="bar-img"> 
+      <ul>
+        <li><a href="javascript:;" class="nav-img01" data-target="dial-bg"></a></li>
+        <li><a href="javascript:;" class="nav-img02" data-target="pri-list01"></a></li>
+        <li><a href="javascript:;" class="nav-img03" data-target="pri-list02"></a></li>
+        <li><a href="javascript:;" class="nav-img04" data-target="pri-list03"></a></li>
+        <li><a href="javascript:;" class="nav-img05" data-target="pri-list04"></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="rota">
+    <div class="widthMain">
+      <div class="lt">
+        <img src="<%= imagessrc%>pe_lt_img.jpg" class="lt-img">
+        <ul class="name">
+          <li><span>absefd01</span>学员抽中<b>3张次卡</b></li>
+          <li><span>songyueyang02</span>学员抽中<b>100元代金卷</b></li>
+          <li><span>二爷03</span>学员抽中<b>500元代金卷</b></li>
+          <li><span>LULU04</span>学员抽中<b>3张次卡</b></li>
+          <li><span>柳文锋05</span>学员抽中<b>3张次卡</b></li>
+          <li><span>二爷06</span>学员抽中<b>500元代金卷</b></li>
+          <li><span>LULU07</span>学员抽中<b>3张次卡</b></li>
+          <li><span>柳文锋08</span>学员抽中<b>3张次卡</b></li>
+          <li><span>柳文锋09</span>学员抽中<b>3张次卡</b></li>
+          <li><span>二爷10</span>学员抽中<b>500元代金卷</b></li>
+          <li><span>LULU11</span>学员抽中<b>3张次卡</b></li>
+          <li><span>柳文锋12</span>学员抽中<b>3张次卡</b></li>
+        </ul>
+        <ul class="tit">
+          <li>活动规则：</li>
+          <li>1.新同学在预约完成体验课后有1次抽奖机会</li>
+          <li>2.每位学员仅有1次抽奖机会</li>
+          <li>3.关于中奖：
+            <span>
+            ·代金券将在中奖后30分钟内发到您站内信<br>
+            ·次卡将在中奖后30分钟内充到您帐号<br>
+            ·iPad Air，Fire平板会在活动结束后，由客服同学联络您予以寄送
+            </span>
+          </li>
+          <li>4.60次卡和3个月小套餐不能使用此代金券</li>
+          <li>5.本活动最终解释权归51Talk所有</li>
+        </ul>
+      </div>
+      <div class="dial-bg">
+        <div class="pointer" data-url="url"></div>
+        <div class="rotate" ><img id="rotate" src="<%= imagessrc%>dial_rotate.png" alt="dial"/></div>
+      </div>
+    </div>
+  </div>
+  <div class="pri-list01">
+    <div class="widthMain">
+      <a href="javascript:;">马上抢红包</a>
+    </div>  
+  </div>
+  <div class="pri-list02">
+    <div class="widthMain">
+      <a href="javascript:;">立即抢课</a>
+    </div>  
+  </div>
+  <div class="pri-list03">
+    <div class="widthMain">
+      <a href="javascript:;">抢免费次卡</a>
+    </div>  
+  </div>
+  <div class="pri-list04">
+    <div class="widthMain">
+      <a href="javascript:;">立即抢课</a> 
+    </div> 
+  </div>
+</div>
+<!-- 尾部 -->
+<% include ../common/www/w_footer_home.ejs %>
+<!-- 去预约 -->
+<div class="dialog go-dia">
+  <div class="info">
+    <div class="hr"><a href="/trial/reserve" class="hr-f"></a></div>
+    <div class="del" id="diaDel"><img src="<%= imagessrc%>dil_del.png"></div>
+    <div class="tit">约完体验课<br>才可以参与抽奖哦！</div>
+  </div>
+</div>
+<!-- 已参加 -->
+<div class="dialog complt">
+  <div class="info">
+    <div class="del" id="diaDel"><img src="<%= imagessrc%>dil_del.png"></div>
+    <div class="tit">您已参加过抽奖<br><span class="ft">请关注下面精彩活动哦</span></div>
+  </div>
+</div>
+<!-- 中奖 -->
+<div class="dialog prize" id="pri800">
+  <div class="info">
+    <div class="del" id="diaDel"><img src="<%= imagessrc%>dil_del.png"></div>
+    <div class="tit">
+      <h3>恭喜获得：<span class="word">800元优惠券</span></h4>
+      <p><img src="<%= imagessrc%>dil_img01.png"></p>
+      <div class="fot">
+        <a href="javascript:;"><img src="<%= imagessrc%>dil_git.png" id="dil-git"></a>
+        <span class="nr">30分钟发到您的站内信</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="dialog prize" id="pri500">
+  <div class="info">
+    <div class="del" id="diaDel"><img src="<%= imagessrc%>dil_del.png"></div>
+    <div class="tit">
+      <h3>恭喜获得：<span class="word">500元优惠券</span></h4>
+      <p><img src="<%= imagessrc%>dil_img02.png"></p>
+      <div class="fot">
+        <a href="javascript:;"><img src="<%= imagessrc%>dil_git.png" id="dil-git"></a>
+        <span class="nr">30分钟发到您的站内信</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="dialog prize" id="pri300">
+  <div class="info">
+    <div class="del" id="diaDel"><img src="<%= imagessrc%>dil_del.png"></div>
+    <div class="tit">
+      <h3>恭喜获得：<span class="word">300元优惠券</span></h4>
+      <p><img src="<%= imagessrc%>dil_img03.png"></p>
+      <div class="fot">
+        <a href="javascript:;"><img src="<%= imagessrc%>dil_git.png" id="dil-git"></a>
+        <span class="nr">30分钟发到您的站内信</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="dialog prize" id="pri5">
+  <div class="info">
+    <div class="del" id="diaDel"><img src="<%= imagessrc%>dil_del.png"></div>
+    <div class="tit">
+      <h3>恭喜获得：<span class="word">5节1V1外教课</span></h4>
+      <p><img src="<%= imagessrc%>dil_img04.png"></p>
+      <div class="fot">
+        <a href="javascript:;"><img src="<%= imagessrc%>dil_git.png" id="dil-git"></a>
+        <span class="nr">30分钟发到您的站内信</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="dialog prize" id="pri10">
+  <div class="info">
+    <div class="del" id="diaDel"><img src="<%= imagessrc%>dil_del.png"></div>
+    <div class="tit">
+      <h3>恭喜获得：<span class="word">10节1V1外教课</span></h4>
+      <p><img src="<%= imagessrc%>dil_img05.png"></p>
+      <div class="fot">
+        <a href="javascript:;"><img src="<%= imagessrc%>dil_git.png" id="dil-git"></a>
+        <span class="nr">30分钟发到您的站内信</span>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 系统通知 -->
+<div class="sysInfo">
+  <div class="dtInfo">
+    <p class="tit">系统通知</p>
+    <p class="test">
+      请先登录访问
+      <a href="javascript:;" class="down" id="down">我知道了</a>
+    </p>
+  </div> 
+</div>
+</body>
+</html>
+<script type="text/javascript" src="../../../js/html/project/prize_landing/jquery.min.js"></script>
+<script type="text/javascript" src="../../../js/html/project/prize_landing/jQueryRotate.min.js"></script>
+<script type="text/javascript" src="../../../js/html/project/prize_landing/prize.js"></script>

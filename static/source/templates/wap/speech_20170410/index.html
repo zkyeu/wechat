@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <title>51Talk-无忧英语</title>
+    <script src="/js/wap/project/speech_20170410/flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/wap/speech_20170410/speech_20170410.css">
+    <style type="text/css">
+        #authCode{
+            width: 250px;
+            height: 58px;
+            line-height: 58px;
+            border: 1px solid #dadada;
+            border-radius: 5px;
+            padding-left: 20px;
+            -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+            font-size: 20px;
+        }
+        .tel_code{
+            height: 60px;
+            line-height: 60px;
+            background-color: #f9e35a;
+            border-radius: 5px;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+            font-size: 20px;
+            color: #333333;
+            width: 150px;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<div class="pc-index" data-init="index" id="container"> 
+    <div class="pc_banner">
+        <a href="javascript:;" id="j_banner_join" class="upvedio">
+        </a>
+       <div class="fly_plane">
+            <img src="/images/wap/speech_20170410/pc/fly.png" />
+       </div>
+        <ul class="top_nav">
+            <li><a href="javascript:;" class="active">首页</a></li>
+            <li><a href="javascript:;">活动详情</a></li>
+            <li><a href="javascript:;">初赛</a></li>
+            <li><a href="javascript:;">复赛视频</a></li>
+        </ul>
+    </div>
+    <div class="pc_process"></div>
+    <div class="pc_vedio">
+        <div class="In">
+            <ul class="nav vedio_nav" data-sta="0">
+                <li><a href="javscript:;" class="active">年级分类</a></li>
+                <li><a href="javscript:;">小低组</a></li>
+                <li><a href="javscript:;">小高组</a></li>
+            </ul>
+            <div class="vedio_main">
+                <div class="noVideo" >
+                    还没有视频存在。
+                </div>
+                <!-- 年级分类 -->
+                <ul class="vedioList vedio_foot" style="display:none">
+                    <li>
+                       <div class="v_coat">
+                            <video style="height:100%;width:100%;background:#000;" class="videoMain"  style="display:none">
+                                  <source src="/images/wap/speech_20170410/video.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                            </video>
+                            <span class="player"></span>
+                       </div>
+                        <p>快乐的dorem</p>
+                        <p><span>郝昕晨    幼儿组（3-6岁）</span></p>
+                    </li>
+                     <li>
+                        <img src="/images/wap/speech_20170410/pc/vedioList.png"  class="videoPic" data-src="/images/wap/speech_20170410/video2.mp4" />
+                        <p>快乐的dorem</p>
+                        <p><span>郝昕晨    幼儿组（3-6岁）</span></p>
+                    </li>
+                     <li>
+                        <img src="/images/wap/speech_20170410/pc/vedioList.png"  class="videoPic" />
+                        <p>快乐的dorem</p>
+                        <p><span>郝昕晨    幼儿组（3-6岁）</span></p>
+                    </li>
+                     <li>
+                        <img src="/images/wap/speech_20170410/pc/vedioList.png" class="videoPic" />
+                        <p>快乐的dorem</p>
+                        <p><span>郝昕晨    幼儿组（3-6岁）</span></p>
+                    </li>
+                </ul>
+                <!-- 小低组 -->
+                 <ul class="vedioList vedio_foot" style="display:none">
+                    <li>
+                        <img src="/images/wap/speech_20170410/pc/vedioList.png" class="videoPic" data-src="/images/wap/speech_20170410/video.mp4" />
+                        <p>快乐的dorem</p>
+                        <p><span>郝昕晨    小低组（3-6岁）</span></p>
+                    </li>
+                </ul>
+                <!-- 小高组 -->
+                 <ul class="vedioList vedio_foot" style="display:none">
+                    <li>
+                        <img src="/images/wap/speech_20170410/pc/vedioList.png" class="videoPic" data-src="/images/wap/speech_20170410/video.mp4" />
+                        <p>快乐的dorem</p>
+                        <p><span>郝昕晨    小高组（3-6岁）</span></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="checkvedio">
+                <a href="javascript:;">查看热门视频</a>
+            </div>
+        </div>
+    </div>
+    <div class="pc_prize">
+       <div class="In">
+            <img src="/images/wap/speech_20170410/pc/pc_prize01.jpg"  />
+            <img src="/images/wap/speech_20170410/pc/pc_prize02.jpg"  />
+            <img src="/images/wap/speech_20170410/pc/pc_prize03.jpg"  />
+            <img src="/images/wap/speech_20170410/pc/pc_prize04.jpg"  />
+            <a href="javascript:;" id="j_join_btn">上传视频</a>
+       </div>
+    </div>
+    <div class="pc_judge_out"></div>
+    <div class="pc_judge_in"></div>
+    <div class="pc_judge_in2"></div>
+    <div class="pc_company"></div>
+</div>
+<!-- 视频播放 -->
+<div class="video_mask pc_video_mask" style="display:none">
+  <video style="height:422px;width:100%;" class="videoMain" controls="controls" >
+      <source src="" type="video/mp4">
+        Your browser does not support the video tag.
+ </video>
+</div>
+<!-- 登录信息 -->
+<input type="hidden" value="0" id="j_login_status">
+<!-- 登陆框 -->
+<div id="j_modal_box" class="d-modal  hide">
+    <!-- 登录表单 -->
+    <div id="j_login_form" class="animated zoomIn tip">
+        <a href="javascript:void(0)" class="close"></a>
+        <h3 class="title">51Talk会员登录</h3>
+        <div class="d-form">
+            <div id="j_login_info" class="f-error-tip hide"></div>
+            <div class="f-item">
+                <input name="user_name" type="text" class="f-text" placeholder="填写手机号参加大赛">
+            </div>
+            <div class="f-item">
+                <input name="password" type="password" class="f-text" placeholder="请输入您的密码">
+            </div>
+            <div class="f-btn-box">
+                <a id="j_login_btn" href="javascript:void(0);" class="f-btn">登 录</a>
+            </div>
+            <div class="f-tip clearfix">
+                <a id="j_reg_link" href="javascript:void(0);" class="reg-link">立即注册</a>
+                <a id="j_forget_link" href="javascript:void(0);" class="forget-link">忘记密码</a>
+            </div>
+            <div class="third-landing">
+                <div class="landing-title">
+                    <span class="txt">使用第三方账户登录</span>
+                </div>
+                <div class="landing-list">
+                    <a href="#" class="item qq">
+                        <img class="step-pic" src="/images/wap/speech_20170410/qq1.png" >
+                    </a>
+                    <a href="#" class="item sina">
+                        <img class="step-pic" src="/images/wap/speech_20170410/sina1.png" >
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 登录表单 -->
+    
+    <!-- 注册表单 -->
+    <div id="j_reg_form" class="animated zoomIn tip hide">
+        <a href="javascript:void(0)" class="close"></a>
+        <h3 class="title">注册成为51Talk会员</h3>
+        <h4 class="sub-title">活动多多，好礼多多</h4>
+        <div class="d-form">
+            <div id="j_reg_info" class="f-error-tip hide"></div>
+            <div class="f-item">
+                <input name="mobile" type="text" class="f-text" placeholder="填写手机号参加大赛">
+            </div>
+            <div class="f-item">
+                <input  id="authCode" name="authCode" type="tel" placeholder="请输入图形验证码">
+                  <span  class="tel_code">
+                    <img 
+                         id="verifycode" src="http://www.51talk.com/passport/authCode"
+                         height="100%" width="100%" onclick="this.src='http://www.51talk.com/passport/authCode'+'?a'+'='+new Date().getTime()"
+                         alt="单击更换验证码" title="单击更换验证码">
+                </span>
+            </div>
+            <div class="f-item">
+                <input name="mobile_code" type="text" placeholder="请输入验证码" class="f-text cd_code">
+                <span class="f-btn y_code" id="j_getCodes">获取验证码</span>
+            </div>
+            <div class="f-item">
+                <input name="password" type="password" placeholder="请输入您的密码" class="f-text">
+            </div>
+            <div id="intro" class="f-item">
+                <p>若您有推荐人/推荐码，请点这里</p>
+                <input  name="tuicode" type="text"  placeholder="推荐人手机号/推荐码/没有不填" class="f-text hide">
+            </div>
+            <div class="f-btn-box">
+                <a id="j_reg_btn" href="javascript:void(0);" class="f-btn">提交</a>
+            </div>
+            <div class="f-tip">
+                已有账号，立即<a id="j_login_link" href="javascript:void(0);">登录</a>
+            </div>
+        </div>
+    </div>
+    <!-- 注册表单 -->
+</div>
+</body>
+<script id="seajsnode" src="/js/wap/project/speech_20170410/vendor.js"></script>
+</html>

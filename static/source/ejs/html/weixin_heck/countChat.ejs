@@ -1,0 +1,165 @@
+<% include ../common/top_b2s.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%=csslinkb2s%>countChat.css">
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>layui.css">
+</head>
+<body data-init="countChat">
+<div class="count-title">统计记录</div>
+<div class="show-count-option pad20px">
+    <form action="" method="get">
+        <div class="clearfix">
+            <div class="layui-form-pane">
+                <div class="layui-form-item">
+                    <div class="layui-input-inline">
+                        <input class="layui-input sel-time" placeholder="开始日期"  onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD'})" id="stime">
+                    </div>
+                    <span>至</span>
+                    <div class="layui-input-inline">
+                        <input class="layui-input" placeholder="截止日期" onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD'})"  id="etime">
+                    </div>
+                </div>
+            </div>
+            <div class="search-btn cut-sel">统计查询</div>
+        </div>
+
+        <div class="table-list clearfix">
+            <div>
+                <div class="clearfix">
+                    学员
+                </div>
+                <div class="clearfix">
+                    <table class="show-detail show-detail-user" border="1" cellspacing="0" cellpadding="0">
+                        <thead>
+                        <tr>
+                            <th>业务人员姓名</th>
+                            <th>学员姓名</th>
+                            <th>学员总数</th>
+                            <th>学员发送数</th>
+                            <th>CCSS发送数</th>
+                            <th>黑鸟发送数</th>
+                            <th>系统发送数</th>
+                            <th>中转发送数</th>
+                            <th>手机发送数</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="manage">
+                            <td>AAA</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>1啊啊啊23</td>
+                        </tr>
+                        <tr>
+                            <td>AAA</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>1 23</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                        </tr>
+                        <tr>
+                            <td>AAA</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                        </tr>
+                        <tr>
+                            <td>AAA</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                        </tr>
+                        <tr>
+                            <td>AAA</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                        </tr>
+                        <tr>
+                            <td>AAA</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                        </tr>
+                        <tr>
+                            <td>AAA</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                        </tr>
+                        <tr>
+                            <td>AAA</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                            <td>123</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+
+<script type="text/javascript">
+    // 本地数据 登录后应该拿到的
+    var time = {
+        startTime : "2016-02-11",
+        endTime : "2016-02-17"
+    }
+    document.getElementById("stime").value= time.startTime;
+    document.getElementById("etime").value= time.endTime;
+    (function () {
+        var countBtn = document.getElementsByClassName("search-btn")[0];
+        countBtn.onclick = function (e) {
+            var stime = parseInt(document.getElementById("stime").value.replace("-","").replace("-",""));
+            var etime = parseInt(document.getElementById("etime").value.replace("-","").replace("-",""));
+            var timeOk = stime-etime;
+            if(timeOk>0){
+                alert("截止时间不能比开始时间晚！")
+            }
+        }
+    })();
+
+</script>
+</body>
+<% include ../common/bottom.ejs %>

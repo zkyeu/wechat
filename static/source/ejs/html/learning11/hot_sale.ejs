@@ -1,0 +1,128 @@
+<% include ../common/top.ejs %>
+<body style="background:#ffc700">
+<!-- 顶部 -->
+<div class="pri-header">
+  <% include ../common/www/w_header.ejs %>
+</div>
+<input type="hidden" id="cartType" value="cart">
+<input type="hidden" id="cartID" value="">
+<input type="hidden" id="actArr" value="">
+<input type="hidden" id="downMoney" value="0">
+<input type="hidden" id="showAgree" value="n">
+<div class="hot-sale" data-init="battle">
+
+  <div class="banner">
+      <img src="<%= imagessrc%>hotsale.jpg">
+  </div>
+  <div class="wrap-content">
+      <div class="no1">
+        <div class="gou-box">
+            <h2>180次次卡学习套餐</h2>
+            <p>学龄儿童英语学习的最优之选<br/>随时随地约课，外教一对一帮孩子真的进步！</p>
+             <a  href="javascript:;" data-point="nor" data-id="9168" data-cart='{"id":9168,"price":"4088","package":"450","cash_card":"0","point_type":"point","point_value":" 90 ","expire_days":"180"}' data-text="购&nbsp;买" class="buy u-btn jsPre active">
+                        </a>
+        </div>
+      </div>
+      <div class="no2">
+        <div class="gou-box">
+            <h2>270次次卡学习套餐</h2>
+            <p>中小学生英语进阶学习必备</br>语言学家编撰教材，每一课都是重点</p>
+             <a  href="javascript:;" data-point="nor" data-id="9169" data-cart='{"id":9169,"price":"4088","package":"450","cash_card":"0","point_type":"point","point_value":" 90 ","expire_days":"180"}' data-text="购&nbsp;买" class="buy u-btn jsPre active">
+                        </a>
+        </div>
+      </div>
+      <div class="no3">
+        <div class="gou-box">
+            <h2>12个月包月学习套餐</h2>
+            <p>职场精英最爱的“充电”产品<br/>学习时间自由掌握，纯正发音 “欧美范”</p>
+             <a  href="javascript:;" data-point="nor" data-id="9169" data-cart='{"id":9169,"price":"4088","package":"450","cash_card":"0","point_type":"point","point_value":" 90 ","expire_days":"180"}' data-text="购&nbsp;买" class="buy u-btn jsPre active">
+                        </a>
+        </div>
+      </div>
+      <div class="no4">
+        <div class="gou-box">
+            <h2>90次次卡学习套餐</h2>
+            <p>最受大朋友小朋友们喜欢的入门必备款</br>课堂也可以很有趣，专业外教让你爱上说英语</p>
+             <a  href="javascript:;" data-point="nor" data-id="9189" data-cart='{"id":9189,"price":"4088","package":"450","cash_card":"0","point_type":"point","point_value":" 90 ","expire_days":"180"}' data-text="购&nbsp;买" class="buy u-btn jsPre active">
+                        </a>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+<!-- 尾部 -->
+<% include ../common/www/w_footer_home.ejs %>
+<!-- 系统通知 -->
+<div class="sysInfo">
+  <div class="dtInfo">
+    <p class="tit">系统通知</p>
+    <p class="test">
+      请先登录访问
+      <a href="/user/user_login.php?from_url=/activity/dodisney" class="down" id="down" target="_blank">我知道了</a>
+    </p>
+  </div> 
+</div>
+<form id="form-cart" name="point_form" action="/pay/order" method="post" target="_blank">
+  <div class="m-cart" id="cart" style="right:-255px; display:none;" ><!-- right从 0 到 -251  -->
+    <input type="hidden" name="cart" value='{"cart":[],"package":"off","earphone":"off"}'>
+    <div class="cart-hd"><em class="jsCount">0</em></div>
+    <div class="cart-bd"><!-- width从 0 到 251  -->
+      <div class="cart-in">
+        <div class="title">我的购物车（<em class="jsCount">0</em>）
+          <div class="u-pages">
+            <a class="prev dis-prev" href="javascript:void(0)">&lt;</a>
+            <span class="crt"><em class="jsPageNow">1</em><em>/</em><em class="jsPageCount">1</em></span>
+            <a class="next dis-next" href="javascript:void(0)">&gt;</a>
+          </div>
+        </div>
+        <div class="products">
+            <div class="jsWrap">
+            </div>
+        </div>
+        <div class="addeds" style="visibility: hidden;">
+            <dl class="product">
+                <a class="s-fc6" href="#level">立即购买配套教材，学习效果更佳！</a>
+            </dl>
+            <dl class="product">
+                <dt class="added">
+                    <label class="u-lab jsPackageLabel">
+                        <input class="f-dn" type="checkbox" name="package">
+
+                        <span class="u-txt">+<em class="jsPackage">0</em>元，您还可以选购<a href="javascript:;">电话包</a></span>
+                    </label>
+                </dt>
+            </dl>
+            <dl class="product" style="border-top: 1px solid rgb(228, 234, 238);">
+                <dt class="added">
+                <label class="u-lab jsEarphoneLabel">
+                    <input class="f-dn" type="checkbox" name="earphone">
+                   
+                    <span class="u-txt" data-cart="">+50元，选购高保真耳麦(双插头)</span>
+                </label>
+                </dt>
+            </dl>
+            <p class="differ" style="display:none;">补差价金额：
+                <em class="jsMinuend">10288</em>&nbsp;-&nbsp;
+                <em class="jsMeiosis">3588</em>&nbsp;=&nbsp;
+                <em class="jsDifference">6700</em>
+            </p>
+        </div>
+        <div class="total-orders">订单总金额：<em class="jsTotal" data-total="5799">23045</em></div>
+        <div class="total-orders-stagin" style="display: none;">金额总计：<em class="jsTotal" data-total="5799"></em></div>
+        <div class="submit">
+          <input class="button jsSubmit" type="submit" value="提交订单" style="width: 117px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</form>  
+
+<div class="alert_dialog">
+    <span class="close_alert"></span>
+    <p>只能购买同一类型的套餐哦！</p>
+</div>
+<!-- /m-cart -->
+</body>
+<script src="<%= jssrc%>" id="seajsnode"></script>
+</html>

@@ -1,0 +1,122 @@
+<% include ../common/speech_top.ejs %>
+  <body>
+      <div class="container">
+          <div class="header">
+              <img src="<%= imagessrc%>header.jpg" width=1292 height=585>
+          </div>
+          <div class="content" id="container" data-init="speech">
+              <div class="tit">
+                 <span class="t1">大赛理念</span><span class="t2">Competition concept</span>
+              </div>
+              <div class="join-object">
+                  <div class="describe">
+                    <span class="t1">“</span>
+                      <p>
+                      在任何一个时代，孩子永远是我们的希望，他们的声音是一个家庭未来的声音，是一个国家未来的声音。同一片蓝天下，他们拥有着不一样的童年，却都有着相似梦幻——他们对地球上的每个角落都充满着好奇，他们都有渴望被这个世界倾听的心愿。我们要做的就是给他们一次机会，让他们可以勇敢地去对话世界。
+                    </p>
+                    <span class="t2">”</span>
+                  </div>
+
+              </div>
+              <div>
+                    <img src="<%= imagessrc%>join_objct.jpg" width=980 height=182 />
+                  </div>
+              <div class="tit">
+                  <span class="f-fr btn">立即报名</span><span class="t1">奖项设置</span><span class="t2">Award setting</span>
+              </div>
+              <div class="">
+                  <img src="<%= imagessrc%>xuanshou.png" width=980 height=503 />
+              </div>
+              <div class="tit">
+                  <span class="f-fr btn">立即报名</span><span class="t1">报名参与方式</span><span class="t2">Participation way</span>
+              </div>
+              <div>
+                  <img src="<%= imagessrc%>biaozun.png">
+              </div>
+              
+              <div class="tit">
+                  <span class="f-fr btn">立即报名</span><span class="t1">大赛日程安排</span><span class="t2">Competition schedule</span>
+              </div>
+              <div style="text-align:center;">
+                  <img src="<%= imagessrc%>time.png">
+              </div>
+              <div class="tit">
+                  <span class="f-fr btn">立即报名</span><span class="t1">演讲主题</span><span class="t2">Speech topic</span>
+              </div>
+              <div style="text-align:center;">
+                  <img src="<%= imagessrc%>haixun.png">
+              </div>
+              <div class="tit">
+                  <span class="f-fr btn">立即报名</span><span class="t1">大赛优势</span><span class="t2">Competition advantage</span>
+              </div>
+              <div style="text-align:center;">
+                  <img src="<%= imagessrc%>youshi.png">
+              </div>
+
+          </div>
+          
+          
+
+      </div>
+     <div class="footer">
+          <div class="erweima">
+                <img src="<%= imagessrc%>erweima.png">
+          </div>
+          <p class="">
+              资讯大赛相关讯息以及比赛结果，请关注“51Talk无忧青少英语”官方微信，<br/>
+同时我们也会在后续的比赛中在公众号上更新我们的大赛进程和选手风采。请大家拭目以待~
+          </p>
+     </div>
+
+
+
+     <div class="m-dialog">
+  <div class="in" style="top:10%">
+    <div class="hd">
+      <a id="close" class="close" href="javascript:void(0)" title="关闭">x</a>
+      
+    </div>
+    <div class="bd">
+        <div class="login">
+                <ul class="OneS_logIn">
+                    <li >
+                      <input class="uborder" type="text" id="mobile" name="mobile" placeholder="请输入您的手机号">
+                    </li>
+                    <li>
+                      <input class="uborder" type="password" id="password" name="password" placeholder="请设置您的密码" />        
+                    </li>
+                    <li style="text-align:left" class="hide">
+                      <input class="uborder" type="text" id="code" name="code"  /> <span id="vtip"><a href='javascript:void(0)'>获取短信验证码</a></span>      
+                    </li>
+                    <li>
+                      <input type="hidden" id="group" />
+                      <input id="group0" readonly="readonly" type="input" placeholder="选择组别">
+                      <i id="select" class="speech_icon down"></i>
+                      <ul class="speech_list hide">
+                        <li style="border-top:none"><span class="t1">小低组</span>（<span class="t2">1-3年级学员</span>）</li>
+                        <li><span class="t1">小高组</span>（<span class="t2">4-6年级学员</span>）</li>
+                        <li><span class="t1">初中组</span>（<span class="t2">1-3年级学员</span>）</li>
+                      </ul>       
+                    </li>
+                </ul>
+              <div class="win_btn">
+                    <a name="register" href="javascript:void(0)" class="free submit noback">立即报名</a>
+              </div>
+        </div>
+          <div class="win hide">
+                <img src="<%= imagessrc%>speechTc.png" />
+                <p id="haven" class="hide">您已报名<br/><em style="color:red"></em><br/>无需重复报名</p>
+                <p id="success" class="hide">报名成功</p>
+                <p id="skip" class="hide">还有<span style="color:red">3</span>秒要跳转到论坛<br/><a style="font-size: 0.8rem;color: #ff0011;text-decoration: underline;" href="http://bbs.51talk.com/forum/detail/5965.html">如果还没有跳转请点击此链接</a></p>
+                <p id="nobody" class="hide">报名已满员</p>
+          </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+  </body>     
+<% include ../common/speech_bottom.ejs %>

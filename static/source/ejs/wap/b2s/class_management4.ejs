@@ -1,0 +1,98 @@
+<% include ../common/top_b2s_n.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>class_management4.css">
+</head>
+<body data-init="class_management4" class="class_management4">
+    <div class="cfix inv_stu">
+        <div class="left_part">
+            <P class="have_code">邀请码：<span>123456</span></P>
+            <p class="code_int">请同学们使用邀请码加入班级</p>
+        </div>
+        <a href="#" class="right_part">邀请学生</a>
+    </div>
+    <P class="cfix class_title">
+        <a href="javascript:;"></a>
+        <i>一年级9班(共23人)</i>
+        <span>更换</span>
+        <em>北京出版社(一年级起点)</em>
+    </P>
+    <ul class="show_class">
+        <li class="cfix">
+            <a href="javascript:;"></a>
+            <span class="le">1班</span>
+            <i>已激活<span>3</span>人  未激活<span>23</span>人<em>></em></i>
+        </li>
+        <li class="cfix">
+            <a href="javascript:;"></a>
+            <span class="le">1班</span>
+            <i>已激活<span>3</span>人  未激活<span>23</span>人<em>></em></i>
+        </li>
+    </ul>
+    <P class="cfix class_title">
+        <a href="javascript:;"></a>
+        <i>二年级9班(共23人)</i>
+        <span>更换</span>
+        <em>北京出版社(一年级起点)</em>
+    </P>
+    <ul class="show_class">
+        <li class="cfix">
+            <a href="javascript:;"></a>
+            <span class="le">1班</span>
+            <i>已激活<span>3</span>人  未激活<span>23</span>人<em>></em></i>
+        </li>
+        <li class="cfix">
+            <a href="javascript:;"></a>
+            <span class="le">1班</span>
+            <i>已激活<span>3</span>人  未激活<span>23</span>人<em>></em></i>
+        </li>
+    </ul>
+    <P class="cfix class_title  show_choose_pop">
+        <a href="javascript:;"></a>
+        <i>二年级9班(共23人)</i>
+        <span class="">选择教材版本</span>
+        <img src="<%= imagessrc%>confirm_select_tips1.png">
+    </P>
+    <ul class="show_class">
+        <li class="cfix">
+            <a href="javascript:;"></a>
+            <span class="le">1班</span>
+            <i>已激活<span>3</span>人  未激活<span>23</span>人<em>></em></i>
+        </li>
+        <li class="cfix">
+            <a href="javascript:;"></a>
+            <span class="le">1班</span>
+            <i>已激活<span>3</span>人  未激活<span>23</span>人<em>></em></i>
+        </li>
+    </ul>
+    <P class="cfix class_title  show_choose_pop">
+        <a href="javascript:;"></a>
+        <i>二年级9班(共23人)</i>
+        <span class="">选择教材版本</span>
+        <img src="<%= imagessrc%>confirm_select_tips1.png">
+    </P>
+    <ul class="show_class">
+        <li class="cfix">
+            <a href="javascript:;"></a>
+            <span class="le">1班</span>
+            <i>已激活<span>3</span>人  未激活<span>23</span>人<em>></em></i>
+        </li>
+        <li class="cfix">
+            <a href="javascript:;"></a>
+            <span class="le">1班</span>
+            <i>已激活<span>3</span>人  未激活<span>23</span>人<em>></em></i>
+        </li>
+    </ul>
+    <P class="add_class"><a href="#"></a><span>+ </span> 添加班级</P>
+
+<!-- loading -->
+<div id="fontSizeLoding">
+    <img src="<%= imagessrc%>eff_loading.gif">
+</div>
+<script type="text/javascript">
+window.onload = function(){
+    document.documentElement.style.fontSize = document.body.clientWidth / 7.5 + "px";
+    document.getElementById("fontSizeLoding").style.display = "none";
+}
+</script>
+</body>
+<!--公共尾部结束-->
+<% include ../common/bottom.ejs %>

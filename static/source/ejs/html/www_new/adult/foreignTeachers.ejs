@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>英语学习，口语学习首选的英语学习网站，51talk无忧英语，外教一对一，在线学英语！</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="keywords" content="{<info.keywords>}" />
+	<meta name="description" content="51tailk无忧英语专业提供网络英语外教一对一培训教学,专注于真人英语外教一对一培训,让您足不出户,网上平价学英语.英语外教一对一培训服务热线4000-51-51-51"/>
+	<link rel="stylesheet" type="text/css" href="<%= cssPath %>common/commons.css">
+  <link rel="stylesheet" type="text/css" href="<%= cssPath %>adult/w_foreignTeachers.css">
+	<!--[if IE 6]><script src="../js/lib/DD_belatedPNG_0.0.8a.min.js"></script><![endif]-->
+</head>
+<body>
+<!-- 公共区域 -->
+<%- include("../common/w_nav.ejs",{
+  wrapClass:"adult-nav-list",
+  navList:[
+    {
+      className:"crt",
+      text:"51Talk成人英语",
+      url:"http://adult.51talk.com/"
+    },
+    {
+      className:"",
+      text:"学习理念",
+      url:"http://www.51talk.com/index/feature"
+    },
+    {
+      className:"",
+      text:"课程体系",
+      url:"http://www.51talk.com/index/system"
+    },
+    {
+      className:"",
+      text:"外教师资",
+      url:"http://www.51talk.com/index/teachers"
+    },
+    {
+      className:"",
+      text:"学习体系",
+      url:"http://www.51talk.com/index/guide"
+    },
+    {
+      className:"",
+      text:"名师课堂",
+      url:"http://www.51talk.com/index/multiClass"
+    }
+  ],
+  isIndex:false, //判断是否为首页
+  isNorth:false //判断是否为美小
+
+  }) %>
+  <div>
+    <% include ../common/w_banner.ejs %>
+  </div>
+<!-- /公共区域 -->
+<!-- 学习概念 -->
+<div class="teachers" data-init="adult/index" id="container">
+	<div class="teacherT">
+		<h3 class="teacherT_tit"><img data-src="<%=imagessrc%>adult/w_t_top1.png" width="843" height="98" src="<%=imagessrc%>common/deafult.png"></h3>
+		<p class="teacherT_text"><a href="#">立即体验专业的外教授课</a></p>
+		<ul class="teacherT_list">
+			<li>
+				<div class="teacherT_img teacherT_img1"></div>
+				<h3>只用顶尖的3%</h3>
+				<p class="teacher_b">海外专业团队直接培训认证外教</p>
+				<p class="teacher_c">51Talk拥有超过8000名经过严格考核优选的外教团队。只录取TOP 5%的优秀人才，发音标准，经验丰富。</p>
+
+			</li>
+			<li class="teacherT_l_w">
+				<div class="teacherT_img teacherT_img2"></div>
+				<h3>外教团队的精益求精</h3>
+				<p class="teacher_b">外教培训, 教学研讨, 不断提升外教的教学能力</p>
+				<p class="teacher_c">正式聘用后，每两周一次的在职培训，定期的教学研讨会和不定期的教学质量跟踪反馈系统都将时刻帮助老师进步，每一名51Talk的外教都会接受至少100个小时的专业培训。</p>
+			</li>
+			<li>
+				<div class="teacherT_img teacherT_img3"></div>
+				<h3>学员参与外教评价</h3>
+				<p class="teacher_b">公开、公正的外教评价体系</p>
+				<p class="teacher_c">每次上课结束后，学员都可以对老师的表现进行评价。经过数百万次的评分，老师的教学水平，教学特色都会公平公开地展现给每一位学员，帮助他们找到所最适合自己的老师。</p>
+			</li>
+		</ul>
+	</div>
+	<div class="teacherB openClass">
+		<div class="teacherB_width">
+			<h3 class="teacherT_tit"><img data-src="<%=imagessrc%>adult/w_t_top2.png" width="890" height="98" src="<%=imagessrc%>common/deafult.png"></h3>
+			<p class="teacherT_text"><a href="#">立即体验专业的外教授课</a></p>
+			<div class="teacherB_cont">
+				<ul class="teacherB_list">
+					<li>
+						<div class="teacherB_img">
+							<a href="javascript:;" data-vedioSrc="http://media.51talk.com/upload/media/Ritch.flv"><img data-src="<%=imagessrc%>adult/t_b_1.jpg" width="140" height="140" src="<%=imagessrc%>common/deafult.png"><span></span></a>
+						</div>
+						<h3>Ritch</h3>
+						<p class="teacherB_star"><span></span><span></span><span></span><span></span><span></span></p>
+					</li>
+					<li>
+						<div class="teacherB_img">
+							<a href="javascript:;" data-vedioSrc="http://media.51talk.com/upload/media/Ritch.flv"><img data-src="<%=imagessrc%>adult/t_b_2.jpg" width="140" height="140" src="<%=imagessrc%>common/deafult.png"><span></span></a>
+						</div>
+						<h3>Jon</h3>
+						<p class="teacherB_star"><span></span><span></span><span></span><span></span><span></span></p>
+					</li>
+					<li>
+						<div class="teacherB_img">
+							<a href="javascript:;" data-vedioSrc="http://media.51talk.com/upload/media/Ritch.flv"><img data-src="<%=imagessrc%>adult/t_b_3.jpg" width="140" height="140" src="<%=imagessrc%>common/deafult.png"><span></span></a>
+						</div>
+						<h3>Hazel</h3>
+						<p class="teacherB_star"><span></span><span></span><span></span><span></span><span></span></p>
+					</li>
+					<li>
+						<div class="teacherB_img">
+							<a href="javascript:;" data-vedioSrc="http://media.51talk.com/upload/media/Ritch.flv"><img data-src="<%=imagessrc%>adult/t_b_4.jpg" width="140" height="140" src="<%=imagessrc%>common/deafult.png"><span></span></a>
+						</div>
+						<h3>Melrick</h3>
+						<p class="teacherB_star"><span></span><span></span><span></span><span></span><span></span></p>
+					</li>
+					<li>
+						<div class="teacherB_img">
+							<a href="javascript:;" data-vedioSrc="http://media.51talk.com/upload/media/Ritch.flv"><img data-src="<%=imagessrc%>adult/t_b_5.jpg" width="140" height="140" src="<%=imagessrc%>common/deafult.png"><span></span></a>
+						</div>
+						<h3>Paul</h3>
+						<p class="teacherB_star"><span></span><span></span><span></span><span></span></p>
+					</li>
+					<li>
+						<div class="teacherB_img">
+							<a href="javascript:;" data-vedioSrc="http://media.51talk.com/upload/media/Ritch.flv"><img data-src="<%=imagessrc%>adult/t_b_6.jpg" width="140" height="140" src="<%=imagessrc%>common/deafult.png"><span></span></a>
+						</div>
+						<h3>Monica</h3>
+						<p class="teacherB_star"><span></span><span></span><span></span><span></span></p>
+					</li>
+					<li>
+						<div class="teacherB_img">
+							<a href="javascript:;" data-vedioSrc="http://media.51talk.com/upload/media/Ritch.flv"><img data-src="<%=imagessrc%>adult/t_b_7.jpg" width="140" height="140" src="<%=imagessrc%>common/deafult.png"><span></span></a>
+						</div>
+						<h3>Rolly</h3>
+						<p class="teacherB_star"><span></span><span></span><span></span><span></span><span></span></p>
+					</li>
+					<li>
+						<div class="teacherB_img">
+							<a href="javascript:;" data-vedioSrc="http://media.51talk.com/upload/media/Ritch.flv"><img data-src="<%=imagessrc%>adult/t_b_8.jpg" width="140" height="140" src="<%=imagessrc%>common/deafult.png"><span></span></a>
+						</div>
+						<h3>Alissa</h3>
+						<p class="teacherB_star"><span></span><span></span><span></span><span></span></p>
+					</li>
+					<li>
+						<div class="teacherB_img">
+							<a href="javascript:;" data-vedioSrc="http://media.51talk.com/upload/media/Ritch.flv"><img data-src="<%=imagessrc%>adult/t_b_9.jpg" width="140" height="140" src="<%=imagessrc%>common/deafult.png"><span></span></a>
+						</div>
+						<h3>Josh</h3>
+						<p class="teacherB_star"><span></span><span></span><span></span><span></span><span></span></p>
+					</li>
+					<li>
+						<div class="teacherB_img">
+							<a href="javascript:;" data-vedioSrc="http://media.51talk.com/upload/media/Ritch.flv"><img data-src="<%=imagessrc%>adult/t_b_10.jpg" width="140" height="140" src="<%=imagessrc%>common/deafult.png"><span></span></a>
+						</div>
+						<h3>Kat</h3>
+						<p class="teacherB_star"><span></span><span></span><span></span><span></span><span></span></p>
+					</li>
+					<li>
+						<div class="teacherB_img">
+							<a href="javascript:;" data-vedioSrc="http://media.51talk.com/upload/media/Ritch.flv"><img data-src="<%=imagessrc%>adult/t_b_11.jpg" width="140" height="140" src="<%=imagessrc%>common/deafult.png"><span></span></a>
+						</div>
+						<h3>Marky</h3>
+						<p class="teacherB_star"><span></span><span></span><span></span><span></span><span></span></p>
+					</li>
+					<li>
+						<div class="teacherB_img">
+							<a href="javascript:;" data-vedioSrc="http://media.51talk.com/upload/media/Ritch.flv"><img data-src="<%=imagessrc%>adult/t_b_12.jpg" width="140" height="140" src="<%=imagessrc%>common/deafult.png"><span></span></a>
+						</div>
+						<h3>Nadine</h3>
+						<p class="teacherB_star"><span></span><span></span><span></span><span></span><span></span></p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 尾部 -->
+<!-- right side bar -->
+<% include ../common/w_side_bar.ejs %>
+<!-- /right side bar-->
+<% include ../common/w_footer_home.ejs %>
+</body>
+<script src="<%= jsPath%>common/jquery.min.js"></script>
+<script src="http://static.51talk.com/js/new_user/ckplayer/ckplayer.js"></script>
+<script src="<%= jsPath%>vendor.js" id="seajsnode"></script>
+</html>

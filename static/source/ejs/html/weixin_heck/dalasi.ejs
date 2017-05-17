@@ -1,0 +1,69 @@
+<% include ../common/top_b2s.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%=csslinkb2s%>chartsChat.css">
+    <link rel="stylesheet" type="text/css" href="<%=csslinkb2s%>layui.css">
+</head>
+<body data-init="dalasi">
+<div class="count-title">达拉斯作业统计记录</div>
+<!--<form action="123.html" method="post">-->
+    <div class="plr25 clear-fix">
+        <div class="select-time fl">
+            <div class="layui-form-pane">
+                <div class="layui-form-item">
+                    <div class="layui-input-inline">
+                        <input class="layui-input sel-time" placeholder="开始日期"  onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD'})" id="stime">
+                    </div>
+                    <span class="zhizi">至</span>
+                    <div class="layui-input-inline  sel-time">
+                        <input class="layui-input" placeholder="截止日期" onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD'})"  id="etime">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="type-option fl">
+            <select id="typeList">
+                <!--<option value="0">请选择类型</option>-->
+                <option value="1">菲小达拉斯</option>
+                <option value="2">美小达拉斯</option>
+                <option value="3">美小CST</option>
+            </select>
+        </div>
+        <div class="type-option fl">
+            <select id="teacherList">
+
+            </select>
+        </div>
+        <div class="by-time fl">
+            <span class="by-time-btn cut-sel" data-time="1">按日</span>
+            <span class="by-time-btn" data-time="2">按周</span>
+            <span class="by-time-btn" data-time="3">按月</span>
+        </div>
+        <div class="add-btn fr">
+            <input type="submit" id="confirmBtn" value="统计查询"/>
+        </div>
+    </div>
+<!--</form>-->
+<div class="show-count-option">
+    <div class="table-list clearfix">
+        <div class="clearfix">
+                <h5 class="nodata">暂无统计记录！</h5>
+                <table class="show-detail show-detail-user dn" border="1" cellspacing="0" cellpadding="0">
+                    <thead>
+                    <tr>
+                        <th>时间</th>
+                        <th>作业批改数</th>
+                        <th>批改群数</th>
+                    </tr>
+                    </thead>
+                    <tbody id="dalasi">
+
+                    </tbody>
+                </table>
+        </div>
+    </div>
+</div>
+
+<div id="chartLable"></div>
+
+
+</body>
+<% include ../common/bottom.ejs %>

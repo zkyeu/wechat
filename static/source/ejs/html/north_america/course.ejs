@@ -1,0 +1,470 @@
+<!-- meta -->
+<% include inc/meta.ejs %>
+<!-- meta end -->
+<body>
+<!-- 顶部 -->
+<%- include("../www_new/common/w_nav.ejs",{
+  wrapClass:"north-nav-list",
+  navList:[
+    {
+      className:"crt",
+      text:"51Talk美国小学",
+      url:"http://usa.51talk.com/"
+    },
+    {
+      className:"",
+      text:"教学理念",
+      url:"http://usa.51talk.com/index/teachingPhilosophy"
+    },
+    {
+      className:"",
+      text:"北美外教",
+      url:"http://usa.51talk.com/index/teacher"
+    },
+    {
+      className:"",
+      text:"美国小学课程",
+      url:"http://usa.51talk.com/index/course"
+    }
+  ],
+  isIndex:false, //判断是否为首页
+  isNorth:true //判断是否为美小
+
+  }) %>
+<!-- 回到顶部-->
+<div id="u-gotop" style="disblpay:block;">
+    <a href="javascript:;" title="回到顶部">回到顶部</a>
+</div>
+	<!-- container -->
+	<div class="course-container" id="container" data-init="north_america">
+		<div class="banner">
+		</div>
+		<!-- Study Method -->
+		<div class="study-method common-style" style="padding-top:40px">
+			<div class="wrap">
+				<h1 class="title">美国小学课程学习方法</h1>
+				<img src="<%=imagessrc%>study_method.png">
+			</div>
+		</div>
+		<!-- Study Method end -->
+		<!-- American-Style Curriculum -->
+		<div class="course-system common-style">
+			<div class="wrap">
+				<h1 class="title">美国小学课程体系</h1>
+				<img src="<%=imagessrc%>course_system.jpg">
+			</div>
+		</div>
+		<!-- American-Style Curriculum end -->
+		<!-- Leveled Courses -->
+		<div class="course-level">
+			<div class="wrap">
+				<h1 class="title">美国小学级别课程</h1>
+				<div class="course-con">
+					<div class="tabs">
+						<ul class="clearfix">
+							<li data-tag="light-box1" data-cur="1" class="selected"><span>K</span>( 学龄前 )</li>
+							<li data-tag="light-box2" data-cur="1"><span>G1</span>( 一年级 )</li>
+							<li data-tag="light-box3" data-cur="1"><span>G2</span>( 二年级 )</li>
+							<li data-tag="light-box4" data-cur="1"><span>G3</span>( 三年级 )</li>
+							<li data-tag="light-box5" data-cur="1"><span>G4</span>( 四年级 )</li>
+							<li data-tag="light-box6" data-cur="1"><span>G5</span>( 五年级 )</li>
+							<li data-tag="light-box7" data-cur="1"><span>G6</span>( 六年级 )</li>
+						</ul>
+						<div class="slide"></div>
+					</div>
+					<div class="content-box">
+						<div class="content-item show">
+							<div class="box box1 clearfix">
+								<dl>
+									<dt>【 适合水平1 】</dt>
+									<dd>5－6岁学生</dd>
+								</dl>
+								<dl>
+									<dt>【 授课模式 】</dt>
+									<dd>1对一外教</dd>
+								</dl>
+								<dl>
+									<dt>【 课程设置 】</dt>
+									<dd>128课时/1学年  25min/课时</dd>
+								</dl>
+								<dl>
+									<dt>【 适合水平 】</dt>
+									<dd>5－6岁学生</dd>
+								</dl>
+							</div>
+							<div class="box box2 clearfix">
+								<dl>
+									<dt>【 课程内容 】</dt>
+									<dd>26个字母      51个字母组合      384个单词      56本故事书</dd>
+								</dl>
+							</div>
+							<div class="box box2 box3 clearfix">
+								<dl>
+									<dt>【 学习目的 】</dt>
+									<dd><span class="dot">本年级孩子：  能够熟练阅读适合六年级的文章；能够说出未知单词、多义词，还包括技巧性词汇和各种隐含意义；使用结合上下文中的线索或词语间的关系（例如：部分/整体，原因/结果，项目/类别）来阅读基于 ...... </span><a class = "more" href="javascript:void(0)">查看更多</a><span class="hide">能够熟练阅读适合六年级的文章；能够说出未知单词、多义词，还包括技巧性词汇和各种隐含意义；使用结合上下文中的线索或词语间的关系（例如：部分/整体，原因/结果，项目/类别）来阅读基本年级孩子：  能够熟练阅读适合六年级的文章；能够说出未知单词、多义词，还包括技巧性词汇和各种隐含意义；使用结合上下文中的线索或词语间的关系（例如：部分/整体，原因/结果，项目/类别）来阅读基于 ......</span></dd>
+								</dl>
+							</div>
+							<div id="light-box1" class="light-box">
+								<div class="lunbo">
+									<div class="box-card">
+										<!-- <img src="<%=imagessrc%>k1/p1.jpg"> -->
+										<img src="<%=imagessrc%>k1/p2.jpg">
+										<img src="<%=imagessrc%>k1/p3.jpg">
+									</div>
+								</div>
+								<div class="btn">
+									<div class="btn-l fl"></div>
+									<div class="btn-r fr"></div>
+								</div>
+								<div class="bottom">
+										<ul class="list-li">
+											<li class="selected"></li>
+											<!-- <li></li> -->
+											<li></li>
+										
+										</ul>
+								</div>
+							</div>			
+						</div>
+						<div class="content-item hide">
+							<div class="box box1 clearfix">
+								<dl>
+									<dt>【 适合水平1 】</dt>
+									<dd>5－6岁学生</dd>
+								</dl>
+								<dl>
+									<dt>【 授课模式 】</dt>
+									<dd>1对一外教</dd>
+								</dl>
+								<dl>
+									<dt>【 课程设置 】</dt>
+									<dd>128课时/1学年  25min/课时</dd>
+								</dl>
+								<dl>
+									<dt>【 适合水平 】</dt>
+									<dd>5－6岁学生</dd>
+								</dl>
+							</div>
+							<div class="box box2 clearfix">
+								<dl>
+									<dt>【 课程内容 】</dt>
+									<dd>26个字母      51个字母组合      384个单词      56本故事书</dd>
+								</dl>
+							</div>
+							<div class="box box2 box3 clearfix">
+								<dl>
+									<dt>【 学习目的 】</dt>
+									<dd>本年级孩子：  能够熟练阅读适合六年级的文章；能够说出未知单词、多义词，还包括技巧性词汇和各种隐含意义；使用结合上下文中的线索或词语间的关系（例如：部分/整体，原因/结果，项目/类别）来阅读基于 <span class="dot">...... </span><a class = "more" href="javascript:void(0)">查看更多</a><span class="hide">能够熟练阅读适合六年级的文章；能够说出未知单词、多义词，还包括技巧性词汇和各种隐含意义；使用结合上下文中的线索或词语间的关系（例如：部分/整体，原因/结果，项目/类别）来阅读基</span></dd>
+								</dl>
+							</div>
+							<div id="light-box2" class="light-box">
+								<div class="lunbo">
+									<div class="box-card">
+										<img src="<%=imagessrc%>g1/p1.jpg">
+										<img src="<%=imagessrc%>g1/p2.jpg">
+										<img src="<%=imagessrc%>g1/p3.jpg">
+									</div>
+								</div>
+								<div class="btn">
+									<div class="btn-l fl"></div>
+									<div class="btn-r fr"></div>
+								</div>
+								<div class="bottom">
+										<ul class="list-li">
+											<li class="selected"></li>
+											<li></li>
+											<li></li>
+										
+										</ul>
+								</div>
+							</div>			
+						</div>
+						<div class="content-item hide">
+							<div class="box box1 clearfix">
+								<dl>
+									<dt>【 适合水平3 】</dt>
+									<dd>5－6岁学生</dd>
+								</dl>
+								<dl>
+									<dt>【 授课模式 】</dt>
+									<dd>1对一外教</dd>
+								</dl>
+								<dl>
+									<dt>【 课程设置 】</dt>
+									<dd>128课时/1学年  25min/课时</dd>
+								</dl>
+								<dl>
+									<dt>【 适合水平 】</dt>
+									<dd>5－6岁学生</dd>
+								</dl>
+							</div>
+							<div class="box box2 clearfix">
+								<dl>
+									<dt>【 课程内容 】</dt>
+									<dd>26个字母      51个字母组合      384个单词      56本故事书</dd>
+								</dl>
+							</div>
+							<div class="box box2 box3 clearfix">
+								<dl>
+									<dt>【 学习目的 】</dt>
+									<dd>本年级孩子：  能够熟练阅读适合六年级的文章；能够说出未知单词、多义词，还包括技巧性词汇和各种隐含意义；使用结合上下文中的线索或词语间的关系（例如：部分/整体，原因/结果，项目/类别）来阅读基于 <span class="dot">...... </span><a class = "more" href="javascript:void(0)">查看更多</a><span class="hide">能够熟练阅读适合六年级的文章；能够说出未知单词、多义词，还包括技巧性词汇和各种隐含意义；使用结合上下文中的线索或词语间的关系（例如：部分/整体，原因/结果，项目/类别）来阅读基</span></dd>
+								</dl>
+							</div>
+							<div id="light-box3" class="light-box">
+								<div class="lunbo">
+									<div class="box-card">
+										<img src="<%=imagessrc%>g2/p1.jpg">
+										<img src="<%=imagessrc%>g2/p2.jpg">
+										<img src="<%=imagessrc%>g2/p3.jpg">
+									</div>
+								</div>
+								<div class="btn">
+									<div class="btn-l fl"></div>
+									<div class="btn-r fr"></div>
+								</div>
+								<div class="bottom">
+										<ul class="list-li">
+											<li class="selected"></li>
+											<li></li>
+											<li></li>
+										
+										</ul>
+								</div>
+							</div>			
+						</div>
+						<div class="content-item hide">
+							<div class="box box1 clearfix">
+								<dl>
+									<dt>【 适合水平4 】</dt>
+									<dd>5－6岁学生</dd>
+								</dl>
+								<dl>
+									<dt>【 授课模式 】</dt>
+									<dd>1对一外教</dd>
+								</dl>
+								<dl>
+									<dt>【 课程设置 】</dt>
+									<dd>128课时/1学年  25min/课时</dd>
+								</dl>
+								<dl>
+									<dt>【 适合水平 】</dt>
+									<dd>5－6岁学生</dd>
+								</dl>
+							</div>
+							<div class="box box2 clearfix">
+								<dl>
+									<dt>【 课程内容 】</dt>
+									<dd>26个字母      51个字母组合      384个单词      56本故事书</dd>
+								</dl>
+							</div>
+							<div class="box box2 box3 clearfix">
+								<dl>
+									<dt>【 学习目的 】</dt>
+									<dd>本年级孩子：  能够熟练阅读适合六年级的文章；能够说出未知单词、多义词，还包括技巧性词汇和各种隐含意义；使用结合上下文中的线索或词语间的关系（例如：部分/整体，原因/结果，项目/类别）来阅读基于 <span class="dot">...... </span><a class = "more" href="javascript:void(0)">查看更多</a><span class="hide">能够熟练阅读适合六年级的文章；能够说出未知单词、多义词，还包括技巧性词汇和各种隐含意义；使用结合上下文中的线索或词语间的关系（例如：部分/整体，原因/结果，项目/类别）来阅读基</span></dd>
+								</dl>
+							</div>
+							<div id="light-box4" class="light-box">
+								<div class="lunbo">
+									<div class="box-card">
+										<img src="<%=imagessrc%>g3/p1.jpg">
+										<img src="<%=imagessrc%>g3/p2.jpg">
+										<img src="<%=imagessrc%>g3/p3.jpg">
+									</div>
+								</div>
+								<div class="btn">
+									<div class="btn-l fl"></div>
+									<div class="btn-r fr"></div>
+								</div>
+								<div class="bottom">
+										<ul class="list-li">
+											<li class="selected"></li>
+											<li></li>
+											<li></li>
+										
+										</ul>
+								</div>
+							</div>			
+						</div>
+						<div class="content-item hide">
+							<div class="box box1 clearfix">
+								<dl>
+									<dt>【 适合水平5 】</dt>
+									<dd>5－6岁学生</dd>
+								</dl>
+								<dl>
+									<dt>【 授课模式 】</dt>
+									<dd>1对一外教</dd>
+								</dl>
+								<dl>
+									<dt>【 课程设置 】</dt>
+									<dd>128课时/1学年  25min/课时</dd>
+								</dl>
+								<dl>
+									<dt>【 适合水平 】</dt>
+									<dd>5－6岁学生</dd>
+								</dl>
+							</div>
+							<div class="box box2 clearfix">
+								<dl>
+									<dt>【 课程内容 】</dt>
+									<dd>26个字母      51个字母组合      384个单词      56本故事书</dd>
+								</dl>
+							</div>
+							<div class="box box2 box3 clearfix">
+								<dl>
+									<dt>【 学习目的 】</dt>
+									<dd>本年级孩子：  能够熟练阅读适合六年级的文章；能够说出未知单词、多义词，还包括技巧性词汇和各种隐含意义；使用结合上下文中的线索或词语间的关系（例如：部分/整体，原因/结果，项目/类别）来阅读基于 <span class="dot">...... </span><a class = "more" href="javascript:void(0)">查看更多</a><span class="hide">能够熟练阅读适合六年级的文章；能够说出未知单词、多义词，还包括技巧性词汇和各种隐含意义；使用结合上下文中的线索或词语间的关系（例如：部分/整体，原因/结果，项目/类别）来阅读基</span></dd>
+								</dl>
+							</div>
+							<div id="light-box5" class="light-box">
+								<div class="lunbo">
+									<div class="box-card">
+										<img src="<%=imagessrc%>g4/p1.jpg">
+										<img src="<%=imagessrc%>g4/p2.jpg">
+										<img src="<%=imagessrc%>g4/p3.jpg">
+									</div>
+								</div>
+								<div class="btn">
+									<div class="btn-l fl"></div>
+									<div class="btn-r fr"></div>
+								</div>
+								<div class="bottom">
+										<ul class="list-li">
+											<li class="selected"></li>
+											<li></li>
+											<li></li>
+										
+										</ul>
+								</div>
+							</div>			
+						</div>
+						<div class="content-item hide">
+							<div class="box box1 clearfix">
+								<dl>
+									<dt>【 适合水平6 】</dt>
+									<dd>5－6岁学生</dd>
+								</dl>
+								<dl>
+									<dt>【 授课模式 】</dt>
+									<dd>1对一外教</dd>
+								</dl>
+								<dl>
+									<dt>【 课程设置 】</dt>
+									<dd>128课时/1学年  25min/课时</dd>
+								</dl>
+								<dl>
+									<dt>【 适合水平 】</dt>
+									<dd>5－6岁学生</dd>
+								</dl>
+							</div>
+							<div class="box box2 clearfix">
+								<dl>
+									<dt>【 课程内容 】</dt>
+									<dd>26个字母      51个字母组合      384个单词      56本故事书</dd>
+								</dl>
+							</div>
+							<div class="box box2 box3 clearfix">
+								<dl>
+									<dt>【 学习目的 】</dt>
+									<dd>本年级孩子：  能够熟练阅读适合六年级的文章；能够说出未知单词、多义词，还包括技巧性词汇和各种隐含意义；使用结合上下文中的线索或词语间的关系（例如：部分/整体，原因/结果，项目/类别）来阅读基于 <span class="dot">...... </span><a class = "more" href="javascript:void(0)">查看更多</a><span class="hide">能够熟练阅读适合六年级的文章；能够说出未知单词、多义词，还包括技巧性词汇和各种隐含意义；使用结合上下文中的线索或词语间的关系（例如：部分/整体，原因/结果，项目/类别）来阅读基</span></dd>
+								</dl>
+							</div>
+							<div id="light-box6" class="light-box">
+								<div class="lunbo">
+									<div class="box-card">
+										<img src="<%=imagessrc%>g5/p1.jpg">
+										<img src="<%=imagessrc%>g5/p2.jpg">
+										<img src="<%=imagessrc%>g5/p3.jpg">
+									</div>
+								</div>
+								<div class="btn">
+									<div class="btn-l fl"></div>
+									<div class="btn-r fr"></div>
+								</div>
+								<div class="bottom">
+										<ul class="list-li">
+											<li class="selected"></li>
+											<li></li>
+											<li></li>
+										
+										</ul>
+								</div>
+							</div>			
+						</div>
+						<div class="content-item hide">
+							<div class="box box1 clearfix">
+								<dl>
+									<dt>【 适合水平7 】</dt>
+									<dd>5－6岁学生</dd>
+								</dl>
+								<dl>
+									<dt>【 授课模式 】</dt>
+									<dd>1对一外教</dd>
+								</dl>
+								<dl>
+									<dt>【 课程设置 】</dt>
+									<dd>128课时/1学年  25min/课时</dd>
+								</dl>
+								<dl>
+									<dt>【 适合水平 】</dt>
+									<dd>5－6岁学生</dd>
+								</dl>
+							</div>
+							<div class="box box2 clearfix">
+								<dl>
+									<dt>【 课程内容 】</dt>
+									<dd>26个字母      51个字母组合      384个单词      56本故事书</dd>
+								</dl>
+							</div>
+							<div class="box box2 box3 clearfix">
+								<dl>
+									<dt>【 学习目的 】</dt>
+									<dd>本年级孩子：  能够熟练阅读适合六年级的文章；能够说出未知单词、多义词，还包括技巧性词汇和各种隐含意义；使用结合上下文中的线索或词语间的关系（例如：部分/整体，原因/结果，项目/类别）来阅读基于 <span class="dot">...... </span><a class = "more" href="javascript:void(0)">查看更多</a><span class="hide">能够熟练阅读适合六年级的文章；能够说出未知单词、多义词，还包括技巧性词汇和各种隐含意义；使用结合上下文中的线索或词语间的关系（例如：部分/整体，原因/结果，项目/类别）来阅读基</span></dd>
+								</dl>
+							</div>
+							<div id="light-box7" class="light-box">
+								<div class="lunbo">
+									<div class="box-card">
+										<img src="<%=imagessrc%>g6/p1.jpg">
+										<img src="<%=imagessrc%>g6/p2.jpg">
+										<img src="<%=imagessrc%>g6/p3.jpg">
+									</div>
+								</div>
+								<div class="btn">
+									<div class="btn-l fl"></div>
+									<div class="btn-r fr"></div>
+								</div>
+								<div class="bottom">
+										<ul class="list-li">
+											<li class="selected"></li>
+											<li></li>
+											<li></li>
+										
+										</ul>
+								</div>
+							</div>			
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Leveled Courses end -->
+		<!-- Group Reading -->
+		<div class="reading common-style">
+			<div class="wrap">
+				<h1 class="title">美国小学精品绘本阅读课</h1>
+				<img src="<%=imagessrc%>course_reading.jpg">
+				<!-- <h2>引进原版阅读材料 Reading A-Z</h2>
+				<p>全球有超过<em>160</em>个国家都在同步使用这套教材，涵盖常识、天文、地理、历史、人文、动植物、童话等各个方面，
+让孩子们在学习英语的同时，丰富知识，拓展视野。</p> -->
+			</div>
+		</div>
+		<!-- Group Reading end -->
+	</div>
+	<!-- container end -->
+	<!-- footer -->
+	<% include ../www_new/common/w_footer_home.ejs %>
+	<!-- footer end -->
+	<script src="<%= jssrc%>" id="seajsnode"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<% include ../common/top.ejs %>
+<body class="ac-tem-pair ac-tem-stu" data-init="wordHeardPrompt" swfHref="" audioPath="" page-tag="pair,stu,play">
+    <div class="header-box">
+        <ul class="clear">
+            <li class="current-p">单词听说</li>
+            <li class="not-done">词义辨识</li>
+            <li class="not-done">单词拼写</li>
+            <li class="not-done">句型学习</li>
+            <li class="not-done">语法视频</li>
+            <li class="not-done">阅读学习</li>
+        </ul>
+    </div>
+	 
+    <div class="before-result word-heard-p" id="aiPanel">
+        <p class="word-prompt-box"><span>3</span>秒后检测</p>
+        <a class="word-p-btn" href="http://baidu.com"></a>
+    </div>
+    <div class="word-heard-tips">
+        <div class="mask"></div>
+
+        <div id="aiMediaDialogOverlay" class="aiMediaDialogOverlay"> </div>
+        <div class="tip"></div>
+        <div id="aiMediaDialog" class="aiMediaDialog">
+            <div class="dialogTitle">
+                设置面板
+                <button class="dialogCloseButton">
+                    X
+                </button>
+            </div>
+
+            <div class="dialogFlashError">
+                <p class="flashVersion hidden">
+                    您电脑的Flash版本过低，请点击此链接升级。 <br/>
+                    <a href="http://get.adobe.com/flashplayer/" target="_blank">点击下载最新Flash版本</a>
+                </p>
+                <p class="flashPlugin hidden">
+                    您的电脑没有安装或者禁用Flash插件，请确认。<br/>
+                    <a href="http://get.adobe.com/flashplayer/" target="_blank">点击下载最新Flash版本</a>
+                </p>
+            </div>
+
+            <div class="dialogBody">
+                <div id="recorder">   </div>
+            </div>
+
+            <div class="dialogInfo">
+                <h5>状态信息</h5>
+                <ul>
+                    <li class="loadFlashPlayer hidden">
+                        <span class="info">正在下载Flash播放器...</span>
+                    </li>
+                    <li class="loadFlashRecorder hidden">
+                        <span class="info">正在下载Flash录音机...</span>
+                    </li>
+                    <li class="connectServerInit hidden">
+                        <span class="error">还没有连接录音服务器</span>
+                    </li>
+                    <li class="connectServerStart hidden">
+                        <span class="info">正在连接录音服务器，请稍候...</span>
+                    </li>
+                    <li class="connectServerSuccess hidden">
+                        <span class="success">连接录音服务器成功</span>
+                    </li>
+                    <li class="connectServerError hidden">
+                        <span class="error">连接录音服务器失败，请<a href="javascript:aiPanel.recorder.reconnect();">重试</a></span>
+                    </li>
+                    <li class="micStatusAllow hidden">
+                        <span class="success">Flash可以访问麦克风</span>
+                    </li>
+                    <li class="micStatusDisallow hidden">
+                        <span class="error">Flash不能访问麦克风，请设置</span>
+                    </li>
+                    <li class="micStatusError hidden">
+                        <span class="error">没有找到录音设备，请检查</span>
+                    </li>
+                    <li class="mmscfgError hidden">
+                        <span class="error">Flash被禁止访问麦克风，请手动删除 mms.cfg文件，然后重试</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="dialogButton">
+                <button class="okButton">确定</button>
+            </div>
+        </div>
+
+    </div>
+
+<script type="text/javascript" src="http://sdk.cloud.chivox.com/chivoxsdk-js/v3.0/load_core.js"></script>
+</body>
+<% include ../common/bottom.ejs %>

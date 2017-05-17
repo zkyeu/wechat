@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta content="yes" name="apple-mobile-web-app-capable" /> 
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+    <meta content="telephone=no" name="format-detection" /> 
+    <title>欢迎下载51Talk App</title>
+    <link rel="stylesheet" type="text/css" href="/css/wap/b2s/common.css">
+    <link rel="stylesheet" type="text/css" href="/css/wap/b2s/app_seeScore.css">
+</head>
+<body data-init="app_seeScore" class="seeScore-wrap">
+    <div class="seeScore-con">
+        <img src="/images/wap/b2s/app_seeScore-01.png" />
+        <img src="/images/wap/b2s/app_seeScore-02.png" />
+    </div>
+    <div class="seeScore-btn">
+        <div class="seeScore-pay cfix js_seeScore_pay">
+            <div class="seeScore-payL fl">
+                <div class="price fl"><span class="font1">￥</span><span class="font2">1</span><span class="font3">￥5</span></div>
+                <div class="prompt fr">本次购买的评分服务<br>仅用于本节配音练习</div>
+            </div>
+            <div class="seeScore-payR fr">立即购买</div>
+        </div>
+    </div>
+
+    
+<!-- 支付弹层 APP-->
+<div class="pay-dialog-wrap disnone js_dialog_wrap">
+    <div class="pay-dialog js_pay_dialog">
+        <div class="pay-dialog-tit js_pay-dialog-tit">
+            <div class="pay-dialog-tit-top">支付方式</div>
+            <div class="pay-dialog-tit-con js_paySelect">
+                <span class="payItems" data-paytype="alipay"><img src="/images/wap/b2s/app-buyvip-icon-alipay.png" /><i>支付宝购买</i></span>
+                <span class="payItems js_weixin" data-paytype="weixin"><img src="/images/wap/b2s/app-buyvip-icon-WeChat.png" /><i>微信购买</i></span>
+            </div>
+        </div>
+        <div class="pay-dialog-but pay-dialog-hide js_pay_dialog_hide">取消</div>
+        <form action="" class="js_payform">
+            <input name="x1" value="" type="hidden">
+            <!-- 微信 支付宝 -->
+            <input name="x2" value="" class="js_paytype" type="hidden">
+            <!-- 时间戳 -->
+            <input name="x5" value="" class="js_timestamp" type="hidden">
+        </form>
+    </div>
+</div>
+
+<!-- loading -->
+<div id="fontSizeLoding">
+    <img src="/images/wap/b2s/eff_loading.gif">
+</div>
+<script type="text/javascript">
+window.onload = function(){
+    document.documentElement.style.fontSize = document.body.clientWidth / 7.5 + "px";
+    document.getElementById("fontSizeLoding").style.display = "none";
+}
+</script>
+</body>
+<!--公共尾部结束-->
+<!--公共尾部结束-->
+<script id="seajsnode" src="/js/wap/project/b2s/vendor.js"></script>
+</html>

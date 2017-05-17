@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="app下载专页">
+    <meta name="keywords" content="app下载专页">
+    <title>欢迎下载51Talk App</title>
+    <link rel="stylesheet" type="text/css" href="/css/html/subject_www/subject_www.css">
+</head>
+<body>
+<!-- 导航 -->
+<div class="nav centerMth">
+    <a href="javascript:;" class="logo"><img src="/images/html/subject_www//logo.png" alt=""></a>
+    <ul class="menu">
+        <li><a href="javascript:;">小学英语</a></li>
+        <li><a href="javascript:;">教学理念</a></li>
+        <li class="active"><a href="javascript:;">课程体系</a></li>
+        <li><a href="javascript:;">优秀师资</a></li>
+        <li><a href="javascript:;">课堂展示</a></li>
+    </ul>
+    <a href="javascript:;" class="ac"><span class="d_ac"></span>下载AC在线教室</a>
+</div> 
+<div class="s_banner"> 
+  <div class="centerMth">
+    <img src="/images/html/subject_www/fine_tea_ads.jpg" alt="" class="banner_img">
+    <!--reg -->
+<div class="l-reg">
+  <p class="p-line"></p>
+  <ul class="reg-list">
+    <li class="on">注册</li>
+    <li>登录</li>
+  </ul>
+  <div class="reg-chg">
+    <div class="layer-test-pho change">
+      <div class="p-test">
+        <ul class="pho-list">
+          <li>
+            <input type="text" placeholder="请输入您的手机号" name="phone">
+            <div class="u-err error1"></div>
+          </li>
+          <li class="code-li">
+            <input type="text" placeholder="请输入短信验证码" name="msgcode" class="pho-code" id="mobile">
+            <div class="u-err error2"></div>
+            <span class="pho-t">免费获取</span>
+          </li>
+          <li>
+            <input type="password" placeholder="请设置您的密码" name="password">
+            <div class="u-err error3"></div>
+          </li>
+        </ul>
+        <div class="l-reg-btn" id="registerBtn" data-url-reg="111">下一步</div>
+      </div>
+       <!-- success -->
+      <div class="layer-success hide">
+        <h3>恭喜！</h3>
+        <p>您已成功注册51talk，<a href="javascript:;" class="suc-href">快速进群</a><br>找你的小伙伴吧</p>
+        <div class="l-reg-btn">进群找小伙伴</div>
+      </div>
+      <!-- /success -->
+    </div>
+    <div class="layer-test-login change hide">
+      <ul class="pho-list">
+        <li>
+          <input type="text" placeholder="请输入您的手机号" name="phone">
+          <div class="u-err error5"></div>
+        </li>
+        <li>
+          <input type="text" placeholder="请设置您的密码" name="password">
+          <div class="u-err error6"></div>
+        </li> 
+        <li class="forget">
+          <span class="login-selt">
+            <input type="hidden" name="radio" class="radio">
+            <i class="select-up"></i>
+            下次自动登录
+          </span>
+          <a href="javascript:;" class="forget-passwd">忘记密码？</a>
+        </li>
+      </ul>
+      <div class="l-reg-btn" id="loginBtn" data-url-layer="222">下一步</div>
+    </div>
+  </div>
+  <!-- 提交 -->
+  <div class="layer-send-code" style="display:none;">
+    <ul class="input-code">
+      <li>
+        <input type="text" placeholder="请输入图片验证码" name="phocode" class="pic-code">
+        <div class="u-err error4" style="dispaly:block;">请输入图片验证码</div>
+        <span class="input-code-btn">
+          <img id="verifycode" src="http://www.51talk.com/user/verify.php" onclick="this.src='http://www.51talk.com/user/verify.php'+'?a'+'='+new Date().getTime()" alt="单击更换验证码" title="单击更换验证码">
+        </span>
+      </li>
+      <li><div class="send-btn" id="sendBtn" data-url-code="2">提交</div></li>
+    </ul>
+  </div>
+  <!-- /提交 -->
+</div>
+<!-- /reg-->
+<!-- 年级 -->
+<div class="layer-grade" style="display:none;">
+  <h3 class="title">你是几年级的小朋友？</h3>
+  <span class="delete"></span>
+  <ul class="gra-list">
+    <li class="check">一年级</li>
+    <li>二年级</li>
+    <li>三年级</li>
+    <li>四年级</li>
+    <li>五年级</li>
+    <li>六年级</li>
+  </ul>
+  <div class="gra-nr">
+    <div class="qr-list">
+      <img src="/images/html/subject_www/layer_code.png">
+      <p class="q-title">
+        扫码进群,QQ群号：<span>16545634</span><br>
+        进群后，你可以跟小伙伴共同学习啦～！
+      </p>
+    </div>
+    <div class="qr-list" style="display:none;">
+      <img src="/images/html/subject_www/layer_code.png">
+      <p class="q-title">
+        扫码进群,QQ群号：<span>26545634</span><br>
+        进群后，你可以跟小伙伴共同学习啦～！
+      </p>
+    </div>
+    <div class="qr-list" style="display:none;">
+      <img src="/images/html/subject_www/layer_code.png">
+      <p class="q-title">
+        扫码进群,QQ群号：<span>36545634</span><br>
+        进群后，你可以跟小伙伴共同学习啦～！
+      </p>
+    </div>
+    <div class="qr-list" style="display:none;">
+      <img src="/images/html/subject_www/layer_code.png">
+      <p class="q-title">
+        扫码进群,QQ群号：<span>46545634</span><br>
+        进群后，你可以跟小伙伴共同学习啦～！
+      </p>
+    </div>
+    <div class="qr-list" style="display:none;">
+      <img src="/images/html/subject_www/layer_code.png">
+      <p class="q-title">
+        扫码进群,QQ群号：<span>56545634</span><br>
+        进群后，你可以跟小伙伴共同学习啦～！
+      </p>
+    </div>
+    <div class="qr-list" style="display:none;">
+      <img src="/images/html/subject_www/layer_code.png">
+      <p class="q-title">
+        扫码进群,QQ群号：<span>66545634</span><br>
+        进群后，你可以跟小伙伴共同学习啦～！
+      </p>
+    </div>
+  </div>
+</div>
+<!-- /年级 -->
+<!-- 体验用户 -->
+<div class="layer-pay-users" style="display:none;">
+  <div class="users-img"><img src="/images/html/subject_www/fine_tea_nadline.jpg"></div>
+  <h3 class="users-title">Hi,13693321513用户</h3>
+  <p class="users-cover">您还没有选课哦，进入会员中心<br>了解更多课程信息！</p>
+  <div class="l-reg-btn">进入我的会员中心</div>
+</div>
+<!-- /体验用户 -->
+<!-- 付费用户 -->
+<div class="layer-t-users" style="display:none;">
+  <div class="users-img"><img src="/images/html/subject_www/fine_tea_nadline.jpg"></div>
+  <h3 class="users-title">Hi,13693321513用户</h3>
+  <p class="users-ts">您已完成<i>9</i>节课<span>累计说英语<i>5</i>小时</span></p>
+  <div class="l-reg-btn">预约课程</div>
+  <div class="l-reg-btn b-reg-btn">进入我的会员中心</div>
+</div>
+<!-- /付费用户 -->
+  </div>
+</div>
+<div class="best-tea" data-init="index">
+  <div class="best-item01">
+    <h3 class="best-title">名师风采 - 中教</h3>
+    <div class="item-item">
+      <div class="item-lt">
+        <dl class="item-t-dl">
+          <dt><img src="/images/html/subject_www/fine_tea_name1.jpg" class="m-bj-img"></dt>
+          <dd class="f-t">周楠</dd>
+          <dd class="d-t">Vanessa</dd>
+          <dd>温柔可爱、青春无敌的“星星老师”毕业院校：河北工业大学 英语专业</dd>
+        </dl>
+        <dl class="item-b-dl">
+          <dt><img src="/images/html/subject_www/fine_tea_name2.jpg" class="m-bj-img"></dt>
+          <dd class="f-t">吴周楠</dd>
+          <dd class="d-t">Vanessa</dd>
+          <dd>温柔可爱、青春无敌的“星星老师”毕业院校：河北工业大学 英语专业</dd>
+        </dl>
+      </div> 
+      <div class="item-rt">
+        <div class="item-top-img"></div>
+        <div class="item-bom-img"></div>
+        <ul>
+          <li>
+            <span class="r-d r-dot01"></span>
+            <div class="r-tit">
+              <h3>重点高校教师</h3>
+              <span>专业扎实，均毕业于知名院校，100%英语或教育专业，50%老师具备海外留学经历，接受专业培训60小时+，对第二语言教学方法有良好认知。</span>
+            </div>
+          </li>
+          <li>
+            <span class="r-d r-dot02"></span>
+            <div class="r-tit">
+              <h3>严格选聘制度</h3>
+              <span>老师需要通过一轮面试、两轮复试、封闭训练、岗前培训等难关,优秀的教师能有更好的教学效果，51talk的小学中教老师经验丰富，80%来自知名线下教育机构，熟悉小学各年龄段孩子的认知特点和习惯，熟知各年级英语能力要求及少儿英语考试。</span>
+            </div>
+          </li>
+          <li>
+            <span class="r-d r-dot03"></span>
+            <div class="r-tit">
+              <h3>完善的教学备课制度</h3>
+              <span>老师上课前要备好每一堂课，须细心指导学生学习和批准作业,好的教学经验定期分享让更多学生受益，51talk的老师极具亲和力，善于鼓励引导学生，提倡兴趣驱动，会学会用，帮助学生建立英文思维。</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="best-item02">
+    <div class="centerMth">
+      <h3 class="best-title">名师风采 - 外教</h3> 
+      <ul class="video-list" data-vedio="http://media.51talk.com/upload/media/lina.flv" data-width="780">
+        <li data-vedioSrc="http://media.51talk.com/upload/media/lina.flv" data-width="780">
+          <span>
+            <i class="video-img"></i>
+            <img src="/images/html/subject_www/fine_tea_ritch.jpg">
+          </span>
+          <span class="ts">Ritch</span>
+          <span>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+          </span>
+        </li>
+        <li data-vedioSrc="http://media.51talk.com/upload/media/lina.flv" data-width="780">
+          <span>
+            <i class="video-img"></i>
+            <img src="/images/html/subject_www/fine_tea_jon.jpg">
+          </span>
+          <span class="ts">Jon</span>
+          <span>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+          </span>
+        </li>
+        <li data-vedioSrc="http://media.51talk.com/upload/media/lina.flv" data-width="780">
+          <span>
+            <i class="video-img"></i>
+            <img src="/images/html/subject_www/fine_tea_hazel.jpg">
+          </span>
+          <span class="ts">Hazel</span>
+          <span>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+          </span>
+        </li>
+        <li data-vedioSrc="http://media.51talk.com/upload/media/lina.flv" data-width="780">
+          <span>
+            <i class="video-img"></i>
+            <img src="/images/html/subject_www/fine_tea_melrick.jpg">
+          </span>
+          <span class="ts">Melrick</span>
+          <span>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+          </span>
+        </li>
+        <li data-vedioSrc="http://media.51talk.com/upload/media/lina.flv" data-width="780">
+          <span>
+            <i class="video-img"></i>
+            <img src="/images/html/subject_www/fine_tea_paul.jpg">
+          </span>
+          <span class="ts">Paul</span>
+          <span>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+          </span>
+        </li>
+        <li data-vedioSrc="http://media.51talk.com/upload/media/lina.flv" data-width="780">
+          <span>
+            <i class="video-img"></i>
+            <img src="/images/html/subject_www/fine_tea_monica.jpg">
+          </span>
+          <span class="ts">Monica</span>
+          <span>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+          </span>
+        </li>
+        <li data-vedioSrc="http://media.51talk.com/upload/media/lina.flv" data-width="780">
+          <span>
+            <i class="video-img"></i>
+            <img src="/images/html/subject_www/fine_tea_rolly.jpg">
+          </span>
+          <span class="ts">Rolly</span>
+          <span>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+          </span>
+        </li>
+        <li data-vedioSrc="http://media.51talk.com/upload/media/lina.flv" data-width="780">
+          <span>
+            <i class="video-img"></i>
+            <img src="/images/html/subject_www/fine_tea_alissa.jpg">
+          </span>
+          <span class="ts">Alissa</span>
+          <span>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+          </span>
+        </li>
+        <li data-vedioSrc="http://media.51talk.com/upload/media/lina.flv" data-width="780">
+          <span>
+            <i class="video-img"></i>
+            <img src="/images/html/subject_www/fine_tea_josh.jpg">
+          </span>
+          <span class="ts">Josh</span>
+          <span>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+          </span>
+        </li>
+        <li data-vedioSrc="http://media.51talk.com/upload/media/lina.flv" data-width="780">
+          <span>
+            <i class="video-img"></i>
+            <img src="/images/html/subject_www/fine_tea_kat.jpg">
+          </span>
+          <span class="ts">Kat</span>
+          <span>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+          </span>
+        </li>
+        <li data-vedioSrc="http://media.51talk.com/upload/media/lina.flv" data-width="780">
+          <span>
+            <i class="video-img"></i>
+            <img src="/images/html/subject_www/fine_tea_marky.jpg">
+          </span>
+          <span class="ts">Marky</span>
+          <span>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+          </span>
+        </li>
+        <li data-vedioSrc="http://media.51talk.com/upload/media/lina.flv" data-width="780">
+          <span>
+            <i class="video-img"></i>
+            <img src="/images/html/subject_www/fine_tea_nadline.jpg">
+          </span>
+          <span class="ts">Nadline</span>
+          <span>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+          </span>
+        </li>
+      </ul> 
+    </div>
+  </div>
+  <div class="best-item03">
+    <h3 class="item03-tt">签约流程：简历筛选 > 复试 > 培训 > 比赛 > 审核</h3>
+    <p class="item03-ts">签约率  1.5％</p>
+    <p class="item03-tt">真正的百里挑一！</p>
+  </div>
+  <div class="best-item04">
+    <p class="item04-tt">60小时 课前培训＋60小时  听课讲评</p>
+    <p class="item04-ts">确保每一位老师的课堂都精彩纷呈</p> 
+  </div>
+  <div class="best-item05">
+    <ul>
+      <li>
+        <dl>
+          <dt><i class="i-img01"></i></dt>
+          <dd class="d-tt">教材研发团队</dd>
+          <dd>51talk小学英语研发中心汇集了数位少儿英语教学精英，认知语言学专家，同时邀请了数位奋战在一线的英语教育专家及学者，经过反复研讨、试验，最终推出了小学英语classic english junior的教材，数年优异的教学效果和学子间树立的良好口碑，完善的设计体系及综合测评体系，已经帮助无数莘莘学子提高英语水平，在各种赛事中取得骄人成绩，为祖国培养了无数的栋梁之才，帮他们完成梦想，助他们顺利进入各所名牌中学。</dd>
+        </dl>
+      </li>
+      <li>
+        <dl class="dt-img">
+          <dt><i class="i-img02"></i></dt>
+          <dd class="d-tt">教师培训团队</dd>
+          <dd>51Talk 小学英语教师招聘培训团队由拥有多年一线国内外教学和培训经验专家、TESOL、CELTYL等相关专业证书持有者、少儿心理专家、家庭教育高级指导师、英美高校访问学者组成。他们设计并执行了一套结合51Talk青少战略要点和青少年学习发展趋势而专门打造的培训体系。所有教师都经过招聘团队严格的层层筛选，再经过培训团队定期严谨、系统、专业的培训体系打磨培养，使得教师团队发挥专业特长，获得家长和学员的一致好评，并多次获得优秀教师、金牌教师等称号。</dd>
+        </dl>
+      </li>
+    </ul> 
+  </div>
+</div>
+<!-- 尾部 -->
+<div class="info">
+  <div class="centerMth">
+    <p class="tc_p">
+      <a href="javascript:;">关于我们</a>
+      <a href="javascript:;">加入我们</a>
+      <a href="javascript:;">企业培训</a>
+      <a href="javascript:;">网站地图</a>
+      <a href="javascript:;">o2o代理招募</a>
+    </p>
+    <p class="link-word">
+      <em>友情链接</em>
+    </p>
+    <span class="link-info">
+      <a href="http://www.putclub.com" target="_blank">普特英语听力</a> 
+      <a href="http://www.en8848.com.cn/" target="_blank">原版英语学习网</a> 
+      <a href="http://chinaenglish.com.cn" target="_blank">中国英语网</a> 
+      <a href="http://shop.kongfz.com/" target="_blank">网上书店</a> 
+      <a href="http://www.jiyifa.com/  " target="_blank">记忆力</a> 
+      <a href="http://www.sharewithu.com/" target="_blank">尚友留学</a> 
+      <a href="http://www.chuanke.com/" target="_blank">传课网</a> 
+      <a href="http://www.lampbrother.net " target="_blank">php教程</a> 
+      <a href="http://www.533.com/" target="_blank">留学</a> 
+      <a href="http://gd.huatu.com/ " target="_blank">广东人事考试网</a> 
+      <a href="http://gaokao.juren.com" target="_blank">高考录取分数线</a> 
+      <a href="http://www.xiaoma.com " target="_blank">小马过河</a> 
+      <a href="http://www.ewteacher.com" target="_blank">英语教师网 </a> 
+      <a href="http://www.wiseway.com.cn/" target="_blank">留学咨询</a> 
+      <a href="http://www.51talkenglish.com" target="_blank">英语在线学习</a> 
+      <a href="http://www.tingclass.net" target="_blank">英语听力</a> 
+      <a href="http://www.chinavoa.com" target="_blank">voa英语学习网</a> 
+      <a href="http://www.hztbc.com/" target="_blank">企业培训</a> 
+      <a href="http://www.jiajiao114.com/" target="_blank">家教网</a> 
+      <a href="http://beijing.xueda.com/" target="_blank">北京一对一辅导</a> 
+      <a href="http://www.zgjsks.com" target="_blank">教师网</a> 
+      <a href="http://www.gaosiedu.com" target="_blank">高思教育</a> 
+      <a href="http://www.qeo.cn/ " target="_blank">求艺网</a> 
+      <a href="http://www.zuowenren.com/" target="_blank">小学生作文</a> 
+      <a href="http://gaokao.koolearn.com" target="_blank">新东方在线高考</a> 
+      <a href="http://www.171english.cn/" target="_blank">给力英语网</a> 
+      <a href="http://www.5haoxue.net/" target="_blank">好学教育</a> 
+      <a href="http://www.pxto.com.cn/" target="_blank">培训网</a> 
+      <a href="http://www.gaodun.com/" target="_blank">高顿网校</a> 
+      <a href="http://yy.zxxk.com/" target="_blank">英语学科网</a> 
+      <a href="http://www.zk168.com.cn/" target="_blank">华考范文网</a> 
+      <a href="http://xuexiao.chazidian.com/" target="_blank">学校大全</a> 
+      <a href="http://www.1mishu.com" target="_blank">21世纪秘书网</a> 
+      <a href="http://www.gwyoo.com/" target="_blank">公务员之家</a> 
+      <a href="http://www.bosidata.com/" target="_blank">调研报告</a> 
+      <a href="http://www.xuexifangfa.com/" target="_blank">学习方法</a> 
+      <a href="http://chengyu.eduu.com" target="_blank">成语大全</a> 
+      <a href="http://www.jobeast.com/ " target="_blank">中国外语人才网</a> 
+      <a href="http://www.china-pub.com/" target="_blank">英语书籍</a> 
+      <a href="http://www.kuakao.com/" target="_blank">考研</a> 
+      <a href="http://www.zzyjs.com/" target="_blank">在职研究生</a> 
+      <a href="http://www.24en.com/" target="_blank">爱思英语网</a> 
+      <a href="http://www.cmr.com.cn" target="_blank">远程教育</a> 
+      <a href="http://www.hq88.com/" target="_blank">企业培训</a> 
+      <a href="http://www.zaixian-fanyi.com/" target="_blank">在线翻译</a> 
+      <a href="http://www.yuwenmi.com/" target="_blank">语文迷</a> 
+      <a href="http://www.hteacher.net/" target="_blank">教师招聘考试</a> 
+      <a href="http://www.zgsydw.com/ " target="_blank">事业单位招聘网</a> 
+      <a href="http://www.51offer.com" target="_blank">英国留学</a> 
+      <a href="http://www.yiminjiayuan.com/" target="_blank">移民家园网</a> 
+      <a href="http://www.enread.com/" target="_blank">英文阅读网</a> 
+      <a href="http://www.kekenet.com" target="_blank">可可英语 </a> 
+    </span>
+    <div class="link-ti">
+      <ul class="link-ul">
+        <li><a href="javascript:;"><img src="/images/html/www/fot_certif01.png" alt=""></a></li>
+        <li><a href="javascript:;"><img src="/images/html/www/fot_certif02.png" alt=""></a></li>
+        <li><a href="javascript:;"><img src="/images/html/www/fot_certif03.png" alt=""></a></li>
+        <li><a href="javascript:;"><img src="/images/html/www/fot_certif04.png" alt=""></a></li>
+      </ul>
+    </div>
+    <p class="link-ft">
+      Copyright©北京大生知行科技有限公司<em>|</em>
+      <a href="/page/privacy/" target="_blank" title="隐私声明">隐私声明</a><em>|</em>
+      <a href="/page/terms/" target="_blank" title="用户协议">用户协议</a><em>|</em>
+      <a href="jICP.html" target="_blank" title="京ICP证110696号">京ICP证110696号</a><em></em>
+      <a href="http://www.miibeian.gov.cn" target="_blank" title="京ICP备11031999号">京ICP备11031999号</a><em></em>
+      <a href="javascript:;" target="_blank" title="京公网安备11010802018414号" style="cursor:text;">京公网安备11010802018414号</a><em></em>   
+    </p>
+     <p class="link-ft"><a href="TVlicence.html" target="_blank">广播电视节目制作经营许可证（京）字第05497号</a></p>
+  </div>
+</div>
+
+
+
+
+
+
+</body>
+<!--公共尾部结束-->
+<script src="/js/html/project/subject_www/vendor.js"></script>
+</html>
+<script src="http://static.51talk.com/js/new_user/ckplayer/ckplayer.js?v=1439877955695"></script>

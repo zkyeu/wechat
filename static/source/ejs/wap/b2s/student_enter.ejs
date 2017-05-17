@@ -1,0 +1,41 @@
+<% include ../common/top.ejs %>
+<body data-init="studentEnter">
+	<div class="main-wrap login-wrap pb100">
+		<div class="student-enter-wrap">
+			<p><span>王诗龄</span>同学</p>
+			<img src="<%= imagessrc%>student_enter.png" alt="logo" />
+		</div>
+		<div class="form-wrap reg-step1">
+			<form action="#" autocomplete="off" rel="studentEnter">
+				<dl class="cfix">
+					<dt></dt>
+					<dd>
+						<input type="tel" rel="phone" class="input-t-style" placeholder="请输入手机号" maxlength="11" />
+					</dd>
+				</dl>
+				<p class="error-tips"></p>
+				<dl class="cfix">
+					<dt class="dt1"></dt>
+					<dd>
+						<input type="tel" rel="verifycode" class="input-t-style" placeholder="请输入验证码" maxlength="6" />
+					</dd>
+					<dd class="send-verify">
+						<input type="button" value="获取验证码" send-url="http://www.baidu.com" send-type="2" />
+					</dd>
+				</dl>
+				<p class="error-tips"></p>
+				<dl class="cfix">
+					<dt  class="dt2"></dt>
+					<dd>
+						<input type="password" rel="password" class="input-t-style" placeholder="请输入新密码" />
+					</dd>
+				</dl>
+				<p class="error-tips"></p>
+				<div class="submit-btn">
+					<input type="submit" class="input-submit" value="进入班级" />
+				</div>
+			</form>
+		</div>		
+	</div>
+</body>
+<% include ../common/bottom.ejs %>

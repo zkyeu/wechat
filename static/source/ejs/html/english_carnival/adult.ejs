@@ -1,0 +1,559 @@
+<% include ../common/top.ejs %>
+<body>
+<!-- 顶部 -->
+<% include ../common/www/w_header.ejs %>
+<div id="container">
+  <!-- banner -->
+  <div class="banner">
+    <div class="content">
+      <ul>
+        <li><a href="javascript:;" class="nav01" data-target="dial-bg"></a></li>
+        <li><a href="javascript:;" class="nav02" data-target="teacher"></a></li>
+        <li><a href="javascript:;" class="nav03" data-target="gift"></a></li>
+        <li><a href="javascript:;" class="nav04" data-target="sale"></a></li>
+        <li><a href="javascript:;" class="nav05" data-target="stu"></a></li>
+        <li><a href="javascript:;" class="nav06" data-target="junior"></a></li>
+      </ul>
+      <i class="enter"></i>
+      <i class="ufo"></i>
+      <div class="timer">
+        <span>0天0小时5分</span>
+      </div>
+    </div>
+  </div>
+  <!-- banner end -->
+
+  <!-- 转盘 -->
+  <div class="rotate">
+    <div class="content">
+      <div class="name_list">
+        <img src="<%= imagessrc%>t1.png" class="name_bg">
+        <ul class="name">
+          <li><span>absefd01</span>学员抽中<b>3张次卡</b></li>
+          <li><span>songyueyang02</span>学员抽中<b>100元代金卷</b></li>
+          <li><span>二爷03</span>学员抽中<b>500元代金卷</b></li>
+          <li><span>LULU04</span>学员抽中<b>3张次卡</b></li>
+          <li><span>柳文锋05</span>学员抽中<b>3张次卡</b></li>
+          <li><span>二爷06</span>学员抽中<b>500元代金卷</b></li>
+          <li><span>LULU07</span>学员抽中<b>3张次卡</b></li>
+          <li><span>柳文锋08</span>学员抽中<b>3张次卡</b></li>
+          <li><span>柳文锋09</span>学员抽中<b>3张次卡</b></li>
+          <li><span>二爷10</span>学员抽中<b>500元代金卷</b></li>
+          <li><span>LULU11</span>学员抽中<b>3张次卡</b></li>
+          <li><span>柳文锋12</span>学员抽中<b>3张次卡</b></li>
+        </ul>
+        <ul class="rule">
+          <li>活动规则：</li>
+          <li>1.活动时间：3月11日00:00 - 3月20日23:59:59</li>
+          <li>2.每位同学仅有1次抽奖机会（新同学需要预约完成体验课才能抽奖）</li>
+          <li>3.关于中奖：
+            <span>
+            ·未付费学员参与抽奖即可得到新手礼包一个（3节课+百余节免费公开课）<br>
+            ·代金券及折扣券将在中奖后30分钟内发到您的站内信中<br>
+            ·次卡将在中奖后30分钟内充到账上<br>
+            ·实物奖品须在购买4000元以上套餐后发放<br>
+            ·1000元代金券买课满8000元即可享受
+            </span>
+          </li>
+          <li>4.本活动最终解释权归51Talk所有</li>
+        </ul>
+      </div>
+      <div class="dial-bg">
+        <div class="pointer" data-url="url"></div>
+        <div class="dial" >
+          <img id="rotate" src="<%= imagessrc%>dial_rotate.png" alt="dial"/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 转盘结束 -->
+
+  <!-- 老师列表 -->
+  <div class="teacher">
+    <div class="content">
+      <img src="<%= imagessrc%>teacher_list.png" class="t2">
+      <div class="teacher_carousel">
+        <ul class="first">
+          <li>
+            <div class="avator2">
+              <img class="head1" src="<%= imagessrc%>Alex.png" width="83" height="83">
+              <img class="head2" src="<%= imagessrc%>Ryan.png" width="83" height="83">
+              <i></i>
+              <span class="name1">Alex</span>
+              <span class="name2">Ryan</span>
+            </div>
+            <div class="intro">
+              Alex:CFFstudy创始人兼CEO/原新东方生养学校英语学习部总监/美誉脱口秀主播，口语名师
+              Ryan：BFFstudy内容总监/主播节目《英语啪啪啪》喜马拉雅FM外语榜长期排名第一
+            </div>
+            <div class="appoint">
+              <div class="tit">《双语主播教你换个姿势玩转口语学习》</div>
+              <a href="javascript:;">立即约课</a>
+            </div>
+          </li>
+          <li>
+            <div class="avator1">
+              <img class="head" src="<%= imagessrc%>Bingo.png" width="105" height="105">
+              <i></i>
+              <span class="name">Bingo</span>
+            </div>
+            <div class="intro">
+              19岁登上新东方讲台授课/后创立个人口语品牌'Bingo教你说美语'节目视频播放累计五千万次/21岁加入上海电视台外语频道/北京工业大学都柏林国际学特聘为客座导师
+            </div>
+            <div class="appoint">
+              <div class="tit">《你可误会了英语口语》</div>
+              <a href="javascript:;">立即约课</a>
+            </div>
+          </li>
+          <li>
+            <div class="avator2">
+              <img class="head1" src="<%= imagessrc%>Haze.png" width="83" height="83">
+              <img class="head2" src="<%= imagessrc%>Lika.png" width="83" height="83">
+              <i></i>
+              <span class="name1">Haze</span>
+              <span class="name2">Lika</span>
+            </div>
+            <div class="intro">
+              <p>Haze:中国国际广播电视台中深受全国多地喜爱的HIT FM主播</p>
+              <p>Lika:中国国际广播电台HIT FM主持人及HITFM TOP20视频主持人</p>
+            </div>
+            <div class="appoint">
+              <div class="tit">《2016 Grammy》</div>
+              <a href="javascript:;">立即约课</a>
+            </div>
+          </li>
+          <li>
+            <div class="avator1">
+              <img class="head" src="<%= imagessrc%>wangjing.png" width="110" height="110">
+              <i></i>
+              <span class="name">王婧</span>
+            </div>
+            <div class="intro">
+              现国际环保机构员工/英国和西安做过中英青年社区发展/热心过儿童权利的保护/如今在农业领域做一个拯救世界的吃货
+            </div>
+            <div class="appoint">
+              <div class="tit">《公益达人与你聊聊如何让世界变得更美好》</div>
+              <a href="javascript:;">立即约课</a>
+            </div>
+          </li>
+        </ul>
+        <ul style="display: none;">
+          <li>
+            <div class="avator1">
+              <img class="head" src="<%= imagessrc%>chenqi.png" width="110" height="110">
+              <i></i>
+              <span class="name">陈琦</span>
+            </div>
+            <div class="intro">
+              GRE领域标杆人性人物/累积教学时间近20,000小时/著有GRE词汇宝典"再要你命3000"《GRE 核心词汇考法解析》等系列书籍/学生冠以"GRE一哥"、"莲花教主"、"琦叔"等称号
+            </div>
+            <div class="appoint">
+              <div class="tit">《学期新开始，单词早背完》</div>
+              <a href="http://www.baidu.com">立即约课</a>
+            </div>
+          </li>
+          <li>
+            <div class="avator1">
+              <img class="head" src="<%= imagessrc%>supeiwen.png" width="110" height="110">
+              <i></i>
+              <span class="name">苏佩雯</span>
+            </div>
+            <div class="intro">
+              英国爱丁堡大学硕士/原北京新东方英语学习部口语教师/曾任职为新东方在线致赢托福口语教师/有十多年教授托福、雅思、商务英语、学术英语、海外日常口语、面试面签口语等课程经验
+            </div>
+            <div class="appoint">
+              <div class="tit">《实用上午英语第一讲：如何优雅地跟歪果客户进行电话对话》</div>
+              <a href="javascript:;">立即约课</a>
+            </div>
+          </li>
+          <li>
+            <div class="avator1">
+              <img class="head" src="<%= imagessrc%>xiexincheng.png" width="110" height="110">
+              <i></i>
+              <span class="name">谢昕呈</span>
+            </div>
+            <div class="intro">
+              原北京新东方托福写作、托福口语名师/首届新东方在线英语朗诵比赛全国第一名获得者/北京2008年奥运会、残奥会志愿者英语培训优秀培训师/北京理工大学美韵英语协会创始人
+            </div>
+            <div class="appoint">
+              <div class="tit">《英语发音雕琢》金牌系列课程</div>
+              <a href="javascript:;">立即约课</a>
+            </div>
+          </li>
+          <li>
+            <div class="avator1">
+              <img class="head" src="<%= imagessrc%>Frankliin.png" width="110" height="110">
+              <i></i>
+              <span class="name">Frankliin</span>
+            </div>
+            <div class="intro">
+              哈佛留学生/元新东方托福名师
+            </div>
+            <div class="appoint">
+              <div class="tit">《哈佛之路——揭秘留学申请DIY》</div>
+              <a href="javascript:;">立即约课</a>
+            </div>
+          </li>
+        </ul>
+        <a class="prev" href="javascript:;"></a>
+        <a class="next next-d" href="javascript:;"></a>
+      </div>
+      <div class="teacher_more">
+        <a class="more_1" href="javascript:;">
+
+        </a>
+        <a class="more_2" href="javascript:;">
+
+        </a>
+        <ul class="list_1">
+          <li><a href="javascript:;">3月15日 12:00-13:00&nbsp&nbsp TED演讲:John Maeda谈简单生活</a></li>
+          <li><a href="javascript:;">3月15日 19:00-20:00&nbsp&nbsp 面对谎言，我们就应该这样做~</a></li>
+          <li><a href="javascript:;">3月15日 21:00-22:00&nbsp&nbsp NBA传奇人物——迈克尔乔丹</a></li>
+          <li><a href="javascript:;">3月15日 12:00-13:00&nbsp&nbsp 网络世界著名园林，51Talk园游会</a></li>
+          <li><a href="javascript:;">3月15日 21:00-22:00&nbsp&nbsp 星路人生——莱昂纳多（恭喜小李子）</a></li>
+        </ul>
+        <ul class="list_2">
+          <li><a href="javascript:;">3月15日 12:00-13:00&nbsp&nbsp 高分雅思经典写作课程</a></li>
+          <li><a href="javascript:;">3月15日 19:00-20:00&nbsp&nbsp [英语思维]一档让你终身摆脱……</a></li>
+          <li><a href="javascript:;">3月15日 21:00-22:00&nbsp&nbsp 憋说话听我主题 教你花式口语……</a></li>
+          <li><a href="javascript:;">3月15日 12:00-13:00&nbsp&nbsp 大话名人堂</a></li>
+          <li><a href="javascript:;">3月15日 21:00-22:00&nbsp&nbsp 中教零基础成人营销课</a></li>
+        </ul>
+      </div>
+      <a class="teacher_in" href="<%= imagessrc%>xz_img.jpg"></a>
+    </div>
+  </div>
+  <!-- 老师列表结束 -->
+
+  <!-- 礼物领取 -->
+  <div class="gift">
+    <div class="content">
+      <img src="<%= imagessrc%>gift_nav.png" class="t3">
+      <p class="tit"><img src="<%= imagessrc%>gift_tit.png"></p>
+      <ul class="gif-in">
+        <li>
+          <div class="icon-top">
+            <a class="a1"></a>
+            <a></a>
+            <a></a>
+            <a></a>
+            <a></a>
+          </div>
+          <div class="round-box">
+            <i>第<font class="font">1</font>位好友首次购买</i>
+            <i class="two"><font class="font">10</font>张次卡</i>
+          </div>
+          <div class="cr-icon"><a></a></div>
+        </li>
+        <li>
+          <div class="icon-top">
+            <a class="a2"></a>
+            <a class="a1"></a>
+            <a></a>
+            <a></a>
+            <a></a>
+          </div>
+          <div class="round-box">
+            <i>第<font class="font">2</font>位好友首次购买</i>
+            <i class="two"><font class="font">12</font>张次卡</i>
+          </div>
+          <div class="cr-icon"><a></a></div>
+        </li>
+        <li>
+          <div class="icon-top">
+            <a class="a2"></a>
+            <a class="a2"></a>
+            <a class="a1"></a>
+            <a></a>
+            <a></a>
+          </div>
+          <div class="round-box">
+            <i>第<font class="font">3</font>位好友首次购买</i>
+            <i class="two"><font class="font">14</font>张次卡</i>
+          </div>
+          <div class="cr-icon"><a></a></div>
+        </li>
+        <li>
+          <div class="icon-top">
+            <a class="a2"></a>
+            <a class="a2"></a>
+            <a class="a2"></a>
+            <a class="a1"></a>
+            <a></a>
+          </div>
+          <div class="round-box">
+            <i>第<font class="font">4</font>位好友首次购买</i>
+            <i class="two"><font class="font">16</font>张次卡</i>
+          </div>
+          <div class="cr-icon"><a></a></div>
+        </li>
+        <li>
+          <div class="icon-top">
+            <a class="a2"></a>
+            <a class="a2"></a>
+            <a class="a2"></a>
+            <a class="a2"></a>
+            <a class="a1"></a>
+          </div>
+          <div class="round-box">
+            <i>第<font class="font">5</font>位好友首次购买</i>
+            <i class="two"><font class="font">18</font>张次卡</i>
+          </div>
+          <div class="cr-icon"><a class="a1"></a></div>
+          <div class="big-icon">
+            <a class="a2">
+              累计获得<br><p><font class="font">70张</font>次卡</p>
+            </a>
+          </div>
+        </li>
+      </ul>
+      <a class="gift_btn" href="javascript:;"></a>
+    </div>
+  </div>
+  <!-- 礼物领取结束 -->
+
+  <!-- 限时特价 -->
+  <div class="sale">
+    <div class="content">
+      <img src="<%= imagessrc%>sale_list.png" class="t4">
+      <a class="sale_in" href="<%= imagessrc%>stu_in.png"></a>
+    </div>
+  </div>
+  <!-- 限时特价结束 -->
+
+  <!-- 学生列表 -->
+  <div class="stu">
+    <div class="content">
+      <img src="<%= imagessrc%>stu_nav01.png" class="t5">
+      <ul class="stu-list">
+        <li>
+          <dl>
+            <dt><img src="<%= imagessrc%>Gary.jpg"></dt>
+            <dd class="name">Gary</dd>
+            <dd>IT公司经理</dd>
+            <dd class="bt">在51Talk学习2年零4个月</dd>
+            <dd class="word">“怕自己坚持不了先买了半年的，没想到一下子就学了两年多了。”</dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt><img src="<%= imagessrc%>Eddie.jpg"></dt>
+            <dd class="name">Eddie</dd>
+            <dd>白领</dd>
+            <dd class="bt">在51Talk学习2年半</dd>
+            <dd class="word">“学了十年英语的40岁和不学英语的40岁肯定不一样。”</dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt><img src="<%= imagessrc%>Amy.jpg"></dt>
+            <dd class="name">Amy</dd>
+            <dd>学生</dd>
+            <dd class="bt">在51Talk学习1年零9个月</dd>
+            <dd class="word">“刚开始的4节课就觉得自己进步特别大，觉得自己能张开嘴了，真的挺神奇的。”</dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt><img src="<%= imagessrc%>Adam.jpg"></dt>
+            <dd class="name">Adam</dd>
+            <dd>退休职员</dd>
+            <dd class="bt">在51Talk学习2年</dd>
+            <dd class="word">“谁说老年人不能学英语，年轻的时候没人教，现在能和外教学，我就想在75岁前完成自己的英语梦想。”</dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt><img src="<%= imagessrc%>Lily.jpg"></dt>
+            <dd class="name">Lily</dd>
+            <dd>白领</dd>
+            <dd class="bt">在51Talk学习6个月</dd>
+            <dd class="word">“在51Talk学到的不止是英语，更多是老外的做事思维，很奇妙；相信会让我接下来在海外的生活更顺利。”</dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt><img src="<%= imagessrc%>Amanda.jpg"></dt>
+            <dd class="name">Amanda</dd>
+            <dd>全职妈妈</dd>
+            <dd class="bt">在51Talk学习10个月</dd>
+            <dd class="word">“生完俩孩子到现在有五年没上班了，想到找工作心里完全没底，每天上外教课恶补口语，心里会有一种踏实的感觉。”</dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt><img src="<%= imagessrc%>Kevin.jpg"></dt>
+            <dd class="name">Kevin</dd>
+            <dd>外企技术人员</dd>
+            <dd class="bt">在51Talk学习1年零5个月</dd>
+            <dd class="word">“去年365天我上了340堂课，即使在机场都可以用笔记本或手机客户端上课，很方便。”</dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt><img src="<%= imagessrc%>Nick.jpg"></dt>
+            <dd class="name">Nick</dd>
+            <dd>在职研究生</dd>
+            <dd class="bt">在51Talk学习1年</dd>
+            <dd class="word">“我住北五环外，每天上下班还要加班，每周去线下培训机构上几堂课根本坚持不下来，感觉那个钱也是白花。”</dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt><img src="<%= imagessrc%>Judy.jpg"></dt>
+            <dd class="name">Judy</dd>
+            <dd>白领</dd>
+            <dd class="bt">在51Talk学习3年</dd>
+            <dd class="word">“以前上课人多，怕自己被人笑话，后来上了51Talk, 外教特别nice, 而且1对1，自己也敢说了。”</dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt><img src="<%= imagessrc%>Eileen.jpg"></dt>
+            <dd class="name">Eileen</dd>
+            <dd>学生</dd>
+            <dd class="bt">在51Talk学习1年</dd>
+            <dd class="word">“学校上课学英语肯定是针对性没那么强！ 51Talk1对1和老师聊天，就感觉很有针对性，也能学到东西。”</dd>
+          </dl>
+        </li>
+      </ul>
+      <a class="stu_in" href="<%= imagessrc%>stu_in.png"></a>
+    </div>
+  </div>
+  <!-- 学生列表结束 -->
+
+  <!-- 青少入口 -->
+  <div class="junior">
+    <div class="content">
+      <img src="<%= imagessrc%>junior_nav.png" class="t6">
+      <img src="<%= imagessrc%>junior_cr.jpg" class="ctr">
+      <a class="junior_in" href="javascript:;"></a>
+    </div>
+  </div>
+  <!-- 青少入口结束 -->
+
+</div>
+<!-- 尾部 -->
+<% include ../common/www/w_footer_home.ejs %>
+<!-- 去预约 -->
+<div class="dialog go-dia">
+  <div class="info">
+    <div class="hr"><a href="/trial/reserve" class="hr-f"></a></div>
+    <div class="del" id="diaDel"><img src="<%= imagessrc%>dil_del.png"></div>
+    <div class="tit">约完体验课<br>才可以参与抽奖哦！</div>
+  </div>
+</div>
+<!-- 已参加 -->
+<div class="dialog complt">
+  <div class="info">
+    <div class="del" id="diaDel"><img src="<%= imagessrc%>dil_del.png"></div>
+    <div class="tit">您已参加过抽奖<br><span class="ft">请关注下面精彩活动哦</span></div>
+  </div>
+</div>
+<!-- 中奖 -->
+<div class="dialog prize" id="pri1000">
+  <div class="info">
+    <div class="del" id="diaDel"><img src="<%= imagessrc%>dil_del.png"></div>
+    <div class="tit">
+      <h3>恭喜获得：<span class="word">1000元优惠券</span></h4>
+      <p><img src="<%= imagessrc%>dil_img01.png"></p>
+      <div class="fot">
+        <a href="javascript:;"><img src="<%= imagessrc%>dil_git.png" id="dil-git"></a>
+        <span class="nr">优惠券30分钟发到您的站内信</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="dialog prize" id="pri550">
+  <div class="info">
+    <div class="del" id="diaDel"><img src="<%= imagessrc%>dil_del.png"></div>
+    <div class="tit">
+      <h3>恭喜获得：<span class="word">550元优惠券</span></h4>
+      <p><img src="<%= imagessrc%>dil_img02.png"></p>
+      <div class="fot">
+        <a href="javascript:;"><img src="<%= imagessrc%>dil_git.png" id="dil-git"></a>
+        <span class="nr">优惠券30分钟发到您的站内信</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="dialog prize" id="pri350">
+  <div class="info">
+    <div class="del" id="diaDel"><img src="<%= imagessrc%>dil_del.png"></div>
+    <div class="tit">
+      <h3>恭喜获得：<span class="word">350元优惠券</span></h4>
+      <p><img src="<%= imagessrc%>dil_img03.png"></p>
+      <div class="fot">
+        <a href="javascript:;"><img src="<%= imagessrc%>dil_git.png" id="dil-git"></a>
+        <span class="nr">优惠券30分钟发到您的站内信</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="dialog prize" id="pri5">
+  <div class="info">
+    <div class="del" id="diaDel"><img src="<%= imagessrc%>dil_del.png"></div>
+    <div class="tit">
+      <h3>恭喜获得：<span class="word">5折优惠</span></h4>
+      <p><img src="<%= imagessrc%>dil_img04.png"></p>
+      <div class="fot">
+        <a href="javascript:;"><img src="<%= imagessrc%>dil_git.png" id="dil-git"></a>
+        <span class="nr">折扣券30分钟发到您的站内信</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="dialog prize" id="pri8">
+  <div class="info">
+    <div class="del" id="diaDel"><img src="<%= imagessrc%>dil_del.png"></div>
+    <div class="tit">
+      <h3>恭喜获得：<span class="word">8折优惠</span></h4>
+      <p><img src="<%= imagessrc%>dil_img05.png"></p>
+      <div class="fot">
+        <a href="javascript:;"><img src="<%= imagessrc%>dil_git.png" id="dil-git"></a>
+        <span class="nr">折扣券30分钟发到您的站内信</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="dialog prize" id="ipad">
+  <div class="info">
+    <div class="del" id="diaDel"><img src="<%= imagessrc%>dil_del.png"></div>
+    <div class="tit">
+      <h3>恭喜获得：<span class="word">iPad mini2 一台</span></h4>
+      <p><img src="<%= imagessrc%>dil_img06.png"></p>
+      <div class="fot">
+        <a href="javascript:;"><img src="<%= imagessrc%>dil_git.png" id="dil-git"></a>
+        <span class="nr">课程顾问会在24小时内联系您</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="dialog prize" id="kindle" >
+  <div class="info">
+    <div class="del" id="diaDel"><img src="<%= imagessrc%>dil_del.png"></div>
+    <div class="tit">
+      <h3>恭喜获得：<span class="word">iPad mini2 一台</span></h4>
+      <p><img src="<%= imagessrc%>dil_img07.png"></p>
+      <div class="fot">
+        <a href="javascript:;"><img src="<%= imagessrc%>dil_git.png" id="dil-git"></a>
+        <span class="nr">课程顾问会在24小时内联系您</span>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 系统通知 -->
+<div class="sysInfo">
+  <div class="dtInfo">
+    <p class="tit">系统通知</p>
+    <p class="test">
+      请先登录访问
+      <a href="javascript:;" class="down" id="down">我知道了</a>
+    </p>
+  </div> 
+</div>
+</body>
+</html>
+<script type="text/javascript" src="../../../js/html/project/english_carnival/jquery.min.js"></script>
+<script type="text/javascript" src="../../../js/html/project/english_carnival/jQueryRotate.min.js"></script>
+<script type="text/javascript" src="../../../js/html/project/english_carnival/prize.js"></script>

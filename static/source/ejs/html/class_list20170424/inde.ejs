@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一对多班课列表</title>
+    <link rel="stylesheet" href="<%= csslink%>">
+</head>
+<body>
+<!-- header  -->
+<% include ../common/user_center/up_g_h.ejs %>
+<% include ../common/user_center/up_g_b.ejs %>
+<!-- /header  -->
+<div class="g-in f-cb">
+  <% include ../common/user_center/up_s_bar.ejs %>
+  <div class="g-center">
+    <div class="cls-list201704" id="container" data-init="index">
+      <div class="nav-t">
+        <p class="tt">课程概况</p>
+        <p class="ts">课程数：<i>20</i><span class="s-f">进行中：<i>6</i></span>已完成：<i>3</i></p>
+      </div>
+      <div class="item">
+        <ul class="i-ul" id="courseList">
+          <li>
+            <dl class="u-dl">
+              <dt class="addBd"><img src="<%= imagessrc%>ac02.jpg"></dt>
+              <dd>
+                <span class="t">雅思写作5.5基础班</span>
+                <span class="cls-node">
+                  <a href="javascript:;" class="cls-node-img">
+                    <span class="join-node"><img src="<%= imagessrc%>class_code_img.png" class="join-img"><i class="join-title">扫二维码，加入班级</i>
+                    </span>
+                  </a> 
+                </span>
+              </dd> 
+              <dd>上课周期：<span class="time">2016/5/10--2016/10/20</span>课时：70</dd>
+              <dd>
+                <span class="add-cls-fruq">补课次数：7/10</span>
+                <span class="add-cls-tes">中教老师：
+                  <a href="javascript:;" class="name cls-ud-name">马林林
+                    <div class="layer">
+                      <span class="tranU">1</span><span class="tranD">2</span>
+                      <dl>
+                        <dt><img src="<%= imagessrc%>ac05.jpg"></dt>
+                        <dd>姓名： 张阏</dd>
+                        <dd>简介：51Talk托福阅读教师，原新东方托福阅读名师， 7年一线教学经验，2年新东方某中心教学管理经验。</dd>
+                      </dl>
+                    </div>
+                  </a>
+              </dd>
+              <dd>
+                <span class="add-cls-time">上课时间：</span>
+                <span class="add-cls-week">
+                  <ul>
+                    <li>周一17:00-17:35</li>
+                    <li>周二18:00-18:15</li>
+                    <li>周三18:10-18:33</li>
+                  </ul>
+                </span>
+              <dd>课程进度<span class="speed"><i></i></span><span class="c-rate"><i>30%</i></span></dd>
+            </dl>
+            <div class="reser reser-t">
+              <span class="t-nav"><a href="javascript:;" class="b-class" target="_blank">查看课表</a></span>
+              <span class="n-time">下节课：2016/6/10 17:00</span>
+            </div>
+          </li>
+          <li>
+            <dl class="u-dl">
+              <dt class="addBd"><img src="<%= imagessrc%>ac02.jpg"></dt>
+              <dd>
+                <span class="t">雅思写作5.5基础班</span>
+                <span class="cls-node">
+                  <a href="javascript:;" class="cls-node-img">
+                    <span class="join-node"><img src="<%= imagessrc%>class_code_img.png" class="join-img"><i class="join-title">扫二维码，加入班级</i>
+                    </span>
+                  </a> 
+                </span>
+              </dd> 
+              <dd>上课周期：<span class="time">2016/5/10--2016/10/20</span>课时：70</dd>
+              <dd>
+                <span class="add-cls-fruq">补课次数：7/10</span>
+                <span class="add-cls-tes">中教老师：
+                  <a href="javascript:;" class="name cls-ud-name">马林林
+                    <div class="layer">
+                      <span class="tranU">1</span><span class="tranD">2</span>
+                      <dl>
+                        <dt><img src="<%= imagessrc%>ac05.jpg"></dt>
+                        <dd>姓名： 张阏</dd>
+                        <dd>简介：51Talk托福阅读教师，原新东方托福阅读名师， 7年一线教学经验，2年新东方某中心教学管理经验。</dd>
+                      </dl>
+                    </div>
+                  </a>
+              </dd>
+              <dd>
+                <span class="add-cls-time">上课时间：</span>
+                <span class="add-cls-week">
+                  <ul>
+                    <li>周一17:00-17:35</li>
+                    <li>周二18:00-18:15</li>
+                    <li>周三18:10-18:33</li>
+                  </ul>
+                </span>
+              <dd>课程进度<span class="speed"><i></i></span><span class="c-rate"><i>80%</i></span></dd>
+            </dl>
+            <div class="reser reser-t">
+              <span class="t-nav"><a href="JavaScript:;" class="b-class" target="_blank">查看课表</a><a href="JavaScript:;" class="cls-t-renawal">续订课程</a></span>
+              <span class="n-time">下节课：2016/6/10 17:00</span>
+            </div>
+          </li>
+          <li>
+            <dl class="u-dl">
+              <dt class="addBd"><img src="<%= imagessrc%>ac02.jpg"></dt>
+              <dd>
+                <span class="t">雅思写作5.5基础班</span>
+                <span class="cls-node">
+                  <a href="javascript:;" class="cls-node-img">
+                    <span class="join-node"><img src="<%= imagessrc%>class_code_img.png" class="join-img"><i class="join-title">扫二维码，加入班级</i>
+                    </span>
+                  </a> 
+                </span>
+              </dd> 
+              <dd>上课周期：<span class="time">2016/5/10--2016/10/20</span>课时：70</dd>
+              <dd>
+                <span class="add-cls-fruq">补课次数：7/10</span>
+                <span class="add-cls-tes">中教老师：
+                  <a href="javascript:;" class="name cls-ud-name">马林林
+                    <div class="layer">
+                      <span class="tranU">1</span><span class="tranD">2</span>
+                      <dl>
+                        <dt><img src="<%= imagessrc%>ac05.jpg"></dt>
+                        <dd>姓名： 张阏</dd>
+                        <dd>简介：51Talk托福阅读教师，原新东方托福阅读名师， 7年一线教学经验，2年新东方某中心教学管理经验。</dd>
+                      </dl>
+                    </div>
+                  </a>
+              </dd>
+              <dd>
+                <span class="add-cls-time">上课时间：</span>
+                <span class="add-cls-week">
+                  <ul>
+                    <li>周一17:00-17:35</li>
+                    <li>周二18:00-18:15</li>
+                    <li>周三18:10-18:33</li>
+                  </ul>
+                </span>
+              <dd>课程进度<span class="speed"><i></i></span><span class="c-rate"><i>100%</i></span></dd>
+            </dl>
+            <div class="reser reser-t">
+              <span class="t-nav"><a href="JavaScript" class="b-class" target="_blank">查看课表</a></span>
+              <span class="n-time">下节课：2016/6/10 17:00</span>
+            </div>
+          </li>
+          <li>
+            <dl class="u-dl">
+              <dt class="addBd"><img src="<%= imagessrc%>ac02.jpg"></dt>
+              <dd>
+                <span class="t">雅思写作5.5基础班</span>
+                <span class="cls-node">
+                  <a href="javascript:;" class="cls-node-img">
+                    <span class="join-node"><img src="<%= imagessrc%>class_code_img.png" class="join-img"><i class="join-title">扫二维码，加入班级</i>
+                    </span>
+                  </a> 
+                </span>
+              </dd> 
+              <dd>上课周期：<span class="time">2016/5/10--2016/10/20</span>课时：70</dd>
+              <dd>
+                <span class="add-cls-fruq">补课次数：7/10</span>
+                <span class="add-cls-tes">中教老师：
+                  <a href="javascript:;" class="name cls-ud-name">马林林
+                    <div class="layer">
+                      <span class="tranU">1</span><span class="tranD">2</span>
+                      <dl>
+                        <dt><img src="<%= imagessrc%>ac05.jpg"></dt>
+                        <dd>姓名： 张阏</dd>
+                        <dd>简介：51Talk托福阅读教师，原新东方托福阅读名师， 7年一线教学经验，2年新东方某中心教学管理经验。</dd>
+                      </dl>
+                    </div>
+                  </a>
+              </dd>
+              <dd>
+                <span class="add-cls-time">上课时间：</span>
+                <span class="add-cls-week">
+                  <ul>
+                    <li>周一17:00-17:35</li>
+                    <li>周二18:00-18:15</li>
+                    <li>周三18:10-18:33</li>
+                  </ul>
+                </span>
+              <dd>课程进度<span class="speed"><i></i></span><span class="c-rate"><i>100%</i></span></dd>
+            </dl>
+            <div class="reser reser-h">
+              <span class="t-nav">
+                <a href="javascript:;" class="b-class"><img src="<%= imagessrc%>complete.png"></a>
+              </span>
+              <span class="n-time">课程已顺利完成</span>
+            </div>
+          </li>
+          <li>
+            <dl class="u-dl">
+              <dt class="addBd"><img src="<%= imagessrc%>ac02.jpg"></dt>
+              <dd>
+                <span class="t">雅思写作5.5基础班</span>
+                <span class="cls-node">
+                  <a href="javascript:;" class="cls-node-img">
+                    <span class="join-node"><img src="<%= imagessrc%>class_code_img.png" class="join-img"><i class="join-title">扫二维码，加入班级</i>
+                    </span>
+                  </a> 
+                </span>
+              </dd> 
+              <dd>上课周期：<span class="time">2016/5/10--2016/10/20</span>课时：70</dd>
+              <dd>
+                <span class="add-cls-fruq">补课次数：7/10</span>
+                <span class="add-cls-tes">中教老师：
+                  <a href="javascript:;" class="name cls-ud-name">马林林
+                    <div class="layer">
+                      <span class="tranU">1</span><span class="tranD">2</span>
+                      <dl>
+                        <dt><img src="<%= imagessrc%>ac05.jpg"></dt>
+                        <dd>姓名： 张阏</dd>
+                        <dd>简介：51Talk托福阅读教师，原新东方托福阅读名师， 7年一线教学经验，2年新东方某中心教学管理经验。</dd>
+                      </dl>
+                    </div>
+                  </a>
+              </dd>
+              <dd>
+                <span class="add-cls-time">上课时间：</span>
+                <span class="add-cls-week">
+                  <ul>
+                    <li>周一17:00-17:35</li>
+                    <li>周二18:00-18:15</li>
+                    <li>周三18:10-18:33</li>
+                  </ul>
+                </span>
+              <dd>课程进度<span class="speed"><i></i></span><span class="c-rate"><i>100%</i></span></dd>
+            </dl>
+            <div class="reser reser-h">
+              <span class="t-nav">
+                <a href="javascript:;" class="b-class"><img src="<%= imagessrc%>complete.png"></a>
+              </span>
+              <span class="n-time">课程已顺利完成</span>
+            </div>
+          </li>
+          <li>
+            <dl class="u-dl">
+              <dt class="addBd"><img src="<%= imagessrc%>ac02.jpg"></dt>
+              <dd>
+                <span class="t">雅思写作5.5基础班</span>
+                <span class="cls-node">
+                  <a href="javascript:;" class="cls-node-img">
+                    <span class="join-node"><img src="<%= imagessrc%>class_code_img.png" class="join-img"><i class="join-title">扫二维码，加入班级</i>
+                    </span>
+                  </a> 
+                </span>
+              </dd> 
+              <dd>上课周期：<span class="time">2016/5/10--2016/10/20</span>课时：70</dd>
+              <dd>
+                <span class="add-cls-fruq">补课次数：7/10</span>
+                <span class="add-cls-tes">中教老师：
+                  <a href="javascript:;" class="name cls-ud-name">马林林
+                    <div class="layer">
+                      <span class="tranU">1</span><span class="tranD">2</span>
+                      <dl>
+                        <dt><img src="<%= imagessrc%>ac05.jpg"></dt>
+                        <dd>姓名： 张阏</dd>
+                        <dd>简介：51Talk托福阅读教师，原新东方托福阅读名师， 7年一线教学经验，2年新东方某中心教学管理经验。</dd>
+                      </dl>
+                    </div>
+                  </a>
+              </dd>
+              <dd>
+                <span class="add-cls-time">上课时间：</span>
+                <span class="add-cls-week">
+                  <ul>
+                    <li>周一17:00-17:35</li>
+                    <li>周二18:00-18:15</li>
+                    <li>周三18:10-18:33</li>
+                  </ul>
+                </span>
+              <dd>课程进度<span class="speed"><i></i></span><span class="c-rate"><i>100%</i></span></dd>
+            </dl>
+            <div class="reser reser-h">
+              <span class="t-nav">
+                <a href="javascript:;" class="b-class"><img src="<%= imagessrc%>complete.png"></a>
+              </span>
+              <span class="n-time">课程已顺利完成</span>
+            </div>
+          </li>
+          <li>
+            <dl class="u-dl">
+              <dt class="addBd"><img src="<%= imagessrc%>ac02.jpg"></dt>
+              <dd>
+                <span class="t">雅思写作5.5基础班</span>
+                <span class="cls-node">
+                  <a href="javascript:;" class="cls-node-img">
+                    <span class="join-node"><img src="<%= imagessrc%>class_code_img.png" class="join-img"><i class="join-title">扫二维码，加入班级</i>
+                    </span>
+                  </a> 
+                </span>
+              </dd> 
+              <dd>上课周期：<span class="time">2016/5/10--2016/10/20</span>课时：70</dd>
+              <dd>
+                <span class="add-cls-fruq">补课次数：7/10</span>
+                <span class="add-cls-tes">中教老师：
+                  <a href="javascript:;" class="name cls-ud-name">马林林
+                    <div class="layer">
+                      <span class="tranU">1</span><span class="tranD">2</span>
+                      <dl>
+                        <dt><img src="<%= imagessrc%>ac05.jpg"></dt>
+                        <dd>姓名： 张阏</dd>
+                        <dd>简介：51Talk托福阅读教师，原新东方托福阅读名师， 7年一线教学经验，2年新东方某中心教学管理经验。</dd>
+                      </dl>
+                    </div>
+                  </a>
+              </dd>
+              <dd>
+                <span class="add-cls-time">上课时间：</span>
+                <span class="add-cls-week">
+                  <ul>
+                    <li>周一17:00-17:35</li>
+                    <li>周二18:00-18:15</li>
+                    <li>周三18:10-18:33</li>
+                  </ul>
+                </span>
+              <dd>课程进度<span class="speed"><i></i></span><span class="c-rate"><i>100%</i></span></dd>
+            </dl>
+            <div class="reser reser-h">
+              <span class="t-nav">
+                <a href="javascript:;" class="b-class"><img src="<%= imagessrc%>complete.png"></a>
+              </span>
+              <span class="n-time">课程已顺利完成</span>
+            </div>
+          </li>
+        </ul>
+        <!-- <div class="m-pagenavi">
+            <div class="pagination" id="pagination"></div>
+        </div> -->
+        <!-- /g-mncw -->
+        <div class="m-pagenavi">
+          <a href="#" class="p">上一页</a>
+          <a href="#">1</a>
+          <a class="crt" href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#">6</a>
+          <a href="#">7</a>
+          <a href="#">8</a>
+          <a href="#">9</a>
+          <span>...</span>
+          <a href="#">72</a>
+          <a href="#" class="n">下一页</a>
+        </div>
+        <!-- /m-pagenavi -->
+      </div>
+    </div>
+  </div>
+</div>
+<% include ../common/user_center/up_g_f.ejs %>
+<script src="<%= jssrc%>"></script>
+</body>
+</html>

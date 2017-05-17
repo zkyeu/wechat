@@ -1,0 +1,72 @@
+<% include ../common/top.ejs %>
+<body data-init="resetPassword">
+	<!-- 学生 -->
+	<div class="account-detail-box account-detail-stu">
+		<ul class="detail-head">
+			<li class="detail-head-img">
+				<img width="70" height="70" src="<%= imagessrc%>account-headicon-stu.png" />
+			</li>
+			<li class="detail-head-name">
+				<em>赵雷</em>
+				<span>
+					<img src="<%= imagessrc%>account-vip.png"><i>已付费</i>
+				</span>
+			</li>
+			<li class="detail-head-enname">
+				<span>Mark</span>
+			</li>
+			<li>
+				<span>
+					北京109中学小学实验部
+				</span>
+				<span>三年级二班</span>
+				<a class="change-class" href="javascritp:;">换班</a>
+			</li>
+		</ul>
+
+		<ul class="detail-info">
+			<li><span>生日：</span>1990/02/12</li>
+			<li><span>QQ：</span>123912387218</li>
+			<li><span>手机：</span>13299991111</li>
+			<li><span>邮箱：</span>quhan611@qq.com</li>
+		</ul>
+
+		<ul class="detail-resetPwd">
+			<li><a href="javascript:void(0);" data-limit="0"></a><span>重置密码</span></li>
+		</ul>
+	</div>
+
+	<!-- 老师 -->
+	<div class="account-detail-box account-detail-tea">
+		<ul class="detail-head">
+			<li class="detail-head-img">
+				<img src="<%= imagessrc%>account-headicon-tea.png" />
+			</li>
+			<li class="detail-head-name">
+				<em>赵小雷</em>
+			</li>
+			<li class="detail-head-enname female">
+				<span>Mark</span>
+			</li>
+			<li>
+				北京109中学小学实验部
+			</li>
+		</ul>
+
+		<ul class="detail-info">
+			<li><a href="#"></a><span>手机：</span>13299991111<span class="invitation">更换手机号<i></i></span></li>
+			<li><span>邮箱：</span>quhan611@qq.com </li>
+		</ul>
+		<ul class="detail-info">
+			<li><a href="#"></a><span>修改密码</span><span class="invitation">&nbsp;<i></i></span></li>
+		</ul>
+	</div>
+
+	<!-- 更换账户 -->
+	<div class="bottom-btn-wrap">
+		<div class="bottom-btn-in">
+			<a href="" class="bottom-btn">更换账户</a>
+		</div>
+	</div>
+</body>
+<% include ../common/bottom.ejs %>

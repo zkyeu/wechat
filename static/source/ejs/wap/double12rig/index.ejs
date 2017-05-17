@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="<%= csslink%>">
+</head>
+<body>
+    <div class="container" data-init="index">
+        <div class="banner"></div>
+        <div class="content">
+            <div class="formBox" id="regForm">
+                <div class="title"></div>
+                <a class="subBtn" href="javascript:;" id="regBtn">提交注册信息</a>
+                <ul class="list">
+                    <li>
+                        <input id="reg1_tel" class="txt" type="tel" name="mobile" placeholder="输入您的手机号">
+                    </li>
+                    <li>
+                        <input id="reg1_code" class="txt tel_code" name="mobile_code" type="tel" placeholder="请输入验证码">
+                        <span id="send_code" class="tel_btn">获取验证码</span>
+                    </li>
+                    <li>
+                        <input id="reg1_passwd" class="txt" type="password" name="password" placeholder="设置您的密码">        
+                    </li>
+                </ul>
+            </div>
+            <img src="<%= imagessrc%>promotion.png" class="promotion">
+            <ul class="classList clearfix">
+                <li>
+                    <a href="http://www.baidu.com">
+                        <img src="<%= imagessrc%>teen1.jpg" alt="">
+                        <h3 class="title">青少经典英语18单元</h3>
+                        <p class="desc"><span>￥6648</span><i>原价￥7188</i></p>
+                    </a>
+                </li>
+                <li>
+                    <img src="<%= imagessrc%>teen2.jpg" alt="">
+                    <h3 class="title">青少经典英语18单元</h3>
+                    <p class="desc"><span>￥6648</span><i>原价￥7188</i></p>
+                </li>
+            </ul>
+            <img src="<%= imagessrc%>oldUser.png" class="oldUser">
+        </div>
+        <div class="footer">Copyright©北京大生知行科技有限公司</div>
+    </div>
+    <div class="mask" id="mask"></div>
+    <div class="tipBox" id="tipBox">
+        <div class="content">
+            <h3>立即抢购5折课程</h3>
+            <p>请登录官网双11活动页面 <br/>或下载APP，还有大奖等你拿！</p>
+            <a href="javascript:;" class="btn">下载APP</a>
+        </div>
+    </div>
+    <script src="<%= jssrc%>" id="seajsnode"></script> 
+</body>
+</html>

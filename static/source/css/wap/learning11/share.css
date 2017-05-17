@@ -1,0 +1,537 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Thu Nov 03 2016 15:31:36 GMT+0800 (中国标准时间)
+ */
+/*初始化样式*/
+/* html{font-size:62.5%;} */
+body {
+  font-family: 'Microsoft YaHei', STXihei, MingLiu;
+}
+cite,
+i,
+s,
+b {
+  font-style: normal;
+  font-weight: normal;
+}
+body,
+ul,
+li,
+p,
+dl,
+dt,
+dd,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+  padding: 0px;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+li {
+  list-style: none;
+}
+img {
+  border: 0px;
+}
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+input {
+  font-family: 'Microsoft YaHei', STXihei, MingLiu;
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+/* @media only screen and (min-width: 481px){
+  html {
+    font-size: 94%!important;
+  }
+}
+@media only screen and (min-width: 561px){
+  html {
+    font-size: 109%!important;
+  }
+}
+@media only screen and (min-width: 641px){
+  html {
+    font-size: 125%!important;
+  }
+} */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.f-toe {
+  overflow: hidden;
+  word-wrap: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/*
+* 双11H5
+* @file：   learning.less
+* @author:  shaoyongkai（shaoyongkai@51talk.cn）
+* @update:  2016-10-24
+* @note:    双11H5
+*/
+/*双11H5*/
+html,
+body {
+  font-family: 'Microsoft YaHei', STXihei, MingLiu;
+  min-width: 320px;
+}
+body {
+  background: #8f01b2 url(../../../images/wap/learning11/bg_body.png?v=8%2BYJohwzRA6TVGiKit%2Fo6A%3D%3D) no-repeat;
+  background-size: 100% auto;
+  font-size: 12px;
+}
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header .banner {
+  width: 100%;
+}
+.rota {
+  z-index: 6;
+  position: relative;
+  width: 9.21875rem;
+  margin: 7.640625rem auto 0 auto;
+}
+.rota .prize_list {
+  position: relative;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+.rota .prize_list .caption {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.rota .prize_list .caption img {
+  display: block;
+  margin: 0 auto;
+  width: 91.525%;
+}
+.rota .prize_list .names {
+  background: #ffd400;
+  border-radius: 0.3125rem;
+  margin-top: 0.96875rem;
+  height: 5.9375rem;
+}
+.rota .prize_list .names .name_list {
+  padding: 1rem 0.234375rem 0 0.234375rem;
+  height: 4.609375rem;
+  overflow: hidden;
+}
+.rota .prize_list .names .name_list li {
+  position: relative;
+  line-height: 0.78125rem;
+  height: 0.78125rem;
+  padding-top: 0.140625rem;
+  /* border-bottom: 1px solid #d45a07; */
+  color: #c82401;
+  font-size: 0.4375rem;
+}
+.rota .prize_list .names .name_list li:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #d45a07;
+}
+[data-dpr="1"] .rota .prize_list .names .name_list li:before {
+  -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+      -ms-transform: scaleY(0.5);
+          transform: scaleY(0.5);
+}
+.rota .prize_list .names .name_list li:first-child:before {
+  display: none;
+}
+.rota .prize_list .names .name_list li span {
+  float: left;
+}
+.rota .prize_list .names .name_list li b {
+  float: right;
+}
+.rota .rules .caption img {
+  width: 100%;
+  display: block;
+}
+.rota .rules .info {
+  font-size: 0.375rem;
+  line-height: 0.625rem;
+  margin-top: 0.234375rem;
+  color: #ffb2ff;
+}
+.rota .l_btn {
+  margin: 0.46875rem auto;
+}
+.rota .dial-bg {
+  width: 9.21875rem;
+  height: 9.375rem;
+  margin: 0 auto;
+  background: url(../../../images/wap/learning11/dial_bg.png?v=JrJtPX46ETwy%2FrBLgcBafw%3D%3D) no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.rota .dial-bg .l_grid {
+  margin-left: 0.71875rem;
+  margin-top: 0.71875rem;
+}
+.rota .dial-bg .l_grid li {
+  width: 2.53125rem;
+  height: 2.609375rem;
+  margin-right: 0.109375rem;
+  margin-bottom: 0.109375rem;
+  float: left;
+  background: url(../../../images/wap/learning11/l_bg.png?v=CtgblWoABQpY0zHi8c64mQ%3D%3D) 0 -2.8125rem no-repeat;
+  background-size: 2.53125rem 10.96875rem;
+}
+.rota .dial-bg .l_grid li.pointer {
+  background-position: 0 -5.5625rem;
+}
+.rota .dial-bg .l_grid li.pointer:active {
+  background-position: 0 -8.328125rem;
+}
+.rota .dial-bg .l_grid li.l_now {
+  background-position: 0 0;
+}
+.rota .dial-bg .l_grid li img {
+  margin: 0.15625rem auto 0 auto;
+  height: 2.34375rem;
+  width: 2.34375rem;
+  display: block;
+}
+.pri-list .caption img {
+  width: 100%;
+  display: block;
+}
+.pri-list .course_list {
+  background: #ffd400;
+  padding: 0.46875rem;
+}
+.pri-list .course_list li {
+  position: relative;
+  overflow: hidden;
+  height: 2.96875rem;
+  background: #fff;
+  margin-top: 0.46875rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.pri-list .course_list li:first-child {
+  margin-top: 0;
+}
+.pri-list .course_list li img {
+  width: 4rem;
+  height: 2.96875rem;
+  background: #eee;
+}
+.pri-list .course_list li .text {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0.3125rem 0 0 0.3125rem;
+}
+.pri-list .course_list li .text .package_name {
+  font-size: 0.46875rem;
+  color: #333333;
+  margin-bottom: 0.15625rem;
+}
+.pri-list .course_list li .text .desc {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.pri-list .course_list li .text .desc .low {
+  font-size: 0.375rem;
+  color: #ff2728;
+}
+.pri-list .course_list li .text .desc .price_new {
+  color: #ff2728;
+  font-size: 0.5rem;
+}
+.pri-list .course_list li .text .desc .price_old {
+  text-decoration: line-through;
+  color: #b1b1b1;
+  font-size: 0.375rem;
+  margin-left: 0.5rem;
+}
+.pri-list .course_list li .btn_buy {
+  position: absolute;
+  right: 0.15625rem;
+  bottom: 0.15625rem;
+  width: 2.5rem;
+  height: 0.78125rem;
+  line-height: 0.78125rem;
+  text-align: center;
+  background: #ff4224;
+  border-radius: 0.390625rem;
+  color: #fff;
+  font-size: 0.46875rem;
+}
+.pri-list .course_list li:active {
+  -webkit-box-shadow: 0 0 0.15625rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 0.15625rem rgba(0, 0, 0, 0.3);
+}
+.pri-list .course_list .label {
+  width: 1.25rem;
+  height: 1.25rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.pri-list .course_list .label.hot {
+  background: url(../../../images/wap/learning11/label_hot.png?v=WNxf%2Fqxt5HETSZ699cud5Q%3D%3D) no-repeat;
+  background-size: cover;
+}
+.pri-list .course_list .label.discount {
+  width: 1.671875rem;
+  height: 1.671875rem;
+  top: -0.234375rem;
+  left: -0.234375rem;
+}
+.pri-list .course_list .label.discount.discount5 {
+  background: url(../../../images/wap/learning11/label_discount_5.png?v=3zlgNndoacvG7t7ar2KX1Q%3D%3D) no-repeat;
+  background-size: cover;
+}
+.pri-list .course_list .l_btn {
+  margin: 0.46875rem auto 0.78125rem auto;
+}
+.footer {
+  height: 2.03125rem;
+  background: #d41549;
+}
+.footer .info {
+  font-size: 0.28125rem;
+  color: #fff;
+  text-align: center;
+  line-height: 2.03125rem;
+}
+.dialog {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 21;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.dialog .info {
+  position: relative;
+  width: 10.0rem;
+  height: 10.4375rem;
+  left: 50%;
+  top: 50%;
+  margin-top: -6rem;
+  margin-left: -5rem;
+  background: url(../../../images/wap/learning11/prize_bg02.png?v=7owOYhHIu8OOPAEtnpxE8Q%3D%3D) center no-repeat;
+  background-size: cover;
+}
+.dialog .info .box {
+  position: relative;
+  left: 0rem;
+  top: 0rem;
+  padding-top: 3.25rem;
+  text-align: center;
+  overflow: hidden;
+}
+.dialog .info .box h3 {
+  font-size: 0.46875rem;
+  color: #5e4000;
+  margin-top: 0.4rem;
+}
+.dialog .info .box .close {
+  width: 0.78125rem;
+  height: 0.78125rem;
+  position: absolute;
+  right: 0.34375rem;
+  top: 2.234375rem;
+}
+.dialog .info .box .detail {
+  margin-top: 1.5rem;
+}
+.dialog .info .box img {
+  display: none;
+  height: 3.125rem;
+}
+.dialog2 {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 21;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.dialog2 .tip {
+  position: relative;
+  width: 8.4375rem;
+  height: 3.78125rem;
+  left: 50%;
+  top: 50%;
+  background: #fff;
+  margin-top: -1.890625rem;
+  margin-left: -4.21875rem;
+  border-radius: 0.15625rem;
+}
+.dialog2 .tip .close {
+  width: 1.0rem;
+  height: 1.0rem;
+  position: absolute;
+  right: 0.15625rem;
+  top: 0.15625rem;
+  background: url(../../../images/wap/learning11/join_close.jpg?v=0RXsFsS4TRh%2BYS3w55icTg%3D%3D) no-repeat;
+  background-size: cover;
+}
+.dialog2 .tip .gold_box {
+  background: url(../../../images/wap/learning11/look_detail02.png?v=DCStDcl8NfOVWzTgfX710A%3D%3D) no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 3.125rem;
+  height: 1.609375rem;
+  right: 0.15625rem;
+  bottom: -0.03125rem;
+}
+.dialog2 .tip .text {
+  float: left;
+  color: #5e4000;
+  padding-right: 0.390625rem;
+}
+.dialog2 .tip .text1 {
+  padding-left: 0.859375rem;
+  padding-top: 1rem;
+}
+.dialog2 .tip .text1 p {
+  line-height: 0.5rem;
+  font-size: 0.375rem;
+  font-weight: bold;
+}
+.dialog2 .tip .text1 h3 {
+  padding-top: 0.078125rem;
+  font-size: 0.5rem;
+}
+.dialog2 .tip .text1 h3 span {
+  font-size: 0.28125rem;
+}
+.dialog2 .tip .text2 {
+  padding-left: 0.859375rem;
+}
+.dialog2 .tip .text2 h3 {
+  font-size: 0.375rem;
+  padding-top: 1.5625rem;
+}
+.dialog2 .tip-1,
+.dialog2 .tip-2 {
+  display: none;
+}
+.sysInfo {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.sysInfo .dtInfo {
+  position: absolute;
+  width: 8.4375rem;
+  top: 50%;
+  left: 50%;
+  margin: -1.5625rem 0 0 -4.21875rem;
+}
+.sysInfo .dtInfo .tit {
+  height: 0.625rem;
+  line-height: 0.625rem;
+  background-color: #ff8200;
+  padding: 0 0.1875rem;
+  color: #fff;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  font-size: 0.28125rem;
+}
+.sysInfo .dtInfo .test {
+  text-align: center;
+  padding: 0.625rem 0;
+  border: 1px #e4eaee solid;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: #fff;
+  font-size: 0.28125rem;
+}
+.sysInfo .dtInfo .test .down {
+  display: block;
+  width: 3.125rem;
+  height: 0.625rem;
+  line-height: 0.625rem;
+  color: #fff;
+  text-align: center;
+  background-color: #ff8200;
+  margin: 0.46875rem auto 0 auto;
+  font-size: 0.28125rem;
+}
+.l_btn {
+  width: 6.15625rem;
+  height: 1.40625rem;
+  line-height: 1.40625rem;
+  background: url(../../../images/wap/learning11/btn_bg_record.png?v=wUrJ%2F0eqA4DqpPO1cyNGSg%3D%3D) no-repeat;
+  background-size: cover;
+  color: #c82401;
+  font-size: 0.5625rem;
+  text-align: center;
+  display: block;
+}

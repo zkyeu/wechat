@@ -1,0 +1,30 @@
+<% include ../common/top.ejs %>
+<body data-init="acstuAll">
+    <div class="ac-dialog-wrap ac-dialog-play-all">
+        <div class="ac-dialog-content noscroll">
+            <div class="ac-dialog-ifr">
+                <iframe src="" scrolling="no" frameborder="0"></iframe>
+                <div class="ac-stu-all">
+                    <p class="play-all-timmer">倒计时：<i>59</i>秒</p>
+                    <p class="play-all-detail"><i>1</i>/2道题</p>
+                </div>
+            </div>
+        </div>
+        <div class="ac-dialog-bottom clearfix">
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+var dataArr = {
+    arr:[
+    ["http://192.168.0.101:3000/templates/html/ac_dialog/ac_stu_pair_play.html",3000],
+    ["http://192.168.0.101:3000/templates/html/ac_dialog/ac_game_pair_student_play.html",30],
+    ["http://192.168.0.101:3000/templates/html/ac_dialog/ac_stu_voice_play.html",40],
+    ["http://192.168.0.101:3000/templates/html/ac_dialog/ac_stu_read_play.html",40],
+    ["http://192.168.0.101:3000/templates/html/ac_dialog/ac_stu_choice_play.html",40]
+    ],
+    buffer : 5,
+    result : "http://www.baidu.com"
+}
+</script>
+<% include ../common/bottom.ejs %>

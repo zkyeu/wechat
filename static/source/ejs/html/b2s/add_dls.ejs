@@ -1,0 +1,112 @@
+<% include ../common/top.ejs %>
+<body class="city-manager">
+<input type="hidden" id="container" data-init="agentLogin" />
+<!-- 公共头 -->
+<% include ../common/b2s/c_b2s_header.ejs %>
+
+<style>
+    
+    .form-style-1 dl dt{
+        width: 100px;
+    }
+    .form-style-1 dl .sub-btn {
+        height: 32px;
+        width: 270px;
+        line-height: 32px;
+        background-color: #4ed702;
+        color: #fff;
+        font-size: 16px;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        cursor: pointer;
+    }
+    
+</style>
+<div class="agent-login">
+<!-- left start -->
+<style>
+    
+    .cls-side .side-tit .side-down a {
+        margin-left: 2px;
+    }
+    .cls-side .side-tit li a {
+        margin-left: 2px;
+    }
+    
+</style>
+<div class="mycls mycls-agent">
+  <div class="widthMain">
+    <!-- banner -->
+    <div class="central">
+      <!-- 侧栏 -->
+      <% include ../common/b2s/c_b2s_sidebar.ejs %>
+        <div class="cls-main">
+            <div class="agent-login-wrap">
+                <h3 class="agent-login-t">
+                    <span>添加代理商</span>
+                </h3>
+                <div class="agent-login-form form-style-1">
+                    <form action="/cityManager/regAgent" method="post" enctype='multipart/form-data' autocomplete="off" rel="agentLogin">
+                                    <dl>
+                            <dt><label for="name">公司名称：</label></dt>
+                            <dd class="input-dd"><input class="" type="text" name="name" placeholder="请输入代理商姓名"></dd>
+                            <dd><p class="error-tip"></p></dd>
+                        </dl>
+                        <dl>
+                            <dt><label for="mobile">手机号：</label></dt>
+                            <dd class="input-dd"><input class="" type="text" name="mobile" placeholder="请输入手机号"></dd>
+                            <dd><p class="error-tip"></p></dd>
+                        </dl>
+                        <dl>
+                            <dt><label for="identity_card">身份证号码：</label></dt>
+                            <dd class="input-dd"><input class="" type="text" name="identity_card" placeholder="请输入身份证号码"></dd>
+                            <dd><p class="error-tip"></p></dd>
+                        </dl>
+                        <dl>
+                            <dt><label for="bank_card">银行卡号：</label></dt>
+                            <dd class="input-dd"><input class="form-data jsInputOk tel" type="text" name="bank_card" placeholder="请输入银行卡号"></dd>
+                            <dd><p class="error-tip"></p></dd>
+                        </dl>
+                        <dl>
+                            <dt><label for="bank_card">城市：</label></dt>
+                            <dd class="input-dd"><select class="select-s" name="city_id">
+                                <option class="c-city" value="0">选择城市</option>
+                                                        <option value="5">昆明市</option>
+                                                    </select></dd>
+                            <dd><p class="error-tip"></p></dd>
+                        </dl>
+                                    <dl>
+                            <dt>&nbsp;</dt>
+                            <dd>
+                                <input type="hidden" name="action" value="do">
+                                <input type="hidden" name="type" value="1" />
+                                <input type="submit" class="sub-btn" name="" value="提交">
+                            </dd>
+                            </dl>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- 公共尾部 -->
+<div class="footer">
+    <div class="widthMain">
+        <p class="link-ft">
+            Copyright©北京大生知行科技有限公司<em>|</em>
+            <a href="/page/privacy/" target="_blank" title="隐私声明">隐私声明</a><em>|</em>
+            <a href="/page/terms/" target="_blank" title="用户协议">用户协议</a><em>|</em>
+            京ICP证110696号 京ICP备11031999号
+        </p>
+    </div>
+</div>
+</body>
+<% include ../common/bottom.ejs %>
+<script type="text/javascript">
+  (function(){
+        $('.cls-side').height($(document).height() - 211);
+    })();
+</script>
+</html>

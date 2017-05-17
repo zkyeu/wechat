@@ -1,0 +1,48 @@
+<% include ../common/top_b2s_n.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>class_management6.css">
+</head>
+<body data-init="class_management6" class="class_management6">
+   <div class="code_content">
+       <P class="name_title"><span><i><img src="<%= imagessrc%>1v1_pay_introduce-12.png"></i>张建国老师</span></P>
+       <p class="text">
+          请识别以下二维码下载上课软件，并使用我的专属邀请码加入班级，开始学习吧！ 
+       </p>
+       <div class="code_box">
+           <img src="<%= imagessrc%>1v1_pay_introduce-12.png">
+       </div>
+       <p class="code_text">长按识别二维码</p>
+       <P class="invent_code">我的邀请码 <i> 88888</i></P>
+   </div>
+    <div class="tea-btn-wrap2">
+        <div class="tea-btn-in">
+            <a href="javascript:void(0);" class="tea-btn" >分享给微信好友</a>
+        </div>
+    </div>
+
+    <!-- 分享弹层 -->
+    <div class="stu-audio-dialog">
+            <!-- <div class="arrows">
+                <img src="<%= imagessrc%>stu-audio-dialog01.png" alt="">
+            </div>
+            <div class="share-prompt">点击右上角分享至微信好友或朋友圈</div> -->
+            <div class="share-prompt-app">
+              请截屏将“二维码”和“邀请码”发送<br/>给学生和家长
+            </div>
+
+            <div class="share-bottom share_none">
+                <div class="share-cancel">取&nbsp;消</div>
+            </div>
+    </div>
+<!-- loading -->
+<div id="fontSizeLoding">
+    <img src="<%= imagessrc%>eff_loading.gif">
+</div>
+<script type="text/javascript">
+window.onload = function(){
+    document.documentElement.style.fontSize = document.body.clientWidth / 7.5 + "px";
+    document.getElementById("fontSizeLoding").style.display = "none";
+}
+</script>
+</body>
+<!--公共尾部结束-->
+<% include ../common/bottom.ejs %>

@@ -1,0 +1,18 @@
+<% include ../common/top_b2s.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>weixin_heck.css">
+</head>
+<body data-init="heckIndex" class="wx_heck_index">
+    <div class="heck_top">top</div>
+    <div class="form_content">
+        <form  action="#" autocomplete="off" rel="heck_login">
+            <input type="text" rel="enname" placeholder="请输入用户名" >
+            <p class="error-tips"></p>
+            <input type="password" rel="password" placeholder="请输入密码">
+            <p class="error-tips"></p>
+            <div class="into"><input type="checkbox" checked = "checked"/>下次自动登陆</div>
+            <input type="submit" class="input-submit" value="立即登录">
+        </form>
+    </div>
+    <div class="footer"></div>    
+</body>
+<% include ../common/bottom.ejs %>

@@ -1,0 +1,28 @@
+<% include ../common/top.ejs %>
+<body class="b-class-list" data-init="stuTeaEntering">
+	<div class="tea-box" id="documentBox">
+		<h2 class="teacher-tit">赵老师</h2>
+		<div class="line-box"></div>
+		<ul class="class-list" id="classList">
+			<li data-val="2">三年一班</li>
+			<li data-val="2">三年一班</li>
+			<li data-val="2">三年一班</li>
+			<li data-val="2">三年一班</li>
+		</ul>
+			
+		
+	</div>
+	<div class="sure-box btnBox" data-value="http://www.baidu.com">
+    <a href="javascript:;">取消</a>
+</div>
+	<div class="mask-box hide" id="maskBox"></div>
+	<div class="pop-up hide" id="popUp">
+		<div class="text-info">
+			<p class="text-tit" id="listpopUp"></p>
+		</div>
+		<div class="p-btn-box" id="pupupBtn" data-href="http://www.baidu.com">
+		</div>
+	</div>	
+	<input type="hidden" value="" id="listClassId"/>
+</body>
+<% include ../common/bottom.ejs %>

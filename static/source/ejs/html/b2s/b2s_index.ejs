@@ -1,0 +1,183 @@
+<% include ../common/top_b2s.ejs %>
+	<link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>b2s_index.css">
+</head>
+<body id="container" data-init="b2sLogin_sso" class="b2s-index">
+<div id="fullpage" class="fullpage" qrIndex="3">
+    <div class="section">
+		<% include b2s_common/header.ejs %>
+		<% include b2s_common/nav.ejs %>
+    	<div class="fullpage-con fullpage-con1">
+    		<div class="b2s-form">
+    			<div class="b2s-form-in">
+    				<div class="b2s-form-head">
+	    				<ul class="b2s-form-head-swtich clear_f">
+	    					<li class="cur">学生登录</li>
+	    					<li>老师登录</li>
+	    				</ul>
+						<p class="b2s-form-head-line">
+		    				<span></span>
+		    			</p>
+	    			</div>
+	    			<div class="b2s-form-con">
+	    				<div class="b2s-form-tab">
+		    				<ul class="clear-fix">
+		    					<li>
+		    						<form id="stuLoginForm"autocomplete="off" rel="stu">
+		    							<dl class="clear-fix">
+		    								<dt>
+		    									<i class="b2s-form-icons"></i>
+		    								</dt>
+		    								<dd>
+		    									<input type="tel" class="b2s-form-input" name="user_name" maxlength="11" placeholder="请输入手机号" rel="phone" />
+		    									<em class="b2s-form-error"></em>
+		    								</dd>
+		    							</dl>
+		    							<dl class="clear-fix">
+		    								<dt>
+		    									<i class="b2s-form-icons b2s-form-psw"></i>
+		    								</dt>
+		    								<dd>
+		    									<input type="password" class="b2s-form-input" placeholder="请输入密码" rel="password" />
+		    									<input class="jm_password" type="hidden" name="password" value="">
+		    									<em class="b2s-form-error"></em>
+		    								</dd>
+		    							</dl>
+		    							<div class="b2s-form-auto">
+		    								<label for="b2s-form-auto1">
+		    									下次自动登录
+		    									<i></i>
+		    								</label>
+		    								<input type="checkbox" name="rememberMe" id="b2s-form-auto1" value="rememberMe">
+		    							</div>
+		    							<div class="b2s-form-submit">
+		    								<input type="submit" value="学生登录" />
+		    							</div>
+		    						</form>
+		    					</li>
+		    					<li>
+		    						<form id="teaLoginForm" autocomplete="off" rel="tea">
+		    							<dl class="clear-fix">
+		    								<dt>
+		    									<i class="b2s-form-icons"></i>
+		    								</dt>
+		    								<dd>
+		    									<input type="text" class="b2s-form-input" maxlength="11" name="user_name" placeholder="请输入手机号" rel="phone" />
+		    									<em class="b2s-form-error"></em>
+		    								</dd>
+		    							</dl>
+		    							<dl class="clear-fix">
+		    								<dt>
+		    									<i class="b2s-form-icons b2s-form-psw"></i>
+		    								</dt>
+		    								<dd>
+		    									<input type="password" class="b2s-form-input" placeholder="请输入密码" rel="password" />
+		    									<input class="jm_password" type="hidden" name="password" value="">
+		    									<em class="b2s-form-error"></em>
+		    								</dd>
+		    							</dl>
+		    							<div class="b2s-form-auto">
+		    								<label for="b2s-form-auto2">
+		    									下次自动登录
+		    									<i></i>
+		    								</label>
+		    								<input type="checkbox" name="rememberMe" id="b2s-form-auto2" value="rememberMe">
+		    							</div>
+		    							<div class="b2s-form-submit">
+		    								<input type="submit" value="老师登录" />
+		    							</div>
+		    						</form>
+		    					</li>
+		    				</ul>
+		    			</div>
+
+	    				<ul class="b2s-form-link clear-fix">
+	    					<li class="li-f">
+	    						<a href="">忘记密码</a>
+	    						<i></i>
+	    					</li>
+	    					<li>
+	    						<a href="">激活学生账户</a>
+	    					</li>
+	    				</ul>
+	    			</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <div class="section section-f">
+    	<div class="fullpage-con fullpage-con2">
+    		<div class="b2s-advantage">
+	    		<ul class="clear-fix">
+	    			<li class="li-f">
+	    				<dl>
+	    					<dt>外教授课<p>纯正英语不再高不可攀</p></dt>
+	    					<dd>高性价比送外教到每一个小学班级，让每个小朋友有学好英语的平等权利。</dd>
+	    				</dl>
+	    			</li>
+	    			<li>
+	    				<dl>
+	    					<dt>同步拓展教材<br />应试/素质双培优</dt>
+	    					<dd>针对孩子学校教材，匹配开发同步教材，融入20%拓展内容做到巩固学校学习效果，提升听说能力，双优拔高。</dd>
+	    				</dl>
+	    			</li>
+	    			<li>
+	    				<dl>
+	    					<dt>趣味作业<br />学习不再枯燥</dt>
+	    					<dd>人机互动练习，智能语音评分摆脱枯燥笔头作业，让孩子读准每一个单词，说好每一个句子，从此爱上学英语。</dd>
+	    				</dl>
+	    			</li>
+	    			<li>
+	    				<dl>
+	    					<dt>学习报告<br />效果保障</dt>
+	    					<dd>全面分析孩子学习效果，及时反馈给老师和家长，做个性化学习报告，不让任何一个孩子掉队。</dd>
+	    				</dl>
+	    			</li>
+	    		</ul>
+	    	</div>
+    	</div>
+    </div>
+    <div class="section">
+    	<div class="fullpage-con fullpage-con3">
+    		<div class="app-download">
+				<a href="" target="_blank"></a>
+				<a href="" target="_blank"></a>
+    		</div>
+    	</div>
+    </div>
+    <div class="section">
+    	<div class="fullpage-con fullpage-con4">
+			<a href="" target="_blank"></a>
+    	</div>
+    </div>
+    <div class="section section-f">
+    	<div class="fullpage-con fullpage-con5">
+    		<div class="b2s-introduce">
+    			<dl class="dl-f">
+    				<dt>教育部中国教育学会科研规划重点课程</dt>
+    				<dd>外教在线教学对中小学生听说能力提升的综合研究<br />课题编号：01060250</dd>
+    			</dl>
+    			<dl class="dl-l">
+    				<dt>未来中考英语考试听说将占<span>40</span>分!</dt>
+    				<dd>从小跟外教学习，练就地道听说!</dd>
+    			</dl>
+    			<ul>
+    				<li><span>建立</span>英语思维！</li>
+					<li><span>提升</span>考试成绩！</li>
+					<li><span>冲击</span>世界名校！</li>
+    			</ul>
+    		</div>
+    	</div>
+    	<% include b2s_common/footer.ejs %>
+    </div>
+</div>
+<div class="app-download-qrcode">
+	<img src="<%= imagessrc%>index-qrcode.png" width="133" hei />
+	<p>手机扫描二维码下载</p>
+</div>
+<div class="b2s-app-back b2s-app-back-index">
+	<img src="<%= imagessrc%>index-back.png" width="48" />
+</div>
+<input id="b2sSsoId" type="text" value="true"/>
+
+</body>
+<% include ../common/bottom.ejs %>

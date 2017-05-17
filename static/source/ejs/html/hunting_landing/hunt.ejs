@@ -1,0 +1,90 @@
+<% include ../common/top.ejs %>
+<body>
+<div class="head" id="container" data-init="hunt">
+  <div class="midWidth">
+    <div class="nav">
+      <img src="<%= imagessrc%>/lp_mob.png">
+      <a href="javascript:;" class="login" name="login">登录</a>
+    </div>
+    <div class="nav-t">
+      <img src="<%= imagessrc%>/lp_tit.png" class="t-img">   
+      <a href="javascript:;" class="t-btn">马上免费测评</a>
+      <p class="tit">已经是会员，请<a href="javascript:;">登录</a></p>
+    </div>
+  </div>
+</div>
+<div class="ht-eval">
+  <div class="midWidth">
+    <h3 class="htTit htTit01"></h3>
+    <img src="<%= imagessrc%>/lp_img01.png" class="t-img01"> 
+    <h3 class="htTit htTit02"></h3>
+    <img src="<%= imagessrc%>/lp_list.jpg" class="t-img02"> 
+  </div>
+</div>
+<div class="ht-cour">
+  <div class="midWidth">
+    <h3 class="htTit htTit03"></h3>
+    <dl>
+      <dt class="htTit htimg01"></dt>
+      <dd><p>面试口语 Interview English</p></dd>
+      <dd>教材中在鲜活的面试情景对话中融入常见面试问题，并由外教带领学员进行一对一全真演练。不管您是打算跳槽的在职人士, 还是即将步入职场的大学生朋友，都能从中得到系统、专业、有效的指导。教材不仅提供实用、有效、有趣的学习内容，还将英文面试情景立体呈现在您眼前，让您用“无忧英语”实现“无忧面试”。<a href="#login">马上免费体验课程</a></dd>
+    </dl>
+    <dl>
+      <dt class="htTit htimg02"></dt>
+      <dd><p>商务英语 Business English</p></dd>
+      <dd>致力于综合提高职场人的商务英语，主要集中在听、说两个方面进行课堂练习。“商务情景会话180篇”摒弃传统说教模式，还原真实商务场景，提供实用口语表达。本课程共分为初中高三个级别，内容涵盖商务英语中电话、邮件、会议、出差、报告、谈判等30个常见的主题，再现了180个真实商务会话场景。<a href="#login">马上免费体验课程</a></dd>
+    </dl>
+  </div>
+</div>
+<div class="ht-star">
+  <div class="midWidth">
+    <h3 class="htTit htTit04"></h3>
+    <dl class="la">
+      <dt><img src="<%= imagessrc%>/lp_lina.jpg"></dt>
+      <dd>
+        <ul>
+          <li class="li01"><span>李娜</span>Lina</li>
+          <li class="li02"><span>国际网坛巨星</span></li>
+          <li>51Talk梦想代言人</li>
+        </ul>
+      </dd>
+      <dd class="d-tit">“学英语和打网球一样，得1对1的多练。51Talk把语言环境送到身边，我觉得每个人都有成功的机会。”</dd>
+    </dl>
+    <img src="<%= imagessrc%>/ba_three.jpg" class="thr-img">  
+  </div>
+</div>
+<div class="company">
+    <h3>合作企业</h3>
+    <p><a href="#"><img src="<%= imagessrc%>/xm.jpg" alt=""></a>
+    <a href="#"><img src="<%= imagessrc%>/jd.jpg" alt=""></a>
+    <a href="#"><img src="<%= imagessrc%>/zs.jpg" alt=""></a>
+    <a href="#"><img src="<%= imagessrc%>/sony.jpg" alt=""></a>
+    <a href="#" style="margin-right:0;"><img src="<%= imagessrc%>/zlw.jpg" alt=""></a></p>
+</div>
+<div class="footer">
+    <div class="footer-inner">
+      <div class="copyright">Copyright©北京大生知行科技有限公司&nbsp;|&nbsp;隐私声明&nbsp;|&nbsp;用户协议&nbsp;|&nbsp;京ICP证110696号 京ICP备11031999号</div>
+    </div>
+</div>
+
+
+<!-- 弹框 -->
+
+  <div class="msk" id="msk"></div>
+  <div class="info">
+    <p class="p-tit">注册立即获赠价值188元的外教1对1体验课一次，<br/> 并免费开通每月上百节的公开课体验资格!</p>
+    <form action="../user/do_register.php" method="POST" id="RegForm">
+      <ul class="window-input">
+          <li><i class="htTit htTc-img01"></i><input name="user_name" id="user_name3" type="text" placeholder="请输入您的邮箱" class="jsCheck"></li>
+          <li><i class="htTit htTc-img02"></i><input name="mobile" id="mobile3" type="text" placeholder="请输入您的手机号" class="jsCheck"></li>
+          <li><i class="htTit htTc-img03"></i><input name="password" id="password3" type="password" placeholder="请设置您的密码" class="jsCheck"></li>
+      </ul>
+      <div class="orderBtn">
+        <a href="javascript:;" class="jsSubmit or-btn">马上免费体验</a>
+        <p class="word">体验后，您将获得量身定制的专业测评报告。</p>
+      </div>
+    </form>  
+  </div>
+
+</body>
+<% include ../common/bottom.ejs %>

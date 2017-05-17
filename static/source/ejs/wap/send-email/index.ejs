@@ -1,0 +1,25 @@
+<% include ../common/top.ejs %>
+<body>
+	<header class="header" id="container" data-init="index">
+		<img src="<%= imagessrc%>top.png"  class="banner" alt="">
+	</header>
+  <section class="wrap">
+    <img class="describe" src="<%= imagessrc%>describe.png" >
+    <form id="register" action="" method="post">
+      	<div class="forms">
+      		<img class="describe" src="<%= imagessrc%>label.png" >
+			<div class="input-wrap">
+				<input type="text" class="nickname" />
+				<input type="tel" class="telephone" />
+				<div class="city-select">
+					<select data-value="北京" id="s_province" name="s_province"></select><select id="s_city" name="s_city"  data-value="北京"></select>
+			    </div>
+			    <div id="show"></div>
+				<textarea class="address"></textarea>
+			</div>
+			<input type="button" class="regbtn" value="保 存" />
+      	</div>
+    </form>
+  </section>
+</body>
+<% include ../common/bottom.ejs %>

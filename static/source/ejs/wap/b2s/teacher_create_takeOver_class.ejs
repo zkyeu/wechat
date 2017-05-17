@@ -1,0 +1,57 @@
+<% include ../common/top.ejs %>
+<body data-init="teaCreateTakeOverClass">
+	<div class="tea-create-takeOver-class-wrap">
+		<div class="tea-class-tit">选择年级</div>
+		<ul class="tea-grade-item">
+				<li data-grade="1">一年级</li>
+				<li data-grade="2">二年级</li>
+				<li data-grade="3">三年级</li>
+				<li data-grade="4">四年级</li>
+				<li data-grade="5">五年级</li>
+				<li data-grade="6">六年级</li>
+		</ul>
+		<div class="tea-class-tit">选择班级</div>
+		<ul class="tea-class-item">
+				<li data-index="1">1班</li>
+				<li data-index="2">2班</li>
+				<li data-index="3">3班</li>
+				<li data-index="4">4班</li>
+				<li data-index="5">5班</li>
+				<li data-index="6">6班</li>
+				<li data-index="7">7班</li>
+				<li data-index="8">8班</li>
+		</ul>
+		<div class="tea-btn-wrap">
+			<div class="tea-btn-in">
+				<a href="javascript:void(0);" class="tea-btn" data-link="/wapNew/Teacher/transferClass">确定</a>
+			</div>
+		</div>
+		<div class="tea-dialog-wrap">
+				<div class="tea-dialog dialog-list">
+					<div class="tea-dialog-tit"><span id="gradeClass">六年级八班</span>已有老师和学生</div>
+					<ul class="tea-dialog-con">
+						<li class="cfix">
+							<span class="color1">任课老师：</span>
+							<span id="teaName">孔子</span>
+						</li>
+						<li class="cfix">
+							<span class="color1">学生名单：</span>
+							<span class="wid1" id="stuName">李白  杜甫  李清照  白居易  杜牧  李商隐  王维  李贺  孟浩然  元稹  韩愈  贺知章</span>
+						</li>
+					</ul>
+					<div class="tea-dialog-btn cfix">
+						<span class="btn-cancel fl">不接管</span>
+						<span class="btn-confirm fr" data-link="/wapNew/Teacher/applyTransferConfirn">接管</span>
+					</div>
+				</div>
+				<div class="tea-dialog1 dialog-confirm">
+					<div class="tea-dialog-tit">创建班级……</div>
+					<div class="tea-dialog-btn">
+						<span class="btn-cancel" data-href="" data-link="/wap/teaAccountCenter">确定</span>
+					</div>
+				</div>
+		</div>
+	</div>
+
+</body>
+<% include ../common/bottom.ejs %>

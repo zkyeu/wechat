@@ -1,0 +1,38 @@
+<% include ../common/top_b2s_n.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>experience_suc.css">
+</head>
+<body data-init="" class="experience_suc">
+<div class="intro_section1">
+        <P class="intro_suc">课程领取码：<span>ssss</span></P>
+        <P class="intro_suc">课程团购码：<span>ssss</span></P>
+        <P class="intro_suc">添加学习顾问微信为好友，兑换课程码，开启课程，
+享受福利</P>
+        <p class="intro_suc">添加学习顾问微信为好友，兑换课程团购码，开启
+课程，享受福利</p>
+         <div class="experience_code_bg">
+             <img src="<%= imagessrc%>experience_class5.jpg">
+            
+         </div>
+        <p class="intro_suc">学习顾问微信号：<em>333</em></p>
+        <P class="intro_suc">添加好友信息请填写<i>“无忧课堂学员”</i></P>
+         <div class="good_mes">
+            <P class="title">领取步骤</P>
+            <p class="intro_mes">1.识别学习顾问微信二维码</p>
+            <p class="intro_mes">2.填写验证信息<i>“无忧课堂学员”</i></p>
+            <p class="intro_mes">3.微信告知学习顾问团购码，领取课程享受福利</p>
+         </div>
+         <div class="good_null"></div>
+    </div>
+<!-- loading -->
+<div id="fontSizeLoding">
+    <img src="<%= imagessrc%>eff_loading.gif">
+</div>
+<script type="text/javascript">
+window.onload = function(){
+    document.documentElement.style.fontSize = document.body.clientWidth / 7.5 + "px";
+    document.getElementById("fontSizeLoding").style.display = "none";
+}
+</script>
+</body>
+<!--公共尾部结束-->
+<% include ../common/bottom.ejs %>

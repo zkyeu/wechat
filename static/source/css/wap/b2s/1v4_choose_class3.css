@@ -1,0 +1,45 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: 
+ */
+#fontSizeLoding {
+  width: 100%;
+  min-height: 100%;
+  max-width: 640px;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+#fontSizeLoding img {
+  width: 30px;
+  height: 30px;
+  margin-left: -15px;
+  margin-top: -15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.choose_class_finish {
+  background: #f2f2f2;
+}
+.choose_class_finish .hint-img {
+  padding-top: 2.22rem;
+  text-align: center;
+}
+.choose_class_finish .hint-img img {
+  width: 1.6rem;
+  height: 1.61rem;
+}
+.choose_class_finish .hint-text {
+  margin-top: 0.8rem;
+  line-height: 0.62rem;
+  text-align: center;
+  font-size: 0.34rem;
+  color: #959595;
+}
+.choose_class_finish .hint-text .font1 {
+  display: block;
+  font-size: 0.28rem;
+}

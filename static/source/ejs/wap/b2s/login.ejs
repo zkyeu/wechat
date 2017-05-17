@@ -1,0 +1,44 @@
+<% include ../common/top.ejs %>
+<body data-init="login">
+	<div class="main-wrap login-wrap">
+		<div class="logo-wrap">
+			<img src="<%= imagessrc%>logo.png" alt="logo" />
+		</div>
+		<div class="form-wrap reg-step1">
+			<form action="#" autocomplete="off" rel="login">
+				<!-- for student -->
+				<!-- <dl class="cfix">
+					<dt></dt>
+					<dd>
+						<input type="text" rel="stu" class="input-t-style" placeholder="请输入手机号或账号" />
+					</dd>
+				</dl> -->
+				<p class="error-tips"></p>
+				<!-- for other -->
+				<dl class="cfix">
+					<dt></dt>
+					<dd>
+						<input type="tel" rel="phone" class="input-t-style" placeholder="请输入手机号" maxlength="11" />
+					</dd>
+				</dl>
+				<p class="error-tips"></p>
+				<dl class="cfix">
+					<dt  class="dt2"></dt>
+					<dd>
+						<input type="password" rel="password" class="input-t-style" placeholder="请输入密码" />
+					</dd>
+				</dl>
+				<p class="error-tips"></p>
+				<div class="forget-psw cfix">
+					<span>还没激活账户？</span>
+					<a href="forgetpassword.html" class="fl">去激活&gt;</a>
+					<a href="register_step1.html" class="fr">忘记密码？</a>
+				</div>
+				<div class="submit-btn">
+					<input type="submit" class="input-submit" value="学生登录" />
+				</div>
+			</form>
+		</div>		
+	</div>
+</body>
+<% include ../common/bottom.ejs %>

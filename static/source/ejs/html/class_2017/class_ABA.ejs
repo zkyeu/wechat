@@ -1,0 +1,53 @@
+<% include ../common/class_top.ejs %>
+<body>
+<div class="pic-bg" style="background-image:url(<%= imagessrc%>/1.jpg)"></div>
+<div class="wt-main" id="container" data-init="class">
+    <div class="nav-tab">
+        <div class="list f-cb">
+            <ul>
+                <li class="must on">必学词汇（20%）</li>
+                <li class="talk">对话练习（0%）</li>
+                <li class="words">单词本</li>
+                <li class="grammar">语法</li>
+            </ul>
+        </div>
+    </div>
+    <div class="sub-class">
+        <div class="box">
+            <div class="box-main">
+                <div class="f-cb word-speak">
+                    <div class="word-pic">
+                        <img class="pic" src="<%= imagessrc%>/c3.jpg" />
+                        <span class="audio-btn"></span>
+                        <div class="bom">
+                            <p class="ft18 bold word-txt">
+                                there is a <span class="tag">stone</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="practice">
+                        <h3 class="word">stone</h3>
+                        <div class="funcs">
+                            <div class="f-item">
+                                <a href="#" class="f-btn btn-listen"></a>
+                            </div>
+                            <div class="f-item">
+                                <a href="#" class="f-btn btn-record"></a>
+                            </div>
+                            <div class="f-item">
+                                <a href="#" class="f-btn btn-play"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pagenation">
+                <a href="#" class="btn prev-btn"></a>
+                <a href="#" class="btn next-btn"></a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+</body>
+<% include ../common/class_bottom.ejs %>

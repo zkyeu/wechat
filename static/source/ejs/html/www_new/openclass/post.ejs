@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>英语学习，口语学习首选的英语学习网站，51talk无忧英语，外教一对一，在线学英语！</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="{<info.keywords>}"/>
+    <meta name="description" content="51tailk无忧英语专业提供网络英语外教一对一培训教学,专注于真人英语外教一对一培训,让您足不出户,网上平价学英语.英语外教一对一培训服务热线4000-51-51-51"/>
+    <link rel="stylesheet" type="text/css" href="<%= cssPath %>common/commons.css">
+    <link rel="stylesheet" type="text/css" href="<%= cssPath %>openclass/post.css">
+</head>
+<body>
+<!-- 顶部 -->
+<%- include("../common/w_nav.ejs",{
+  wrapClass:"wrap-nav-index",
+  isIndex:true, //判断是否为首页
+  isNorth:false //判断是否为美小
+  }) %>
+<div class="openclass-page" data-init="openclass/publish" id="container" >
+  <div class="main cls-homepage">
+    <div class="wrapper fn-clear">
+      <div class="m-left">
+        <h3 class="cm-tit">发布新帖</h3>
+        <!-- 回帖区 -->
+        <form action="/ajax/addForum" method="post" id="publishForm" enctype="multipart/form-data">
+            <input type="hidden" name="module" id="module" value="2">
+            <textarea style="display:none;" name="content" id="content"></textarea>
+            <!--<input type="hidden" name="content" id="content" value=''/>-->
+            <input type="hidden" name="is_image" value="0">
+            <!-- u-title end -->
+            <div class="c-title fn-clear part">
+              <input id="title" name="title" type="text" class="titInput" placeholder="请输入标题" value=""> 
+              <div class="jsMore more">
+                  <h3 class="more-tit">
+                    <span class="more-t-left" id="classify">请选择板块</span>
+                    <a class="open" href="javascript:;"></a>
+                  </h3>
+                    <ul class="more-list titList jsUl" style="display:none;z-index:9999;">  
+                      <li><a data-key="2" href="javascript:;">公开课</a></li>
+                      <li><a data-key="3" href="javascript:;">经验交流</a></li>
+                      <li><a data-key="4" href="javascript:;">青少/家长</a></li>
+                      <li><a data-key="5" href="javascript:;">实用英语</a></li>
+                      <li><a data-key="6" href="javascript:;">出国考试</a></li>
+                      <li><a data-key="7" href="javascript:;">国内考试</a></li>
+                      <li><a data-key="8" href="javascript:;">影视娱乐</a></li>
+                      <li><a data-key="9" href="javascript:;">资料共享</a></li>
+                      <li><a data-key="10" href="javascript:;">游戏/活动</a></li>
+                      <li><a data-key="11" href="javascript:;">语伴/同城</a></li>
+                      <li><a data-key="12" href="javascript:;">八卦闲聊</a></li>
+                      <li class="last"><a data-key="13" href="javascript:;">吐槽建议</a></li>
+                    </ul>
+              </div>
+            </div>
+            <!-- c-title end -->
+            <div class="c-content part">
+              <script type="text/javascript" src="http://bbs.51talk.com/js/ueditor/ueditor.config.js"></script>
+              <script type="text/javascript" src="http://bbs.51talk.com/js/ueditor/ueditor.all.min.js"></script>
+              <script id="editor" type="text/plain" style="width:99.9%;height:400px;"></script> 
+            </div>
+            <!-- c-content end -->
+            <div class="u-submit part" style="margin-bottom:30px;">
+                <a class="button submit" id="publishSubmit" href="javascript:;">确定发布</a>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<% include ../common/w_footer_home.ejs %>   
+</body> 
+</html>
+<script src="<%= jsPath%>common/jquery.min.js"></script>
+<script src="<%= jsPath%>openclass/jquery.form.js"></script>
+<script src="<%= jsPath%>vendor.js" id="seajsnode"></script>

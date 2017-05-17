@@ -1,0 +1,315 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: 
+ */
+/**
+ * 默认样式
+ * @author:  liliang（liliang05@51talk.com）
+ * @update:  2017年 3月11日 星期六 12时10分59秒 CST
+ * @note:    黑鸟项目后台中转页面样式
+ */
+html,
+body {
+  width: 100%;
+}
+.pad20px {
+  margin: 20px;
+}
+::-webkit-input-placeholder {
+  font-size: 14px;
+}
+.count-title {
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 18px;
+  color: #323232;
+}
+.show-count-option .layui-form-pane {
+  float: left;
+}
+.show-count-option .layui-form-item {
+  width: 300px;
+  height: 30px;
+  line-height: 30px;
+  border: #979797 solid 1px;
+  padding-left: 10px;
+  overflow: hidden;
+}
+.show-count-option .layui-form-item input {
+  margin-top: -2px;
+}
+.show-count-option .layui-form-item span {
+  margin-left: 20px;
+}
+.show-count-option .layui-input-inline {
+  position: relative;
+  width: 110px;
+  overflow: hidden;
+}
+.show-count-option .layui-input-inline input {
+  background: url(../../../images/html/weixin_heck/arrow96.png?v=k2y543DkzOuPliQHy8CHrg%3D%3D) 100px center no-repeat;
+  cursor: pointer;
+}
+.show-count-option .sel-time {
+  padding-left: 20px;
+}
+.show-count-option .search-btn {
+  float: left;
+  margin-left: 10px;
+  width: 120px;
+  height: 32px;
+  border: #ff8000 solid 1px;
+  color: #ff8000;
+  line-height: 32px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #fff;
+}
+.show-count-option .search-btn:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  background: #ff8000;
+}
+.show-count-option .search-btn:hover a {
+  color: #fff;
+  display: block;
+}
+.show-count-option .search-btn.cut-sel {
+  color: #fff;
+  background: #ff8000;
+}
+.show-count-option .search-btn.cut-sel a {
+  color: #fff !important;
+  display: block;
+}
+.show-count-option .table-list {
+  margin: 10px 25px 30px;
+}
+.show-count-option .table-list tabble {
+  border: #f0f0f0 solid 1px;
+}
+.show-count-option .table-list .show-detail {
+  width: 100%;
+  border: #f0f0f0 solid 1px;
+}
+.show-count-option .table-list .show-detail th {
+  height: 32px;
+  line-height: 32px;
+  background: #393939;
+  border: #f0f0f0 solid 1px;
+  font-size: 12px;
+  color: #fff;
+}
+.show-count-option .table-list .show-detail td {
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  border: #f0f0f0 solid 1px;
+  font-size: 12px;
+  color: #6e6e6e;
+}
+.show-count-option .table-list .show-detail td a {
+  padding: 5px 30px;
+}
+.show-count-option .table-list .show-detail td a:hover {
+  color: #fa0;
+  font-weight: 700;
+}
+.show-count-option .table-list .show-detail .manage {
+  background: #fff6dc;
+}
+.show-count-option .table-list .nodata {
+  height: 100px;
+  line-height: 90px;
+  font-size: 20px;
+  color: #999;
+  text-align: center;
+}
+.show-count-option-left {
+  padding: 0;
+  float: left;
+  width: 59%;
+}
+.show-count-option-right {
+  padding: 0;
+  float: left;
+  width: 40%;
+  margin-left: 1%;
+}
+.pad20px {
+  padding: 20px;
+}
+.plr25 {
+  padding: 0 25px;
+}
+.plr25.type-list {
+  padding-left: 5px;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.dn {
+  display: none;
+}
+.guide-link {
+  line-height: 32px;
+  font-size: 16px;
+}
+.guide-link a {
+  color: #010101;
+  margin: 0 5px;
+}
+.guide-link a:hover {
+  color: #ffb400;
+}
+.set-pos {
+  width: 436px;
+  float: right;
+}
+.set-pos.w566 {
+  width: 566px;
+}
+.select-time {
+  float: left;
+  width: 304px;
+  height: 30px;
+  border: #979797 solid 1px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.select-time input {
+  margin-top: -2px;
+  border-radius: 10px !important;
+  cursor: pointer;
+}
+.select-time .layui-input {
+  font-size: 14px;
+  background: url(../../../images/html/weixin_heck/arrow-down-baobiao.png?v=qZRqIlK11kMt1cSGc2oQ5g%3D%3D) 100px center no-repeat;
+  cursor: pointer;
+  margin-top: -4px;
+}
+.select-time .zhizi {
+  line-height: 30px;
+  margin-top: 3px;
+}
+.type-option {
+  margin: 0 20px;
+}
+.type-option select {
+  width: 100px;
+  height: 32px;
+  line-height: 30px;
+  border-radius: 5px;
+  border: #979797 solid 1px;
+  background-color: #fff;
+}
+.by-time span {
+  float: left;
+  margin-left: 10px;
+  width: 100px;
+  height: 30px;
+  border: #979797 solid 1px;
+  color: #252525;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #fff;
+}
+.by-time span:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  color: #252525;
+  background: #ffd533;
+}
+.by-time span:hover a {
+  color: #252525;
+  display: block;
+}
+.by-time span.cut-sel {
+  border: #fcc800 solid 1px;
+  background: #fcc800;
+}
+.by-time span.cut-sel a {
+  color: #252525 !important;
+  display: block;
+}
+.add-btn a {
+  width: 120px;
+  height: 32px;
+  background: #ffc800;
+  display: inline-block;
+  line-height: 32px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 16px;
+}
+.add-btn a:hover {
+  background: #ffd533;
+  color: #252525;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.add-btn input {
+  float: left;
+  margin-left: 10px;
+  width: 120px;
+  height: 32px;
+  background: #ffc800;
+  line-height: 30px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 16px;
+  cursor: pointer;
+}
+.add-btn input:hover {
+  background: #ffd533;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+/*图表开始*/
+.charts {
+  margin-top: 20px;
+}
+.chart-btn {
+  width: 400px;
+  float: right;
+}
+.chart-des {
+  margin: 30px auto;
+  height: 40px;
+  width: 500px;
+}
+.chart-des li {
+  width: 100px;
+  float: left;
+  list-style: none;
+  text-align: center;
+}
+.chart-des li span {
+  display: block;
+  border-radius: 3px;
+  width: 40px;
+  height: 20px;
+  margin-left: 30px;
+}
+.chart-des li span.color1 {
+  background: #c00;
+}
+.chart-des li span.color2 {
+  background: #ff8000;
+}
+.chart-des li span.color3 {
+  background: #efcf76;
+}
+.chart-des li span.color4 {
+  background: #8aadda;
+}
+.chart-des li span.color5 {
+  background: #238C00;
+}

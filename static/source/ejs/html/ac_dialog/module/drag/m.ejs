@@ -1,0 +1,123 @@
+<!-- 答题区域 -->
+<div class="ac-tem-content">
+    <div class="ac-drag-wrap ac-drag-wrap-12" error-audio-url="<%= imagessrc%>ac-drag-error.mp3">
+        <ul class="ac-drag-ul clearfix">
+            <li data-drag="1" audio-url="/images/html/ac_voice_share/horse.mp3">
+                <i></i>
+                <span>abcd</span>
+                <img src="<%= imagessrc%>ac-drag-img1.png" />
+            </li>
+            <li data-drag="2" audio-url="/images/html/ac_voice_share/horse.mp3">
+                <i></i>
+                <span>abcd</span>
+                <img src="<%= imagessrc%>ac-drag-img2.png" />
+            </li>
+            <li data-drag="1" audio-url="/images/html/ac_voice_share/horse.mp3">
+                <i></i>
+                <span>abcd</span>
+                <img src="<%= imagessrc%>ac-drag-img1.png" />
+            </li>
+
+            <li data-drag="2" audio-url="/images/html/ac_voice_share/horse.mp3">
+                <i></i>
+                <span>abcd</span>
+                <img src="<%= imagessrc%>ac-drag-img2.png" />
+            </li>
+            <li data-drag="1" audio-url="/images/html/ac_voice_share/horse.mp3">
+                <i></i>
+                <span>abcd</span>
+                <img src="<%= imagessrc%>ac-drag-img1.png" />
+            </li>
+            <li data-drag="2" audio-url="/images/html/ac_voice_share/horse.mp3">
+                <i></i>
+                <span>abcd</span>
+                <img src="<%= imagessrc%>ac-drag-img2.png" />
+            </li>
+
+            <li data-drag="1" audio-url="/images/html/ac_voice_share/horse.mp3">
+                <i></i>
+                <span>abcd</span>
+                <img src="<%= imagessrc%>ac-drag-img1.png" />
+            </li>
+            <li data-drag="2" audio-url="/images/html/ac_voice_share/horse.mp3">
+                <i></i>
+                <span>abcd</span>
+                <img src="<%= imagessrc%>ac-drag-img2.png" />
+            </li>
+            <li data-drag="1" audio-url="/images/html/ac_voice_share/horse.mp3">
+                <i></i>
+                <span>abcd</span>
+                <img src="<%= imagessrc%>ac-drag-img1.png" />
+            </li>
+
+            <li data-drag="2" audio-url="/images/html/ac_voice_share/horse.mp3">
+                <i></i>
+                <span>abcd</span>
+                <img src="<%= imagessrc%>ac-drag-img2.png" />
+            </li>
+            
+            <li data-drag="1" audio-url="/images/html/ac_voice_share/horse.mp3">
+                <i></i>
+                <span>abcd</span>
+                <img src="<%= imagessrc%>ac-drag-img1.png" />
+            </li>
+            <li data-drag="2" audio-url="/images/html/ac_voice_share/horse.mp3">
+                <i></i>
+                <span>abcd</span>
+                <img src="<%= imagessrc%>ac-drag-img2.png" />
+            </li>
+        </ul>  
+    </div>
+
+    <div class="ac-drag-target-wrap">
+        <span class="play-btn-wrap bigger-btn-wrap"><i class="play-btn" yinpin="/images/html/ac_voice_share/horse.mp3"></i><em class="play-tip"></em></span>
+        <!-- 题型一 -->
+        <% if(pageTag.dragType==1) {%>
+        <ul class="ac-drag-target-ul clearfix">
+            <li class="ac-drag-target-li fl" data-drag="1">
+                <h5>动&nbsp;&nbsp;物</h5>
+                <div class="target-div">
+                    <ul class="target-ul clearfix">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="ac-drag-target-li fr li02" data-drag="2">
+                <h5>植&nbsp;&nbsp;物</h5>
+                <div class="target-div">
+                    <ul class="target-ul clearfix">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <%} else {%>
+        <!-- 题型二 -->
+        <div class="ac-drag-target-div" drag-type="2">
+            <div class="ac-drag-target-div-in">
+                <ul class="ac-drag-target-carousel">
+                    <li data-length="2"><p>I<span class="target-span" data-drag="1"></span>was born<span class="target-span" data-drag="2"></span>on May 10th.</p><i></i></li>
+
+                    <li data-length="6"><p>I<span class="target-span" data-drag="1"></span>was born<span class="target-span" data-drag="2"></span>on May 10th. I<span class="target-span" data-drag="1"></span>was born<span class="target-span" data-drag="2"></span>on May 10th. I<span class="target-span" data-drag="1"></span>was born<span class="target-span" data-drag="2"></span>on May 10th.</p><i></i></li>
+
+                    <li data-length="4"><p>I<span class="target-span" data-drag="1"></span>was born<span class="target-span" data-drag="2"></span>on May 10th. I<span class="target-span" data-drag="1"></span>was born<span class="target-span" data-drag="2"></span>on May 10th.</p><i></i></li>
+                </ul>
+            </div>
+        </div>
+        <% } %>
+        
+        <% if(pageTag.pType == "tea" && pageTag.fType == "send") {%>
+        <div class="ac-tem-drag-send">
+            <div class="ac-tem-send">
+                <input type="button" class="ac-btn ac-send btn-disabled" disabled />
+                <a href="/templates/html/ac_dialog/ac_stu_drag_demo.html" class="ac-tea-demo"></a>
+            </div>                        
+        </div>
+        <% } %>
+
+    </div>
+</div>

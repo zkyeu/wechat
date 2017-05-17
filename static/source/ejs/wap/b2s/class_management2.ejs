@@ -1,0 +1,134 @@
+<% include ../common/top_b2s_n.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>class_management2.css">
+</head>
+<body data-init="class_management2">
+	<div class="tea-create-takeOver-class-wrap2">
+		<div class="tea-class-tit">选择班级<span>（可多选）</span></div>
+		<div class="tea-class-con">
+			<ul class="tea-class-con-grade">
+				<li class="active">一年级</li>
+				<li>二年级</li>
+				<li>三年级</li>
+				<li>四年级</li>
+				<li>五年级</li>
+				<li>六年级</li>
+				<li>七年级</li>
+			</ul>
+			<div class="tea-class-con-items cfix">
+				<ul class="tea-class-con-item cfix active">
+					<li data-gradeclass="1_1" data-status="1" data-classid="111" class="selected">1班</li>
+					<li data-gradeclass="1_2" data-status="0">2班</li>
+					<li data-gradeclass="1_3" data-status="0">3班</li>
+					<li data-gradeclass="1_4" data-status="0">4班</li>
+					<li data-gradeclass="1_5" data-status="1" data-classid="555" class="selected">5班</li>
+					<li data-gradeclass="1_6" data-status="0">6班</li>
+					<li data-gradeclass="1_7" data-status="0">7班</li>
+					<li data-gradeclass="1_8" data-status="0">8班</li>
+					<li data-gradeclass="1_1" data-status="1" data-classid="111" class="selected">1班</li>
+					<li data-gradeclass="1_2" data-status="0">2班</li>
+					<li data-gradeclass="1_3" data-status="0">3班</li>
+					<li data-gradeclass="1_4" data-status="0">4班</li>
+					<li data-gradeclass="1_5" data-status="1" data-classid="555" class="selected">5班</li>
+					<li data-gradeclass="1_6" data-status="0">6班</li>
+					<li data-gradeclass="1_7" data-status="0">7班</li>
+					<li data-gradeclass="1_8" data-status="0">8班</li>
+					<li data-gradeclass="1_1" data-status="1" data-classid="111" class="selected">1班</li>
+					<li data-gradeclass="1_2" data-status="0">2班</li>
+					<li data-gradeclass="1_3" data-status="0">3班</li>
+					<li data-gradeclass="1_4" data-status="0">4班</li>
+					<li data-gradeclass="1_5" data-status="1" data-classid="555" class="selected">5班</li>
+					<li data-gradeclass="1_6" data-status="0">6班</li>
+					<li data-gradeclass="1_7" data-status="0">7班</li>
+					<li data-gradeclass="1_8" data-status="0">8班</li>
+					<li data-gradeclass="1_1" data-status="1" data-classid="111" class="selected">1班</li>
+					<li data-gradeclass="1_2" data-status="0">2班</li>
+					<li data-gradeclass="1_3" data-status="0">3班</li>
+					<li data-gradeclass="1_4" data-status="0">4班</li>
+					<li data-gradeclass="1_5" data-status="1" data-classid="555" class="selected">5班</li>
+					<li data-gradeclass="1_6" data-status="0">6班</li>
+					<li data-gradeclass="1_7" data-status="0">7班</li>
+					<li data-gradeclass="1_8" data-status="0">8班</li>
+					<li data-gradeclass="1_1" data-status="1" data-classid="111" class="selected">1班</li>
+					<li data-gradeclass="1_2" data-status="0">2班</li>
+					<li data-gradeclass="1_3" data-status="0">3班</li>
+					<li data-gradeclass="1_4" data-status="0">4班</li>
+					<li data-gradeclass="1_5" data-status="1" data-classid="555" class="selected">5班</li>
+					<li data-gradeclass="1_6" data-status="0">6班</li>
+					<li data-gradeclass="1_7" data-status="0">7班</li>
+					<li data-gradeclass="1_8" data-status="0">8班</li>
+				</ul>
+				<ul class="tea-class-con-item cfix"><li data-gradeclass="2_2" data-status="0">2班</li></ul>
+				<ul class="tea-class-con-item cfix"><li data-gradeclass="3_3" data-status="0">3班</li></ul>
+				<ul class="tea-class-con-item cfix"><li data-gradeclass="4_4" data-status="0">4班</li></ul>
+				<ul class="tea-class-con-item cfix"><li data-gradeclass="5_5" data-status="1" data-classid="55555" class="selected">5班</li></ul>
+				<ul class="tea-class-con-item cfix"><li data-gradeclass="6_6" data-status="0">6班</li></ul>
+				<ul class="tea-class-con-item cfix"><li data-gradeclass="7_7" data-status="0">7班</li></ul>
+			</div>
+		</div>
+		<div class="tea-class-select">
+			<div class="tea-class-select-tit">已选班级<span>（<span class="num">3</span>个）</span></div>
+			<div class="tea-class-select-items cfix">
+				<ul class="tea-class-select-item">
+					<li data-gradeclass="1_1" data-status="1">一年级1班</li>
+					<li data-gradeclass="1_5" data-status="1">一年级5班</li>
+					<li data-gradeclass="5_5" data-status="1">五年级5班</li>
+				</ul>
+			</div>
+		</div>
+		<div class="tea-btn-wrap2">
+			<div class="tea-btn-in">
+				<a href="javascript:void(0);" class="tea-btn" data-link="/wapNew/Teacher/transferClass">完成</a>
+			</div>
+		</div>
+		<div class="tea-dialog-wrap2">
+				<div class="tea-dialog dialog-list">
+					<div class="tea-dialog-tit"><span id="gradeClass">六年级八班</span>已有老师和学生</div>
+					<ul class="tea-dialog-con">
+						<li class="cfix">
+							<span class="color1">任课老师：</span>
+							<span id="teaName">孔子</span>
+						</li>
+						<li class="cfix">
+							<span class="color1">学生名单：</span>
+							<span class="wid1" id="stuName">李白  杜甫  李清照  白居易  杜牧  李商隐  王维  李贺  孟浩然  元稹  韩愈  贺知章</span>
+						</li>
+					</ul>
+					<div class="tea-dialog-btn cfix">
+						<span class="btn-cancel bthBgColor fl">不接管</span>
+						<span class="btn-confirm fr">申请接管</span>
+					</div>
+				</div>
+				<div class="tea-dialog1 dialog-confirm">
+					<div class="tea-dialog-tit">不再任教此班级</div>
+					<div class="tea-dialog-btn">
+						<span class="btn-confirm bthBgColor fl" data-href="/wapNew/Teacher/transferSearchTeacher?class_id=">不教了</span>
+						<span class="btn-cancel fr">继续教</span>
+					</div>
+				</div>
+				<div class="tea-dialog1 dialog-login">
+					<div class="tea-dialog-tit">信息已过期，请重新登录</div>
+					<div class="tea-dialog-btn">
+						<span class="btn-confirm">重新登录</span>
+					</div>
+				</div>
+				<div class="tea-dialog dialog-success">
+					<div class="tea-dialog-tit"><span>创建班级成功</span></div>
+					<div class="tea-dialog-text">请告知学生输入您的邀请码<br><span id="invite_code">3412432</span>加入班级</div>
+					<div class="tea-dialog-btn cfix">
+						<span class="btn-confirm">我知道了</span>
+					</div>
+				</div>
+		</div>
+	</div>
+<!-- loading -->
+<div id="fontSizeLoding">
+    <img src="<%= imagessrc%>eff_loading.gif">
+</div>
+<script type="text/javascript">
+window.onload = function(){
+    document.documentElement.style.fontSize = document.body.clientWidth / 7.5 + "px";
+    document.getElementById("fontSizeLoding").style.display = "none";
+}
+</script>
+</body>
+<% include ../common/bottom.ejs %>

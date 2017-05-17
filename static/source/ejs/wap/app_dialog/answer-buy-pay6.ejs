@@ -1,0 +1,37 @@
+<% include ../common/top.ejs %>
+<body data-init="pay2">
+<form action="" method="get" id="answerForm">
+  <div class="dialog-wrap answer-wrap-pay">
+    <div class="answer-pay-con">
+      <div class="answer-pay-cost4 answer-pay-cost4-2">
+        <h3 class="pay-cost-tit">购买课程服务</h3>
+        <ul class="pay-cost-items js_pay">
+          <li class="other1 js_radio" data-payid="111" data-price="148" data-discount="100">
+            <dl class="cfix">
+              <dt class="fl icon-radio icon-radio-yes"><span class="font1">1对1外教全程托管班</span><br><span  class="font2">外教1对1课6节，中教课2节</span></dt>
+              <dd class="fr"><span  class="font3">¥ 480</span><br><span  class="font4">¥148</span></dd>
+            </dl>
+          </li>
+          
+          <li class="bg1">
+            <dl class="cfix">
+              <dt class="fl"></dt>
+              <dd class="fr"><span class="font1">实付金额：</span>&nbsp;<span class="font4">¥<span class="js_actualAmount">148</span></span></dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="answer-pay-bottom">
+      <span class="alipay" data-pay="alipay">支付宝购买</span>
+      <span class="WeChat js_weixin" data-pay="weixin.qq">微信购买</span>
+      <input type="hidden" name="XX1" id="vipPayId" value="111">
+      <input type="hidden" name="XX2" id="vipPay" value="">
+      <!-- 时间戳 -->
+      <input name="x5" value="" class="js_timestamp" type="hidden">
+    </div>
+  </div>
+<!-- <img src="<%= imagessrc%>account-headicon-agent.png" alt=""> -->
+</form>
+</body>
+<% include ../common/bottom.ejs %>

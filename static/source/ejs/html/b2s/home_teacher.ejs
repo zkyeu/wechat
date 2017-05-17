@@ -1,0 +1,107 @@
+<% include ../common/top.ejs %>
+<body  data-init="index">
+<!-- 公共头 -->
+<% include ../common/b2s/b2s_header.ejs %>
+<!-- 中间内容 -->
+<div class="home">
+  <div class="hm-img"><img src="<%= imagessrc%>home_ads.jpg" alt="" class="hm-ads"></div>
+  <div class="widthMain hm-widthMain">
+    <div class="hm-reg reg-login">
+      <form id="regist_teacher_Form">
+        <ul class="hm-login">
+          <li class="hm-login_li">
+            <a class="form-data school_name">请选择学校</a>
+            <input type="hidden" name="school_id" class="school_name2">
+            <i class="tenIcon to_school"></i>
+            <div class="hm-erro"><i class="tenIcon err-icon"></i><b>请选择学校</b></div>
+          </li>
+          <li class="hm-login_li"> 
+            <input class="form-data jsInputOk tel" type="text" placeholder="请输入手机号">
+            <i class="tenIcon del-icon"></i>
+            <div class="hm-erro"><i class="tenIcon err-icon"></i><b>手机号码有误</b></div>
+          </li >
+          <li class="hm-login_li login-gh">
+            <div class="gh-input">
+              <input class="form-data myCode" type="text" placeholder="请输入验证码">
+              <i class="tenIcon del-icon"></i>
+            </div>
+            <span class="u-btn hover sendCode">获取验证码</span>
+            <div class="hm-erro"><i class="tenIcon err-icon"></i><b>验证码不能为空</b></div>
+          </li>
+          <li class="hm-login_li">
+            <input class="form-data jsInputOk pwd" type="password" placeholder="请输入密码">
+            <i class="tenIcon del-icon"></i>
+            <div class="hm-erro"><i class="tenIcon err-icon"></i><b>密码不能为空</b></div>
+          </li>
+          <li class="hm-login_li hm-li-sub">
+            <a href="javascript:;" class="submit">老师注册</a>
+          </li>
+        </ul>
+      </form>
+      <ul class="hm-chg">
+        <li><a href="javascript:;"><i class="icon std-icon re-icon"></i>返回登录</a></li>
+        <li class="chg-tit"><a href="javascript:;"><i class="icon stu-icon"></i>学生注册</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--学校弹层-->
+<div class="m-schoolx" id="m-school">
+    <div class="content">
+        <h3 class="u-title">选择学校 <a href="javascript:;" class="close"></a></h3>
+        <div class="m-school-form">
+            <div class="address clearfix">
+                <label>学校地区：</label>
+                <div class="sel">
+                    <h4>省</h4>
+                    <i class="tenIcon selIcon"></i>
+                    <ul class="list province">
+                        <li data-id="15">江苏</li>
+                        <li data-id="25">湖北</li>
+                        <li>天津</li>
+                        <li>重庆</li>
+                        <li>河南</li>
+                        <li>上海</li>
+                        <li>天津</li>
+                        <li>重庆</li>
+                        <li>河南</li>
+                    </ul>
+                </div>
+                <div class="sel">
+                    <h4>市</h4>
+                    <i class="tenIcon selIcon"></i>
+                    <ul class="list"></ul>
+                </div>
+                <div class="sel">
+                    <h4>区</h4>
+                    <i class="tenIcon selIcon"></i>
+                    <ul class="list"></ul>
+                </div>
+            </div>
+            <div class="schools">
+                <div class="labels clearfix">
+                    <label>选择学校：</label>
+                    <span class="active">全部</span>
+                    <span>A B C</span>
+                    <span>D E F</span>
+                    <span>G H I</span>
+                    <span>J K L</span>
+                    <span>M N O</span>
+                    <span>P Q R</span>
+                    <span>S T U</span>
+                    <span>V W X</span>
+                    <span class="last">Y Z</span>
+                </div>  
+                <ul class="m-school-list clearfix"></ul>
+                <div class="makeSure">
+                    <a href="javascript:;" class="submit">确定</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

@@ -1,0 +1,335 @@
+@charset "UTF-8";
+
+// 导入core中的基础文件
+//-----------------------------------------------------
+@import "sassCore/_base";
+
+
+// *, :after, :before{ @include box-sizing; }
+
+// dev 图片路径
+// $imgPath : '#{$imgPath}';
+
+
+$indent: 0.12rem;
+
+.p-index{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.g-hd{
+  position: fixed;
+  top: 0; left: 0;
+  z-index: $zindexFixedTopbar;
+  width: 100%;
+  height: 0.5rem;
+  background-color: #fff;
+  border-bottom: 1px solid #d7d7d7;
+  @include user-select(none);
+  .link{
+    display: block;
+    min-width: 320px;
+    height: 0.5rem;
+  }
+  .figcap{
+    position: relative;
+    float: left;
+    height: 0.32rem;
+    padding-left: 0.39rem;
+    margin-top: 0.09rem;
+    margin-left: $indent;
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 0.32rem;
+      height: 0.32rem;
+      background: url(#{$imgPath}sprites.png) -0.065rem -1.115rem no-repeat;
+      background-size: 312.5%;
+    }
+    .name{
+      line-height: 1.2;
+      font-size: 0.15rem;
+      color: #333;
+    }
+    .desc{
+      line-height: 1.2;
+      padding-top: 0.02rem;
+      font-size: 0.11rem;
+      color: #757575;
+    }
+  }
+  .down{
+    float: right;
+    width: 0.73rem;
+    height: 0.28rem;
+    line-height: 0.28rem;
+    margin-top: 0.11rem;
+    margin-right: $indent;
+    font-size: 0.15rem;
+    text-align: center;
+    vertical-align: middle;
+    color: #ff8200;
+    border: 1px solid #ff8200;
+    border-radius: 0.05rem;
+  }
+}
+
+.g-bd{
+  height: 100%;
+  padding-top: 0.5rem;
+  @include box-sizing;
+  .g-mn{
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.user{
+  $height: 0.35rem;
+  $pdLeft: $height + $indent + 0.07rem;
+  height: $height;
+  padding-left: $pdLeft;
+  padding-top: 0.075rem;
+  padding-bottom: 0.075rem;
+  margin-top: 0.1rem;
+  background-color: #fff;
+  border-top: 1px solid #d7d7d7;
+  border-bottom: 1px solid #d7d7d7;
+  .avatar{
+    float: left;
+    width: $height;
+    height: $height;
+    margin-left: -($pdLeft - $indent);
+    border-radius: 50%;
+  }
+  .desc{
+    height: $height;
+    line-height: $height;
+    font-size: 0.11rem;
+    color: #898989;
+  }
+}
+//焦点图
+.focus{
+  position: relative;
+  color: #fff;
+  .bg{
+    width: 100%;
+    height: auto;
+  }
+  .cover{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(51, 51, 51, 0.7);
+  }
+  .cont{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    @include box-sizing;
+    padding: $indent;
+    line-height: 1.5;
+  }
+  .title{
+    padding-top: 0.1rem;
+    font-size: 0.15rem;
+  }
+  .desc-en{
+    padding-top: 0.06rem;
+    font-size: 0.12rem;
+  }
+  .desc-cn{
+    padding-top: 0.075rem;
+    font-size: 0.11rem;
+  }
+}
+//闯关得分
+.score{
+  height: 0.45rem;
+  background-color: #fff;
+  .title{
+    float: left;
+    margin-left: $indent;
+    line-height: 0.45rem;
+    font-size: 0.15rem;
+  }
+  [class|=star]{
+    float: left;
+    margin-left: 0.08rem;
+    width: 0.725rem;
+    height: 0.15rem;
+    margin-top: 0.15rem;
+    background: url(#{$imgPath}sprites.png) 0 0 no-repeat;
+    background-size: 137.931%;
+  }
+  @for $i from 0 through 5 {
+    .star-#{$i+1}){ background-position: 0 (-0.15rem * $i); }
+  }
+  .frac{
+    float: left;
+    margin-left: 0.08rem;
+    line-height: 0.45rem;
+    color: #25b525;
+  }
+}
+
+//播放
+.player{
+  $pleyHeight: 0.325rem; 
+  $eleHeight: 0.2rem;
+  position: relative;
+  height: $pleyHeight;
+  padding: 0 0.67rem 0 0.44rem;
+  @include display-flex;
+  @include align-items(center);
+  @include user-select(none);
+  background-color: #f6f8fa;
+  border-bottom: 1px solid #d7d7d7;
+  [class|=switch]{
+    position: absolute;
+    top: 50%; left: 0.07rem;
+    width: 0.3rem;
+    height: 0.3rem;
+    margin-top: -0.15rem;
+    background: url(#{$imgPath}sprites.png) 0 -0.75rem no-repeat;
+    background-size: 333.333%;
+  }
+  .switch-off{ background-position: -0.3rem -0.75rem; }
+  $contHeight: 0.035rem;
+  .controls{
+    position: relative;
+    width: 100%;
+    height: $contHeight;
+    background-color: #b2b2b2;
+    [class|=cont]{
+      position: absolute;
+      height: $contHeight;
+    }
+  }
+  //缓冲buffered
+  .cont-buff{ background: #ffe0bf; }
+  //进度progress
+  .cont-prog{
+    background: #ff8200;
+    &:before{
+      content: '';
+      position: absolute;
+      top: -($eleHeight - $contHeight)/2; right: -$eleHeight / 2;
+      width: $eleHeight;
+      height: $eleHeight;
+      background: url(#{$imgPath}sprites.png) -0.65rem -0.8rem no-repeat;
+      background-size: 500%;
+    }
+  }
+  .time{
+    position: absolute;
+    top: 0; right: 0;
+    width: 0.55rem;
+    line-height: $pleyHeight;
+    margin-right: $indent;
+    font-size: 0.12rem;
+    text-align: center;
+    color: #b2b2b2;
+  }
+}
+
+
+//外教点评
+.m-teacher{
+  .user{
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
+    border-bottom: none;
+    .desc{
+      font-size: 0.15rem;
+      color: $grayDarker;
+    }
+  }
+  .grammar{
+    padding-top: $indent *2;
+    background-color: #fff;
+  }
+  .u-text{
+    padding: 0 $indent $indent *2;
+    line-height: 1.5;
+    dt{
+      font-size: 0.15rem;
+      margin-bottom: 0.08rem;
+    }
+  }
+}
+
+.challenge{
+  padding: $indent*2 $indent;
+  border-top: 1px solid #dadada;
+  .u-btn{
+    display: block;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    font-size: 0.2rem;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #ff8200;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.03rem 0 0 #ffe0bf;
+    @include user-select(none);
+  }
+}
+
+
+
+
+// media queries
+//-----------------------------------------------------
+@include max-screen(319px){
+  html{ font-size: 95px; }
+}
+
+@include min-screen(320px){
+}
+
+@include min-screen(340px){
+}
+
+@include min-screen(360px){
+}
+
+@include min-screen(400px){
+}
+
+@include min-screen(480px){
+  html{ font-size: 105px; }
+}
+
+@include min-screen(540px){
+  html{ font-size: 110px; }
+}
+
+@include min-screen(640px){
+  html{ font-size: 115px; }
+}
+
+@include min-screen(720px){
+  html{ font-size: 120px; }
+}
+
+@include min-screen(768px){
+  html{ font-size: 130px; }
+  .g-mn{ box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+}
+
+@include iphone6-plus{
+  html{ font-size: 105px; }
+}
+
+@include ipad{ }

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>service site version 2</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="/css/html/service_site/service_site.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="baseInfo">
+        <div class="first">
+           
+          HI，今日登录时长 
+          <span> 00:23:45 </span>
+          <i>|</i>
+          所属团队: <span>xxxx</span>
+        </div>
+        <div class="last">待处理的文件数量：<span>1234</span></div>
+      </div>
+      <div class="copyTip"><span id="showCopy">复制成功</span></div>
+      <ul id="list" class="list">
+        <li class="child clearfix">
+          <div class="classIntro">
+            <ul id="tags" class="tags">
+              <li>12:00</li>
+              <li>1对1</li>
+              <li>体验课</li>
+            </ul>
+            <ul id="ids" class="ids">
+              <li><span class="left"><b>课程ID:</b><i>24354</i></span><a href="javascript:;" class="right copy">复制</a></li>
+              <li class="last"><span class="left"><b>教材ID:</b><i>24354</i></span><a href="javascript:;" class="right copy">复制</a></li>
+            </ul>
+          </div>
+          <div id="classTitle" class="classTitle">经典英语 Level 7 （成人第二版） > 第一单元 我的暑假  > 第二课 这些照片真神奇啊！</div>
+          <div class="lll half">
+            <div style="display:none;" class="title lineInfo">
+              <span><b class="leftb"></b><i>17:29</i>进入教室</span>
+              <span><b class="rightb"></b><i>17:59</i>离开教室</span>
+              <a href="javascript:;">展开</a>
+            </div>
+            <ul style="display:none;" class="loginInfo">
+              <li class="lineInfo">
+                <span><b class="leftb"></b><i>17:29</i>进入教室</span>
+                <span><b class="rightb"></b><i>17:59</i>离开教室</span>
+              </li>
+            </ul>
+          </div>
+          <div class="rrr half">
+            <div style="display:none;" class="title lineInfo">
+              <span><b class="leftb"></b><i>17:29</i>进入教室</span>
+              <span><b class="rightb"></b><i>17:59</i>离开教室</span>
+              <a href="javascript:;">展开</a>
+            </div>
+            <ul style="display:none;" class="loginInfo">
+              <li class="lineInfo">
+                <span><b class="leftb"></b><i>17:29</i>进入教室</span>
+                <span><b class="rightb"></b><i>17:59</i>离开教室</span>
+              </li>
+            </ul>
+          </div>
+          <ul class="stInfo clearfix">
+            <li class="infoList clearfix">
+              <ul id="stuInfo">
+                <li><span class="left"><b>学生：</b><i>Animal</i></span><span class="class inclass">在教室</span></li>
+                <li><span class="left"><b>I D：</b><i>24354</i></span><a href="javascript:;" class="right copy">复制</a></li>
+                <li><span class="left"><b>所属：</b><i>美国小学</i></span></li>
+                <li><span class="left"><b>手机：</b><i>13912345678</i></span><a href="javascript:;" class="right copy">复制</a></li>
+                <li><span class="left"><b>版本：</b><i>Mac AC 1.3.0.1</i></span></li>
+                <li><span class="left"><b>Q Q：</b><i>3456431345</i></span><a href="javascript:;" class="right copy">复制</a></li>
+              </ul>
+            </li>
+            <li class="infoList clearfix last">
+              <ul id="teaInfo">
+                <li><span class="left"><b>老师：</b><i>Animal</i></span><span class="class notInclass">在教室</span></li>
+                <li><span class="left"><b>I D：</b><i>24354</i></span><a href="javascript:;" class="right copy">复制</a></li>
+                <li><span class="left"><b>所属：</b><i>美国小学</i></span></li>
+                <li><span class="left"><b>手机：</b><i>13912345678</i></span><a href="javascript:;" class="right copy">复制</a></li>
+                <li><span class="left"><b>版本：</b><i>Mac AC 1.3.0.1</i></span></li>
+                <li><span class="left"><b>Q Q：</b><i>3456431345</i></span><a href="javascript:;" class="right copy">复制</a></li>
+                <li> </li>
+                <li><span class="left"><b>Skype：</b><i>3456431345</i></span><a href="javascript:;" class="right copy">复制</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="enterBox clearfix"><i> </i>
+            <ul class="maybeTip">
+              <li>学生的网络连接不稳定  ---  可建议学生点击重新连接，等待2分钟后看重连结果</li>
+              <li>老师的麦克风音量过低  ---  可建议老师升高系统或AC内的麦克风音量</li>
+              <li>学生的CPU占用过高&nbsp;&nbsp;&nbsp;&nbsp;---  可建议学生关闭其他与AC上课无关的软件</li>
+            </ul><a id="enterRoom" href="javascript:;" class="enterRoom">进入教室</a>
+          </div>
+          <div class="closeItem clearfix"><a id="closeBtn" href="javascript:;" class="closeBtn"> 关&nbsp;&nbsp;   单      </a></div>
+        </li>
+      </ul>
+      <div id="sayNextBox" class="sayNextBox"><a id="sayNext" href="javascript:;" class="sayNext"><i></i> <span> 叫 号 </span></a></div>
+    </div>
+    <div id="mask" class="mask"></div>
+    <div id="itemBox" class="itemBox">
+      <div class="header">服务单 <i></i></div>
+      <ul class="content">
+        <li class="line"><span class="left">问题分类</span>
+          <div class="options">
+            <div class="selBox">
+              <h3>问题问题</h3><i></i>
+              <ul> 
+                <li>河南</li>
+                <li>北京</li>
+                <li>广东</li>
+                <li>山西</li>
+              </ul>
+            </div>
+          </div>
+          <div class="options">
+            <div class="selBox">
+              <h3>问题问题</h3><i></i>
+              <ul> 
+                <li>河南</li>
+                <li>北京</li>
+                <li>广东</li>
+                <li>山西</li>
+              </ul>
+            </div>
+          </div>
+          <div class="options">
+            <div class="selBox">
+              <h3>问题问题</h3><i></i>
+              <ul> 
+                <li>河南</li>
+                <li>北京</li>
+                <li>广东</li>
+                <li>山西</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="line"><span class="left">处理流程</span>
+          <div class="options">
+            <div class="selBox">
+              <h3>问题问题</h3><i></i>
+              <ul> 
+                <li>河南</li>
+                <li>北京</li>
+                <li>广东</li>
+                <li>山西</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="line"><span class="left">问题描述</span>
+          <div class="infoBox">
+            <div class="autoInfo">
+              奥爱你中国 <br/>
+              鬼才知道谁好谁坏<br/>
+              桌游太有魅力了，嘻嘻<br/>
+              昆明湖是在北大吗，在线等。
+              奥爱你中国 <br/>
+              鬼才知道谁好谁坏<br/>
+              桌游太有魅力了，嘻嘻<br/>
+              昆明湖是在北大吗，在线等。
+              奥爱你中国 <br/>
+              鬼才知道谁好谁坏<br/>
+              桌游太有魅力了，嘻嘻<br/>
+              昆明湖是在北大吗，在线等。
+            </div>
+            <textarea placeholder="追加信息" class="area"></textarea>
+          </div>
+        </li>
+        <li class="line"><span class="left">处理状态</span>
+          <div class="options">
+            <div class="selBox">
+              <h3>问题问题</h3><i></i>
+              <ul> 
+                <li>河南</li>
+                <li>北京</li>
+                <li>广东</li>
+                <li>山西</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul><a href="javascript:;" class="subBtn">提 交 </a>
+    </div>
+    <script src="../../../js/html/project/service_site/jquery.min.js"></script>
+    <script src="../../../js/html/project/service_site/ZeroClipboard.min.js"> </script>
+    <script src="../../../js/html/project/service_site/index.js">       </script>
+  </body>
+</html>

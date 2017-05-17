@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta content="yes" name="apple-mobile-web-app-capable" /> 
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+    <meta content="telephone=no" name="format-detection" /> 
+    <title>优酷会员注册页</title>
+    <link rel="stylesheet" type="text/css" href="/css/wap/Youku/Youku.css">
+</head>
+<body> 
+		<section class="top" data-init="Youku">
+				<img src="/images/wap/Youku/y-bg.png" />
+				<form>
+					<div class="regForm">
+						 <div class="r-top">
+						 		注册
+						 		<i></i>
+						 		<i></i>
+						 </div>
+						 <ul class="r-main">
+						 		<li>
+						 				<input type="text" name="user-name" placeholder="输入您的手机号" class="reg1_tel" />
+						 		</li>
+								 <li>
+									 <input class="code" id="authCode" name="authCode" type="tel" placeholder="请输入图形验证码">
+									 <span class="tel_btn" style="background: none;">
+									<img style="border: 1px solid #d0d0d0;float:left;cursor: pointer;height: 2.8rem;"
+										 id="verifycode" src="http://www.51talk.com/passport/authCode"
+										  width="140" onclick="this.src='http://www.51talk.com/passport/authCode'+'?a'+'='+new Date().getTime()"
+										 alt="单击更换验证码" title="单击更换验证码">
+								  </span>
+								 </li>
+						 		<li>
+						 				<input type="text" name="mobile_code" placeholder="请输入验证码" class="code" />
+						 				<span class="tel_btn1">获取验证码</span>
+						 		</li>
+						 		<li>
+						 				<input type="password" name="password" placeholder="设置您的密码"  class="reg1_passwd" />
+						 		</li>
+						 		<li>
+						 				<a href="javascript:;" id="freeBtn">马上免费体验</a>
+						 		</li>
+						 		
+						 		
+						 </ul>
+					</div>
+				</form>
+		</section>
+		<section class="bottom">
+				<h4>注册成功，即可获得优酷会员月卡一张</h4>
+				<h3>
+						<img src="/images/wap/Youku/y-icon.png" />
+				</h3>
+		</section>
+</body>
+<script id="seajsnode" src="/js/wap/project/Youku/vendor.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+

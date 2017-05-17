@@ -1,0 +1,143 @@
+<% include ../common/top.ejs %>
+<body>
+<!-- public top -->
+<% include top.ejs %>
+<div class="office-infor" data-init="subject">
+  <h3>办公用品领用申请表</h3>
+  <div class="basic-infor">
+    <p><span>基本信息</span></p>
+    <ul class="basic-list">
+      <li>姓名：<span>林梓颀</span></li>
+      <li>所属部门：<span>技术产品部/技术部/AC</span></li>
+      <li>申请时间：<span>2016-10-17</span></li>
+    </ul>
+  </div>
+  <form action="" id="formBtn">
+  <div class="basic-infor">
+    <p><span>领用信息</span></p>
+    <div class="req-copy">
+      <ul class="requis-list">
+        <li>
+          <div class="lt-list">
+            <i class="import">*</i>
+            <span>物品类别:</span>
+          </div>
+          <div class="rt-list">
+            <input type="hidden" class="form-select group">
+            <div class="input">
+              <span class="test"></span>
+              <i class="drop-down"></i>
+            </div>
+            <!-- layer -->
+            <select name="race_group" class="select-hd">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <div class="layer-list" style="display:none;">
+              <ul>
+                <li num="1">文具类</li>
+                <li num="2">办公类</li>
+                <li num="3">电脑配件类</li>
+              </ul>
+            </div>
+            <!-- /layer -->
+            <!-- error -->
+            <div class="error error01">*物品类别不能为空</div>
+            <!-- /error -->
+          </div>
+        </li>
+        <li>
+          <div class="lt-list">
+            <i class="import">*</i>
+            <span>物品名称:</span>
+          </div>
+          <div class="rt-list">
+            <input type="hidden" class="form-select name">
+            <div class="input">
+              <span class="test"></span>
+              <i class="drop-down"></i>
+            </div>
+            <!-- layer -->
+            <select name="race_group" class="select-hd">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <div class="layer-list" style="display:none;">
+              <ul>
+                <li num="1">笔</li>
+                <li num="2">本子</li>
+                <li num="3">耳机</li>
+              </ul>
+            </div>
+            <!-- /layer -->
+            <!-- error -->
+            <div class="error error02">*物品名称不能为空</div>
+            <!-- /error -->
+          </div>
+        </li>
+        <li>
+          <div class="lt-list">
+            <i class="import">*</i>
+            <span>物品数量:</span>
+          </div>
+          <div class="rt-list-input">
+            <div class="input">
+              <input type="text" class="number">
+            </div>
+            <!-- error -->
+            <div class="error error03">*物品数量不能为空</div>
+            <!-- /error -->
+          </div>
+        </li>
+        <li>
+          <div class="lt-list">
+            <i class="import">*</i>
+            <span>物品单位:</span>
+          </div>
+          <div class="rt-list">
+            <input type="hidden" class="form-select company">
+            <div class="input">
+              <span class="test"></span>
+              <i class="drop-down"></i>
+            </div>
+            <!-- layer -->
+            <select name="race_group" class="select-hd">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <div class="layer-list" style="display:none;">
+              <ul>
+                <li num="1">北京信息技术有限公司</li>
+                <li num="2">北京大生在线科技有限公司</li>
+                <li num="3">51tlak</li>
+              </ul>
+            </div>
+            <!-- /layer -->
+            <!-- error -->
+            <div class="error error04">*物品单位不能为空</div>
+            <!-- /error -->
+          </div>
+        </li>
+        <li class="last-list">
+          <div class="lt-list">
+            <span>领用说明:</span>
+          </div>
+          <textarea name="textarea" class="textarea"></textarea>
+        </li>
+      </ul>
+    </div>
+    <div class="add-requis">
+      <i class="add-img" id="addImg"></i>
+      添加办公用品领用申请
+    </div>
+    <div class="form-btn">提交</div>
+  </div>
+  </form>
+</div>
+<!-- public bottom -->
+<% include bottom.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

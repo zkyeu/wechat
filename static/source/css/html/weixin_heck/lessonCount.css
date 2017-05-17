@@ -1,0 +1,114 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: 
+ */
+/**
+ * 默认样式
+ * @author:  liliang（liliang05@51talk.com）
+ * @update:  2017年 05月02日 星期六 17时25分59秒 CST
+ * @note:    黑鸟项目后台课程教材对应链接后台报表
+ */
+html,
+body {
+  width: 100%;
+  background: #EDEDED;
+}
+.w90 {
+  width: 90%;
+}
+.dn {
+  display: none;
+}
+.less-title {
+  height: 80px;
+  line-height: 80px;
+  font-size: 20px;
+  text-align: center;
+  color: #252525;
+}
+.lesson-con {
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: #fff;
+  border: solid 1px #dcdcdc;
+  padding: 20px;
+}
+.lesson-con .block-con {
+  border-top: #ddd dashed 1px;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #696969;
+}
+.lesson-con .block-con.no-border {
+  border: none;
+}
+.lesson-con .block-con h5 {
+  font-size: 16px;
+  color: #696969;
+}
+.lesson-con .block-con .con-list ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 20px 0;
+}
+.lesson-con .block-con .con-list ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-right: 30px;
+  padding: 5px;
+}
+.lesson-con .block-con .con-list ul li input {
+  display: none;
+}
+.lesson-con .block-con .con-list ul li label {
+  display: block;
+  padding-left: 20px;
+  height: 25px;
+  background: url(../../../images/html/weixin_heck/kecheng.png?v=YEfeLJTpxSGak7eLudWACg%3D%3D) 0 2px no-repeat;
+}
+.lesson-con .block-con .con-list ul li label.cut-sel {
+  background-position: 0 -22px;
+}
+.lesson-con .block-con table {
+  width: 100%;
+  border: #dcdcdc solid 1px;
+  font-size: 12px;
+}
+.lesson-con .block-con table tr th {
+  height: 32px;
+  line-height: 32px;
+  color: #fff;
+  text-align: center;
+  background-color: #393939;
+  border: 1px solid #dcdcdc;
+}
+.lesson-con .block-con table tr td {
+  padding: 8px 10px;
+  text-align: center;
+  border: #f0f0f0 solid 1px;
+}
+.lesson-con .block-con table tr td a {
+  color: #008eff;
+}
+.lesson-con .block-con table tr td:last-child {
+  color: #fc4e4d;
+  padding: 0 10px;
+}
+.lesson-con .block-con table tr td:nth-child(1) {
+  text-align: left;
+}
+.lesson-con .block-con table tr td:nth-child(2) {
+  text-align: left;
+}

@@ -1,0 +1,36 @@
+<% include ../common/top_b2s.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%=csslinkb2s%>tableStyle.css">
+<link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>layui.css">
+</head>
+<body data-init="offlineTable">
+<div class="pad20px content-width90 clearfix">
+    <div class="page-title">掉线监控报表</div>
+
+    <div class="ptb20 clear-fix">
+        <div class="add-btn add-btn-float-left">
+            <!--<a href="javascript:;" >统计查询</a>-->
+            <!--<a href="javascript:;" class="cut-style">统计查询</a>-->
+        </div>
+    </div>
+    <div class="status-data"></div>
+    <div class="table-box">
+        <table class="table-detail" border="1" cellspacing="0" cellpadding="0">
+            <thead>
+                <tr>
+                    <th>CRM账号</th>
+                    <th>管理组</th>
+                    <th>微信ID</th>
+                    <th>手机编号</th>
+                    <th>掉线时间</th>
+                    <th>状态</th>
+                </tr>
+            </thead>
+            <tbody class="sel-dom">
+
+            </tbody>
+        </table>
+        <h5 class="dn">暂无相关数据！</h5>
+    </div>
+</div>
+</body>
+<% include ../common/bottom.ejs %>

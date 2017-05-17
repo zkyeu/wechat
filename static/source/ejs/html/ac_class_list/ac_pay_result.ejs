@@ -1,0 +1,48 @@
+<% include ../common/top_b2s.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>ac_pay_result.css">
+</head>
+<body data-init="acPayResult">
+   <div class="ac-pay-result" id="payResult">
+        <span class="close-btn" id="closeBtn"></span>
+        <div class="pay-result-main">
+            <div class="success-des">
+                <div class="sucess-tit">恭喜您！支付成功！</div>
+                <div class="sucess-info">获得VIP精品课<span>32节</span>特权</div>
+                <div class="sucess-info">
+                    <span>15次</span>1对1外教课程次数已充入您的账户，有效期1个月至<span>2016年9月12日</span>。
+                </div>
+                <i></i>
+            </div>
+            <div class="class-des">
+                <div class="class-des-tit">
+                    先给孩子约一节专属外教级别测评课吧：
+                </div>
+                <ul class="clearfix">
+                    <li>
+                        <span>第一步</span>
+                        <div>预约体验测评课上课时间</div>
+                    </li>
+                    <li class="li2">
+                        <span>第二步</span>
+                        <div>选电脑AC为上课工具</div>
+                    </li>
+                    <li class="li3">
+                        <span>第三步</span>
+                        <div>按时上课</div>
+                    </li>
+                    <li class="li4">
+                        <span>第四步</span>
+                        <div>查看报告</div>
+                    </li>
+                </ul>
+                <div>
+                    <img src="<%= imagessrc%>act_02.png"/>
+                </div>
+            </div>
+        </div>
+        <div class="class-btn">
+            <a href="javascript:;">立即预约级别测评课</a>
+        </div>
+    </div>
+</body>
+<% include ../common/uc_bottom.ejs %>

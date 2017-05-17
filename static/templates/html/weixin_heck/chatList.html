@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="app下载专页">
+    <meta name="keywords" content="app下载专页">
+    <title>欢迎下载51Talk App</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/html/weixin_heck/common.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/html/weixin_heck/tableStyle.css">
+<link rel="stylesheet" type="text/css" href="../../../css/html/weixin_heck/layui.css">
+</head>
+<body data-init="chatList">
+<div class="pad20px content-width80 clearfix">
+    <div class="page-title">KPI报表</div>
+
+    <div class="ptb20 clear-fix">
+        <div class="guide-link fl">
+            全部 >
+            <a href="#">某团队</a>
+            >
+            <a href="#">某人</a>
+            >
+            <a href="#">学员A （13681929292）</a>
+        </div>
+        <div class="set-pos w566 fr">
+            <div class="select-time">
+                <div class="layui-form-pane">
+                    <div class="layui-form-item">
+                        <div class="layui-input-inline">
+                            <input class="layui-input sel-time" placeholder="开始日期"  onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD'})" id="stime">
+                        </div>
+                        <span class="zhizi">至</span>
+                        <div class="layui-input-inline  sel-time">
+                            <input class="layui-input" placeholder="截止日期" onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD'})"  id="etime">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="add-btn">
+                <input type="button" value="查询" id="getChatList">
+                <input type="button" value="查看全部聊天"  id="getAllList">
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="table-box">-->
+        <!--<h5>暂无相关数据！</h5>-->
+    <!--</div>-->
+    <div class="user-detail-box">
+        <table>
+            <tr>
+                <td>电 话</td>
+                <td>13891929391</td>
+                <td>购买套餐</td>
+                <td>美国小学 120次课程</td>
+                <td>套餐期限</td>
+                <td>2016/11/1～2017/2/1</td>
+            </tr>
+            <tr>
+                <td>最近上课</td>
+                <td>
+                    <p>11月21日  18:00</p>
+                    <p>美小  3单元  第5课  谢谢你的帮助</p>
+                </td>
+                <td>最近预约</td>
+                <td>
+                    <p>11月21日  18:00</p>
+                    <p>美小  3单元  第5课  谢谢你的帮助</p>
+                </td>
+                <td>最新备注</td>
+                <td>可能睡觉呢，不打算学了很坚决，后期跟进。</td>
+            </tr>
+        </table>
+    </div>
+    <audio class="dn" src="" id="music"></audio>
+    <div class="chat-detail clear-fix">
+        <h5>聊天记录</h5>
+        <div class="chat-detail-list">
+            <ul id="noChat" class="dn">暂无聊天记录</ul>
+            <ul class="clear-fix" id="chatList">
+                <!--&lt;!&ndash;文章&ndash;&gt;-->
+                <!--<li class="mes-left">-->
+                    <!--<dt>-->
+                        <!--<span class="name">学员A</span>-->
+                        <!--<span class="time">2017/3/3  19:17:30</span>-->
+                        <!--<span class="sender">好友发送</span>-->
+                    <!--</dt>-->
+                    <!--<dd class="article">-->
+                        <!--<a href="http://mp.weixin.qq.com/s?__biz=MzAxNjA5NDUxMA==&mid=2652305236&idx=4&sn=c21aee173ac91808e922cd9317375896&chksm=80185315b76fda03cd290a32d55119242a0b2b3b2806a1e77fd936e84522bfbab0eb5a1a5bd3&mpshare=1&scene=1&srcid=0225iEmTXDnxv1NJRjkdi9gz#rd" target="_blank">-->
+                            <!--<div>-->
+                                <!--<h4>前端工程师是怎样一种职业前端工程师是怎样一种职业</h4>-->
+                                <!--<p>现在已经进入手机拍摄的新时代了，大量高端大气又实用的摄影 app 已经层出不穷了，你欠缺的不是一台拍摄机器或</p>-->
+                            <!--</div>-->
+                            <!--<div>-->
+                                <!--<img src="http://local.51talk.com/images/html/weixin_heck/cchead.jpg">-->
+                            <!--</div>-->
+                        <!--</a>-->
+                    <!--</dd>-->
+                <!--</li>-->
+                <!--&lt;!&ndash;文件&ndash;&gt;-->
+                <!--<li class="mes-left">-->
+                    <!--<dt>-->
+                        <!--<span class="name">学员A</span>-->
+                        <!--<span class="time">2017/3/3  19:17:30</span>-->
+                        <!--<span class="sender">好友发送</span>-->
+                    <!--</dt>-->
+                    <!--<dd class="file">-->
+                        <!--<a href="http://testtest1117.oss-cn-beijing.aliyuncs.com/6ad797f10ebcf891c22e256ae8dc4ff8.xlsx" title="这里是测试类型的文件.xlsx">-->
+                            <!--<div>-->
+                                <!--<p>这里是测试类型的文件.xlsx</p>-->
+                                <!--<em class="fileExcel"></em>-->
+                            <!--</div>-->
+                            <!--<div>-->
+                                <!--21KB-->
+                            <!--</div>-->
+                        <!--</a>-->
+                    <!--</dd>-->
+                <!--</li>-->
+                <!--<li class="mes-left">-->
+                    <!--<dt>-->
+                        <!--<span class="name">学员A</span>-->
+                        <!--<span class="time">2017/3/3  19:17:30</span>-->
+                        <!--<span class="sender">好友发送</span>-->
+                    <!--</dt>-->
+                    <!--<dd class="file">-->
+                        <!--<a href="http://testtest1117.oss-cn-beijing.aliyuncs.com/6ad797f10ebcf891c22e256ae8dc4ff8.xlsx" title="这里是测试类型的文件.xlsx">-->
+                            <!--<div>-->
+                                <!--<p>这里是测试类型的文件.pdf</p>-->
+                                <!--<em class="filePdf"></em>-->
+                            <!--</div>-->
+                            <!--<div>-->
+                                <!--21KB-->
+                            <!--</div>-->
+                        <!--</a>-->
+                    <!--</dd>-->
+                <!--</li>-->
+                <!--<li class="mes-left">-->
+                    <!--<dt>-->
+                        <!--<span class="name">学员A</span>-->
+                        <!--<span class="time">2017/3/3  19:17:30</span>-->
+                        <!--<span class="sender">好友发送</span>-->
+                    <!--</dt>-->
+                    <!--<dd class="file">-->
+                        <!--<a href="http://testtest1117.oss-cn-beijing.aliyuncs.com/6ad797f10ebcf891c22e256ae8dc4ff8.word" title="这里是测试类型的文件.xlsx">-->
+                            <!--<div>-->
+                                <!--<p>这里是测试类型的文件.xlsx</p>-->
+                                <!--<em class="fileWord"></em>-->
+                            <!--</div>-->
+                            <!--<div>-->
+                                <!--21KB-->
+                            <!--</div>-->
+                        <!--</a>-->
+                    <!--</dd>-->
+                <!--</li>-->
+                <!--<li class="mes-right">-->
+                    <!--<dt>-->
+                        <!--<span class="name">学员A</span>-->
+                        <!--<span class="time">2017/3/3  19:17:30</span>-->
+                        <!--<span class="sender">好友发送</span>-->
+                    <!--</dt>-->
+                    <!--<dd class="file">-->
+                        <!--<a href="http://testtest1117.oss-cn-beijing.aliyuncs.com/6ad797f10ebcf891c22e256ae8dc4ff8.xlsx" title="这里是测试类型的文件.xlsx">-->
+                            <!--<div>-->
+                                <!--<p>这里是测试类型的文件.ppt</p>-->
+                                <!--<em class="filePpt"></em>-->
+                            <!--</div>-->
+                            <!--<div>-->
+                                <!--21KB-->
+                            <!--</div>-->
+                        <!--</a>-->
+                    <!--</dd>-->
+                <!--</li>-->
+                <!--<li class="mes-left">-->
+                    <!--<dt>-->
+                        <!--<span class="name">51君</span>-->
+                        <!--<span class="sender">系统发送</span>-->
+                        <!--<span class="time">2017/3/3  19:17:30</span>-->
+                    <!--</dt>-->
+                    <!--<dd class="text">-->
+                       <!--<span>好友发送好友发送好友发送</span>-->
+                    <!--</dd>-->
+                <!--</li>-->
+                <!--<li class="mes-left">-->
+                    <!--<dt>-->
+                        <!--<span class="name">学员A</span>-->
+                        <!--<span class="time">2017/3/3  19:17:30</span>-->
+                        <!--<span class="sender">好友发送</span>-->
+                    <!--</dt>-->
+                    <!--<dd class="text">-->
+                        <!--好友发送好友发送好友发送好友发送好友发送好友发送好友发送好友发送好友发送好友发送好友发送好友发送好友发送好友发送好友发送好友发送好友发送好友发送好友发送好友发送好友发送好友发送好友发送好友发送好友发送好友发送好友发送好友发送好友发送好友发送好友发送-->
+                    <!--</dd>-->
+                <!--</li>-->
+                <!--<li class="mes-left">-->
+                    <!--<dt>-->
+                        <!--<span class="name">学员A</span>-->
+                        <!--<span class="time">2017/3/3  19:17:30</span>-->
+                        <!--<span class="sender">好友发送</span>-->
+                    <!--</dt>-->
+                    <!--<dd class="pic">-->
+                       <!--<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1489664941&di=ffa49901fe79f18b43d647aa14ccf641&imgtype=jpg&er=1&src=http%3A%2F%2Ff.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fb151f8198618367abfffecd72c738bd4b31ce542.jpg">-->
+                    <!--</dd>-->
+                <!--</li>-->
+                <!--<li class="mes-right">-->
+                    <!--<dt>-->
+                        <!--<span class="name">51君</span>-->
+                        <!--<span class="sender">系统发送</span>-->
+                        <!--<span class="time">2017/3/3  19:17:30</span>-->
+                    <!--</dt>-->
+                    <!--<dd class="pic">-->
+                        <!--<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1489070242574&di=071a60794991dda70fa3d16a533f4ca6&imgtype=0&src=http%3A%2F%2Fc.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fcb8065380cd791235567076baf345982b2b7802e.jpg">-->
+                    <!--</dd>-->
+                <!--</li>-->
+                <!--<li class="mes-left">-->
+                    <!--<dt>-->
+                        <!--<span class="name">学员A</span>-->
+                        <!--<span class="time">2017/3/3  19:17:30</span>-->
+                        <!--<span class="sender">好友发送</span>-->
+                    <!--</dt>-->
+                    <!--<dd class="vedio">-->
+                        <!--<video controls><source src="http://testtest1117.oss-cn-beijing.aliyuncs.com/235a398493f36b06f0e3cf0fb8e7f348.mp4"></video>-->
+                    <!--</dd>-->
+                <!--</li>-->
+                <!--<li class="mes-left">-->
+                    <!--<dt>-->
+                        <!--<span class="name">学员A</span>-->
+                        <!--<span class="time">2017/3/3  19:17:30</span>-->
+                        <!--<span class="sender">好友发送</span>-->
+                    <!--</dt>-->
+                    <!--<dd class="vedio">-->
+                        <!--<video controls><source src="http://testtest1117.oss-cn-beijing.aliyuncs.com/235a398493f36b06f0e3cf0fb8e7f348.mp4"></video>-->
+                    <!--</dd>-->
+                <!--</li>-->
+                <!--<li class="mes-left">-->
+                    <!--<dt>-->
+                        <!--<span class="name">学员A</span>-->
+                        <!--<span class="time">2017/3/3  19:17:30</span>-->
+                        <!--<span class="sender">好友发送</span>-->
+                    <!--</dt>-->
+                    <!--<dd class="voice" data-src="http://testtest1117.oss-cn-beijing.aliyuncs.com/e99aa87b589c232d7364f79ed9e7a0de">-->
+                    <!--</dd>-->
+                <!--</li>-->
+                <!--<li class="mes-right">-->
+                    <!--<dt>-->
+                        <!--<span class="name">学员A</span>-->
+                        <!--<span class="time">2017/3/3  19:17:30</span>-->
+                        <!--<span class="sender">好友发送</span>-->
+                    <!--</dt>-->
+                    <!--<dd class="voice" data-src="http://testtest1117.oss-cn-beijing.aliyuncs.com/f263ce19db88e57c592e35a3b7d83db0">-->
+                    <!--</dd>-->
+                <!--</li>-->
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+//    var terminal_id = 'wxid_tiyf63bothlp21';
+//    var wechat_id = 'myblog2012'
+    var start_time = '2017-04-20';
+    var end_time = '2017-04-21';
+    var terminal_id = 'wxid_74xeugn5dpxr22';
+    var wechat_id = 'angle0211';
+    var url_info = '/AuthGroupStats/stuDetail?terminal_id=wxid_74xeugn5dpxr22&wechat_id=angle0211&user_id=34720060&start_time=2017-04-20&end_time=2017-04-21';
+
+</script>
+</body>
+<!--公共尾部结束-->
+<script src="../../../js/html/project/weixin_heck/vendor.js"></script>
+</html>

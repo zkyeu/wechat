@@ -1,0 +1,66 @@
+<% include ../common/top.ejs %>
+<body  data-init="payWeChat">
+	<!-- 学生 -->
+	<div class="account-center-box summer_class_pay summer_class_pay_WeChat pay-wrap bg-f5">
+		<div class="account-head">
+			<a href="account_detail.html"></a>
+			<dl class="cfix">
+				<dt>
+					<img width="70" height="70" src="<%= imagessrc%>account-headicon-stu.png" class="account-head-img" />
+					<div class="account-head-info">
+						<h6>
+							<p>赵雷</p>
+
+						</h6>
+						<p>北京109中学小学实验部</p>
+						<p>三年二班</p>
+					</div>
+				</dt>
+				<dd><span class="fr">更换账户</span></dd>
+			</dl>
+		</div>
+		<form action="#" autocomplete="off" rel="from">
+			<h6 class="pay-tit">请选择报名学习的课程</h6>
+			<ul class="pay-item">
+				<li>
+					<a data-price="500" class="pay-radio pay-radio-select" href="javascript:void(0);"></a>
+					<dl class="cfix">
+						<dt class="fl">自然拼读</dt>
+						<dd class="fl font12 strikethrough">原价：¥800</dd>
+						<dd class="topCenter"><span class="iconTitle">¥500<span class="font12">/20节</span></span></dd>
+					</dl>
+				</li>
+				<li>
+					<a data-price="500" class="pay-radio" href="javascript:void(0);"></a>
+					<dl class="cfix">
+						<dt class="fl">绘本阅读</dt>
+						<dd class="fl font12 strikethrough">原价：¥800</dd>
+						<dd class="topCenter"><span class="iconTitle">¥500<span class="font12">/20节</span></span></dd>
+					</dl>
+				</li>
+			</ul>
+			<ul class="pay-item">
+				<li>
+					<a data-price="900" class="pay-radio" href="javascript:void(0);"></a>
+					<dl class="cfix">
+						<dt>自然拼读+绘本阅读</dt>
+						<dd class="font12 strikethrough">原价：¥1000</dd>
+						<dd class="topCenter"><span class="iconTitle">¥900<span class="font12">/40节<br>(VIP专享价)</span></span></dd>
+					</dl>
+				</li>
+			</ul>
+
+			<dl class="submit-btn">
+				<dt class="fl">
+					<span>订单金额：</span>
+					<span class="price">¥500</span>
+					<input type="hidden" name="pay_weChat" id="pay_weChat" value="500">
+				</dt>
+				<!-- <dd class="fr"><input type="submit" value="微信支付"></dd> -->
+				<dd class="fr payed"><input type="submit" value="已购买"></dd>
+			</dl>
+		</form>
+	</div>
+
+</body>
+<% include ../common/bottom.ejs %>

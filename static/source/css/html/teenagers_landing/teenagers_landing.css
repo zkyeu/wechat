@@ -1,0 +1,964 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Thu Apr 07 2016 17:23:46 GMT+0800 (中国标准时间)
+ */
+/**
+ * 默认样式
+ * @file：   base.less
+ * @author:  chenxiaosong（chenxiaosong@51talk.com）
+ * @update:  2015-10-12
+ * @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  background-color: #fff;
+  _background-image: url(about:blank);
+  _background-attachment: fixed;
+  _overflow-x: hidden;
+}
+body {
+  font: 13px 'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial, Verdana, Tahoma;
+  color: #1e1e1e;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+}
+input,
+button,
+select,
+textarea {
+  font-family: 'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial, Verdana, Tahoma;
+  outline: none;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 0;
+}
+a {
+  color: #1e1e1e;
+  text-decoration: none;
+  outline: none;
+}
+a:hover {
+  color: #ff9600;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  vertical-align: middle;
+}
+::-moz-selection {
+  background-color: #ff9600;
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background-color: #ff9600;
+  color: white;
+  text-shadow: none;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  *zoom: 1;
+  *display: inline;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.relative {
+  position: relative;
+}
+.relativez {
+  position: relative;
+  zoom: 1;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.hidden {
+  overflow: hidden;
+}
+.ft12 {
+  font-size: 12px;
+}
+.ft13 {
+  font-size: 13px;
+}
+.ft14 {
+  font-size: 14px;
+}
+.ft15 {
+  font-size: 15px;
+}
+.ft16 {
+  font-size: 16px;
+}
+.ft18 {
+  font-size: 18px;
+}
+.ft19 {
+  font-size: 19px;
+}
+.ft20 {
+  font-size: 20px;
+}
+.normal {
+  font-weight: normal;
+}
+.bold {
+  font-weight: bold;
+}
+.tal {
+  text-align: left;
+}
+.tac {
+  text-align: center;
+}
+.tar {
+  text-align: right;
+}
+.f-taj {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+.f-vam,
+.f-vama * {
+  vertical-align: middle;
+}
+.f-wsn {
+  word-wrap: normal;
+  white-space: nowrap;
+}
+.f-pre {
+  overflow: hidden;
+  text-align: left;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.f-wwb {
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.f-ti {
+  overflow: hidden;
+  text-indent: -30000px;
+}
+.f-ti2 {
+  text-indent: 2em;
+}
+.f-lhn {
+  line-height: normal;
+}
+.f-tdu,
+.f-tdu:hover {
+  text-decoration: underline;
+}
+.f-tdn,
+.f-tdn:hover {
+  text-decoration: none;
+}
+.f-toe {
+  overflow: hidden;
+  word-wrap: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.f-csp {
+  cursor: pointer;
+}
+.f-csd {
+  cursor: default;
+}
+.f-csh {
+  cursor: hand;
+}
+.f-csm {
+  cursor: move;
+}
+.f-usn {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.fm-arrow-pos {
+  border-style: solid;
+  border-color: #ffa800;
+  border-width: 1px;
+}
+/*
+* 青少蓝色头图landing
+* @file：   index.less
+* @author:  liyang（liyang@51talk.cm）
+* @update:  2016-4-06
+* @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+*/
+.minWidth {
+  width: 1000px;
+  margin: 0 auto;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix:after,
+.clearfix:before {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+.hide {
+  display: none;
+}
+.topWidth {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: -500px;
+  width: 1000px;
+  color: #131313;
+  z-index: 10;
+}
+.topWidth .m_logo {
+  height: 62px;
+  padding: 16px 30px;
+}
+.topWidth .m_logo img {
+  float: left;
+}
+.topWidth .m_logo .f_phone {
+  float: right;
+  font-size: 18px;
+  height: 68px;
+  line-height: 68px;
+}
+.topWidth .m_logo .f_phone .u_icon {
+  width: 16px;
+  height: 17px;
+  display: inline-block;
+  background: url(../../../images/html/teenagers_landing/ten_iphone.png?v=PK1EtqlI%2Fl3DrKWPf9ZwWQ%3D%3D) no-repeat;
+  margin-right: 4px;
+}
+.youth .tenImg {
+  position: relative;
+  width: 100%;
+  height: 552px;
+  overflow: hidden;
+}
+.youth .tenImg img {
+  position: absolute;
+  left: 50%;
+  height: 552px;
+  margin-left: -950px;
+  z-index: 1;
+}
+.youth .btnWidth {
+  position: absolute;
+  left: 50%;
+  top: 386px;
+  margin-left: -551px;
+  width: 1000px;
+  color: #131313;
+  z-index: 5;
+}
+.youth .btnWidth .imgBtn {
+  float: right;
+  display: block;
+  width: 310px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 28px;
+  color: #fff;
+  background-color: #f76d08;
+  border-radius: 3px;
+  z-index: 2;
+  margin-right: 128px;
+}
+.youth .detail {
+  width: 100%;
+  height: 237px;
+  position: relative;
+  margin: auto;
+  background: url(../../../images/html/teenagers_landing/detaile_bg.png?v=476IarNOtu4wOYkP0bPznA%3D%3D) center top no-repeat;
+}
+.youth .detail .tit {
+  font-size: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.youth .detail p {
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  color: #ffffff;
+}
+.age_level {
+  position: relative;
+  width: 100%;
+}
+.age_level .age {
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #d8d8d8;
+}
+.age_level .age ul {
+  position: relative;
+  left: 50%;
+  top: 0;
+  margin-left: -400px;
+  height: 57px;
+  display: inline-block;
+  width: 800px;
+}
+.age_level .age ul li {
+  cursor: pointer;
+  font-size: 16px;
+  color: #000000;
+  float: left;
+  width: 200px;
+  line-height: 50px;
+  height: 57px;
+  text-align: center;
+}
+.age_level .age ul li span {
+  color: #999999;
+}
+.age_level .age ul .choose {
+  border-bottom: 3px solid #feaf00;
+  color: #feaf00;
+  font-size: 22px;
+}
+.age_level .age ul .choose span {
+  color: #feaf00;
+}
+.age_level .age_course {
+  position: relative;
+  margin: 75px auto 0;
+  width: 1000px;
+  height: 620px;
+  background: #ffffff;
+}
+.age_level .age_course .course_l,
+.age_level .age_course .course_r {
+  padding: 20px;
+  top: 10px;
+  position: relative;
+  width: 400px;
+  height: 520px;
+  border: 1px solid #dedede;
+}
+.age_level .age_course .course_l .img_01,
+.age_level .age_course .course_r .img_01 {
+  width: 140px;
+  height: 47px;
+  position: absolute;
+  left: 50%;
+  margin-left: -70px;
+  top: -8px;
+}
+.age_level .age_course .course_l .img_02,
+.age_level .age_course .course_r .img_02 {
+  width: 400px;
+  height: 300px;
+  margin-bottom: 20px;
+}
+.age_level .age_course .course_l .tit,
+.age_level .age_course .course_r .tit {
+  font-size: 18px;
+  line-height: 24px;
+  height: 60px;
+  width: 400px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.age_level .age_course .course_l p,
+.age_level .age_course .course_r p {
+  color: #000000;
+  font-size: 14px;
+  line-height: 20px;
+}
+.age_level .age_course .course_l a,
+.age_level .age_course .course_r a {
+  position: relative;
+  left: 50%;
+  margin-left: -90px;
+  margin-top: 35px;
+  font-size: 18px;
+  display: inline-block;
+  width: 180px;
+  height: 45px;
+  line-height: 45px;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 20px;
+  background: url(../../../images/html/teenagers_landing/btn_bg.png?v=UxAyt3VtmOZCrYnOv%2Fz%2BOA%3D%3D) no-repeat;
+}
+.stu_reviews {
+  position: relative;
+  width: 100%;
+  background-color: #fbfbfb;
+}
+.stu_reviews .review {
+  width: 1000px;
+  padding-bottom: 60px;
+  margin: auto;
+}
+.stu_reviews .review .tit {
+  text-align: center;
+  font-size: 38px;
+  color: #3b3a35;
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+.stu_reviews .review .review01 {
+  width: 1000px;
+}
+.stu_reviews .review .review01 .text {
+  width: 1000px;
+  height: 200px;
+  margin-top: 40px;
+  margin-bottom: 25px;
+  overflow: hidden;
+  background: url(../../../images/html/teenagers_landing/review01_bg.png?v=O2lJiZLZkkuqHU2na33tMQ%3D%3D) no-repeat;
+}
+.stu_reviews .review .review01 .text dl {
+  padding-top: 25px;
+  margin-left: 25px;
+}
+.stu_reviews .review .review01 .text dt {
+  color: #fa584b;
+  font-size: 16px;
+  font-weight: 600;
+  float: left;
+  clear: both;
+}
+.stu_reviews .review .review01 .text dd {
+  font-size: 14px;
+  width: 896px;
+  color: #6e6e6e;
+  display: inline-block;
+  width: 890px;
+  line-height: 24px;
+}
+.stu_reviews .review .review01 .stu_head {
+  overflow: hidden;
+}
+.stu_reviews .review .review01 .stu_head img {
+  float: left;
+  width: 62px;
+  height: 53px;
+}
+.stu_reviews .review .review01 .stu_head div {
+  height: 53px;
+  min-width: 120px;
+  background-color: #fa584b;
+  float: left;
+}
+.stu_reviews .review .review01 .stu_head div .name {
+  font-size: 14px;
+}
+.stu_reviews .review .review01 .stu_head div p {
+  padding-left: 12px;
+  padding-right: 10px;
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #ffffff;
+}
+.stu_reviews .review .review02 {
+  width: 1000px;
+}
+.stu_reviews .review .review02 .text {
+  width: 1000px;
+  height: 152px;
+  margin-top: 40px;
+  margin-bottom: 25px;
+  overflow: hidden;
+  background: url(../../../images/html/teenagers_landing/review02_bg.png?v=YrlG8Zbfzd7qwUyyq%2Bl4aA%3D%3D) no-repeat;
+}
+.stu_reviews .review .review02 .text dl {
+  padding-top: 25px;
+  margin-left: 25px;
+}
+.stu_reviews .review .review02 .text dt {
+  color: #f8793b;
+  font-size: 16px;
+  font-weight: 600;
+  float: left;
+  clear: both;
+}
+.stu_reviews .review .review02 .text dd {
+  font-size: 14px;
+  width: 896px;
+  color: #6e6e6e;
+  display: inline-block;
+  width: 890px;
+  line-height: 24px;
+}
+.stu_reviews .review .review02 .stu_head {
+  overflow: hidden;
+  height: 53px;
+}
+.stu_reviews .review .review02 .stu_head img {
+  float: left;
+  width: 62px;
+  height: 53px;
+}
+.stu_reviews .review .review02 .stu_head div {
+  height: 53px;
+  min-width: 120px;
+  background-color: #f8793b;
+  float: left;
+}
+.stu_reviews .review .review02 .stu_head div .name {
+  font-size: 14px;
+}
+.stu_reviews .review .review02 .stu_head div p {
+  padding-left: 12px;
+  padding-right: 10px;
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #ffffff;
+}
+.stu_reviews .review .review03 {
+  width: 1000px;
+}
+.stu_reviews .review .review03 .text {
+  width: 1000px;
+  height: 200px;
+  margin-top: 40px;
+  margin-bottom: 25px;
+  overflow: hidden;
+  background: url(../../../images/html/teenagers_landing/review01_bg.png?v=O2lJiZLZkkuqHU2na33tMQ%3D%3D) no-repeat;
+}
+.stu_reviews .review .review03 .text dl {
+  padding-top: 25px;
+  margin-left: 25px;
+}
+.stu_reviews .review .review03 .text dt {
+  color: #fbbf40;
+  font-size: 16px;
+  font-weight: 600;
+  float: left;
+  clear: both;
+}
+.stu_reviews .review .review03 .text dd {
+  font-size: 14px;
+  width: 896px;
+  color: #6e6e6e;
+  display: inline-block;
+  width: 890px;
+  line-height: 24px;
+}
+.stu_reviews .review .review03 .stu_head {
+  overflow: hidden;
+}
+.stu_reviews .review .review03 .stu_head img {
+  float: left;
+  width: 62px;
+  height: 53px;
+}
+.stu_reviews .review .review03 .stu_head div {
+  height: 53px;
+  min-width: 120px;
+  background-color: #fbbf40;
+  float: left;
+}
+.stu_reviews .review .review03 .stu_head div .name {
+  font-size: 14px;
+}
+.stu_reviews .review .review03 .stu_head div p {
+  padding-left: 12px;
+  padding-right: 10px;
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #ffffff;
+}
+.stu_reviews .review .review04 {
+  width: 1000px;
+}
+.stu_reviews .review .review04 .text {
+  width: 1000px;
+  height: 200px;
+  margin-top: 40px;
+  margin-bottom: 25px;
+  overflow: hidden;
+  background: url(../../../images/html/teenagers_landing/review01_bg.png?v=O2lJiZLZkkuqHU2na33tMQ%3D%3D) no-repeat;
+}
+.stu_reviews .review .review04 .text dl {
+  padding-top: 25px;
+  margin-left: 25px;
+}
+.stu_reviews .review .review04 .text dt {
+  color: #00b3b8;
+  font-size: 16px;
+  font-weight: 600;
+  float: left;
+  clear: both;
+}
+.stu_reviews .review .review04 .text dd {
+  font-size: 14px;
+  width: 896px;
+  color: #6e6e6e;
+  display: inline-block;
+  width: 890px;
+  line-height: 24px;
+}
+.stu_reviews .review .review04 .stu_head {
+  overflow: hidden;
+}
+.stu_reviews .review .review04 .stu_head img {
+  float: left;
+  width: 62px;
+  height: 53px;
+}
+.stu_reviews .review .review04 .stu_head div {
+  height: 53px;
+  min-width: 120px;
+  background-color: #00b3b8;
+  float: left;
+}
+.stu_reviews .review .review04 .stu_head div .name {
+  font-size: 14px;
+}
+.stu_reviews .review .review04 .stu_head div p {
+  padding-left: 12px;
+  padding-right: 10px;
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #ffffff;
+}
+.stu_reviews .review .btnWidth {
+  margin-top: 30px;
+  height: 70px;
+  width: 100%;
+  text-align: center;
+}
+.stu_reviews .review .btnWidth a {
+  display: inline-block;
+  height: 70px;
+  line-height: 70px;
+  width: 357px;
+  border-radius: 5px;
+  background-color: #f5881d;
+  color: #ffffff;
+  font-size: 30px;
+}
+.lina_show {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-color: #ffffff;
+}
+.lina_show .lina {
+  position: relative;
+  height: 200px;
+  width: 1000px;
+  margin: auto;
+}
+.lina_show .lina img {
+  width: 510px;
+  height: 199px;
+  margin-left: 60px;
+  margin-top: 1px;
+}
+.lina_show .lina .lina_text {
+  position: absolute;
+  right: 0;
+  top: 80px;
+  width: 420px;
+  height: 77px;
+  border-left: 1px solid #656565;
+}
+.lina_show .lina .lina_text .name {
+  padding-left: 20px;
+  color: #272727;
+  font-size: 24px;
+  line-height: 40px;
+}
+.lina_show .lina .lina_text .honr {
+  padding-left: 20px;
+  color: #272727;
+  font-size: 16px;
+  line-height: 24px;
+}
+.bottom {
+  height: 125px;
+  width: 100%;
+  position: relative;
+  background-color: #fec500;
+}
+.bottom p {
+  color: #1f1d1d;
+  font-size: 12px;
+  height: 125px;
+  line-height: 125px;
+  text-align: center;
+}
+.mask {
+  position: fixed;
+  _position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  _height: expression(eval(document.documentElement.clientHeight+document.documentElement.scrollTop));
+  background-color: #000;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  z-index: 20;
+}
+.openWidnow {
+  width: 540px;
+  background: #fff;
+  height: 540px;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  margin-left: -270px;
+  top: 50%;
+  margin-top: -340px;
+  z-index: 30;
+}
+.openWidnow .window-title {
+  font-size: 22px;
+  line-height: 40px;
+  color: #232323;
+  text-align: center;
+  padding-top: 45px;
+  padding-bottom: 30px;
+  background: #fcd500;
+}
+.openWidnow .window-title span {
+  color: #f6550e;
+  font-size: 26px;
+}
+.openWidnow .window-input {
+  margin-top: 30px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.openWidnow .window-input li {
+  padding-bottom: 20px;
+}
+.openWidnow .window-input li label {
+  display: inline-block;
+}
+.openWidnow .window-input li label span {
+  padding-left: 28px;
+  width: 32px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.openWidnow .window-input li label .sprite {
+  background: url(../../../images/html/teenagers_landing/spriter.png?v=fCbxHnE22RZRg%2BkatQeEAQ%3D%3D) no-repeat;
+}
+.openWidnow .window-input li label .email {
+  background-position: -327px -39px;
+  height: 24px;
+}
+.openWidnow .window-input li label .phone {
+  background-position: -327px -120px;
+  height: 37px;
+}
+.openWidnow .window-input li label .password {
+  background-position: -326px 0px;
+  height: 32px;
+}
+.openWidnow .window-input li label input {
+  vertical-align: middle;
+  width: 270px;
+  font-size: 18px;
+  padding-left: 16px;
+  padding-right: 12px;
+  height: 50px;
+  line-height: 50px;
+  border: #a5a5a5 solid 1px;
+  border-left: #fcc800 solid 5px;
+}
+.openWidnow .orderBtn2 {
+  text-align: center;
+}
+.openWidnow .orderBtn2 #submit1 {
+  width: 370px;
+  height: 60px;
+  border: none;
+  background: #fcc800;
+  font-size: 22px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+.openWidnow .orderBtn2 .exprienceDesc {
+  font-size: 18px;
+  font-family: "微软雅黑";
+  color: #6e6e6e;
+}

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>服务现场化</title>
+    <link rel="stylesheet" href="/css/html/AC//serviceSite.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <ul class="searchPart">
+                <li class="child">
+                    <span class="mr10">开课时间</span>
+                    <div class="timeSelect inputBox">
+                        <h3 id="showedTime" data-times="0">12:00</h3>
+                        <i class="tri" id="timeTri"></i>
+                        <ul class="options" id="timeSel"></ul>
+                    </div>
+                </li>
+                <li class="child line">|</li>
+                <li class="child">
+                    <span class="mr10">学员账号</span>
+                    <input type="text" class="inputBox" value="" id="appointId">
+                </li>
+                <li class="child line">|</li>
+                <li class="child">
+                    <span class="mr10">老师昵称</span>
+                    <input type="text" class="inputBox" value="" id="teacherName">
+                </li>
+            </ul>
+            <div class="searchBtn">
+                <a class="exSearch" href="javascript:;" id="exSearch"><i></i>搜索课程</a>
+                <!-- <a href="javascript:;" class="moreSel"><i id="moreSel" data-times="0"></i>更多条件</a> -->
+                <div class="tips">
+                    <i class="tri"></i>
+                    <p>搜素条件中至少要包含一项学生/老师信息</p>
+                </div>
+            </div>
+        </div>
+       <!--  <div class="moreCondition" id="moreCondition">
+           <ul class="conditionList clearfix">
+               <li>
+                   <span class="mr16">学员账号</span>
+                   <input type="text" class="inputBox">
+               </li>
+               <li class="line">|</li>
+               <li>
+                   <span class="mr16">开课时间</span>
+                   <input type="text" class="inputBox">
+               </li>
+               <li class="line">|</li>
+               <li>
+                   <span class="mr16">开课时间</span>
+                   <input type="text" class="inputBox">
+               </li>
+               <li class="line">|</li>
+               <li class="last">
+                   <span class="mr16">开课时间</span>
+                   <input type="text" class="inputBox">
+               </li>
+           </ul>
+       </div> -->
+       <div class="copyTip">
+           <span id="showCopy">复制成功</span>
+       </div>
+        <ul class="list" id="list" style="display:block;">
+            <li class="child clearfix">
+                <div class="classIntro">
+                    <ul class="tags" id="tags">
+                        <li>12:00</li>
+                        <li>1对1</li>
+                        <li>体验课</li>
+                    </ul>
+                    <ul class="ids" id="ids">
+                        <li>
+                            <span class="left">
+                                <b>课程ID:</b>
+                                <i>24354</i>
+                            </span>
+                            <a href="javascript:;" class="right copy">复制</a>
+                        </li>
+                        <li class="last">
+                            <span class="left">
+                                <b>教材ID:</b>
+                                <i>24354</i>
+                            </span>
+                            <a href="javascript:;" class="right copy">复制</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="classTitle" id="classTitle">
+                    经典英语 Level 7 （成人第二版） > 第一单元 我的暑假  > 第二课 这些照片真神奇啊！
+                </div>
+                <div class="lll half" id="leftRoom">
+                    <div class="title lineInfo"></div>
+                    <ul class="loginInfo"></ul>
+                </div>
+                <div class="rrr half" id="rightRoom">
+                    <div class="title lineInfo"></div>
+                    <ul class="loginInfo"></ul>
+                </div>
+                <ul class="stInfo clearfix">
+                    <li class="infoList clearfix">
+                        <ul id="stuInfo">
+                            <li>
+                                <span class="left">
+                                    <b>学生：</b>
+                                    <i>Animal</i>
+                                </span>
+                                <span class="class inclass">在教室</span>
+                            </li>
+                            <li>
+                                <span class="left">
+                                    <b>I D：</b>
+                                    <i>24354</i>
+                                </span>
+                                <a href="javascript:;" class="right copy">复制</a>
+                            </li>
+                            <li>
+                                <span class="left">
+                                    <b>所属：</b>
+                                    <i>美国小学</i>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="left">
+                                    <b>手机：</b>
+                                    <i>13912345678</i>
+                                </span>
+                                <a href="javascript:;" class="right copy">复制</a>
+                            </li>
+                            <li>
+                                <span class="left">
+                                    <b>版本：</b>
+                                    <i>Mac AC 1.3.0.1</i>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="left">
+                                    <b>Q Q：</b>
+                                    <i>3456431345</i>
+                                </span>
+                                <a href="javascript:;" class="right copy">复制</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="infoList clearfix last"> 
+                        <ul id="teaInfo">
+                            <li>
+                                <span class="left">
+                                    <b>老师：</b>
+                                    <i>BBnimal</i>
+                                </span>
+                                <span class="class notInclass">不在教室</span>
+                            </li>
+                            <li>
+                                <span class="left">
+                                    <b>I D：</b>
+                                    <i>24354</i>
+                                </span>
+                                <a href="javascript:;" class="right copy">复制</a>
+                            </li>
+                            <li>
+                                <span class="left">
+                                    <b>所属：</b>
+                                    <i>PH HBT</i>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="left">
+                                    <b>手机：</b>
+                                    <i>13912345678</i>
+                                </span>
+                                <a href="javascript:;" class="right copy">复制</a>
+                            </li>
+                            <li>
+                                <span class="left">
+                                    <b>版本：</b>
+                                    <i>Mac AC 1.3.0.1</i>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="left">
+                                    <b>Q Q：</b>
+                                    <i>3456431345</i>
+                                </span>
+                                <a href="javascript:;" class="right copy">复制</a>
+                            </li>
+                            <li></li>
+                            <li>
+                                <span class="left">
+                                    <b>Skype：</b>
+                                    <i>345643163</i>
+                                </span>
+                                <a href="javascript:;" class="right copy">复制</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="enterBox clearfix">
+                    <a href="javascript:;" class="enterRoom" id="enterRoom">进入教室</a>
+                </div>
+            </li>
+        </ul>
+        <div class="searchBox" id="searchBox">
+            <img src="/images/html/AC/searching.gif">
+        </div>
+        <div class="searchBox wait" id="waitSearch">
+            <img src="/images/html/AC/waitSearch.png">
+            <p>输入相关信息，搜索课程！</p>
+        </div>
+        <div class="searchBox noContent" id="noContent">
+            <img src="/images/html/AC/noContent.png">
+            <p>没有找到搜索到课程</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../../js/html/project/AC/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../js/html/project/AC/ZeroClipboard.min.js"></script>
+    <script type="text/javascript" src="../../../js/html/project/AC/serviceSite.js"></script>
+</body>
+</html>

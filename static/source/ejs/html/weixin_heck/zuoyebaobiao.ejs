@@ -1,0 +1,50 @@
+<% include ../common/top_b2s.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%=csslinkb2s%>chartsChat.css">
+</head>
+<body data-init="dalasi">
+<div class="count-title">统计记录</div>
+    <div class="plr25 type-list clear-fix">
+        <div class="type-option fl">
+            <select id="typeList">
+                <!--<option value="0">请选择类型</option>-->
+                <option value="1">菲小达拉斯</option>
+                <option value="2">美小达拉斯</option>
+            </select>
+        </div>
+        <div class="type-option fl">
+            <select id="teacherList">
+                <option value="0">请选择老师</option>
+                <option value="1">老师名字1</option>
+                <option value="2">老师名字2</option>
+            </select>
+        </div>
+        <div class="by-time fl">
+            <span class="by-time-btn" data-time="1">按日</span>
+            <span class="by-time-btn" data-time="2">按周</span>
+            <span class="by-time-btn cut-sel" data-time="3">按月</span>
+        </div>
+        <div class="add-btn fr">
+            <input type="submit" id="confirmBtn" value="统计查询"/>
+        </div>
+    </div>
+<div class="show-count-option">
+    <div class="table-list clearfix">
+        <div class="clearfix">
+                <h5 class="dn">暂无统计记录！</h5>
+                <table class="show-detail show-detail-user" border="1" cellspacing="0" cellpadding="0">
+                    <thead>
+                    <tr>
+                        <th>时间</th>
+                        <th>作业批改数</th>
+                        <th>批改群数</th>
+                    </tr>
+                    </thead>
+                    <tbody id="dalasi">
+
+                    </tbody>
+                </table>
+            </div>
+    </div>
+</div>
+</body>
+<% include ../common/bottom.ejs %>

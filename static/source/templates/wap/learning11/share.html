@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />-->
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>51Talk-无忧英语</title>
+    <script src="/js/wap/project/learning11/flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/wap/learning11/learning11.css">
+</head>
+<body>
+
+<header class="header" id="container" data-init="share">
+    <img src="/images/wap/learning11/share_banner.png"  class="banner" alt="">
+</header>
+
+<section class="rota">
+    <div class="share_names">
+        <ul class="name_list">
+            <li>-小蘑菇学员抽中600元代金券-</li>
+            <li>-小蘑菇学员抽中600元代金券-</li>
+            <li>-小蘑菇学员抽中600元代金券-</li>
+        </ul>
+    </div>
+
+    <div class="dial-bg" id="lottery">
+        <ul class="l_grid clearfix">
+            <li class="l_prize l_prize-0 l_now"><img src="/images/wap/learning11/juan1.png" alt=""></li>
+            <li class="l_prize l_prize-1"><img src="/images/wap/learning11/gkk.png" alt=""></li>
+            <li class="l_prize l_prize-2"><img src="/images/wap/learning11/xiaomi.png" alt=""></li>
+            <li class="l_prize l_prize-7"><img src="/images/wap/learning11/ipd.png" alt=""></li>
+            <li class="pointer"></li>
+            <li class="l_prize l_prize-3"><img src="/images/wap/learning11/jdk2.png" alt=""></li>
+            <li class="l_prize l_prize-6"><img src="/images/wap/learning11/yf.png" alt=""></li>
+            <li class="l_prize l_prize-5"><img src="/images/wap/learning11/jdk.png" alt=""></li>
+            <li class="l_prize l_prize-4"><img src="/images/wap/learning11/juan2.png" alt=""></li>
+        </ul>
+    </div>
+
+    <div class="register">
+        <div class="caption">
+            <img alt="" src="/images/wap/learning11/reg_title.png">
+        </div>
+        <form id="regForm" action="/index/doRegister">
+            <div class="OneS_reg">
+                <ul>
+                    <li>
+                        <input id="reg1_tel" class="txt" type="tel" name="mobile" placeholder="输入您的手机号">
+                    </li>
+                    <li>
+                        <input id="reg1_code" class="txt tel_code" name="mobile_code" type="tel" placeholder="请输入验证码">
+                        <span id="send_code" class="tel_btn">获取验证码</span>
+                    </li>
+                    <li>
+                        <input id="reg1_passwd" class="txt" type="password" name="password" placeholder="设置您的密码">        
+                    </li>
+                </ul>
+                <!-- 已注册 -->
+                <p class="reg_tip hide">Hi，<span id="j_mobile"></span>，恭喜注册成功，请在上方抽奖~</p>
+                <!-- 已注册 -->
+            </div>
+            <input id="register_from" type="hidden" name="register_from" value=""/>
+            <a href="javascript:;" class="l_btn" id="regBtn">提交注册信息</a>
+            <!-- 已注册 -->
+            <a href="javascript:;" class="l_btn disabled">已注册</a>
+            <!-- 已注册 -->
+        </form>
+    </div>
+
+    <div class="rules">
+        <div class="caption">
+            <img src="/images/wap/learning11/title_rules.png" alt="">
+        </div>
+        <ul class="info">
+            <li>1.活动时间：11月4日11:00:00-11月13日 23:59:59；</li>
+            <li>2.每位同学有1次抽奖机会（仅限11月4日-13日已预约体验课学员才可以抽奖哦）；</li>
+            <li>3.中奖信息将在中奖后10分钟内发到您pc端站内信；</li>
+            <li>4.图片仅供参考，以实物为准，抽中课程或实物奖品的同学，需在11月4日-11月13日期间购买5000元及以上套餐，活动结束后，奖品由客服联系寄出；</li>
+            <li>5.本活动最终解释权归51Talk所有。</li>
+            <li>6.声明：所有产品抽奖活动与苹果公司（Apple Inc）无关。</li>
+        </ul>
+    </div>
+</section>
+
+<section class="pri-list">
+    <img class="img_item" alt="" src="/images/wap/learning11/pri_list.png" width="100%">
+    <div class="download">
+        <a href="#" class="l_btn">下载51Talk App</a>
+    </div>
+</section>
+
+<section class="footer">
+    <p class="info">Copyright©北京大生知行科技有限公司</p>
+</section>
+
+<!-- 我的奖品 -->
+<div class="dialog hide" id="dialog">
+    <div class="zoomIn animated info">
+        <div class="box">
+            <a href="javascript:;" class="close"></a>
+            <div class="prize_tip">
+                <div class="tt">您已抽中大奖！</div>
+                <div class="con">
+                    请登录APP或官网双11活动页面查看中奖记录！
+                </div>
+                <a href="#" class="app_btn">前往APP拿奖</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 我的抽奖记录和未抽奖 -->
+<div class="dialog3 hide" id="j_tip">
+    <div class="zoomIn animated tip">
+        <a href="javascript:;" class="close"></a>
+        <div class="text">
+            <img class="ic_face" src="/images/wap/learning11/face.png" alt="">您已注册<br/>可登录app或官网参加活动哦！
+        </div>
+    </div>
+</div>
+</body>
+
+<script id="seajsnode" src="/js/wap/project/learning11/vendor.js"></script>
+</html>

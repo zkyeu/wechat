@@ -1,0 +1,559 @@
+@charset "UTF-8";
+
+// 导入core中的基础文件
+//-----------------------------------------------------
+@import "sassCore/_base";
+
+
+//*, :after, :before{ @include box-sizing; }
+
+// dev 图片路径
+// $imgPath : '../image/';
+
+
+.wrapper,.pages,.page{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.wrapper{
+  min-width: 320px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.pages{
+  // overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.page{ overflow: hidden; }
+
+
+.m-sign-up{
+  @include ir;
+  position: absolute;
+  bottom: 0; left: 50%;
+  width: 1.1rem;
+  height: 1rem;
+  margin-left: -0.5rem;
+  background: rgba(0, 0, 0, 0.5) url(#{$imgPath}sign-up.png) center bottom no-repeat;
+  background-size: auto 80%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+
+// 第一屏
+//-----------------------------------------------------
+section[data-id="1"] {
+  background-color: #f3f3f3;
+  .m-hd{
+    @include display-flex;
+    @include align-items;
+    height: 10%;
+    background-color: #ffba00;
+    $indent: 0.22rem;
+    .logo{
+        @include ir;
+        display: block;
+        width: 2.17rem;
+        height: 0.69rem;
+        margin-left: $indent;
+        background: url(#{$imgPath}logo.png) 0 0 no-repeat;
+        background-size: contain;
+    }
+    .slogan{
+      margin-left: $indent;
+      font-size: 0.24rem;
+      color: #000;
+    }
+  }
+  [class|=m-sec]{
+    @include display-flex;
+    @include justify-content(space-between);
+    @include align-items;
+    height: 30%;
+    position: relative;
+  }
+  .m-sec-1{
+    background: #323336 url(#{$imgPath}sec-black.png) center 20% no-repeat;
+    background-size: cover;
+    .u-img{
+      position: absolute;
+      bottom: 0; left: 0;
+      width: auto;
+      max-height: 85%;
+    }
+    .text{
+      margin-right: 1rem;
+      line-height: 1.75;
+      color: #fff;
+    }
+    .post, .desc{ font-size: 0.24rem; }
+    .name{
+      line-height: 1.5;
+      font-size: 0.48rem;
+      text-shadow: 0 0.1rem 0.28rem rgba(4, 0, 0, 0.51);
+    }
+  }
+  .m-sec-2{
+    .text{
+      margin-left: 0.3rem;
+      line-height: 1.2;
+    }
+    .num{
+      font-size: 0.85rem;
+      text-shadow: 0 0.1rem 0.28rem rgba(4, 0, 0, 0.19);
+    }
+    .desc{ font-size: 0.32rem; }
+    .u-img{
+      position: absolute;
+      right:0; bottom: 0;
+      width: auto;
+      max-height: 85%;
+    }
+  }
+  .m-sec-3{
+    background: #323336 url(#{$imgPath}sec-black.png) center 80% no-repeat;
+    background-size: cover;
+    .u-img{
+      position: absolute;
+      top: 0; left: 0.5rem;
+      width: auto;
+      max-height: 90%;
+    }
+    .text{
+      margin-right: 1rem;
+      line-height: 1.5;
+      font-size: 0.5rem;
+      color: #fff;
+    }
+  }
+}
+
+
+// 第二屏
+//-----------------------------------------------------
+section[data-id="2"] {
+  background-color: #333437;
+}
+.m-slide{
+  width: 100%;
+  height: 100%;
+  background: #323336 url(#{$imgPath}sec-black.png) center center no-repeat;
+  background-size: 100%;
+  $indent: 0.4rem;
+  li{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .name{
+    padding: $indent*1.5 $indent 0;
+    font-size: 0.73rem;
+    color: #7fa6fe;
+    text-shadow: 0 0.09rem 0.24rem rgba(6, 0, 1, 0.75);
+  }
+  .post{
+    padding-top: 0.45rem;
+    padding-left: $indent;
+    font-size: 0.38rem;
+    color: #fff;
+  }
+  .desc{
+    padding: $indent $indent 0;
+    line-height: 1.75;
+    font-size: 0.24rem;
+    color: #fff;
+  }
+  .per{
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .u-img{
+    max-width: 86%;
+    max-height: 100%;
+  }
+  li[data-slide="1"]{
+    background: url(#{$imgPath}sec-2-1-bg.png) center center no-repeat;
+    background-size: 86%;
+    .post{
+      padding: 0;
+      margin-left: 0.2rem;
+      color: #7fa6fe;
+      vertical-align: bottom;
+    }
+    .u-img{ @include matrix(1, 0, 0, 1, 0, 30); }
+  }
+  li[data-slide="2"]{
+    background: url(#{$imgPath}sec-2-2-bg.png) 0.3rem 0.8rem no-repeat;
+    background-size: 80%;
+    .name{ color: #ff79bb; }
+    .desc{ width: 3.5rem; }
+    .u-img{ @include matrix(1, 0, 0, 1, 60, 0); }
+  }
+  li[data-slide="3"]{
+    background: url(#{$imgPath}sec-2-3-bg.png) right 2rem no-repeat;
+    background-size: 90%;
+    .name{ color: #ff7b7b; }
+  }
+  li[data-slide="4"]{
+    background: url(#{$imgPath}sec-2-4-bg.png) 2rem 1.5rem no-repeat;
+    background-size: 40%;
+    .name{ color: #ff9979; }
+  }
+}
+.slide-pages{
+  a{
+    @include ir;
+    position: absolute;
+    top: 50%;
+    margin-top: -0.48rem;
+    display: block;
+    width: 0.25rem;
+    height: 0.97rem;
+    background: url(#{$imgPath}slide-pages.png) 0 0 no-repeat;
+    background-size: cover;
+  }
+  .prev{
+    left: 0.35rem;
+    background-position: 0 0;
+  }
+  .next{
+    right: 0.35rem;
+    background-position: right 0;
+  }
+}
+
+
+// 第三屏
+//-----------------------------------------------------
+section[data-id="3"] {
+  background-color: #f3f3f3;
+  .text,.book{
+    @include display-flex;
+    // @include justify-content;
+    @include align-items;
+  }
+  // 主修课
+  .m-sec-1{
+    @include display-flex;
+    height: 33%;
+    background: #323336 url(#{$imgPath}sec-black.png) center 20% no-repeat;
+    background-size: cover;
+    .book{
+      @include flex(1);
+      padding-top: 0.24rem;
+      padding-left: 0.3rem;
+    }
+    .u-img{ max-width: 80%; }
+    .text{ @include flex(1.4); }
+    .cont{
+      padding-right: 0.3rem;
+      line-height: 1.75;
+      color: #fff;
+    }
+    .name{
+      line-height: 1.5;
+      font-size: 0.6rem;
+      text-shadow: 0 .1rem .28rem rgba(4,0,0,.51);
+    }
+    .desc{ font-size: 0.24rem; }
+  }
+  // 专业课
+  .m-sec-2{
+    height: 34%;
+    text-align: center;
+    .title{
+      padding-top: 0.4rem;
+      font-size: 0.6rem;
+      color: #936c00;
+    }
+    ul{
+      @include display-flex;
+      @include justify-content(space-between);
+      padding: 0 0.3rem;
+    }
+    li{
+      font-size: 0.24rem;
+      &:nth-child(1),&:nth-child(5){
+        // @include matrix(1, 0, 0, 1, 0, -10);
+        margin-top: -10px;
+      }
+      &:nth-child(2),&:nth-child(4){
+        // @include matrix(1, 0, 0, 1, 0, 10);
+        margin-top: 10px;
+      }
+      &:nth-child(3){
+        // @include matrix(1, 0, 0, 1, 0, 25);
+        margin-top: 25px;
+      }
+    }
+    .icon{
+      $eleWidth: 1rem;
+      display: block;
+      width: $eleWidth;
+      height: $eleWidth;
+      margin-bottom: 0.04rem;
+      background: url(#{$imgPath}sec-3-2-cou.png) 0 center no-repeat;
+      background-size: cover;
+       @for $i from 0 through 5 {
+        &.item-#{$i+1}) { background-position: -0.025rem + -$eleWidth * $i center; }
+      }
+    }
+  }
+  // 更多选修课
+  .m-sec-3{
+    @include display-flex;
+    position: relative;
+    height: 33%;
+    background: #323336 url(#{$imgPath}sec-black.png) center 80% no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    .text{ @include flex(0.9); }
+    .cont{
+      padding-left: 0.3rem;
+      line-height: 1.75;
+      color: #fff;
+    }
+    .name{
+      width: 5em;
+      line-height: 1.5;
+      font-size: 0.6rem;
+      text-shadow: 0 .1rem .28rem rgba(4,0,0,.51);
+    }
+    .desc{
+      width: 3rem;
+      font-size: 0.28rem;
+    }
+    .per{
+      @include flex(1.1);
+      position: absolute;
+      right: 0; bottom: 0;
+      text-align: right;
+    }
+    .u-img{ max-width: 55%; }
+  }
+}
+
+
+// 第四屏
+//-----------------------------------------------------
+section[data-id="4"] {
+  background-color: #fff;
+  [class|=m-sec]{
+    height: 30%;
+    .name{ font-size: 0.6rem; }
+  }
+  .text,.news,.wechat{
+    float: left;
+    width: 50%;
+    height: 100%;
+    @include display-flex;
+    @include justify-content(center);
+    @include align-items;
+  }
+  // 腾讯网
+  .m-sec-1{
+    background: #323336 url(#{$imgPath}sec-black.png) center 20% no-repeat;
+    background-size: cover;
+    .brand{
+      float: left;
+      width: 50%;
+      height: 100%;
+      @include box-sizing;
+      @include display-flex;
+      @include align-items;
+      padding-left: 0.5rem;
+    }
+    .u-img{ max-width: 100%; }
+    .cont{
+      padding-bottom: 0.3rem;
+      line-height: 1.5;
+      color: #fff;
+    }
+    .name{ text-shadow: 0 0.1rem 0.28rem rgba(4,0,0,0.51); }
+    .desc{ font-size: 0.24rem; }
+  }
+  // 中国日报
+  .m-sec-2{
+    .cont{
+      padding-bottom: 0.3rem;
+      padding-left: 0.3rem;
+      line-height: 1.5;
+      color: #656565;
+    }
+    .name{ text-shadow: 0 0.1rem 0.09rem rgba(4,0,0,0.13); }
+    .desc{
+      font-size: 0.24rem;
+      color: #929292;
+    }
+    .news{
+      @include box-sizing;
+      padding-top: 0.3rem;
+      padding-left: 0.3rem;
+    }
+    .u-img{ max-width: 90%; }
+  }
+  // 微信二维码
+  .m-sec-3{
+    .wechat{ text-align: center; }
+    .u-img{ max-width: 60%; }
+    .cont{
+      line-height: 1.5;
+      color: #323336;
+    }
+    .name{
+      font-size: 0.6rem;
+      text-shadow: 0 0.1rem 0.28rem rgba(4,0,0,0.51);
+    }
+    .desc{ font-size: 0.3rem; }
+    .btn{
+      display: inline-block;
+      width: 2.48rem;
+      height: 0.72rem;
+      line-height: 0.72rem;
+      margin-top: 0.3rem;
+      font-size: 0.24rem;
+      color: #ff4e00;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 0.03rem;
+      box-shadow: 0 0.16rem 0.32rem 0 rgba(6, 0, 1, 0.15);
+    }
+    background-color: #feba00;
+  }
+  .m-ft{
+    @include display-flex;
+    @include align-items;
+    height: 10%;
+    line-height: 1.5;
+    font-size: 0.24rem;
+    color: #5b4300;
+    text-align: center;
+    background-color: #c89200;
+    p{ width: 100%; }
+    a{ color: #5b4300; }
+  }
+}
+
+
+// media queries
+//-----------------------------------------------------
+@include max-screen(319px){
+  html{ font-size: 45px; }
+}
+
+@include min-screen(320px){
+  .m-slide{
+    .u-img{ max-width: 55%; }
+    li[data-slide="2"] .u-img{ max-width: 65%; }
+    li[data-slide="3"]{
+      .per{ text-align: left; }
+      .u-img{ max-width: 75%; }
+    }
+  }
+  section[data-id="3"]{
+    .m-sec-1 .u-img{ max-width: 50%; }
+    .m-sec-1 .name,.m-sec-2 .title,.m-sec-3 .name{ font-size: 0.4rem; }
+    .m-sec-2 .title{ padding-top: 0.2rem; }
+    .m-sec-2 ul{ margin-top: -0.3rem; }
+    .m-sec-3 .u-img{ max-width: 50%; }
+  }
+}
+
+@include min-screen(340px){
+  .m-slide{
+    .u-img{ max-width: 86%; }
+    li[data-slide="2"] .u-img{ max-width: 100%; }
+    li[data-slide="3"]{
+      .per{ text-align: center; }
+      .u-img{ max-width: 125%; }
+    }
+    section[data-id="3"]{
+      .m-sec-1 .u-img{ max-width: 80%; }
+      .m-sec-1 .name,.m-sec-2 .title,.m-sec-3 .name{ font-size: 0.6rem; }
+      .m-sec-2 .title{ padding-top: 0.4rem; }
+      .m-sec-2 ul{ margin-top: 0; }
+      .m-sec-3 .u-img{ max-width: 55%; }
+    }
+  }
+}
+
+@include min-screen(360px){
+}
+
+@include min-screen(400px){
+}
+
+@include min-screen(480px){
+  html{ font-size: 55px; }
+}
+
+@include min-screen(540px){
+  html{ font-size: 60px; }
+}
+
+@include min-screen(640px){
+  html{ font-size: 65px; }
+}
+
+@include min-screen(720px){
+  html{ font-size: 70px; }
+}
+
+@include min-screen(768px){
+  html{ font-size: 90px; }
+  .wrapper{ box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+  section[data-id="3"]{
+    .m-sec-2 li{
+      &:nth-child(2),&:nth-child(4){
+        // @include matrix(1, 0, 0, 1, 0, 25);
+        margin-top: 25px;
+      }
+      &:nth-child(3){
+        // @include matrix(1, 0, 0, 1, 0, 45);
+        margin-top: 45px;
+      }
+    }
+    .m-sec-3 .u-img{ max-width: 75%; }
+  }
+}
+
+@include iphone4{
+}
+
+@include iphone6-plus{
+  html{ font-size: 55px; }
+  section[data-id="1"]{
+     .m-sec-1{
+      .post, .desc{ font-size: 0.3rem; }
+      .name{ font-size: 0.6rem; }
+    }
+  }
+  .m-slide{
+    .desc{ font-size: 0.3rem; }
+    li[data-slide="2"] .desc { width: 4.5rem; }
+  }
+  section[data-id="3"]{
+    .m-sec-2 .title{ padding-top: 0.5rem; }
+    .m-sec-2 li{
+      &:nth-child(2),&:nth-child(4){
+        // @include matrix(1, 0, 0, 1, 0, 25);
+        margin-top: 25px;
+      }
+      &:nth-child(3){
+        // @include matrix(1, 0, 0, 1, 0, 45);
+        margin-top: 45px;
+      }
+    }
+  }
+}
+
+@include ipad{
+  .m-slide li[data-slide="1"] .u-img{
+    @include matrix(1, 0, 0, 1, 0, 60);
+    max-width: 80%;
+  }
+}

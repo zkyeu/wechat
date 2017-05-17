@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta content="yes" name="apple-mobile-web-app-capable" /> 
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+    <meta content="telephone=no" name="format-detection" /> 
+    <title>手机复赛视频下载</title>
+    <script src="<%= jsPath %>flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="<%= csslink %>">
+</head>
+<body>
+<div class="vedio_page" data-init="index" id="container"> 
+    <div class="upload">
+        <div class="upload_obj">
+            <div class="pic">
+                <img src="<%=imagessrc%>vedioBg.png" class="width100 videoPic" data-src="<%= imagessrc %>video.mp4" />
+            </div>
+            <div class="inrto">
+                <h3>可心</h3>
+                <p class="group">1-3年级小低组 北京</p>
+                <p>转发朋友圈集赞，赢取人气奖</p>
+            </div>
+        </div>
+        <div class="rule">
+                        人气评选规则：作品审核通过可以分享至微信朋友圈或微博集赞，
+            集满50个可前往51Talk美国小学公众号发送点赞截图，赢取创意
+            奖！
+        </div>
+        <div class="shareEntry shareEntryLoad"></div>
+        <div class="upload_btn">
+            <a href="javascript:;" class="getBtn">
+                <img src="<%=imagessrc%>getBtn.jpg" class="width100" />
+            </a>
+        </div>
+    </div>
+    <div class="relatedvedio">相关视频</div>
+    <div class="vedio_foot">
+        <div class="list">
+            <div class="vedio">
+                <img src="<%= imagessrc %>upload.png" class="width100 videoPic" data-src="" />
+            </div>
+            <div class="intro">
+                <h3>快乐的小吉妞妞一小子</h3>
+                <h3>dorem</h3>
+                <p>郝昕陈</p>
+                <p>幼儿组（3-6岁）</p>
+            </div>
+        </div>
+         <div class="list">
+            <div class="vedio">
+                <img src="<%= imagessrc %>upload.png" class="width100 videoPic" data-src="" />
+            </div>
+            <div class="intro">
+                <h3>快乐的小吉妞妞一小子</h3>
+                <h3>dorem</h3>
+                <p>郝昕陈</p>
+                <p>幼儿组（3-6岁）</p>
+            </div>
+        </div>
+         <div class="list">
+            <div class="vedio">
+                <img src="<%= imagessrc %>upload.png" class="width100 videoPic" data-src="" />
+            </div>
+            <div class="intro">
+                <h3>快乐的小吉妞妞一小子</h3>
+                <h3>dorem</h3>
+                <p>郝昕陈</p>
+                <p>幼儿组（3-6岁）</p>
+            </div>
+        </div>    
+    </div>
+    <!-- 导航 -->
+    <div class="wap_nav">
+        <div class="list"><a href="javascript:;">首页</a></div>
+        <div class="list"><a href="javascript:;">初赛</a></div>
+        <div class="list"><a href="javascript:;" class="active">复赛视频</a></div>
+    </div>
+</div>
+<!-- 视频播放 -->
+<div class="video_mask wap_video_mask" style="display:none">
+  <video style="height:422px;width:100%;" class="videoMain" controls="controls" >
+      <source src="" type="video/mp4">
+        Your browser does not support the video tag.
+ </video>
+</div>
+ <!-- 分享列表 -->
+<div class="share_mask  hide"></div>
+<ul class="shareList_center bdsharebuttonbox hide" data-tag="share_1">
+    <li><div class="sharebox"><a href="javascript:;"  class="o_weixin" data-cmd="weixin"></a></div></li>
+    <li><div class="sharebox"><a href="javascript:;" class="o_sqq" data-cmd="sqq"></a></div></li>
+    <li><div class="sharebox"><a href="javascript:;" class="o_tsina" data-cmd="tsina"></a></div></li>
+    <li><div class="sharebox"><a href="javascript:;" class="o_qzone" data-cmd="qzone"></a></div></li>
+</ul>
+<!-- 分享出去的浮层 -->
+<div class="shareTo hide">
+    <p>点击右上角分享</p>
+    <i></i>
+</div>
+<script id="seajsnode" src="<%= jssrc %>"></script>
+</body>
+</html>

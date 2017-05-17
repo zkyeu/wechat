@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta content="yes" name="apple-mobile-web-app-capable" /> 
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+    <meta content="telephone=no" name="format-detection" /> 
+    <title>51Talk-无忧英语_wap</title>
+    <script src="<%= jsPath %>flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="<%= csslink %>">
+</head>
+<body>
+<div class="vedio_page" data-init="index" id="container"> 
+    <ul class="download">
+        <li><a href="javascript:;" class="title">2017年第一届51Talk之星大赛复赛小低组试题</a><span><a href="" class="downTest"></a></span></li>
+        <li class="border0"><a href="javascript:;" class="title">2017年第一届51Talk之星大赛复赛小低组试题</a><span><a href="" class="downTest"></a></span></li>
+    </ul>
+    <div class="upload">
+        <div class="upload_obj">
+            <div class="pic picVideo">
+                <!-- <img src="<%=imagessrc%>upload.png" class="width100 videoPic" data-src="<%= imagessrc %>video.mp4" /> -->
+                <video style="height:100%;width:100%;background:#000;" class="videoMain"  style="display:none">
+                  <source src="<%= imagessrc %>video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+               </video>
+               <span class="player"></span>
+            </div>
+            <div class="inrto">
+                <h3>可心</h3>
+                <p class="group">1-3年级小低组 北京</p>
+                <p>转发朋友圈集赞，赢取人气奖</p>
+            </div>
+        </div>
+        <div class="rule">
+                        人气评选规则：作品审核通过可以分享至微信朋友圈或微博集赞，
+            集满50个可前往51Talk美国小学公众号发送点赞截图，赢取创意
+            奖！
+        </div>
+        <div class="shareEntry shareEntryLoad"></div>
+        <div class="upload_btn">
+            <a href="javascript:;" class="startUpload">上传视频</a>
+        </div>
+    </div>
+    <div class="vedio_require">
+        <h2>初赛视频短片要求</h2>
+        <p> 1、参赛选手将分为两个组别：小低组（1-3年级）小高组（4-6年级）<br />
+            2、视频时长：1-3分钟<br />
+            3、视频主题<br />
+                 小低组：3分钟看图说话，小低组参赛题下载（任选其一）<br />
+                 小高组：命题演讲，小高组参赛题下载（任选其一）<br />
+            4、参赛形式：根据小低组、小高组的复赛视频试题要求选择其中一个题目进行视频演讲。<br />
+            5、表演方式：请以英文自我介绍为开头+小高组题目或小低组题目进行演讲<br />
+            6、没人仅限一部作品参赛<br />
+            7、表演者为参赛者本人，乳有弄虚作假，一经发现，立即取消比赛资格<br />
+            8、参赛作品需原创，参赛作品必须由参赛者本人原创，参赛者应确认 拥有作品的著作权。组委会不承担包括（不限于）肖 像权、名誉权、隐私权、著作权、商标权等纠纷而产生的法律责任，如出现上述纠纷，主办方保留取消其参赛资格</p>
+    </div>
+
+     <!-- 导航 -->
+    <div class="wap_nav">
+        <div class="list"><a href="javascript:;">首页</a></div>
+        <div class="list"><a href="javascript:;">初赛</a></div>
+        <div class="list"><a href="javascript:;" class="active">复赛视频</a></div>
+    </div>
+    <!-- 成功上传提示 -->
+    <div class="ufb ufb_sucess" style="display:none">
+        <div class="uploadfeedback uploadSucess">
+                您的视频已成功上传，工作人员会在24小时内完成审核。
+        请耐心等待！
+        </div>
+    </div>
+    <div class="ufb ufb_fail" style="display:none">
+         <div class="uploadfeedback uploadfail">
+                您上传的视频由于内容不符合标准或重复，视频审核不成功，请重新上传！
+        </div>
+    </div>
+
+    <!-- 登录信息 -->
+    <input id="j_login_status" type="hidden" value="0"/>
+    <!-- 登录信息 -->
+</div>
+<!-- 上传视频 -->
+<div class="upload_module" style="display:block">
+    <div class="animated zoomIn upload_dialog">
+        <div class="dialogIn">
+            <div class="uploadIn">
+                <div class="main">
+                   <div class="mainIn">
+                        <h2>上传视频</h2>
+                        <p class="error"></p>
+                        <form enctype="multipart/form-data" method="post" action="" id="videoForm">
+                            <div class="productname inforList">
+                                <input type="text" placeholder="作品名称" class="inputbox" />
+                            </div>
+                            <div class="productfile inforList">
+                                <div class="file">视频（最长时长3分钟）</div>
+                                <div class="loadbtn">浏览
+                                    <input type="file" name="" id="fileToUpload" accept="video/*">
+                                </div>
+                            </div>
+                            <div class="request">
+                                支持格式mp4、flv、mov、3GP、ASF，视频限50MB以下。使用手机拍摄时，为了保证最佳呈现效果，请横置手机拍摄，为保证视频顺利上传，若您上传的视频超过1分钟建议使用PC端上传，请耐心等待。
+                            </div>
+                            <div class="progress">
+                                <div class="bar"></div>
+                            </div>
+                        </form>
+                       </div>
+                </div>
+                <div class="stsOut">
+                    <div class="status">上传视频</div>
+                </div>
+            </div>
+        </div>
+       <!--  <div class="status loadsucess">上传完成</div> -->
+        <!-- <div class="status">上传视频</div> -->
+    </div>
+</div>
+<!-- 视频播放 -->
+<div class="video_mask wap_video_mask" style="display:none">
+  <video style="height:422px;width:100%;" class="videoMain" controls="controls"  >
+      <source src="" type="video/mp4">
+        Your browser does not support the video tag.
+ </video>
+</div>
+ <!-- 分享列表 -->
+<div class="share_mask hide"></div>
+<ul class="shareList_center bdsharebuttonbox hide animated zoomIn" data-tag="share_1">
+    <li><div class="sharebox"><a href="javascript:;"  class="o_weixin" data-cmd="weixin"></a></div></li>
+    <li><div class="sharebox"><a href="javascript:;" class="o_sqq" data-cmd="sqq"></a></div></li>
+    <li><div class="sharebox"><a href="javascript:;" class="o_tsina" data-cmd="tsina"></a></div></li>
+    <li><div class="sharebox"><a href="javascript:;" class="o_qzone" data-cmd="qzone"></a></div></li>
+</ul>
+
+<!-- 分享出去的浮层 -->
+<div class="shareTo hide">
+    <p>点击右上角分享</p>
+    <i></i>
+</div>
+</div>
+</body>
+<script id="seajsnode" src="<%= jssrc %>"></script>
+</html>

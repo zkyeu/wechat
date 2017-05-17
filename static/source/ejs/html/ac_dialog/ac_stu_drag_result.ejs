@@ -1,0 +1,52 @@
+<% include ../common/top.ejs %>
+<%
+    var pageTag = {
+        gType : "drag",
+        pType : "stu",
+        fType : "result",
+        dragType : "1"
+    }
+%>
+<% include module/drag/h.ejs %>
+	<div class="ac-tem">
+
+        <% include module/drag/t.ejs %>
+
+	    <div class="ac-tem-con">
+            <div class="ac-tem-wrap">
+                <!-- 倒计时模块 -->
+                <% include module/drag/i.ejs %>
+
+                <!-- 答题模块 -->
+                <% include module/drag/m.ejs %>                    
+
+            </div>
+	    </div>
+	</div>
+<form method="post" action="#" name="gamePlay">
+    <input type="hidden" name="drag_result" value="0" />
+</form>
+<div class="ac-stu-mask"></div>
+<div class="ac-stu-results" complete-audio-url="<%= imagessrc%>ac-complete.mp3">
+    <img src="<%= imagessrc%>p_level0.png" />
+    <div class="results-t">回答正确<span>0</span></div>
+</div>
+
+<!-- <div class="ac-stu-results">
+    <img src="<%= imagessrc%>p_level1.png" />
+    <div class="results-t">回答正确<span>0</span></div>
+</div> -->
+
+<!-- <div class="ac-stu-results">
+    <img src="<%= imagessrc%>n_level2.png" />
+    <div class="results-t">回答正确<span>0</span></div>
+</div>
+ -->
+ 
+<!-- <div class="ac-stu-results">
+    <img src="<%= imagessrc%>n_level3.png" />
+    <div class="results-t">回答正确<span>0</span></div>
+</div> -->
+
+</body>
+<% include ../common/bottom.ejs %>

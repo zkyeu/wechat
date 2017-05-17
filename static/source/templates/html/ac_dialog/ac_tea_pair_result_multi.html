@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="app下载专页">
+    <meta name="keywords" content="app下载专页">
+    <title>欢迎下载51Talk App</title>
+    <link rel="stylesheet" type="text/css" href="/css/html/ac_dialog/ac_dialog.css">
+</head>
+<body class="ac-tem-pair ac-tem-tea" data-init="acPair" swfHref="" audioPath="" page-tag="pair,tea,result_multi">
+	<div class="ac-tem">
+		<div class="ac-tem-tit">
+			<span class="ac-tem-tit-bg"></span>
+			<div class="ac-tem-tit-in ac-tem-wrap clearfix">
+				<a href="javascript:void(0);" class="ac-close fr">Go back to class</a>
+			</div>
+		</div>
+	    <div class="ac-tem-con ac-tem-wrap">
+	    	<div class="ac-tem-info">
+				<ul class="clearfix">
+	            	<li class="ac-timmer z2001">
+	            		<span></span>
+	            	</li>
+	            	<!-- <li class="ac-beans">
+                        <span>+999</span>
+                    </li> -->
+	            </ul>
+	    	</div>
+	        <div class="ac-tem-content"></div>
+            <div class="ac-tem-result-multi">
+                <ul class="result-multi">
+                    <li>水平为“棒极了”的学员：<span class="level2" data-flag="excellent">0人</span></li>
+                    <li>水平为“非常好”的学员：<span class="level1" data-flag="very_good">0人</span></li>
+                    <li>水平为“要努力喽”的学员：<span class="level0" data-flag="do_better">0人</span></li>
+                </ul>
+            </div>
+	    </div>
+	</div>
+<form name="class-info" action="">
+    <input type="hidden" name="q_id" value="100" />
+    <input type="hidden" name="b2s_course_id" value="4653" />
+</form>
+<div class="ac-tem-result-mask"></div>
+<div class="ac-tem-result-wait">
+    <div class="wait-tips">
+        <a href="javascript:void(0);" class="wait-tips-close"></a>
+        <dl class="wait-tips-in">
+            <dt>Student answering now</dt>
+            <dd><span>Tips：</span>please no speaking, the student is logining his/her voice, the student is logining his/her voice, the student is logining his/her voice</dd>
+        </dl>
+    </div>
+</div>
+<script type="text/javascript">
+var dataJson = {
+    // type play 玩游戏 show 展示
+    type : "show",
+    // workTime 玩游戏的时间
+    workTime : 1000,
+    // closeTime 答案展示时间
+    closeTime : 3000,
+    // bufferTime 本道题老师端buffer时间 老师端看报告才用到
+    bufferTime : 1000,
+    // 数据
+    dataArr : [
+        // 图片地址 | 配对id | 对错状态 0 错误 1 正确 9 无状态
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|1|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|1|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|2|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|2|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|3|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|3|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|4|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|4|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|5|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|5|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|6|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|6|9'
+    ],
+    // 各种环境图片前缀
+    imgPath : ""
+};
+</script>
+</body>
+<!--公共尾部结束-->
+<script src="/js/html/project/ac_dialog/vendor.js"></script>
+</html>

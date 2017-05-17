@@ -1,0 +1,256 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Wed Jan 27 2016 14:42:09 GMT+0800 (中国标准时间)
+ */
+/*
+* 默认样式
+* @file：   base.less
+* @author:  zhuning@51talk.com）
+* @update:  2015-10-29
+* @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+*/
+html {
+  font-size: 62.5%;
+}
+@media only screen and (min-width: 481px) {
+  html {
+    font-size: 94%;
+  }
+}
+@media only screen and (min-width: 561px) {
+  html {
+    font-size: 109%;
+  }
+}
+@media only screen and (min-width: 641px) {
+  html {
+    font-size: 125%;
+  }
+}
+body {
+  padding: 0;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 640px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+}
+input,
+button,
+select,
+textarea,
+dl,
+dd,
+dt {
+  font-family: "Microsoft YaHei";
+  outline: none;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 0;
+  padding: 0px;
+  margin: 0px;
+}
+ul,
+li {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  vertical-align: middle;
+}
+b {
+  font-weight: normal;
+}
+::-moz-selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+strong {
+  font-weight: normal;
+}
+.year_red {
+  overflow: hidden;
+}
+body {
+  width: 100%;
+}
+h3 {
+  margin: 0;
+  padding: 0;
+}
+img {
+  vertical-align: top;
+  width: 100%;
+}
+a,
+h3 {
+  font-family: "Microsoft YaHei";
+}
+input {
+  background-color: transparent;
+  line-height: 1;
+}
+.search_cont {
+  background: url(../../../images/wap/year_red/red_bg.jpg?v=sTBcZRE3Tj470ydj3PVoSQ%3D%3D) left top repeat-y;
+  background-size: contain;
+  /*height: 99rem;*/
+}
+.search_cont .search_list {
+  position: relative;
+  left: 50%;
+  top: 0;
+  margin-left: -13.5rem;
+}
+.search_cont .search_list li {
+  margin-bottom: 1rem;
+}
+.search_cont .search_list li input {
+  width: 23rem;
+  height: 4.5rem;
+  padding: 0 2rem;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #bbbbbb;
+  font-size: 1.8rem;
+  border-bottom: 1px solid #dfddd4;
+}
+.search_cont .search_list li a {
+  width: 27rem;
+  height: 4.5rem;
+  background: url(../../../images/wap/year_red/reg_bg.png?v=FJQo1%2Br2Yv2b4JqmCJfyuA%3D%3D) left top no-repeat;
+  background-size: contain;
+  display: inline-block;
+  line-height: 4.5rem;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+.bottom_drop {
+  width: 1.5rem;
+  position: relative;
+  left: 50%;
+  margin-left: -0.75rem;
+  padding-bottom: 2rem;
+  -webkit-animation: arc-zoom1 0.7s linear 0s infinite alternate;
+          animation: arc-zoom1 0.7s linear 0s infinite alternate;
+  -moz-animation: arc-zoom1 0.7s linear 0s infinite alternate;
+  -o-animation: arc-zoom1 0.7s linear 0s infinite alternate;
+}
+@-webkit-keyframes arc-zoom1 {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0.8rem;
+    opacity: 0;
+  }
+}
+.img_cont {
+  margin-top: 0.1rem;
+  padding-bottom: 1rem;
+}
+.img_cont2 {
+  margin-top: 0.1rem;
+  padding-bottom: 1rem;
+}
+.img_cont2 img {
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 2rem;
+}
+.part1 {
+  width: 80%;
+  margin-left: 10%;
+}
+.part1_1 {
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 2rem;
+}
+.search_tit {
+  font-size: 1.6rem;
+  height: 3.6rem;
+  line-height: 3.6rem;
+  background-color: #e5e0d4;
+  text-align: center;
+  color: #a8a295;
+}
+.search_free {
+  background-color: #d10505;
+  overflow: hidden;
+}
+.search_free .search_list {
+  position: relative;
+  left: 50%;
+  top: 0;
+  margin-left: -13.5rem;
+  margin-bottom: 2rem;
+}
+.search_free .search_list li {
+  margin-bottom: 1rem;
+}
+.search_free .search_list input {
+  background-color: #fff;
+  color: #999;
+  width: 23rem;
+  height: 4.5rem;
+  padding: 0 2rem;
+  border-radius: 5px;
+  font-size: 1.8rem;
+}
+.search_free .search_list a {
+  background-color: #ffb731;
+  color: #d10605;
+  width: 27rem;
+  height: 4rem;
+  display: inline-block;
+  line-height: 4rem;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 2rem;
+}
+.search_free p {
+  font-size: 1.4rem;
+  color: #fdcac5;
+  text-align: center;
+  height: 3.5rem;
+}
+.bottom_top {
+  margin-top: -0.5rem;
+}
+.hide {
+  display: none;
+}

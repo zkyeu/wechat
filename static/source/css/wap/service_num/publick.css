@@ -1,0 +1,30 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Thu Dec 08 2016 19:28:09 GMT+0800 (中国标准时间)
+ */
+.p-header {
+  position: relative;
+  padding: 0 1.25rem;
+  height: 4.5rem;
+  background-color: #fff;
+}
+.p-header .logo {
+  float: left;
+  margin-top: 1rem;
+  width: 14.9rem;
+  height: 2.6rem;
+}
+.p-header .text_wrap {
+  float: right;
+  margin-top: 1rem;
+  color: #000000;
+  text-align: right;
+}
+.p-header .text_wrap .text {
+  font-size: 1.2rem;
+}
+.p-header .text_wrap .code {
+  font-size: 0.9rem;
+}

@@ -1,0 +1,35 @@
+<% include ../common/top_b2s.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%=csslinkb2s%>tableStyle.css">
+<link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>layui.css">
+</head>
+<body data-init="warnStat">
+<div class="pad20px content-width90 clearfix">
+    <div class="page-title">微信告警统计</div>
+
+    <div class="ptb20 clear-fix">
+        <div class="add-btn add-btn-float-left">
+            <!--<a href="javascript:;" >统计查询</a>-->
+            <!--<a href="javascript:;" class="cut-style">统计查询</a>-->
+        </div>
+    </div>
+    <div class="status-data"></div>
+    <div class="table-box">
+        <table class="table-detail" border="1" cellspacing="0" cellpadding="0">
+            <thead>
+                <tr>
+                    <th>CRM账号</th>
+                    <th>终端</th>
+                    <th>用户</th>
+                    <th>详情</th>
+                    <th>时间</th>
+                </tr>
+            </thead>
+            <tbody class="sel-dom">
+
+            </tbody>
+        </table>
+        <h5 class="dn">暂无相关数据！</h5>
+    </div>
+</div>
+</body>
+<% include ../common/bottom.ejs %>

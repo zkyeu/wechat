@@ -1,0 +1,113 @@
+<% include ../common/top.ejs %>
+<body id="" data-init="index">
+<!-- 公共头 -->
+<% include ../common/b2s/b2s_header.ejs %>
+<div class="dialog">
+  <div class="content">
+    <div class="tips">
+      <h4>创建班级</h4>
+      <a class="close" href="javascript:;"></a>
+    </div>
+    <div class="info"></div>
+    <div class="submit">
+        <a href="javascript:;">立即创建</a>
+    </div>
+  </div>
+</div>
+<!-- 中间内容 -->
+<div class="mycls">
+  <div class="widthMain">
+    <!-- banner -->
+    <% include ../common/b2s/b2s_banner.ejs %>
+    <div class="central">
+      <i class="cls-icon"></i>
+      <div class="stu_tit">
+        <dl>
+          <dt><img src="<%= imagessrc%>stu.jpg" alt=""></dt>
+          <dd class="intro_one"><span>流川枫</span> 同学</dd>
+          <dd>班级：三年二班</dd>
+          <dd>老师：林徽因</dd>
+        </dl>
+        <p class="stu_number">学生邀请码：123456</p>
+      </div>
+    <!-- 侧栏 -->
+    <% include ../common/b2s/b2s_sidebar.ejs %>
+      <div class="cls-main">
+        <!-- 我的班级 -->
+        <div class="cls-tab rct" id="c-rct-nav">
+          <p class="l_introduce_title"><span></span> 选择班型 <span></span></p>
+          <div class="l_introduce_class">
+            <div class="l_introduce_box in_left_box">
+              <p class="top_text">20人精品外教班36次课</p>
+              <p class="i_now_price">现价：<span>298元<span></p>
+              <p class="i_now_price i_before_price">原价：598元</p>
+              <a href="javascript:;" class="i_go_buy">立即购买</a>
+            </div>
+            <div class="l_introduce_box in_right_box">
+              <p class="top_text">6人精品外教班36次课</p>
+              <p class="i_now_price">现价：<span>668元<span></p>
+              <p class="i_now_price i_before_price">原价：998元</p>
+              <a href="javascript:;" class="i_go_buy">立即购买</a>
+            </div>
+          </div>
+          <p class="l_introduce_title"><span></span> 享受以下VIP特权 <span></span></p>
+          <div class="vip_big_border_bg">
+              <!-- <p class="vip_class_free_intro">外教精品课 <i>原价500元</i><span> +</span> 小学学科课程 <i>原价480元</i></p>
+              <p class="vip_class_before_intro">(32节)——20个VIP/节<span>(6节1对1外教课  2节1对10 外教课)</span></p>
+              <p class="vip_class_price">现价 <span>298元</span></p> -->
+              <p class="class_normal">
+                外教精品课<span>(32节)——20个VIP/节</span>
+              </p>
+              <p class="vip_class_price"><i>原价：500元 </i> 现价 <span>298元</span></p>
+              <a href="javascript:;" class="i_go_buy">立即购买</a>
+          </div>
+          <table class="l_introduce_table">
+              <thead>
+                <tr>
+                  <th width="34%" align="left">课程服务</th>
+                  <th width="44%">普通学员</th>
+                  <th width="44%" class="color1">特权学员</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>外教授课</td>
+                  <td><span class="icon-yes"></span></td>
+                  <td><span class="icon-yes"></span></td>
+                </tr>
+                <tr>
+                  <td>同步课标拓展教材</td>
+                  <td><span class="icon-yes"></span></td>
+                  <td><span class="icon-yes"></span></td>
+                </tr>
+                <tr>
+                  <td>精品课作业</td>
+                  <td><span class="icon-yes"></span></td>
+                  <td><span class="icon-yes"></span></td>
+                </tr>
+                <tr>
+                  <td>上课举手发言</td>
+                  <td><span class="icon-no"></span></td>
+                  <td><span class="icon-yes"></span></td>
+                </tr>
+                <tr>
+                  <td>上课答题</td>
+                  <td><span class="icon-no"></span></td>
+                  <td><span class="icon-yes"></span></td>
+                </tr>
+                <tr>
+                  <td>趣味课外作业</td>
+                  <td><span class="icon-no"></span></td>
+                  <td><span class="icon-yes"></span></td>
+                </tr>
+              </tbody>
+          </table>
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

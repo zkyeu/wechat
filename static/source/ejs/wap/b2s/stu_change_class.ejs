@@ -1,0 +1,23 @@
+<% include ../common/top.ejs %>
+<body class="b-box" data-init="stuTeaEntering">
+<div class="tea-box" id="documentBox">
+    <div class="tea-info">
+        <div class="e-input"><input id="teacherCode" type="text" placeholder="请输入老师给的号码"/></div>
+    </div>
+    <div class="enter-tea-info"><a href="/WapNew/Student/recordTeacherInfo">没有号码，点击录入老师信息</a></div>
+
+</div>
+<div class="sure-box btnBox" id="changeTeaSure">
+    <a href="javascript:;">确定</a>
+</div>
+<div class="mask-box hide" id="maskBox"></div>
+<div class="pop-up hide position-top" id="popUp">
+    <div class="text-info">
+        <p class="text-tit" id="textTit"></p>
+    </div>
+    <div class="p-btn-box">
+        <a href="javascript:;" class="add position-v">确定</a>
+    </div>
+</div>
+</body>
+<% include ../common/bottom.ejs %>

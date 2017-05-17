@@ -1,0 +1,30 @@
+<% include ../common/top.ejs %>
+<body>
+	<%include ../common/uc_header.ejs %>
+	<!-- 成人 -->
+	<div class="adult clearfix" data-init="certificate">
+		<div class="placeholder">这里是左侧栏占位</div>
+		<div class="container">
+			<div class="banner">
+				<img src="<%=imagessrc%>banner-adult.jpg">
+			</div>
+			<div class="tips">
+				<h6>亲爱的学员：</h6>
+				<h6>在51Talk每个level阶段都有针对性级别测试，通过不同阶段的级别测试将获得等级证书。</h6>
+			</div>
+			<div class="show">
+				<h1 class="title">证书展示</h1>
+				<div class="img-lst">
+					<img src="<%=imagessrc%>cert-adult.jpg">
+				</div>
+			</div>
+			<!-- 证书介绍及获取方式 -->
+			<%include ./module/introduce.ejs%>
+			<!-- 获取方式介绍 -->
+			<%include ./module/access.ejs%>
+		</div>
+	</div>
+	<% include ../common/uc_footer.ejs %>
+	<script src="<%=jssrc%>"></script>
+</body>
+</html>

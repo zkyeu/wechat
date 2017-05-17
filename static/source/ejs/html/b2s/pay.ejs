@@ -1,0 +1,153 @@
+<% include ../common/top.ejs %>
+<body>
+<input type="hidden" id="container" data-init="pay"/>
+<!-- 公共头 -->
+<% include ../common/b2s/b2s_header.ejs %>
+<!-- 中间内容 -->
+<div class="mycls">
+  <div class="widthMain">
+    <!-- banner -->
+    <% include ../common/b2s/b2s_banner.ejs %>
+    <div class="chang_color">
+      <i class="cls-icon"></i>
+      <form name="AC_ordeForm" id="AC_ordeForm" action="" method="post" target="_blank">
+          <p class="your_order">您的订单：</p>
+          <div class="order">
+            <p class="class_payfor"><i class="big_size">外教精品课</i> (32节)—20个VIP/节  <span class="no_price">原价300元</span></p>
+            <p class="class_free">
+              <i>获赠原价198元小学学科课程</i><span class="no_price">原价0元</span><br>
+              <i class="suc_free">(付费成功后关注服务号预约上课)</i>
+              
+            </p>
+            <!-- <p>10节寒假辅导课<span>随时赠送</span></p> -->
+          </div>
+          <p class="order_total"><span>订单总金额 ：  &nbsp;&nbsp;<span class="order-value">300元</span></span></p>
+          <div class="pay_table">
+            <div class="three_table">
+              <div class="posi_table">
+                <span class="first have_bot">第三方支付</span><span>网银支付</span><span>银行汇款</span>
+              </div>
+            </div>
+            <div class="pay_tit">
+              <div class="pay_tab third_pay">
+                <div class="boxs">
+                  <span li_pay="alipay" ></span>
+                  <div ><img src="<%= imagessrc%>alipay.png" alt=""></div>
+                </div>
+                <div class="boxs">
+                  <span li_pay="weixin"></span>
+                  <div><img src="<%= imagessrc%>weixin.png" alt=""></div>
+                </div>
+                 <div class="boxs">
+                  <span li_pay="kuaiqian"></span>
+                  <div><img src="<%= imagessrc%>kuaiqian.png" alt=""></div>
+                </div>
+                 <div class="boxs">
+                  <span li_pay="tenpay"></span>
+                  <div><img src="<%= imagessrc%>tenpay.png" alt=""></div>
+                </div>
+                 <div class="boxs">
+                  <span li_pay="unionpay"></span>
+                  <div><img src="<%= imagessrc%>unionpay.png" alt=""></div>
+                </div>
+              </div>
+              <div class="pay_tab bank_pay hide">
+                  <div class="boxs">
+                    <span li_pay="ICBC"></span>
+                    <div><img src="<%= imagessrc%>ICBC.png" alt=""></div>
+                  </div>
+                 <div class="boxs">
+                  <span li_pay="ABC"></span>
+                  <div><img src="<%= imagessrc%>ABC.png" alt=""></div>
+                </div>
+                 <div class="boxs">
+                  <span li_pay="BOC"></span>
+                  <div><img src="<%= imagessrc%>BOC.png" alt=""></div>
+                </div>
+                 <div class="boxs">
+                  <span li_pay="CCB"></span>
+                  <div><img src="<%= imagessrc%>CCB.png" alt=""></div>
+                </div>
+                 <div class="boxs">
+                  <span li_pay="BANKCOMM"></span>
+                  <div><img src="<%= imagessrc%>BANKCOMM.png" alt=""></div>
+                </div>
+                 <div class="boxs">
+                  <span li_pay="CMB"></span>
+                  <div><img src="<%= imagessrc%>CMB.png" alt=""></div>
+                </div>
+                 <div class="boxs">
+                  <span li_pay="SPDB"></span>
+                  <div><img src="<%= imagessrc%>SPDB.png" alt=""></div>
+                </div>
+                 <div class="boxs">
+                  <span li_pay="CIB"></span>
+                  <div><img src="<%= imagessrc%>CIB.png" alt=""></div>
+                </div>
+                 <div class="boxs">
+                  <span li_pay="GDB"></span>
+                  <div><img src="<%= imagessrc%>GDB.png" alt=""></div>
+                </div>
+                 <div class="boxs">
+                  <span li_pay="SDB"></span>
+                  <div><img src="<%= imagessrc%>SDB.png" alt=""></div>
+                </div>
+                 <div class="boxs">
+                  <span li_pay="CMBC"></span>
+                  <div><img src="<%= imagessrc%>CMBC.png" alt=""></div>
+                </div>
+                 <div class="boxs">
+                  <span li_pay="CITIC"></span>
+                  <div><img src="<%= imagessrc%>CITIC.png" alt=""></div>
+                </div>
+                 <div class="boxs">
+                  <span li_pay="CEBBANK"></span>
+                  <div><img src="<%= imagessrc%>CEB.png" alt=""></div>
+                </div>
+                 <div class="boxs">
+                  <span li_pay="BOB"></span>
+                  <div><img src="<%= imagessrc%>BEIJING.png" alt=""></div>
+                </div>
+                 <div class="boxs">
+                  <span li_pay="CNHB"></span>
+                  <div><img src="<%= imagessrc%>BOHAI.png" alt=""></div>
+                </div>
+                 <div class="boxs">
+                  <span li_pay="HXB"></span>
+                  <div><img src="<%= imagessrc%>HUAXIA.png" alt=""></div>
+                </div>
+                 <div class="boxs">
+                  <span li_pay="BJRCB"></span>
+                  <div><img src="<%= imagessrc%>BJRCB.png" alt=""></div>
+                </div>
+              </div>
+              <div class="pay_tab remitt_pay hide">
+                 <div class="boxs">
+                  <span li_pay="bank"></span>
+                  <div><img src="<%= imagessrc%>uino.jpg" alt=""></div>
+                </div>
+              </div>
+            </div>
+            <div class="pay_bot">
+              <!-- <input  type="checkbox" checked="checked" />  -->   
+              <span>我已阅读并同意<a href="javascript:;">51talk课程服务协议</a></span>   
+              <input type="submit" class="liji_pay" value="立即支付" />
+            </div>
+          </div>
+          <input id="L_pay" name="payMethod" value="" type="hidden" >
+      </form>
+    </div>
+  </div>
+</div>
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+</body>
+<% include ../common/bottom.ejs %>
+<div class="tanceng">
+</div>
+<div class="center">
+    <p class="pay_res">支付结果确认</p>
+    <div class="res_text">请您到新打开网银页面上进行支付，支付完成前请不要关闭该窗口。</div>
+    <a href="javascript:;" class="problem">付款遇到问题</a><a href="javascript:;" class="pay_done">我已完成支付</a>
+    <div class="close"></div>
+</div>

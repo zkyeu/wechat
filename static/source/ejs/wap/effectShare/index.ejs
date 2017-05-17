@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta content="yes" name="apple-mobile-web-app-capable" /> 
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+    <meta content="telephone=no" name="format-detection" /> 
+    <title>学习效果外化</title>
+    <link rel="stylesheet" type="text/css" href="<%= csslink%>">
+    <style id="dynamic" ></style>
+</head>
+<body> 
+	<!-- 切换入口 -->
+	<ul class="btn-switch">
+			<li><a href="javascript:;" class="ac-switch" ><span>学习进度</span></a></li>
+			<li><a href="javascript:;"><span>学习计划</span></a></li>
+	</ul>
+	<!-- 学习计划 -->
+	 <div class="studyProgress esContainer" style="display:" id="studyProgress" data-url="http://www.baidu.com">
+	 		<div class="s-banner">
+	 				<img src="<%=imagessrc%>s-banner.jpg" class="width100" />
+	 				<div class="title">
+	 					  Blue的<br />
+	 						<span>学习进度报告</span>
+	 				</div>
+	 		</div>
+	 		<div class="main" data-init="progress">
+	 				<div class="mainIn">
+	 						<h3>完成了<span>XX</span>节1对1外教课<br />累计说英语<span>XX</span>分钟</h3>
+	 						<dl>
+	 								<dt>
+	 									 <h4>
+	 									 		<!-- <i>
+	 									 			<span></span>
+	 									 		</i> -->
+	 									 		经典英语青少版
+	 									 </h4>                                                                                                                                                                                                                                                      
+	 									 <span>已完成<em> 20%</em></span>
+	 								</dt>
+	 								<dd>
+	 										<div class="pmgressbar">
+	 												<span class="red redBar" style="width:20%" data="66%"></span>
+	 										</div>
+	 								</dd>
+	 						</dl>
+	 						<dl>
+	 								<dt>
+	 									 <h4>
+	 									 		<!-- <i>
+	 									 			<span class="green"></span>
+	 									 		</i> -->
+	 									 		旅游英语
+	 									 </h4>
+	 									 <span>已完成<em class="green"> 20%</em></span>
+	 								</dt>
+	 								<dd>
+	 										<div class="pmgressbar">
+	 												<span class="green greenBar" data=""></span>
+	 										</div>
+	 								</dd>
+	 						</dl>
+	 						<dl>
+	 								<dt>
+	 									 <h4>
+	 									 		<!-- <i>
+	 									 			<span  class="blue"></span>
+	 									 		</i> -->
+	 									 		生活口语
+	 									 </h4>
+	 									 <span>已完成<em class="blue"> 20%</em></span>
+	 								</dt>
+	 								<dd>
+	 										<div class="pmgressbar">
+	 												<span class="blue blueBar" data=""></span>
+	 										</div>
+	 								</dd>
+	 						</dl>
+	 						<h3>课程学习统计数据</h3>
+							<div id="main" style="height:20rem;"></div>
+							 <input type="hidden" value="25" id="oneToOneClass" />
+               <input type="hidden" value="15" id="MiniClass" />
+               <input type="hidden" value="40" id="openClass" />
+               <input type="hidden" value="70" id="efl" />
+							<div class="s-summary">
+									<ul class="s-summaryIn">
+											<li>
+													<h4>
+															  <i class="i1"><span></span></i>    
+															  1对1外教课
+													</h4>
+													<em>20%</em>
+											</li>
+											<li>
+													<h4>
+																<i class="i2"><span></span></i>
+																精品小班课
+													</h4>
+													<em>20%</em>
+											</li>
+											<li>
+													<h4>
+															<i class="i3"><span></span></i>
+															EFL联系次数
+													</h4>
+													<em>20%</em>
+											</li>
+											<li>
+													<h4>
+															<i class="i4"><span></span></i>
+															精品公开课
+													</h4>
+													<em>20%</em>
+											</li>
+									</ul>
+							</div>
+	 				</div>
+	 		</div>
+	 </div>
+	 <!-- 学习进度 -->
+		<div class="tr_report esContainer" style="display:none " id="tr_report" data-url="http://www.baidu.com">
+			 <!-- 成人 -->
+			 <div class="ft_level">
+			 		<div class="ft_levelIn">
+			 		  <img src="<%=imagessrc%>/ft_level.png" class="level" />
+				 		<div class="ft_now ft_level1">
+				 				<h4>当前等级</h4>
+				 				<p>Level5</p>
+				 				<i></i>
+				 		</div>
+				 		<div class="ft_goal ft_goal6">
+				 				<h4>目标等级</h4>
+				 				<p>Level9</p>
+				 				<i></i>
+				 		</div>
+			 		</div>
+					<div class="title">
+							<h4>#song# 的学习计划</h4>
+							<h2></h2>
+							<h3>2016年7月12日－2016年8月11日</h3>
+					</div>
+			 </div>
+			 <!-- 青少 -->
+				 <!-- <div class="ft_level ft_level_junior">
+				 		<div class="ft_levelIn">
+				 		  <img src="<%=imagessrc%>/ft_level_junior.png" class="level" />
+					 		<div class="ft_now ft_level_junior1">
+					 				<h4>当前等级</h4>
+					 				<p>Level5</p>
+					 				<i></i>
+					 		</div>
+					 		<div class="ft_goal ft_goal_junior4">
+					 				<h4>目标等级</h4>
+					 				<p>Level9</p>
+					 				<i></i>
+					 		</div>
+				 		</div>
+				 		<div class="title">
+							<h4>#song# 的学习计划</h4>
+							<h2></h2>
+							<h3>2016年7月12日－2016年8月11日</h3>
+					</div>
+				 </div> -->
+			 <div class="ft_model">
+			 		<div class="title">
+			 				设定合理的学习计划 
+			 		</div>
+			 		<div class="ft_model_one"> 
+			 				 <ul>
+			 				 		<li>
+			 				 				<dl>
+			 				 						<dt>经典英语</dt>
+			 				 						<dd>
+			 				 								<div class="total">200节</div>
+			 				 								<div class="weekly">每周5节</div>
+			 				 						</dd>
+			 				 				</dl>
+			 				 		</li>
+			 				 		<li>
+			 				 				<dl>
+			 				 						<dt>精品小班课</dt>
+			 				 						<dd>
+			 				 								<div class="total">23节</div>
+			 				 								<div class="weekly">每周3节</div>
+			 				 						</dd>
+			 				 				</dl>
+			 				 		</li>
+									 
+			 				 </ul>
+			 				  <ul>
+			 				 		<li class="red">
+			 				 				<dl>
+			 				 						<dt>精品公开课</dt>
+			 				 						<dd>
+			 				 								<div class="total">10节</div>
+			 				 								<div class="weekly">每周2节</div>
+			 				 						</dd>
+			 				 				</dl>
+			 				 		</li>
+			 				 		<li class="green">
+			 				 				<dl>
+			 				 						<dt>旅游英语</dt>
+			 				 						<dd>
+			 				 								<div class="total">23节</div>
+			 				 								<div class="weekly">每周3节</div>
+			 				 						</dd>
+			 				 				</dl>
+			 				 		</li>
+									 
+			 				 </ul>
+			 				 <ul>
+			 				 		<li class="blue">
+			 				 				<dl>
+			 				 						<dt>商务英语</dt>
+			 				 						<dd>
+			 				 								<div class="total">123节</div>
+			 				 								<div class="weekly">每周3节</div>
+			 				 						</dd>
+			 				 				</dl>
+			 				 		</li>
+									 
+			 				 </ul>
+			 		</div>
+			 </div>
+			  <div class="ft_model">
+			 		<div class="title">
+			 				顾问给我的学习建议  
+			 		</div>
+			 		<!-- 成人 -->
+			 		<div class="ft_model_one"> 
+			 			学习建议： 在此阶段，您已经度过了不敢开口的心理障碍，建议您一定要及时预习和复习；和外教就比较广泛的话题进行讨论，课上一定要多多沟通；平时多多阅读不同题材和文体的文章，也可以借读教材中的大段文章多做练习，在阅读中可以充分扩充词汇，相应的在课上多加练习，也就提高了您的应用能力；另外建议您多尝试英文写作练习，毕竟很多学员在写作上还是有一些差距的，所以平常多做一些写作练习可以在课上和老师多做一些沟通以提升自己的写作水平
+			 		</div>
+			 		<!-- 青少 -->
+			 		<!-- <div class="ft_model_one"> 
+			 				<p>中教课+外教1对1课程。先通过中教课来学习英语，打下一定的基础后能更好的和外教进行学习。</p>
+							<p>相信不论你学习英语是为了满足日常沟通的需要，还是为了工作和职业的发展，</p>
+							<p>不论你现在处于英语学习的哪个阶段，想要前往哪个阶段，51Talk都有信心帮你达成目标。</p>
+			 		</div> -->
+			 </div>
+		</div>
+		<!-- 底部分享 -->
+	<div class="fix-footer">
+			<div class="list weixin">
+				 <a href="javscript:;" id="onMenuShareTimeline">
+					 <img src="<%=imagessrc%>/weixin.png" />
+					 <p>朋友圈</p>
+				 </a>
+			</div>
+			<div class="list weixinFriends">
+					<a href="javascript:;" id="onMenuShareAppMessage">
+						 <img src="<%=imagessrc%>/weixinFriends.png" />
+						 <p>微信好友</p>
+				 </a>
+			</div>
+			<div class="list sina">
+				<a href="javascript:;" id="onMenuShareWeibo">	
+					 <img src="<%=imagessrc%>/sina.png" />
+					 <p>微博</p>
+				 </a>
+			</div>
+			<div class="list qq">
+				<a href="javascript:;" id="onMenuShareQQ">
+					 <img src="<%=imagessrc%>/qq.png" />
+					 <p>QQ</p>
+				 </a>
+			</div>
+	</div>
+</body>
+<script src="<%= jssrc%>" id="seajsnode"></script>
+</html>

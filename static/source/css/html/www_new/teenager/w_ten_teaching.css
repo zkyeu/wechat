@@ -1,0 +1,128 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Fri Dec 02 2016 11:30:12 GMT+0800 (中国标准时间)
+ */
+.info {
+  background: #303030;
+  color: #888;
+  padding: 30px 0 60px 0;
+}
+.info .centerMth {
+  width: 966px;
+  margin: 0 auto;
+}
+.info .tc_p {
+  text-align: center;
+}
+.info .tc_p a {
+  color: #888;
+  margin: 0 12px;
+}
+.info .tc_p a:hover {
+  color: #ff9600;
+}
+.info .link-word {
+  position: relative;
+  height: 18px;
+  margin-top: 30px;
+  border-top: 1px #424242 solid;
+}
+.info .link-word em {
+  position: absolute;
+  text-align: center;
+  top: -10px;
+  left: 50%;
+  margin-left: -36px;
+  width: 72px;
+  background: #303030;
+}
+.info .link-info {
+  line-height: 22px;
+}
+.info .link-info a {
+  margin-left: 10px;
+  color: #888;
+}
+.info .link-ti {
+  border-top: 1px #424242 solid;
+  margin-top: 15px;
+  padding-top: 30px;
+}
+.info .link-ti .link-ul {
+  width: 610px;
+  height: 49px;
+  margin: 0px auto;
+}
+.info .link-ti .link-ul li {
+  float: left;
+  width: 152px;
+}
+.info .link-ft {
+  text-align: center;
+  margin-top: 20px;
+}
+.info .link-ft em {
+  margin: 0 5px;
+}
+.info .link-ft a {
+  color: #888;
+}
+.ten_teaching .ten-int {
+  width: 1100px;
+  position: relative;
+  padding-top: 70px;
+}
+.ten_teaching .ten-int .tea-rt {
+  position: absolute;
+  top: 160px;
+  right: 30px;
+  width: 490px;
+}
+.ten_teaching .ten-int .tea-rt p {
+  font-size: 18px;
+  color: #7c7c7c;
+  margin-top: 22px;
+  line-height: 30px;
+}
+.ten_teaching .teaching-open {
+  background: #e6f2ff;
+}
+.ten_teaching .teaching-open .centerMth {
+  width: 1100px;
+}
+.ten_teaching .teaching-open .centerMth .tea-open {
+  float: left;
+  width: 515px;
+  margin: 158px 0 0 30px;
+  *margin: 158px 0 0 0;
+}
+.ten_teaching .teaching-open .centerMth .tea-open p {
+  font-size: 18px;
+  color: #7c7c7c;
+  margin-top: 25px;
+  line-height: 30px;
+}
+.ten_teaching .teaching-open .centerMth .tea-rt-img {
+  display: inline-block;
+  width: 416px;
+  height: 483px;
+  margin: 50px 0 0 80px;
+}
+.ten_teaching .teaching-gp {
+  background: #fff;
+}
+.ten_teaching .teaching-gp .centerMth {
+  height: 448px;
+  padding-top: 32px;
+}
+.ten_teaching .teaching-gp .centerMth .tea-rt {
+  top: 160px;
+  right: 40px;
+  width: 625px;
+}
+.ten_teaching .ten-int-src {
+  position: absolute;
+  left: -165px;
+}

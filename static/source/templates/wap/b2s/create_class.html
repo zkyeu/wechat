@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta content="yes" name="apple-mobile-web-app-capable" /> 
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+    <meta content="telephone=no" name="format-detection" /> 
+    <title>欢迎下载51Talk App</title>
+    <link rel="stylesheet" type="text/css" href="/css/wap/b2s/b2s.css">
+</head>
+<body data-init="createClass" data-role="agent">
+	<div class="main-wrap no-padding">
+		<div class="form-wrap create-wrap">
+			<form action="#" autocomplete="off" rel="creatClass">
+				<dl class="cfix">
+					<dt>年　　级</dt>
+					<dd>
+						<div class="ui-select" tabindex="-1">
+							<p class="def-sel">请选择年级</p>
+							<select rel="selgrade">
+								<option value="">请选择年级</option>
+								<option value="1">一年级</option>
+								<option value="2">二年级</option>
+								<option value="3">三年级</option>
+							</select>
+						</div>
+					</dd>
+				</dl>
+				<p class="error-tips"></p>
+				<dl class="cfix">
+					<dt>班　　级</dt>
+					<dd>
+						<div class="ui-select" tabindex="-1">
+							<p class="def-sel">请选择班级</p>
+							<select rel="selclass">
+								<option value="">请选择班级</option>
+								<option value="1">一班</option>
+								<option value="2">二班</option>
+								<option value="3">三班</option>
+							</select>
+						</div>
+					</dd>
+				</dl>
+				<p class="error-tips"></p>
+				<!--
+				<dl class="cfix">
+					<dt>使用教材</dt>
+					<dd>
+						<input type="text" rel="teaching_materials" placeholder="北师大版本"  class="input-t-style" />
+					</dd>
+				</dl>
+				<p class="error-tips"></p>
+				<dl class="cfix">
+					<dt>学习进度</dt>
+					<dd>
+						<input type="text" rel="learn_schedule" placeholder="例如：第一单元、第三课" class="input-t-style" />
+					</dd>
+				</dl>
+				<p class="error-tips"></p>
+				<dl class="cfix">
+					<dt>教学进度</dt>
+					<dd>
+						<input type="text" rel="teaching_schedule" placeholder="例如：每周1节课" class="input-t-style" />
+					</dd>
+				</dl>
+				<p class="error-tips"></p>
+
+ -->
+				<!-- <div class="prompt"> -->
+				<div>
+					<!-- <p>请录入上述信息，以便我们根据您的教学进度为学生排课</p> -->
+					<input type="hidden" name="school_id" id="school_id" value="123" />
+					<input type="hidden" name="teacher_id" id="teacher_id" value="" />
+					<input type="hidden" name="is_change" id="is_change" value="" />
+				</div>
+
+				<div class="submit-btn">
+					<input type="submit" class="input-submit" value="立即创建" />
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+<!--公共尾部结束-->
+<script id="seajsnode" src="/js/wap/project/b2s/vendor.js"></script>
+</html>

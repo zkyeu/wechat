@@ -1,0 +1,304 @@
+<% include ../common/top.ejs %>
+<body>
+	<%include ../common/uc_header.ejs %>
+	<!--主体部分 Start-->
+	<div class="container" data-init="assessment">
+		<!--个人信息 Start-->
+		<div class="personal ass">
+			<!--个人信息 Start-->
+			<div class="base">
+				<!--如果显示两个对ul添加样式.show-two
+					<ul class="show-two clearfix">
+				-->
+				<ul class="clearfix">
+					<li>
+						<h1>Bubble</h1>
+						<h3>小学1年级</h3>
+					</li>
+					<li>
+						<h1>英语水平</h1>
+						<h3>学过不能交流</h3>
+					</li>
+					<li>
+						<h1>学习目的</h1>
+						<h3>突破听说提素质</h3>
+					</li>
+				</ul>
+			</div>
+			<!--个人信息 End-->
+			<!--外教评语 Start-->
+			<div class="remark">
+				<div class="header"></div>
+				<div class="content">
+					<dl class="clearfix">
+						<dt>
+							<img src="<%=imagessrc%>temp.jpg">
+							<h5>deng chao</h5>
+						</dt>
+						<dd>
+							<h5>外教评语</h5>
+							<h6>Dear <em class="name"> bubble：</em></h6>
+							<p>I would like to extend my appreciation for your interest to learn and participation in our lesson. I will teach you all the best. See you here at 51Talk!!</p>
+							<a href="javascript:;" class="translate" data-appointid="" data-tagid="" data-url=""><i class="icon"></i>自动翻译</a>
+							<div class="result"></div>
+							<div class="error"></div>
+							<div class="tips">翻译结果由有道词典提供，仅供参考</div>
+						</dd>
+					</dl>
+				</div>
+				<div class="footer"></div>
+			</div>
+			<!--外教评语 End-->
+		</div>
+		<!--个人信息 End-->
+		<!--测评结果 Start-->
+		<div class="result ass">
+			<div class="wrap clearfix">
+				<div class="title clearfix">
+					<em>测评结果</em>
+					<div class="sub">
+						<h4>英语语言应用能力</h4>
+						<h6>Assessment Result</h6>
+					</div>
+				</div>
+				<div class="level-result">
+					<div class="level-wrap">
+						<i class="icon level0"></i>
+						<i class="target"></i>
+						<div class="level-img"><img src="<%=imagessrc%>level.png"></div>
+					</div>
+					<div class="description clearfix">
+						<i class="arr level0"></i>
+						<div class="grade">
+							<h1 class="title">级别说明</h1>
+							<h4>您的级别：</h4>
+							<h3>Level<em class="num">4</em></h3>
+							<h5>【 G1级别 】</h5>
+						</div>
+						<div class="content">
+							<div class="tab" id="tab">
+								<ul class="clearfix">
+									<li class="current">课程选择与重点</li>
+									<li>教师选择</li>
+									<li>学习方法</li>
+								</ul>
+							</div>
+							<div class="text">
+								课程选择与重点
+						       我们为您推荐K级别课程-Prepare for Reading。语言学中将0-12岁定义为语言习得的关键期（Critical Period），在关键期中，语音的输入尤为重要。纯正的语音输入将为孩子的语言学习奠定坚实的基础。 K级别的课程目标是英语启蒙，激发孩子对英语的学习兴趣。通过一年全外教浸泡式学习，以26个字母为主线，掌握26个字母的发音、分辨大小写为基础，进而使孩子能够听读简单的单词，听懂课堂指令、简单对话，最终为培养孩子良好的阅读习惯做好铺垫。
+							</div>
+							<div class="text" style="display:none">
+								教师选择
+						       我们为您推荐K级别课程-Prepare for Reading。语言学中将0-12岁定义为语言习得的关键期（Critical Period），在关键期中，语音的输入尤为重要。纯正的语音输入将为孩子的语言学习奠定坚实的基础。 K级别的课程目标是英语启蒙，激发孩子对英语的学习兴趣。通过一年全外教浸泡式学习，以26个字母为主线，掌握26个字母的发音、分辨大小写为基础，进而使孩子能够听读简单的单词，听懂课堂指令、简单对话，最终为培养孩子良好的阅读习惯做好铺垫。
+							</div>
+							<div class="text" style="display:none">
+								学习方法
+						       我们为您推荐K级别课程-Prepare for Reading。语言学中将0-12岁定义为语言习得的关键期（Critical Period），在关键期中，语音的输入尤为重要。纯正的语音输入将为孩子的语言学习奠定坚实的基础。 K级别的课程目标是英语启蒙，激发孩子对英语的学习兴趣。通过一年全外教浸泡式学习，以26个字母为主线，掌握26个字母的发音、分辨大小写为基础，进而使孩子能够听读简单的单词，听懂课堂指令、简单对话，最终为培养孩子良好的阅读习惯做好铺垫。
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--测评结果 End-->
+		<!--能力测评分析 Start-->
+		<div class="analyze ass">
+			<div class="wrap">
+				<h1 class="title">能力测评分析</h1>
+				<h3 class="sub-title">Language Skills </h3>
+				<div class="result-lst clearfix">
+					<div class="score"><em>4</em>分</div>
+					<div class="range">
+						<h1>发音<em>Pronunciation</em></h1>
+						<ul class="blue clearfix">
+							<div class="progress level4"></div>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+						<p class="tips">能够准确运用升降语调、重读弱读、连续等多样的发音技巧，仅存在偶尔偏差、能准确熟练地进行对话交流。</p>
+					</div>
+				</div>
+				<div class="result-lst clearfix">
+					<div class="score"><em>5</em>分</div>
+					<div class="range">
+						<h1>语法<em>Grammar</em></h1>
+						<ul class="green clearfix">
+							<div class="progress level5"></div>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+						<p class="tips">能够较为灵活地使用一系列复杂语法结构，简单句和复杂句混合交替使用。但仍会习惯性地出现一些语法错误、但是语句通常正确，且能做到表达时的自我纠正。</p>
+					</div>
+				</div>
+				<div class="result-lst clearfix">
+					<div class="score"><em>4</em>分</div>
+					<div class="range">
+						<h1>词汇<em>Vocabulary</em></h1>
+						<ul class="orange clearfix">
+							<div class="progress level4"></div>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+						<p class="tips">词汇使用丰富，熟练并相对自然地使用高阶词汇和习语；偶尔会出现词汇选择和使用表意不够准确的情况。</p>
+					</div>
+				</div>
+				<div class="result-lst clearfix">
+					<div class="score"><em>4</em>分</div>
+					<div class="range">
+						<h1>流利度<em>Fluency</em></h1>
+						<ul class="red clearfix">
+							<div class="progress level4"></div>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+						<p class="tips">在表达自己较为熟悉的事物时较为流利，但是经常需要重复和变换方式来表达；在表达自己不太熟悉的事物、需进行复杂交流时，语速降低、表达不够流畅，表达意思的逻辑性和连贯性较低。</p>
+					</div>
+				</div>
+				<div class="result-lst clearfix">
+					<div class="score"><em>4</em>分</div>
+					<div class="range">
+						<h1>听力理解<em>Listening</em></h1>
+						<ul class="purple clearfix">
+							<div class="progress level4"></div>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+						<p class="tips">在语速适中的情况下，可以听出关键词的词汇，短语，但需要一定时间反应，可以理解和推测出句子和话题的大致内容。当语速较快，发音特点不熟悉，生僻词较多，语法结构复杂，话题不熟悉的情况下，会存在理解上的障碍。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--能力测评分析 End-->
+		<!--体验课课堂知识 Start-->
+		<div class="knowledge ass">
+			<div class="wrap">
+				<h1 class="title">体验课课堂知识</h1>
+				<h3 class="sub-title">Lesson Content</h3>
+				<div class="lst">
+					<ul class="clearfix">
+						<li class="blue">
+							<h4>【 需要注意的发音 】</h4>
+							<p>cat  [kæt]      boss  [bɑs]</p>
+							<div class="number">
+								<div class="score">2</div>
+							</div>
+						</li>
+						<li class="green">
+							<h4>【 本节课单词 】</h4>
+							<p>cat      boss      good      lesson      memo      today      cat  [kæt]     boss  [bɑs]</p>
+							<div class="number">
+								<div class="score">10</div>
+							</div>
+						</li>
+						<li class="orange">
+							<h4>【 本节课句子 】</h4>
+							<p>This is a dog.</p>
+							<p>I am 6 years old.</p>
+							<p>This is a dog.</p>
+							<p>I am 6 years old.</p>
+							<p>This is a dog.</p>
+							<div class="number">
+								<div class="score">10</div>
+							</div>
+						</li>
+						<li class="red">
+							<h4>【 歌谣 】</h4>
+							<p>Old MacDonald Had a Farm</p>
+							<div class="number">
+								<div class="score">4</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--体验课课堂知识 End-->
+		<!--购买套餐 Start-->
+		<div class="package ass">
+			<div class="wrap">
+				<h2 class="join">小朋友你做的很棒！快快加入我们吧！</h2>
+				<h4 class="talk">51Talk有信心让小朋友们与世界对话！</h4>
+				<h1 class="buy">购买套餐</h1>
+				<h3 class="server">将能享受到的服务</h3>
+				<h5 class="sub">Product Services</h5>
+				<div class="package-lst">
+					<ul class="clearfix">
+						<li class="blue">
+							<!-- <a href="http://www.51talk.com/nat/ad/index" target="_blank"></a> -->
+							<h1 class="title">1对1北美外教上课</h1>
+							<p>2.5% 录取率</p>
+							<p>100% 持有教师资格证</p>
+							<p>100% 本科以上学历</p>
+							<p>100% 来自加拿大、美国</p>
+						</li>
+						<li class="green">
+							<!-- <a href="javascript:;" class="placeholder"></a> --> 
+							<h1 class="title">全程学术老师服务</h1>
+							<p>新生专属入门指导课</p>
+							<p>新学员学习方法指导课</p>
+							<p>随时辅导学习问题</p>
+						</li>
+						<li class="orange">
+							<!-- <a href="http://www.51talk.com/user/study_center_zx" target="_blank"></a> -->
+							<h1 class="title">EFL练习</h1>
+							<p>配套课前智能预习</p>
+							<p>课后测试体系</p>
+							<p>单元总结视频</p>
+						</li>
+						<li class="red">
+							<!-- <a href="http://bbs.51talk.com/openclass/index/na/13/" target="_blank"></a> -->
+							<h1 class="title">精品绘本阅读课</h1>
+							<p>每周固定两节</p>
+							<p>外教小班课</p>
+							<p>丰富多彩精品阅读</p>
+						</li>
+						<li class="pink">
+							<!-- <a href="http://www.51talk.com/italk/index/"></a> -->
+							<h1 class="title">少儿专属italk视频</h1>
+							<p>享有300多个少儿专属视频使用权</p>
+						</li>
+						<li class="purple">
+							<!-- <a href="javascript:;" class="placeholder"></a> -->
+							<h1 class="title">丰富学员活动</h1>
+							<p>演讲比赛</p>
+							<p>英语配音</p>
+							<p>同城派对</p>
+							<p>帮孩子找到学习伙伴</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--购买套餐 End-->
+		<!--去上学 Start-->
+		<div class="goto-school ass">
+			<div class="wrap">
+				<h1 class="title">开学啦，像美国小朋友一样上学吧！</h1>
+				<div class="blue-balloon"></div>
+				<div class="green-balloon"></div>
+				<div class="purple-balloon"></div>
+				<a class="btn" href="http://www.51talk.com/nat/pay/product" target="_blank"></a>
+			</div>
+		</div>
+		<!--去上学 End-->
+	</div>
+	<!--主体部分 End-->
+	<% include ../common/www/w_footer_home.ejs %>
+	<script src="<%= jssrc%>"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+	<meta content="yes" name="apple-mobile-web-app-capable" /> 
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+	<meta content="telephone=no" name="format-detection" /> 
+	<title>51Talk无忧英语,网上真人外教一对一在线英语教育第一品牌</title>
+	<link rel="stylesheet" type="text/css" href="<%= csslink%>"></head>
+<body>
+	<div class="binding"  id="container" data-init="share">
+		<section class="top"><img src="<%= imagessrc%>qq_top.jpg" alt=""></section>
+		<form action="" id="reg1_form">
+			<ul>
+				<li class="userName"><img src="<%= imagessrc%>qq_user.jpg" alt=""><input id="reg1_tel" type="tel" placeholder="已验证手机/邮箱"></li>
+				<li class="passWord"><img src="<%= imagessrc%>qq_password.jpg" alt=""><input id="reg1_passwd" type="password" placeholder="请输入您的密码"></li>
+			</ul>
+		</form>
+		<p class="error"><span class="hide">系统错误，请重试！</span><span class="hide">您输入的密码不正确</span></p>
+		<section class="logIn_go">
+			<a href="javascript:;" class="login" id="reg1">登  录</a><br>
+			<a href="javascript:;" class="register" id="reg2">立即注册</a>
+		</section>
+	</div>
+	<section class="member hide"><p>您还不是我们的会员，请先注册！</p></section>
+	<section class="member sucess hide"><p><img src="<%= imagessrc%>qq_ok.png" alt=""><span>绑定成功！</span></p></section>
+</body>
+<script src="<%= jssrc%>" id="seajsnode"></script> 
+</html>

@@ -1,0 +1,37 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: 
+ */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background: #f9fbfd;
+}
+.go_there {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 150px;
+  height: 200px;
+  overflow: hidden;
+  text-align: center;
+}
+.go_there h5 {
+  background: url(../../../images/html/weixin_heck/waiting.png?v=Jj6DfBJXAZkn3lg6bBqAVA%3D%3D) no-repeat;
+  width: 150px;
+  height: 150px;
+}
+.go_there div {
+  font-size: 14px;
+  margin-top: 18px;
+  color: #323232;
+}
+.go_there div a {
+  color: #0099ff;
+}

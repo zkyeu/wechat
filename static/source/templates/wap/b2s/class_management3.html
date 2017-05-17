@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta content="yes" name="apple-mobile-web-app-capable" /> 
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+    <meta content="telephone=no" name="format-detection" /> 
+    <title>欢迎下载51Talk App</title>
+    <link rel="stylesheet" type="text/css" href="/css/wap/b2s/common.css">
+    <link rel="stylesheet" type="text/css" href="/css/wap/b2s/class_management3.css">
+</head>
+<body data-init="class_management3" class="class_management3">
+    <div class="cfix inv_stu">
+        <div class="left_part">
+            <P class="have_code">邀请码：<span>123456</span></P>
+            <p class="code_int">请同学们使用邀请码加入班级</p>
+        </div>
+        <a href="#" class="right_part">邀请学生</a>
+    </div>
+    <P class="cfix class_title">
+        <i>一年级9班(共23人)</i><span>班级管理</span>
+    </P>
+    <ul class="show_class">
+        <li class="cfix">
+            <a href="javascript:;"></a>
+            <span>未激活</span>
+            <i>3人<em>></em></i>
+        </li>
+        <li class="cfix">
+            <a href="javascript:;"></a>
+            <span>未激活</span>
+            <i>3人<em>></em></i>
+        </li>
+    </ul>
+
+<div class="serviceRecord-dialog disnone" id="js_dialog">
+    <div class="pop">
+        <div class="pop_content">
+            <p></p>
+            <ul>
+                <li>
+                    <a href="javascript:;"></a>
+                    转让班级
+                </li>
+                <li>
+                    <a href="javascript:;"></a>
+                    接管其他班级
+                </li>
+                <li>
+                    <a href="javascript:;"></a>
+                    申请记录
+                </li>
+                <li id="del-class" del-class-url="/wap/delClass?class_id=123456" del-success-url="/WapNew/Teacher/transferIndex">
+                    删除班级
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="serviceRecord-dialog-con js_dialog_con">
+        <div class="serviceRecord-dialog-close js_dialog_close"></div>
+        <div class="serviceRecord-dialog-part">
+            <div class="part-text js_dialog_text">确认删除？</div>
+            <div class="part-img"><img src="/images/wap/b2s/app-serviceRecord-04.png" /></div>
+        </div>
+        <div class="serviceRecord-dialog-btn js_dialog1">
+            <span class="unsolved js_cancel">取消</span>
+            <span class="resolved js_confirm">确定</span>
+        </div>
+        
+        <div class="serviceRecord-dialog-btn2 disnone js_dialog2">
+            <span class="js_cancel">确定</span>
+        </div>
+    </div>
+</div>
+<!-- loading -->
+<div id="fontSizeLoding">
+    <img src="/images/wap/b2s/eff_loading.gif">
+</div>
+<script type="text/javascript">
+window.onload = function(){
+    document.documentElement.style.fontSize = document.body.clientWidth / 7.5 + "px";
+    document.getElementById("fontSizeLoding").style.display = "none";
+}
+</script>
+</body>
+<!--公共尾部结束-->
+<!--公共尾部结束-->
+<script id="seajsnode" src="/js/wap/project/b2s/vendor.js"></script>
+</html>

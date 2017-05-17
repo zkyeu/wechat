@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>英语学习，口语学习首选的英语学习网站，51talk无忧英语，外教一对一，在线学英语！</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="{<info.keywords>}"/>
+    <meta name="description" content="51tailk无忧英语专业提供网络英语外教一对一培训教学,专注于真人英语外教一对一培训,让您足不出户,网上平价学英语.英语外教一对一培训服务热线4000-51-51-51"/>
+     <script type="text/javascript">
+    var startTime = Date.now();
+    </script>
+     <link rel="stylesheet" type="text/css" href="<%= cssPath %>common/commons.css">
+    <link rel="stylesheet" type="text/css" href="<%= cssPath %>index/index.css">
+   
+    <script type="text/javascript">
+        (function(){
+            var firstImages =[];
+            var screenHeight = window.screen.availHeight; 
+            var isFindLastImg = false;
+            var allImgLoaded = false;
+            function getOffsetTop(ele) {
+                var offsetTop = ele.offsetTop;
+                if (ele.offsetParent !== null) {
+                  offsetTop += getOffsetTop(ele.offsetParent);
+                }
+                return offsetTop;
+            }
+
+            if(window.attachEvent){
+                 clearInterval(t);
+            }else{
+                  window.addEventListener('DOMContentLoaded', function() {
+                        var imgs = document.getElementsByTagName("img");
+                        if (!imgs.length) {
+                          isFindLastImg = true;
+                        }
+                    });
+                   window.addEventListener('load', function() {
+                        allImgLoaded = true;
+                        isFindLastImg = true;
+                        if (t) {
+                          clearInterval(t);
+                        }
+                        console.log(Date.now()- startTime);
+                    });
+            }
+
+          
+            var t = setInterval(function() {
+                var i, img;
+                if (isFindLastImg) {
+                  if (firstImages.length) {
+                    for (i = 0; i < firstImages.length; i++) {
+                      img = firstImages[i];
+                      if (!img.complete) {
+                        allImgLoaded = false;
+                        break;
+                      } else {
+                        allImgLoaded = true;
+                      }
+                    }
+                  } else {
+                    allImgLoaded = true;
+                  }
+                  if (allImgLoaded) {
+                    console.log(Date.now()- startTime);
+                    clearInterval(t);
+                  }
+                } else {
+                  var imgs =  document.getElementsByTagName("img");
+                  for (i = 0; i < imgs.length; i++) {
+                    img = imgs[i];
+                    var imgOffsetTop = getOffsetTop(img);
+                    if (imgOffsetTop > screenHeight) {
+                      isFindLastImg = true;
+                      break;
+                    } else if (imgOffsetTop <= screenHeight 
+                       && !img.hasPushed) {
+                      img.hasPushed = 1;
+                      firstImages.push(img);
+
+                    }
+                  }
+                }
+            }, 0);
+
+           
+  
+        })()
+    </script>
+</head>
+
+<body data-init="index/index" id="container" data-directory="index">
+<!-- 顶部 -->
+<%- include("../common/w_nav.ejs",{
+  wrapClass:"wrap-nav-index",
+  isIndex:true, //判断是否为首页
+  isNorth:false //判断是否为美小
+  }) %>
+<div id="index">
+    <% include ../common/w_banner.ejs %>
+</div>
+<!-- 回到顶部-->
+<div id="u-gotop" style="disblpay:block;">
+    <a href="javascript:;" title="回到顶部">回到顶部</a>
+</div>
+
+<!-- right side bar -->
+<% include ../common/w_side_bar.ejs %>
+<!-- /right side bar-->
+<!-- 回到顶部-->
+<!-- layer -->
+<div class="layer-popup">
+  <div class="mask"></div>
+  <div class="content">
+    <p>选择适合您的英语课程</p>
+    <span class="delete"></span>
+    <ul>
+      <li>
+        <a href="javascript:;"><i class="america-img"></i></a>
+      </li>
+      <li>
+        <a href="javascript:;"><i class="adult-img"></i></a>
+      </li>
+      <li>
+        <a href="javascript:;"><i class="teenager-img"></i></a>
+      </li>
+    </ul>
+  </div>    
+</div>
+<!-- /layer -->
+<!--教育平台 -->
+<div class="index-m1 centerMth">
+	<h2>更多学员选择的专业在线英语教育平台</h2>
+	<p>随时随地，全球<em>8000+</em>优质外教，真人一对一沉浸式教学</p>
+	<div class="platform">
+		<ul class="clearfix">
+			<li class="animated bounceIn1">
+				<a href="javascript:;">
+					<img data-src="<%=imagessrc%>index/mx.png" width=340 height=370  src="<%=imagessrc%>common/deafult.png">
+				</a>
+				<span>100%纯北美外教，100%具备ESL经验，让孩子喜欢学，学得会，用得上。</span>
+			</li>
+			<li  class="animated bounceIn2">
+				<a href="javascript:;">
+					<img data-src="<%=imagessrc%>index/qs.png"  width=340 height=370 src="<%=imagessrc%>common/deafult.png">
+				</a>
+				<span>经验丰富的专业外教，沉浸式高效学习。寓教</br>于乐，成绩能力双提升</span>
+			</li>	
+			<li  class="animated bounceIn3">
+				<a href="javascript:;">
+					<img data-src="<%=imagessrc%>index/cr.png"  width=340 height=370 src="<%=imagessrc%>common/deafult.png">
+				</a>
+				<span>更有针对性的定制化教学，轻松有效提升商务</br>留学、考试及综合英语能力</span>
+			</li>		
+		</ul>
+	</div>
+</div>
+<!--教育平台 -->
+<!--更专业，更有效果 -->
+<div class="index-m2">
+    <div class="wrap-box centerMth">
+        <h2>更专业、所以更有效果!</h2>
+        <p>科学的理念+金牌的师资+阶梯系统课程</p>
+        <div class="list">
+            <ul class="clearfix">
+                <li>
+                    <img data-src="<%=imagessrc%>index/pro1.png" width=230 height=230 src="<%=imagessrc%>common/deafult.png">
+                    <dl>
+                        <dt>8000+金牌外教团队</dt>
+                        <dd>
+                            经验丰富的外教团队,优中选优,录</br>
+                            取率仅3% 1对1教学,为您提供</br>
+                            VIP专属服务
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <img data-src="<%=imagessrc%>index/pro2.png" width=230 height=230 src="<%=imagessrc%>common/deafult.png">
+                    <dl>
+                        <dt>权威的教材研发实力</dt>
+                        <dd>
+                            10年以上教学经验的课程研发团队超</br>
+                            过10万小时精心投入 专业打造适合</br>
+                            中国学习者的系统教材
+                        </dd>
+                    </dl>
+                </li>   
+                <li>
+                    <img data-src="<%=imagessrc%>index/pro3.png" width=230 height=230 src="<%=imagessrc%>common/deafult.png" >
+                    <dl>
+                        <dt>随时随地，轻松提升</dt>
+                        <dd>
+                            功能强大的在线教室AC(AirClass) 无</br>
+                            缝衔接手机、Pad、电脑三端 足不出</br>
+                            户约课、预习、上课、复习
+                        </dd>
+                    </dl>
+                </li>      
+            </ul>
+        </div>
+    </div>
+</div>
+<!--更专业，更有效果  -->
+<!--国际品牌 -->
+<div class="index-m3 centerMth">
+	<h2>国际品牌,全球信赖</h2>
+	<p>2016年6月10日,成功登陆美国纽约证券交易所,成为中国在线教育赴美上市第一股</p>
+	<div class="list">
+		<ul class="clearfix">
+			<li class="fadeInUp1">
+				<img data-src="<%=imagessrc%>index/pinpai1.jpg" width=587 height=396 src="<%=imagessrc%>common/deafult.png">	
+			</li>
+			<li class="fadeInUp2">
+				<img data-src="<%=imagessrc%>index/pinpai2.jpg" width=587 height=396 src="<%=imagessrc%>common/deafult.png">	
+			</li>
+		</ul>
+	</div>
+</div>
+<!--国际品牌 -->
+<!--下载 -->
+<div class="index-m4">
+    <div class="wrap-box centerMth">
+        <h2>51Talk AirClass 教学平台 - 随时随地，优质教育跃然屏上。</h2>
+        <p>下载<a href="javascript:;">AirClass客户端 ></a></p>
+    </div>
+    <img data-src="<%=imagessrc%>index/client-device.png" height=458 width=1158 src="<%=imagessrc%>common/deafult.png">
+</div>
+<!--下载 -->
+
+<!--学习步骤 -->
+<div class="study-step">
+    <div class="wrap-box centerMth">
+        <h2>学习英语，从未如此简单轻松！</h2>
+        <p><a href="javascript:;">进一步了解51Talk学员的学习方式 ></a></p>
+        <div class="list">
+            <ul class="clearfix">
+                <li class="step1">
+                    <h3>1.注册成为我们的VIP会员</h3>
+                    <div class="des">已有超过100，000名学员在51Talk感受<br/>英语提升的非凡效果！</div>
+                    <img data-src="<%=imagessrc%>common/step1.jpg" width=257 height=133 src="<%=imagessrc%>common/deafult.png">
+                </li>
+                <li class="step2">
+                    <h3>2. 选择适合您的课程和老师</h3>
+                    <div class="des">您可以自主约课，我们的学习顾问团队也会根据您的学习需求为您<br/>制定量身定制的学习计划，推荐老师，并督促您不断进步。</div>
+                    <img data-src="<%=imagessrc%>common/step2.jpg" width=424 height=133 src="<%=imagessrc%>common/deafult.png">
+                </li>
+                <li class="step3">
+                    <h3>3. 下载AC，开启英文学习之旅</h3>
+                    <div class="des">仅需2分钟，拥有强大的交互学习平台，</br>实时翻译，在线互动，英语学习妙趣横生！</div>
+                    <div class="down">
+                        <a href="#" class="dw_ac"><img width=124 height=133 data-src="<%=imagessrc%>common/dw_ac.jpg" src="<%=imagessrc%>common/deafult.png"></a>
+                        <a href="#" class="dw_app"><img width=109 height=133 data-src="<%=imagessrc%>common/dw_app.jpg" src="<%=imagessrc%>common/deafult.png"></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<!--下载 -->
+
+<!--心动行动 -->
+<div class="index-m6">
+    <div class="wrap-box centerMth">
+        <h2>心动？行动！</h2>
+        <p>立即注册，与全球500万会员一起学英语</p>
+        <div>
+            <a href="javascript:;" class="regBtn">注册会员</a>
+        </div>
+        <h3>已经是我们的会员？<a href="javascript:;">立即登录 ></a></h3>
+    </div>
+
+</div>
+<!--心动行动 -->
+<!--名人推荐 -->
+<div class="index-m7 centerMth">
+	<h2>名人推荐</h2>
+	<div class="list">
+		<ul class="clearfix">
+			<li class="fadeInUp1">
+				<img data-src="<%=imagessrc%>index/m-li.jpg" width=590 height=376 src="<%=imagessrc%>common/deafult.png">
+                <dl>
+                    <dt class="name">李娜</dt>
+                    <dd class="intro">国际网坛名将 51Talk梦想代言人</dd>
+                    <dd class="say">学英语和打网球一样，需要和真人外教1对1的练。</br>51Talk做到了让每个普通人都能平等地拥有这样</br>的语言环境。</dd>
+                </dl>	
+			</li>
+			<li class="fadeInUp2">
+				<img data-src="<%=imagessrc%>index/m-xu.jpg" width=590 height=376 src="<%=imagessrc%>common/deafult.png">
+                <dl>
+                    <dt class="name">徐小平</dt>
+                    <dd class="intro">真格基金创始人、新东方联合创始人</dd>
+                    <dd class="say">想要全球Walk，请来51Talk</dd>
+                </dl>   	
+			</li>
+		</ul>
+	</div>
+</div>
+<!--名人推荐 -->
+
+<!--扫码关注 -->
+<div class="m-weixin-index">
+    <h2>7X24小时，课程顾问为您服务</h2>
+    <div class="tel">400·51·51·51</div>
+    <div class="tit">关注我们的公众号，获取每日英语学习资讯，并享受更多优惠！</div>
+    <div class="list">
+        <ul class="clearfix">
+            <li>
+                <img data-src="<%=imagessrc%>common/wx-1.png" width=194 height=195 src="<%=imagessrc%>common/deafult.png">
+                <div class="name mx">美国小学课程</div>
+            </li>
+            <li>
+                <img data-src="<%=imagessrc%>common/wx-2.png" width=194 height=195 src="<%=imagessrc%>common/deafult.png">
+                <div class="name qs">无忧英语 · 青少课程</div>
+            </li>
+            <li>
+                <img data-src="<%=imagessrc%>common/wx-3.png" width=194 height=195 src="<%=imagessrc%>common/deafult.png">
+                <div class="name cr">无忧英语 · 成人课程</div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--扫码关注 -->
+
+<!--合作伙伴 -->
+<div class="m-partner">
+    <h2>合作伙伴</h2>
+    <div class="list">
+        <ul class="clearfix">
+            <li class="radius5">
+                <a href="javascript:;"><span></span><img class="fade_in" width=163 height=87 data-src="<%=imagessrc%>common/partern/xiaomi.png" src="<%=imagessrc%>common/deafult.png"></a>
+                
+            </li>
+            <li>
+               <a href="javascript:;"><span></span><img class="fade_in" width=165 height=118 data-src="<%=imagessrc%>common/partern/zhaohang.png" src="<%=imagessrc%>common/deafult.png"></a>
+               
+            </li>
+            <li>
+                <a href="javascript:;"><span></span><img class="fade_in" width=227 height=122  data-src="<%=imagessrc%>common/partern/jd.png" src="<%=imagessrc%>common/deafult.png"></a>
+            </li>
+            <li class="radius6">
+                <a href="javascript:;"><span></span><img class="fade_in" width=141 height=33  data-src="<%=imagessrc%>common/partern/sony.png" src="<%=imagessrc%>common/deafult.png"></a>
+                
+            </li>
+        </ul>
+    </div>
+</div>
+<!--合作伙伴 -->
+<!--媒体关注-->
+<div class="m-medium">
+    <h2><a href="javascript:;" class="selected">媒体关注</a><a class="rongyu" href="javascript:;">企业荣誉</a></h2>
+    <div class="des"><a href="javascript:;">进一步了解 社会各界对51Talk的盛誉 ></a></div>
+    <div class="list list1 centerMth">
+        <ul class="clearfix">
+            <li class="radius1">
+                <a href="javascript:;"><span></span><img class="fade_in" width=140 height=50 data-src="<%=imagessrc%>common/medium/wangyi.png" src="<%=imagessrc%>common/deafult.png"></a>
+                
+            </li>
+            <li>
+               <a href="javascript:;"><span></span><img class="fade_in" width=140 height=50 data-src="<%=imagessrc%>common/medium/sinan.png" src="<%=imagessrc%>common/deafult.png"></a>
+               
+            </li>
+            <li>
+                <a href="javascript:;"><span></span><img class="fade_in" width=140 height=50 data-src="<%=imagessrc%>common/medium/jiemodui.png" src="<%=imagessrc%>common/deafult.png"></a>
+            </li>
+            <li>
+                <a href="javascript:;"><span></span><img class="fade_in" width=140 height=50 data-src="<%=imagessrc%>common/medium/36kr.png" src="<%=imagessrc%>common/deafult.png"></a>
+                
+            </li>
+            <li class="radius4">
+               <a href="javascript:;"><span></span><img class="fade_in" width=140 height=50 data-src="<%=imagessrc%>common/medium/tencent.png" src="<%=imagessrc%>common/deafult.png"></a>
+               
+            </li>
+            <li>
+                <a href="javascript:;"><span></span><img class="fade_in" width=140 height=50 data-src="<%=imagessrc%>common/medium/touzhijia.png" src="<%=imagessrc%>common/deafult.png"></a>
+            </li>
+            <li>
+                <a href="javascript:;"><span></span><img class="fade_in" width=140 height=50 data-src="<%=imagessrc%>common/medium/fenghuangkeji.png" src="<%=imagessrc%>common/deafult.png"></a>
+                
+            </li>
+            <li>
+               <a href="javascript:;"><span></span><img class="fade_in" width=140 height=50 data-src="<%=imagessrc%>common/medium/fenghuangwang.png" src="<%=imagessrc%>common/deafult.png"></a>
+               
+            </li>
+            <li>
+                <a href="javascript:;"><span></span><img class="fade_in" width=140 height=50 data-src="<%=imagessrc%>common/medium/wangyijiaoyu.png" src="<%=imagessrc%>common/deafult.png"></a>
+            </li>
+            <li>
+                <a href="javascript:;"><span></span><img class="fade_in" width=140 height=50 data-src="<%=imagessrc%>common/medium/jingjiribao.png" src="<%=imagessrc%>common/deafult.png"></a>
+            </li>
+            <li class="radius2">
+                <a href="javascript:;"><span></span><img class="fade_in" width=140 height=50 data-src="<%=imagessrc%>common/medium/xinjinbao.png" src="<%=imagessrc%>common/deafult.png"></a>
+            </li>
+            <li >
+                <a href="javascript:;"><span></span><img class="fade_in" width=140 height=50 data-src="<%=imagessrc%>common/medium/hexun.png" src="<%=imagessrc%>common/deafult.png"></a>
+            </li>
+            <li>
+                <a href="javascript:;"><span></span><img class="fade_in" width=140 height=50 data-src="<%=imagessrc%>common/medium/donews.png" src="<%=imagessrc%>common/deafult.png"></a>
+            </li>
+            <li>
+                <a href="javascript:;"><span></span><img class="fade_in" width=140 height=50 data-src="<%=imagessrc%>common/medium/chuangyebang.png" src="<%=imagessrc%>common/deafult.png"></a>
+            </li>
+            <li class="radius3">
+                <a href="javascript:;"><span></span><img class="fade_in" width=140 height=50 data-src="<%=imagessrc%>common/medium/renminwang.png" src="<%=imagessrc%>common/deafult.png"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="list list2  centerMth hide">
+        <ul class="clearfix">
+            <li class="radius5">
+                <a href="javascript:;">
+                    <span>
+                        <img class="fade_in" width=41 height=97 data-src="<%=imagessrc%>common/medium/rongyi1.png" src="<%=imagessrc%>common/deafult.png">
+
+                    </span>
+                    <p>2015高科技高成长中国50强</br>德勤</p>
+                </a>
+                
+            </li>
+            <li>
+               <a href="javascript:;">
+                    <span>
+                        <img class="fade_in" width=60 height=97 data-src="<%=imagessrc%>common/medium/rongyi2.png" src="<%=imagessrc%>common/deafult.png">
+                    </span>
+                    <p>2014最具成长性教育品牌</br>中国日报</p>
+                </a>
+               
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <span>
+                        <img class="fade_in" width=141 height=99 data-src="<%=imagessrc%>common/medium/rongyi3.png" src="<%=imagessrc%>common/deafult.png">
+                    </span>
+                    <p>最具影响力在线教育品牌</br>网易</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <span>
+                        <img class="fade_in" width=141 height=99 data-src="<%=imagessrc%>common/medium/rongyi4.png" src="<%=imagessrc%>common/deafult.png">
+                    </span>
+                    <p>年度最具成长力品牌</br>新京报</p>
+                </a>
+                
+            </li>
+            <li class="radius6">
+               <a href="javascript:;">
+                    <span>
+                        <img class="fade_in" width=141 height=99 data-src="<%=imagessrc%>common/medium/rongyi4.png" src="<%=imagessrc%>common/deafult.png">
+                    </span>
+                    <p>最具品牌知名度外语教育机构</br>新浪网</p>
+                </a>
+               
+            </li>
+        </ul>        
+    </div>
+</div>
+<!--媒体关注-->
+<!--AC下载 -->
+
+<!--AC下载 -->
+
+<!-- 回到顶部-->
+<div id="u-gotop" style="disblpay:block;">
+    <a href="javascript:;" title="回到顶部">回到顶部</a>
+</div>
+<!-- 回到顶部-->
+<!-- layer -->
+<!-- <div class="layer-popup">
+  <div class="mask"></div>
+  <div class="content">
+    <p>选择适合您的英语课程</p>
+    <span class="delete"></span>
+    <ul>
+      <li>
+        <a href="javascript:;"><i class="america-img"></i></a>
+      </li>
+      <li>
+        <a href="javascript:;"><i class="adult-img"></i></a>
+      </li>
+      <li>
+        <a href="javascript:;"><i class="teenager-img"></i></a>
+      </li>
+    </ul>
+  </div>    
+</div> -->
+<!-- /layer -->
+<!-- right side bar -->
+<% include ../common/w_side_bar.ejs %>
+<!-- /right side bar-->
+<% include ../common/w_footer_home.ejs %>
+
+<script src="<%= jsPath%>common/jquery.min.js"></script>
+<script src="<%= jsPath%>vendor.js"  id="seajsnode"></script>
+
+</html>

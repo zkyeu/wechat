@@ -1,0 +1,32 @@
+<% include ../common/top.ejs %>
+<body data-init="stuType3">
+    <div class="ac-popup-wrap">
+    	<!-- <p class="que_tit">课堂检测</p> -->
+        <div class="ac-popup-content">
+			<p class="type_title type_3_title">图片选择题</p>
+			<p class="type_2_text">I ___ born in ___ on May 10th.</p>
+            <div class="type_btn " yinpin="/images/html/ac_voice_share/horse.mp3">
+                <div class="ac_tip">点击此处播放</div>
+            </div>
+			<div class="type_2_img type_3_img">
+				<img src="<%= imagessrc%>q_img.jpg" />
+			</div>
+            <div class="question_choose">
+                <span class="choose_click">A. was, 2005</span>
+                <span class="choose_b">B. were,2004</span>
+                <span>C. am,2005 </span>
+            </div>
+        </div>
+        <div class="ac-popup-bottom">
+            <input type="button" value="提交" class="btn-teasend"  />
+            <span class="ac_timmer actimmer">距离答题结束还有 <span class="time_se"><i>60</i>秒</span></span>
+        </div>
+    </div>
+    <div id="mp3Box"></div>
+<script>
+function acCallback(r,t){
+    // window.location.assign("http://www.baidu.com");
+}
+</script>
+</body>
+<% include ../common/bottom.ejs %>

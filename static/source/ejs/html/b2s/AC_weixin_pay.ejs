@@ -1,0 +1,30 @@
+<% include ../common/top.ejs %>
+<body>
+<input type="hidden" id="container" data-init="qrcode"/>
+  <div class="AC_introduce">
+    <div class="AC_close"></div>
+    <div class="AC_content">
+      <p class="wei_text">请您及时付款！以便订单获得尽快处理。应付金额 <span>￥300元</span><i>（获赠原价198元小学学科课程）</i></p>
+      <p class="wei_text1">微信支付<span>更多支付方式</span></p>
+      <div class="wei_code">
+        <input type="hidden"  id="code_url" code_url="<%= imagessrc%>wei_code.png"  value="<%= imagessrc%>wei_code.png"/> 
+        <span><i>请使</i>用微信扫一扫，扫描二维码支付</span>
+        <div class="bg_code">
+           
+           <div id="qrcode"></div>     
+        </div>
+        <span>请使用微信扫一扫，扫描二维码支付</span>
+      </div>
+      <div class="weixin_right">
+        <ul>
+          <li><img src="<%= imagessrc%>zhi.jpg" alt=""><span>支付宝支付</span></li>
+          <li><img src="<%= imagessrc%>union.jpg" alt=""><span>网银支付</span></li>
+          <li><img src="<%= imagessrc%>pay_yin.jpg" alt=""><span>银行汇款</span></li>
+        </ul>
+        <a href="javascript:;">去付款 ></a>
+      </div>
+    </div>
+  </div>
+ 
+</body>
+<% include ../common/bottom.ejs %>

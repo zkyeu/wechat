@@ -1,0 +1,29 @@
+<% include ../common/top.ejs %>
+<body data-init="stuType3">
+    <div class="ac-popup-wrap">
+    	<!-- <p class="que_tit">课堂检测</p> -->
+        <div class="ac-popup-content">
+			<p class="type_4_title">回答错误！<span class="pea">与1个学豆<span class="pea_img"></span>擦肩而过</span></p>
+			<p class="type_4_text">正确答案<span class="text_a">A</span></p>
+            <p class="type_4_text">您的答案<span class="text_a text_b">B</span></p>
+			<div class="type_4_content">
+                <p class="cont_text">I ___ born in ___ on May 10th.</p>
+                <div class="type_btn" yinpin="/images/html/ac_voice_share/horse.mp3">
+                <div class="ac_tip">点击此处播放</div></div>
+                <div class="type_4_img">
+                    <img src="<%= imagessrc%>q_img.jpg" />
+                </div>
+				<div class="choose_4">
+                    <span>A. was, 2005</span>
+                    <span>B. am,2005</span>
+                    <span>C. were,2004</span>
+                    <span>D. am,2005</span>
+                </div>
+			</div>
+        </div>
+        <div class="ac-popup-bottom">
+        </div>
+    </div>
+    <div id="mp3Box"></div>
+</body>
+<% include ../common/bottom.ejs %>

@@ -1,0 +1,150 @@
+<% include ../common/uc_top.ejs %>
+<body>
+	<% include ../common/uc_header.ejs %>
+	<div class="g-bd">
+		<div class="g-in f-cb">
+			<% include ../common/uc_sidebar.ejs %>
+		    <div class="g-mn gw" id="container" data-init="junior">
+		      <div class="g-mnc">
+		        <div class="g-mncw m-certificate-op">
+		          <div class="m-hd">
+		            <div class="banner">
+		              <h1>Susan在51Talk的学习成就</h1>
+		              <img class="face" src="<%= imagessrc%>face.png" height="100" width="100" alt="头像">
+		            </div>
+		            <div class="share bbs">
+		                <a class="f-fr zn-fr">查看我的成人级别证书</a>
+		            </div>
+		          </div>
+		          <div class="group f-pr bbs">
+		            <h2>你的证书</h2>
+		            <p class="u-text">亲爱的Susan，你已在51Talk学习12个月，获得了1份证书；</p>
+		            <p class="u-text">
+		              在EFL智能学习系统中，只要您通过了51Talk级别体系的每一英语水平阶段中的最后一个级别的级别测试，即可获得此阶段的等级证书，由 51Talk 无忧英语颁发。以邮寄的方式免费为您送达。
+		            </p>
+		            <img class="medal" src="<%= imagessrc%>medal.png" height="140" width="119" alt="">
+		            <ul class="cerlist f-cb">
+		              <li class="f-left jsPause" data-apply="N" data-level="3" data-user-level="1" data-id data-levels="4:no,5:ok,6:no" data-url="xxxx">
+		                <img src="<%= imagessrc%>beginner.jpg" height="220" width="260" alt="">
+		                <div class="u-mask">
+		                  <p class="p1"></p>
+		                  <p class="p2"></p>
+		                </div>
+		              </li>
+ 		              <!--<li class="f-left">
+		                <img src="<%= imagessrc%>beginner.jpg" height="220" width="260" alt="">
+		                <div class="u-mask f-dn">
+		                  <p>亲爱的同学，学完level6所有课程</p>
+		                  <p>就可以获得我啦</p>
+		                </div>
+		              </li> -->
+		              <li class="f-right jsPause" data-send="N" data-apply="Y" data-id="1" data-level="6" data-user-level="10" data-levels="4:ok,5:ok,6:no">
+		                <img src="<%= imagessrc%>elementary.jpg" height="220" width="260" alt="">
+		                <div class="u-mask">
+		                  <p class="p1">您正在努力获取</p>
+		                  <p class="p2">初级证书</p>
+		                </div>
+		              </li>
+		            </ul>
+		          </div>
+		          <div class="group bbd">
+		            <h2>级别证书获取方式</h2>
+		            <!-- <img src="<%= imagessrc%>cer_flow.jpg" height="175" width="818" alt=""> -->
+		            <div class="zn-get">
+			            <!-- <img src="<%= imagessrc%>cer_flow.png" height="175" width="818" alt=""> -->
+			            <span class="classic">选择经典英语学习</span>
+			            <span class="lastLevel">完成当前阶段最后一个level的课程</span>
+			            <span class="mail">填写邮寄地址等待证书送达</span>
+		            </div>
+		          </div>
+		          <div class="group bbd">
+		            <h2>51Talk英语晋级体系</h2>
+		            <!-- <img src="<%= imagessrc%>p_level.jpg" height="208" width="784" alt=""> -->
+		            <img src="<%= imagessrc%>p_level.png" height="208" width="784" alt="">
+		          </div>
+		          <div class="m-ft">
+		            <a class="u-btn" href="javascript:;">立即约课学习赢取级别证书</a>
+		            <p class="u-text">继续努力吧！51Talk与您一路同行</p>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		    <!-- /g-mn -->
+		</div>
+	</div>
+	<div class="m-dialog zn-send" style="display:none;">
+		<div class="in" style="top:5%;height:500px;">
+			<div class="hd pb">
+				<a class="close" href="javascript:void(0)" title="关闭">x</a>
+			</div>
+			<div class="bd" style="overflow-y:auto; height:500px;">
+				<div class="certificate">
+					<div class="title">51Talk将免费为您邮寄级别证书，请准备填写以下信息：</div>
+					<div class="group f-cb">
+						<label class="u-lab" for="name">
+							<span class="u-txt w82">收货人姓名：</span>
+							<input class="input_tx" id="real_name" type="name" maxlength="32">
+							<span class="u-txt error">（必填，用于显示在纸质证书上）</span>
+						</label>
+					</div>
+					<div class="group">
+						<label class="u-lab" for="post_num">
+							<span class="u-txt w82">邮政编码：</span>
+							<input class="input_tx" id="post_num" type="text" maxlength="11">
+							<span class="u-txt error">（必填）</span>
+						</label>
+					</div>
+					<div class="group f-cb">
+						<label class="u-lab" for="address">
+							<span class="u-txt w82">收件地址：</span>
+							<input class="input_tx" id="user_addr" type="name" maxlength="32">
+							<span class="u-txt error">（必填）</span>
+						</label>
+					</div>
+					<div class="sibmit " style="padding:10px 0 40px 106px;">
+						<a href="javascript:;" class="u-btn md active w88">提&nbsp;交</a>
+					</div>
+					<div class="f-tac"><img src="<%= imagessrc%>elementary.jpg" height="502" width="710"></div>
+					<div class="group zn-f">
+						<a href="javascript:;" class="u-btn md active">证书已申请邮寄，请耐心等待</a>
+					</div>
+				</div>
+			</div>
+			<div class="ft">
+			</div>
+		</div>
+	</div>
+	<div class="m-dialog zn-cert">
+	  <div class="in" style="width:686px;margin-left:-343px;">
+	    <div class="hd">
+	      <a class="close" href="javascript:void(0)" title="关闭">x</a>
+	      <h4 class="u-tt-md">亲爱的学员，完成以下级别测试后，就可以赢取证书回家啦！</h4>
+	    </div>
+	    <div class="bd">
+	      <div class="level-status">
+	        <ul class="f-cb">
+	          <li class="finish">
+	            <div class="status"></div>
+	            <div class="level">LEVEL 7</div>
+	          </li>
+<!-- 	          <li>
+	            <div class="status"></div>
+	            <div class="level">LEVEL 8</div>
+	          </li>
+	          <li>
+	            <div class="status"></div>
+	            <div class="level">LEVEL 8</div>
+	          </li> -->
+	          <li class="last">
+	            <div class="status"></div>
+	            <div class="level">LEVEL 9</div>
+	          </li>
+	        </ul>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- /m-dialog -->
+	<% include ../common/uc_footer.ejs %>
+</body>
+<% include ../common/uc_bottom.ejs %>

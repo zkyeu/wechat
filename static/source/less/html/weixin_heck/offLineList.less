@@ -1,0 +1,120 @@
+// 图片path
+@imgMpath: "../../../images/html/weixin_heck/";
+html,body{
+    background: #f5f5f5;
+    width: 100%;
+    min-height: 500px;
+    overflow-y: auto;
+}
+@width1052:1052px;
+@height70:70px;
+@border_dc:#dcdcdc solid 1px;
+@color_96:#969696;
+.heck_top_32{
+    height:70px;
+    background: #323232;
+    .top_content{
+        width: @width1052;
+        height:@height70;
+        line-height: @height70;
+        margin: 0 auto;
+        font-size: 20px;
+        color:#fff;
+    }
+}
+
+.no_replacer{
+    width: 1054px;
+    margin: 0 auto;
+    font-size: 20px;
+    padding-top: 30px;
+}
+.margin-space{
+    margin-bottom: 100px;
+}
+.off_line_container{
+    width: @width1052;
+    margin: 0 auto;
+    margin-top: 20px;
+    table{
+        width: @width1052;
+        border: @border_dc;
+        border-radius:5px;
+        tr td:last-child{
+            border-top:@border_dc;
+        }
+        tr td:nth-child(1){
+            border-top:@border_dc;
+        }
+    }
+    .off_line_title{
+        width: 138px;
+        color:@color_96;
+        vertical-align: middle;
+        border-right:@border_dc;
+        background-color: #f8f9fb;
+        p{
+            padding: 0 20px;
+            font-size: 18px;
+            span{
+                font-size: 14px;
+                float: right;
+                margin-top: 3px;
+            }
+        }
+    }
+    .replace_item{
+        background: #f8f9fb;
+        width: 100px;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 16px;
+        color: #666;
+        padding: 20px 0;
+    }
+    .itme_list_on, .itme_list_off{
+        padding-bottom: 10px;
+        background: #fff;
+        a{
+            display: block;
+            padding:6px 24px;
+            border: @border_dc;
+            float: left;
+            -webkit-border-radius:20px;
+            -moz-border-radius:20px;
+            border-radius:20px;
+            margin: 10px 0 0 10px;
+        }
+    }
+    .itme_list_on {
+        a {
+            background-color: #f8f9fb;
+        }
+        a.trust-self{
+            background: #ffdb69;
+        }
+        a:hover{
+            background: #ddd;
+            cursor: pointer;
+        }
+    }
+    .itme_list_off {
+        a {
+            background-color: #ffdb69;
+        }
+        a:hover{
+            background:#ff7e00;
+            color:#fff;
+            cursor: pointer;
+        }
+
+    }
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height:@height70;
+    background: #303030;
+}

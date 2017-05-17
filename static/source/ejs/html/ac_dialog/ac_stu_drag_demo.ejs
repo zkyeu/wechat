@@ -1,0 +1,72 @@
+<% include ../common/top.ejs %>
+<body class="ac-tem-drag ac-tem-stu ac-tem-swf-demo" data-init="acDrag" swfHref="" audioPath="" page-tag="drag,tea,demo">
+	<div class="ac-tem">
+		<div class="ac-tem-tit">
+            <span class="ac-tem-tit-bg"></span>
+            <div class="ac-tem-tit-in ac-tem-wrap clearfix">
+                <a href="javascript:void(0);" class="ac-close ac-pair-spirts fr">Go back to class</a>
+            </div>
+        </div>
+        <div class="ac-swf-demo">
+            <div class="ac-swf-demo-in">
+                <!-- 题型一 -->
+                <!-- <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="872" height="592" wmode="opaque" quality="high" allowScriptAccess="always">
+                    <param name="movie" value="<%= imagessrc%>drag-demo-1.swf" />
+                    <param name="allowScriptAccess" value="always" />         
+                    <param name="quality" value="high" />
+                    <param name="wmode" value="opaque" />      
+                    <embed src="<%= imagessrc%>drag-demo-1.swf" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="872" height="592" wmode="opaque" quality="high" allowScriptAccess="always"></embed>
+                </object> -->
+
+                <!-- 题型二 -->
+                
+                <!-- <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="872" height="592" wmode="opaque" quality="high" allowScriptAccess="always">
+                    <param name="movie" value="<%= imagessrc%>drag-demo-2.swf" />
+                    <param name="allowScriptAccess" value="always" />         
+                    <param name="quality" value="high" />
+                    <param name="wmode" value="opaque" />      
+                    <embed src="<%= imagessrc%>drag-demo-2.swf" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="872" height="592" wmode="opaque" quality="high" allowScriptAccess="always"></embed>
+                </object>  -->
+
+                <!-- 老师题型题型一 -->
+                
+                <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="872" height="592" wmode="opaque" quality="high" allowScriptAccess="always">
+                    <param name="movie" value="<%= imagessrc%>drag-demo-t-1.swf" />
+                    <param name="allowScriptAccess" value="always" />         
+                    <param name="quality" value="high" />
+                    <param name="wmode" value="opaque" />      
+                    <embed src="<%= imagessrc%>drag-demo-t-1.swf" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="872" height="592" wmode="opaque" quality="high" allowScriptAccess="always"></embed>
+                </object> 
+
+                <!-- 老师题型题型二 -->
+                
+                <!-- <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="872" height="592" wmode="opaque" quality="high" allowScriptAccess="always">
+                    <param name="movie" value="<%= imagessrc%>drag-demo-t-2.swf" />
+                    <param name="allowScriptAccess" value="always" />         
+                    <param name="quality" value="high" />
+                    <param name="wmode" value="opaque" />      
+                    <embed src="<%= imagessrc%>drag-demo-t-2.swf" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="872" height="592" wmode="opaque" quality="high" allowScriptAccess="always"></embed>
+                </object>  -->
+                 
+            </div>
+            <div class="ac-swf-demo-tips">
+                <div class="ac-tem-tips">
+                    <div class="ac-tem-tips-inner">
+                        <ul class="clearfix">
+                            <li>Speak slower, be encouraging and patientpatientpatient.</li>
+                        </ul>
+                    </div>
+                </div>
+                <dl class="clearfix">
+                    <dd class="fr">
+                        <span class="notip">不再提示</span>
+                        <a href="http://www.baidu.com" class="skip">跳过</a>
+                        <a href="/templates/html/ac_dialog/ac_tea_drag_send.html" class="drag-demo-back">back</a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+<input type="hidden" name="cookieName" />
+</body>
+<% include ../common/bottom.ejs %>

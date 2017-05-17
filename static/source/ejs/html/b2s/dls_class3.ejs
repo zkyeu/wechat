@@ -1,0 +1,159 @@
+<% include ../common/top.ejs %>
+<body>
+<input type="hidden" id="container" data-init="class_info" />
+<!-- 公共头 -->
+<% include ../common/b2s/b2s_header.ejs %>
+<!-- 中间内容 -->
+<div class="mycls mycls-agent">
+  <div class="widthMain">
+    <!-- banner -->
+    <div class="central">
+       <div class="stu_tit">
+        <dl>
+          <dt><img src="<%= imagessrc%>tea.jpg" alt=""></dt>
+          <dd class="intro_one"><span>代理商</span> 呵呵</dd>
+          <dd class="wel-login">欢迎登录</dd>
+        </dl>
+        <p class="stu_number">学生邀请码：123456</p>
+      </div>
+      <!-- 侧栏 -->
+      <% include ../common/b2s/b2s_sidebar.ejs %>
+      <div class="cls-main cls-class-info">
+        <div class="agent-list">
+          <div class="tab-box" id="tabId">
+            <a class="matter current c-matter" href="javasript:;">
+              <span>待办事项
+              </span>
+              <i>10</i>
+            </a>
+            <a class="notice" href="javasript:;">
+              <span>系统公告
+              </span>
+              <i>10</i>
+            </a>
+            <a class="record" href="javasript:;">
+              <span>操作记录
+              </span>
+              <i>10</i>
+            </a>
+          </div>
+          <div class="class-info-list">
+            <table>
+              <thead>
+                <tr>
+                  <td>分类</td>
+                  <td>标题</td>
+                  <td>时间</td>
+                  <td>老师</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>开课提醒</td>
+                  <td><a href="javascript:;">今日可申请排入门课班级
+</a></td>
+                  <td>2016-10-24</td>
+                </tr>               
+                <tr>
+                  <td>开课提醒</td>
+                  <td><a href="javascript:;">今日可申请排入门课班级
+</a></td>
+                  <td>2016-10-24</td>
+                </tr> 
+                 <tr>
+                  <td>开课提醒</td>
+                  <td><a href="javascript:;">今日可申请排入门课班级
+</a></td>
+                  <td>2016-10-24</td>
+                </tr> 
+                 <tr>
+                  <td>开课提醒</td>
+                  <td><a href="javascript:;">今日可申请排入门课班级
+</a></td>
+                  <td>2016-10-24</td>
+                </tr> 
+                 <tr>
+                  <td>开课提醒</td>
+                  <td><a href="javascript:;">今日可申请排入门课班级
+</a></td>
+                  <td>2016-10-24</td>
+                </tr> 
+              </tbody>
+            </table>
+          </div> 
+        </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+
+<!-- 添加选择班级弹框 -->
+
+<div class="add_stu_confirm1"></div>
+<div class="add_confirm1">
+  <form action="http://www.baidu.com" method="" id="stu_name" rel="agent_detail_class">
+    <p class="tit">绑定班级<span class='close_confirm1'></span></p>
+     <ul class="cfix">
+          <li class="li_input">
+            年级：<select class="op_s">  
+                    <option value ="1">一年级</option>  
+                    <option value ="2">二年级</option>  
+                    <option value="3">三年级</option>  
+                    <option value="4">四年级</option> 
+                    <option value="4">五年级</option>
+                    <option value="4">六年级</option>  
+                  </select>  
+          </li>
+          <li class="error-tips">
+            <!-- <span class="err-arr"></span> -->
+            <em></em>
+          </li>
+     </ul>
+     <ul class="cfix">
+          <li class="li_input">
+            班级：<select class="op_s">  
+                    <option value ="1">一班</option>  
+                    <option value ="2">二班</option>  
+                    <option value="3">三班</option>  
+                    <option value="4">四班</option>
+                    <option value ="5">五班</option>  
+                    <option value ="6">六班</option>  
+                    <option value="7">七班</option>  
+                    <option value="8">八班</option>
+                    <option value ="9">九班</option>  
+                    <option value ="10">十班</option>  
+                    <option value="11">十一班</option>  
+                    <option value="12">十二班</option>
+                    <option value ="13">十三班</option>  
+                    <option value ="14">十四班</option>  
+                    <option value="15">十五班</option>  
+                    <option value="16">十六班</option>
+                    <option value ="17">十七班</option>  
+                    <option value ="18">十八班</option>  
+                    <option value="19">十九班</option>  
+                    <option value="10">二十班</option>  
+                  </select>  
+          </li>
+          <li class="error-tips">
+            <!-- <span class="err-arr"></span> -->
+            <em></em>
+          </li>
+     </ul>
+    <input type="hidden" value="" class="tea_id"> 
+    <input class="add_sure tea_add_sure" type="submit" value="绑定班级">
+    <p id="msg_error">dddd</p>
+  </form>
+</div>
+<div class="add_confirm2"> 
+    <p class="tit">温馨提示<span class='close_confirm1'></span></p>
+    <div class="tip_text">
+      请选择要转班的学生
+    </div>
+</div>
+</body>
+<% include ../common/bottom.ejs %>

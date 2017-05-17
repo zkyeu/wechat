@@ -1,0 +1,317 @@
+<% include ../common/top.ejs %>
+<body>
+<header class="header" data-init="index">
+	<img src="<%= imagessrc%>merry_nav.jpg">
+	<a href="/user/info" class="personalCenter">
+		<img src="<%= imagessrc%>personCenter.png" class="personalImg" title="个人中心">
+	</a>
+	<a href="javascript:;" class="logo">
+		<img src="<%= imagessrc%>logo.png" class="logoImg" title="51Talk">
+	</a>
+</header>
+<section class="draw">
+	<!-- 隐藏域 -->
+	<!--<input id="login" type="hidden" value="1" />-->
+	<!--<input id="active" type="hidden" value="0" />-->
+	<!--<input id="prizeName" type="hidden" value="歌帝梵巧克力" />-->
+	<!-- 隐藏域 -->
+
+	<section class="share_names" style="display:block;">
+		<ul class="name_list">
+			<li>中奖名单：Elisabeth 学员抽中歌帝梵巧克力</li>
+			<li>中奖名单：Elisabeth 学员抽中￥1000</li>
+			<li>中奖名单：Elisabeth 学员抽中施华洛世奇水晶挂饰</li>
+		</ul>
+		<a href="javascript:;" class="rule" id="rule">活动规则></a>
+	</section>
+	<section class="dial-bg" id="lottery">
+		<ul class="l_grid clearfix">
+			<li class="l_prize c-0 l_now"><span class="p-img"><img src="<%= imagessrc%>merry_price01.png" alt=""></span></li>
+			<li class="l_prize l_prize-1"><span class="p-img"><img src="<%= imagessrc%>merry_price02.png" alt=""></span></li>
+			<li class="l_prize l_prize-2"><span class="p-img"><img src="<%= imagessrc%>merry_price03.png" alt=""></span></li>
+			<li class="l_prize l_prize-7"><span class="p-img"><img src="<%= imagessrc%>merry_price04.png" alt=""></span></li>
+			<li class="pointer"><span class="p-img"><img src="<%= imagessrc%>merry_price09.png"></span></li>
+			<li class="l_prize l_prize-3"><span class="p-img"><img src="<%= imagessrc%>merry_price05.png" alt=""></span></li>
+			<li class="l_prize l_prize-6"><span class="p-img"><img src="<%= imagessrc%>merry_price06.png" alt=""></span></li>
+			<li class="l_prize l_prize-5"><span class="p-img"><img src="<%= imagessrc%>merry_price07.png" alt=""></span></li>
+			<li class="l_prize l_prize-4"><span class="p-img"><img src="<%= imagessrc%>merry_price08.png" alt=""></span></li>
+		</ul>
+	</section>
+	<section class="twodetail"><span>“2000元奖学金券”详情></span></section>
+	<section class="luck-hor"><span id="myPrizeBtn">我的中奖记录</span></section>
+</section>
+<section class="draw-list">
+	<img src="<%= imagessrc%>meer_tit.png" class="list-img">
+	<p class="p-tit">三好学生必备<a class="libao" href="javascript:;"></a></p>
+
+	<ul class="unit">
+		<li>
+			<div class="zenlibao"></div>
+			<a href="javascript:;">
+				<img src="<%= imagessrc%>item1.png">
+				<span class="t-t">青少经典英语18单元</span>
+				<span class="t-s">￥6648<i>原价￥7188</i></span>
+				<span class="spend">购买</span>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:;">
+				<img src="<%= imagessrc%>item96.png">
+				<span class="t-t">青少经典英语18单元</span>
+				<span class="t-s">￥6648<i>原价￥7188</i></span>
+				 <span class="spend">购买</span>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:;">
+				<img src="<%= imagessrc%>item180.png">
+				<span class="t-t">青少经典英语18单元</span>
+				<span class="t-s">￥6648<i>原价￥7188</i></span>
+				 <span class="spend">购买</span>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:;">
+				<img src="<%= imagessrc%>item270.png">
+				<span class="t-t">青少经典英语18单元</span>
+				<span class="t-s">￥6648<i>原价￥7188</i></span>
+				 <span class="spend">购买</span>
+			</a>
+		</li>
+	</ul>
+	<p class="p-tit">专业外教首推</p>
+	<ul class="unit">
+		<li>
+			<a href="javascript:;">
+				<img src="<%= imagessrc%>item360.png">
+				<span class="t-t">青少经典英语18单元</span>
+				<span class="t-s">￥6648<i>原价￥7188</i></span>
+				 <span class="spend">购买</span>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:;">
+				<img src="<%= imagessrc%>month12.png">
+				<span class="t-t">青少经典英语18单元</span>
+				<span class="t-s">￥6648<i>原价￥7188</i></span>
+				 <span class="spend">购买</span>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:;">
+				<img src="<%= imagessrc%>month24.png">
+				<span class="t-t">青少经典英语18单元</span>
+				<span class="t-s">￥6648<i>原价￥7188</i></span>
+				<span class="spend">购买</span>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:;">
+				<img src="<%= imagessrc%>point60.png">
+				<span class="t-t">青少经典英语18单元</span>
+				<span class="t-s">￥6648<i>原价￥7188</i></span>
+				<span class="spend">购买</span>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:;">
+				<img src="<%= imagessrc%>point90.png">
+				<span class="t-t">青少经典英语18单元</span>
+				<span class="t-s">￥6648<i>原价￥7188</i></span>
+				<span class="spend">购买</span>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:;">
+				<img src="<%= imagessrc%>point180.png">
+				<span class="t-t">青少经典英语18单元</span>
+				<span class="t-s">￥6648<i>原价￥7188</i></span>
+				<span class="spend">购买</span>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:;">
+				<img src="<%= imagessrc%>point270.png">
+				<span class="t-t">青少经典英语18单元</span>
+				<span class="t-s">￥6648<i>原价￥7188</i></span>
+				<span class="spend">购买</span>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:;">
+				<img src="<%= imagessrc%>point360.png">
+				<span class="t-t">青少经典英语18单元</span>
+				<span class="t-s">￥6648<i>原价￥7188</i></span>
+				<span class="spend">购买</span>
+			</a>
+		</li>
+	</ul>
+	<footer></footer>
+	<div class="sharelist">
+		<ul>
+			<li>
+				<a href="javascript:">
+					<img src="<%= imagessrc%>icon1.png">
+				</a>
+				<p>微信朋友圈</p>	
+			</li>
+			<li>
+				<a href="javascript:">
+					<img src="<%= imagessrc%>icon2.png">
+				</a>
+				<p>微信好友</p>	
+			</li>
+			<li>
+				<a href="javascript:">
+					<img src="<%= imagessrc%>icon3.png">
+				</a>
+				<p>QQ</p>	
+			</li>
+			<li>
+				<a href="javascript:">
+					<img src="<%= imagessrc%>icon4.png">
+				</a>
+				<p>微博</p>	
+			</li>
+		</ul>
+	</div>
+</section>
+<section class="merry_bj hide"><img src="<%= imagessrc%>merry_bj.png"></section>
+<!-- 活动规则 -->
+<div class="activity-rule hide" id="rulePanel">
+	<div class="mask">
+		<p class="nav-t">
+			<span>活动规则</span>
+			<a href="javascript:;" class="close" ><img src="<%= imagessrc%>merry_del.png"></a>
+		</p>
+		<ul class="list">
+			<li>1.活动时间: 1月6日11:00:00—1月22日 23:59:59。</li>
+			<li>2.活动期间每位同学有1次抽奖机会,中奖信息将在中   
+   奖后10分钟内发到您PC端站内信。</li>
+			<li>3.抽中课实物奖品的同学，需要活动期间购买5000
+   元及以上套餐才能获得奖品。</li>
+			<li>4.图片仅供参考，以实物为准，奖品将在活动结束
+   后两周内由客服联系寄出。</li>
+			<li>5.本活动最终解释权归51Talk所有。</li>
+		</ul>
+	</div>
+</div>
+<!-- /活动规则 -->
+
+
+<!-- 2000元奖学金金券 -->
+<div class="activity-rule hide" id="juandetail">
+	<div class="mask">
+		<p class="nav-t">
+			<span>“2000元奖学金券”说明</span>
+			<a href="javascript:;" class="close" ><img src="<%= imagessrc%>merry_del.png"></a>
+		</p>
+		<ul class="list">
+			<li>1. 抽中2000元奖学金券后，在活动期间购买60次学
+    习套餐并在有效期内消耗完毕（不得请假或者缺
+    席）即可获得一张2000元的奖学金券，用户购买
+    任意套餐时可使用。</li>
+			<li>2. 奖学金券发放: 活动期间购买的套餐消耗完毕后，
+    2000元奖学金券将通过站内信的形式发放账户中。</li>
+		</ul>
+	</div>
+</div>
+<!-- /2000元奖学金金券 -->
+
+<!-- 赠新年礼包 -->
+<div class="activity-rule hide" id="libao">
+	<div class="mask">
+		<p class="nav-t">
+			<span>“赠新年礼包”说明</span>
+			<a href="javascript:;" class="close" ><img src="<%= imagessrc%>merry_del.png"></a>
+		</p>
+		<ul class="list">
+			<li>1. 成功购买"赠新年礼包"指定款后可获得“新年礼
+    包”1个。</li>
+			<li>2. 礼包内容含：51Talk定制台历一个、定制红包、
+    定制春联一对、实体次卡两张（面额为3次）、 
+    专属代金券三张。</li>
+		    <li>3. 邮寄配送请您在完成购买后登录会员中心-账户设
+    置-个人信息底部中补充收货地址和联系方式，工
+    作人员将于3-5个工作日内快递给您。 </li>
+			<li>4. 注意事项：新年礼包为赠品，不得退换。实体次卡可转赠亲友，新注册后可自动充值到账户，不记名不挂失，过期作废。专属代金券需按最低消费金额使用，每张代金券仅可使用一次，过期作废 。</li>
+		</ul>
+	</div>
+</div>
+<!-- /赠新年礼包 -->
+
+<!--登录-->
+<div class="register-panel hide">
+	<div class="mask">
+		<a href="javascript:;" class="close">
+			<img src="<%= imagessrc%>merry_del.png" title="关闭">
+		</a>
+		<form action="">
+			<div class="registerContent">
+				<ul class="register">
+					<li>
+						<p>登录或注册后才能抽奖哦<img src="<%= imagessrc%>smile.png"></p>
+					</li>
+					<li>
+						<input type="text" class="txt" placeholder="请输入您的手机号">
+					</li>
+					<li>
+						<input type="text" class="codeTxt" placeholder="请输入验证码">
+						<span class="codeBtn">验证码</span>
+					</li>
+					<li>
+						<input type="text" class="txt" placeholder="请输入您的密码">
+
+					</li>
+					<li>
+						<a href="javascript:;" class="loginBtn">登录</a>
+					</li>
+				</ul>
+			</div>
+		</form>
+	</div>
+</div>
+<!--/登录-->
+
+<!--中奖弹窗-->
+<div class="dialog hide" id="dialog">
+	<div class="zoomIn animated info">
+		<div class="box">
+			<a href="javascript:;" class="close"><img src="<%= imagessrc%>merry_del.png"></a>
+			<div class="detail">
+				<img src="<%= imagessrc%>merry_price01_2.png" alt="" style="display:none;">
+				<img src="<%= imagessrc%>merry_price02_2.png" alt="" style="display:none;">
+				<img src="<%= imagessrc%>merry_price03_2.png" alt="" style="display:none;">
+				<img src="<%= imagessrc%>merry_price05_2.png" alt="" style="display:none;">
+				<img src="<%= imagessrc%>merry_price08_2.png" alt="" style="display:none;">
+				<img src="<%= imagessrc%>merry_price07_2.png" alt="" style="display:none;">
+				<img src="<%= imagessrc%>merry_price06_2.png" alt="" style="display:none;">
+				<img src="<%= imagessrc%>merry_price04_2.png" alt="" style="display:none;">
+			</div>
+			<h3>恭喜获得：<span class="prizeName">350元代金券</span></h3>
+		</div>
+	</div>
+</div>
+<!--/中奖弹窗-->
+<!--中奖纪录-->
+<div class="dialog2 hide" id="dialog2">
+	<div class="zoomIn animated tip tip-1 hide">
+		<a href="javascript:;" class="close"><img src="<%= imagessrc%>join_close.png"></a>
+		<div class="gold_box"></div>
+		<div class="text text2">
+			<h3>您还没有参与抽奖，快去抽奖吧！</h3>
+		</div>
+	</div>
+	<div class="zoomIn animated tip tip-2 hide">
+		<a href="javascript:;" class="close"><img src="<%= imagessrc%>join_close.png"></a>
+		<div class="gold_box"></div>
+		<div class="text text1">
+			<p>您已获得</p>
+			<h3><span id="myprizeContent">歌帝梵巧克力</span></h3>
+		</div>
+	</div>
+</div>
+
+<!--/中奖纪录-->
+</body>
+<% include ../common/bottom.ejs %>

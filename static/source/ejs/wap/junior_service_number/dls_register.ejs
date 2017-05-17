@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="description"  content="领取学习礼包，来51Talk玩转英语">
+    <title>51Talk送福利，邀你跟好友一起玩转英语。</title>
+    <link rel="stylesheet" type="text/css" href="<%= csslink%>">
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>dls_register.css">
+</head>
+<body id="container" data-init="dlsRegister">
+    <div class="reg-box">
+        <div class="banner">
+            <img src="<%= imagessrc %>banner.png"/>
+        </div>
+        <div class="receive-box">
+            <p class="tit">专属外教1V1互动，赶快来领取吧</p>
+            <div class="input-box"><input id="regMobile" placeholder="输入您的手机号" type="text"/></div>
+            <div class="input-box">
+                <input id="captch" class="code-input" placeholder="输入图片验证码" type="text"/>
+                <span class="code-box code-img"><img id="captchImg" src="<%= imagessrc %>d-code.png"/></span>
+            </div>
+            <div class="input-box">
+                <input id="regSms" class="code-input" placeholder="输入短信验证码" type="text"/>
+                <span class="code-box">
+                    <a id="smsBtn" href="javascript:;">发送验证码</a>
+                    <a class="count-down" id="countDown" href="javascript:;">重新发送(5)</a>
+                </span>
+            </div>
+            <a id="commitBtn" class="receive-btn" href="javascript:;" >点击领取</a>
+        </div>
+        <div class="des-box">
+            <h2><把外教老师带回家></h2>
+            <div>
+                <div class="img-box">
+                    <img src="<%= imagessrc %>img_20.png"/>
+                </div>
+                <div class="text-box text1">
+                    <p class="title">8000+金牌外教</p>
+                    <p class="info">经验丰富对外教团队，优中优选，录取率仅3%
+    1对1教学，为您提供VIP专属服务</p>
+                </div>
+            </div>
+            <div>
+                <div class="img-box">
+                    <img src="<%= imagessrc %>img_21.png"/>
+                </div>
+                <div class="text-box text2">
+                    <p class="title">超强的教材研发实力</p>
+                    <p class="info">10年以上教学经验对课程研发团队</p>
+                    <p class="info">超过10万小时精心投入</p>
+                    <p class="info">专业打造适合中国学习者对系统教材</p>
+                </div>
+            </div>
+            <div>
+                <div class="img-box">
+                    <img src="<%= imagessrc %>img_22.png"/>
+                </div>
+                <div class="text-box text3">
+                    <p class="title">随时随地，轻松提升</p>
+                    <p class="info">功能强大的在线教室AC(AirClass)</p>
+                    <p class="info">无缝衔接手机、Pad</p>
+                    <p class="info">电脑三端，足不出户约课、预习、上课、复习</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="showtips_layer">
+        <div class="showtips">
+            <span></span>
+            <em id="closeLayer">&times;</em>
+        </div>
+    </div>
+</body>
+
+<!--公共尾部结束-->
+<script id="seajsnode" src="<%= jssrc%>"></script>
+</html>

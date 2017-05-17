@@ -1,0 +1,35 @@
+<% include ../common/top.ejs %>
+<body data-init="acteaAll" swfHref="" audioPath="" page-tag="all,tea,play">
+    <div class="ac-tem">
+        <div class="ac-tem-tit z5">
+            <span class="ac-tem-tit-bg"></span>
+            <div class="ac-tem-tit-in ac-tem-wrap clearfix">
+                <a href="javascript:void(0);" class="ac-close fr">Go back to class</a>
+            </div>
+        </div>
+        <div class="ac-tem-tea-all">
+            <div class="ac-tea-all-switch">
+                <span class="ac-tea-all-switch-bg"></span>
+                <span class="ac-tea-all-tips"></span>
+                <div class="ac-tea-all-controller-wrap">
+                    <ul class="ac-tea-all-controller">
+                    </ul>                    
+                </div>
+            </div>
+            <div class="ac-tea-all-ifr">
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+var dataArr = {
+    arr:[
+        "/templates/html/ac_dialog/ac_tea_pair_send.html",
+        "/templates/html/ac_dialog/ac_tea_voice_send.html",
+        "/templates/html/ac_dialog/ac_tea_drag_send.html",
+        "/templates/html/ac_dialog/ac_tea_read_send.html",
+        "/templates/html/ac_dialog/ac_tea_choice_send.html"
+    ]
+}
+</script>
+<% include ../common/bottom.ejs %>

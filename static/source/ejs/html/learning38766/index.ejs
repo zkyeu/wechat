@@ -1,0 +1,344 @@
+<% include ../common/top.ejs %>
+<body>
+<!-- 顶部 -->
+<div class="pri-header">
+  <!-- 顶部 -->
+  <div class="header">
+    <a href="javascript:;" class="hr-lt">
+      <i></i>
+      <b><span>美国纽交所上市公司（股票代码：COE）</span>全球信赖的在线英语领导品牌</b>
+      <!-- 青少 -->
+      <b class="qs-tit hide">外教1对1，在家学英语</b>
+    </a>
+    <div class="hr-rt">
+      <div class="rt-top">
+        <ul>
+          <li><span class="rt_username">hi,studentstudenthw</span><a href="http://www.51talk.com/trial/index" title="会员中心">会员中心</a><a href="/index/logout" title="退出">退出</a></li>
+          <li><a href="http://www.baidu.com" id="login_url">登录</a></li>
+          <li><a href="javascript:;">免费注册</a></li>
+          <li><a href="javascript:;">企业培训</a></li>
+          <li class="jsMore">
+            <a href="javascript:;">微博</a>
+            <!-- 微博弹层 -->
+            <div class="weibo jsUl">
+              <a href="javascript:;"></a>
+            </div>
+          </li>
+          <li class="jsMore">
+            <a href="javascript:;">微信</a>
+            <!-- 微信弹层 -->
+            <div class="weixin jsUl">
+              <a href="javascript"><img src="<%= imagessrc%>/top_weixin.png" alt=""></a>
+            </div>
+          </li>
+          <li></li>
+        </ul>
+      </div>
+      <span><i></i>4000-51-51-51</span>
+    </div>
+  </div>
+</div>
+<!-- 购物车 -->
+  <input type="hidden" id="cartType" value="cart">
+  <input type="hidden" id="cartID" value="">
+  <input type="hidden" id="actArr" value="">
+  <input type="hidden" id="downMoney" value="0">
+  <input type="hidden" id="showAgree" value="n">
+  <form id="form-cart" name="point_form" action="/pay/order" method="post" target="_blank">
+    <div class="m-cart" id="cart" style="right:-255px; " ><!-- right从 0 到 -251  -->
+      <input type="hidden" name="cart" value='{"cart":[],"package":"off","earphone":"off"}'>
+      <div class="cart-hd"><em class="jsCount">0</em></div>
+      <div class="cart-bd"><!-- width从 0 到 251  -->
+        <div class="cart-in">
+          <div class="title">我的购物车（<em class="jsCount">0</em>）
+            <div class="u-pages">
+              <a class="prev dis-prev" href="javascript:void(0)">&lt;</a>
+              <span class="crt"><em class="jsPageNow">1</em><em>/</em><em class="jsPageCount">1</em></span>
+              <a class="next dis-next" href="javascript:void(0)">&gt;</a>
+            </div>
+          </div>
+          <div class="products">
+              <div class="jsWrap">
+              </div>
+          </div>
+          <div class="addeds" style="visibility: hidden;">
+              <dl class="product">
+                  <a class="s-fc6" href="#level">立即购买配套教材，学习效果更佳！</a>
+              </dl>
+              <dl class="product">
+                  <dt class="added">
+                      <label class="u-lab jsPackageLabel">
+                          <input class="f-dn" type="checkbox" name="package">
+
+                          <span class="u-txt">+<em class="jsPackage">0</em>元，您还可以选购<a href="javascript:;">电话包</a></span>
+                      </label>
+                  </dt>
+              </dl>
+              <dl class="product" style="border-top: 1px solid rgb(228, 234, 238);">
+                  <dt class="added">
+                  <label class="u-lab jsEarphoneLabel">
+                      <input class="f-dn" type="checkbox" name="earphone">
+                     
+                      <span class="u-txt" data-cart="">+50元，选购高保真耳麦(双插头)</span>
+                  </label>
+                  </dt>
+              </dl>
+              <p class="differ" style="display:none;">补差价金额：
+                  <em class="jsMinuend">10288</em>&nbsp;-&nbsp;
+                  <em class="jsMeiosis">3588</em>&nbsp;=&nbsp;
+                  <em class="jsDifference">6700</em>
+              </p>
+          </div>
+          <div class="total-orders">订单总金额：<em class="jsTotal" data-total="5799">23045</em></div>
+          <div class="total-orders-stagin" style="display: none;">金额总计：<em class="jsTotal" data-total="5799"></em></div>
+          <div class="submit">
+            <input class="button jsSubmit" type="submit" value="提交订单" style="width: 117px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+<!-- /购物车 -->
+<div class="container" data-init="index">
+  <!-- banner -->
+    <div class="banner"><img src="<%= imagessrc%>cls_banner.jpg"></div>
+  <!-- /banner -->
+  <div class="content">
+  <img src="<%= imagessrc%>float_layer_img.png" class="floatImg">
+  <!-- 抽奖 -->
+    <div class="part1" id="part1">
+      <div class="nav-title">
+        <img src="<%= imagessrc%>cls_tit_img01.png">
+        <h3 class="title">新年好礼送不停</h3>
+      </div>
+      <div class="lotteryBox">
+        <div class="prizeDetail">
+          <div class="prizeList">
+            <h3 class="prizeTitle">中奖名单</h3>
+            <div class="dots"></div>
+            <ul class="nameList">
+              <li>absefd 学员抽中 歌帝梵巧克力</li>
+              <li>Elisa 学员抽中 乐高积木盒</li>
+              <li>Eason 学员抽中 1400元代金券</li>
+              <li>LULU 学员抽中 彼得兔经典故事集</li>
+              <li>李白 学员抽中 1000元代金券</li>
+            </ul>
+          </div>
+          <div class="rule">
+            <ul class="ruleList">
+              <li>活动规则:</li>
+              <li>1.活动时间：2月10日-2月19日</li>
+              <li>2.活动期间，每位学员有一次抽奖机会，抽中实物奖品的同学，需购买6000元以上的套餐才能获得奖品</li>
+              <li>3.抽奖的学员请登陆官网-会员中心-账户设置-个人信息，填写名字、电话、邮寄地 址，活动结束后20个工作日内寄出礼品</li>
+              <li>4.礼品图片仅供参考，最终礼品以实物为准</li>
+              <li>5.本活动最终解释权归51Talk所有</li>
+            </ul>
+          </div>
+        </div>
+        <!-- data-lottery-url:抽奖url   data-log-url:抽奖记录url-->
+        <div class="lottery" data-lottery-url="/Activity/dofestival">
+          <div class="prizeBox">
+            <ul class="prizes" id="prizeList">
+                <li class="active"><img src="<%= imagessrc%>prize1.png" class="prize1"></li>
+                <li><img src="<%= imagessrc%>prize2.png" class="prize2"></li>
+                <li><img src="<%= imagessrc%>prize3.png" class="prize3"></li>
+                <li><img src="<%= imagessrc%>prize4.png" class="prize4"></li>
+                <li><span class="prize5" id="pointer"></span></li>
+                <li><img src="<%= imagessrc%>prize5.png" class="prize6"></li>
+                <li><img src="<%= imagessrc%>prize6.png" class="prize7"></li>
+                <li><img src="<%= imagessrc%>prize7.png" class="prize8"></li>
+                <li><img src="<%= imagessrc%>prize8.png" class="prize9"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a href="javascript:;" class="btnMore" id="logBtn" data-log-url="/Activity/getUserLottery">查看中奖记录<i><img src="<%= imagessrc%>template_btn_img.png"></i></a>
+    </div>
+  <!-- /抽奖 -->
+  <!-- 必杀技 -->
+    <div class="part2" id="part2">
+      <div class="nav-title">
+        <img src="<%= imagessrc%>cls_tit_img02.png">
+        <h3 class="title">热门推荐+限量开学大礼包</h3>
+      </div>
+      <div class="classBox">
+        <ul class="classList clearfix">
+          <li class="clearfix">
+            <img src="<%= imagessrc%>item180.jpg">
+            <span class="half"><img src="<%= imagessrc%>cls_list_img.png"></span>
+            <div class="item">
+                <h3 class="desc">青少经典英语18单元学习套餐</h3>
+                <p class="price"><span class="cur">￥6648</span><span class="old">￥7188</span></p>
+            </div>
+            <a href="javascript:;" data-point="nor" data-id="23217" data-cart='{"id":23217,"price":"5799","package":"0","cash_card":"0","point_type":"junior_point","point_value":"1","expire_days":"365","point_title":"wwwww"}' data-text="购&nbsp;买" class="buy u-btn jsPre active"></a>
+          </li>
+          <li class="clearfix">
+            <img src="<%= imagessrc%>item360.jpg">
+            <!-- 剩余名额 -->
+              <span class="surplus">今日还剩<i>100039</i>个名额</span>
+            <!-- 剩余名额 -->
+            <div class="item">
+                <h3 class="desc">青少经典英语36单元学习套餐</h3>
+                <p class="price"><span class="cur">￥10388</span><span class="old">￥14988</span></p>
+            </div>
+            <a href="javascript:;" data-point="nor" data-id="9167" data-cart='{"id":9167,"price":"4088","package":"450","cash_card":"0","point_type":"point","point_value":" 90 ","expire_days":"180"}' data-text="购&nbsp;买" class="buy u-btn jsPre active"></a>
+          </li>
+          <li class="clearfix">
+            <img src="<%= imagessrc%>point180.jpg">
+            <div class="item">
+                <h3 class="desc">180次次卡学习套餐</h3>
+                <p class="price"><span class="cur">￥6648</span><span class="old">￥7188</span></p>
+            </div>
+            <a href="javascript:;"  class="buy u-btn jsPre active" data-point="nor" data-id="9077" data-cart='{"id":9077,"price":"14666","package":"3600","cash_card":"0","point_type":"month","point_value":" 24 ","expire_days":"720"}' data-text="购&nbsp;买" ></a>
+          </li>
+          <li class="clearfix">
+            <img src="<%= imagessrc%>point270.jpg">
+            <div class="item">
+                <h3 class="desc">270次次卡学习套餐</h3>
+                <p class="price"><span class="cur">￥8688</span><span class="old">￥10888</span></p>
+            </div>
+            <a href="javascript:;" data-point="nor" data-id="49167" data-cart="{&quot;id&quot;:49167,&quot;price&quot;:&quot;4088&quot;,&quot;package&quot;:&quot;450&quot;,&quot;cash_card&quot;:&quot;0&quot;,&quot;point_type&quot;:&quot;point&quot;,&quot;point_value&quot;:&quot; 90 &quot;,&quot;expire_days&quot;:&quot;180&quot;}" data-text="购&nbsp;买" class="buy u-btn jsPre active"></a>
+          </li>
+          <li class="clearfix">
+            <img src="<%= imagessrc%>point60.jpg">
+            <div class="item">
+                <h3 class="desc">60次次卡学习套餐</h3>
+                <p class="price"><span class="cur">￥2333</span><span class="old">￥3688</span></p>
+            </div>
+            <a href="javascript:;"  class="buy u-btn jsPre active" data-point="nor" data-id="90730" data-cart='{"id":90730,"price":"14666","package":"3600","cash_card":"0","point_type":"month","point_value":" 24 ","expire_days":"720"}' data-text="购&nbsp;买" ></a>
+          </li>
+          <li class="clearfix">
+            <img src="<%= imagessrc%>month3.jpg">
+            <div class="item">
+              <h3 class="desc">3个月包月学习套餐</h3>
+              <p class="price"><span class="cur">￥2988</span><span class="old">￥4666</span></p>
+            </div>
+            <a href="javascript:;" data-point="nor" data-id="333217" data-cart='{"id":333217,"price":"5799","package":"0","cash_card":"0","point_type":"ct","point_value":"1","expire_days":"365"}' data-text="购&nbsp;买" class="buy u-btn jsPre active"></a>
+          </li>
+        </ul>
+      </div>
+      <a href="javascript:;" class="btnMore">查看更多课程<i><img src="<%= imagessrc%>template_btn_img.png"></i></a>
+    </div>
+  <!-- /必杀技 -->
+  <!-- 学霸手拉手 -->
+    <div class="part3" id="part3">
+      <div class="nav-title">
+        <img src="<%= imagessrc%>cls_tit_img03.png">
+        <h3 class="title">有机会获得51Talk总部及菲律宾6日游</h3>
+      </div>
+      <div class="box-img">
+        <ul>
+          <li><img src="<%= imagessrc%>cls_tourism01.png"></li>
+          <li><img src="<%= imagessrc%>cls_tourism02.png"></li>
+          <li><img src="<%= imagessrc%>cls_tourism03.png"></li>
+        </ul>
+      </div>
+      <a href="javascript:;" class="btnMore">了解更多规则<i><img src="<%= imagessrc%>template_btn_img.png"></i></a>
+    </div>
+  <!-- /学霸手拉手 -->
+  <!-- 学习攻略 -->
+    <div class="part4" id="part4">
+      <div class="nav-title">
+        <img src="<%= imagessrc%>cls_tit_img04.png">
+        <h3 class="title">51Talk明星教师</h3>
+      </div>
+      <div class="classBox">
+        <ul>
+          <li>
+            <img src="<%= imagessrc%>cls_star_img01.png">
+            <div class="title">
+              <h3>Kanisha</h3>
+            </div>
+            <p class="test">充满知识和正能量，针对不同的学生提出不同的教学方案，调整授课方式，提高学生学习效率。</p>
+          </li>
+          <li>
+            <img src="<%= imagessrc%>cls_star_img02.png">
+            <div class="title">
+              <h3>Nico Roman</h3>
+            </div>
+            <p class="test">风趣幽默，在上课的时候可以充分发掘每个学生的潜力，因人而异调整教学方法，使得每位同学都可以得到最大程度的进步。</p>
+          </li>
+          <li>
+            <img src="<%= imagessrc%>cls_star_img03.png">
+            <div class="title">
+              <h3>Kez Jiz</h3>
+            </div>
+            <p class="test">生动有趣，让学生在轻松快乐的气氛中学好英语，练好口语。会结合自己对人生的感悟，给学生全新的生活启迪。</p>
+          </li>
+          <li>
+            <img src="<%= imagessrc%>cls_star_img04.png">
+            <div class="title">
+              <h3>Danica Mae</h3>
+            </div>
+            <p class="test">十分热爱教学，善于了解发掘孩子的优势与兴趣，并帮助其自信地成长，让学生在轻松愉快的环境下学到知识。</p>
+          </li>
+        </ul>
+      </div>
+      <a href="javascript:;" class="btnMore">马上去约课<i><img src="<%= imagessrc%>template_btn_img.png"></i></a>
+    </div>
+  <!-- /学习攻略 -->
+  <!-- 学习计划 -->
+    <div class="part5" id="part5" style="display:none;">
+      <div class="nav-title">
+        <img src="<%= imagessrc%>cls_tit_img05.png">
+        <h3 class="title">学习要趁早</h3>
+      </div>
+      <div class="box-img"><img src="<%= imagessrc%>cls_week.png"></div>
+    </div>
+  <!-- /学习计划 -->
+  </div>
+</div>
+<!-- 弹出层 -->
+<div class="mask" id="mask"></div>
+<div class="prizeLog" id="prizeLog">
+  <div class="front">
+    <a href="javascript:;" class="btn" id="closeLog"></a>
+    <div class="log yesLog">
+        <h3>您已获得</h3>
+        <p>51Talk纪念U盘</p>
+    </div>
+    <div class="log noLog">您还没有参与抽奖，快去抽奖吧！</div>
+  </div>
+</div>
+<div class="dialog" id="dialog">
+  <a href="javascript:;" class="close" id="closeDialog"><img src="<%= imagessrc%>cls_del.png"></a>
+  <div class="box">
+    <div class="detail" id="prize">
+      <img src="<%= imagessrc%>prize1_1.png">
+      <img src="<%= imagessrc%>prize2_1.png">
+      <img src="<%= imagessrc%>prize3_1.png">
+      <img src="<%= imagessrc%>prize4_1.png">
+      <img src="<%= imagessrc%>prize5_1.png">
+      <img src="<%= imagessrc%>prize6_1.png">
+      <img src="<%= imagessrc%>prize7_1.png">
+      <img src="<%= imagessrc%>prize8_1.png">
+    </div>
+    <div class="title">恭喜获得：<span id="myPrize">京东卡500元</span></div>
+  </div>
+</div>
+<!-- /弹出层 -->
+<!-- 隐藏域 -->
+  <input id="isLogin" type="hidden" value="0" />
+<!-- /隐藏域 -->
+<!-- new layer -->
+<div class="systemLayer hide">
+  <div class="into">
+    <div class="hd">
+      <!-- <a class="close" href="javascript:;" title="关闭"></a> --><h4>系统消息</h4>
+    </div>
+    <div class="cotent">
+      <div class="bd">
+        <p>请登录后参与活动</p>
+      </div>
+      <div class="ft">
+        <span class="know">知道了</span>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /new layer -->
+<!-- 尾部 -->
+<% include ../common/www/w_footer_home.ejs %>
+<script src="<%= jssrc%>" id="seajsnode"></script>
+</body>
+</html>

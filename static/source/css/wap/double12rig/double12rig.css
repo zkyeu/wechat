@@ -1,0 +1,321 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Thu Dec 01 2016 14:29:56 GMT+0800 (中国标准时间)
+ */
+/*
+* 默认样式
+* @file：   base.less
+* @author:  zhuning@51talk.com）
+* @update:  2015-10-29
+* @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+*/
+html {
+  font-size: 62.5%;
+  -webkit-user-select: none;
+}
+@media only screen and (min-width: 481px) {
+  html {
+    font-size: 94%;
+  }
+}
+@media only screen and (min-width: 561px) {
+  html {
+    font-size: 109%;
+  }
+}
+@media only screen and (min-width: 641px) {
+  html {
+    font-size: 125%;
+  }
+}
+body {
+  padding: 0;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 640px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+}
+input,
+button,
+select,
+textarea,
+dl,
+dd,
+dt {
+  font-family: "Microsoft YaHei";
+  outline: none;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 0;
+  padding: 0px;
+  margin: 0px;
+}
+ul,
+li {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  vertical-align: middle;
+}
+b {
+  font-weight: normal;
+}
+::-moz-selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+strong {
+  font-weight: normal;
+}
+html {
+  height: 100%;
+}
+body {
+  position: relative;
+  font-family: "微软雅黑";
+  max-width: 640px;
+  min-width: 320px;
+  margin: 0 auto;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+h3 {
+  margin: 0;
+}
+.container .banner {
+  width: 100%;
+  height: 27.4rem;
+  background: url(../../../images/wap/double12rig/banner.jpg?v=5n8tZnZCGP7bdMLsAaHgBA%3D%3D) 0 0 no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+.container .content {
+  background-color: #ffcd01;
+  padding-bottom: 1.1rem;
+}
+.container .content .formBox {
+  width: 92.18%;
+  height: 19rem;
+  background-color: #ffea00;
+  margin: 0 auto 1.6rem;
+  position: relative;
+  border-radius: 0.5rem;
+}
+.container .content .formBox .title {
+  width: 27.35rem;
+  height: 5.15rem;
+  background: url(../../../images/wap/double12rig/title.png?v=EiFQh7aEEiqFzGVPkzK1Jw%3D%3D) 0 0 no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 50%;
+  margin-left: -13.67rem;
+  top: -2.1rem;
+}
+.container .content .formBox .subBtn {
+  width: 19.85rem;
+  height: 4.65rem;
+  background: url(../../../images/wap/double12rig/btnBg.png?v=OEFMyGD7ViYSjKUstPek5w%3D%3D) 0 0 no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 50%;
+  margin-left: -9.925rem;
+  bottom: -6.25rem;
+  font-size: 1.8rem;
+  line-height: 4.65rem;
+  color: #f94159;
+  text-align: center;
+}
+.container .content .formBox .list {
+  padding-top: 3.8rem;
+  width: 27rem;
+  margin: 0 auto;
+}
+.container .content .formBox .list li {
+  height: 3.5rem;
+  width: 27rem;
+  margin-bottom: 1.5rem;
+}
+.container .content .formBox .list li .txt {
+  outline: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: #fff;
+  height: 100%;
+  width: 24rem;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  padding: 0 1.5rem;
+  text-align: left;
+}
+.container .content .formBox .list li .tel_code {
+  width: 12rem;
+  float: left;
+}
+.container .content .formBox .list li .tel_btn {
+  display: inline-block;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  width: 11rem;
+  color: #c82401;
+  background: #faac00;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  float: right;
+  background: url(../../../images/wap/double12rig/codeBtn.png?v=NkbMRQJpd2Di2HN58l0Rlw%3D%3D) no-repeat;
+  background-size: cover;
+}
+.container .content .formBox .list li .tel_btn.sending {
+  background: #e5e5e5;
+  color: #aaaaaa;
+}
+.container .content .promotion {
+  width: 24.25rem;
+  height: 3.6rem;
+  margin: 8.3rem auto 2.2rem;
+  display: block;
+}
+.container .content .oldUser {
+  width: 26.0rem;
+  height: 3.4rem;
+  margin: 0 auto;
+  display: block;
+}
+.container .content .classList {
+  padding-top: 1.4rem;
+  padding-bottom: 0.5rem;
+  background-color: #ffcd01;
+}
+.container .content .classList li {
+  float: left;
+  margin-left: 4.68%;
+  margin-bottom: 1.5rem;
+  width: 42.97%;
+  text-align: center;
+  background-color: #fff;
+}
+.container .content .classList li img {
+  width: 100%;
+  /* height: 9.5rem; */
+  display: block;
+  border: none;
+}
+.container .content .classList li .title {
+  font-size: 1.4rem;
+  line-height: 3.2rem;
+  color: #333333;
+  margin: 0;
+}
+.container .content .classList li .desc {
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+.container .content .classList li .desc span {
+  font-size: 1.5rem;
+  color: #ff2728;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  display: inline-block;
+}
+.container .content .classList li .desc i {
+  font-size: 1.2rem;
+  color: #b1b1b1;
+  text-decoration: line-through;
+  vertical-align: middle;
+}
+.container .footer {
+  width: 100%;
+  height: 6.4rem;
+  line-height: 6.4rem;
+  text-align: center;
+  font-size: 0.8rem;
+  background-color: #f94159;
+  color: #fff;
+}
+.tipBox {
+  width: 27.4rem;
+  height: 33.5rem;
+  position: fixed;
+  left: 50%;
+  margin-left: -13.7rem;
+  top: 50%;
+  margin-top: -16.75rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  display: none;
+  z-index: 1000;
+  background: url(../../../images/wap/double12rig/tipBg.png?v=m6vUsFAfPlaYOH4zKTzURg%3D%3D) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.tipBox .content {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  width: 100%;
+  color: #f94159;
+  line-height: 2.4rem;
+}
+.tipBox .content h3 {
+  font-size: 1.8rem;
+}
+.tipBox .content p {
+  font-size: 1.5rem;
+}
+.tipBox .content .btn {
+  width: 21.0rem;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  background-color: #f94159;
+  font-size: 1.6rem;
+  color: #fff;
+  display: inline-block;
+  border-radius: 0.4rem;
+  margin-top: 3.2rem;
+}
+.mask {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}

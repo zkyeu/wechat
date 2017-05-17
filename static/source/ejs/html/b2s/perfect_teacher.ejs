@@ -1,0 +1,26 @@
+<% include ../common/top.ejs %>
+<body id="container" data-init="index">
+<!-- 公共头 -->
+<% include ../common/b2s/b2s_header.ejs %>
+<!-- 中间内容 -->
+<div class="ce-content">
+	<div class="widthMain">
+		<div class="perfect-info">
+			<h3 class="info-tit"><span class="info-suc"> 恭喜你注册成功！</span>请完善你的信息，让学生知道你是谁</h3>
+			<form action="http://www.baidu.com" method="get" id="perfect_teacher_Form">
+				<ul class="info-cont">
+					<li><span class="info-user">中文名：</span><input type="text" class="china-name jsBlank"><p class="info-tip hide"><span class="tenIcon"></span>请填写有效信息</p></li>
+					<li><span class="info-user">英文名：<span class="info-eng">（或拼音）</span></span><input type="text" class="eng-name"><p class="info-tip hide"><span class="tenIcon"></span>请填写有效信息</p></li>
+					<li class="info-sex"><span class="info-user">性&nbsp;&nbsp;&nbsp;别：</span><span class="tenIcon check-icon" data-id="1"></span><span class="infor-man">男</span><span class="tenIcon check-icon" data-id="2"></span><span>女</span><input type="hidden" class="sex-radio">
+					</li>
+					<li><span class="info-user">邮&nbsp;箱：<span class="info-eng info-eng2"> （选填 )</span></span><input type="text" class="mail"></li>
+				</ul>
+				<div class="info-submit"><button type="button" value="确定" class="infor-submit">确定</button></div>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

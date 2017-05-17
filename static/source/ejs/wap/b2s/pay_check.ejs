@@ -1,0 +1,29 @@
+<% include ../common/top.ejs %>
+<body>
+	<div class="pay-wrap bg-f5">
+		<form action="#" autocomplete="off" rel="from">
+			<h6 class="pay-tit">订单详情</h6>
+			<div class="pay-detail">
+				<dl>
+					<dt>购买产品：</dt>
+					<dd>精品外教辅导课</dd>
+				</dl>
+				<dl>
+					<dt>订单金额：</dt>
+					<dd>300元</dd>
+				</dl>
+			</div>
+			<h6 class="pay-tit">您需要支付</h6>
+			<div class="pay-detail">
+				<dl class="pay-money">
+					<dt><img src="<%= imagessrc%>wx-icon.png" /></dt>
+					<dd>300元</dd>
+				</dl>
+			</div>
+			<div class="submit-btn">
+				<input type="submit" class="input-submit" value="立即支付" />
+			</div>
+		</form>
+	</div>
+</body>
+<% include ../common/bottom.ejs %>

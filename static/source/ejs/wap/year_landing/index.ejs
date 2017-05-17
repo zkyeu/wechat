@@ -1,0 +1,51 @@
+<% include ../common/top.ejs %>
+<body>
+<img src="<%= imagessrc%>year_ic_img.jpg" width="0" height="0" style="float:left;">
+<div id="ido" class="year">
+    <div class="section section1">
+        <img src="<%= imagessrc%>year_nav.jpg" alt="" class="yr-nav">
+        <div class="form">
+          <form method="POST" id="RegForm01" action="share">
+            <ul class="yr-form">
+              <li><input type="number" placeholder="请输入手机号" id="sha-tel01"></li>
+              <li><input type="password" placeholder="设置您的密码" id="sha-psd01"></li>
+              <li><a href="javascript:;" id="sha-reg01">免费领取外教礼包</a></li>
+            </ul>
+          </form>  
+        </div>
+        <div class="nav-img" data-menuanchor="page2"><a href="#page2"><img src="<%= imagessrc%>icon-down.png" alt="" class="sec-img01"></a></div>
+    </div>
+    <div class="section section2">
+      <h3 class="h-tit"><img src="<%= imagessrc%>year_tit01.png" alt="" class="yr-text"></h3>
+      <img src="<%= imagessrc%>year_img01.jpg" alt="" class="yr-img01">
+      <div class="nav-img" data-menuanchor="page3"><a href="#page3"><img src="<%= imagessrc%>icon-down.png" alt="" class="sec-img01"></a></div>
+    </div>
+    <div class="section section3">
+      <h3><img src="<%= imagessrc%>year_tit02.png" alt="" class="yr-text"></h3>
+      <img src="<%= imagessrc%>year_img02.jpg" alt="" class="yr-img01">
+      <div class="nav-img" data-menuanchor="page4"><a href="#page4"><img src="<%= imagessrc%>icon-down.png" alt="" class="sec-img01"></a></div>
+    </div>
+    <div class="section section4">
+      <h3><img src="<%= imagessrc%>year_tit03.png" alt="" class="yr-text"></h3>
+      <img src="<%= imagessrc%>year_img03.jpg" alt="" class="yr-img01">
+      <div class="nav-img" data-menuanchor="page5"><a href="#page5"><img src="<%= imagessrc%>icon-down.png" alt="" class="sec-img01"></a></div>
+    </div>
+    <div class="section section5">
+      <img src="<%= imagessrc%>year_fr_img.jpg" alt="" class="fr-img">
+      <div class="form">
+        <form id="RegForm02" action="share">
+          <ul class="yr-form">
+            <li><input type="number" placeholder="请输入手机号" id="sha-tel02"></li>
+            <li><input type="password" placeholder="设置您的密码" id="sha-psd02"></li>
+            <li><a href="javascript:;" id="sha-reg02">免费领取外教礼包</a></li>
+          </ul>
+        </form>
+        <p>购买任意套餐，可再免费获赠3节1对1外教课</p>
+      </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="../../../js/wap/project/year_landing/jquery-1.8.3.min.js"></script>
+<script src="../../../js/wap/project/year_landing/jquery.fullPage.min.js"></script>
+<script src="../../../js/wap/project/year_landing/year.js"></script>

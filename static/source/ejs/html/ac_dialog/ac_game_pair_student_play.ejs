@@ -1,0 +1,51 @@
+<% include ../common/top.ejs %>
+<body data-init="acgamePair" swfHref="" audioPath="">
+    <div class="ac-dialog-wrap">
+        <div class="ac-dialog-content game-pair">
+            <p class="game-des">找出对应内容</p>
+            <div class="game-content">
+            </div>
+        </div>
+        <div class="ac-dialog-bottom">
+            <p class="timmer-wrap">
+            </p>
+        </div>
+    </div>
+    <form method="post" action="#" name="gamePlay">
+        <input type="hidden" name="goCount" />
+        <input type="hidden" name="playTime" />
+        <input type="hidden" name="resultArr" />
+        <input type="hidden" name="r" value="3" />
+    </form>
+<script type="text/javascript">
+var dataJson = {
+    // type play 玩游戏 show 展示
+    type : "play",
+    // workTime 玩游戏的时间
+    workTime : 60000,
+    // closeTime 答案展示时间
+    closeTime : 3000,
+    // bufferTime 本道题老师端buffer时间 老师端看报告才用到
+    bufferTime : 8000,
+    // 数据
+    dataArr : [
+        // 图片地址 | 配对id | 对错状态 0 错误 1 正确 9 无状态
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|1|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|1|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|2|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|2|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|3|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|3|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|4|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|4|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|5|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|5|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|6|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|6|9'
+    ],
+    // 各种环境图片前缀
+    imgPath : ""
+};
+</script>
+</body>
+<% include ../common/bottom.ejs %>

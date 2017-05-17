@@ -1,0 +1,281 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: 
+ */
+.disnone {
+  display: none;
+}
+.bg-s {
+  background: url(../../../images/html/b2s/bg_03.png?v=e%2FS3QveeE9SKti4HZBBnGg%3D%3D) center 17px #b6dcf8 no-repeat;
+}
+.bg-s .color-s {
+  background-color: #fff!important;
+}
+.bg-s .color-s .top-value {
+  padding: 30px;
+}
+.bg-s .color-s .bg-many {
+  background: url(../../../images/html/b2s/pay_03.jpg?v=U%2FRdo6py32lY0DuHSG9Byg%3D%3D) no-repeat;
+}
+.bg-s .color-s .bg-one {
+  background: url(../../../images/html/b2s/pay_04.jpg?v=8ndqmMHVGR6Tef%2BZF5BnrQ%3D%3D) no-repeat;
+}
+.bg-s .color-s .bg-two {
+  background: url(../../../images/html/b2s/usa-pay.jpg?v=%2BKIHwY6ha3r9e%2F9TskurJg%3D%3D) no-repeat;
+}
+.bg-s .color-s .banner-box {
+  position: relative;
+  width: 780px;
+  height: 140px;
+  color: #fff;
+  background: url(../../../images/html/b2s/banner_05.jpg?v=lfJAudxX%2FmcumpG2%2BysJEA%3D%3D) no-repeat;
+}
+.bg-s .color-s .banner-box .text-l {
+  text-align: right;
+  position: absolute;
+  top: 17px;
+  left: 180px;
+}
+.bg-s .color-s .banner-box .text-l .banner-tit {
+  font-size: 30px;
+}
+.bg-s .color-s .banner-box .text-l .banner-tit span {
+  font-size: 22px;
+}
+.bg-s .color-s .banner-box .text-l .banner-des {
+  font-size: 18px;
+  margin-top: 3px;
+}
+.bg-s .color-s .banner-box .text-l .banner-info {
+  font-size: 16px;
+  margin-top: 5px;
+}
+.bg-s .color-s .banner-box .text-r {
+  position: absolute;
+  text-align: right;
+  right: 25px;
+  top: 20px;
+}
+.bg-s .color-s .banner-box .text-r .b-o-price {
+  font-size: 19px;
+}
+.bg-s .color-s .banner-box .text-r .b-o-price span {
+  font-size: 32px;
+}
+.bg-s .color-s .banner-box .text-r .b-n-price {
+  font-size: 16px;
+  text-decoration: line-through;
+}
+.bg-s .color-s .banner-box .text-r .b-pay-btn {
+  width: 180px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #ff5686;
+  text-align: center;
+  line-height: 40px;
+  display: inline-block;
+  color: #fff;
+  font-size: 20px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.bg-s .color-s .pay-info {
+  color: #fff;
+  margin-top: 20px;
+  width: 780px;
+  height: 300px;
+  position: relative;
+}
+.bg-s .color-s .pay-info .left-box {
+  float: left;
+}
+.bg-s .color-s .pay-info .left-box .class-tit {
+  font-size: 32px;
+}
+.bg-s .color-s .pay-info .left-box .class-des {
+  font-size: 18px;
+  margin-top: 5px;
+}
+.bg-s .color-s .pay-info .left-box .class-des-t {
+  font-size: 22px;
+}
+.bg-s .color-s .pay-info .left-box .class-des-t {
+  font-size: 22px;
+}
+.bg-s .color-s .pay-info .left-box .class-n {
+  margin-top: 4px;
+  font-size: 16px;
+}
+.bg-s .color-s .pay-info .left-box .class-n .class-n-p,
+.bg-s .color-s .pay-info .left-box .class-n .class-o-p {
+  margin-left: 35px;
+}
+.bg-s .color-s .pay-info .left-box .class-n .class-n-p i,
+.bg-s .color-s .pay-info .left-box .class-n .class-o-p i {
+  top: 2px;
+  left: -22px;
+  display: block;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  background: url(../../../images/html/b2s/p_icons.png?v=6rBNt%2FkvqRkx4wLh5Fzytg%3D%3D) no-repeat;
+}
+.bg-s .color-s .pay-info .left-box .class-n .class-n-p {
+  color: #fe0036;
+  position: relative;
+}
+.bg-s .color-s .pay-info .left-box .class-n .class-n-p i {
+  background-position: -550px 0;
+}
+.bg-s .color-s .pay-info .left-box .class-n .class-o-p {
+  position: relative;
+  color: #fedd00;
+}
+.bg-s .color-s .pay-info .left-box .class-n .class-o-p i {
+  background-position: -600px 0;
+}
+.bg-s .color-s .pay-info .left-box .class-price {
+  font-size: 16px;
+  color: #fff;
+  margin-top: 25px;
+}
+.bg-s .color-s .pay-info .left-box .class-price span {
+  font-size: 38px;
+  color: #fcce0a;
+}
+.bg-s .color-s .pay-info .left-box .class-price span i {
+  font-size: 30px;
+}
+.bg-s .color-s .pay-info .left-box .class-price .th-s {
+  font-size: 24px;
+}
+.bg-s .color-s .pay-info .left-box .class-price .th-m {
+  font-size: 19px;
+}
+.bg-s .color-s .pay-info .left-box .class-price em {
+  color: #4a8ff9;
+}
+.bg-s .color-s .pay-info .left-box .class-price-o {
+  margin-top: 13px;
+}
+.bg-s .color-s .pay-info .left-box .class-price-o span {
+  color: #ff133a;
+}
+.bg-s .color-s .pay-info .left-box .class-price-s {
+  margin-bottom: 20px;
+}
+.bg-s .color-s .pay-info .left-box .class-vip {
+  font-size: 18px;
+  color: #ff133a;
+  margin-bottom: 5px;
+}
+.bg-s .color-s .pay-info .left-box .class-vip span {
+  font-size: 14px;
+}
+.bg-s .color-s .pay-info .left-box .class-btn {
+  margin-top: ;
+  width: 220px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 22px;
+  background: url(../../../images/html/b2s/p_icons.png?v=6rBNt%2FkvqRkx4wLh5Fzytg%3D%3D) no-repeat;
+}
+.bg-s .color-s .pay-info .left-box .class-btn a {
+  color: #fff;
+}
+.bg-s .color-s .pay-info .left-box .btn-many {
+  background-position: 0 -1px;
+}
+.bg-s .color-s .pay-info .left-box .btn-one {
+  background-position: -300px -1px;
+}
+.bg-s .color-s .pay-info .left-box .btn-t1 {
+  margin-top: 15px;
+}
+.bg-s .color-s .pay-info .left-box .btn-notStarted {
+  width: 216px;
+  height: 46px;
+  line-height: 46px;
+  background: #ffad00;
+  border: 2px solid #fec119;
+  border-radius: 999px;
+}
+.bg-s .color-s .pay-info .left-box .btn-notStarted a {
+  color: #fed18d;
+}
+.bg-s .color-s .pay-info .s-icon {
+  display: block;
+  width: 119px;
+  height: 107px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.bg-s .color-s .pay-info .s-icon-m {
+  background: url(../../../images/html/b2s/pay_05.png?v=qYCYxTJ73rNRvNrBT%2BiNjQ%3D%3D) no-repeat;
+}
+.bg-s .color-s .pay-info .s-icon-o {
+  background: url(../../../images/html/b2s/pay_06.png?v=osRbTguJMH%2BlLX6E65GpXQ%3D%3D) no-repeat;
+}
+.bg-s .color-s .pay-info .top-left01 {
+  margin-top: 50px;
+  margin-left: 55px;
+}
+.bg-s .color-s .pay-info .top-left02 {
+  margin-top: 30px;
+  margin-left: 40px;
+}
+.bg-s .color-s .pay-info .top-left03 {
+  margin-top: 10px;
+  margin-left: 40px;
+}
+.bg-s .color-s .pay-info .countDown-wrap {
+  height: 22px;
+  padding-top: 18px;
+}
+.bg-s .color-s .pay-info .countDown-wrap .countDown {
+  height: 22px;
+  line-height: 22px;
+  margin-left: 40px;
+  font-size: 16px;
+  color: #9c6018;
+}
+.bg-s .color-s .pay-info .countDown-wrap .countDown .countDown-box {
+  display: inline-block;
+  width: 18px;
+  height: 22px;
+  border-radius: 4px;
+  background: #9a5f19;
+  text-align: center;
+  font-size: 10px;
+  color: #fff;
+}
+.bg-s .color-s .pay-info .right-box {
+  float: right;
+  width: 140px;
+  margin-right: 10px;
+}
+.bg-s .color-s .pay-info .right-box .class-info {
+  font-size: 20px;
+  margin-top: 45px;
+}
+.bg-s .color-s .pay-info .right-box ul {
+  margin-top: 25px;
+}
+.bg-s .color-s .pay-info .right-box ul li {
+  font-size: 15px;
+  margin-bottom: 5px;
+  position: relative;
+  padding-left: 10px;
+}
+.bg-s .color-s .pay-info .right-box ul li span {
+  position: absolute;
+  display: block;
+  width: 6px;
+  height: 6px;
+  left: -4px;
+  top: 6px;
+  background: url(../../../images/html/b2s/p_icons.png?v=6rBNt%2FkvqRkx4wLh5Fzytg%3D%3D) -650px 0 no-repeat;
+}

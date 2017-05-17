@@ -1,0 +1,27 @@
+<% include ../common/top.ejs %>
+<body>
+<!-- <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>"> -->
+<script>
+  window.onload = function(){
+      document.documentElement.style.fontSize = document.body.clientWidth / 6.4 + "px";
+      document.getElementsByClassName("fontSizeLoding")[0].style.display = "none";
+  };
+</script>
+<div class="app-help-wrap">
+  <div class="app-help-title">
+    <p>无忧小学三年级</p>
+    <p>家长服务群</p>
+  </div>
+  <div class="app-help-con"><img src="<%= imagessrc%>app_help1.png" alt=""></div>
+  <div class="app-help-con">
+    <div class="app-help-QRcode"><img src="<%= imagessrc%>app_help4.png" alt=""></div>
+    <div class="app-help-QRcode-prompt"><img src="<%= imagessrc%>app_help5.png" alt=""></div>
+    <img src="<%= imagessrc%>app_help2.png" alt="">
+  </div>
+  <div class="app-help-con"><img src="<%= imagessrc%>app_help3.png" alt=""></div>
+</div>
+<div class="fontSizeLoding">
+    <img src="<%= imagessrc%>eff_loading.gif">
+</div>
+</body>
+<% include ../common/bottom.ejs %>

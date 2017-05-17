@@ -1,0 +1,122 @@
+<% include ../common/top.ejs %>
+<body data-init="stuBuyVip">
+   <script type="text/javascript">
+        window.onload = function(){
+             document.getElementsByClassName("Loding")[0].style.display = "none";
+        };
+    </script>
+<div class="stu-buyvip-wrap account-center-box summer_class_pay">
+  <form id="buyVipForm" action="">
+    <div class="account-head">
+      <a href="account_detail.html"></a>
+      <dl class="cfix">
+        <dt>
+          <img width="70" height="70" src="<%= imagessrc%>account-headicon-stu.png" class="account-head-img" />
+          <div class="account-head-info">
+            <h6>
+              <p>赵雷</p>
+
+            </h6>
+            <p>北京109中学小学实验部</p>
+            <p>三年二班</p>
+          </div>
+        </dt>
+        <dd><span class="fr">更换账户</span></dd>
+      </dl>
+    </div>
+    <div class="stu-buyvip-tit">享受以下VIP特权</div>
+    <div class="stu-buyvip-item">
+      <table>
+        <thead>
+          <tr>
+            <th width="50%" align="left">课程服务</th>
+            <th width="25%">普通学员</th>
+            <th width="25%" class="color1">特权会员</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>外教授课</td>
+            <td><span class="icon-yes"></span></td>
+            <td><span class="icon-yes"></span></td>
+          </tr>
+          <tr>
+            <td>精品课作业</td>
+            <td><span class="icon-yes"></span></td>
+            <td><span class="icon-yes"></span></td>
+          </tr>
+          <tr>
+            <td>同步课标拓展教材</td>
+            <td><span class="icon-no"></span></td>
+            <td><span class="icon-yes"></span></td>
+          </tr>
+          <tr>
+            <td>上课举手发言</td>
+            <td><span class="icon-no"></span></td>
+            <td><span class="icon-yes"></span></td>
+          </tr>
+          <tr>
+            <td>上课答题</td>
+            <td><span class="icon-no"></span></td>
+            <td><span class="icon-yes"></span></td>
+          </tr>
+          <tr>
+            <td>趣味课外题</td>
+            <td><span class="icon-no"></span></td>
+            <td><span class="icon-yes"></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="stu-buyvip-container">
+      <ul>
+        <li>选择班型</li>
+        <li>
+          <dl>
+            <dt>
+              <span class="tit">外教精品课(32节) <span>20个VIP/节</span></span><br>
+              <span class="line-through">原价500元</span><br>
+              <span class="prompt">小学学科课程</span><br>
+              <span class="line-through">原价480元</span>
+            </dt>
+            <dd>
+              298元<span class="radio-no" data-pid="346"></span>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <dl data-priceId="20">
+            <dt>
+              <span class="tit">外教精品课(36节) <span>20个VIP/节</span></span><br>
+              <span class="line-through">原价298元</span>
+            </dt>
+            <dd>
+              298元<span class="radio-no" data-pid="346"></span>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <dl data-priceId="6">
+            <dt>
+              <span class="tit">外教精品课(36节) <span>6个VIP/节</span></span><br>
+              <span class="line-through">原价998元</span>
+            </dt>
+            <dd>
+            668元<span class="radio-yes" data-pid="1096"></span>
+            </dd>
+          </dl>
+        </li>
+      </ul>
+    </div>
+    <div class="stu-buyvip-btn-buy-wrap">
+      <div class="buyvip-btn-buy">
+        <input class="btn-buy" type="submit" value="立即购买">
+      </div>
+    </div>
+  </form>
+</div>
+<div class="Loding">
+    <img src="<%= imagessrc%>loading.gif" />
+</div>
+</body>
+<% include ../common/bottom.ejs %>

@@ -1,0 +1,50 @@
+<% include ../common/top.ejs %>
+<body>
+<img src="" id="canvasImg">	
+</body>
+<script type="text/javascript">
+	var images = ['/images/wap/level_report/lesson_memo.png', '/images/wap/level_report/code.png'];
+	function draw() {
+		var myCanvas = document.createElement('canvas');
+		document.body.appendChild(myCanvas);
+		myCanvas.width = document.documentElement.clientWidth || document.body.clientWidth;
+		myCanvas.height = document.documentElement.clientHeight || document.body.clientHeight;
+		var len = images.length;
+		if(myCanvas.getContext) {
+			var context = myCanvas.getContext('2d');
+			context.fillStyle = '#fff';
+			context.fillRect(0, 0, myCanvas.width, myCanvas.height);
+			function drawing(num) {
+				if (num <= len) {
+					var cImage = new Image();
+					cImage.src = images[num];
+					if(num == 0) {
+						cImage.onerror = function() {
+							console.log('图片加载失败!');
+						}
+						cImage.onload = function() {
+							context.drawImage(cImage, 0, 0, myCanvas.width, myCanvas.height);
+							drawing(num + 1);
+						}
+					} else if (num == 1) {
+						cImage.onerror = function() {
+							console.log('图片加载失败!');
+						}
+						cImage.onload = function() {
+							context.drawImage(cImage, 0, 0, 100, 100);
+							drawing(num + 1);
+						}
+					}
+					else {
+						var imgPath = myCanvas.toDataURL('image/png');
+						document.getElementById('canvasImg').src = imgPath;
+					}
+
+				}
+			}
+			drawing(0);
+		}
+	}
+	draw();
+</script>
+</html>

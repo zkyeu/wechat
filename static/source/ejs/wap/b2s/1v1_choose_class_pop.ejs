@@ -1,0 +1,45 @@
+<% include ../common/top_b2s_n.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>1v1_choose_class_pop.css">
+</head>
+<body data-init="" class="payed_1v1_pop">
+<div class="foreignTeachers">
+    <div class="foreignTeachers-tit">1对1外教课约课流程</div>
+    <dl class="foreignTeachers-step cfix">
+        <dt><img src="<%= imagessrc%>1v3_payed_intro-05.png" alt=""></dt>
+        <dd>
+            <h3>下载安装“51Talk无忧英语”手机客户端</h3>
+            <p>或电脑打开网站“www.51talk.com”登录上课账号</p>
+        </dd>
+    </dl>
+    <dl class="foreignTeachers-step cfix">
+        <dt><img src="<%= imagessrc%>1v3_payed_intro-06.png" alt=""></dt>
+        <dd>
+            <h3>选择上课日期和时间</h3>
+            <p>根据孩子的时间自主预约</p>
+            <h3>选择上课方式为电脑端AC上课</h3>
+            <p>AC课堂屏幕更大、互动更强、体验更好</p>
+        </dd>
+    </dl>
+    <dl class="foreignTeachers-step cfix">
+        <dt><img src="<%= imagessrc%>1v3_payed_intro-07.png" alt=""></dt>
+        <dd>
+            <h3>按照上课时间   准时出席</h3>
+            <p>用孩子上课账号登录电脑端上课软件AC，进入1对1 教室上课</p>
+        </dd>
+    </dl>
+    <div class="foreignTeachers-btn"><a href="#"></a>下载"51Talk无忧英语"手机客户端</div>
+</div>
+
+<!-- loading -->
+<div id="fontSizeLoding">
+    <img src="<%= imagessrc%>eff_loading.gif">
+</div>
+<script type="text/javascript">
+window.onload = function(){
+    document.documentElement.style.fontSize = document.body.clientWidth / 6.4 + "px";
+    document.getElementById("fontSizeLoding").style.display = "none";
+}
+</script>
+</body>
+<!--公共尾部结束-->
+<% include ../common/bottom.ejs %>

@@ -1,0 +1,161 @@
+<% include ../common/top.ejs %>
+<body>
+	<%include ../common/uc_header.ejs %>
+	<div class="pay" data-init="certificate">
+		<!--订单信息-->
+		<div class="order">
+			<h1>证书邮寄<em>亲爱的学员，我们为您精心制作了纸质版本证书，每份证书收费20元，请填写并核对邮寄信息</em></h1>
+			<ul class="clearfix">
+				<li>
+					<label for="收件人信息">收件人信息：</label>
+					<p class="address">吴玲，北京海淀区 五环到六环之间 上地东路9号得实大厦6层北区无忧英语 135****6330
+					<i class="edit"></i>
+					</p>
+				</li>
+				<li>
+					<label for="订单信息">订单信息：</label>
+					<p>外研社级别证书制作费20元</p>
+				</li>
+			</ul>
+		</div>
+		<!--支付方式-->
+		<div class="payment">
+			<h1>支付方式</h1>
+			<!--平台支付-->
+			<div class="platform banks-list">
+				<h2>一.平台支付</h2>
+				<div class="lst">
+					<ul class="clearfix">
+						<li class="current">
+							<input type="radio" id="alipay" name="payment">
+							<label for="alipay"><img src="<%=imagessrc%>banks/alipay.png" alt="支付宝支付"></label>
+						</li>
+						<li>
+							<input type="radio" id="weixin" name="payment">
+							<label for="weixin"><img src="<%=imagessrc%>banks/weixin.png" alt="微信支付"></label>
+						</li>
+						<li>
+							<input type="radio" id="tenpay" name="payment">
+							<label for="tenpay"><img src="<%=imagessrc%>banks/tenpay.png" alt="财付通支付"></label>
+						</li>
+						<li>
+							<input type="radio" id="kuaiqian" name="payment">
+							<label for="kuaiqian"><img src="<%=imagessrc%>banks/BILL99.png" alt="快钱支付"></label>
+						</li>
+						<li>
+							<input type="radio" id="unionpay" name="payment">
+							<label for="unionpay"><img src="<%=imagessrc%>banks/unionpay.png" alt="银联支付"></label>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--网银支付-->
+			<div class="bank-payment banks-list">
+				<h2>二.网银支付</h2>
+				<div class="lst">
+					<ul class="clearfix">
+						<li>
+							<input type="radio" name="payment" id="ICBC">
+							<label for="ICBC"><img src="<%=imagessrc%>banks/icbc.jpg" alt="中国工商银行"></label>
+						</li>
+						<li>
+							<input type="radio" name="payment" id="ABC">
+							<label for="ABC"><img src="<%=imagessrc%>banks/abc.jpg" alt="中国农业银行"></label>
+						</li>
+						<li>
+							<input type="radio" name="payment" id="BOC">
+							<label for="BOC"><img src="<%=imagessrc%>banks/boc.jpg" alt="中国银行"></label>
+						</li>
+						<li>
+							<input type="radio" name="payment" id="CCB">
+							<label for="CCB"><img src="<%=imagessrc%>banks/ccb.jpg" alt="中国建设银行"></label>
+						</li>
+						<li>
+							<input type="radio" name="payment" id="BANKCOMM">
+							<label for="BANKCOMM"><img src="<%=imagessrc%>banks/bankcomm.jpg" alt="交通银行"></label>
+						</li>
+						<li>
+							<input type="radio" name="payment" id="CMB">
+							<label for="CMB"><img src="<%=imagessrc%>banks/cmb.jpg" alt="招商银行"></label>
+						</li>
+						<li>
+							<input type="radio" name="payment" id="SPDB">
+							<label for="SPDB"><img src="<%=imagessrc%>banks/spdb.jpg" alt="浦发银行"></label>
+						</li>
+						<li>
+							<input type="radio" name="payment" id="CIB">
+							<label for="CIB"><img src="<%=imagessrc%>banks/cib.jpg" alt="兴业银行"></label>
+						</li>
+						<li>
+							<input type="radio" name="payment" id="GDB">
+							<label for="GDB"><img src="<%=imagessrc%>banks/gdb.jpg" alt="广东发展银行"></label>
+						</li>
+						<li>
+							<input type="radio" name="payment" id="SDB">
+							<label for="SDB"><img src="<%=imagessrc%>banks/sdb.jpg" alt="深圳发展银行"></label>
+						</li>
+						<li>
+							<input type="radio" name="payment" id="CMBC">
+							<label for="CMBC"><img src="<%=imagessrc%>banks/cmbc.jpg" alt="中国民生银行"></label>
+						</li>
+						<li>
+							<input type="radio" name="payment" id="CITIC">
+							<label for="CITIC"><img src="<%=imagessrc%>banks/citic.jpg" alt="中信银行"></label>
+						</li>
+						<li>
+							<input type="radio" name="payment" id="CEBBANK">
+							<label for="CEBBANK"><img src="<%=imagessrc%>banks/cebbank.jpg" alt="中国光大银行"></label>
+						</li>
+						<li>
+							<input type="radio" name="payment" id="BOB">
+							<label for="BOB"><img src="<%=imagessrc%>banks/bob.jpg" alt="北京银行"></label>
+						</li>
+						<li>
+							<input type="radio" name="payment" id="CBHB">
+							<label for="CBHB"><img src="<%=imagessrc%>banks/cbhb.jpg" alt="渤海银行"></label>
+						</li>
+						<li>
+							<input type="radio" name="payment" id="HXB">
+							<label for="HXB"><img src="<%=imagessrc%>banks/hxb.jpg" alt="华夏银行"></label>
+						</li>
+						<li>
+							<input type="radio" name="payment" id="BJRCB">
+							<label for="BJRCB"><img src="<%=imagessrc%>banks/bjrcb.jpg" alt="北京农商银行"></label>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="payment-bg">
+		<a href="javascript:;" class="pay-btn">确认付款</a>
+	</div>
+	<div class="mask" style="display:none;">
+		<div class="edit-address" style="display:none">
+			<h1>编辑地址<a href="javascript:;" class="close"></a></h1>
+			<div class="address-info">
+				<h2>亲爱的学员，为保证证书正确送达，请确认填写如下信息</h2>
+				<ul class="from clearfix">
+					<li><label for="real_name">收件人姓名：</label><input type="text" id="real_name"><em>（用于证书邮寄）</em></li>
+					<li><label for="user_addr">收件人地址：</label><input type="text" id="user_addr"></li>
+					<li><label for="user_mobile">收件人手机：</label><input type="text" id="user_mobile"></li>
+				</ul>
+			</div>
+			<div class="btn-lst">
+				<a href="javascript:;" class="submit">提交</a><a href="javascript:;" class="cancel">取消</a>
+			</div>
+		</div>
+		<div class="pay-result" style="display:none">
+			<h1>支付结果确认<a href="javascript:;" class="close"></a></h1>
+			<div class="address-info">
+				<h3>请您到新打开网银页面上进行支付，支付完成前请不要关闭该窗口</h3>
+			</div>
+			<div class="btn-lst">
+				<a href="javascript:;" class="submit">我已完成支付</a><a href="javascript:;" class="cancel">付款遇到问题</a>
+			</div>
+		</div>
+	</div>
+	<% include ../common/uc_footer.ejs %>
+	<script src="<%= jssrc%>"></script>
+</body>
+</html>

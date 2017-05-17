@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="apple-mobile-web-app-title" content="" />
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta name="format-detection" content="telephone=no">
+   <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+     <title>老师个人中心</title>
+     <link rel="stylesheet" type="text/css" href="<%= csslink%>">   
+    </head>
+
+<body>
+<div class="package" data-init="double12pay">
+    <form action=""  method="post" id="package-form">
+        <section class="package-name">
+            <span class="package-name-logo package-name-month"></span>
+            <span class="package-name-title">240次次卡套餐</span>
+        </section>
+        <section class="package-present">
+            <p class="package-present-tit">32课时北美1对1课程＋16课时精品绘本阅读课 </p>
+            <h3 class="package-present-period">有效期：180天</h3>
+            <ul class="package-present-list">
+                <li><span class="logo">送</span><span class="title">6级经典英语 + 14门精选教材</span></li>
+                <li><span class="logo">送</span><span class="title">6级经典英语 + 14门精选教材</span></li>
+                <li><span class="logo">惠</span><span class="title">6级经典英语 + 14门精选教材</span></li>
+            </ul>
+        </section>
+        <section class="package-price">
+            <div class="package-price-total">
+                <h3 class="head"><span class="name">总价</span><span class="money">&yen;6888</span></h3>
+                <ul class="content">
+                    <li><span class="logo">减</span><span class="title">购买立减300</span><span class="money">-&yen;300</span></li>
+                    <li><span class="logo">减</span><span class="title">购买立减300</span><span class="money">-&yen;300</span></li>
+                </ul>
+            </div>
+            <div class="package-price-ticket">
+                <span class="logo">券</span>
+                <span class="title">使用代金券抵消部分金额</span>
+                <span class="right-arrow"></span>
+                <span class="choose">选择代金券</span>
+            </div>
+            <div class="package-price-current">
+                <span class="name">现价</span><span class="money">&yen;<span class="price">6288</span></span>
+            </div>
+        </section>
+        <section class="package-date">
+            <span class="name">设置包月开始日期:</span>
+            <span class="right-arrow"></span>           
+            <input type="date" class="dateinput" value="2016-04-08" name="date"/>
+            <span class="datespan hide">2016-04-08</span>
+        </section>
+        <section class="package-tele">
+            <span class="name">推荐人的手机号码:</span>
+            <input type="tel" class="teleinput" placeholder="没有推荐人请留空" name="tele"/>
+        </section>
+        <section class="package-blank"></section>
+        
+        <input type="hidden" value='' name="sign"/>
+        <input type="hidden" value='' name="point_id"/>
+        <input type="hidden" value='' name="free_attend_cash_down" />
+        <input type="hidden" value='' name="buy_attend_cash_down" />
+        <input type="hidden" value='' name="ct_attend_cash_down" />
+        <input type="hidden" value='6288' name="totalprice" id="totalprice"/>
+        <input type="hidden" value='' name="cash_card" id="cash_card"/>
+        <input type="hidden" value='agree' name="pact" id="pact-input"/>
+    </form>
+</div>
+<section class="package-fixbar">
+    <div class="package-fixbar-money"><span class="name">实付款：</span><span class="disbursements">&yen;<span class="money">6288</span></span></div>
+    <div class="package-fixbar-purchase">确认购买</div>
+</section>
+<section class="package-dialog hide">
+    <section class="coupon-dialog">
+        <h3 class="coupon-dialog-title"><span>我的代金券</span><span class="close"></span></h3>
+        <div class="coupon-dialog-content">
+            <div class="couponinput">
+                <input type="text" class="field" placeholder="添加代金券"/>
+                <span class="add"></span>
+            </div>
+            <ul class="coupons">
+                <li class="valid" data-id="12" data-money="250">
+                    <span class="lefticon"></span>
+                    <span class="divider"></span>
+                    <span class="checkbutton validcheckbuttonactive"></span>
+                    <div class="type">&yen;<span class="money">250</span>元代金券</div>
+                    <div class="validity">有效期至：2016-03-20</div>
+                </li>
+                <li class="valid" data-id="13" data-money="350">
+                    <span class="lefticon"></span>
+                    <span class="divider"></span>
+                    <span class="checkbutton"></span>
+                    <div class="type">&yen;<span class="money">350</span>元代金券</div>
+                    <div class="validity">有效期至：2016-03-20</div>
+                </li>
+                <li>
+                    <span class="lefticon"></span>
+                    <span class="divider"></span>
+                    <span class="checkbutton"></span>
+                    <div class="type">&yen;<span class="money">350</span>元代金券</div>
+                    <div class="validity">有效期至：2016-03-20</div>
+                </li>
+                <li>
+                    <span class="lefticon"></span>
+                    <span class="divider"></span>
+                    <span class="checkbutton"></span>
+                    <div class="type">&yen;<span class="money">350</span>元代金券</div>
+                    <div class="validity">有效期至：2016-03-20</div>
+                </li>
+            </ul>
+        </div>
+    </section>      
+</section>
+</body>
+<script src="<%= jssrc%>" id="seajsnode"></script> 
+</html>
+
+
+

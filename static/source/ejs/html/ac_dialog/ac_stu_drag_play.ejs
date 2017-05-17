@@ -1,0 +1,32 @@
+<% include ../common/top.ejs %>
+<%
+    var pageTag = {
+        gType : "drag",
+        pType : "stu",
+        fType : "play",
+        dragType : "1"
+    }
+%>
+<% include module/drag/h.ejs %>
+	<div class="ac-tem">
+        
+        <% include module/drag/t.ejs %>
+        
+	    <div class="ac-tem-con">
+            <div class="ac-tem-wrap">
+                <!-- 倒计时模块 -->
+                <% include module/drag/i.ejs %>
+
+                <!-- 答题模块 -->
+                <% include module/drag/m.ejs %>
+
+            </div>
+        </div>
+	</div>
+
+<form method="post" action="ac_stu_drag_result.html" name="gamePlay">
+    <input type="hidden" name="drag_gocount" value="0" />
+    <input type="hidden" name="drag_count" value="0" />
+</form>
+</body>
+<% include ../common/bottom.ejs %>

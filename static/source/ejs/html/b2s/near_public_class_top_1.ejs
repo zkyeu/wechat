@@ -1,0 +1,143 @@
+<% include ../common/top.ejs %>
+<body  data-init="">
+<!-- 公共头 -->
+<% include ../common/b2s/b2s_header.ejs %>
+<!-- 中间内容 -->
+<div class="mycls">
+  <div class="widthMain">
+    <!-- banner -->
+    <% include ../common/b2s/b2s_banner.ejs %>
+    <div class="central">
+      <i class="cls-icon"></i>
+      <div class="stu_tit">
+        <dl>
+          <dt><img src="<%= imagessrc%>stu.jpg" alt=""></dt>
+          <dd class="buy-tag">
+            <em>
+              <i class="tag-i"><i class="arr-out"><i class="arr-in"></i></i>已购买 精品外教辅导课</i>
+            </em>
+          </dd>
+          <dd><span>流川枫</span> 同学</dd>
+          <dd>班级：三年二班</dd>
+          <dd>老师：林徽因</dd>
+        </dl>
+        <p class="stu_number">学生邀请码：123456</p>
+      </div>
+      <%include ../common/b2s/b2s_sidebar%>
+      <div class="cls-main">
+        <!-- 近期公开课 -->
+        <div class="cls-tab cls-list">
+          <div class="stu-cls stu-taste tea-class">
+            <div class="stu-tit-l">
+              <ul>
+                <li>
+                  <a href="">精品辅导课</a>
+                  <i>&nbsp;</i>
+                </li>
+                <li class="cur">
+                  <a href="beyond_public_class_top.html">校园公开课</a>
+                  <i>&nbsp;</i>
+                </li>
+              </ul>
+              <a href="javascript:;" class="do-cls"><i class="tenIcon do-icon"  style="display:inline-block;"></i>如何上课</a>
+            </div>
+           
+         
+             <div class="rct-text">
+              <dl>
+                <dt class="work">
+                  <img src="<%= imagessrc%>tea_c01.jpg" alt="">
+                </dt>
+                <dd><a href="javascript:;" class="tit">演示课</a></dd>
+                <dd>
+                  <div class="text-c">
+                    <span class="dd-tit">核心单词：</span><span>pizza，people，park，possible，duck，apple...</span>
+                  </div>
+                  <div class="text-c">
+                    <span class="dd-tit">核心单词：</span><span>2015/12/15    19:00-19:30</span>
+                  </div>
+                  <div class="dd-btn"><a class="download" href="javascript:;"><span class="down-icon">下载教材</span></a></div>
+                </dd>
+               
+              </dl>
+              <dl>
+                <dt class="work">
+                  <img src="<%= imagessrc%>tea_c01.jpg" alt="">
+                </dt>
+                <dd><a href="javascript:;" class="tit">演示课</a></dd>
+                <dd>
+                  <div class="text-c">
+                    <span class="dd-tit">核心单词：</span><span>pgggggggggggggggggggggggggggggggggggggizza，people，park，possible，duck，applepizza，people，park，possible，duck，apple</span>
+                  </div>
+                  <div class="text-c">
+                    <span class="dd-tit">核心单词：</span><span>2015/12/15    19:00-19:30</span>
+                  </div>
+                  <div class="dd-btn"><a class="download" href="javascript:;"><span class="down-icon">下载教材</span></a></div>
+                </dd>
+               
+              </dl>
+              <dl>
+                <dt class="work">
+                  <img src="<%= imagessrc%>tea_c02.jpg" alt="">
+                </dt>
+                <dd><a href="javascript:;" class="tit">演示课</a></dd>
+                <dd>
+                  <div class="text-c">
+                    <span class="dd-tit">核心单词：</span><span>pizza，people，park，possible，duck，apple...</span>
+                  </div>
+                  <div class="text-c">
+                    <span class="dd-tit">核心单词：</span><span>2015/12/15    19:00-19:30</span>
+                  </div>
+                  <div class="dd-btn"><a class="download" href="javascript:;"><span class="down-icon">下载教材</span></a></div>
+                </dd>
+               
+              </dl> 
+            </div>
+            
+            
+          </div>
+          
+         
+       
+
+
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="s-mask-box" id="maskId"></div>
+<div class="s-popup-box" id="popUpId">
+  <div class="main">
+    <div class="close-btn" id="closeId"></div>
+    <h3>王大宝老师给你布置了作业</h3>
+
+      <p></p>
+      <p>作业内容：<span class="work-class">每周去上一节外教课，共四节。</span></p>
+      <p>上课时间：<span class="work-class">每周三19:30-20:00</span></p>
+      <p>上课时间：<span class="work-class">每周三19:30-20:00</span></p>
+      <p>课专用软件：<span>51Talk AC</span><a href="javascript:;">立即下载</a></p>
+      <p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+      <div class="btn" id="btnBox"><a id="workSureBtn">确定</a></div>
+  </div>
+</div> -->
+<!-- 底部浮层 -->
+<div class="btm_float"></div>
+<div class="btm_float_show">
+  <!-- 左侧提示 -->
+  <div class="tit_hand_left">
+    <p class="hide">微信扫描二维码，登录学生账户<br/>获取课程详情和上课信息</p>
+    <p>微信扫描二维码，登录老师账户<br/>获取课程详情和学生信息
+    </p>
+  </div>
+  <!-- 右侧二维码和关闭按钮 -->
+  <div class="code_right">  
+    <i class="close_ly"></i>
+    <p>关注"51Talk"中小学英语</p>
+  </div>
+</div>
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+</body>
+<% include ../common/bottom.ejs %>
+<script type="text/javascript" src="http://static.51talk.com/static/js/html/lib/ckplayer/ckplayer.min.js?v=1458124036737"></script>

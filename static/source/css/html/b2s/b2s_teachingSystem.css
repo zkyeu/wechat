@@ -1,0 +1,102 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ */
+.b2s-content .b2s-content1 {
+  background: #2d98e2 url(../../../images/html/b2s/b2s-teachingSystem-con1-bg.png?v=CZXft53LkVmjMh80FvqAKQ%3D%3D) no-repeat center center;
+}
+.b2s-content .b2s-content1 .b2s-content1-in {
+  width: 1000px;
+  height: 500px;
+  margin: 0 auto;
+}
+.b2s-content .b2s-content2 .b2s-content2-in {
+  width: 1000px;
+  height: 702px;
+  margin: 0 auto;
+  background: url(../../../images/html/b2s/b2s-teachingSystem-con2-01.png?v=mmb4LUG5oUHJuPng9fEhTw%3D%3D) no-repeat 84px 240px;
+}
+.b2s-content .b2s-content2 .b2s-content2-in .b2s-content2-tit {
+  padding-top: 80px;
+  text-align: center;
+}
+.b2s-content .b2s-content2 .b2s-content2-in .b2s-content2-text {
+  padding-top: 15px;
+  line-height: 20px;
+  font-size: 14px;
+  color: #999;
+  text-align: center;
+}
+.b2s-content .b2s-content3 {
+  background: #4d98dc;
+}
+.b2s-content .b2s-content3 .b2s-content3-in {
+  width: 1000px;
+  height: 580px;
+  margin: 0 auto;
+}
+.b2s-content .b2s-content3 .b2s-content3-in .b2s-content3-tit {
+  padding-top: 80px;
+  text-align: center;
+}
+.b2s-content .b2s-content3 .b2s-content3-in .b2s-content3-con {
+  padding-top: 62px;
+}
+.b2s-content .b2s-content3 .b2s-content3-in .b2s-content3-con > li {
+  width: 33.33%;
+  padding-top: 200px;
+  float: left;
+}
+.b2s-content .b2s-content3 .b2s-content3-in .b2s-content3-con > li > dl {
+  text-align: center;
+}
+.b2s-content .b2s-content3 .b2s-content3-in .b2s-content3-con > li > dl dt {
+  line-height: 20px;
+  font-size: 20px;
+  color: #fff;
+}
+.b2s-content .b2s-content3 .b2s-content3-in .b2s-content3-con > li > dl dd {
+  padding-top: 15px;
+  line-height: 20px;
+  font-size: 13px;
+  color: #b7ddff;
+}
+.b2s-content .b2s-content3 .b2s-content3-in .b2s-content3-con .b2s-content3-con1 {
+  background: url(../../../images/html/b2s/b2s-teachingSystem-con3-01.png?v=8vhmXMBtqLPDYuamPVnNnA%3D%3D) no-repeat 54px 0px;
+}
+.b2s-content .b2s-content3 .b2s-content3-in .b2s-content3-con .b2s-content3-con1 > dl {
+  width: 182px;
+  padding-left: 94px;
+}
+.b2s-content .b2s-content3 .b2s-content3-in .b2s-content3-con .b2s-content3-con2 {
+  background: url(../../../images/html/b2s/b2s-teachingSystem-con3-02.png?v=z2nMlWRxrtV4krfIbjxDnQ%3D%3D) no-repeat 28px 0px;
+}
+.b2s-content .b2s-content3 .b2s-content3-in .b2s-content3-con .b2s-content3-con2 > dl {
+  width: 182px;
+  padding-left: 76px;
+}
+.b2s-content .b2s-content3 .b2s-content3-in .b2s-content3-con .b2s-content3-con3 {
+  background: url(../../../images/html/b2s/b2s-teachingSystem-con3-03.png?v=3JXJH%2FVcWs0hhjQJrbHvHw%3D%3D) no-repeat 59px 0px;
+}
+.b2s-content .b2s-content3 .b2s-content3-in .b2s-content3-con .b2s-content3-con3 > dl {
+  width: 200px;
+  padding-left: 48px;
+}
+.b2s-content .b2s-content3 .b2s-content3-in .b2s-content3-con .b2s-content3-con3 > dl > dd {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.b2s-content .b2s-content4 .b2s-content4-in {
+  width: 1000px;
+  height: 720px;
+  margin: 0 auto;
+}
+.b2s-content .b2s-content4 .b2s-content4-in .b2s-content4-tit {
+  padding-top: 80px;
+  text-align: center;
+}
+.b2s-content .b2s-content4 .b2s-content4-in .b2s-content4-con {
+  padding-top: 62px;
+  text-align: center;
+}

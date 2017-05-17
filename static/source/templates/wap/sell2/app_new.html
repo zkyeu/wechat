@@ -1,0 +1,79 @@
+
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title></title>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <link href="/css/wap/sell2/sell2.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/wap/sell2/sell2_chose_class.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <div data-init="sell2_new" class="sell2">
+      <header class="c-header"><a href="javascript:;" class="touch-area"><em class="arr"></em></a>选择上课班级</header>
+      <section class="top">
+        <ul class="top-step">
+          <li> <span>1</span><br/><span>购课成功</span></li>
+          <li class="active"> <span>2</span><br/><span>选择班级</span></li>
+          <li> <span>3</span><br/><span>完成</span></li>
+        </ul>
+      </section>
+      <div class="course-box">
+        <section class="course">
+          <div><span class="tit">课程周期 : </span><span class="time-t">2月25日～9月1日</span></div>
+        </section>
+        <section id="timeId" class="course">
+          <p class="tit">选择上课时间 :</p>
+          <div class="chose-box clearfix">
+            <div class="week-box">周六</div>
+            <div class="time-box"> <span time-data="1" class-data="一对一外教全程托管班Level 1" class="current">10:00</span><span time-data="2" class-data="一对一外教全程托管班Level 2">10:00</span><span time-data="2" class-data="一对一外教全程托管班Level 2">10:00</span><span time-data="2" class-data="一对一外教全程托管班Level 2">10:00</span><span time-data="2" class-data="一对一外教全程托管班Level 2">10:00</span><span time-data="2" class-data="一对一外教全程托管班Level 2">10:00</span>
+            </div>
+          </div>
+          <div class="chose-box top-v clearfix">
+            <div class="week-box">周日</div>
+            <div class="time-box"> <span time-data="3" class-data="一对一外教全程托管班Level 3">10:00</span><span time-data="3" class-data="一对一外教全程托管班Level 3">10:00</span><span time-data="3" class-data="一对一外教全程托管班Level 3">10:00</span><span time-data="3" class-data="一对一外教全程托管班Level 3">10:00</span><span time-data="3" class-data="一对一外教全程托管班Level 3">10:00</span><span time-data="3" class-data="一对一外教全程托管班Level 3">10:00</span>
+            </div>
+          </div>
+        </section>
+        <section class="course grade-t">
+          <div><span class="tit">班级名称 : </span><span id="nameLevel" class="time-t"> </span></div>
+        </section>
+        <div class="btn-box"><a href="javascript:;" id="submitBtn">提交</a></div>
+      </div>
+      <div class="course-box chose-class-text">
+        <p class="tit-text">选班小贴士	</p>
+        <p class="des-t">1. 为什么要选择班级？</p>
+        <p class="des">选班后才能上课哦！课程周期是系统自动匹配，其中Level是您当前英语水平，如有疑问联系学习顾问。</p>
+        <p class="des-t">2. 选班前后发现不合适怎么办？</p>
+        <p class="des">选班前后发现不合适，可先选择班级后进微信群，咨询上课老师或学习顾问。</p>
+      </div>
+      <form action="/SpecialSell/changeClass" id="formSubmit" style="display:none" method="post">
+        <input type="hidden" name="goods_id" id="classTime" value=""/>
+      </form>
+      <form action="" id="formInfo" style="display:none" method="post">
+        <input type="hidden" id="prop_grade" value=""/>
+        <input type="hidden" id="prop_term" value=""/>
+        <input type="hidden" id="prop_classtype" value=""/>
+        <input type="hidden" id="prop_classlevel" value=""/>
+        <input type="hidden" id="class_first_date" value=""/>
+        <input type="hidden" id="class_last_date" value=""/>
+      </form>
+      <footer class="footer"> <a href="javascript:;" class="sign">筛选班级</a></footer>
+      <section class="dialog">
+        <section class="dialog-cont">
+          <h3>系统通知</h3>
+          <section class="dialog-inner">
+            <p class="info">此商品为特惠商品，仅限新用户购买此商品为特惠商品，仅限新用户购买此商品为特惠商品，仅限新用户购买</p>
+            <p class="know"> <a>知道了</a></p>
+          </section>
+        </section>
+      </section>
+    </div>
+    <script src="/js/wap/project/sell2/vendor.js" id="seajsnode"></script>
+  </body>
+</html>

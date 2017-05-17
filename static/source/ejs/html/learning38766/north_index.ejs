@@ -1,0 +1,118 @@
+<% include ../common/top.ejs %>
+<body>
+<!-- 顶部 -->
+<div class="pri-header">
+  <!-- 顶部 -->
+  <div class="header">
+    <a href="javascript:;" class="hr-lt">
+      <i></i>
+      <b><span>美国纽交所上市公司（股票代码：COE）</span>全球信赖的在线英语领导品牌</b>
+      <!-- 青少 -->
+      <b class="qs-tit hide">外教1对1，在家学英语</b>
+    </a>
+    <div class="hr-rt">
+      <div class="rt-top">
+        <ul>
+          <li><span class="rt_username">hi,studentstudenthw</span><a href="http://www.51talk.com/trial/index" title="会员中心">会员中心</a><a href="/index/logout" title="退出">退出</a></li>
+          <li><a href="http://www.baidu.com" id="login_url">登录</a></li>
+          <li><a href="javascript:;">免费注册</a></li>
+          <li><a href="javascript:;">企业培训</a></li>
+          <li class="jsMore">
+            <a href="javascript:;">微博</a>
+            <!-- 微博弹层 -->
+            <div class="weibo jsUl">
+              <a href="javascript:;"></a>
+            </div>    
+          </li>
+          <li class="jsMore">
+            <a href="javascript:;">微信</a>
+            <!-- 微信弹层 -->
+            <div class="weixin jsUl">
+              <a href="javascript"><img src="<%= imagessrc%>/top_weixin.png" alt=""></a>
+            </div>
+          </li>
+          <li></li>
+        </ul>
+      </div>
+      <span><i></i>4000-51-51-51</span>
+    </div>
+  </div>
+</div>
+<div class="container" data-init="index">
+  <!-- banner -->
+    <div class="banner"><img src="<%= imagessrc%>cls_amer_banner.jpg"></div>
+  <!-- /banner -->
+  <div class="content">
+  <img src="<%= imagessrc%>float_layer_img.png" class="floatImg">
+  <!-- 必杀技 -->
+    <div class="part2" id="part2">
+      <div class="nav-title">
+        <img src="<%= imagessrc%>cls_tit_img02.png">
+        <h3 class="title">热门推荐+限量开学大礼包</h3>
+      </div>
+      <div class="classBox">
+        <ul class="classList clearfix">
+          <li class="clearfix">
+            <img src="<%= imagessrc%>item20.jpg">
+            <span class="half"><img src="<%= imagessrc%>cls_list_img.png"></span>
+            <div class="item">
+                <h3 class="desc">青少经典英语18单元学习套餐</h3>
+                <p class="price"><span class="cur">￥6648</span><span class="old">￥7188</span></p>
+            </div>
+            <a href="javascript:;" class="buy u-btn jsPre active"></a>
+          </li>
+          <li class="clearfix">
+            <img src="<%= imagessrc%>item80.jpg">
+            <!-- 剩余名额 -->
+              <span class="surplus">今日还剩<i>100039</i>个名额</span>
+            <!-- 剩余名额 -->
+            <div class="item">
+                <h3 class="desc">青少经典英语36单元学习套餐</h3>
+                <p class="price"><span class="cur">￥10388</span><span class="old">￥14988</span></p>
+            </div>
+            <a href="javascript:;" class="buy u-btn jsPre active"></a>
+          </li>
+          <li class="clearfix">
+            <img src="<%= imagessrc%>item160.jpg">
+            <div class="item">
+                <h3 class="desc">180次次卡学习套餐</h3>
+                <p class="price"><span class="cur">￥6648</span><span class="old">￥7188</span></p>
+            </div>
+            <a href="javascript:;"  class="buy u-btn jsPre active" data-point="nor" data-id="9077" data-cart='{"id":9077,"price":"14666","package":"3600","cash_card":"0","point_type":"month","point_value":" 24 ","expire_days":"720"}' data-text="购&nbsp;买" ></a>
+          </li>
+          <li class="clearfix">
+            <img src="<%= imagessrc%>item40.jpg">
+            <div class="item">
+                <h3 class="desc">270次次卡学习套餐</h3>
+                <p class="price"><span class="cur">￥8688</span><span class="old">￥10888</span></p>
+            </div>
+            <a href="javascript:;" class="buy u-btn jsPre active"></a>
+          </li>
+        </ul>
+      </div>
+      <a href="javascript:;" class="btnMore">查看更多课程<i><img src="<%= imagessrc%>template_btn_img.png"></i></a>
+    </div>
+  <!-- /必杀技 -->
+  <!-- 学霸手拉手 -->
+    <div class="part3" id="part3">
+      <div class="nav-title">
+        <img src="<%= imagessrc%>cls_tit_img03.png">
+        <h3 class="title">有机会获得51Talk总部及菲律宾6日游</h3>
+      </div>
+      <div class="box-img">
+        <ul>
+          <li><img src="<%= imagessrc%>cls_tourism01.png"></li>
+          <li><img src="<%= imagessrc%>cls_tourism02.png"></li>
+          <li><img src="<%= imagessrc%>cls_tourism03.png"></li>
+        </ul>
+      </div>
+      <a href="javascript:;" class="btnMore">了解更多规则<i><img src="<%= imagessrc%>template_btn_img.png"></i></a>
+    </div>
+  <!-- /学霸手拉手 -->
+  </div>
+</div>
+<!-- 尾部 -->
+<% include ../common/www/w_footer_home.ejs %>
+<script src="<%= jssrc%>" id="seajsnode"></script>
+</body>
+</html>

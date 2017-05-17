@@ -1,0 +1,24 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: 
+ */
+body {
+  font-family: Arial, "Microsoft YaHei";
+}
+input,
+button,
+select,
+textarea,
+dl,
+dd,
+dt {
+  font-family: Arial, "Microsoft YaHei";
+}
+.bg-content {
+  width: 100%;
+  height: 100%;
+}
+.bg-content img {
+  width: 100%;
+}

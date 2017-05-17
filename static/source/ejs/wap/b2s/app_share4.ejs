@@ -1,0 +1,54 @@
+<% include ../common/top_b2s_n.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>app_share3.css">
+</head>
+<body data-init="app_share" class="share-wrap" data-weixinopenid="9999999" data-ajaxurl="/wapnew/Forum/setLikeData" data-auth="http://s.51talk.com/" data-iswexin="1">
+	<div class="share-intro">
+	    <div class="intro-video marginBottom js_videoBtn js_isVideoSrc" data-videourl="/wapnew/Dub/getDubVideoUrl?id=1" data-src="http://video.51talk.com/b2s/pc/image/2016/12/20/162a48d23427da8da0cb377b7e6d418b5858dc50cc90a.mp4" data-videow="144" data-videoh="176">
+	    	<img src="<%= imagessrc%>app_share-19.jpg" alt="">
+	    	<div class="video-play js_video_play"></div>
+	    	<div class="video-load disnone js_video_load"></div>
+	    </div>
+	</div>
+	<div class="share-trophy">
+		<img src="<%= imagessrc%>app_share-23.png" alt="">
+		<div class="font1">85</div>
+	</div>
+	<div class="share-other">
+		<div class="share-other-tit"><span>英语咨询</span><span>活动福利</span><span>精彩配音</span></div>
+		<div class="share-other-QRCode"><img src="<%= imagessrc%>app_share-21.png" alt=""></div>
+		<p class="share-other-text">长按识别二维码<br>关注无忧课堂微信公众号</p>
+	</div>
+	<div class="share-btn">
+		<div class="share-btn-in cfix">
+			<div class="share-btn-l fl">
+				<img src="<%= imagessrc%>app_share-22.png" alt="">
+				<h3>无忧课堂</h3>
+				<p>成绩无忧，家长无忧</p>
+			</div>
+			<div class="share-btn-r fr">
+				<a href="#">下载</a>
+			</div>
+		</div>
+	</div>
+
+<div class="dialog disnone js_dialog">
+	<div class="dialog-close">
+		<video class="js_video" controls preload="auto" webkit-playsinline playsinline src="" ></video>
+	</div>
+	<!-- <video class="js_video" controls preload="auto" src="" ></video> -->
+</div>
+	<!-- <video class="js_video" controls preload="auto" autoplay="" src="/images/wap/b2s/1111.mp4" ></video> -->
+
+<!-- loading -->
+<div id="fontSizeLoding">
+    <img src="<%= imagessrc%>eff_loading.gif">
+</div>
+<script type="text/javascript">
+window.onload = function(){
+    document.documentElement.style.fontSize = document.body.clientWidth / 7.5 + "px";
+    document.getElementById("fontSizeLoding").style.display = "none";
+}
+</script>
+</body>
+<!--公共尾部结束-->
+<% include ../common/bottom.ejs %>

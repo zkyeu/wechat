@@ -1,0 +1,57 @@
+<% include ../common/top.ejs %>
+<body id="container" data-init="">
+<!-- 公共头 -->
+<% include ../common/b2s/b2s_header.ejs %>
+<!-- 中间内容 -->
+<div class="mycls">
+  <div class="widthMain">
+    <!-- banner -->
+    <% include ../common/b2s/b2s_banner.ejs %>
+    <div class="central">
+      <i class="cls-icon"></i>
+      <div class="stu_tit">
+        <dl>
+          <dt><img width="100px" height="100px" src="<%= imagessrc%>ac-list-headicon-g.png" alt=""></dt>
+          <dd class="intro_one"><span>流川枫</span> 同学</dd>
+          <dd>班级：三年二班</dd>
+          <dd>老师：林徽因</dd>
+        </dl>
+        <p class="stu_number">学生邀请码：123456</p>
+      </div>
+    <!-- 侧栏 -->
+    <% include ../common/b2s/b2s_sidebar.ejs %>
+      <div class="cls-main">
+        <!-- 如何上课 -->
+        <div class="how-cls">
+          <h3 class="how-tit"><i class="tenIcon how-icon"></i>如何才能上公开课？</h3>
+          <p class="how-ac">1.下载并安装51Talk-AC客户端，<a href="javascript:;">点击下载</a>。</p>
+          <p class="how-ac">2.使用您登录网站的用户名和密码就可以登录51Talk AC客户端，然后点击“我的课表”，即可看到我的公开课，点击</p>
+          <p class="how-ac">“进入教室”即可上课</p>
+          <div class="how-img"></div>
+         <!--  <ul class="how-ul">
+            <li>
+              <span>1.使用您登录网站的用户名和密码就可以登录AC客户端</span>
+              <img src="<%= imagessrc%>how_lt.png" alt="" class="how-img">
+            </li>
+            <li class="how-li">
+              <span>2.登录AC客户端后，点击“我的预约”，即可看到我需要上的公开课，点击“进入课程”即可进入教室</span>
+              <img src="<%= imagessrc%>how_rt.jpg" alt="" class="how-img">
+            </li>
+          </ul> -->
+          <h3 class="how-tit"><i class="tenIcon how-icon"></i>AC客户端支持哪些电脑安装和使用？</h3>
+          <p class="how-ac">目前支持操作系统为winxp/win7/win8/win10的电脑安装和使用AC客户端，暂不支持Mac OS。</p>
+          <h3 class="how-tit"><i class="tenIcon how-icon"></i>支付发生问题我应该怎么办？</h3>
+          <p class="list-text list-text-fist">您的订单尚未完成付款，可能是以下原因：</p>
+          <p class="list-text">1.如果您在支付宝或网上银行付款未成功，请尝试再购买一次。</p>
+          <p class="list-text">2.如果您已经支付成功，有可能是支付平台与我们的通讯延迟，请等候5分钟再到<a href="javascript:;" target="_blank">“我的订单”</a>里查看购买信息。</p>
+          <p class="how-ac list-text">3.如果付款超过30分钟，购买的课程还未生效，请联系客服400-51-51-51，我们会尽力为您解决问题。</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

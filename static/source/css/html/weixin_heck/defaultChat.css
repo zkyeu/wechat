@@ -1,0 +1,57 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: 
+ */
+/**
+ * 默认样式
+ * @author:  liliang（liliang05@51talk.com）
+ * @update:  2017年01月04日 星期四 13时45分37秒 CST
+ * @note:    黑鸟项目后台中转页面样式
+ */
+html,
+body {
+  width: 100%;
+}
+.big-bg {
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  background: url(../../../images/html/weixin_heck/defaultbg.png?v=K3qTI2x8P6hEaI2W%2BqrJeA%3D%3D) center top no-repeat;
+  background-size: contain;
+}
+.big-bg div {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 10px;
+  height: 100px;
+  z-index: 9;
+}
+.big-bg div h4 {
+  font-weight: normal;
+  color: #646464;
+  font-size: 18px;
+  margin: 0 auto;
+}
+.big-bg div input {
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: auto;
+  margin-top: 40px;
+}
+.big-bg div .ablBtn {
+  background: #ff8000;
+  color: #fff;
+}
+.big-bg div .disBtn {
+  background: #ddd;
+  color: #eee;
+}

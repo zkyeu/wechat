@@ -1,0 +1,25 @@
+<% include ../common/top_b2s.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>weixin_bind.css">
+</head>
+<body data-init="" class="weixin_heck ">
+    <div class="heck_top"></div>
+<div class="footer"></div>
+<div class="weixin_bind_bom"></div>
+<div class="weixin_bind">
+    <span class="close"><i>x</i></span>
+    <h3>绑定用户</h3>
+    <i class="border"></i>
+    <form action="#">
+        <p class="search">
+            <input type="text" class="text_bind" placeholder="请输入电话号码或ID号搜索"><span></span>
+        </p>
+        <p class="result">
+            <input type="text"  placeholder="搜索结果">
+        </p>
+        <p class="sub_bind">
+            <input type="submit"  value="绑定">
+        </p>
+    </form>
+</div>
+</body>
+<% include ../common/bottom.ejs %>

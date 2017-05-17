@@ -1,0 +1,17 @@
+<% include ../common/reg_top.ejs %>
+<body style="background:#edaf00;">
+	<header>
+		<img src="<%= imagessrc%>logo.png">
+	    <a href="register.html" class="log_reg">注册</a>
+	</header>
+	<section class="login" data-init="reg" id="container">
+		<form action="doLogin" method="post" id="regForm">
+		    <p><input type="text" placeholder="手机号/邮箱" name='user_name' id="user_name"></p>
+		    <p><input type="password" placeholder="请输入密码" name='password' class="password" id="password"></p>
+		    <aside><a href="#" class="btn" name="register">登&nbsp;录</a></aside>
+		    <b><a href="#" >忘记密码</a></b>			
+		</form>
+	</section>
+	<% include ../common/reg_footer.ejs %>
+</body>
+<% include ../common/reg_bottom.ejs %>

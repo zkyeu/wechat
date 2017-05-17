@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/html/phlogin/phlogin.css">
+</head>
+<body>
+<div class="header">
+    <div class="head_wrap clearfix">
+        <img src="/images/html/phlogin/logo.png" alt="logo">
+        <div class="user_msg">
+            <a>FAQs</a>
+            <a>My Account</a>
+        </div>
+    </div>
+</div>
+<form id="LoginForm" action="/ajax/login" method="post">
+<div class='login_wrap' id="container" data-init="login">
+    <div class='wrap_container'>
+        <h4>Welcome Back !</h4>
+        <div class="tipmessage" id="error_cue">
+            <img id="img_cue" style="" src="/images/html/phlogin/tip-ico.png" class="tip-ico">
+            <span id="span_cue">The email or password you input is incorrect.</span>
+        </div>
+        <ul>
+            <li class='bdr'>
+                <img src='/images/html/phlogin/email-ico.png'>
+                <input type='text' name="user_name"  id="user_name"  placeholder='Email Address'  >
+            </li>
+            <li class='bdr'>
+                <img src='/images/html/phlogin/password-ico.png'>
+                <input class="jsCheck" type="password" name="password2" id="password2" placeholder='Password'>
+                <input type="hidden" name="password" id="password">
+            </li>
+            <li class='forgot'>
+            <a>Forgot your password?</a>
+            </li>
+            <li>
+               <!--  <a class='sign_in' @click='login'>Sign In</a> -->
+                <input type="button" class="sign_in jsSubmit" value="登录" />
+            </li>
+        </ul>
+    </div>
+</div>
+</form>
+<div class="footer">
+    <input type="hidden" id="from_url" name="from_url" value="http://www.51talk.com/page/about/">
+    <div class="orange_bar"></div>
+    <img src="/images/html/phlogin/footer_logo.png" alt="">
+    <dl class="company">
+        <dt class='clearfix  concact_us'>
+            <div>
+                <h4>LET'S BE FRIENDS</h4>
+                <ul class='icon_list clearfix'>
+                    <li><a class='twitter'></a></li>
+                    <li><a class='facebook'></a></li>
+                </ul>
+            </div>
+            <div class=''>
+                <h4>CONTACT US</h4>
+                <ul class="concact_type has_l_border">
+                    <li class='p25'>+1 855 354 3777</li>
+                    <li class='p27'>teacher_recruitment@51Talk.com</li>
+                </ul>
+            </div>
+        </dt>
+        <dd>
+            <p>51Talk English International, Inc. 2017 All Rights Reserved</p>
+        </dd>
+    </dl>
+</div>  
+<script src="/js/html/project/phlogin/vendor.js" id="seajsnode"></script>
+</body>
+</html>            

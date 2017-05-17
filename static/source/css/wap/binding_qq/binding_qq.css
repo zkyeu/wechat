@@ -1,0 +1,206 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Fri Dec 11 2015 11:16:01 GMT+0800 (中国标准时间)
+ */
+/*
+* 默认样式
+* @file：   base.less
+* @author:  zhuning@51talk.com）
+* @update:  2015-10-29
+* @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+*/
+html {
+  font-size: 62.5%;
+}
+@media only screen and (min-width: 481px) {
+  html {
+    font-size: 94%;
+  }
+}
+@media only screen and (min-width: 561px) {
+  html {
+    font-size: 109%;
+  }
+}
+@media only screen and (min-width: 641px) {
+  html {
+    font-size: 125%;
+  }
+}
+body {
+  padding: 0;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 640px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+}
+input,
+button,
+select,
+textarea,
+dl,
+dd,
+dt {
+  font-family: "Microsoft YaHei";
+  outline: none;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 0;
+  padding: 0px;
+  margin: 0px;
+}
+ul,
+li {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  vertical-align: middle;
+}
+b {
+  font-weight: normal;
+}
+::-moz-selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+strong {
+  font-weight: normal;
+}
+.red_search {
+  overflow: hidden;
+}
+body {
+  position: relative;
+  height: 100%;
+}
+h3 {
+  margin: 0;
+  padding: 0;
+}
+img {
+  vertical-align: top;
+  width: 100%;
+}
+a,
+h3,
+p {
+  font-family: "Microsoft YaHei";
+}
+.top {
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+.top img {
+  width: 35%;
+}
+ul {
+  line-height: 4.5rem;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+}
+ul li {
+  border-bottom: 1px solid #e5e5e5;
+}
+ul li img {
+  margin-top: 1.5rem;
+  width: 1.2rem;
+  margin-right: 1.3rem;
+}
+ul input {
+  font-size: 1.4rem;
+  height: 4.5rem;
+  /*line-height: 4.5rem;*/
+  width: 90%;
+}
+.error {
+  height: 3.1rem;
+  text-align: center;
+  color: #ff5555;
+  font-size: 1.2rem;
+}
+.logIn_go {
+  padding: 0 2rem;
+  text-align: center;
+}
+.logIn_go .login {
+  width: 100%;
+  display: block;
+  background-color: #fac000;
+  height: 3.4rem;
+  line-height: 3.4rem;
+  text-align: center;
+  font-size: 1.7rem;
+  color: #5f4900;
+  border-radius: 10px;
+  margin-bottom: 0.6rem;
+}
+.logIn_go .register {
+  font-size: 1.5rem;
+  color: #888;
+}
+.member {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 6rem;
+  line-height: 6rem;
+  margin-top: -3rem;
+}
+.member p {
+  margin: 0 3.5rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.sucess p {
+  margin: 0 6rem;
+}
+.sucess p img {
+  width: 3rem;
+  margin-top: 1.5rem;
+  margin-right: 1.5rem;
+}
+.hide {
+  display: none;
+}
+@media screen and (max-width: 320px) {
+  .top {
+    padding-top: 0.5rem;
+  }
+}

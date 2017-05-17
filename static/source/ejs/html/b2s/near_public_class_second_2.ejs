@@ -1,0 +1,69 @@
+<% include ../common/top.ejs %>
+<body  data-init="index">
+<!-- 公共头 -->
+<% include ../common/b2s/b2s_header.ejs %>
+<!-- 中间内容 -->
+<div class="mycls">
+
+  <div class="widthMain">
+    <!-- banner -->
+  <% include ../common/b2s/b2s_banner.ejs %>
+    <div class="central">
+      <i class="cls-icon"></i>
+      <div class="stu_tit">
+        <dl>
+          <dt><img src="<%= imagessrc%>stu.jpg" alt=""></dt>
+          <dd class="intro_one"><span>流川枫</span> 同学</dd>
+          <dd>班级：三年二班</dd>
+          <dd>老师：林徽因</dd>
+        </dl>
+        <p class="stu_number">学生邀请码：123456</p>
+      </div>
+     <%include ../common/b2s/b2s_sidebar%>
+      <div class="cls-main">
+        <!-- 近期公开课 -->
+        <div class="cls-tab stu-cls">
+          <div class="stu-tit">
+            <a href="" class="go-back"><span>&lt;</span>返回列表</a>
+            <a href="javascript:;" class="do-cls"><i class="tenIcon do-icon"></i>如何上课</a>
+          </div>
+          <div class="rct-text sed-text">
+            <dl>
+              <dt><img src="<%= imagessrc%>3.jpg" alt=""></dt>
+              <dd><span class="tit">疯狂原始人：我们一家住在山洞！</span></dd>
+            
+              <dd class="center-dd secend2"><span class="sd-tit">上课时间：2015年12月18日&nbsp;&nbsp;&nbsp;&nbsp;18:00-18:50</span></dd>
+              <dd class="go-class-box">
+                 <a href="javascript:;" class="sd-date load second_load">下载教材</a>
+                <span class="go-class">
+                <a class="s-yellow " href="javascript:;">去上课</a>
+                <!--灰色状态<a class="s-grey" href="javascript:;">去上课</a>--></span>
+              </dd>
+            </dl>
+            <div class="sed-guy">
+              <div class="sed-teacher">主讲老师 <span>Pizza:</span></div>
+              <div class="sed-guy-lt"><i class="tenIcon guy-icon"></i></div>
+              <div class="sed-guy-rt">
+                Hello guys, 我是Minty老师，我的名字是“薄荷味儿”的意思，是不是瞬间觉得有清新的感觉呢？我喜欢音乐，喜欢电影。此外呢，我还是个dancer，我觉得用舞蹈表达情感是无比美妙的一件事~Minty也很想在英语的世界里带着大家的思想舞动起来，there is so much fun! 
+              </div>
+            </div> 
+            <div class="sed-guy-cls">
+              <ul>
+                <li><i></i><span>课程简介：</span></li>
+                <li>狮子、斑马、长颈鹿，汽车、机器人、玩具……</li>
+                <li>这群可爱逗比的小伙伴全部会说英语而且说得棒棒哒！</li>
+                <li>小盆友们，还不快快加入~~</li>
+                <li>动画趣配音，带你走进热闹生动的英语世界，跟随Minty老师和角色们大秀英语、玩转配音~~在动画的世界里，没有什么
+                不可以！</li>
+              </ul>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

@@ -1,0 +1,622 @@
+/**
+ * 默认样式
+ * @author:  liliang（liliang05@51talk.com）
+ * @update:  2017年 3月 8日 星期三 15时28分50秒 CST
+ * @note:    黑鸟项目后台权限管理页面样式
+ */
+
+// 图片path
+@imgMpath: "../../../images/html/weixin_heck/";
+html,body{
+  width: 100%;
+  background: #ededed;
+}
+.pad20px{
+  padding: 20px;
+}
+.fl{  float: left;}
+.fr{float: right;}
+.dn {display: none;}
+.ptb20{  padding: 20px 0;}
+.content-width70, .content-width80, .content-width90{
+  margin: 20px auto;
+}
+.content-width70{
+  width: 70vw;
+}
+.content-width80{
+  width: 80vw;
+}
+.content-width90{
+  width: 90vw;
+}
+::-webkit-input-placeholder{font-size: 14px;color:#afafaf}
+
+.page-title{
+  color:#1e1e1e;
+  font-size: 20px;
+  text-align: center;
+}
+//导航
+.guide-link{
+  line-height: 32px;
+  font-size: 16px;
+  a{
+    color: #010101;
+    margin: 0 5px;
+    &:hover{
+      color: #ffb400;
+    }
+  }
+}
+//搜索位置处理
+.set-pos{
+  width: 436px;
+  float: right;
+  .layui-input{
+    font-size: 14px;
+    background: url("@{imgMpath}arrow-down-baobiao.png") 100px center  no-repeat;
+    cursor: pointer;
+    margin-top: -4px;
+  }
+  .zhizi{line-height: 30px; margin-top: 5px;}
+  &.w566{width: 566px;}
+}
+//时间选择
+.select-time{
+  float: left;
+  width: 304px;
+  height: 30px;
+  border: #aaa solid 1px;
+  border-radius: 15px;
+  background-color: #fff;
+}
+//按钮
+.add-btn{
+  a{
+    width: 120px;
+    height: 32px;
+    background: #ffc800;
+    float: right;
+    display: inline-block;
+    line-height: 32px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 16px;
+    &:hover{
+      background: #ff8000;
+      color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    }
+  }
+  input{
+    float: left;
+    margin-left: 10px;
+    width: 120px;
+    height: 32px;
+    background: #ffc800;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 16px;
+    cursor: pointer;
+    &:hover{
+      background: #ff8000;
+      color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    }
+  }
+}
+.add-btn-float-left{
+  a{
+    width: 98px;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    margin-right: 10px;
+    border: #999 solid 1px;
+    background: #fff;
+    font-size: 14px;
+    color:#323232;
+    &:hover{
+      background: #fdc900;
+      box-shadow: 0 0 0 rgba(0,0,0,0);
+      border: #fdc900 solid 1px;
+      color:#323232;
+    }
+    &.cut-style{
+      background: #fdc900;
+      box-shadow: 0 0 0 rgba(0,0,0,0);
+      border: #fdc900 solid 1px;
+      color:#323232;
+    }
+  }
+}
+.status-data{margin-bottom: 10px;font-size: 16px;}
+//预留表格外
+.table-box{
+  h5{
+    height: 100px;
+    text-align: center;
+    font-size: 16px;
+    color: #999;
+  }
+}
+.no-group{
+  height: 100px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 16px;
+  color: #999;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+//表格
+.table-detail{
+  width: 100%;
+  th,td{
+    border: #f0f0f0 solid 1px;
+  }
+  thead{
+    background: #393939;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color:#fff;
+  }
+  tbody{
+    tr{
+      background: #fff;
+      &:hover{
+        background:#ededed;
+      }
+      td{
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        color:#6e6e6e;
+        font-size: 13px;
+        padding: 0 10px;
+        &:nth-child(1){
+          min-width: 140px;
+        }
+        &:nth-child(3){
+          min-width: 140px;
+        }
+        span{
+          display: inline-block;
+          width: 40px;
+          line-height: 30px;
+          text-align: center;
+          cursor: pointer;
+          &:nth-child(1){
+            color:#00aeff;
+            margin-right: 20px;
+          }
+          &:nth-child(2){
+            color:#ff4343
+          }
+        }
+      }
+    }
+  }
+  .have-next{
+    color:#ffb400;
+  }
+}
+.mask-layer{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,.2);
+}
+.z9{
+  z-index: 9;
+}
+.z99{  z-index: 99; }
+.z999{  z-index: 999;  }
+.doLayer{
+  background: #fff;
+  padding: 20px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  font-size: 14px;
+}
+.bor-ra{border-radius: 10px;}
+.doLayer-w1{
+  width: 470px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  height: 0;
+  div{
+    &:nth-child(1){
+      margin-bottom: 20px;
+      dt{
+        line-height: 40px;
+      }
+    }
+    &:nth-child(2){
+      margin-bottom: 20px;
+      dt{
+        line-height: 40px;
+      }
+    }
+  }
+}
+.doLayer-w2{
+  width: 400px;
+  height: 140px;
+  h5{
+    height: 108px;
+    line-height: 100px;
+    font-size: 18px;
+    color: #696969;
+    text-align: center;
+  }
+}
+.edit-layer{
+  height: auto;
+  dt{
+    float: left;
+    width: 80px;
+    color: #252525;
+    font-size: 14px;
+  }
+  dd{
+    float: left;
+    width:390px;
+    ::-webkit-input-placeholder{  color:#afafaf;}
+    input{
+      &.crm-id{
+        border-radius: 10px;
+        padding: 8px;
+        background: #f5f5f5;
+        border:#e6e6e6 solid 1px;
+        font-size: 14px;
+        width: 372px;
+      }
+    }
+    //textarea{
+    //  height: 80px;
+    //  resize: none;
+    //  line-height: 22px;
+    //  margin-bottom: 10px;
+    //}
+  }
+}
+.name-list{
+  width: 363px;
+  font-size: 14px;
+  color:#696969;
+  span{
+    display: block;
+    width:88px;
+    float: left;
+  }
+  p{
+    width: 274px;
+    float: left;
+    display: inline-block;
+    line-height: 22px;
+    i{
+      display: inline-block;
+      background: #eee;
+      padding: 0 4px;
+      margin: 2px 3px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+}
+.layer-btn{
+  text-align: center;
+  span{
+    width: 120px;
+    height: 32px;
+    display: inline-block;
+    line-height: 32px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 16px;
+    margin: 0 10px;
+    cursor: pointer;
+    &.edit{
+      display: none;
+      background: #ffc800;
+      color:#000;
+    }
+    &.confirm{
+      display: none;
+      background: #ffc800;
+      color:#000;
+    }
+    &.concel{
+      background: #dcdcdc;
+      color: #696969;
+    }
+    &:hover{
+      box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    }
+  }
+}
+.manage-name-list{
+  //padding: 12px 10px;
+  border: solid 1px #e6e6e6;
+  border-radius: 10px;
+  height: 180px;
+  overflow: hidden;
+  span{
+    display: block;
+    float: left;
+    margin: 12px 5px 0 10px;
+    padding-left: 20px;
+    background: url("@{imgMpath}powersel.png") 0 -22px no-repeat;
+    cursor: pointer;
+    font-size: 12px;
+    &.group-sel{
+      background-position:0 2px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+//聊天详情
+.user-detail-box{
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  //border: #d2d2d2 solid 1px;
+  table{
+    width: 100%;
+    font-size: 14px;
+    tr{
+      &:nth-child(1){
+        td{
+          &:nth-child(2n+1){
+            border-bottom: #fff solid 1px;
+          }
+        }
+      }
+      td{
+        border: #d2d2d2 solid 1px;
+        min-height: 39px;
+        background-color: #fff;
+        vertical-align: middle;
+        &:nth-child(2n+1){
+          background-color: #dcdcdc;
+          width: 110px;
+          text-align: center;
+          color:#5b5b5b;
+        }
+        &:nth-child(2n){
+          padding: 10px 20px;
+          color: #000;
+        }
+      }
+    }
+
+  }
+}
+.chat-detail{
+  border: #c8c8c8 solid 1px;
+  margin-top: 20px;
+  h5{
+    height: 30px;
+    line-height: 30px;
+    background: #393939;
+    color:#fff;
+    font-size:14px;
+    text-align: center;
+    border-bottom: #c8c8c8 solid 1px;
+  }
+  .chat-detail-list{
+    padding: 10px;
+    ul{
+      overflow: hidden;
+      li{
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        &:after{
+          content: "";
+          height: 0;
+          clear: both;
+          display: block;
+          overflow: hidden;
+        }
+      }
+    }
+    dt{
+      height: 23px;
+    }
+    dd{
+      max-width:355px;
+      padding: 8px;
+      border-radius: 5px;
+    }
+    .mes-left{
+      dd{
+        background-color: #fff;
+      }
+    }
+    .mes-right{
+      text-align: right;
+      dt{
+        span{
+          float: right;
+        }
+      }
+      dd{
+        float: right;
+        text-align: left;
+        background-color: #b7ea86;
+        &.file{
+          p{
+            float: right !important;
+          }
+          em{
+            float: left !important;
+          }
+        }
+      }
+    }
+    .name, .time, .sender{
+      float: left;
+      margin-right: 5px;
+    }
+    .name{
+      color:#969696;
+      font-size: 14px;
+    }
+    .time{
+      font-size: 12px;
+      color:#fff;
+    }
+    .sender{
+      font-size: 11px;
+      color: #696969;
+    }
+    .time, .sender{
+      height: 18px;
+      line-height: 18px;
+      background-color:#dcdcdc;
+      border-radius: 3px;
+      padding: 0 6px;
+      margin-top: 1px;
+    }
+
+    //／／／／／／／／／／／／／／聊天类型
+    .text{
+        line-height: 22px;
+        word-break: break-all;
+    }
+    .pic{
+      width: 200px;
+      img{
+        max-width: 200px;
+        border-radius: 5px;
+      }
+
+    }
+    .vedio{
+      width: 200px;
+      video{
+        width: 200px;
+        border-radius: 5px;
+      }
+    }
+    .voice{
+      width: 106px;
+      background: url("@{imgMpath}mesvoice.png") 10px top no-repeat;
+      height: 22px;
+      cursor: pointer;
+      &.voice-play{
+        background:#fff url("@{imgMpath}web_wechat_voice_gray_playing.gif") 10px 8px no-repeat;
+      }
+    }
+    .article{
+      width: 230px;
+      height: 63px;
+      h4, p{
+        width: 165px;
+        overflow: hidden;
+      }
+      h4{
+        white-space: nowrap;
+        color: #323232;
+        text-overflow: ellipsis;
+        display:block;
+      }
+      p{
+        font-size: 12px;
+        line-height: 18px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        height: 36px;
+        margin-top: 3px;
+        color: #666;
+      }
+      div{
+        &:nth-child(1){
+          float: left;
+          width: 160px;
+        }
+        &:nth-child(2){
+          width: 50px;
+          height: 50px;
+          float: right;
+          margin-top: 5px;
+          img{
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+    .file{
+      width: 220px;
+      height:88px;
+      overflow: hidden;
+      padding: 0 !important;
+      div{
+        width: 200px;
+        float: left;
+        &:nth-child(1){
+          padding: 10px;
+          height: 40px;
+          border-bottom: 1px solid #ebebeb;
+          p{
+            float: left;
+            width: 155px;
+            max-height: 60px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
+          em{
+            float: right;
+            width: 40px;
+            height: 40px;
+            background:url("@{imgMpath}filebg.png") 10px 8px no-repeat;
+            overflow: hidden;
+            &.fileExcel{
+              background-position: -80px 0;
+            }
+            &.fileWord{
+              background-position: 0 -80px;
+            }
+            &.filePdf{
+              background-position: -40px 0;
+            }
+            &.filePpt{
+              background-position: 0 -40px;
+            }
+            &.fileOther{
+              background-position: 0 0;
+            }
+          }
+        }
+        &:nth-child(2){
+          padding-left: 10px;
+          line-height: 26px;
+          color: #969696;
+        }
+      }
+    }
+    //／／／／／／／／／／／／／／／聊天类型
+
+  }
+}

@@ -1,0 +1,36 @@
+<% include ../common/top_b2s.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>weixin_heck.css">
+</head>
+<body data-init="weixinAcc" class="weixin_heck weixin_account">
+    <div class="change_account">
+        <h3>指定微信账号</h3>
+        <i></i>
+        <form action="#" autocomplete="off" rel="weixinAccForm">
+            <ul>
+                <li>
+                    <input type="text" placeholder="请输入微信账号" name="wechat_id" rel="wechat_id" />
+                    <p></p>
+                </li>
+                <li>
+                    <input type="text" placeholder="请输入英文名" name="nick_name" rel="nick_name" />
+                    <p></p>
+                </li>
+                <li>
+                    <input type="text" placeholder="请输入手机设备编号" name="device_id" rel="device_id" />
+                    <p></p>
+                </li>
+                <li>
+                    <select name="user_group" rel="user_group">
+                        <option value="">请选择用户类型</option>
+                        <option value="1">111</option>
+                        <option value="2">222</option>
+                        <option value="3">333</option>
+                    </select>
+                    <p></p>
+                </li>
+            </ul>
+            <input type="submit" class="sub_account" value="确定" />
+        </form>
+    </div>
+</body>
+<% include ../common/bottom.ejs %>

@@ -1,0 +1,433 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Wed Jan 13 2016 15:12:33 GMT+0800 (中国标准时间)
+ */
+/*
+* 默认样式
+* @file：   base.less
+* @author:  zhuning@51talk.com）
+* @update:  2015-10-29
+* @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+*/
+html {
+  font-size: 62.5%;
+}
+@media only screen and (min-width: 481px) {
+  html {
+    font-size: 94%;
+  }
+}
+@media only screen and (min-width: 561px) {
+  html {
+    font-size: 109%;
+  }
+}
+@media only screen and (min-width: 641px) {
+  html {
+    font-size: 125%;
+  }
+}
+body {
+  padding: 0;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 640px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+}
+input,
+button,
+select,
+textarea,
+dl,
+dd,
+dt {
+  font-family: "Microsoft YaHei";
+  outline: none;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 0;
+  padding: 0px;
+  margin: 0px;
+}
+ul,
+li {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  vertical-align: middle;
+}
+b {
+  font-weight: normal;
+}
+::-moz-selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+strong {
+  font-weight: normal;
+}
+/*
+* amy着陆页
+* @file：   ln20150914.less
+* @author:  zhangtian（zhangtian@51talk.cn）
+* @update:  2015-09-14
+* @note:    李娜wap着陆页
+*/
+/*amy着陆页*/
+section {
+  height: auto;
+  background-color: #fff;
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.top {
+  position: relative;
+  width: 100%;
+}
+.top .topImg {
+  display: block;
+  width: 100%;
+  -margin-bottom: 1.6rem;
+}
+.top .top_bt {
+  position: relative;
+}
+.top .topBtn {
+  position: absolute;
+  top: 0.5rem;
+  left: 54%;
+  font-size: 1.3rem;
+  padding: 0.7rem 3.6rem;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #000;
+  font-weight: bolder;
+}
+.top .topBtn-login {
+  position: absolute;
+  top: 2.8rem;
+  right: 2.5rem;
+  font-size: 1.2rem;
+  padding: 0.3rem 1.4rem;
+  border-radius: 5px;
+  border: 2px solid #000;
+  color: #000;
+  font-weight: bolder;
+}
+.top .OneS_logIn {
+  margin-top: 2.2rem;
+  margin-bottom: 2.2rem;
+  right: 5rem;
+  bottom: 3.4rem;
+}
+.top .OneS_logIn li {
+  text-align: center;
+  height: 3.4rem;
+  margin: 0 2rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #626161;
+}
+.top .OneS_logIn .OneS_last {
+  margin: 0 2rem;
+  border: none;
+}
+.top .OneS_logIn input {
+  color: #626161;
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  text-align: center;
+}
+.top .OneS_logIn a {
+  display: block;
+  font-size: 1.8rem;
+  height: 3.4rem;
+  line-height: 3.4rem;
+  width: 100%;
+  background-color: #fcc800;
+  color: #2a2a2a;
+  border-radius: 5px;
+  text-align: center;
+}
+.center {
+  padding-top: 1.7rem;
+}
+.center li {
+  position: relative;
+  text-align: center;
+  padding-bottom: 2.7rem;
+}
+.center li i {
+  width: 3.55rem;
+  height: 3.55rem;
+  position: absolute;
+  font-size: 1.5rem;
+  background-color: #fcc800;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: bold;
+  font-style: italic ;
+  display: -ms-flexbox;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  display: -moz-box;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  line-height: 3.55rem;
+  /*display: flexbox;
+			flex-pack:center;
+			flex-align:center;*/
+}
+.center li i.right {
+  left: 56%;
+  top: -0.5rem;
+}
+.center li i.left {
+  left: 34%;
+  top: -0.5rem;
+}
+.center p {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  /*margin-bottom: 3.5rem;*/
+}
+.center img {
+  width: 11rem;
+  height: 11rem;
+  margin-bottom: 0.4rem;
+  border-radius: 100%;
+}
+.center .borderG {
+  display: inline-block;
+  width: 11rem;
+  height: 11rem;
+  border: #f2f1f0 0.5rem solid;
+  border-radius: 100%;
+}
+.bg_c {
+  background-color: #fbfbfb;
+}
+.centTit {
+  color: #626161;
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 3.5rem;
+}
+.centTit .c_t_b {
+  display: inline-block;
+  border-bottom: 2px solid #909090;
+  position: relative;
+}
+.centTit .c_t_bs {
+  position: absolute;
+  width: 1.7rem;
+  height: 0.6rem;
+  bottom: -0.6rem;
+  left: 50%;
+  margin-left: -0.85rem;
+  background: url(../../../images/wap/lina_landing/lnbg3.png?v=z6tNsuBcde9Pwc7ImMv14A%3D%3D) left top no-repeat;
+  background-size: 100% 100%;
+}
+.centerT {
+  padding: 1.7rem 2rem 0;
+}
+.centerT dl {
+  overflow: hidden;
+  margin-bottom: 2.3rem;
+}
+.centerT dt {
+  float: left;
+}
+.centerT dd {
+  color: #3a3a3a;
+  padding-top: 0.9rem;
+}
+.centerT dd .centTL {
+  height: 2rem;
+  line-height: 2rem;
+}
+.centerT dd .centL {
+  font-size: 1.4rem;
+  float: left;
+  width: 25%;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  background-color: #e6e6e6;
+  margin-right: 0.5rem;
+}
+.centerT dd .centTL_r,
+.centerT dd .centB_r {
+  position: absolute;
+  width: 0.75rem;
+  height: 2rem;
+}
+.centerT dd .centTL_r {
+  background: url(../../../images/wap/lina_landing/lnbg1.gif?v=K4TG0jucfq5CTaDJU6KpMg%3D%3D) left top no-repeat;
+  right: -0.75rem;
+  top: 0;
+  z-index: 3;
+  background-size: 100% 100%;
+}
+.centerT dd .centB {
+  float: left;
+  width: 46%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  border-left: none;
+  background: url(../../../images/wap/lina_landing/lnbg4.gif?v=0n6LQkUWrVeQpvVgtACBiw%3D%3D) left top no-repeat;
+  background-size: 100% 100%;
+}
+.centerT dd .centText {
+  line-height: 1.8rem;
+  margin-top: 1.1rem;
+  padding-left: 7.7rem;
+}
+.centerT img {
+  border: 0.5rem solid #e6e6e6;
+  width: 6.4rem;
+}
+footer {
+  background-color: #f1f1f1;
+  color: #828282;
+  padding: 2.75rem 2.6rem 2.5rem;
+}
+footer h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  height: 2.4rem;
+}
+.reports .rImg {
+  overflow: hidden;
+}
+.reports li {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 2.1rem;
+  text-align: center;
+}
+.reports li img {
+  width: 7.8rem;
+}
+.coo_en li {
+  float: left;
+  margin-bottom: 2.1rem;
+  text-align: center;
+}
+.coo_en li img {
+  height: 2.35rem;
+  /*vertical-align: middle;*/
+}
+.coo_en .rImg1_1 {
+  margin-top: 1.5rem;
+  overflow: hidden;
+}
+.coo_en .rImg1_1 li {
+  width: 33.3%;
+}
+.coo_en .rImg1_2 {
+  overflow: hidden;
+}
+.coo_en .rImg1_2 li {
+  width: 50%;
+}
+.honor .hImg {
+  overflow: hidden;
+}
+.honor li {
+  width: 50%;
+  float: left;
+  margin-bottom: 2.3rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  /*&.mini{
+			width: 24%;
+		}
+		&.miniR{
+			width: 36%;
+		}
+		&.miniL{
+			width: 39%;
+		}*/
+}
+.honor li img {
+  width: 7rem;
+  margin-bottom: 0.7rem;
+}
+.honor li.wMin {
+  background: url(../../../images/wap/lina_landing/bottomL.gif?v=j3t9SjBrauK4rAVBJNZU0g%3D%3D) right top no-repeat;
+  background-size: ;
+}
+.honor a {
+  color: #828282;
+  width: 100%;
+  line-height: 1.3rem;
+  font-size: 0.6rem;
+}
+.rlmg-btn {
+  height: 7.5rem;
+  background-color: #696969;
+  text-align: center;
+  padding-top: 1.5rem;
+}
+.rlmg-btn .lmg {
+  display: block;
+  margin: 0 5.5rem;
+  font-size: 1.3rem;
+  height: 3.4rem;
+  line-height: 3.4rem;
+  background-color: #fcc800;
+  color: #2a2a2a;
+  border-radius: 5px;
+  text-align: center;
+}
+input::-moz-placeholder {
+  color: #626161;
+}
+input::-webkit-input-placeholder {
+  color: #626161;
+}
+input:-ms-input-placeholder {
+  color: #626161;
+}
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}

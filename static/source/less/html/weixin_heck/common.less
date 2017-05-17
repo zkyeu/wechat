@@ -1,0 +1,38 @@
+@import "../common/base.less";
+// 图片path
+//@import "modules/b2s_path.less";
+// 头部
+// @import "modules/b2s_header.less";
+// // 尾部
+// @import "modules/b2s_footer.less";
+
+
+.clear-fix:after{
+    content: "";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    clear: both;
+}
+.clear-fix{
+    *zoom: 1;
+}
+
+.b2s-layout{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+::-moz-selection{
+    background-color:#338fff;
+    color:white;
+    text-shadow:none
+}
+
+::selection{
+    background-color:#338fff;
+    color:white;
+    text-shadow:none
+}

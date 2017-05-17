@@ -1,0 +1,884 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Mon May 30 2016 15:37:24 GMT+0800 (中国标准时间)
+ */
+/**
+ * 默认样式
+ * @file：   base.less
+ * @author:  chenxiaosong（chenxiaosong@51talk.com）
+ * @update:  2015-10-12
+ * @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  background-color: #fff;
+  _background-image: url(about:blank);
+  _background-attachment: fixed;
+  _overflow-x: hidden;
+}
+body {
+  font: 13px 'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial, Verdana, Tahoma;
+  color: #1e1e1e;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+}
+input,
+button,
+select,
+textarea {
+  font-family: 'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial, Verdana, Tahoma;
+  outline: none;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 0;
+}
+a {
+  color: #1e1e1e;
+  text-decoration: none;
+  outline: none;
+}
+a:hover {
+  color: #ff9600;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  vertical-align: middle;
+}
+::-moz-selection {
+  background-color: #ff9600;
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background-color: #ff9600;
+  color: white;
+  text-shadow: none;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  *zoom: 1;
+  *display: inline;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.relative {
+  position: relative;
+}
+.relativez {
+  position: relative;
+  zoom: 1;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.hidden {
+  overflow: hidden;
+}
+.ft12 {
+  font-size: 12px;
+}
+.ft13 {
+  font-size: 13px;
+}
+.ft14 {
+  font-size: 14px;
+}
+.ft15 {
+  font-size: 15px;
+}
+.ft16 {
+  font-size: 16px;
+}
+.ft18 {
+  font-size: 18px;
+}
+.ft19 {
+  font-size: 19px;
+}
+.ft20 {
+  font-size: 20px;
+}
+.normal {
+  font-weight: normal;
+}
+.bold {
+  font-weight: bold;
+}
+.tal {
+  text-align: left;
+}
+.tac {
+  text-align: center;
+}
+.tar {
+  text-align: right;
+}
+.f-taj {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+.f-vam,
+.f-vama * {
+  vertical-align: middle;
+}
+.f-wsn {
+  word-wrap: normal;
+  white-space: nowrap;
+}
+.f-pre {
+  overflow: hidden;
+  text-align: left;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.f-wwb {
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.f-ti {
+  overflow: hidden;
+  text-indent: -30000px;
+}
+.f-ti2 {
+  text-indent: 2em;
+}
+.f-lhn {
+  line-height: normal;
+}
+.f-tdu,
+.f-tdu:hover {
+  text-decoration: underline;
+}
+.f-tdn,
+.f-tdn:hover {
+  text-decoration: none;
+}
+.f-toe {
+  overflow: hidden;
+  word-wrap: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.f-csp {
+  cursor: pointer;
+}
+.f-csd {
+  cursor: default;
+}
+.f-csh {
+  cursor: hand;
+}
+.f-csm {
+  cursor: move;
+}
+.f-usn {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.fm-arrow-pos {
+  border-style: solid;
+  border-color: #ffa800;
+  border-width: 1px;
+}
+.flbJobs {
+  width: 100%;
+  height: auto;
+  background: #ffc600;
+  padding-bottom: 160px;
+}
+.flbJobs .tip {
+  display: none;
+}
+.flbJobs .fj_banner {
+  height: 690px;
+  width: 100%;
+  background: url(../../../images/html/flbJobs_landing//fj_banner.jpg?v=PKheKyomYaRtTkIhJ0kBWA%3D%3D) no-repeat center top;
+}
+.flbJobs .fj_banner .fj_bannerIn {
+  width: 1000px;
+  height: 690px;
+  margin: 0 auto;
+  position: relative;
+}
+.flbJobs .fj_banner .fj_bannerIn .fj_tit {
+  width: 480px;
+  text-align: center;
+  font-size: 45px;
+  position: absolute;
+  right: 48px;
+  top: 130px;
+}
+.flbJobs .fj_banner .fj_bannerIn .fj_tit span {
+  color: #f23063;
+  font-size: 64px;
+  font-weight: 900;
+}
+.flbJobs .fj_banner .fj_bannerIn .fj_apply {
+  display: block;
+  height: 68px;
+  width: 308px;
+  text-align: center;
+  line-height: 68px;
+  color: #fff;
+  background: #f13163;
+  font-size: 40px;
+  border-radius: 20px;
+  font-weight: 900;
+  position: absolute;
+  top: 285px;
+  right: 130px;
+}
+.flbJobs .fj_main {
+  width: 1200px;
+  background: #fff;
+  margin: 0 auto;
+}
+.flbJobs .fj_main h3 {
+  font-size: 48px;
+  font-weight: 900;
+  color: #474747;
+  text-align: center;
+}
+.flbJobs .fj_main .fj_join_part {
+  width: 1000px;
+  margin: 0 auto;
+}
+.flbJobs .fj_main .fj_join_part .fj_join {
+  height: 590px;
+  text-align: center;
+  padding-top: 76px;
+}
+.flbJobs .fj_main .fj_join_part .fj_join p {
+  color: #ffc600;
+  font-size: 30px;
+  margin-top: 12px;
+}
+.flbJobs .fj_main .fj_join_part .fj_join .fj_joinList {
+  width: 100%;
+  margin-top: 40px;
+}
+.flbJobs .fj_main .fj_join_part .fj_join .fj_joinList li {
+  width: 25%;
+  float: left;
+}
+.flbJobs .fj_main .fj_join_part .fj_join .fj_joinList li .icon {
+  height: 178px;
+}
+.flbJobs .fj_main .fj_join_part .fj_join .fj_joinList li .icon i {
+  display: block;
+  height: 150px;
+  width: 150px;
+  margin: 0 auto;
+  background: url(../../../images/html/flbJobs_landing//icon.png?v=OySswLPNslaDLSOAbO4c9g%3D%3D) center top;
+}
+.flbJobs .fj_main .fj_join_part .fj_join .fj_joinList li .icon .i2 {
+  background: url(../../../images/html/flbJobs_landing//icon.png?v=OySswLPNslaDLSOAbO4c9g%3D%3D) center -150px;
+}
+.flbJobs .fj_main .fj_join_part .fj_join .fj_joinList li .icon .i3 {
+  background: url(../../../images/html/flbJobs_landing//icon.png?v=OySswLPNslaDLSOAbO4c9g%3D%3D) center -300px;
+}
+.flbJobs .fj_main .fj_join_part .fj_join .fj_joinList li .icon .i4 {
+  background: url(../../../images/html/flbJobs_landing//icon.png?v=OySswLPNslaDLSOAbO4c9g%3D%3D) center -450px;
+}
+.flbJobs .fj_main .fj_join_part .fj_join .fj_joinList li .p1 {
+  color: #000;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 30px;
+  height: 75px;
+}
+.flbJobs .fj_main .fj_join_part .fj_join .fj_joinList li .p2 {
+  color: #333;
+  font-size: 18px;
+  line-height: 22px;
+}
+.flbJobs .fj_main .fj_require_part {
+  width: 1200px;
+  height: 484px;
+  background: #f3f3f3;
+}
+.flbJobs .fj_main .fj_require_part .fj_require {
+  width: 1000px;
+  height: 450px;
+  margin: 0 auto;
+  padding-top: 35px;
+}
+.flbJobs .fj_main .fj_require_part .fj_require .fj_require_list {
+  margin-top: 20px;
+}
+.flbJobs .fj_main .fj_require_part .fj_require .fj_require_list li {
+  line-height: 38px;
+  font-size: 16px;
+  text-indent: 20px;
+  position: relative;
+}
+.flbJobs .fj_main .fj_require_part .fj_require .fj_require_list li i {
+  display: inline-block;
+  height: 4px;
+  width: 4px;
+  background: url(../../../images/html/flbJobs_landing//fj_point.png?v=igpWBtXEw%2B8a%2B26kcEYNYQ%3D%3D) center top;
+  position: absolute;
+  top: 50%;
+  margin-top: -2px;
+  left: 10px;
+}
+.flbJobs .fj_main .fj_register {
+  padding: 40px 0 140px;
+}
+.flbJobs .fj_main .fj_register p {
+  color: #ffc600;
+  font-size: 30px;
+  margin-top: 12px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.flbJobs .fj_main .fj_register .fj_group {
+  width: 100%;
+  height: 65px;
+}
+.flbJobs .fj_main .fj_register .fj_group .fj_group_left {
+  width: 510px;
+  height: 60px;
+  float: left;
+  font-size: 16px;
+  text-indent: 320px;
+  padding-top: 5px;
+}
+.flbJobs .fj_main .fj_register .fj_group .fj_group_left span {
+  color: #f00;
+}
+.flbJobs .fj_main .fj_register .fj_group .fj_group_right {
+  width: 690px;
+  height: 100%;
+  float: left;
+}
+.flbJobs .fj_main .fj_register .fj_group .fj_group_right .fj_input {
+  height: 12px;
+  width: 338px;
+  border: 1px solid #ccc;
+  padding: 10px 7px;
+  font-size: 14px;
+}
+.flbJobs .fj_main .fj_register .fj_group .fj_group_right .fj_select {
+  height: 32px;
+  line-height: 32px;
+  width: 355px;
+  padding: 0;
+}
+.flbJobs .fj_main .fj_register .fj_group .fj_group_right em {
+  color: #f00;
+}
+.flbJobs .fj_main .fj_register .fj_group .fj_submit {
+  display: block;
+  height: 48px;
+  width: 196px;
+  margin: 0 auto;
+  background: #ffd800;
+  border-radius: 4px;
+  color: #64442d;
+  font-weight: 900;
+  line-height: 48px;
+  text-align: center;
+  font-size: 27px;
+}
+.flbJobs .fj_main .fj_register .fj_group_check .fj_group_left {
+  width: 580px;
+}
+.flbJobs .fj_main .fj_register .fj_group_check .fj_group_right {
+  width: 620px;
+  position: relative;
+}
+.flbJobs .fj_main .fj_register .fj_group_check .fj_group_right span {
+  display: inline-block;
+  width: 60px;
+  height: 32px;
+  line-height: 32px;
+  text-align: right;
+  margin-right: 20px;
+  position: relative;
+}
+.flbJobs .fj_main .fj_register .fj_group_check .fj_group_right span i {
+  display: block;
+  height: 15px;
+  width: 15px;
+  background: url(../../../images/html/flbJobs_landing//sprite.png?v=DRbztsCKgMipjb8xmfBLPQ%3D%3D) center bottom;
+  background-size: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -7px;
+}
+.flbJobs .fj_main .fj_register .fj_group_check .fj_group_right span .btn_active {
+  background: url(../../../images/html/flbJobs_landing//sprite.png?v=DRbztsCKgMipjb8xmfBLPQ%3D%3D) center top;
+  background-size: 100%;
+}
+.flbJobs .fj_main .fj_register .fj_group_check .fj_group_right .checkTip {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+}
+select {
+  margin: 0;
+  padding: 0;
+}
+.online_form {
+  background-color: #ffc600;
+  margin-top: -360px;
+  padding-bottom: 100px;
+}
+.online_form .o_cont .o_c_c {
+  background-color: #fff;
+  padding-top: 10px;
+}
+.online_form .o_cont .o_c_c ul {
+  width: 600px;
+  margin: 0 auto;
+  font-size: 13px;
+}
+.online_form .o_cont .o_c_c ul li {
+  height: 25px;
+  margin-bottom: 10px;
+}
+.online_form .o_cont .o_c_c ul li.connection_s {
+  height: 17px;
+  line-height: 17px;
+}
+.online_form .o_cont .o_c_c ul li.certificate_s {
+  height: 48px;
+}
+.online_form .o_cont .o_c_tit {
+  font-size: 40px;
+  color: #000;
+  text-align: center;
+  height: 52px;
+  font-weight: bold;
+  line-height: 1;
+}
+.online_form .o_cont .o_c_text {
+  text-align: center;
+  font-size: 16px;
+}
+.online_form .o_cont .o_c_text span {
+  color: #ff8200;
+}
+.online_form .o_cont .o_c_l {
+  padding-top: 27px;
+}
+.online_form .o_cont .c_l_l {
+  width: 194px;
+  margin-right: 10px;
+  float: left;
+  line-height: 25px;
+  text-align: right;
+}
+.online_form .o_cont .c_l_r {
+  float: left;
+  width: 372px;
+  font-size: 0;
+}
+.online_form .o_cont .c_l_r div {
+  float: left;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+}
+.online_form .o_cont .c_l_r div.firstN {
+  width: 130px;
+  margin-right: 11px;
+}
+.online_form .o_cont .c_l_r div.firstN input {
+  width: 100%;
+  height: 23px;
+  padding: 0;
+  background-color: transparent;
+}
+.online_form .o_cont .c_l_r div.lastN {
+  width: 187px;
+}
+.online_form .o_cont .c_l_r div.lastN input {
+  width: 100%;
+  height: 23px;
+  padding: 0;
+  background-color: transparent;
+}
+.online_form .o_cont .c_l_r .c_l_t {
+  width: 95px;
+  line-height: 23px;
+  position: relative;
+  float: left;
+  margin-right: 10px;
+}
+.online_form .o_cont .c_l_r .c_l_t.last_s {
+  margin-right: 0;
+}
+.online_form .o_cont .c_l_r .c_l_t i {
+  width: 9px;
+  height: 5px;
+  overflow: hidden;
+  position: absolute;
+  right: 9px;
+  top: 9px;
+}
+.online_form .o_cont .c_l_r .c_l_t .c_l_list {
+  display: none;
+}
+.online_form .o_cont .c_l_r .dress {
+  width: 350px;
+  border: 1px solid #ccc;
+  position: relative;
+}
+.online_form .o_cont .c_l_r .dress input {
+  width: 100%;
+  height: 23px;
+  padding: 0;
+}
+.online_form .o_cont .c_l_r .dress .u_browse {
+  display: block;
+  height: 23px;
+  width: 54px;
+  border: 1px solid #ff8200;
+  position: absolute;
+  line-height: 23px;
+  text-align: center;
+  color: #ff8200;
+  font-size: 10px;
+  right: -1px;
+  top: -1px;
+  cursor: pointer;
+}
+.online_form .o_cont .c_l_r .dress .u_browse .u_box {
+  position: absolute;
+  height: 23px;
+  width: 54px;
+  line-height: 23px;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+  color: #ff8200;
+  font-size: 13px;
+  cursor: pointer;
+  right: -1px;
+  top: -1px;
+  border-color: #ff8200;
+}
+.online_form .o_cont .c_l_r .dress .u_browse .u_box input {
+  position: absolute;
+  width: 119px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 23px;
+  opacity: 0;
+  filter: "alpha(opacity=0)";
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  left: -5px;
+  top: -2px;
+  cursor: pointer;
+  z-index: 2;
+}
+.online_form .o_cont .c_l_r select {
+  width: 117px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  font-size: 13px;
+  height: 25px;
+}
+.online_form .o_cont .c_l_r select.o_last {
+  margin-right: 0;
+}
+.online_form .o_cont .c_l_r select.oSelect {
+  float: right;
+  width: 180px;
+}
+.online_form .o_cont .location_s select {
+  width: 178px;
+}
+.online_form .o_cont .educational_s .o_s_1 {
+  width: 137px;
+  margin-right: 16px;
+}
+.online_form .o_cont .educational_s .o_s_2 {
+  width: 107px;
+}
+.online_form .o_cont .educational_s .o_last {
+  width: 97px;
+}
+.online_form .o_cont .desired_s select {
+  width: 372px;
+  margin-right: 0;
+}
+.online_form .o_cont .connection_s {
+  overflow: hidden;
+}
+.online_form .o_cont .connection_s .c_l_l {
+  line-height: 1;
+}
+.online_form .o_cont .connection_s .type_list {
+  height: 17px;
+}
+.online_form .o_cont .connection_s .type_list li {
+  float: left;
+  width: 134px;
+  height: 17px;
+  line-height: 17px;
+}
+.online_form .o_cont .connection_s .type_list input {
+  margin: 0;
+  padding: 0;
+  margin-right: 6px;
+  float: left;
+  margin-top: 2px;
+}
+.online_form .o_cont .premium {
+  width: 600px;
+  margin: 0 auto;
+  border-bottom: 1px solid #ccc;
+  padding-top: 15px;
+}
+.online_form .o_cont .premium .premium_top {
+  width: 231px;
+  text-align: center;
+  background-color: #999;
+  height: 27px;
+  line-height: 27px;
+  font-size: 15px;
+  color: #fff;
+  margin: 0 auto;
+  border-radius: 3px 3px 0 0;
+}
+.online_form .o_cont .certificate_s .type_list {
+  width: 372px;
+  height: 38px;
+}
+.online_form .o_cont .certificate_s .type_list li {
+  width: 103px;
+  height: 17px;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+.online_form .o_cont .certificate_s .type_list li.minWidth {
+  width: 63px;
+}
+.online_form .o_cont .certificate_s .type_list li.bottomN {
+  margin-bottom: 0;
+}
+.online_form .o_cont .o_bottom {
+  padding-top: 20px;
+  height: 123px;
+  background-color: #fff;
+  text-align: center;
+}
+.online_form .o_cont .o_bottom .o_sub {
+  display: inline-block;
+  width: 200px;
+  height: 52px;
+  line-height: 52px;
+  text-align: center;
+  background-color: #ffc600;
+  color: #000;
+  font-size: 24px;
+  border-radius: 3px;
+  font-weight: 900;
+}
+.online_form .o_cont .o_done {
+  height: 960px;
+  padding: 50px 50px 0;
+  background-color: #fff;
+  color: #333;
+  display: none;
+}
+.online_form .o_cont .o_done .o_done_top {
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1;
+  height: 50px;
+}
+.online_form .o_cont .o_done .o_done_b {
+  font-size: 16px;
+  line-height: 36px;
+}
+.online_form .o_cont .o_done .o_done_b span {
+  color: #f67620;
+}
+.inpp {
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  font-size: 13px;
+  height: 21px;
+  width: 178px;
+  float: left;
+}
+.flbJobs .fj_main .fj_register .o_c_text {
+  font-size: 16px;
+  color: #000;
+}
+.flbJobs .fj_main .fj_register .o_c_text span {
+  color: #ff8200;
+}
+.u_left {
+  float: left;
+}
+.u_right {
+  float: right;
+}

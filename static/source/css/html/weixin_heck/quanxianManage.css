@@ -1,0 +1,249 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: 
+ */
+/**
+ * 默认样式
+ * @author:  liliang（liliang05@51talk.com）
+ * @update:  2017年 3月 8日 星期三 15时28分50秒 CST
+ * @note:    黑鸟项目后台权限管理页面样式
+ */
+html,
+body {
+  width: 100%;
+  background: #ededed;
+}
+.pad20px {
+  padding: 20px;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.dn {
+  display: none;
+}
+.ptb20 {
+  padding: 20px 0;
+}
+.content-width {
+  width: 70vw;
+  margin: 20px auto;
+}
+::-webkit-input-placeholder {
+  font-size: 14px;
+  color: #afafaf;
+}
+.page-title {
+  color: #1e1e1e;
+  font-size: 20px;
+  text-align: center;
+}
+.guide-link {
+  line-height: 32px;
+  font-size: 16px;
+}
+.guide-link a {
+  color: #010101;
+}
+.set-pos {
+  width: 436px;
+  float: right;
+}
+.select-time {
+  float: left;
+  width: 304px;
+  height: 30px;
+  border: #aaa solid 1px;
+  border-radius: 15px;
+}
+.add-btn a {
+  width: 120px;
+  height: 32px;
+  background: #ffc800;
+  float: right;
+  display: block;
+  line-height: 32px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 16px;
+}
+.add-btn a:hover {
+  background: #ff8000;
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.table-box h5 {
+  height: 100px;
+  text-align: center;
+  font-size: 16px;
+  color: #999;
+}
+.table-detail {
+  width: 100%;
+}
+.table-detail th,
+.table-detail td {
+  border: #f0f0f0 solid 1px;
+}
+.table-detail thead {
+  background: #393939;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+}
+.table-detail tbody tr {
+  background: #fff;
+}
+.table-detail tbody tr:hover {
+  background: #ededed;
+}
+.table-detail tbody tr td {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #6e6e6e;
+  font-size: 13px;
+}
+.table-detail tbody tr td span {
+  display: inline-block;
+  width: 40px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+.table-detail tbody tr td span:nth-child(1) {
+  color: #00aeff;
+  margin-right: 20px;
+}
+.table-detail tbody tr td span:nth-child(2) {
+  color: #ff4343;
+}
+.mask-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+}
+.z9 {
+  z-index: 9;
+}
+.z99 {
+  z-index: 99;
+}
+.z999 {
+  z-index: 999;
+}
+.doLayer {
+  background: #fff;
+  padding: 20px;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  font-size: 14px;
+}
+.bor-ra {
+  border-radius: 8px;
+}
+.doLayer-w1 {
+  width: 454px;
+  height: 0;
+}
+.doLayer-w1 div:nth-child(1) {
+  margin-bottom: 20px;
+}
+.doLayer-w1 div:nth-child(1) dt {
+  line-height: 40px;
+}
+.doLayer-w1 div:nth-child(2) {
+  margin-bottom: 20px;
+}
+.doLayer-w1 div:nth-child(2) dt {
+  line-height: 40px;
+}
+.doLayer-w2 {
+  width: 400px;
+  height: 140px;
+}
+.doLayer-w2 h5 {
+  height: 108px;
+  line-height: 100px;
+  font-size: 18px;
+  color: #696969;
+  text-align: center;
+}
+.edit-layer {
+  height: auto;
+}
+.edit-layer dt {
+  float: left;
+  width: 80px;
+  color: #323232;
+}
+.edit-layer dd {
+  float: left;
+}
+.edit-layer dd input,
+.edit-layer dd textarea {
+  border-radius: 8px;
+  padding: 10px;
+  background: #f5f5f5;
+  border: #e6e6e6 solid 1px;
+  font-size: 14px;
+  width: 352px;
+}
+.edit-layer dd textarea {
+  height: 80px;
+  resize: none;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+.name-list {
+  width: 363px;
+  font-size: 14px;
+  color: #696969;
+}
+.name-list span {
+  display: block;
+  width: 88px;
+  float: left;
+}
+.name-list p {
+  width: 274px;
+  float: left;
+  display: inline-block;
+  line-height: 22px;
+}
+.layer-btn {
+  text-align: center;
+}
+.layer-btn span {
+  width: 120px;
+  height: 32px;
+  display: inline-block;
+  line-height: 32px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 16px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.layer-btn span.confirm {
+  background: #ffc800;
+  color: #000;
+}
+.layer-btn span.concel {
+  background: #dcdcdc;
+  color: #696969;
+}
+.layer-btn span:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}

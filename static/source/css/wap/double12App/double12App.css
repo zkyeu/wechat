@@ -1,0 +1,279 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Mon Dec 05 2016 12:05:38 GMT+0800 (中国标准时间)
+ */
+/*
+* 默认样式
+* @file：   base.less
+* @author:  zhuning@51talk.com）
+* @update:  2015-10-29
+* @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+*/
+html {
+  font-size: 62.5%;
+  -webkit-user-select: none;
+}
+@media only screen and (min-width: 481px) {
+  html {
+    font-size: 94%;
+  }
+}
+@media only screen and (min-width: 561px) {
+  html {
+    font-size: 109%;
+  }
+}
+@media only screen and (min-width: 641px) {
+  html {
+    font-size: 125%;
+  }
+}
+body {
+  padding: 0;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 640px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+}
+input,
+button,
+select,
+textarea,
+dl,
+dd,
+dt {
+  font-family: "Microsoft YaHei";
+  outline: none;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 0;
+  padding: 0px;
+  margin: 0px;
+}
+ul,
+li {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  vertical-align: middle;
+}
+b {
+  font-weight: normal;
+}
+::-moz-selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+strong {
+  font-weight: normal;
+}
+.container_register .clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.container_register .logo {
+  display: block;
+  width: 18.4rem;
+  height: auto;
+  overflow: hidden;
+  margin: 20vh auto;
+}
+.container_register .logo img {
+  width: 18.4rem;
+}
+.container_register .fl {
+  float: left;
+}
+.container_register .fr {
+  float: right;
+}
+.container_register .pr {
+  position: relative;
+}
+.container_register .register_form {
+  display: block;
+  width: 25.3rem;
+  height: 21rem;
+  margin: 0 auto;
+}
+.container_register .register_form input {
+  font-size: 1.8rem;
+  padding-left: 1rem;
+  line-height: 2.5rem;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+.container_register .register_form input::-webkit-input-placeholder {
+  color: #ccc;
+  font-size: 1.5rem;
+}
+.container_register .register_form .border5px {
+  border-radius: 0.5rem;
+  border: #ccc solid 1px;
+}
+.container_register .register_form ul {
+  list-style: none;
+}
+.container_register .register_form ul li {
+  position: relative;
+  display: block;
+  height: 4.4rem;
+  line-height: 4.4rem;
+  margin-bottom: 1rem;
+}
+.container_register .register_form .rowMobile {
+  position: relative;
+  background: #fff;
+}
+.container_register .register_form .rowMobile input {
+  height: 2.5rem;
+  width: 23rem;
+}
+.container_register .register_form .rowSms {
+  width: 12.6rem;
+}
+.container_register .register_form .rowSms input {
+  height: 2.5rem;
+  width: 11.5rem;
+}
+.container_register .register_form #captchImg {
+  float: left;
+  display: block;
+  width: 10rem;
+  height: 4.4rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+.container_register .register_form #captchImg img {
+  width: 10rem;
+  height: 3rem;
+}
+.container_register .register_form .sms_btn button {
+  position: absolute;
+  right: 0;
+  width: 10.6rem;
+  height: 4.4rem;
+  font-size: 1.5rem;
+  background: none;
+  color: #ccc;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+.container_register .register_form .times {
+  display: none;
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #ccc;
+  border-radius: 50%;
+  line-height: 1.5rem;
+  text-align: center;
+  color: #fff;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+.container_register .register_form #double12App_registerBtn {
+  border-radius: 0.5rem;
+  border: #ccc solid 1px;
+  height: 4.4rem;
+  width: 100%;
+  line-height: 4.4rem;
+  font-size: 1.8rem;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  background: #ddd;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+.container_register .reg_tips {
+  width: 100%;
+  text-align: center;
+  margin-top: 1.8rem;
+  font-size: 1rem;
+  color: #666;
+}
+.container_register .reg_tips a {
+  color: #333;
+  text-decoration: underline;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+.showtips_layer {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+  top: 0;
+  left: 0;
+}
+.showtips_layer .showtips {
+  display: block;
+  width: 60vw;
+  height: 4.4rem;
+  line-height: 4.4rem;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+  background: #ddd;
+  border-radius: .5rem;
+  z-index: 999;
+}
+.showtips_layer .showtips span {
+  display: block;
+  width: 100%;
+  height: 4.4rem;
+  overflow: hidden;
+}
+.showtips_layer .showtips em {
+  position: relative;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  top: -5rem;
+  left: 57vw;
+  border-radius: 50%;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}

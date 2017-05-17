@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>加入51TALK, 与名人对话，免费学英语！</title>
+    <link rel="stylesheet" href="<%= csslink%>">
+</head>
+<body>
+    <div class="USlikeAtHome" data-init="USlikeAtHome_landing">
+      <div class="us_banner">
+          <div class="us_getCourse">
+              <a href="javascript:;" class="btn_freeExperience">领取免费课程</a>
+          </div>
+      </div>
+      <div class="us_advantage">
+          <div class="us_advantage-tit"></div>
+          <div class="us_advantage_box">
+              <div class="us_advantage_left"></div>
+              <div class="us_advantage_center"></div>
+              <div class="us_advantage_right"></div>
+          </div>
+      </div>
+      <div class="us_standard">
+          <div class="us_standardIn">
+              <div class="us_woman"></div>
+              <div class="us_us_standardDetail">
+                  <h3>严格的外教录用标准</h3>
+                  <div class="us_standardList01 us_standardList">
+                      <div class="us_standardIcon">
+                          <i></i>
+                      </div>
+                      <div class="us_standardTxt">
+                          <span>海外专业团队直接培训认证外教</span>
+                          <p>只录取TOP 2.5%的优秀人才，发音标准，经验丰富。</p>
+                      </div>
+                  </div>
+                  <div class="us_standardList02 us_standardList">
+                       <div class="us_standardIcon">
+                          <i></i>
+                      </div>
+                      <div class="us_standardTxt">
+                          <span>优胜劣汰, 不断提升外教的教学能力</span>
+                          <p>高频率在职培训，定期的教学研讨会时刻帮助外教进步。</p>
+                      </div>
+                  </div>
+                  <div class="us_standardList03 us_standardList">
+                       <div class="us_standardIcon">
+                          <i></i>
+                      </div>
+                      <div class="us_standardTxt">
+                          <span>公开、公正的外教评价体系</span>
+                          <p>外教的教学水平，教学特色由学员评价产生，为每一位学员匹配
+最合适的外教老师。</p>
+                      </div>
+                  </div>
+              </div>
+              <a href="javascript:;"   class="btn_getFree btn_freeExperience">免费体验1对1授课</a>
+          </div>
+      </div>
+      <div class="us_ourTeacher">
+           <img src="<%=imagessrc%>us_ourTeacher.jpg" alt="">"
+      </div>
+      <div class="us_syncUS">
+          <div class="us_syncUSIn">
+              <a href="javascript:;"  class="btn_freeExperience">马上免费体验</a>
+          </div>
+      </div>
+      <div class="us_motherSay">
+          <div class="us_motherSayIn">
+              <h3>妈妈说</h3>
+          </div>
+      </div>
+      <div class="us_star">
+          <div class="us_starIn">
+              <h3>他们都在推荐51Talk</h3>
+          </div>
+      </div>
+    <div class="footer">
+        <div class="footer-inner">
+              <div class="form">
+                  <form action="../user/do_register.php" method="POST" id="RegForm3" name="RegForm" >
+                        <ul class="clearfix">
+                           <li><input name="user_name" id="user_name" type="text"  placeholder="请输入您的邮箱"  class="jsCheck"/></li>
+                          <li><input name="mobile" id="mobile"  type="text"  placeholder="请输入您的手机号"  class="jsCheck"/></li>
+                          <li><input  type="password" name="password" id="password" placeholder="请设置您的密码"  class="jsCheck"/></li>
+                          <li><input id="submit3" val="3" type="button" value="马上注册，体验免费外教课" class="jsSubmit" /></li>
+                        </ul>  
+                  </form> 
+              </div>
+              <div class="copyright">Copyright©北京大生知行科技有限公司&nbsp;|&nbsp;隐私声明&nbsp;|&nbsp;用户协议&nbsp;|&nbsp;京ICP证110696号 京ICP备11031999号</div>
+        </div>
+    </div>
+    <!-- 弹出层 -->
+  <div class="mask hide" id="mask"></div>
+  <div class="openWidnow hide" id="openWidnow">
+    <div class="window-title">
+    注册即可<span>免费获取</span>价值<span class="us_price">188元</span>少儿英语体验课
+    </div>
+    <form action="../user/do_register.php" method="POST" id="RegForm1">
+        <div class="window-form">
+          <ul class="window-input">
+              <li><label for="user_name3"><span class="sprite ie6png email"></span><input name="user_name" id="user_name3" type="text" placeholder="请输入您的邮箱" class="jsCheck"></label></li>
+              <li><label for="mobile3"><span class="sprite ie6png phone"></span><input name="mobile" id="mobile3" type="text" placeholder="请输入您的手机号" class="jsCheck"></label></li>
+              <li><label for="password3"><span class="sprite ie6png password"></span><input name="password" id="password3" type="password" placeholder="请设置您的密码" class="jsCheck"></label></li>
+          </ul>
+        </div>
+        <div class="orderBtn2" id="orderBtn2">
+          <a href="javascript:;"><input id="submit1" type="button" val="1" value="立即领取课程" class="jsSubmit" /></a>
+          <p class="exprienceDesc">体验后，孩子将获得量身定制的专业测评报告。</p>
+        </div>
+    </form> 
+  </div>
+
+</div>
+<script src="<%= jssrc%>"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: 
+ */
+/**
+ * 默认样式
+ * @author:  liliang（liliang05@51talk.com）
+ * @update:  2017年 05月02日 星期六 17时25分59秒 CST
+ * @note:    黑鸟项目后台课程教材对应链接后台报表
+ */
+html,
+body {
+  width: 100%;
+}
+.w100 {
+  width: 100%;
+}
+.dn {
+  display: none;
+}
+.clear-fix {
+  content: "";
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+.col2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 100%;
+}
+.col2 .col-left {
+  background: #fff;
+  width: 210px;
+  height: 100vh;
+  border-right: #dcdcdc solid 1px;
+}
+.col2 .col-left .title {
+  font-size: 16px;
+  color: #252525;
+  padding: 14px;
+  text-align: center;
+}
+.col2 .col-left .user-list ul {
+  list-style: none;
+}
+.col2 .col-left .user-list ul li {
+  height: 50px;
+  line-height: 50px;
+  border-left: 10px solid #fcc800;
+  border-top: #dcdcdc solid 1px;
+  border-bottom: #dcdcdc solid 1px;
+  background-color: #f0f0f0;
+  font-size: 14px;
+  padding-left: 20px;
+}
+.col2 .col-right {
+  padding: 20px;
+  background: #fff;
+  width: calc(100% - 251px);
+}
+.lesson-con {
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: #fff;
+  border: solid 1px #dcdcdc;
+  padding: 20px;
+}
+.block-con {
+  border-top: #dcdcdc dashed 1px;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #696969;
+}
+.block-con.no-border {
+  border: none;
+}
+.block-con h5 {
+  font-size: 16px;
+  color: #696969;
+}
+.block-con .con-list ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 20px 0;
+}
+.block-con .con-list ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-right: 30px;
+  padding: 5px;
+  max-height: 40px;
+}
+.block-con .con-list ul li input {
+  display: none;
+}
+.block-con .con-list ul li label {
+  display: block;
+  padding-left: 20px;
+  min-height: 25px;
+  background: url(../../../images/html/weixin_heck/kecheng.png?v=YEfeLJTpxSGak7eLudWACg%3D%3D) 0 2px no-repeat;
+  cursor: pointer;
+}
+.block-con .con-list ul li label.cut-sel {
+  background-position: 0 -23px;
+}
+.block-con .detail-user {
+  border-radius: 10px;
+  border: #dcdcdc solid 1px;
+}
+.block-con .detail-user ul {
+  height: 270px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  overflow: hidden;
+}
+.block-con .detail-user ul li {
+  width: 22%;
+}
+.block-con .detail-user ul li label {
+  background: url(../../../images/html/weixin_heck/powersel2.png?v=XlnThWoSjOc%2FyRmZ3h%2Boxw%3D%3D) 0 -61px no-repeat !important;
+}
+.block-con .detail-user ul li label.cut-sels {
+  background-position: 0 3px !important;
+}
+.sel-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 40px;
+}
+.sel-btn a {
+  width: 137px;
+  height: 36px;
+  line-height: 36px;
+  display: block;
+  border-radius: 4px;
+  background-color: #fcc800;
+  color: #252525;
+  text-align: center;
+  display: none;
+}

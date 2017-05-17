@@ -1,0 +1,390 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: 
+ */
+@media only screen and (min-width: 375px) {
+  html {
+    font-size: 73.3%;
+  }
+}
+@media only screen and (min-width: 414px) {
+  html {
+    font-size: 81%;
+  }
+}
+@media only screen and (min-width: 481px) {
+  html {
+    font-size: 94%;
+  }
+}
+@media only screen and (min-width: 561px) {
+  html {
+    font-size: 109%;
+  }
+}
+@media only screen and (min-width: 641px) {
+  html {
+    font-size: 125%;
+  }
+}
+.exercise {
+  width: 100%;
+  height: 100%;
+  background: url(../../../images/wap/pre_class20170207/exercise.jpg?v=PH%2Bt5duptT1PumimnAhsTg%3D%3D) center center no-repeat;
+  background-size: cover;
+}
+.exercise-slide {
+  width: 100%;
+}
+.exercise-slide .swiper-wrapper {
+  height: auto;
+}
+.exercise-slide .swiper-slide {
+  position: relative;
+  width: 82%;
+  height: auto;
+  padding-top: 5rem;
+  border-radius: 2rem;
+}
+.exercise-slide .swiper-slide .star_wrap {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 9.2rem;
+}
+.exercise-slide .swiper-slide .star_wrap .star {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+}
+.exercise-slide .swiper-slide .star_wrap .star-first {
+  left: 7%;
+  bottom: 0;
+}
+.exercise-slide .swiper-slide .star_wrap .star-second {
+  left: 20%;
+  top: 12%;
+}
+.exercise-slide .swiper-slide .star_wrap .star-third {
+  left: 42%;
+  top: 0;
+}
+.exercise-slide .swiper-slide .star_wrap .star-fourth {
+  left: 63%;
+  top: 12%;
+}
+.exercise-slide .swiper-slide .star_wrap .star-fifth {
+  left: 77.8%;
+  bottom: 0;
+}
+.exercise-slide .swiper-slide .star_wrap .star-box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 55px;
+  height: 55px;
+}
+.exercise-slide .swiper-slide .star_wrap .star-normal-first {
+  background: url(../../../images/wap/pre_class20170207/star_normal_01.png?v=cs8wqdDd9s0S%2B3vuQg0K6A%3D%3D) center center no-repeat;
+  background-size: contain;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  z-index: 3;
+}
+.exercise-slide .swiper-slide .star_wrap .star-normal-second {
+  background: url(../../../images/wap/pre_class20170207/star_normal_02.png?v=dd37OyXTm0WXvzS9EkCk3w%3D%3D) center center no-repeat;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  z-index: 3;
+  background-size: cover;
+}
+.exercise-slide .swiper-slide .star_wrap .star-normal-third {
+  background: url(../../../images/wap/pre_class20170207/star_normal_03.png?v=4qe6nTBr9ZfvHxoUYO1i8Q%3D%3D) center center no-repeat;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  z-index: 3;
+  background-size: cover;
+}
+.exercise-slide .swiper-slide .star_wrap .star-normal-fourth {
+  background: url(../../../images/wap/pre_class20170207/star_normal_04.png?v=3VEkNS0l9FeBJb1x2izg3Q%3D%3D) center center no-repeat;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  z-index: 3;
+  background-size: cover;
+}
+.exercise-slide .swiper-slide .star_wrap .star-normal-fifth {
+  background: url(../../../images/wap/pre_class20170207/star_normal_05.png?v=915AhXkFUW8L9Xplg0LfRg%3D%3D) center center no-repeat;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  z-index: 3;
+  background-size: cover;
+}
+.exercise-slide .swiper-slide .star_wrap .star-full-first {
+  background: url(../../../images/wap/pre_class20170207/star_full_01.png?v=hlLwZ3zXfl4rqKQ4hPlmFg%3D%3D) center center no-repeat;
+  background-size: contain;
+}
+.exercise-slide .swiper-slide .star_wrap .star-full-second {
+  background: url(../../../images/wap/pre_class20170207/star_full_02.png?v=mhQI1FTlyGUwwpqqvSTMvg%3D%3D) center center no-repeat;
+  background-size: contain;
+}
+.exercise-slide .swiper-slide .star_wrap .star-full-third {
+  background: url(../../../images/wap/pre_class20170207/star_full_03.png?v=m5JVq84wLuXTnF4CW5gRNg%3D%3D) center center no-repeat;
+  background-size: contain;
+}
+.exercise-slide .swiper-slide .star_wrap .star-full-fourth {
+  background: url(../../../images/wap/pre_class20170207/star_full_04.png?v=mxGOqg0xcVNcBchhE%2BWG7A%3D%3D) center center no-repeat;
+  background-size: contain;
+}
+.exercise-slide .swiper-slide .star_wrap .star-full-fifth {
+  background: url(../../../images/wap/pre_class20170207/star_full_05.png?v=0TNlpYAmSvK9hRU6NSs%2BmQ%3D%3D) center center no-repeat;
+  background-size: contain;
+}
+.exercise-slide .swiper-slide .flip-one .star-first .star-box {
+  -webkit-animation: starRotate 1s ease 0s 1;
+          animation: starRotate 1s ease 0s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.exercise-slide .swiper-slide .flip-two .star-first .star-box {
+  -webkit-animation: starRotate 1s ease 0s 1;
+          animation: starRotate 1s ease 0s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.exercise-slide .swiper-slide .flip-two .star-second .star-box {
+  -webkit-animation: starRotate 1s ease 300ms 1;
+          animation: starRotate 1s ease 300ms 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.exercise-slide .swiper-slide .flip-three .star-first .star-box {
+  -webkit-animation: starRotate 1s ease 0s 1;
+          animation: starRotate 1s ease 0s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.exercise-slide .swiper-slide .flip-three .star-second .star-box {
+  -webkit-animation: starRotate 1s ease 300ms 1;
+          animation: starRotate 1s ease 300ms 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.exercise-slide .swiper-slide .flip-three .star-third .star-box {
+  -webkit-animation: starRotate 1s ease 600ms 1;
+          animation: starRotate 1s ease 600ms 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.exercise-slide .swiper-slide .flip-four .star-first .star-box {
+  -webkit-animation: starRotate 1s ease 0s 1;
+          animation: starRotate 1s ease 0s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.exercise-slide .swiper-slide .flip-four .star-second .star-box {
+  -webkit-animation: starRotate 1s ease 300ms 1;
+          animation: starRotate 1s ease 300ms 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.exercise-slide .swiper-slide .flip-four .star-third .star-box {
+  -webkit-animation: starRotate 1s ease 600ms 1;
+          animation: starRotate 1s ease 600ms 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.exercise-slide .swiper-slide .flip-four .star-fourth .star-box {
+  -webkit-animation: starRotate 1s ease 900ms 1;
+          animation: starRotate 1s ease 900ms 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.exercise-slide .swiper-slide .flip-five .star-first .star-box {
+  -webkit-animation: starRotate 1s ease 0s 1;
+          animation: starRotate 1s ease 0s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.exercise-slide .swiper-slide .flip-five .star-second .star-box {
+  -webkit-animation: starRotate 1s ease 300ms 1;
+          animation: starRotate 1s ease 300ms 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.exercise-slide .swiper-slide .flip-five .star-third .star-box {
+  -webkit-animation: starRotate 1s ease 600ms 1;
+          animation: starRotate 1s ease 600ms 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.exercise-slide .swiper-slide .flip-five .star-fourth .star-box {
+  -webkit-animation: starRotate 1s ease 900ms 1;
+          animation: starRotate 1s ease 900ms 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.exercise-slide .swiper-slide .flip-five .star-fifth .star-box {
+  -webkit-animation: starRotate 1s ease 1.2s 1;
+          animation: starRotate 1s ease 1.2s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes starRotate {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(540deg);
+            transform: rotateY(540deg);
+  }
+}
+@keyframes starRotate {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(540deg);
+            transform: rotateY(540deg);
+  }
+}
+.exercise-slide .swiper-slide .animal {
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.exercise-slide .swiper-slide .dog {
+  width: 88px;
+  height: 68px;
+  background: url(../../../images/wap/pre_class20170207/dog.png?v=%2BJquniE1HTBPghERqGI0nw%3D%3D) center center no-repeat;
+  background-size: cover;
+}
+.exercise-slide .swiper-slide .cat {
+  width: 114px;
+  height: 69px;
+  background: url(../../../images/wap/pre_class20170207/cat.png?v=g5P37Ad5UrXfCG4Kfsfhew%3D%3D) center center no-repeat;
+  background-size: cover;
+}
+.exercise-slide .swiper-slide .bear {
+  width: 105px;
+  height: 62px;
+  background: url(../../../images/wap/pre_class20170207/bear.png?v=YSL6WHw4tNLpwOUDoe3CGg%3D%3D) center center no-repeat;
+  background-size: cover;
+}
+.exercise-slide .swiper-slide .rabbit {
+  width: 95px;
+  height: 72px;
+  background: url(../../../images/wap/pre_class20170207/rabbit.png?v=slmuYu2c4dPc3E3Wpk3iaw%3D%3D) center center no-repeat;
+  background-size: cover;
+}
+.exercise-slide .swiper-slide .card_wrap {
+  position: relative;
+  background-color: #638efc;
+  height: 55%;
+  width: 100%;
+  border-radius: 2rem;
+}
+.exercise-slide .swiper-slide .swiper-slide-shadow-left {
+  background-image: -webkit-linear-gradient(right, rgba(249, 252, 255, 0.8), rgba(0, 0, 0, 0));
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(249, 252, 255, 0.8)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to left, rgba(249, 252, 255, 0.8), rgba(0, 0, 0, 0));
+  border-radius: 2rem;
+}
+.exercise-slide .swiper-slide .swiper-slide-shadow-right {
+  background-image: -webkit-linear-gradient(left, rgba(99, 142, 252, 0.8), rgba(0, 0, 0, 0));
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(99, 142, 252, 0.8)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to right, rgba(99, 142, 252, 0.8), rgba(0, 0, 0, 0));
+  border-radius: 2rem;
+}
+.exercise-operation {
+  position: relative;
+  margin-top: 1rem;
+}
+.exercise-operation .icon {
+  position: absolute;
+}
+.exercise-operation .listen {
+  left: 17.5%;
+  width: 50px;
+  height: 53px;
+  background: url(../../../images/wap/pre_class20170207/listen.png?v=qNkopoizOxDrRN7CBSqcBA%3D%3D) center center no-repeat;
+  background-size: cover;
+}
+.exercise-operation .listen-stop {
+  background: url(../../../images/wap/pre_class20170207/listen_stop.png?v=HBjPeYbL9BXJZMHUEg9OSw%3D%3D) center center no-repeat;
+  background-size: cover;
+}
+.exercise-operation .record {
+  left: 50%;
+  width: 65px;
+  height: 68px;
+  margin-left: -33px;
+  background: url(../../../images/wap/pre_class20170207/record.png?v=F7ks9KF%2F7tZmIMy1GbNzvw%3D%3D) center center no-repeat;
+  background-size: cover;
+}
+.exercise-operation .play {
+  right: 17.5%;
+  width: 50px;
+  height: 53px;
+  background: url(../../../images/wap/pre_class20170207/play.png?v=wEq9mYJslP2WwEgG8Z65lA%3D%3D) center center no-repeat;
+  background-size: cover;
+}
+.exercise-operation .play-normal {
+  background: url(../../../images/wap/pre_class20170207/play_normal.png?v=vl2jC3CjYrPhOxTZRqnU4Q%3D%3D) center center no-repeat;
+  background-size: cover;
+}
+.exercise-operation .play-stop {
+  background: url(../../../images/wap/pre_class20170207/play_stop.png?v=uvIza5GVq5IFy8%2F5FJL6HQ%3D%3D) center center no-repeat;
+  background-size: cover;
+}
+.exercise-slider__nav {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 44px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translate3D(0, 0, 0);
+      -ms-transform: translate3D(0, 0, 0);
+          transform: translate3D(0, 0, 0);
+}
+.exercise-slider__nav .exercise-scroll {
+  position: absolute;
+  height: 44px;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translate3D(0, 0, 0);
+      -ms-transform: translate3D(0, 0, 0);
+          transform: translate3D(0, 0, 0);
+}
+.exercise-slider__nav li {
+  float: left;
+  display: inline-block;
+  width: 47px;
+  height: 29px;
+  margin-top: 15px;
+  line-height: 29px;
+  background: #638efc;
+  color: #a3bdff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  text-align: center;
+}
+.exercise-slider__nav li.current {
+  height: 44px;
+  margin-top: 0;
+  line-height: 44px;
+  color: #fff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.exercise-slider__nav li.complete {
+  background: #5480f1 url(../../../images/wap/pre_class20170207/complete.png?v=47%2BL%2BpfxBDmECxxvKC5bRQ%3D%3D) no-repeat center center;
+  background-size: 14px 11px;
+}

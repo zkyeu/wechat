@@ -1,0 +1,86 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Wed Nov 23 2016 11:19:05 GMT+0800 (中国标准时间)
+ */
+.young-wrap {
+  width: 1000px;
+  margin: 20px auto;
+}
+.young-wrap .placeholder {
+  float: left;
+  width: 136px;
+}
+.young-wrap .container {
+  float: left;
+  width: 861px;
+  background: #fff;
+  border: #e4eaee solid 1px;
+}
+.young-wrap .container .title {
+  font-size: 16px;
+  color: #ff8200;
+}
+.young-wrap .container .tips {
+  margin: 25px;
+  margin-bottom: 0;
+  padding-bottom: 25px;
+  border-bottom: #dbdee0 dashed 1px;
+  color: #1e1e1e;
+}
+.young-wrap .container .show {
+  padding: 25px;
+  border-bottom: #e4eaee solid 1px;
+}
+.young-wrap .container .show .img-lst {
+  margin: 25px 0;
+  text-align: center;
+}
+.young-wrap .container .introduce {
+  margin: 0 25px;
+  padding: 25px 0;
+  border-bottom: #dbdee0 dashed 1px;
+}
+.young-wrap .container .introduce h2 {
+  margin-top: 30px;
+  text-align: center;
+}
+.young-wrap .container .introduce ul {
+  width: 775px;
+  margin: 15px auto;
+  margin-right: -70px;
+  font-size: 13px;
+  color: #1e1e1e;
+}
+.young-wrap .container .introduce ul li {
+  float: left;
+  width: 110px;
+  margin-right: 72px;
+  text-align: center;
+}
+.young-wrap .container .promotion {
+  margin: 0 25px;
+  padding: 25px 0;
+  border-bottom: #dbdee0 dashed 1px;
+}
+.young-wrap .container .promotion p {
+  text-align: center;
+}
+.young-wrap .container .earn {
+  margin-top: 40px;
+  text-align: center;
+}
+.young-wrap .container .earn p {
+  margin-bottom: 15px;
+}
+.young-wrap .container .earn .btn {
+  display: inline-block;
+  width: 275px;
+  height: 35px;
+  line-height: 35px;
+  color: #fff;
+  background: #ff8200;
+  border-radius: 3px;
+  text-align: center;
+}

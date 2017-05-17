@@ -1,0 +1,384 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ */
+/*
+* 默认样式
+* @file：   base.less
+* @author:  zhuning@51talk.com）
+* @update:  2015-10-29
+* @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+*/
+html {
+  font-size: 62.5%;
+  -webkit-user-select: none;
+}
+@media only screen and (min-width: 481px) {
+  html {
+    font-size: 94%;
+  }
+}
+@media only screen and (min-width: 561px) {
+  html {
+    font-size: 109%;
+  }
+}
+@media only screen and (min-width: 641px) {
+  html {
+    font-size: 125%;
+  }
+}
+body {
+  padding: 0;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 640px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+}
+input,
+button,
+select,
+textarea,
+dl,
+dd,
+dt {
+  font-family: "Microsoft YaHei";
+  outline: none;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 0;
+  padding: 0px;
+  margin: 0px;
+}
+ul,
+li {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  vertical-align: middle;
+}
+b {
+  font-weight: normal;
+}
+::-moz-selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+strong {
+  font-weight: normal;
+}
+body {
+  width: 100%;
+  font-family: "Microsoft YaHei";
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+img {
+  vertical-align: top;
+}
+input {
+  background-color: transparent;
+  line-height: 1;
+}
+.hide {
+  display: none;
+}
+.g-hd .u-banner {
+  width: 100%;
+}
+.g-ct .m-reg {
+  padding: 1.85rem 3.6rem 1.25rem;
+  background: #f2f2f2;
+}
+.g-ct .m-reg .reg_txt {
+  margin-top: 1.2rem;
+  font-size: 1.25rem;
+  color: #707070;
+  text-align: center;
+}
+.g-ct .m-reg .login_now {
+  height: 1.5;
+  padding-bottom: 0.3rem;
+  margin-left: 0.5rem;
+  font-size: 1.25rem;
+  color: #ff4800;
+  border-bottom: 1px solid #ff4800;
+}
+.g-ct .m-log {
+  padding: 3.6rem 3.6rem 4.8rem;
+  background: #f2f2f2;
+}
+.g-ct .m-log .group .u-err {
+  padding: 0.4rem 0 1rem;
+}
+.g-ct .m-log .u-btn-sb {
+  margin-top: 0.5rem;
+}
+.g-ct .m-success {
+  padding: 4.6rem 0 6.4rem;
+  background: #f2f2f2;
+  text-align: center;
+}
+.g-ct .m-success h2 {
+  font-size: 2.3rem;
+  color: #f44737;
+}
+.g-ct .m-success p {
+  margin-top: 1.7rem;
+  font-size: 1.5rem;
+  color: #414141;
+}
+.g-ct .u-btn-sb {
+  height: 2.85rem;
+  line-height: 2.85rem;
+  color: #fff;
+  font-size: 1.65rem;
+  text-align: center;
+  display: block;
+  border-radius: 3px;
+  background: #ff7200;
+}
+.g-ct .group .u-ipt {
+  width: 100%;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.g-ct .group .u-ipt1 {
+  width: 100%;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.g-ct .group .u-err {
+  text-align: center;
+  color: #ff3000;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.3rem 0 0.8rem;
+  visibility: hidden;
+}
+.g-ct .group2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.g-ct .group2 .m-ipts {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.g-ct .group2 .getCode {
+  margin-left: 1.6rem;
+  color: #ff4800;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  margin-bottom: 0.3rem;
+  font-size: 1.15rem;
+  border-bottom: 1px solid #ff4800;
+}
+.g-ct .group2 .getCode1 {
+  margin-left: 1.6rem;
+  color: #ff4800;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  margin-bottom: 0.3rem;
+  font-size: 1.15rem;
+}
+.g-ct .m-step-box {
+  background: #fff;
+  padding: 1.4rem 0 2.5rem;
+  text-align: center;
+}
+.g-ct .m-step-box h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #5c5c5c;
+}
+.g-ct .m-step-box h3 {
+  font-size: 0.65rem;
+  color: #b0b0b0;
+  margin: 0.65rem 0 1.45rem;
+}
+.g-ct .m-step-box .m-steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.g-ct .m-step-box .m-steps li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.g-ct .m-step-box .m-steps li p {
+  font-size: 1rem;
+  color: #4e4e4e;
+  margin-bottom: 0.5rem;
+}
+.g-ct .m-step-box .m-steps .u-circle {
+  border-radius: 50%;
+  font-size: 2.25rem;
+  background: #ffc600;
+  width: 3.9rem;
+  height: 3.9rem;
+  line-height: 3.9rem;
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 1.3rem;
+}
+.g-ct .m-theme-box {
+  background: #00c3c9;
+  padding: 1.6rem 2rem 2.5rem;
+  text-align: center;
+}
+.g-ct .m-theme-box h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #1f5967;
+}
+.g-ct .m-theme-box h3 {
+  font-size: 0.65rem;
+  color: #00959a;
+  margin: 0.65rem 0 0.45rem;
+}
+.g-ct .m-theme-box .m-themes li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1rem;
+}
+.g-ct .m-theme-box .m-themes li img {
+  width: 10.8rem;
+  height: 7.4rem;
+}
+.g-ct .m-theme-box .m-themes li .m-txt {
+  margin-left: 1.3rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 1rem;
+  text-align: left;
+}
+.g-ct .m-theme-box .m-themes li .m-txt h4 {
+  font-weight: bold;
+  color: #1f5967;
+}
+.g-ct .m-theme-box .m-themes li .m-txt p {
+  margin-top: 1rem;
+  color: #d7feff;
+}
+.g-ct .m-learn-box {
+  padding: 2.1rem 2rem 3rem;
+  background: #1f5967;
+}
+.g-ct .m-learn-box h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #00c3c9;
+  text-align: center;
+}
+.g-ct .m-learn-box .m-learn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2.4rem 4.3rem 0;
+}
+.g-ct .m-learn-box .m-learn li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+.g-ct .m-learn-box .m-learn li img {
+  width: 6.85rem;
+  height: 6.85rem;
+  margin-bottom: 0.8rem;
+}
+.g-ct .m-learn-box .m-learn li p {
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #00c3c9;
+}
+.g-ct .m-learn-box .m-learn .first {
+  margin-right: 6rem;
+}
+.g-ct .m-learn-box .u-btn-act {
+  margin: 2.4rem auto 0;
+  width: 16.5rem;
+  border-radius: 3px;
+  border: 1px solid #fff;
+  background: #1f5967;
+  color: #fff;
+  font-size: 1.3rem;
+  text-align: center;
+  display: block;
+  padding: 0.9rem 0;
+}
+.g-ct .m-lina-box {
+  background: #fff;
+}
+.g-ct .m-lina-box img {
+  width: 100%;
+}
+.g-ft {
+  padding: 1.5rem 0 2.7rem;
+  background: #fec526;
+  text-align: center;
+}
+.g-ft .u-btn-enjoy {
+  display: inline-block;
+  margin-bottom: 2rem;
+  width: 18.3rem;
+  height: 3.1rem;
+  line-height: 3.1rem;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 1.5rem;
+  background: #ff6c00;
+}
+.g-ft p {
+  font-size: 0.9rem;
+  color: #3d3d3d;
+}

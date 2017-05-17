@@ -1,0 +1,53 @@
+<% include ../common/top.ejs %>
+<body data-init="answer">
+  <div class="dialog-wrap answer-wrap">
+<form action="" method="get" id="answerForm">
+    <div class="answer-tit">答题</div>
+    <div class="answer-question-2">I was born on May 10th.</div>
+    <div class="answer-question-audio-text">
+      <div class="audio-text control audioPlay">
+        <audio id="audio-01" src="http://records.cloud.chivox.com/574520abb7749b8a6d2c8294.mp3" preload="auto"></audio>
+      </div>
+    </div>
+    <ul class="answer-option-pic answer-option-pic-2 cfix">
+      <li data-val="a" class="txt-no">
+        <dl>
+          <dt><img src="<%= imagessrc%>answer-pic-01.jpg" alt=""></dt>
+          <dd>
+            <span>A</span>
+          </dd>
+        </dl>
+      </li>
+      <li data-val="b">
+        <dl>
+          <dt><img src="<%= imagessrc%>answer-pic-01.jpg" alt=""></dt>
+          <dd>
+            <span>B</span>
+          </dd>
+        </dl>
+      </li>
+      <li data-val="c">
+        <dl>
+          <dt><img src="<%= imagessrc%>answer-pic-01.jpg" alt=""></dt>
+          <dd>
+            <span>C</span>
+          </dd>
+        </dl>
+      </li>
+      <li data-val="d" class="txt-yes">
+        <dl>
+          <dt><img src="<%= imagessrc%>answer-pic-01.jpg" alt=""></dt>
+          <dd>
+            <span>D</span>
+          </dd>
+        </dl>
+      </li>
+    </ul>
+    <input type="hidden" name="val" id="answerVal" value="">
+    <div class="answer-dialog">
+      <a href="http://www.51talk.com/"><input type="button" value="购买课程，参与答题" class="answer-buy"></a>
+    </div>
+</form>
+  </div>
+</body>
+<% include ../common/bottom.ejs %>

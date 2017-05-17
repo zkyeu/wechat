@@ -1,0 +1,47 @@
+<% include ../common/top.ejs %>
+<body data-init="teacherClassInfo">
+	<div class="tab-box">
+		<ul>
+			<li class="cur">
+				<a href="">即将开课</a>
+			</li>
+			<li>
+				<a href="">往期课程</a>
+			</li>
+		</ul>
+	</div>
+	<div class="t-main-box">
+		<div id="mainBox">
+			<div class="class-info">
+				<div class="class-title cfix">
+					<span class="fl">六年级二班</span>
+					<a href="add_student_single.html" class="fr">邀请学生注册&nbsp;&gt;</a>
+				</div>
+				<div class="class-info-box">
+					<p>学生总数：43</p>
+					<p>激活学生数：42</p>
+					<p>付费学生数：40</p>
+				</div>
+			</div>
+			<div class="check-table"><a href="javascript:;">查看课表<i></i></a></div>
+			<div class="student-list-t">学生列表</div>
+			<div class="student-list">
+				<ul>
+					<li>王五一（13919192020）<span>已购买</span></li>
+					<li>王五一（13919192020）<span>已购买</span></li>
+					<li>王五一（13919192020）<span>已购买</span></li>
+					<li>王五一（13919192020）<span class="not-purchase">已购买</span></li>
+					<li>
+						<a href="/templates/wap/b2s/teacher_invite.html">王五一（<span class="n-activate">未激活</span>）<span class="invitation">去邀请<i></i></span>
+						</a>
+					</li>
+				</ul>
+				
+			</div>
+		</div>
+		<div id="bottomBox" class="bottom-box">
+			<a class="add-btn"  href="add_student.html">添加学生</a>
+		</div>
+	</div>
+</body>
+<% include ../common/bottom.ejs %>

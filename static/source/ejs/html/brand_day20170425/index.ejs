@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="app下载专页">
+    <meta name="keywords" content="app下载专页">
+    <title>欢迎下载51Talk App</title>
+    <link rel="stylesheet" type="text/css" href="<%= csslink%>">
+</head>
+<body>
+<!-- 顶部 -->
+<div class="pri-header" >
+  <!-- 顶部 -->
+  <div class="header">
+    <a href="javascript:;" class="hr-lt">
+      <i></i>
+      <b><span>美国纽交所上市公司（股票代码：COE）</span>全球信赖的在线英语领导品牌</b>
+      <!-- 青少 -->
+      <b class="qs-tit hide">外教1对1，在家学英语</b>
+    </a>
+    <div class="hr-rt">
+      <div class="rt-top">
+        <ul>
+          <li><span class="rt_username">hi,studentstudenthw</span><a href="http://www.51talk.com/trial/index" title="会员中心">会员中心</a><a href="/index/logout" title="退出">退出</a></li>
+          <li><a href="http://www.baidu.com" id="login_url">登录</a></li>
+          <li><a href="javascript:;">免费注册</a></li>
+          <li><a href="javascript:;">企业培训</a></li>
+          <li class="jsMore">
+            <a href="javascript:;">微博</a>
+            <!-- 微博弹层 -->
+            <div class="weibo jsUl">
+              <a href="javascript:;"></a>
+            </div>
+          </li>
+          <li class="jsMore">
+            <a href="javascript:;">微信</a>
+            <!-- 微信弹层 -->
+            <div class="weixin jsUl">
+              <a href="javascript"><img src="<%= imagessrc%>/top_weixin.png" alt=""></a>
+            </div>
+          </li>
+          <li></li>
+        </ul>
+      </div>
+      <span><i></i>4000-51-51-51</span>
+    </div>
+  </div>
+</div>
+
+<div class="brand_day" data-init="index">
+    <div class="banner">
+      <div class="widthMain">
+      </div>
+    </div>
+    <div class="part1 widthMain">
+      <h3 class="tit">国际品牌，全球信赖</h3>
+      <p class="tit_text">中国第一家在美国纽交所上市的在线教育品牌</p>
+      <ul class="part1_list clearfix">
+        <li>
+          <span></span>
+          <h5><strong>8000＋</strong>金牌外教团队</h5>
+          <p class="list_text">全程为您提供vip专属服务</p>
+        </li>
+        <li>
+          <span class="icon2"></span>
+          <h5>每天<strong> 25 </strong>分钟</h5>
+          <p class="list_text">随时随地和外教1对1</p>
+        </li>
+        <li>
+          <span class="icon3"></span>
+          <h5><strong>200＋</strong>国际化专家团队</h5>
+          <p class="list_text">专业打造适合中国学习者的教材</p>
+        </li>
+      </ul>
+    </div>
+    <div class="part2 widthMain">
+      <h3 class="tit">百万学员的优质选择</h3>
+      <ul class="part2_list clearfix">
+        <li>
+          <img src="<%= imagessrc%>down1.jpg" alt="">
+          <div class="list_right">
+            <h3 class="right_tit">180次最佳学习套餐</h3>
+            <p class="right_text">赠送48课时优选公开课</p>
+            <p class="right_mony"><span>￥7618</span><span class='pass'>￥8518</span></p>
+            <a href="javascript:;" class="buy">一键抢购</a>
+          </div>
+        </li>
+        <li>
+          <img src="<%= imagessrc%>down1.jpg" alt="">
+          <div class="list_right">
+            <h3 class="right_tit">270次最佳学习套餐</h3>
+            <p class="right_text">赠送72课时优选公开课</p>
+            <p class="right_mony"><span>￥10618</span><span class='pass'>￥12618</span></p>
+            <a href="javascript:;" class="buy">一键抢购</a>
+          </div>
+          <i></i>
+        </li>
+        <li>
+          <img src="<%= imagessrc%>down1.jpg" alt="">
+          <div class="list_right">
+            <h3 class="right_tit">青少18单元学习套餐</h3>
+            <p class="right_text">赠送24课时外教1对1课程</p>
+            <p class="right_text">赠送48课时优选公开课</p>
+            <p class="right_mony"><span>￥7318</span><span class='pass'>￥8588</span></p>
+            <a href="javascript:;" class="buy">一键抢购</a>
+          </div>
+        </li>
+        <li>
+          <img src="<%= imagessrc%>down1.jpg" alt="">
+          <div class="list_right">
+            <h3 class="right_tit">青少27单元学习套餐</h3>
+            <p class="right_text">赠送36课时外教1对1课程</p>
+            <p class="right_text">赠送72课时优选公开课</p>
+            <p class="right_mony"><span>￥12718</span><span class='pass'>￥10218</span></p>
+            <a href="javascript:;" class="buy">一键抢购</a>
+          </div>
+          <i></i>
+        </li>
+      </ul>
+    </div>
+    <div class="part3 widthMain">
+      <h3 class="tit">名人推荐</h3>
+      <img src="<%= imagessrc%>star.jpg" alt="">
+    </div>
+</div>
+
+<!-- 尾部 -->
+<% include ../common/www/w_footer_home.ejs %>
+<!-- 系统通知 -->
+<div class="sysInfo">
+  <div class="dtInfo">
+    <p class="tit">系统通知</p>
+    <p class="test">
+      请先登录访问
+      <a href="/user/user_login.php?from_url=/activity/dodisney" class="down" id="down" target="_blank">我知道了</a>
+    </p>
+  </div> 
+<script src="<%= jssrc%>"></script>
+</div>
+</body>
+</html>

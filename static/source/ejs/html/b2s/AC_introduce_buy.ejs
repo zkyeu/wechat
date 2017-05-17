@@ -1,0 +1,50 @@
+<% include ../common/top.ejs %>
+<body>
+<input type="hidden" id="container" data-init="AC_intro_buy"/>
+  <div class="AC_introduce">
+    <div class="AC_close"></div>
+    <div class="AC_content">
+        <div class="introduce_cont hide">
+          <img src="<%= imagessrc%>intro.jpg" alt="">
+          <div class="intro_right">
+            <div class="intro_right_text1">
+              <p class="text_fudao">外教同步辅导课套餐</p>
+              <p class="text_intr">练就地道听说、建立英文思维、提升考试成绩</p>
+            </div>
+            <div class="intro_right_text2">
+              <p >限时优惠：<span>￥300</span>/年</p>
+              <!-- <p >限时赠送寒假外教辅导课</p> -->
+              
+            </div>
+          </div>
+        </div>
+         <div class="introduce_cont_setTime">
+          <div class="countTime">
+            <p class="time" title = "180"></p>
+            <p class="text">两分钟之内有效</p>
+          </div>
+          <img src="<%= imagessrc%>intro.jpg" alt="">
+          <div class="intro_right">
+            <div class="intro_right_text1">
+              <p class="text_fudao">外教同步辅导课套餐</p>
+            </div>
+            <div class="intro_right_text2">
+              <p class="before_price">原价：￥300/年</p>
+              <p >限时优惠：<span>￥199</span>/年</p>
+            </div>
+          </div>
+        </div>
+        <div class="set_meal">
+          <p>套餐详情</p>
+          <ul>
+            <li class="no_time hide">每周一节外教同步辅导课，共50节课，每节只需6元；</li>
+            <li class="setTime">每周一节外教同步辅导课，共50节课，每节只需4元；</li>
+            <li>举手发言特权，与外教对话，上课不再只听不说；</li>
+            <li>与外教实时互动做题，及时评估学习效果；</li>
+          </ul>
+        </div>
+    </div>
+    <a href="javascript:;" class="AC_a">立即购买</a>
+  </div>
+</body>
+<% include ../common/bottom.ejs %>

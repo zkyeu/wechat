@@ -1,0 +1,23 @@
+<% include ../common/top_b2s_n.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>class_management.css">
+</head>
+<body data-init="" class="class_management">
+    <P class="title">您当前还没有班级，请先</P>
+    <div>
+        <a href=""></a>
+        <P class="add_img"></P>
+        <P class="add_text">创建班级</P>
+    </div>
+<!-- loading -->
+<div id="fontSizeLoding">
+    <img src="<%= imagessrc%>eff_loading.gif">
+</div>
+<script type="text/javascript">
+window.onload = function(){
+    document.documentElement.style.fontSize = document.body.clientWidth / 7.5 + "px";
+    document.getElementById("fontSizeLoding").style.display = "none";
+}
+</script>
+</body>
+<!--公共尾部结束-->
+<% include ../common/bottom.ejs %>

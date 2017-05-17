@@ -1,0 +1,333 @@
+<% include ../common/top_b2s_n.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>1v3_pay_introduce.css">
+</head>
+<body data-init="payIntroduce1v3" class="pay_introduce_1v1">
+    <!--  <div class="intro_title">
+       <p>外教1对1课程</p>
+        <P>本期限量招生开始啦 !</P>
+        <P>专属外教25分钟强互动，专为3-15岁孩子设计</P>
+    </div> -->
+    <div class="intro_top_new">
+        <img src="<%= imagessrc%>1v3_pay_introduce-01.jpg">
+    </div>
+
+
+    <!-- 距离开始的状态  disnone 为隐藏样式-->
+    <input type="hidden" class="play_time disnone"  start-time="1494577577" end-time="1494577887" >
+    <div class="cfix start_buy disnone">
+         <div class="left_content">
+            <p class="pac new_stu">新生特惠包</p>
+            <P>¥?98<span>&nbsp;&nbsp;<i>¥398</i></span></P>
+            <P class="pac_mes">中教预习课2次+美教1对4班课4次</P>
+        </div>
+        <div class="timmer">
+            <p>距离开始仅剩<i class="Tday">0</i>天</p>
+            <P><span class="Thor">03</span>:<span class="Tmin">07</span>:<span class="Tsec">03</span></P>
+        </div>
+    </div>
+    <!-- 不能购买的状态  disnone 为隐藏样式-->
+    <div class="cfix cannot_buy">
+         <div class="left_content">
+            <p class="pac new_stu">新生特惠包</p>
+            <P>¥?98<span>&nbsp;&nbsp;<i>¥398</i></span></P>
+            <P class="pac_mes">中教预习课2次+美教1对4班课4次</P>
+        </div>
+        <div class="timmer">
+            暂未开始
+        </div>
+    </div>
+
+
+    <!-- choose_class --> 
+    <ul class="choose_class_one">
+        <!-- 带有倒计时并可购买的样式 -->
+        <li class="cfix has_time disnone" money="198" d-money="0" isvip="1" packageid="1" vip-money="298">
+            <div class="left_content">
+                <p class="pac new_stu">新生特惠包</p>
+                <P>¥?98<span>&nbsp;&nbsp;<i>¥398</i></span></P>
+                <P class="pac_mes">外教1对1课6节＋中教辅导课2节</P>
+            </div>
+            <div class="timmer" start-time="" end-time="">
+                <p>距离结束仅剩<i class="Tday">0</i>天</p>
+                <P><span class="Thor">03</span>:<span class="Tmin">07</span>:<span class="Tsec">03</span></P>
+            </div>
+        </li>
+        <!-- 正常购买的样式 -->
+       <!--  <li class="cfix" money="198" d-money="0" isvip="1" packageid="1" vip-money="298">
+            <div class="left_content">
+                <p class="pac new_stu">新生特惠包</p>
+                <P>¥198<span>&nbsp;&nbsp;<i>¥398</i></span></P>
+                <P class="pac_mes">外教1对1课6节＋中教辅导课2节</P>
+            </div>
+            <p class="choose_btn">
+                <span>购买</span><br/>课程
+            </p>
+        </li> -->
+        <!-- <li class="cfix" money="598" d-money="100" isvip="0" packageid="2" vip-money="298">
+            <div class="left_content">
+                <p class="pac">一个月课程包</p>
+                <P >¥598<span>&nbsp;&nbsp;<i>¥748</i>&nbsp; (VIP优惠价 ¥498)</span></P>
+                <p class="pac_mes">1对1口语外教课12次＋巩固培优中教课12次</p>
+            </div>
+            <p class="choose_btn">
+                <span>购买</span><br/>课程
+            </p>
+        </li>
+        <li class="cfix" money="1698" d-money="300" isvip="0" packageid="3" vip-money="298">
+            <div class="left_content">
+                <p class="pac">3个月课程包</p>
+                <P>¥1698<span>&nbsp;&nbsp;<i>¥1998</i>&nbsp; (VIP优惠价 ¥1398))</span></P>
+                <P class="pac_mes">外教1对1课36节＋中教辅导课12节</P>
+            </div>
+            <p class="choose_btn" >
+                <span>购买</span><br/>课程
+            </p>
+        </li> -->
+    </ul>
+    
+    <div class="intro_tab_new">
+        <img src="<%= imagessrc%>1v3_pay_introduce-02.png">
+        <div class="swiper-container paddingTop">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="<%= imagessrc%>1v3_pay_introduce-05.png">
+                    <p class="font3">中教梳理知识<br>外教练习听说</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="<%= imagessrc%>1v3_pay_introduce-04.png">
+                    <p class="font3">班级专属微信群<br>7*24小时中教辅导点评</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="<%= imagessrc%>1v1_pay_introduce-03.png">
+                    <p class="font3">纯外教1对1课<br>外教100%专注与孩子</p>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <div class="intro_section1">
+        <img src="<%= imagessrc%>1v3_pay_introduce-07.png">
+        <div class="intro_section1-section intro_section1-section1">
+            <div class="titBtn font-1">教材优势</div>
+            <p class="font-text1">每一本教材都妙趣横生</p>
+            <img src="<%= imagessrc%>1v3_pay_introduce-09.png">
+            <ul class="font-items">
+                <li>根据孩子当前英语水平，匹配针对性教材。</li>
+                <li>参照国家新课标，100%内容涵盖</li>
+                <li>自然拼读、语法句型、社会科学、自然科学、学科设计循序渐进</li>
+            </ul>
+        </div>
+        <div class="intro_section1-section intro_section1-section2">
+            <div class="titBtn font-2">师资优势</div>
+            <p class="font-text1">每一位老师的课堂都精彩纷呈</p>
+            <img src="<%= imagessrc%>1v3_pay_introduce-10.png">
+            <ul class="font-items">
+                <li>100%纯母语外教授课，资深中教班课老师辅导学习</li>
+                <li>60小时课前培训+60小时听课讲评进行老师考核</li>
+            </ul>
+        </div>
+        <div class="intro_section1-section intro_section1-section3">
+            <div class="titBtn font-1">服务优势</div>
+            <p class="font-text1">每一个孩子都备受关注</p>
+            <img src="<%= imagessrc%>1v3_pay_introduce-11.png">
+            <ul class="font-items">
+                <li>每日作业 培养学习好习惯</li>
+                <li>知识拓展 多彩活动提升学习兴趣</li>
+                <li>成长曲线  记录孩子每一次成长</li>
+            </ul>
+        </div>
+    </div>
+    <div class="intro_section3">
+        <img src="<%= imagessrc%>1v1_pay_introduce-11.png">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="intro_section3_pic">
+                        <img src="<%= imagessrc%>1v1_pay_introduce-12.png">
+                    </div>
+                    <p class="font4">Joanna 张子周</p>
+                    <div class="font5">6岁 中英混血小芭比<br>入围香港《校园好声音》英文歌决赛<br>在51Talk学习2年</div>
+                </div>
+                <div class="swiper-slide">
+                    <!-- <img src="<%= imagessrc%>1v1_pay_introduce-11.png"> -->
+                    <div class="intro_section3_pic">
+                        <img src="<%= imagessrc%>1v1_pay_introduce-13.png">
+                    </div>
+                    <p class="font4">VIC 陈泽华</p>
+                    <div class="font5">  8岁 央视“希望之星”<br>英语风采大赛全国优胜奖<br>在51Talk学习1年</div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <ul class="intro_section3_items">
+            <li><span class="font6">100万</span>小朋友和家长认可51Talk的1对1在线学英语</li>
+            <li><span class="font6">50万</span>小朋友每天对话外教，他们的命运，正在发生改变......</li>
+        </ul>
+    </div>
+    <div class="class_introduce">
+        <div class="buyed_class">
+            <p class="buyed_title">您的1对1课程次卡消耗情况如下</p>
+            <p class="buy_class_mes_title">
+                <span>课程次数</span>
+                <span>课程学习有效期</span>
+                <span>课程截至日期</span>
+            </p>
+            <p class="buy_class_mes_title buy_class_mes">
+                <span>15次</span>
+                <span>1个月</span>
+                <span>2016年12月9日</span>
+            </p>
+        </div>
+        <div class="fix_null"></div>
+    </div>
+
+
+    <div class="to_pay_on">
+        <a href="javascript:;"></a>
+        <p>立即支付</p>
+    </div>
+    <!-- <div class="to_class_on">
+        <a href="javascript:;"></a>
+        <p>去约课</p>
+    </div> -->
+    <div class="cfix shpping_car">
+        <P class="shop_car after">
+            已选一门课程
+        </P>
+        <P class="to_pay"><a href="javascript:;"></a>立即支付</P>
+    </div>
+    
+    
+    <div class="choose_class_pop">
+        <!-- <已选择课程弹层 -->
+        <div class="choose_class_pop_c">
+            <p class="cfix title">
+                <span>已选课程 &nbsp;&nbsp;&nbsp;VIP新生特惠包</span>
+                <i>￥598</i>
+            </p>
+            <h3>（外教1对1课6节＋中教辅导课2节）</h3>
+            <ul class="free_class">
+                <li class="cfix vip_new" moreid="49">
+                    <P class="">非VIP学员需同时购买外教精品课</P>
+                    <span>+￥198</span>
+                </li>
+                <li class="cfix no_change">
+                   <p>您已购买VIP精品课，立享优惠</p> 
+                   <span>-¥100</span>
+                </li>
+                <!-- <li class="cfix change" moreid="44">
+                    <P class="">同时购买外教VIP精品课32节</P>
+                    <span>+￥298</span>
+                </li>
+                <li class="cfix class_normal">
+                    <p>立享1对1专属外教课优惠</p>
+                    <span>-￥100</span>
+                </li> -->
+                <li class="cfix pay_all_mon">
+                     <span>实付金额</span>
+                    <i>￥796</i>
+                </li>
+            </ul>
+        </div>
+        <!-- <未选课程弹层 -->
+        <div class="class_to_buy">
+            <h4>现在购买，为孩子开启国际化英语学习之旅</h4>
+            <table>
+                <tr>
+                    <th>课程套餐</th>
+                    <th>课程次数</th>
+                    <th>本期优惠价</th>
+                </tr>
+                <!-- <tr class="js-not-pop"  money="198" d-money="0" isvip="1" packageid="1" vip-money="298">
+                    <td><i class="on_choose"></i><p></p>新生特惠包</td>
+                    <td>外教1对1课6节<br/>中教辅导课2节</td>
+                    <td class="colo">￥198 <span>￥398</span></td>
+                </tr> -->
+                <tr class="js-not-pop" money="598" d-money="100" isvip="0" packageid="2" vip-money="298">
+                    <td><i class=""></i>1个月课程包</td>
+                    <td>外教1对1课12节<br/>中教辅导课4节</td>
+                    <td class="colo">￥598 <span>748</span></td>
+                </tr>
+                <tr class="js-not-pop" money="1698" d-money="300" isvip="0" packageid="4" vip-money="298">
+                    <td ><i></i>3个月课程包</td>
+                    <td>外教1对1课36节<br/>中教辅导课16节</td>
+                    <td class="colo">￥1698 <span>￥1998</span></td>
+                </tr>
+            </table>
+            <ul class="free_class">
+                <li class="cfix title">
+                    <span>金额</span>
+                    <i>￥198</i>
+                </li>
+               <!--  <li class="cfix vip_new" moreid="44">
+                    <P class="">非VIP学员需同时购买外教精品课</P>
+                    <span>+￥198</span>
+                </li> -->
+                <!-- <li class="cfix no_change" money="100">
+                   <p>您已购买VIP精品课，立享优惠</p> 
+                   <span>-¥100</span>
+                </li> -->
+                <li class="cfix change" moreid="49">
+                    <P class="">同时购买外教VIP精品课32节</P>
+                    <span>+￥298</span>
+                </li>
+                <li class="cfix class_normal">
+                    <p>立享1对1专属外教课优惠</p>
+                    <span>-￥300</span>
+                </li>
+                <li class="cfix pay_all_mon">
+                     <span>实付金额</span>
+                    <i>￥198</i>
+                </li>
+            </ul>
+        </div>
+        <!-- 支付弹层 APP-->
+        <!-- <div class="pay-dialog-wrap disnone"></div> -->
+        <div class="pay-dialog js_pay_dialog">
+          <div class="pay-dialog-tit">
+            <div class="pay-dialog-tit-top">支付方式</div>
+            <div class="pay-dialog-tit-con js_paySelect">
+              <span class="payItems" data-paytype="alipay"><img src="<%= imagessrc%>app-buyvip-icon-alipay.png" /><i>支付宝购买</i></span>
+              <span class="payItems js_weixin" data-paytype="weixin"><img src="<%= imagessrc%>app-buyvip-icon-WeChat.png" /><i>微信购买</i></span>
+            </div>
+          </div>
+          <div class="pay-dialog-but pay-dialog-hide js_pay_dialog_hide">
+            取消
+          </div>
+          <input type="hidden" name="packageId" id="packageId" value="6radio">
+          <input type="hidden" name="payType" id="payType" value="">
+        </div>
+        <div class="to_pay_on_pop_car"> 
+            <a href="javascript:;"></a>
+            <p>立即支付</p>
+        </div> 
+    </div>
+    <!-- form表单 -->
+    <form action="" class="js_payform">
+       <!--  套餐id -->
+        <input class="packageid" name="" value="1" type="hidden">
+        <!-- 是否选择的是vip -->
+        <input class="isvip" name="" value="1" type="hidden">
+        <!-- 是否勾选了多余的32节 -->
+        <input class="buymore" name="" value="49" type="hidden">
+    </form>
+
+
+    <!-- 不能购买样式 -->
+    <div class="cannot_buy_btn">
+        <a href="javascript:;"></a>
+        <p>立即抢购</p>
+    </div>
+<!-- loading -->
+<div id="fontSizeLoding">
+    <img src="<%= imagessrc%>eff_loading.gif">
+</div>
+<script type="text/javascript">
+window.onload = function(){
+    document.documentElement.style.fontSize = document.body.clientWidth / 7.5 + "px";
+    document.getElementById("fontSizeLoding").style.display = "none";
+}
+</script>
+</body>
+<!--公共尾部结束-->
+<% include ../common/bottom.ejs %>

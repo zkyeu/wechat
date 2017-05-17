@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var tiantian = getCookie("Wode");
+		console.log(tiantian);
+		if(!tiantian){
+			console.log("已经设置cookies");
+			setCookie("Wode","li");	
+		}else{
+			console.log("还没设置cookies");
+		}
+
+		function getCookie(name)
+		{
+		    var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+		 
+		    if(arr=document.cookie.match(reg))
+		 
+		        return (arr[2]);
+		    else
+		        return null;
+		}
+
+		function setCookie(name,value)
+		{
+		    var Days = 30; 
+		    var exp = new Date(); 
+		    exp.setTime(exp.getTime() + Days*24*60*60*1000); 
+		    document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString(); 
+		    console.log(name + "="+ escape (value) + ";expires=" + exp.toGMTString());
+		}
+	</script>
+	
+</body>
+</html>
+
+

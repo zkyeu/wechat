@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>英语学习，口语学习首选的英语学习网站，51talk无忧英语，外教一对一，在线学英语！</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="keywords" content="{<info.keywords>}" />
+  <meta name="description" content="51tailk无忧英语专业提供网络英语外教一对一培训教学,专注于真人英语外教一对一培训,让您足不出户,网上平价学英语.英语外教一对一培训服务热线4000-51-51-51"/>
+  <link rel="stylesheet" type="text/css" href="<%= csslink%>">
+</head>
+<body id="container" data-init="thirdParty" >
+<!-- 顶部 -->
+<% include ../common/www/w_header.ejs %>
+<!-- 导航 -->
+<% include ../common/www/w_nav.ejs %>
+
+<!-- 第三方登录开始 -->
+<div class="QQ_login">
+  <div class="qq_inner clearfix">
+    <div class="qq_inner_l">
+      <h3>只需一步，即可完成登录设置</h3>
+      <p>创建51Talk账号，创建完成后可以直接登录51Talk</p>
+      <form action="" name="form">
+        <ul>
+          <li>
+            <input type="text" placeholder="请输入邮箱" name="user_name" autocomplete="off" class="jsCheck">
+            <div class="u-err">邮箱错误</div>
+          </li>
+          <li>
+            <input type="password" placeholder="请输入密码" class="jsCheck" autocomplete="off" name="password">
+            <div class="u-err"></div>
+          </li>
+          <li>
+            <input type="tel" placeholder="填写手机号获得免费上课提醒" class="jsCheck" name="mobile" autocomplete="off">
+            <div class="u-err"></div>
+          </li>
+          <li>
+            <input type="tel" placeholder="推荐手机号/推荐码（没有可不填）" class="" autocomplete="off" name="recommen_mobile">
+            <div class="u-err"></div>
+          </li>
+          <li class="qq_login">
+            <input type="button" value="注 册" class="jsSubmit">
+            <div class="u-err"></div>
+          </li>
+        </ul>
+      </form>
+    </div>
+    <div class="qq_inner_r">
+      <h3>已有51Talk账号？可直接登录并绑定</h3>
+      <form action="" name="form">
+        <ul>
+          <li>
+            <input type="text" placeholder="请输入邮箱/已验证手机号" class="jsCheck" name="user_name" autocomplete="off">
+            <div class="u-err"></div>
+          </li>
+          <li>
+            <input type="password" placeholder="请输入密码" name="password" autocomplete="off" class="jsCheck">
+            <div class="u-err"></div>
+          </li>
+          <li class="qq_login">
+           <a href="javascript:;" class="jsSubmit">登 录</a>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- 第三方登录结束 -->
+<!-- 尾部 -->
+<% include ../common/www/w_footer_home.ejs %>
+<script src="<%= jssrc%>"></script>
+</body>

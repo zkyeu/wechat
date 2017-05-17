@@ -1,0 +1,162 @@
+<% include ../common/top.ejs %>
+<body class="b-box" data-init="stuTeaEntering">
+	<div class="tea-box" id="documentBox">
+		<div class="tea-info">
+			<div class="e-input"><input id="username" type="text" placeholder="姓名（选填）"/></div>
+			<div class="e-input"><input id="mobile" type="text" placeholder="手机号（选填）"/></div>
+		</div>
+		<h2 class="tit-info">
+			老师年级
+		</h2>
+		<div class="grade-box grade">
+			<ul>
+                <li data-grade="1"><span></span>一年级</li>
+                <li data-grade="2"><span></span>二年级</li>
+                <li data-grade="3"><span></span>三年级</li>
+            </ul>
+            <ul>
+                <li data-grade="4"><span></span>四年级</li>
+                <li data-grade="5"><span ></span>五年级</li>
+                <li data-grade="6"><span></span>六年级</li>
+            </ul>  
+  		  </div>
+	
+		<h2 class="tit-info">
+			老师班级
+		</h2>
+		<div class="grade-box class" data-val="1">
+            <ul>
+                <li data-class="1"><span></span>一班</li>
+                <li data-class="2"><span></span>一班</li>
+                <li data-class="3"><span></span>三班二班</li>
+                <li data-class="4"><span></span>四班</li>
+            </ul>
+            <ul>
+                <li data-class="1"><span></span>一班</li>
+                <li data-class="2"><span></span>一班</li>
+                <li data-class="3"><span></span>三班二班</li>
+                <li data-class="4"><span></span>四班</li>
+            </ul>
+            <!-- <ul>
+                <li data-class="1"><span></span>一班</li>
+                <li data-class="2"><span></span>一班</li>
+                <li data-class="3"><span></span>三班二班</li>
+                <li data-class="4"><span></span>四班</li>
+            </ul>
+            <ul>
+                <li data-class="1"><span></span>一班</li>
+                <li data-class="2"><span></span>一班</li>
+                <li data-class="3"><span></span>三班二班</li>
+                <li data-class="4"><span></span>四班</li>
+            </ul>
+            <ul>
+                <li data-class="1"><span></span>一班</li>
+                <li data-class="2"><span></span>一班</li>
+                <li data-class="3"><span></span>三班二班</li>
+                <li data-class="4"><span></span>四班</li>
+            </ul>
+            <ul>
+                <li data-class="1"><span></span>一班</li>
+                <li data-class="2"><span></span>一班</li>
+                <li data-class="3"><span></span>三班二班</li>
+                <li data-class="4"><span></span>四班</li>
+            </ul>
+                <ul>
+                <li data-class="1"><span></span>一班</li>
+                <li data-class="2"><span></span>一班</li>
+                <li data-class="3"><span></span>三班二班</li>
+                <li data-class="4"><span></span>四班</li>
+            </ul>
+            <ul>
+                <li data-class="1"><span></span>一班</li>
+                <li data-class="2"><span></span>一班</li>
+                <li data-class="3"><span></span>三班二班</li>
+                <li data-class="4"><span></span>四班</li>
+            </ul>
+            <ul>
+                <li data-class="1"><span></span>一班</li>
+                <li data-class="2"><span></span>一班</li>
+                <li data-class="3"><span></span>三班二班</li>
+                <li data-class="4"><span></span>四班</li>
+            </ul>
+            <ul>
+                <li data-class="1"><span></span>一班</li>
+                <li data-class="2"><span></span>一班</li>
+                <li data-class="3"><span></span>三班二班</li>
+                <li data-class="4"><span></span>四班</li>
+            </ul>
+            <ul>
+                <li data-class="1"><span></span>一班</li>
+                <li data-class="2"><span></span>一班</li>
+                <li data-class="3"><span></span>三班二班</li>
+                <li data-class="4"><span></span>四班</li>
+            </ul>
+            <ul>
+                <li data-class="1"><span></span>一班</li>
+                <li data-class="2"><span></span>一班</li>
+                <li data-class="3"><span></span>三班二班</li>
+                <li data-class="4"><span></span>四班</li>
+            </ul>
+            <ul>
+                <li data-class="1"><span></span>一班</li>
+                <li data-class="2"><span></span>一班</li>
+                <li data-class="3"><span></span>三班二班</li>
+                <li data-class="4"><span></span>四班</li>
+            </ul>
+            <ul>
+                <li data-class="1"><span></span>一班</li>
+                <li data-class="2"><span></span>一班</li>
+                <li data-class="3"><span></span>三班二班</li>
+                <li data-class="4"><span></span>四班</li>
+            </ul> -->
+         </div>
+        <!-- <div class="grade-box class hide" data-val="2">
+            <ul>
+                <li><span></span>一班</li>
+                <li><span></span>二班</li>
+                <li><span></span>六班</li>
+            </ul>
+        </div>
+        <div class="grade-box class hide" data-val="3">
+            <ul>
+                <li><span></span>一班</li>
+                <li><span></span>三班</li>
+                <li><span></span>四班</li>
+                <li><span></span>五班</li>
+            </ul>
+        </div>
+        <div class="grade-box class hide" data-val="4">
+            <ul>
+                <li><span></span>四班</li>
+            <ul>
+        </div>
+        <div class="grade-box class hide" data-val="5">
+            <ul>
+                <li><span></span>五班</li>
+            </ul>
+        </div>
+        <div class="grade-box class hide" data-val="6">
+            <ul>
+                <li><span></span>三班</li>
+                <li><span></span>四班</li>
+                <li><span></span>六班</li>
+            </ul>
+        </div> -->
+
+	</div>
+	<div class="sure-box btnBox" id="enterSure" data-href="http://www.baidu.com">
+		<a href="javascript:;">确定</a>
+	</div>
+	<div class="mask-box hide" id="maskBox"></div>
+	<div class="pop-up hide position-top" id="popUp">
+		<div class="text-info">
+			<p class="text-tit" id="textTit"></p>
+		</div>
+		<div class="p-btn-box" id="pupupBtn">
+			<!-- <a href="javascript:;" class="add position-v">确定</a> -->
+		</div>
+	</div>
+	<input type="hidden" name="grade" id="gradeId"/>
+    <input type="hidden" name="class" id="classId"/>		
+</body>
+<% include ../common/bottom.ejs %>

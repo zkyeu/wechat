@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>英语学习，口语学习首选的英语学习网站，51talk无忧英语，外教一对一，在线学英语！</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="{<info.keywords>}"/>
+    <meta name="description" content="51tailk无忧英语专业提供网络英语外教一对一培训教学,专注于真人英语外教一对一培训,让您足不出户,网上平价学英语.英语外教一对一培训服务热线4000-51-51-51"/>
+    <link rel="stylesheet" type="text/css" href="<%= cssPath %>common/commons.css">
+    <link rel="stylesheet" type="text/css" href="<%= cssPath %>login/user_login.css">
+</head>
+<body>
+<!-- 顶部 -->
+<div class="wrap-nav wrap-nav-index" style="border-bottom:none;">
+  <% include ../common/w_header.ejs %>
+  <div class="wrap-box">
+    <a href="javascript:;" class="logo">
+      <i></i>
+      <b><span>美国纽交所上市公司（股票代码：COE）</span>全球信赖的在线英语领导品牌</b>
+    </a>        
+  </div>
+</div>
+<!-- /顶部 -->
+<div class="user_login" data-init="login/user_login" id="container">
+  <h3 class="title">51Talk会员登录</h3>
+  <form method="post" id="LoginForm" target="ssoLoginFrame" action="http://login.51talk.com/sso/login">
+  <input type="hidden" name="client" value="1">
+  <div class="login sign">
+    <ul>
+      <li>
+        <div class="rt-input">
+          <input type="text" placeholder="请输入已验证手机或邮箱" class="s-input" id="iphone" name="user_name">
+        </div>
+        <div class="error">
+          <i class="e-img"></i>
+          <span></span>
+        </div>
+      </li>
+      <li>
+        <div class="rt-input">
+          <input type="text" placeholder="请输入您的密码" class="s-input" id="password2" name="password2">
+          <input type="hidden" name="password" id="password" class="s-input">
+        </div>
+        <div class="error">
+          <i class="e-img"></i>
+          <span></span>
+        </div>
+      </li>
+      <li class="last-list">
+        <input type="hidden" class="inputChed">
+        <span class="checkbox checked" id="checkbox"></span>
+        <span class="f-word">下次登录</span>
+        <a href="javascaript:;" class="forget">忘记密码？</a>
+      </li>
+    </ul>
+    <input type="submit" value="登录" class="user-btn" id="login">
+    <!-- <a href="javascript:;" class="user-btn" id="login">登录</a> -->
+    <div class="api-href">
+      <a href="javascript:;" class="wechat"><i></i></a>
+      <a href="javascript:;" class="qq"><i></i></a>
+      <a href="javascript:;" class="weibo"><i></i></a>
+      <a href="javascript:;" class="new-reg">新会员注册></a>
+    </div>
+  </div>
+  <input type="hidden" value="9e9" name="register_code">
+  <input type="hidden" name="public_key" id="public_key" value="">
+  <input type="hidden" name="la" id="login_la">
+  <input type="hidden" name="group" id="group" value="4">
+  </form>
+</div>
+<!-- 尾部 -->
+<% include ../common/w_footer_home.ejs %>
+<!-- /尾部 -->
+</body>
+<script src="<%= jsPath%>common/jquery.min.js"></script>
+<script src="<%= jsPath%>vendor.js"  id="seajsnode"></script>
+<script type="text/javascript" src="http://static.51talk.com/static/js/rsa.js"></script>
+</html>

@@ -1,0 +1,68 @@
+<% include ../common/top.ejs %>
+<link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>pay_success_t.css">
+<body id="container" data-init="index">
+<!-- 公共头 -->
+<% include ../common/b2s/b2s_header.ejs %>
+<div class="dialog">
+  <div class="content">
+    <div class="tips">
+      <h4>创建班级</h4>
+      <a class="close" href="javascript:;"></a>
+    </div>
+    <div class="info"></div>
+    <div class="submit">
+        <a href="javascript:;">立即创建</a>
+    </div>
+  </div>
+</div>
+<!-- 中间内容 -->
+<div class="mycls bg-s">
+  <div class="widthMain">
+    <!-- banner -->
+    <% include ../common/b2s/b2s_banner.ejs %>
+    <div class="central">
+      <i class="cls-icon"></i>
+     <!--  <div class="stu_tit">
+        <dl>
+          <dt><img src="<%= imagessrc%>stu.jpg" alt=""></dt>
+          <dd class="intro_one"><span>流川枫</span> 同学</dd>
+          <dd>班级：三年二班</dd>
+          <dd>老师：林徽因</dd>
+        </dl>
+        <p class="stu_number">学生邀请码：123456</p>
+      </div> -->
+    <!-- 侧栏 -->
+   <!--  <% include ../common/b2s/b2s_sidebar.ejs %> -->
+      <div class="cls-main color-s cls-main-no-left">
+        <!-- 我的班级 -->
+        <div class="cls-tab rct rct-no-left">
+          <div class="pay-success">
+            <div class="pay-tit-box">
+              <span></span>
+              <div class="pay-tit">
+                <div class="success-promt">支付成功</div>
+                <div class="text">获得外教VIP精品课32节特权</div>
+              </div>
+            </div>
+            <div class="pay-border"></div>
+            <div class="pay-des">
+              恭喜您获得VIP专享“1对1外教全程课程”特惠报名权
+            </div>
+            <div class="pay-btn">
+              <a href="javascript:;">马上报名</a>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>
+<!--公共弹层-->
+<div class="layer hide" id="layerTip">
+  <p>温馨提示<i class="tenIcon ly-icon"></i></p>
+  <div class="ly-tit">该课程是通过AC客户端上课，请<a href="javascript:;">点击下载</a>安装。如已经安装,请以学生身份注册账户，登录AC上课。</div>  
+</div>
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

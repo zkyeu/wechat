@@ -1,0 +1,148 @@
+<!--reg -->
+<div class="l-reg">
+  <p class="p-line"></p>
+  <ul class="reg-list">
+    <li class="on">注册</li>
+    <li>登录</li>
+  </ul>
+  <div class="reg-chg">
+    <div class="layer-test-pho change">
+      <div class="p-test">
+        <ul class="pho-list">
+          <li>
+            <input type="text" placeholder="请输入您的手机号" name="phone">
+            <div class="u-err error1"></div>
+          </li>
+          <li class="code-li">
+            <input type="text" placeholder="请输入短信验证码" name="msgcode" class="pho-code" id="mobile">
+            <div class="u-err error2"></div>
+            <span class="pho-t">免费获取</span>
+          </li>
+          <li>
+            <input type="password" placeholder="请设置您的密码" name="password">
+            <div class="u-err error3"></div>
+          </li>
+        </ul>
+        <div class="l-reg-btn" id="registerBtn" data-url-reg="111">下一步</div>
+      </div>
+       <!-- success -->
+      <div class="layer-success hide">
+        <h3>恭喜！</h3>
+        <p>您已成功注册51talk，<a href="javascript:;" class="suc-href">快速进群</a><br>找你的小伙伴吧</p>
+        <div class="l-reg-btn">进群找小伙伴</div>
+      </div>
+      <!-- /success -->
+    </div>
+    <div class="layer-test-login change hide">
+      <ul class="pho-list">
+        <li>
+          <input type="text" placeholder="请输入您的手机号" name="phone">
+          <div class="u-err error5"></div>
+        </li>
+        <li>
+          <input type="text" placeholder="请设置您的密码" name="password">
+          <div class="u-err error6"></div>
+        </li> 
+        <li class="forget">
+          <span class="login-selt">
+            <input type="hidden" name="radio" class="radio">
+            <i class="select-up"></i>
+            下次自动登录
+          </span>
+          <a href="javascript:;" class="forget-passwd">忘记密码？</a>
+        </li>
+      </ul>
+      <div class="l-reg-btn" id="loginBtn" data-url-layer="222">下一步</div>
+    </div>
+  </div>
+  <!-- 提交 -->
+  <div class="layer-send-code" style="display:none;">
+    <ul class="input-code">
+      <li>
+        <input type="text" placeholder="请输入图片验证码" name="phocode" class="pic-code">
+        <div class="u-err error4" style="dispaly:block;">请输入图片验证码</div>
+        <span class="input-code-btn">
+          <img id="verifycode" src="http://www.51talk.com/user/verify.php" onclick="this.src='http://www.51talk.com/user/verify.php'+'?a'+'='+new Date().getTime()" alt="单击更换验证码" title="单击更换验证码">
+        </span>
+      </li>
+      <li><div class="send-btn" id="sendBtn" data-url-code="2">提交</div></li>
+    </ul>
+  </div>
+  <!-- /提交 -->
+</div>
+<!-- /reg-->
+<!-- 年级 -->
+<div class="layer-grade" style="display:none;">
+  <h3 class="title">你是几年级的小朋友？</h3>
+  <span class="delete"></span>
+  <ul class="gra-list">
+    <li class="check">一年级</li>
+    <li>二年级</li>
+    <li>三年级</li>
+    <li>四年级</li>
+    <li>五年级</li>
+    <li>六年级</li>
+  </ul>
+  <div class="gra-nr">
+    <div class="qr-list">
+      <img src="<%= imagessrc%>layer_code.png">
+      <p class="q-title">
+        扫码进群,QQ群号：<span>16545634</span><br>
+        进群后，你可以跟小伙伴共同学习啦～！
+      </p>
+    </div>
+    <div class="qr-list" style="display:none;">
+      <img src="<%= imagessrc%>layer_code.png">
+      <p class="q-title">
+        扫码进群,QQ群号：<span>26545634</span><br>
+        进群后，你可以跟小伙伴共同学习啦～！
+      </p>
+    </div>
+    <div class="qr-list" style="display:none;">
+      <img src="<%= imagessrc%>layer_code.png">
+      <p class="q-title">
+        扫码进群,QQ群号：<span>36545634</span><br>
+        进群后，你可以跟小伙伴共同学习啦～！
+      </p>
+    </div>
+    <div class="qr-list" style="display:none;">
+      <img src="<%= imagessrc%>layer_code.png">
+      <p class="q-title">
+        扫码进群,QQ群号：<span>46545634</span><br>
+        进群后，你可以跟小伙伴共同学习啦～！
+      </p>
+    </div>
+    <div class="qr-list" style="display:none;">
+      <img src="<%= imagessrc%>layer_code.png">
+      <p class="q-title">
+        扫码进群,QQ群号：<span>56545634</span><br>
+        进群后，你可以跟小伙伴共同学习啦～！
+      </p>
+    </div>
+    <div class="qr-list" style="display:none;">
+      <img src="<%= imagessrc%>layer_code.png">
+      <p class="q-title">
+        扫码进群,QQ群号：<span>66545634</span><br>
+        进群后，你可以跟小伙伴共同学习啦～！
+      </p>
+    </div>
+  </div>
+</div>
+<!-- /年级 -->
+<!-- 体验用户 -->
+<div class="layer-pay-users" style="display:none;">
+  <div class="users-img"><img src="<%= imagessrc%>fine_tea_nadline.jpg"></div>
+  <h3 class="users-title">Hi,13693321513用户</h3>
+  <p class="users-cover">您还没有选课哦，进入会员中心<br>了解更多课程信息！</p>
+  <div class="l-reg-btn">进入我的会员中心</div>
+</div>
+<!-- /体验用户 -->
+<!-- 付费用户 -->
+<div class="layer-t-users" style="display:none;">
+  <div class="users-img"><img src="<%= imagessrc%>fine_tea_nadline.jpg"></div>
+  <h3 class="users-title">Hi,13693321513用户</h3>
+  <p class="users-ts">您已完成<i>9</i>节课<span>累计说英语<i>5</i>小时</span></p>
+  <div class="l-reg-btn">预约课程</div>
+  <div class="l-reg-btn b-reg-btn">进入我的会员中心</div>
+</div>
+<!-- /付费用户 -->

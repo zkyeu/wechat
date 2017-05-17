@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>英语学习，口语学习首选的英语学习网站，51talk无忧英语，外教一对一，在线学英语！</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="{<info.keywords>}"/>
+    <meta name="description" content="51tailk无忧英语专业提供网络英语外教一对一培训教学,专注于真人英语外教一对一培训,让您足不出户,网上平价学英语.英语外教一对一培训服务热线4000-51-51-51"/>
+    <link rel="stylesheet" type="text/css" href="<%= cssPath %>common/commons.css">
+    <link rel="stylesheet" type="text/css" href="<%= cssPath %>login/user_login.css">
+</head>
+<body>
+<!-- 顶部 -->
+<div class="wrap-nav wrap-nav-index" style="border-bottom:none;">
+  <% include ../common/w_header.ejs %>
+  <div class="wrap-box">
+    <a href="javascript:;" class="logo">
+      <i></i>
+      <b><span>美国纽交所上市公司（股票代码：COE）</span>全球信赖的在线英语领导品牌</b>
+    </a>        
+  </div>
+</div>
+<!-- /顶部 -->
+<div class="user_login" data-init="login/user_login" id="container">
+  <h3 class="title">绑定51Talk账号</h3>
+  <p class="p-tit">您已经成功验证了QQ（微信、新浪微博）账号，请绑定51Talk账号，用QQ（微信、新浪微博）账号一键登录哦~</p>
+  <div class="login">
+    <ul>
+      <li>
+        <span class="lt-title">51Talk账号：</span>
+        <div class="rt-input">
+          <input type="text" placeholder="请输入已验证手机或邮箱" class="s-input" id="iphone">
+        </div>
+        <div class="error">
+          <i class="e-img"></i>
+          <span>该手机号有多个用户，请拨打客服电话4000-51-51-51处理</span>
+        </div>
+      </li>
+      <li>
+        <span class="lt-title">密码：</span>
+        <div class="rt-input">
+          <input type="text" placeholder="请输入您的密码" class="s-input" id="password">
+        </div>
+        <div class="error">
+          <i class="e-img"></i>
+          <span></span>
+        </div>
+      </li>
+      <li class="last-list">
+        <span class="f-word"><a href="javascript:;">忘记密码？</a></span>
+      </li>
+    </ul>
+    <a href="javascript:;" class="user-btn" id="login">立即绑定</a>
+    <p class="num-href"><a href="javascript:;">还没有51talk账号？立即注册></a></p>
+  </div>
+</div>
+<!-- 尾部 -->
+<% include ../common/w_footer_home.ejs %>
+<!-- /尾部 -->
+</body>
+<script src="<%= jsPath%>common/jquery.min.js"></script>
+<script src="<%= jsPath%>vendor.js"  id="seajsnode"></script>
+</html>

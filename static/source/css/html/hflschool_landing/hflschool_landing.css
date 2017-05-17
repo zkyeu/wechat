@@ -1,0 +1,1740 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ */
+/**
+ * 默认样式
+ * @file：   base.less
+ * @author:  chenxiaosong（chenxiaosong@51talk.com）
+ * @update:  2015-10-12
+ * @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  background-color: #fff;
+  _background-image: url(about:blank);
+  _background-attachment: fixed;
+  _overflow-x: hidden;
+}
+body {
+  font: 13px 'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial, Verdana, Tahoma;
+  color: #1e1e1e;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+}
+input,
+button,
+select,
+textarea {
+  font-family: 'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial, Verdana, Tahoma;
+  outline: none;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 0;
+}
+a {
+  color: #1e1e1e;
+  text-decoration: none;
+  outline: none;
+}
+a:hover {
+  color: #ff9600;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  vertical-align: middle;
+}
+::-moz-selection {
+  background-color: #ff9600;
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background-color: #ff9600;
+  color: white;
+  text-shadow: none;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  *zoom: 1;
+  *display: inline;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.relative {
+  position: relative;
+}
+.relativez {
+  position: relative;
+  zoom: 1;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.hidden {
+  overflow: hidden;
+}
+.ft12 {
+  font-size: 12px;
+}
+.ft13 {
+  font-size: 13px;
+}
+.ft14 {
+  font-size: 14px;
+}
+.ft15 {
+  font-size: 15px;
+}
+.ft16 {
+  font-size: 16px;
+}
+.ft18 {
+  font-size: 18px;
+}
+.ft19 {
+  font-size: 19px;
+}
+.ft20 {
+  font-size: 20px;
+}
+.normal {
+  font-weight: normal;
+}
+.bold {
+  font-weight: bold;
+}
+.tal {
+  text-align: left;
+}
+.tac {
+  text-align: center;
+}
+.tar {
+  text-align: right;
+}
+.f-taj {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+.f-vam,
+.f-vama * {
+  vertical-align: middle;
+}
+.f-wsn {
+  word-wrap: normal;
+  white-space: nowrap;
+}
+.f-pre {
+  overflow: hidden;
+  text-align: left;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.f-wwb {
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.f-ti {
+  overflow: hidden;
+  text-indent: -30000px;
+}
+.f-ti2 {
+  text-indent: 2em;
+}
+.f-lhn {
+  line-height: normal;
+}
+.f-tdu,
+.f-tdu:hover {
+  text-decoration: underline;
+}
+.f-tdn,
+.f-tdn:hover {
+  text-decoration: none;
+}
+.f-toe {
+  overflow: hidden;
+  word-wrap: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.f-csp {
+  cursor: pointer;
+}
+.f-csd {
+  cursor: default;
+}
+.f-csh {
+  cursor: hand;
+}
+.f-csm {
+  cursor: move;
+}
+.f-usn {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.fm-arrow-pos {
+  border-style: solid;
+  border-color: #ffa800;
+  border-width: 1px;
+}
+.centerMth {
+  width: 1000px;
+  margin: 0px auto;
+}
+.iconImg {
+  background: url(../../../images/html/hflschool_landing/icon.png?v=K02xj%2F2p0sD0ZcrzJsLeBw%3D%3D) no-repeat;
+  display: inline-block;
+}
+.m-main {
+  position: absolute;
+  top: -127px;
+  right: 60px;
+  float: right;
+  width: 270px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: 0.3s all ease-out;
+  transition: 0.3s all ease-out;
+  -webkit-transform: perspective(1000px) rotateY(0deg);
+          transform: perspective(1000px) rotateY(0deg);
+  z-index: 3;
+}
+.m-main.turn {
+  -webkit-transform: perspective(1000px) rotateY(180deg);
+          transform: perspective(1000px) rotateY(180deg);
+}
+.m-main .m-reg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-height: 350px;
+  background: #332a00;
+  z-index: 1000;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.m-main .m-reg .m-tab {
+  width: 270px;
+}
+.m-main .m-reg .m-tab li {
+  float: left;
+  width: 50%;
+  height: 34px;
+  line-height: 34px;
+  color: #908f8d;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  background: #0d0b00;
+}
+.m-main .m-reg .m-tab li.crt {
+  background: #332a00;
+  color: #e0e0dd;
+  font-size: 18px;
+  cursor: default;
+}
+.m-main .m-reg .m-ipts {
+  padding: 20px 20px 0 20px;
+}
+.m-main .m-reg .m-ipts li {
+  margin-bottom: 10px;
+  border: 1px solid #e7e7e7;
+  background: #fff;
+  overflow: hidden;
+}
+.m-main .m-reg .m-ipts li dl {
+  width: 230px;
+}
+.m-main .m-reg .m-ipts li dt {
+  background: #fff url(../../../images/html/hflschool_landing/sp_login.png?v=UW0%2BkRdNVPNHEXzjbfLghg%3D%3D) no-repeat;
+  width: 22px;
+  height: 34px;
+  padding-right: 10px;
+  float: left;
+}
+.m-main .m-reg .m-ipts li dd {
+  width: 196px;
+  float: left;
+}
+.m-main .m-reg .m-ipts li .icon1 {
+  background-position: 9px 11px;
+}
+.m-main .m-reg .m-ipts li .icon2 {
+  background-position: 9px -19px;
+}
+.m-main .m-reg .m-ipts li .icon3 {
+  background-position: 9px -49px;
+}
+.m-main .m-reg .m-ipts li .icon4 {
+  background-position: 9px -79px;
+}
+.m-main .m-reg .m-ipts li.focus {
+  border: 1px solid #ffa800;
+}
+.m-main .m-reg .m-ipts li.u-error {
+  border: 1px solid #ff4444;
+}
+.m-main .m-reg .m-ipts li.u-error .u-err {
+  height: 20px;
+}
+.m-main .m-reg .m-ipts .icon-btn {
+  border: 1px #ffa800 solid;
+}
+.m-main .m-reg .m-ipts .icon-btn dt {
+  background-color: #fff9f1;
+}
+.m-main .m-reg .m-ipts .icon-btn .icon1 {
+  background-position: -19px 11px;
+}
+.m-main .m-reg .m-ipts .icon-btn .icon2 {
+  background-position: -19px -19px;
+}
+.m-main .m-reg .m-ipts .icon-btn .icon3 {
+  background-position: -19px -49px;
+}
+.m-main .m-reg .m-ipts .icon-btn .icon4 {
+  background-position: -19px -79px;
+}
+.m-main .m-reg .m-ipts .icon-btn dd .jsCheck {
+  background-color: #fff9f1;
+}
+.m-main .m-reg .m-ipts input {
+  display: inline-block;
+  width: 196px;
+  height: 34px;
+  line-height: 34px;
+}
+.m-main .m-reg .m-ipts .u-err {
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  padding-left: 5px;
+  background: #ff4444;
+  line-height: 20px;
+  font-size: 12px;
+  color: #fff;
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
+}
+.m-main .m-reg .u-reg-btn {
+  color: #fff;
+  background: #ff4C4C;
+  text-align: center;
+  width: 230px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 5px 20px 0px;
+}
+.m-main .m-reg .u-reg-btn:hover {
+  background: #ff7676;
+}
+.m-main .m-reg .u-reg-btn:active {
+  background: #ff3434;
+}
+.m-main .m-reg .u-txt {
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  margin: 14px 0 26px;
+}
+.m-main .m-reg .u-txt em {
+  color: #f56361;
+}
+.m-main .m-log {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #332a00;
+  -webkit-transform: scaleX(-1) translateZ(-1px);
+          transform: scaleX(-1) translateZ(-1px);
+  min-height: 350px;
+}
+.m-main .m-log .m-tab {
+  width: 270px;
+}
+.m-main .m-log .m-tab li {
+  float: left;
+  width: 50%;
+  height: 34px;
+  line-height: 34px;
+  color: #908f8d;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  background: #0d0b00;
+}
+.m-main .m-log .m-tab li.crt {
+  background: #332a00;
+  color: #e0e0dd;
+  font-size: 18px;
+  cursor: default;
+}
+.m-main .m-log .m-ipts {
+  padding: 20px 20px 0 20px;
+}
+.m-main .m-log .m-ipts li {
+  margin-bottom: 10px;
+  border: 1px solid #e7e7e7;
+  background: #fff;
+  overflow: hidden;
+}
+.m-main .m-log .m-ipts li dl {
+  width: 230px;
+}
+.m-main .m-log .m-ipts li dt {
+  background: #fff url(../../../images/html/hflschool_landing/sp_login.png?v=UW0%2BkRdNVPNHEXzjbfLghg%3D%3D) no-repeat;
+  width: 22px;
+  height: 34px;
+  float: left;
+  padding-right: 10px;
+}
+.m-main .m-log .m-ipts li dd {
+  float: left;
+  width: 196px;
+}
+.m-main .m-log .m-ipts li .icon1 {
+  background-position: 9px 11px;
+}
+.m-main .m-log .m-ipts li .icon2 {
+  background-position: 9px -19px;
+}
+.m-main .m-log .m-ipts li.u-error {
+  border: 1px solid #ff4444;
+}
+.m-main .m-log .m-ipts li.u-error .u-err {
+  height: 20px;
+}
+.m-main .m-log .m-ipts .icon-btn {
+  border: 1px #ffa800 solid;
+}
+.m-main .m-log .m-ipts .icon-btn dt {
+  background-color: #fff9f1;
+}
+.m-main .m-log .m-ipts .icon-btn .icon1 {
+  background-position: -19px 11px;
+}
+.m-main .m-log .m-ipts .icon-btn .icon2 {
+  background-position: -19px -19px;
+}
+.m-main .m-log .m-ipts .icon-btn dd .jsCheck {
+  background-color: #fff9f1;
+}
+.m-main .m-log .m-ipts input {
+  width: 196px;
+  height: 34px;
+  line-height: 34px;
+}
+.m-main .m-log .m-ipts .u-err {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  padding-left: 5px;
+  background: #ff4444;
+  line-height: 20px;
+  font-size: 12px;
+  color: #fff;
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
+}
+.m-main .m-log .m-safe {
+  margin: 15px 20px;
+}
+.m-main .m-log .m-safe .u-auto {
+  float: left;
+  color: #ebeae9;
+  vertical-align: middle;
+}
+.m-main .m-log .m-safe .u-auto input {
+  outline: #6d6d6d none 0px;
+  padding: 0;
+  margin: 0;
+}
+.m-main .m-log .m-safe .u-forget a {
+  float: right;
+  color: #b2b2b2;
+}
+.m-main .m-log .m-safe .u-forget a:hover {
+  color: #ff9600;
+}
+.m-main .m-log .u-log-btn {
+  color: #fff;
+  background: #ff4C4C;
+  text-align: center;
+  width: 230px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 0 20px;
+}
+.m-main .m-log .u-log-btn:hover {
+  background: #ff7676;
+}
+.m-main .m-log .u-log-btn:active {
+  background: #ff3434;
+}
+.m-main .m-log .m-other {
+  padding: 20px;
+}
+.m-main .m-log .m-other dt {
+  padding: 14px 0;
+  color: #fff;
+  border-top: 1px dashed #999680;
+}
+.m-main .m-log .m-other dd {
+  background: url(../../../images/html/hflschool_landing/sp_login.png?v=UW0%2BkRdNVPNHEXzjbfLghg%3D%3D) no-repeat;
+  width: 30px;
+  height: 30px;
+  *float: left;
+  display: inline-block;
+  margin-right: 16px;
+}
+.m-main .m-log .m-other a {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+.m-main .m-log .m-other .icon-sina {
+  background-position: 0 -119px;
+}
+.m-main .m-log .m-other .icon-qq {
+  background-position: 0 -159px;
+}
+.m-online {
+  background: #332a00;
+  position: absolute;
+  top: -127px;
+  right: 60px;
+  width: 230px;
+  z-index: 4;
+  padding: 20px;
+}
+.m-online .u-hd {
+  color: #f5f5f4;
+  font-size: 16px;
+}
+.m-online .m-group {
+  padding-top: 20px;
+  color: #b2b2b2;
+}
+.m-online .m-group .u-txt {
+  margin-bottom: 8px;
+}
+.m-online .m-group .f-clo {
+  color: #ffa800;
+}
+.m-online .u-btn {
+  display: block;
+  height: 32px;
+  line-height: 32px;
+  width: 100%;
+  background: #ffa800;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 3px;
+}
+.m-online .u-ft {
+  margin-top: 26px;
+  padding-top: 14px;
+  border-top: 1px dashed #999680;
+}
+.m-online .u-btn-2 {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  background: #ff3434;
+  text-align: center;
+  font-size: 18px;
+  color: #fff5f5;
+  border-radius: 3px;
+}
+.sign-cha {
+  position: absolute;
+  top: 238px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.sign-cha .centerMth {
+  position: relative;
+  width: 1100px;
+}
+.sign-cha .centerMth .change .lt {
+  float: left;
+  width: 35px;
+}
+.sign-cha .centerMth .change .lt i {
+  background: url(../../../images/html/hflschool_landing/icon.png?v=K02xj%2F2p0sD0ZcrzJsLeBw%3D%3D) no-repeat;
+  display: inline-block;
+  width: 35px;
+  height: 65px;
+  background-position: -110px -230px;
+}
+.sign-cha .centerMth .change .lt:hover i {
+  background-position: -75px -230px;
+}
+.sign-cha .centerMth .change .rt {
+  float: right;
+  width: 35px;
+}
+.sign-cha .centerMth .change .rt i {
+  background: url(../../../images/html/hflschool_landing/icon.png?v=K02xj%2F2p0sD0ZcrzJsLeBw%3D%3D) no-repeat;
+  display: inline-block;
+  width: 35px;
+  height: 65px;
+  background-position: -35px -230px;
+}
+.sign-cha .centerMth .change .rt:hover i {
+  background-position: 0 -230px;
+}
+.sign-cha .centerMth .video_play {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  margin-left: -45px;
+}
+.sign-cha .centerMth .video_play .video i {
+  background: url(../../../images/html/hflschool_landing/icon.png?v=K02xj%2F2p0sD0ZcrzJsLeBw%3D%3D) no-repeat;
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  background-position: -106px -127px;
+}
+.sign-cha .centerMth .video_play .video:hover i {
+  background-position: -4px -126px;
+}
+.header {
+  position: relative;
+  /* 2015/12/18 青少抬头 */
+  width: 1000px;
+  margin: 0px auto;
+  height: 72px;
+  padding-top: 8px;
+}
+.header .hr-lt {
+  float: left;
+  cursor: default;
+}
+.header .hr-lt i {
+  background: url(../../../images/html/hflschool_landing/icon.png?v=K02xj%2F2p0sD0ZcrzJsLeBw%3D%3D) no-repeat;
+  display: inline-block;
+  float: left;
+  width: 150px;
+  height: 60px;
+  background-position: -7px 0px;
+}
+.header .hr-lt b {
+  float: left;
+  height: 41px;
+  line-height: 1;
+  border-left: 1px #bfbfbf solid;
+  margin: 13px 0 0 11px;
+  padding-left: 13px;
+  color: #1e1e1e;
+  font-size: 15px;
+}
+.header .hr-lt b span {
+  display: block;
+  margin: 0 0 9px 0;
+}
+.header .hr-lt .qs-tit {
+  font-size: 20px;
+  line-height: 40px;
+}
+.header .hr-rt {
+  /*2015/12/18 青少抬头*/
+  position: absolute;
+  right: 0;
+  top: 0;
+  /*.right;*/
+  /*text-align: right;*/
+}
+.header .hr-rt .rt-top {
+  text-align: right;
+  float: right;
+  margin: 11px 0 0 0;
+  width: 100%;
+}
+.header .hr-rt .rt-top ul {
+  float: right;
+  margin-bottom: 5px;
+}
+.header .hr-rt .rt-top ul li {
+  float: left;
+  position: relative;
+  z-index: 6;
+}
+.header .hr-rt .rt-top ul li a {
+  margin-left: 15px;
+}
+.header .hr-rt span {
+  display: block;
+  float: right;
+  font-size: 19px;
+  _vertical-align: middle;
+}
+.header .hr-rt span i {
+  background: url(../../../images/html/hflschool_landing/icon.png?v=K02xj%2F2p0sD0ZcrzJsLeBw%3D%3D) no-repeat;
+  display: inline-block;
+  width: 16px;
+  height: 20px;
+  background-position: -189px -14px;
+  margin-right: 6px;
+  *vertical-align: middle;
+}
+.header .hr-rt span.rt_username {
+  font-size: 12px;
+  float: none;
+  display: inline-block;
+  text-overflow: ellipsis;
+  width: 110px;
+  white-space: nowrap;
+  *white-space: nowrap;
+  overflow: hidden;
+  height: 14px;
+  line-height: 19px;
+}
+.weibo,
+.weixin {
+  position: absolute;
+  z-index: 5;
+  right: -48px;
+  top: 17px;
+  display: none;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  /* &:hover{
+    transition:all 1s;
+    transform:rotateY(360deg);
+  } */
+}
+.weibo a,
+.weixin a {
+  display: block;
+  height: 51px;
+}
+.weibo {
+  right: -45px;
+  top: 17px;
+  background: url(../../../images/html/hflschool_landing/icon.png?v=K02xj%2F2p0sD0ZcrzJsLeBw%3D%3D) no-repeat;
+  display: inline-block;
+  width: 120px;
+  height: 51px;
+  line-height: 50px;
+  display: none;
+  text-align: center;
+  font-size: 14px;
+  color: #ff9600;
+  background-position: -210px -140px;
+}
+.nav {
+  background: #332a00;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  filter: alpha(opacity=95);
+  -webkit-opacity: 0.95;
+  -moz-opacity: 0.95;
+  opacity: 0.95;
+}
+.nav .menu {
+  width: 1000px;
+  margin: 0px auto;
+  font-size: 16px;
+  color: #fff;
+  height: 40px;
+}
+.nav .menu li {
+  float: left;
+  position: relative;
+  width: 125px;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+}
+.nav .menu li a {
+  display: block;
+  color: #fff;
+}
+.nav .menu li a:hover {
+  background: #ffa800;
+}
+.nav .menu li .news {
+  position: absolute;
+  top: -10px;
+  *top: 0;
+  left: 105px;
+  z-index: 1;
+}
+.nav .menu .menu-on {
+  background: #ffa800;
+}
+.play {
+  position: relative;
+  overflow: hidden;
+}
+.play .pic {
+  width: 100%;
+  height: 520px;
+}
+.play .pic li {
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 520px;
+  filter: alpha(opacity=0);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+}
+.play .pic li .p-img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -960px;
+}
+.play .pic li.first {
+  z-index: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.play .switch {
+  position: absolute;
+  top: 483px;
+  text-align: center;
+  left: 50%;
+  margin-left: -60px;
+  z-index: 3;
+}
+.play .switch li {
+  float: left;
+  margin-left: 5px;
+  background: url(../../../images/html/hflschool_landing/icon.png?v=K02xj%2F2p0sD0ZcrzJsLeBw%3D%3D) no-repeat;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-position: -16px -100px;
+  cursor: pointer;
+}
+.play .switch .crt {
+  background-position: -16px -70px;
+}
+#ckplayerDialog {
+  position: fixed;
+  _position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 450px;
+  margin: -239px 0 0 -400px;
+  z-index: 999;
+  border: 10px solid #fff;
+  border-top: 37px solid #fff;
+  display: none;
+}
+#ckplayerDialog .source {
+  position: absolute;
+  top: -27px;
+  color: #999;
+}
+#ckplayerDialog .source:hover {
+  color: #999;
+}
+#ckplayerDialog .close {
+  position: absolute;
+  top: -49px;
+  right: -22px;
+  width: 30px;
+  height: 30px;
+  background: transparent url(../../../images/html/hflschool_landing/vedio_close.png?v=K6eianSdlRFQBbhCpXs3hw%3D%3D);
+}
+#j-mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #777777;
+  filter: alpha(opacity=70);
+  -webkit-opacity: 0.7;
+  -moz-opacity: 0.7;
+  opacity: 0.7;
+  z-index: 998;
+}
+.alert_online {
+  position: fixed;
+  background: url(../../../images/html/hflschool_landing/alert_online.png?v=ylJ2FVNK880dNI9EElOlGA%3D%3D) no-repeat;
+  width: 613px;
+  height: 309px;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  margin: -155px 0 0 -306px;
+  display: none;
+}
+.alert_online .u-close {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  right: 6px;
+  top: 4px;
+}
+.alert_online .u-btn {
+  position: absolute;
+  display: block;
+  width: 268px;
+  height: 62px;
+  right: 45px;
+  bottom: 32px;
+}
+.iconImg {
+  background: url(../../../images/html/hflschool_landing/icon.png?v=K02xj%2F2p0sD0ZcrzJsLeBw%3D%3D) no-repeat;
+  display: inline-block;
+}
+.header .hfls-hl {
+  height: 100%;
+  width: 300px;
+  background: url(../../../images/html/hflschool_landing/hfls_edu.jpg?v=ov644gGomOovNpMZzcVo5g%3D%3D) no-repeat;
+  padding-left: 255px;
+  float: left;
+}
+.hr-rt {
+  /*2015/12/18 青少抬头*/
+  position: absolute;
+  right: 0;
+  top: 0;
+  /*.right;*/
+  /*text-align: right;*/
+  width: 430px;
+}
+.hr-rt .rt-top {
+  text-align: right;
+  float: right;
+  margin: 11px 0 0 0;
+  width: 100%;
+}
+.hr-rt .rt-top ul {
+  float: right;
+  margin-bottom: 5px;
+}
+.hr-rt .rt-top ul li {
+  float: left;
+  position: relative;
+  z-index: 6;
+}
+.hr-rt .rt-top ul li a {
+  margin-left: 15px;
+}
+.hr-rt .rt-top ul li:nth-child(2) a {
+  margin: 0;
+}
+.hr-rt span {
+  display: block;
+  float: right;
+  _vertical-align: middle;
+}
+.hr-rt span i {
+  background: url(../../../images/html/hflschool_landing/icon.png?v=K02xj%2F2p0sD0ZcrzJsLeBw%3D%3D) no-repeat;
+  display: inline-block;
+  width: 16px;
+  height: 20px;
+  background-position: -189px -14px;
+  margin-right: 6px;
+  *vertical-align: middle;
+}
+.hr-rt span.rt_username {
+  font-size: 12px;
+  float: none;
+  display: inline-block;
+  text-overflow: ellipsis;
+  width: 110px;
+  white-space: nowrap;
+  *white-space: nowrap;
+  overflow: hidden;
+  height: 14px;
+  line-height: 19px;
+}
+.weibo,
+.weixin {
+  position: absolute;
+  z-index: 5;
+  right: -48px;
+  top: 17px;
+  display: none;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  /* &:hover{
+    transition:all 1s;
+    transform:rotateY(360deg);
+  } */
+}
+.weibo a,
+.weixin a {
+  display: block;
+  height: 51px;
+}
+.weibo {
+  right: -45px;
+  top: 17px;
+  background: url(../../../images/html/hflschool_landing/icon.png?v=K02xj%2F2p0sD0ZcrzJsLeBw%3D%3D) no-repeat;
+  display: inline-block;
+  width: 120px;
+  height: 51px;
+  line-height: 50px;
+  display: none;
+  text-align: center;
+  font-size: 14px;
+  color: #ff9600;
+  background-position: -210px -140px;
+}
+.hfls-hr {
+  width: 400px;
+}
+.hfls-hr ul {
+  float: right;
+}
+.reg {
+  width: 100%;
+  height: 68px;
+  background: #303030;
+}
+.reg li {
+  float: left;
+}
+.reg li span {
+  line-height: 68px;
+  color: #fff;
+  font-size: 18px;
+}
+.reg li .f_l {
+  width: 152px;
+  height: 38px;
+  line-height: 38px;
+  border: 1px #e7e7e7 solid;
+  margin: 14px 0 0 14px;
+  padding: 0 9px;
+  background: #fff;
+}
+.reg li .f_l:focus {
+  border: 1px #ffa800 solid;
+  color: #1e1e1e;
+  background: #fff9f1;
+}
+.reg .reg-li {
+  float: right;
+  margin-top: 14px;
+}
+.reg .reg-li .reg-btn {
+  float: left;
+  text-align: center;
+  width: 170px;
+  height: 40px;
+  line-height: 40px;
+  background: #ff4C4C;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.reg .reg-li .reg-btn:hover {
+  background: #ff7676;
+}
+.reg .reg-li .reg-btn:active {
+  background: #ff3434;
+}
+.info {
+  background: #303030;
+  color: #888;
+  padding: 30px 0 60px 0;
+}
+.info .tc_p {
+  text-align: center;
+}
+.info .tc_p a {
+  color: #888;
+  margin: 0 12px;
+}
+.info .tc_p a:hover {
+  color: #ff9600;
+}
+.info .link-word {
+  position: relative;
+  height: 18px;
+  margin-top: 30px;
+  border-top: 1px #424242 solid;
+}
+.info .link-word em {
+  position: absolute;
+  text-align: center;
+  top: -10px;
+  left: 50%;
+  margin-left: -36px;
+  width: 72px;
+  background: #303030;
+}
+.info .link-info {
+  line-height: 22px;
+}
+.info .link-info a {
+  margin-left: 10px;
+  color: #888;
+}
+.info .link-ti {
+  border-top: 1px #424242 solid;
+  margin-top: 15px;
+  padding-top: 30px;
+}
+.info .link-ti .link-ul {
+  width: 610px;
+  height: 49px;
+  margin: 0px auto;
+}
+.info .link-ti .link-ul li {
+  float: left;
+  width: 152px;
+}
+.info .link-ft {
+  text-align: center;
+  margin-top: 20px;
+}
+.info .link-ft em {
+  margin: 0 5px;
+}
+.info .link-ft a {
+  color: #888;
+}
+#u-gotop {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  _position: absolute;
+  _top: expression(eval(document.documentElement.clientHeight-100+document.documentElement.scrollTop));
+  display: none;
+  text-indent: -99999px;
+}
+#u-gotop a {
+  display: block;
+  width: 48px;
+  height: 48px;
+  background: url(../../../images/html/hflschool_landing/gotop.png?v=L45plmR%2Fz7voDCJ3HynKwQ%3D%3D) no-repeat;
+}
+#u-gotop a:hover {
+  background-position: -50px 0;
+}
+.tegrs .t-title {
+  position: relative;
+  text-align: center;
+  border-bottom: 1px #dcdcdc solid;
+  padding: 32px 0px;
+}
+.tegrs .t-title i {
+  position: absolute;
+  background: url(../../../images/html/hflschool_landing/icon.png?v=K02xj%2F2p0sD0ZcrzJsLeBw%3D%3D) no-repeat;
+  display: inline-block;
+  background: url(../../../images/html/hflschool_landing/ten_icon.png?v=puxw3d1PUUcjEiy2JWEQtA%3D%3D) no-repeat;
+  background-position: -6px -285px;
+  width: 40px;
+  height: 25px;
+  top: 96px;
+  left: 50%;
+  margin-left: -20px;
+}
+.tegrs .ten-fri {
+  background: #ebf5ff;
+  padding-top: 70px;
+  border-bottom: 1px #dcdcdc solid;
+}
+.tegrs .ten-fri .centerMth {
+  position: relative;
+}
+.tegrs .ten-fri .tit01,
+.tegrs .ten-fri .tit02 {
+  text-align: center;
+  font-size: 18px;
+  color: #7c7c7c;
+  margin-bottom: 12px;
+}
+.tegrs .ten-fri .ten-dl {
+  position: relative;
+  height: 380px;
+  margin: 50px 0 0 0;
+}
+.tegrs .ten-fri .ten-dl dt {
+  position: absolute;
+  bottom: 0;
+  left: -70px;
+}
+.tegrs .ten-fri .ten-dl dd {
+  position: absolute;
+  right: 125px;
+}
+.tegrs .ten-fri .ten-dl dd i {
+  float: left;
+  background: url(../../../images/html/hflschool_landing/icon.png?v=K02xj%2F2p0sD0ZcrzJsLeBw%3D%3D) no-repeat;
+  display: inline-block;
+  background: url(../../../images/html/hflschool_landing/ten_icon.png?v=puxw3d1PUUcjEiy2JWEQtA%3D%3D) no-repeat;
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+.tegrs .ten-fri .ten-dl dd span {
+  float: left;
+  color: #1e1e1e;
+  font-size: 18px;
+  line-height: 35px;
+  margin-top: 22px;
+}
+.tegrs .ten-fri .ten-dl dd span em {
+  display: block;
+  font-size: 30px;
+  color: #445767;
+}
+.tegrs .ten-fri .ten-dl .ten-dd01 {
+  top: 11px;
+}
+.tegrs .ten-fri .ten-dl .ten-dd02 {
+  right: 89px;
+  top: 125px;
+  width: 440px;
+}
+.tegrs .ten-fri .ten-dl .ten-dd02 i {
+  background-position: 0 -95px;
+}
+.tegrs .ten-fri .ten-dl .ten-dd03 {
+  right: 89px;
+  top: 241px;
+  width: 440px;
+}
+.tegrs .ten-fri .ten-dl .ten-dd03 i {
+  background-position: 0 -190px;
+}
+.tegrs .ten-fri .ten-dl .ten-dd03 span {
+  margin-top: 5px;
+}
+.tegrs .ten-le {
+  background: #fff;
+}
+.tegrs .ten-le .tit01 {
+  color: #77cb37;
+}
+.tegrs .ten-le .ten-dl {
+  margin: 50px 0 0 0;
+}
+.tegrs .ten-le .ten-dl dt {
+  position: absolute;
+  left: 535px;
+}
+.tegrs .ten-le .ten-dl dd {
+  position: absolute;
+  left: 50px;
+}
+.tegrs .ten-le .ten-dl .ten-dd01 {
+  margin-left: 42px;
+  top: 25px;
+}
+.tegrs .ten-le .ten-dl .ten-dd01 i {
+  background-position: -105px 0;
+}
+.tegrs .ten-le .ten-dl .ten-dd02 {
+  top: 139px;
+}
+.tegrs .ten-le .ten-dl .ten-dd02 i {
+  background-position: -105px -95px;
+}
+.tegrs .ten-le .ten-dl .ten-dd03 {
+  top: 255px;
+}
+.tegrs .ten-le .ten-dl .ten-dd03 i {
+  background-position: -105px -190px;
+}
+.tegrs .ten-le .ten-dl .ten-dd03 span {
+  margin-top: 22px;
+}
+.tegrs .ten-ln {
+  background: #fffcf7;
+}
+.tegrs .ten-ln .tit01 {
+  color: #ff9600;
+}
+.tegrs .ten-ln .ten-dl {
+  margin: 50px 0 0 0;
+}
+.tegrs .ten-ln .ten-dl dt {
+  position: absolute;
+  width: 590px;
+  left: -160px;
+  bottom: -13px;
+}
+.tegrs .ten-ln .ten-dl .ten-dd01 {
+  right: 209px;
+}
+.tegrs .ten-ln .ten-dl .ten-dd01 i {
+  background-position: -210px 0;
+}
+.tegrs .ten-ln .ten-dl .ten-dd02 {
+  right: 3px;
+  width: 570px;
+}
+.tegrs .ten-ln .ten-dl .ten-dd02 i {
+  background-position: -210px -95px;
+}
+.tegrs .ten-ln .ten-dl .ten-dd03 {
+  width: 570px;
+  right: 3px;
+}
+.tegrs .ten-ln .ten-dl .ten-dd03 i {
+  background-position: -210px -190px;
+}
+.tegrs .ten-ln .ten-dl .ten-dd03 span {
+  margin-top: 22px;
+}
+.tegrs .ten-stu {
+  background: #efefef;
+  padding-bottom: 80px;
+}
+.tegrs .ten-stu .stu-tit {
+  text-align: center;
+  padding: 70px 0 10px 0;
+}
+.tegrs .ten-stu .more {
+  color: #7c7c7c;
+  font-size: 18px;
+  text-align: center;
+  display: block;
+}
+.tegrs .ten-stu .more:hover {
+  color: #ff9600;
+}
+.tegrs .ten-stu ul {
+  height: 486px;
+  margin: 40px 0 0 30px;
+}
+.tegrs .ten-stu ul li {
+  float: left;
+  width: 420px;
+  height: 460px;
+  background: #fff;
+  padding: 10px 10px 0;
+  margin: 0 10px;
+}
+.tegrs .ten-stu ul li .s-img {
+  width: 420px;
+  height: 260px;
+}
+.tegrs .ten-stu ul li .s-p {
+  font-size: 30px;
+  color: #333;
+  margin: 23px 10px 0 10px;
+}
+.tegrs .ten-stu ul li span {
+  display: block;
+  margin: 0 10px;
+}
+.tegrs .ten-stu ul li .s-r {
+  color: #666;
+  font-size: 18px;
+  margin: 2px 10px 14px 10px;
+}
+.tegrs .ten-stu ul li .s-l {
+  font-size: 18px;
+  color: #333;
+}
+.tegrs .talk {
+  width: 100%;
+  padding: 80px 0;
+}
+.tegrs .talk .t-h3 {
+  text-align: center;
+  margin-bottom: 45px;
+}
+.tegrs .talk .talk-list {
+  width: 1000px;
+  margin: 0px auto;
+  height: 342px;
+}
+.tegrs .talk .talk-list li {
+  float: left;
+  width: 248px;
+  height: 342px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+  border-left: 1px #999 solid;
+}
+.tegrs .talk .talk-list li.icon-lina {
+  background: url(../../../images/html/hflschool_landing/lina.jpg?v=wJlhGDPlcQbs833MhatSbQ%3D%3D) no-repeat;
+}
+.tegrs .talk .talk-list li.icon-lj {
+  background: url(../../../images/html/hflschool_landing/lxp.jpg?v=losRMV6kAwxEf%2BQv%2F5IkeA%3D%3D) no-repeat;
+}
+.tegrs .talk .talk-list li.icon-lxp {
+  background: url(../../../images/html/hflschool_landing/lj.jpg?v=4%2BlD40l6k6MKdUnUMdhMhw%3D%3D) no-repeat;
+}
+.tegrs .talk .talk-list li.hover {
+  width: 500px;
+}
+.tegrs .talk .talk-list li.hover .u-mask {
+  filter: alpha(opacity=0);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+.tegrs .talk .talk-list li .u-mask {
+  position: absolute;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  left: 0;
+  top: 0;
+  width: 456px;
+  height: 342px;
+  background: #666;
+  filter: alpha(opacity=60);
+  -webkit-opacity: 0.6;
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+}
+.tegrs .talk .talk-list .le6-line {
+  border: none;
+}
+.hfls-nav {
+  position: relative;
+  overflow: hidden;
+  height: 481px;
+}
+.hfls-nav img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -960px;
+}
+.hfls-02 {
+  height: 574px;
+  width: 100%;
+  background: url(../../../images/html/hflschool_landing/hfls_02.png?v=NZAifUj%2FRC5bJ7WY6VeaMQ%3D%3D) center bottom no-repeat;
+  text-align: center;
+}
+.hfls-02 .hfls-txt01 {
+  width: 100%;
+  text-align: center;
+  margin: 80px auto 50px;
+}
+.hfls-02 .hfls-txt01 h3 {
+  font-size: 40px;
+  color: #ff9e00;
+}
+.hfls-02 .hfls-txt02 {
+  display: inline-block;
+  width: 1000px;
+  text-align: left;
+  line-height: 36px;
+  font-size: 18px;
+}
+.tegrs {
+  position: relative;
+}
+.tegrs .hfls-txt03 {
+  position: absolute;
+  top: -58px;
+  left: 50%;
+  margin-left: -268px;
+}
+.tegrs .ten-fri {
+  padding-top: 145px;
+  padding-bottom: 134px;
+}
+.tegrs .ten-fri .ten-dl dd span {
+  margin-top: 0;
+}
+.tegrs .ten-fri .ten-dl dd span h4 {
+  font-size: 30px;
+}
+.tegrs .ten-fri .ten-dl dd span em {
+  font-size: 18px;
+}
+.tegrs .ten-fri .ten-dl .ten-dd01 {
+  left: 414px;
+}
+.tegrs .ten-fri .tit02 {
+  margin: 0;
+  margin-top: 10px;
+}
+.tegrs .ten-fri .ten-dl .ten-dd04 {
+  left: 78px;
+}
+.tegrs .ten-fri .ten-dl .ten-dd07 {
+  left: 375px;
+}
+.FeatureC {
+  width: 100%;
+  min-height: 1988px;
+  height: auto;
+  background: #efefef;
+  position: relative;
+}
+.FeatureC .hfls-txt04 {
+  position: absolute;
+  top: -58px;
+  left: 50%;
+  margin-left: -272px;
+}
+.FeatureC .gden {
+  padding-top: 154px;
+  text-align: center;
+}
+.FeatureC .gden h3 {
+  font-size: 40px;
+  font-weight: 100;
+}
+.FeatureC .gden .hfls_famliy {
+  display: inline-block;
+  background: #fff url(../../../images/html/hflschool_landing/hfls_fam.png?v=sMyEbU2ZOKyHVRCI65ULZw%3D%3D) center 20px no-repeat;
+  text-align: left;
+  width: 964px;
+  height: 740px;
+  padding: 20px;
+  margin-top: 20px;
+  position: relative;
+}
+.FeatureC .gden .hfls_famliy .hfls_txt01 {
+  position: absolute;
+  bottom: 0;
+  background: #fff;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  height: 284px;
+  width: 964px;
+  padding-top: 20px;
+}
+.FeatureC .gden .hfls_famliy .hfls_txt01 p {
+  line-height: 38px;
+  font-size: 18px;
+}
+.FeatureC .gden01 {
+  padding-top: 45px;
+}
+.FeatureC .gden01 .hfls_famliy {
+  background: #fff url(../../../images/html/hflschool_landing/hfls_fam02.png?v=dzb5o5zois80viAYr2kS2g%3D%3D) center 20px no-repeat;
+}
+.tegrs .talk .t-h3 {
+  font-size: 40px;
+}
+.tegrs .ten-stu .stu-tit {
+  font-size: 40px;
+}
+.hfls_intro {
+  width: 100%;
+  text-align: center;
+  min-height: 670px;
+  height: auto;
+  background: #fff url(../../../images/html/hflschool_landing/hfls_bg.png?v=SrzIyNpDAn7HKBcP7UtEWw%3D%3D) center bottom no-repeat;
+  padding-top: 80px;
+}
+.hfls_intro h3 {
+  font-size: 40px;
+}
+.hfls_intro .hfls_intro01 {
+  display: inline-block;
+  height: 670px;
+  width: 1000px;
+  text-align: left;
+  line-height: 36px;
+  font-size: 18px;
+  margin-top: 40px;
+}
+.tegrs .talk .talk-list li.icon-lina {
+  background: url(../../../images/html/hflschool_landing/hfls_lina.jpg?v=h%2BBpICdywpttc7bp97b11A%3D%3D) no-repeat;
+}
+.ten-stu .centerMth li {
+  position: relative;
+}
+.ten-stu .centerMth li .video_play {
+  position: absolute;
+  top: 160px;
+  left: 75%;
+}
+.ten-stu .centerMth li .video_play .video i {
+  background: url(../../../images/html/hflschool_landing/icon.png?v=K02xj%2F2p0sD0ZcrzJsLeBw%3D%3D) no-repeat;
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  background-position: -106px -127px;
+}
+.ten-stu .centerMth .video_play .video:hover i {
+  background-position: -4px -126px;
+}

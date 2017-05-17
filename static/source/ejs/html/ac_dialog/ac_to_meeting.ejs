@@ -1,0 +1,17 @@
+<% include ../common/top.ejs %>
+<body data-init="acMeeting">
+    <div class="ac-dialog-wrap ac-to-meeting">
+        <div class="ac-dialog-content to-meeting">
+            <p class="meeting-timmer">请不要关闭教室，<span>5</span> 秒钟之后为您接入家长会</p>
+            <img src="<%= imagessrc%>meeting-book.png" />
+        </div>
+        <div class="ac-dialog-bottom">
+        </div>
+    </div>
+<script type="text/javascript">
+    function acCallback(r){
+        console.log(r);
+    }
+</script>
+</body>
+<% include ../common/bottom.ejs %>

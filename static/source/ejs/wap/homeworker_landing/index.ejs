@@ -1,0 +1,156 @@
+<% include ../common/homeworker_top.ejs %>
+<body>
+ 
+	<article class="top" data-init="index" id="container">
+			<article class="topT">
+				<img src="<%= imagessrc%>hw_banner.jpg"  class="topImg" alt="">
+			</article>
+		</article>
+	<section class="g-ct">
+	 <!-- 需求改动 -->
+	 <div class="m-reg">
+			<form action="/landing/togetherWork/" method="post">
+				<input type="hidden" name="action" value="reg"/>
+				<input type="hidden" name="uid" value="xxx"/>
+				<input type="hidden" name="timstamp" value="xxxx"/>
+				<input type="hidden" name="random" value="xxx"/>
+				<input type="hidden" name="token" value="xxxx"/>
+				<div class="group">
+					<input class="u-ipt" type="text" name="mobile" id="mobile" placeholder="请输入您的手机号">
+					<p class="u-err">用户名格式错误</p>
+				</div>
+				<div class="group group2" style="height: 4.5rem;">
+					<div class="m-ipts" >
+						<input class="u-ipt1" id="authCode" name="code" type="text" placeholder="请输入图形验证码" style="height:3rem;">
+					</div>
+					<a class="getCode1 no-bottom" href="javascript:;">
+						<img title="单击更换验证码" alt="单击更换验证码"
+							 onclick="this.src='http://www.51talk.com/passport/authCode'+'?a'+'='+new Date().getTime()"
+							 src="http://www.51talk.com/passport/authCode" id="verifycode" style="width: 7rem;    height: 3rem;"
+							 style="border: 1px solid #d0d0d0;float:left;cursor: pointer;">
+					</a>
+				</div>
+				<div class="group group2">
+					<div class="m-ipts">
+						<input class="u-ipt" name="code" type="text" placeholder="">
+						<p class="u-err">验证码错误</p>
+					</div>
+					<a class="getCode1" id="getCodeNew" href="javascript:;">获取短信验证码</a>
+				</div>
+				<div class="group">
+					<input class="u-ipt" type="password" name="password" placeholder="请设置您的密码">
+					<p class="u-err">密码错误</p>
+				</div>
+				<a class="u-btn-sb" href="javascript:;">立即激活</a>
+				<div class="reg_txt">
+					<span>若已是51Talk注册用户，请</span><a href="javascript:;" class="login_now">立即登录</a>
+				</div>
+			</form>
+		</div>
+		<div class="m-log hide">
+			<form action="/landing/togetherWork/" method="post">
+				<input type="hidden" name="action" value="login"/>
+				<input type="hidden" name="uid" value="xxx"/>
+				<input type="hidden" name="timstamp" value="xxxx"/>
+				<input type="hidden" name="random" value="xxx"/>
+				<input type="hidden" name="token" value="xxxx"/>
+				<div class="group">
+					<input class="u-ipt" type="text" name="user_name" placeholder="请输入您的邮箱/手机号">
+					<p class="u-err">用户名格式错误</p>
+				</div>
+				<div class="group">
+					<input class="u-ipt" type="password" name="password" placeholder="请设置您的密码">
+					<p class="u-err">用户名格式错误</p>
+				</div>
+				<a class="u-btn-sb" href="javascript:;">立即激活</a>
+			</form>
+		</div>
+		<div class="m-success hide">
+			<h2>恭喜您成功领取</h2>
+			<p>专属外教寒假班，</p>
+			<p>请您尽快登录www.51talk.com</p>
+			<p>进行预约、上课。</p>
+		</div>
+	 <!-- 需求改动结束 -->
+		<div class="m-step-box">
+			<h2>上课流程</h2>
+			<h3>THE PROSCESS FOR COURSE</h3>
+			<ul class="m-steps">
+				<li>
+					<div class="u-circle">1</div>
+					<p>注册并登录</p>
+					<p>51Talk官网</p>
+				</li>
+				<li>
+					<div class="u-circle">2</div>
+					<p>预约</p>
+					<p>自然拼读课</p>
+				</li>
+				<li>
+					<div class="u-circle">3</div>
+					<p>准备好设备</p>
+					<p>上课啦！</p>
+				</li>
+			</ul>
+		</div>
+		<div class="m-theme-box">
+			<h2>五大主题精彩纷呈</h2>
+			<h3>FIVE WONDERFUL COURSES</h3>
+			<ul class="m-themes">
+				<li>
+					<img src="<%= imagessrc%>hw_course01.jpg" alt="">
+					<div class="m-txt">
+						含字母U的CVC单词拼读
+					</div>
+				</li>
+				<li>
+					<img src="<%= imagessrc%>hw_course02.jpg" alt="">
+					<div class="m-txt">
+						绘本故事：鸡蛋去哪儿了？
+					</div>
+				</li>
+				<li>
+					<img src="<%= imagessrc%>hw_course03.jpg" alt="">
+					<div class="m-txt">
+					辅音连缀：bl,cl,fl
+					</div>
+				</li>
+				<li>
+					<img src="<%= imagessrc%>hw_course04.jpg" alt="">
+					<div class="m-txt">
+						长元音：ee,ea,eed
+					</div>
+				</li>
+				<li>
+					<img src="<%= imagessrc%>hw_course05.jpg" alt="">
+					<div class="m-txt">
+						绘本故事：你愿意和我做朋吗？
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="m-learn-box">
+			<h2>合理利用时间，真正趣味学习</h2>
+			<ul class="m-learn">
+				<li class="first">
+					<img src="<%= imagessrc%>learn_1.png" alt="">
+					<p>全天10个小时</p>
+					<p>随时预约上课</p>
+				</li>
+				<li>
+					<img src="<%= imagessrc%>learn_2.png" alt="">
+					<p>4000多名外</p>
+					<p>教任意你选</p>
+				</li>
+			</ul>
+		</div>
+		<div class="m-lina-box">
+			<img src="<%= imagessrc%>lina.jpg" alt="">
+		</div>
+	</section>
+	<footer class="g-ft">
+		<a href="#m-top" class="u-btn-enjoy">马上和宝贝来体验</a>
+		<p>Copyright©北京大生知行科技有限公司</p>
+	</footer>
+</body>
+<% include ../common/bottom.ejs %>

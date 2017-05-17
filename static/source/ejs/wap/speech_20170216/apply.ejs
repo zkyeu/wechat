@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <title>大赛报名</title>
+    <script src="<%= jsPath %>flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="<%= csslink %>">
+</head>
+<body>
+<div class="applyPage" data-init="addname" id="container">
+    <header>
+        <img src="<%= imagessrc %>a_banner.jpg"/>
+    </header>
+    <section id="j_apply_form" class="info">
+        <h3><strong>佳佳</strong>学员，你好，欢迎你参加51Talk英语之星大赛，请您填写考试详细信息，并参加初赛考试。</h3>
+        <ul>
+            <li>
+                <div class="li-iterm">姓名：</div>
+                <div class="li-content">
+                    <input name="student_name" type="text" class="f-text w580" value="" placeholder="请输入小孩姓名" />
+                </div>
+            </li>
+            <li id="j_grade_select">
+                <div class="li-iterm">年级：</div>
+                <div class="li-content li-center li-content-le" data-val="1">
+                    <!-- <input type="text" value="1-3年级" readonly class="f-text w280"/> -->
+                    <span class="f-text w280">1-3年级</span>
+                    <i></i>
+                </div>
+                <div class="li-content li-center" data-val="2">
+                    <!-- <input type="text" value="4-6年级" readonly class="f-text w280"/> -->
+                    <span class="f-text w280">4-6年级</span>
+                    <i></i>
+                </div>
+            </li>
+            <li>
+                <div class="li-iterm">城市：</div>
+                <div class="li-content li-content-le">
+                    <select id="s_province" name="s_province" class="w280 citys"></select>
+                    <i></i>
+                </div>
+                <div class="li-content">
+                    <select id="s_city" name="s_city" class="w280 citys"></select>
+                    <i></i>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section class="requested">
+        <h2>考试要求如下：</h2>
+        <h3>一、考试规则</h3>
+        <p>1.认真填写上边的学员姓名、年级、所在城市。<br />
+          2.初赛试题共20道题，总分100分，考试时间30分钟<br />
+          3.答题形式为在线答题。<br />
+          4.完成所有题目才可以交卷，交卷后立刻出成绩，不能再修改。
+        <h3>二、如果您是B2S（无忧课堂）用户，综合评分标准为笔试+上课</h3>
+    </section>
+    <section class="questionEntery">
+        <a id="j_submit_btn" href="javascript:;">确认，开始答题</a>
+        <p>试题最终版权归51Talk无忧英语所有</p>
+    </section>
+</div>
+<script id="seajsnode" src="<%= jssrc %>"></script>
+</body>
+</html>

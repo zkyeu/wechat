@@ -1,0 +1,145 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: 
+ */
+#fontSizeLoding {
+  width: 100%;
+  min-height: 100%;
+  max-width: 640px;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+#fontSizeLoding img {
+  width: 30px;
+  height: 30px;
+  margin-left: -15px;
+  margin-top: -15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.choose_class .top_message {
+  height: 1.7rem;
+  padding-top: 0.65rem;
+  background: #6bcefc url(../../../images/wap/b2s/1v1_choose_class_new-05.png?v=SP%2BQoVxGclH4hCoyXPRKGQ%3D%3D) no-repeat;
+  background-size: 100% 100%;
+}
+.choose_class .top_message p {
+  line-height: 0.6rem;
+  text-align: center;
+  font-size: 0.33rem;
+  color: #fff;
+}
+.choose_class .top_message p span {
+  color: #faee89;
+}
+.choose_class .about_class {
+  width: 6rem;
+  padding: 0 .2rem;
+  padding-bottom: 2.4rem;
+  background: url(../../../images/wap/b2s/process-class-1.png?v=i0%2FZwPHLj6ieo0tg18%2F5ew%3D%3D) no-repeat left bottom;
+  background-size: 6.4rem 2.95rem;
+  position: relative;
+}
+.choose_class .about_class:before {
+  content: "";
+  width: 1.56rem;
+  height: 0.42rem;
+  background: url(../../../images/wap/b2s/choose-class-9.png?v=IO%2FCYJtCBXg0TS1C7RRXLA%3D%3D) no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 0.62rem;
+  right: 0.42rem;
+}
+.choose_class .about_class .tips_text {
+  font-size: 0.2rem;
+  color: #8696ad;
+  padding: 0.6rem;
+}
+.choose_class .about_class .tips_text p {
+  line-height: 0.5rem;
+}
+.choose_class .about_class .about_text_1 {
+  color: #43c4ff;
+  font-weight: 900;
+  font-size: 0.32rem;
+  padding-top: 0.65rem;
+  text-align: center;
+}
+.choose_class .about_class .text_title {
+  font-size: 0.28rem;
+  color: #43c4ff;
+  padding: 0.4rem 0 0 0.45rem;
+  font-weight: 900;
+}
+.choose_class .about_class .text_mes_show {
+  padding-top: 0.2rem;
+  padding-left: 0.48rem;
+  color: #4e5c6f;
+  position: relative;
+  line-height: 0.5rem;
+}
+.choose_class .about_class .text_mes_show:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: url(../../../images/wap/b2s/process-class-3.png?v=Rt4ORR5IY4WgjjUhmFcFKw%3D%3D) no-repeat;
+  background-size: 0.23rem 0.24rem;
+  width: 0.23rem;
+  height: 0.24rem;
+  left: 0;
+  top: 0.35rem;
+}
+.choose_class .about_class .text_mes_show a {
+  color: #43c4ff;
+}
+.choose_class .about_class .code_box {
+  width: 1.8rem;
+  height: 1.8rem;
+  padding: 0.1rem;
+  border: 1px solid #70c6f9;
+  margin: 0.4rem auto 0.1rem;
+}
+.choose_class .about_class .code_box img {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+.choose_class .about_class .intro_last_code {
+  text-align: center;
+  color: #8996ab;
+}
+.choose_class .load_chose_class_null {
+  width: 5.40rem;
+  height: 1.3rem;
+}
+.choose_class .load_chose_class {
+  width: 100%;
+  height: 0.9rem;
+  padding: 0.2rem 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: #4998e0;
+}
+.choose_class .load_chose_class a {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.choose_class .load_chose_class p {
+  width: 5.40rem;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  border-radius: 999px;
+  background: #ff5456;
+  text-align: center;
+  color: #fff;
+  font-size: 0.3rem;
+  margin: 0 auto ;
+}

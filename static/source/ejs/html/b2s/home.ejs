@@ -1,0 +1,40 @@
+<% include ../common/top.ejs %>
+<body  data-init="index">
+<!-- 公共头 -->
+<% include ../common/b2s/b2s_header.ejs %>
+<!-- 中间内容 -->
+<div class="home">
+  <div class="hm-img"><img src="<%= imagessrc%>home_ads.jpg" alt="" class="hm-ads"></div>
+  <div class="widthMain hm-widthMain">
+    <div class="hm-reg">
+      <form id="regFrom">
+        <ul class="hm-login">
+          <li class="hm-login_li">
+            <input id="telEmail" class="form-data jsInputOk telemail telemailword" type="text" placeholder="请输入邮箱/手机/学生账号" data-type="emailTel">
+            <i class="tenIcon del-icon"></i>
+            <div class="hm-erro" id="hm-email"><i class="tenIcon err-icon"></i><b>邮箱/手机/学生账号有误</b></div>
+          </li>
+          <li class="hm-login_li">
+            <input id="passwd" class="form-data jsInputOk" type="password" placeholder="请输入密码" data-type="passwd">
+            <i class="tenIcon del-icon"></i>
+            <div class="hm-erro" id="hm-psd"><i class="tenIcon err-icon"></i><b>密码不能为空</b></div>
+          </li>
+          <li class="next_password">
+            <input type="checkbox" /> 下次自动登录<a href="javascript:;">忘记密码？</a>
+         </li>
+          <li class="hm-login_li hm-li-sub">
+            <a href="javascript:;" class="submit" id="submit">登录</a>
+          </li>
+        </ul>
+      </form>
+      <ul class="hm-chg">
+        <li><a href="javascript:;"><i class="icon std-icon"></i>学生注册</a></li>
+        <li class="chg-tit"><a href="javascript:;"><i class="icon tea-icon"></i>老师注册</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

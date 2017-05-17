@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>学生课表</title>
+    <link rel="stylesheet" href="/css/html/ac_stu/ac_stu.css">
+</head>
+<body>
+    <div class="banner" id="banner">
+        <ul class="bannerList clearfix" id="bannerList">
+            <li><a href="#"><img src="/images/html/ac_stu/banner1.png"></a></li>
+            <li><a href="#"><img src="/images/html/ac_stu/classImg.jpg"></a></li>
+            <li><a href="#"><img src="/images/html/ac_stu/icons.png"></a></li>
+            <li><a href="#"><img src="/images/html/ac_stu/teacher1.jpg"></a></li>
+        </ul>
+        <div class="dots" id="dots">
+            <a href="javascript:;" class="active"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;" class="last"></a>
+        </div>
+    </div>
+    <div class="dateBox">
+        <a href="javascript:;" class="prev" id="prev"></a>
+        <a href="javascript:;" class="next" id="next"></a>
+        <div class="dateList" id="dateList">
+            <ul class="list clearfix" id="tabList"></ul>
+        </div>
+    </div>
+    <div class="content" id="content">
+        <div class="classInfo clearfix" id="classTab">
+            <a href="javascript:;" class="active">待开始课程(<span>5</span>)</a>
+            <a href="javascript:;">已结束课程(<span>8</span>)</a>
+        </div>
+        <ul class="classList" id="comingList"></ul>
+        <ul class="classList" id="completeList"></ul>
+        <div class="student_no_class"></div>
+    </div>
+    <div class="noClassList" id="noClassList">
+        <div class="noClass1 noClass" id="noClass1">
+            <div class="orderBox">
+                <span></span>
+                <a href="javascript:;" data-href="http://www.51talk.com/reserve/index" class="orderClass">猛戳这里，去约课吧！</a>
+            </div>
+            <div class="teacherList">
+                <div class="title clearfix">
+                    <div class="tab">
+                        <a href="javascript:;" class="active" id="rTea">优选外教</a>
+                        <span>|</span>
+                        <a href="javascript:;" id="cTea">收藏外教</a>
+                    </div>
+                    <a href="javascript:;" class="more" id="moreSel">更多&gt;</a>
+                </div>
+                <ul class="list clearfix" id="collectionTea"></ul>
+                <ul class="list clearfix" id="recommendTea"></ul>
+                <div class="noTeacher" id="noTeacher">您还没有收藏的老师哦！</div>
+            </div>
+        </div>
+        <div class="noClass2 noClass" id="noClass2">
+            <p>了解自己很重要<br/>了解自己的英语水平也很重要</p>
+            <a href="javascript:;" data-href="http://www.51talk.com/trial/reserve" class="testMe">测测我的英语水平</a>
+        </div>
+        <!--b2s-->
+        <div class="noClass3 noClass" id="noClass3">
+            <img src="/images/html/ac_stu/b2s.png">
+            <p>没有外教课呢<br/>先去学习课前视频吧！</p>
+            <a href="javascript:;" data-href="http://www.51kt.com/course/stuCourseList/?course_type=1">去学习</a>
+        </div>
+        <!--历史无课-->
+        <div class="noClass4 noClass" id="noClass4">
+            <img src="/images/html/ac_stu/history.png">
+            <p>这天没有课呢</p>
+        </div>
+        <!--今天课程已上完-->
+        <div class="noClass5 noClass" id="noClass5">
+            <img src="/images/html/ac_stu/today.png">
+            <p>今天的课程已全部完成，棒棒哒！</p>
+        </div>
+         <!--今天课程还没有一节完成-->
+        <div class="noClass6 noClass" id="noClass6">
+            <img src="http://one.frontend.com/static/images/html/ac_stu/no_over_clas.png">
+            <p>还没有已结束的课程</p>
+        </div>
+        <!--一节课没有约-->
+        <div class="noClass7 noClass" id="noClass7">
+            <img src="http://one.frontend.com/static/images/html/ac_stu/no_over_clas.png">
+            <p>今天没有预约课程，课表空荡荡的~</p>
+        </div>
+    </div>
+    <div class="mask" id="mask"></div>
+    <div class="cancelBox" id="cancelBox">
+        <div class="pic"></div>
+        <p>确定要取消本次课的预约吗</p>
+        <div class="btns">
+            <a href="javascript:;" class="sure">确定</a>
+            <a href="javascript:;" class="cancel">取消</a>
+        </div>
+    </div>
+    <div class="cancleTip" id="cancelTip">
+        <div class="pic"></div>
+        <p>取消成功</p>
+    </div>
+    <script type="text/javascript" src="../../../js/html/project/ac_stu/vendor.js"></script>
+    <script type="text/javascript" src="../../../js/html/project/ac_stu/md5.js"></script>
+    <script type="text/javascript" src="../../../js/html/project/ac_stu/ac_stu.js"></script>
+</body>
+</html>

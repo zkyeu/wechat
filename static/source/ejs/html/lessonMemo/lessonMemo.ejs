@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>老师课表</title>
+    <link rel="stylesheet" href="<%= csslink%>">
+</head>
+<body>
+	<div class="container container2" id="container" style="padding-top:15px;margin-left:500px;margin-top:30px;">
+		<!--个性评价-->
+		<div class="personal">
+			<div class="title">
+				<span>part1. Personalized Note to Your Student</span>
+				<i class="toUp"></i>
+			</div>
+			<div class="noteBox">
+				<textarea class="noteTxt com_area"></textarea>
+			</div>
+		</div>
+		
+		<!--单词发音-->
+		<div class="pronucation">
+			<div class="title">
+				<span>part3. Pronunciation</span>
+				<i class="toUp"></i>
+			</div>
+			<div class="pronun">
+				<p>Key words in this lesson</p>
+				<ul  class="wordsList clearfix">
+					<li><i class="active"></i><span>envelope</span></li>
+					<li><i></i><span>envelope</span></li>
+					<li><i></i><span>envelope</span></li>
+				</ul>
+				<div class="review">
+					<p>Pronunciation to review</p>
+					<ul class="reviewList clearfix">
+						<li><input type="text" value="envelope / envələʊp /" /><i></i></li>
+						<li><input type="text" value="envelope / envələʊp /" /><i></i></li>
+					</ul>
+					<span class="com_addView"></span>
+				</div>
+			</div>
+		</div>
+		
+		<!--交流技巧-->
+		<div class="communaction">
+			<div class="title">
+				<span>Part 1. Communication Skill</span>
+				<i class="toUp"></i>
+			</div>
+			<ul class="skill">
+				<li>
+					<h4>Participation</h4>
+					<p>
+						<span class="active"></span>
+						<span class="active"></span>
+						<span class="active"></span>
+						<span class="active"></span>
+						<span></span>
+					</p>
+				</li>
+				<li>
+					<h4>Speaking</h4>
+					<p>
+						<span class="active"></span>
+						<span class="active"></span>
+						<span class="active"></span>
+						<span class="active"></span>
+						<span></span>
+					</p>
+				</li>
+				<li>
+					<h4>Listening</h4>
+					<p>
+						<span class="active"></span>
+						<span class="active"></span>
+						<span class="active"></span>
+						<span class="active"></span>
+						<span></span>
+					</p>
+				</li>
+				<li>
+					<h4>Reading</h4>
+					<p>
+						<span class="active"></span>
+						<span class="active"></span>
+						<span class="active"></span>
+						<span class="active"></span>
+						<span></span>
+					</p>
+				</li>
+			</ul>
+		</div>
+		
+		<!--学习阶段-->
+		<div class="studying">
+			<div class="title">
+				<span>Part 2.  Choose Stage</span>
+				<i class="toUp"></i>
+			</div>
+			<div class="com_box">
+				<ul class="wordsList com_bg1">
+					<li>
+						<i></i>
+						<span>Basic User</span>
+					</li>
+					<li>
+						<i class="active"></i>
+						<span>Intermediate User</span>
+					</li>
+					<li>
+						<i></i>
+						<span>Independent User</span>
+					</li>
+					<li>
+						<i class="active"></i>
+						<span>Procficient User</span>
+					</li>
+				</ul>
+			</div>
+			<!--学习等级-->
+			<div class="title">
+				<span>Part 3. Choose Level</span>
+				<i class="toUp"></i>
+			</div>
+			<div class="com_box">
+				<ul class="wordsList clearfix com_bg2">
+					<li>
+						<i></i>
+						<span>level 0</span>
+					</li>
+					<li>
+						<i class="active"></i>
+						<span>level 1</span>
+					</li>
+					<li>
+						<i></i>
+						<span>level 2</span>
+					</li>
+					<li>
+						<i class="active"></i>
+						<span>level 3</span>
+					</li>
+					<li>
+						<i class="active"></i>
+						<span>level 4</span>
+					</li>
+					<li>
+						<i></i>
+						<span>level 5</span>
+					</li>
+					<li>
+						<i class="active"></i>
+						<span>level 6</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--语法修整-->
+		<div class="grammer">
+			<div class="title">
+				<span> Part 2. Grammar / Syntax</span>
+				<i class="toUp"></i>
+			</div>
+
+			<ul id="gramList" class="gramList">
+				<li>
+					<input type="text" class="error" value="incorrect" />
+					<input type="text" class="succ" value="correct" />
+					<i></i>
+				</li>
+				<li class="com_dashTop">
+					<input type="text" class="error" value="incorrect" />
+					<input type="text" class="succ" value="correct" />
+					<i></i>
+				</li>
+				<li class="com_dashTop">
+					<input type="text" class="error" value="incorrect" />
+					<input type="text" class="succ" value="correct" />
+					<i></i>
+				</li>
+			</ul>
+			<div class="com_box">
+				<span class="com_addView"></span>
+			</div>
+		</div>
+		
+		
+		
+		<!--评价-->
+		<div class="evluation">
+			<div class="title">
+				<span>Part 3. Assessment</span>
+				<i class="toUp"></i>
+			</div>
+			<ul class="asseList">
+				<li class="assChild com_mb10">
+					<p>General Evaluation</p>
+					<ul class="asScore wordsList com_bg2 clearfix">
+						<li href="javascript:;">
+							<i class="active"></i>
+							<span>A+</span>
+						</li>
+						<li href="javascript:;">
+							<i></i>
+							<span>A</span>
+						</li>
+						<li href="javascript:;">
+							<i></i>
+							<span>A-</span>
+						</li>
+						<li href="javascript:;">
+							<i></i>
+							<span>B+</span>
+						</li>
+						<li href="javascript:;">
+							<i></i>
+							<span>B-</span>
+						</li>
+					</ul>
+					<div class="evalu">
+						<div class="scoreTxt">The student was often too distracted or reluctant to  participate during the lesson</div>
+						<textarea class="evaTxt com_area"></textarea>
+						<a href="javascript:;" class="com_changeBtn">Change</a>
+					</div>
+				</li>
+				<li class="assChild com_dashTop com_mb10">
+					<p class="com_mb10">Weakness</p>
+					<ul class="wordsList clearfix com_bg2">
+						<li>
+							<i></i>
+							<span>grammer</span>
+						</li>
+						<li>
+							<i class="active"></i>
+							<span>grammer</span>
+						</li>
+						<li>
+							<i></i>
+							<span>grammer</span>
+						</li>
+						<li>
+							<i class="active"></i>
+							<span>grammer</span>
+						</li>
+						<li>
+							<i class="active"></i>
+							<span>grammer</span>
+						</li>
+						<li>
+							<i></i>
+							<span>grammer</span>
+						</li>
+						<li>
+							<i class="active"></i>
+							<span>grammer</span>
+						</li>
+					</ul>
+				</li>
+				<li class="assChild com_dashTop com_mb10">
+					<p class="com_mb10">Suggest</p>
+					<div class="sugBox">
+						<textarea class="sugTxt com_area"></textarea>
+						<a href="javascript:;" class="com_changeBtn">Change</a>
+					</div>
+				</li>
+				<li class="assChild com_dashTop com_mb10">
+					<p class="com_mb10">Option</p>
+					<div class="sugBox">
+						<textarea class="sugTxt com_area"></textarea>
+						<a href="javascript:;" class="com_changeBtn">Change</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="com_tip noBegin">
+			<span></span>
+			<p>You can fill this <br/> after class  has began</p>
+		</div>
+		<div class="com_tip ok">
+			<span></span>
+			<p>You can fill this <br/> after class  has began</p>
+		</div>
+
+
+		<a href="javascript:;" class="sub">Submit</a>
+	</div>
+	<script type="text/javascript" src="../../../js/html/project/lessonMemo/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../js/html/project/lessonMemo/index.js"></script>
+</body>
+</html>

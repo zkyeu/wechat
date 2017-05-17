@@ -1,0 +1,189 @@
+<% include ../common/top.ejs %>
+<body  data-init="index">
+<!-- 公共头 -->
+<% include ../common/b2s/b2s_header.ejs %>
+<!-- 中间内容 -->
+<div class="mycls">
+  <div class="widthMain">
+    <!-- banner -->
+    <% include ../common/b2s/b2s_banner.ejs %>
+    <div class="central">
+      <i class="cls-icon"></i>
+       <div class="stu_tit">
+        <dl>
+          <dt><img src="<%= imagessrc%>tea.jpg" alt=""></dt>
+          <dd class="intro_one"><span>流川枫</span> 老师</dd>
+          <dd>班级：2个</dd>
+          <dd>学生：60人</dd>
+        </dl>
+        <p class="stu_number">学生邀请码：123456</p>
+      </div>
+      <!-- 侧栏 -->
+      <% include ../common/b2s/b2s_sidebar.ejs %>
+      <!-- <div class="cls-side">
+        <ul class="side-tit">
+          <li class="side-down"><a href="javascript:;"><i class="tenIcon sml-cion"></i>近期公开课</a></li>
+          <li><a href="javascript:;"><i class="tenIcon sml-cion"></i>过期公开课</a></li>
+          <li><a href="javascript:;"><i class="tenIcon sml-cion"></i>我的信息</a></li>
+          <li><a href="javascript:;"><i class="tenIcon sml-cion"></i>如何上课</a></li>
+        </ul>
+        <i class="tenIcon side-icon"></i>
+      </div> -->
+      <div class="cls-main">
+        <!-- 近期公开课 -->
+        <div class="cls-tab stu-cls" style="display:none;">
+          <div class="stu-tit">
+            <ul>
+              <li>近期公开课</li>
+            </ul>
+            <a href="javascript:;" class="do-cls"><i class="tenIcon do-icon"></i>如何上课</a>
+          </div>
+          <div class="rct-text">
+            <dl>
+              <dt><img src="<%= imagessrc%>1.jpg" alt=""></dt>
+              <dd><span class="tit">亲子阅读树《Lost ans Found》失而复得（下）</span></dd>
+              <dd><span class="word">和孩子亲密的时光，只有那么几年。如何让这样的时光变得更有意义更让孩子终身难忘？最好的方式，大概就是和他/她一起读书了！因为小时候......</span></dd>
+              <dd>
+                <div class="lt">
+                  <span class="time">2015/12/15<em>19:00</em></span>
+                  <span class="load"><a href="javascript:;"><i class="tenIcon load-icon"></i>下载PDF</a></span>
+                </div>
+                <div class="rt">
+                  <a href="javascript:;" class="go-cls wait">等待开始</a>
+                  <a href="javascript:;" class="go-cls wait">即将开始</a>
+                </div>
+              </dd>
+            </dl> 
+            <dl>
+              <dt><img src="<%= imagessrc%>2.jpg" alt=""></dt>
+              <dd><span class="tit">亲子阅读树《Lost ans Found》失而复得（下）</span></dd>
+              <dd><span class="word">和孩子亲密的时光，只有那么几年。如和孩子亲密的时光，只有那么几年。如</span></dd>
+              <dd>
+                <div class="lt">
+                  <span class="time">2015/12/15<em>19:00</em></span>
+                  <span class="load"><a href="javascript:;"><i class="tenIcon load-icon"></i>下载PDF</a></span>
+                </div>
+                <div class="rt">
+                  <a href="javascript:" class="go-cls">去上课</a>
+                </div>
+              </dd>
+            </dl>
+            <dl>
+              <dt><img src="<%= imagessrc%>1.jpg" alt=""></dt>
+              <dd><span class="tit">亲子阅读树《Lost ans Found》失而复得（下）</span></dd>
+              <dd><span class="word">和孩子亲密的时光，只有那么几年。如何让这样的时光变得更有意义更让孩子终身难忘？最好的方式，大概就是和他/她一起读书了！因为小时候......</span></dd>
+              <dd>
+                <div class="lt">
+                  <span class="time">2015/12/15<em>19:00</em></span>
+                  <span class="load"><a href="javascript:;"><i class="tenIcon load-icon"></i>下载PDF</a></span>
+                </div>
+                <div class="rt">
+                  <a href="javascript:;" class="go-cls wait">等待开始</a>
+                  <a href="javascript:;" class="go-cls wait">即将开始</a>
+                </div>
+              </dd>
+            </dl>  
+          </div>
+        </div> 
+        <!-- 过期公开课 -->
+        <div class="cls-tab stu-cls" style="display:none;">
+          <div class="stu-tit">
+            <ul>
+              <li>过期公开课</li>
+            </ul>
+          </div>
+          <div class="rct-text">
+            <dl>
+              <dt><img src="<%= imagessrc%>1.jpg" alt=""></dt>
+              <dd><span class="tit">亲子阅读树《Lost ans Found》失而复得（下）</span></dd>
+              <dd><span class="word">和孩子亲密的时光，只有那么几年。如何让这样的时光变得更有意义更让孩子终身难忘？最好的方式，大概就是和他/她一起读书了！因为小时候......</span></dd>
+              <dd>
+                <div class="lt">
+                  <span class="time">2015/12/15<em>19:00</em></span>
+                  <span class="load"><a href="javascript:;"><i class="tenIcon load-icon"></i>下载PDF</a></span>
+                </div>
+              </dd>
+              <dd class="nt-cls">
+                <i class="tenIcon nt-icon"></i>
+              </dd>
+            </dl> 
+            <dl>
+              <dt><img src="<%= imagessrc%>2.jpg" alt=""></dt>
+              <dd><span class="tit">亲子阅读树《Lost ans Found》失而复得（下）</span></dd>
+              <dd><span class="word">和孩子亲密的时光，只有那么几年。如和孩子亲密的时光，只有那么几年。如</span></dd>
+              <dd>
+                <div class="lt">
+                  <span class="time">2015/12/15<em>19:00</em></span>
+                  <span class="load"><a href="javascript:;"><i class="tenIcon load-icon"></i>下载PDF</a></span>
+                </div>
+              </dd>
+              <dd class="nt-cls">
+                <i class="tenIcon cm-icon"></i>
+              </dd>
+            </dl>
+            <dl>
+              <dt><img src="<%= imagessrc%>1.jpg" alt=""></dt>
+              <dd><span class="tit">亲子阅读树《Lost ans Found》失而复得（下）</span></dd>
+              <dd><span class="word">和孩子亲密的时光，只有那么几年。如何让这样的时光变得更有意义更让孩子终身难忘？最好的方式，大概就是和他/她一起读书了！因为小时候......</span></dd>
+              <dd>
+                <div class="lt">
+                  <span class="time">2015/12/15<em>19:00</em></span>
+                  <span class="load"><a href="javascript:;"><i class="tenIcon load-icon"></i>下载PDF</a></span>
+                </div>
+              </dd>
+              <dd class="nt-cls">
+                <i class="tenIcon cm-icon"></i>
+              </dd>
+            </dl>  
+          </div>
+        </div>
+        <!-- 我的信息 -->
+        <div class="cls-tab stu-cls" style="display:block;">
+          <div class="mess tea-mess">
+            <div id="infoBox">
+              <ul>
+                <li><em>所在学校</em>:<span>北京109中学小学实验部</span></li>
+                <li><em>中&nbsp;&nbsp;文&nbsp;&nbsp;名</em>:<span>林徽因</span></li>
+                <li><em>英&nbsp;&nbsp;文&nbsp;&nbsp;名</em>:<span>Cherry</span></li>
+                <li><em>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 别</em>:<span>女</span></li>
+                <li><em>手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 机</em>:<span>13586669888</span><a class="modify-btn" href="javascript:;">更改手机号</a></li>
+                <li><em>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 箱</em>:<span>3iejoy@yeah.net</span></li>
+                <li class="modify-password"><em>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 码</em>:
+                  <span class="password-box"><span class="password-text">*********</span></span><a class="modify-btn" href="javascript:;">修改</a></li>
+              </ul>
+              <a href="javascript:;" id="modifyBtnId" class="modify-all-btn ">编辑资料</a>
+            </div>
+
+            <div id="modifyInfoBox">
+            <form>
+              <ul>
+                <li><em>所在学校</em>:<span>北京109中学小学实验部</span></li>
+                <li><em>中&nbsp;&nbsp;文&nbsp;&nbsp;名</em>:<input class="edit-input" type="text" value="林徽因"/>
+                </li>
+                <li><em>英&nbsp;&nbsp;文&nbsp;&nbsp;名</em>:<input class="edit-input" type="text" value="cherry"/></li>
+                <li><em>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 别</em>:
+                  <span class="select-box" id="menSex" data-id="1"><span class="sex-selected"></span></span><span>男</span>
+                  <span class="select-box" id="womanSex" data-id="2"><span class="sex-selected"></span></span><span>女</span>
+                </li>
+                <li><em>手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 机</em>:<span>13586669888</span></li>
+                <li><em>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 箱</em>:<span>3iejoy@yeah.net</span></li>
+                <li class="modify-password"><em>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 码</em>:
+                  <span class="password-box"><span class="password-text">*********</span></span><a class="modify-btn" href="javascript:;">修改</a></li>           
+              </ul>
+              <a href="javascript:;"  class="modify-all-btn modify-cancel">取消</a>
+              <button  class="modify-all-btn modify-sure">确定</button>
+              <input id="selectBoxValue" type="hidden" value="1">
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- 如何上课 -->
+        <div class="cls-tab" style="display:none;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta content="yes" name="apple-mobile-web-app-capable" /> 
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+    <meta content="telephone=no" name="format-detection" /> 
+    <title>欢迎下载51Talk App</title>
+    <link rel="stylesheet" type="text/css" href="<%= csslink%>">
+    <style type="text/css">
+      /*图形验证码字体过长*/
+      .container .form1_reg .list input{
+        font-size: 1.3rem;
+      }
+      .container .form1_reg .list_code .getCodes {
+        height: 4.0rem;
+        line-height: 4.0rem;
+        text-align: center;
+        background: #ff4a54;
+        color: #fff;
+        font-size: 1.5rem;
+        border-radius: 0.5rem;
+        margin-left: 5%;
+        width: 35%;
+        float: right;
+      }
+    </style>
+</head>
+<body>
+  <section class="container" data-init="reg">
+     <hgroup>
+       <img src="<%=imagessrc%>banner.jpg" class="width100" />
+       <h1 id="top">填写信息  免费体验</h1>
+     </hgroup>
+     <hgroup class="form1_reg">
+        <form id="form1_reg">
+           <div class="list">
+             <input type="text" class="mobile" placeholder="请输入您的手机号" />
+           </div>
+           <div class="list list_code">
+             <input type="text" class="mobilecode" placeholder="请输入图形验证码" id="authCode"/>
+             <div  class="" style="background: none;display: inline-block;height: 100%;width: 35%;border-radius:5px;height: 4.0rem;float: right;margin-top: 1px;margin-left: 5%;">
+                  <img 
+                       id="verifycode" src="http://www.51talk.com/passport/authCode"
+                       height="100%" width="100%" onclick="this.src='http://www.51talk.com/passport/authCode'+'?a'+'='+new Date().getTime()"
+                       alt="单击更换验证码" title="单击更换验证码">
+                </div>
+           </div>
+            <div class="list list_code">
+             <input type="text" class="mobilecode" placeholder="请输入验证码" />
+             <div class="getCodes" data_state="1">获取验证码</div>
+           </div>
+            <div class="list">
+               <input type="password" class="pwd" placeholder="请设置您的密码" />
+           </div>
+           <div class="list">
+              <a href="javascript::" id="freeBtn">马上免费体验</a>
+           </div>
+        </form>
+     </hgroup>
+     <hgroup class="introList">
+        <h2>适合<span>20-45</span>岁上的英语课程</h2>
+        <div class="list">
+          <div class="lf">
+            <img src="<%=imagessrc%>pro1.jpg" class="width100" />
+          </div>
+          <div class="ri">
+            <h3>商务英语<i></i></h3>
+            <p>还原真实商务场景，提供商务中电话、邮件、会议、出差、报告、谈判等实用英语口语表达。</p>
+          </div>
+        </div>
+        <div class="list">
+          <div class="ri tx">
+            <h3>雅思口语<i></i></h3>
+            <p>课程基本覆盖考试中所有典型话题，针对雅思口语题目的Part1、Part2、Part3真题和独家解析。</p>
+          </div>
+           <div class="lf pi">
+            <img src="<%=imagessrc%>pro2.jpg" class="width100" />
+          </div>
+        </div>
+        <div class="list">
+          <div class="lf">
+            <img src="<%=imagessrc%>pro3.jpg" class="width100" />
+          </div>
+          <div class="ri">
+            <h3>面试口语<i></i></h3>
+            <p>鲜活的面试情景对话中融入常见面试问题，并由外教带领学员进行一对一全真演练。</p>
+          </div>
+        </div>
+     </hgroup>
+     <hgroup>
+        <img src="<%=imagessrc%>lina.jpg" class="width100" />
+        <div class="registBtn">
+          <a href="#top">马上注册，体验免费外教课</a>
+          <p>Copyright©北京大生知行科技有限公司</p>
+        </div>
+     </hgroup>
+  </section>
+</body>
+<script id="seajsnode" src="<%= jssrc%>"></script>
+</html>

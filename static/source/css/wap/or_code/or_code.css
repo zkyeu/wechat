@@ -1,0 +1,95 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Mon Apr 11 2016 14:38:21 GMT+0800 (中国标准时间)
+ */
+/*初始化样式*/
+body {
+  font-family: 'Microsoft YaHei', STXihei, MingLiu;
+  background: #ebebeb;
+  width: 100%;
+  background-color: #121013;
+}
+cite,
+i,
+s,
+b {
+  font-style: normal;
+  font-weight: normal;
+}
+body,
+ul,
+li,
+p,
+dl,
+dt,
+dd,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+  padding: 0px;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+li {
+  list-style: none;
+}
+img {
+  border: 0px;
+}
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+input {
+  font-family: 'Microsoft YaHei', STXihei, MingLiu;
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  overflow: hidden;
+  height: 100%;
+  background-color: #ffffff;
+}
+.code_content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.code_content .box {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  display: -ms-flexbox;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  display: -moz-box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  display: flexbox;
+  flex-pack: center;
+  flex-align: center;
+}
+.code_content .box .or_code {
+  width: 100%;
+}

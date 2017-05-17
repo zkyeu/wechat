@@ -1,0 +1,32 @@
+<% include ../common/top.ejs %>
+<body data-init="teaType3">
+    <div class="ac-popup-wrap">
+        <div class="ac-popup-header clearfix">
+            <p class="fl">Quiz</p>
+            <p class="fr">
+                <a href="javascript:void;" class="a-close">Go back to class</a>
+            </p>
+        </div>
+        <div class="ac-popup-content">
+            <p class="type_title type_3_title">Word Choice</p>
+            <p class="type_2_text">I ___ born in ___ on May 10th.</p>
+            <div class="type_btn" yinpin="/images/html/ac_voice_share/horse.mp3">
+            <div class="ac_tip">点击此处播放</div></div>
+            <div class="type_2_img tea_type_3_img">
+                <img src="<%= imagessrc%>q_img.jpg" />
+            </div>
+            <div class="question_choose stu_choose">
+                <p class="choose_click">A. was, 2005</p>
+                <p class="">B. were,2004</p>
+                <p>C. am,2005 </p>
+            </div>
+             <p class="type_4_text  tea_text">Answer : <span class="text_a">B</span></p>
+        </div>
+        <div class="ac-popup-bottom">
+            <input type="button" value="Send to students" class="btn-teasend btn-disabled" disabled="disabled"  />
+        </div>
+    </div>
+    <div id="mp3Box"></div>
+
+</body>
+<% include ../common/bottom.ejs %>

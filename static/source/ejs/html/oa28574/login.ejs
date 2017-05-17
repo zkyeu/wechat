@@ -1,0 +1,42 @@
+<% include ../common/top.ejs %>
+<body>
+<!-- public top -->
+<% include top.ejs %>
+<!-- login -->
+<div class="login" id="container" data-init="subject">
+  <img src="<%= imagessrc%>/a_sign_img.jpg" class="a-img">
+  <form action="" id="loginForm" method="post">
+  <div class="lon-btn">
+    <div class="btn-ts"><span>中文</span><i class="btn-i"></i></div>
+    <ul class="btnUl hide">
+      <li><a href="javascript:;">中文</a></li>
+      <li><a href="javascript:;">English</a></li>
+    </ul>  
+  </div>
+  <div class="rt">
+    <h3>登录51Talk OA系统</h3>
+    <ul class="r-ul">
+      <li>
+        <dl>
+          <dt><i class="userName"></i></dt>
+          <dd><input name="nsername" type="text" id="username" class="jsCheck" placeholder="请输入您的用户名"></dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt><i class="passWord"></i></dt>
+          <dd><input name="password" type="text" id="password" class="jsCheck" placeholder="请输入您的密码"></dd>
+        </dl>
+      </li>
+    </ul>
+    <a href="javascript:;" class="forPs">忘记密码?</a>
+    <!-- error -->
+    <span class="error hide">您的密码错误</span>
+    <input type="button" value="登录" class="a-log-btn">
+  </div>
+  </form>
+</div>
+<!-- public bottom -->
+<% include bottom.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

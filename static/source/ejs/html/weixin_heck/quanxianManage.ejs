@@ -1,0 +1,100 @@
+<% include ../common/top_b2s.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%=csslinkb2s%>tableStyle.css">
+</head>
+<body data-init="quanxianManage">
+<div class="pad20px content-width70 clearfix">
+    <div class="page-title">报表权限管理</div>
+
+    <div class="ptb20 clear-fix">
+        <!--<div class="guide-link fl">-->
+            <!--全部 > <a href="#">某团队</a> > <a href="#">某人</a>-->
+        <!--</div>-->
+        <div class="set-pos fr">
+            <!--<div class="select-time">-->
+                <!--123132123-->
+            <!--</div>-->
+            <div class="add-btn">
+                <a href="javascript:;" id="addNew">新增</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-box">
+        <table class="table-detail dn" border="1" cellspacing="0" cellpadding="0">
+            <thead>
+                <tr>
+                    <th>CRM账号</th>
+                    <th>管理组</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody class="sel-dom">
+                <!--<tr>-->
+                    <!--<td>abc10293</td>-->
+                    <!--<td>小组01，小组03，小组03，小组04,小组01，小组03，小组</td>-->
+                    <!--<td>-->
+                        <!--<a href="javascript:;" data-eid="1" class="edit">编辑</a>-->
+                        <!--<a href="javascript:;" data-did="1" class="del">删除</a>-->
+                    <!--</td>-->
+                <!--</tr>-->
+            </tbody>
+        </table>
+        <h5 class="dn">暂无相关数据！</h5>
+    </div>
+</div>
+<div class="mask-layer z9 dn" id="maskLayer">
+    <!--<div class="doLayer doLayer-w1 edit-layer bor-ra ">-->
+        <!--<div class="clear-fix">-->
+            <!--<dt>CRM账号</dt>-->
+            <!--<dd>-->
+                <!--<input placeholder="请输入CRM账号" id="admin_name">-->
+            <!--</dd>-->
+        <!--</div>-->
+        <!--<div class="clear-fix">-->
+            <!--<dt>管理组</dt>-->
+            <!--<dd>-->
+                <!--<textarea placeholder="请输入管理组，多个组用逗号分割" id="group_alias"></textarea>-->
+                <!--<div class="name-list dn">-->
+                    <!--<span>管理组名单：</span>-->
+                    <!--<p class="manage-name-list"></p>-->
+                <!--</div>-->
+            <!--</dd>-->
+        <!--</div>-->
+        <!--<div class="layer-btn">-->
+            <!--<span class="confirmAdd">确定</span>-->
+            <!--<span class="concel">取消</span>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="doLayer doLayer-w1 edit-layer bor-ra dn">
+        <div class="clear-fix">
+            <dt>CRM账号</dt>
+            <dd>
+                <input class="crm-id" placeholder="请输入CRM账号" id="admin_name">
+            </dd>
+        </div>
+        <div class="clear-fix">
+            <dt>管理组</dt>
+            <dd>
+                <div class="manage-name-list">
+                    <!--<span class="group-sel">你好啊</span>-->
+                </div>
+            </dd>
+        </div>
+        <div class="layer-btn">
+            <span class="confirm">确定</span>
+            <span class="edit">确定</span>
+            <span class="concel">取消</span>
+
+        </div>
+    </div>
+    <div class="doLayer doLayer-w2 bor-ra dn">
+        <h5>该信息已存在，是否保存并覆盖？</h5>
+        <div class="layer-btn">
+            <span class="confirm">确定</span>
+            <span class="concel">取消</span>
+        </div>
+    </div>
+</div>
+</body>
+<% include ../common/bottom.ejs %>
