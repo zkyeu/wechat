@@ -1,0 +1,49 @@
+<% include ../common/top.ejs %>
+<body class="app-wrap app-bg1" data-init="appForm">
+	<p class="app-reg2-t">北京109小学-3年级3班-赵雷</p>
+	<div class="app-container">
+		<form action="" rel="form">
+			<div class="app-reg-c">
+				<h6>请设置一个登录密码</h6>
+				<ul class="app-input app-input-3">
+					<li>
+						<dl>
+							<dt class="app-ls1">密码</dt>
+							<dd>
+								<input type="text" placeholder="请输入密码" class="app-input-t" rel="password" />
+							</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+
+			<div class="app-reg-c">
+				<h6>补充身份信息</h6>
+				<ul class="app-input app-input-3">
+					<li>
+						<dl>
+							<dt>英文名</dt>
+							<dd>
+								<input type="text" placeholder="请输入英文名或姓名拼音" class="app-input-t" rel="enname" />
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt class="app-ls1">性别</dt>
+							<dd class="app-sex">
+								<em class="is-sel" data-sex="0">男</em>
+								<em data-sex="1">女</em>
+								<input type="hidden" rel="sex" value="0" />
+							</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+			<div class="app-input-s-w">
+				<input type="submit" class="app-input-s" value="完成注册" />
+			</div>
+		</form>
+	</div>
+</body>
+<% include ../common/bottom.ejs %>

@@ -1,0 +1,85 @@
+<% include ../common/top.ejs %>
+<body class="ac-tem-pair ac-tem-tea" data-init="acPair" swfHref="" audioPath="" page-tag="pair,stu,demo">
+	<div class="ac-tem">
+		<div class="ac-tem-tit">
+            <span class="ac-tem-tit-bg"></span>
+            <div class="ac-tem-tit-in ac-tem-wrap clearfix">
+                <a href="javascript:void(0);" class="ac-close ac-pair-spirts fr">Go back to class</a>
+            </div>
+        </div>
+	    <div class="ac-tem-con ac-tem-wrap ac-tem-demo-wrap">
+	    	<div class="ac-tem-info">
+				<ul class="clearfix">
+	            	<li class="ac-timmer">
+	            		<span></span>
+	            	</li>
+	            	<!-- <li class="ac-beans">
+                        <span>+999</span>
+                    </li> -->
+	            </ul>
+	    	</div>
+	        <div class="ac-tem-content"></div>
+            <dl class="ac-tem-demo clearfix">
+                <dt class="fl">卡片背后藏有不同内容，只有找到相关两个宝贝才能消除。</dt>
+                <dd class="fr">
+                    <span class="notip">不再提示</span>
+                    <a href="http://www.baidu.com" class="skip">跳过</a>
+                    <a href="/templates/html/ac_dialog/ac_tea_pair_send.html">back</a>
+                </dd>
+            </dl>
+            <div class="ac-tem-tips">
+                <div class="ac-tem-tips-inner">
+                    <ul class="clearfix">
+                        <li>Speak slower, be encouraging and patientpatientpatient.</li>
+                    </ul>
+                </div>
+            </div>
+	    </div>
+	</div>
+<div class="demo-mask"></div>
+<div class="demo-tips">
+    <p><span>正确，<br />即将消除</span></p>
+    <p class="demo-tips2"><span>不对呦，<br />重新点击</span></p>
+</div>
+
+<!-- <div class="demo-tips demo-tips-tea">
+    <p><span>The student is right.</span></p>
+    <p class="demo-tips2"><span>The student is wrong.</span></p>
+</div> -->
+
+<form method="post" action="ac_stu_pair_result.html" name="gamePlay">
+    <input type="hidden" name="goCount" />
+    <input type="hidden" name="playTime" />
+    <input type="hidden" name="resultArr" />
+    <input type="hidden" name="r" value="3" />
+</form>
+<script type="text/javascript">
+var dataJson = {
+    // type play 玩游戏 show 展示
+    type : "demo",
+    // workTime 玩游戏的时间
+    workTime : 3000,
+    // closeTime 答案展示时间
+    closeTime : 3000,
+    // bufferTime 本道题老师端buffer时间 老师端看报告才用到
+    bufferTime : 8000,
+    // 数据
+    dataArr : [
+        // 图片地址 | 成功音频 如没有 为"" | 配对id | 对错状态 0 错误 1 正确 9 无状态
+        '/images/html/ac_dialog/pair-demo2.png|/images/html/ac_dialog/pair-demo2.mp3|2|9',
+        '/images/html/ac_dialog/pair-demo1c.png||1|9',
+        '/images/html/ac_dialog/pair-demo2c.png|/images/html/ac_dialog/pair-demo2.mp3|2|9',
+        '/images/html/ac_dialog/pair-demo1.png||1|9',
+        '/images/html/ac_dialog/pair-demo5.png||5|9',
+        '/images/html/ac_dialog/pair-demo4c.png||4|9',
+        '/images/html/ac_dialog/pair-demo5c.png||6|9',
+        '/images/html/ac_dialog/pair-demo3.png||3|9',
+        '/images/html/ac_dialog/pair-demo3c.png||3|9',
+        '/images/html/ac_dialog/pair-demo4.png||4|9'
+    ],
+    // 各种环境图片前缀
+    imgPath : ""
+};
+</script>
+</body>
+<% include ../common/bottom.ejs %>

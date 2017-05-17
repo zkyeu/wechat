@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title></title>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link href="/css/html/home_review/home_review.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <div id="clickMusic"></div>
+    <div id="questionMusic"></div>
+    <div id="feedbackMusic"></div>
+    <div id="bgMusic"></div>
+    <div id="loading-wrap" class="loading-wrap">
+      <canvas width="350" height="500" id="loading_canvas"></canvas>
+    </div>
+    <input type="hidden" id="fetchdata" value="http://usa.51talk.com/efl/fetchReviewByAjax?course_id=39105&amp;debug=1"/>
+    <input type="hidden" id="submiturl" value="submitanwser?course_id=ceshi123456"/>
+    <div class="feedback-wrap">
+      <div class="feedback">
+        <div class="icon"></div>
+        <p class="text"></p>
+      </div>
+    </div>
+    <div class="complete-mark">
+      <div class="complete-common">
+        <p class="answer-right-tips"></p>
+        <p class="answer-error-tips"></p><a href="javascript:;" target="_blank" class="tryagain-btn"></a><a href="javascript:;" target="_blank" class="person-center-btn"></a>
+      </div>
+    </div>
+    <div class="canvas-wrap">
+      <canvas width="210" height="327" id="rabbit_canvas" class="rabbit"></canvas>
+      <canvas width="434" height="390" id="clown_canvas" class="rotateIn clown"></canvas>
+      <canvas width="1920" height="245" id="led_canvas" class="led"></canvas><img src="/images/html/home_review/theme_circus/clown_sprites.png" alt="" style="display:none" class="clown_sprites"/><img src="/images/html/home_review/theme_circus/clown_sprites_success.png" alt="" style="display:none" class="clown_sprites_success"/><img src="/images/html/home_review/theme_circus/clown_sprites_error.png" alt="" style="display:none" class="clown_sprites_error"/><img src="/images/html/home_review/theme_circus/rabbit_sprites.png" alt="" style="display:none" class="rabbit_sprites"/><img src="/images/html/home_review/theme_circus/rabbit_sprites_success.png" alt="" style="display:none" class="rabbit_sprites_success"/><img src="/images/html/home_review/theme_circus/rabbit_sprites_error.png" alt="" style="display:none" class="rabbit_sprites_error"/><img src="/images/html/home_review/theme_circus/led_sprites.png" alt="" style="display:none" class="led_sprites"/><img src="/images/html/home_review/theme_circus/led_none.png" alt="" style="display:none" class="led_none"/><img src="/images/html/home_review/theme_circus/playing.png" alt="" style="display:none" class="playing_audio"/><img src="/images/html/home_review/theme_circus/loading.png" alt="" style="display:none" class="loading_img"/>
+    </div>
+    <div id="container" data-init="circus" class="theme-circus theme-common">
+      <div class="header-common header-circus">
+        <p class="header-common-level"></p><a href="javascript:;" target="_blank" class="header-common-pdf">课后作业 Worksheet （PDF版 下载）</a>
+      </div>
+      <div class="mold-common"></div><a href="javascript:;" id="question-submit" class="submitbtn-common"></a>
+      <div class="progress-circus progress-common">
+        <p class="progress"><span></span>
+          <canvas width="226" height="150" id="progress_canvas"></canvas>
+        </p>
+      </div>
+    </div>
+    <script src="../../../js/html/project/home_review/pind.js?v=1"></script>
+    <script src="/js/html/project/home_review/vendor.js" id="seajsnode" type="text/javascript"></script>
+  </body>
+</html>

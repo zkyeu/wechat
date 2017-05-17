@@ -1,0 +1,195 @@
+<% include ../common/top_b2s.ejs %>
+<link rel="stylesheet" type="text/css" href="<%= csslinkb2s %>admin_new.css">
+</head>
+<body data-init="adminNew" class="heck_admin">
+<div v-cloak class="border-height">
+    <div class="clearfix admin_center">
+        <div class="project_list">
+            <p>知识库</p>
+            <ul>
+                <li class="active"><a href="javascript:;"></a>美国小学<span>(29)</span></li>
+                <li><a href="javascript:;"></a>B2S<span>(8)</span></li>
+                <li><a href="javascript:;"></a>美国小学<span>(29)</span></li>
+                <li><a href="javascript:;"></a>B2S<span>(8)</span></li>
+            </ul>
+        </div>
+        <div class="content_list" v-if="(!!user_group)">
+            <div class="content-head">
+                <div class="clearfix label_list">
+                    <ul class="clearfix">
+                        <li class="active"><a href="javascript:;"></a>开场白</li>
+                        <li><a href="javascript:;"></a>匹配体验课</li>
+                        <li><a href="javascript:;"></a>渗透理念</li>
+                        <li><a href="javascript:;"></a>渗透理念</li>
+                        <li><a href="javascript:;"></a>渗透理念</li>
+                        <li><a href="javascript:;"></a>渗理念</li>
+                        <li><a href="javascript:;"></a>渗透理念</li>
+                        <li><a href="javascript:;"></a>渗透理念</li>
+                        <li><a href="javascript:;"></a>渗透grggrgr理念</li>
+                        <li><a href="javascript:;"></a>渗dddd理念</li>
+                        <li><a href="javascript:;"></a>渗透理念</li>
+                        <li><a href="javascript:;"></a>渗透理念</li>
+                        <li><a href="javascript:;"></a>渗透grgrgr理念</li>
+
+                    </ul>
+                    <div class="lable_administration" @click="toolPopShow()">标签管理</div>
+                </div>
+            </div>
+
+
+            <div class="lable_inner" v-if="(!!keyword_id)">
+                <dl class="clearfix" v-for="x in listData.resultArr">
+                    <dt>{{$index + 1}}</dt>
+                    <dd class="text" :title="listData.resultJson[x].content">{{ listData.resultJson[x].content }}
+                    </dd>
+                    <dd class="tool">
+                        <ul class="clearfix">
+                            <li class="down" title="下移" @click="listDataMove($index,'down')"></li>
+                            <li class="up" title="上移" @click="listDataMove($index,'up')"></li>
+                            <li class="chenge" title="编辑" @click="listDataDeal('edit',x)"></li>
+                            <li class="delet" title="删除" @click="listDataDel(x)"></li>
+                        </ul>
+                        <!-- <div class="pop" v-show="x.flag">
+                            <h5 class="delet_mes">确定删除该消息吗？</h5>
+                            <p class="clearfix">
+                                <span class="sure_btn" @click="listDataDelSure(x)">确定</span>
+                                <span class="not_btn" @click="listDataDelHide
+                                (x)">取消</span>
+                            </p>
+                        </div> -->
+                    </dd>
+                </dl>
+                <div class="add_normal_text" @click="listDataDeal('add')">
+                    <span>+</span>
+                    <p>新建</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 标签管理弹层 -->
+    <div class="tool_pop" v-show="toolPop.show">
+        <div class="tool_content">
+            <h3>分类管理</h3>
+            <ul>
+                <li class="clearfix" v-for="x in keywordData.resultArr">
+                <!--<li class="clearfix" >-->
+                    <div :class="keywordData.resultJson[x].flag ? 'change_t' : 'normal_t'">
+                        <input type="text" v-model="keywordData.resultJson[x].name" :readonly="!keywordData.resultJson[x].flag" placeholder="请输入分类名称"/>
+                        <span class="right" @click="keywordDataRight(x)"></span>
+                        <!--<span class="error" @click="keywordDataClose(x)" v-if="!keywordData.resultJson[x].isNew"></span>-->
+                    </div>
+                    <div class="label-list">
+                        <div class="labe-con">
+                            <h4 @click="showSel(x)">
+                                {{ returnArr(keywordData.resultJson[x].tagList , labelList.resultJSON) }}
+                            </h4>
+                            <div class="labe-detail" tabIndex="-2" v-show="(x == labelLayer) && labelShow" @blur="hideSel" :class="{'showLay' : x == labelLayer}">
+                                <template v-for="y in labelList.resultArr">
+                                    <label :class="{'sel' : keywordData.resultJson[x].tagList.indexOf(y) > -1}" @click.stop="setSel(x, y)">
+                                        {{ labelList.resultJSON[y].tag_name }}
+                                    </label>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="change_tool">
+                        <span class="t-up" @click="keywordDataMove($index,'up')">上移&nbsp;&nbsp;|</span>
+                        <span class="t-down" @click="keywordDataMove($index,'down')">&nbsp;&nbsp;下移&nbsp;&nbsp;|</span>
+                        <span class="t-change" @click="keywordDataChange(x)">&nbsp;&nbsp;修改&nbsp;&nbsp;|</span>
+                        <span class="t-del" @click="keywordDataDelet(x)">&nbsp;&nbsp;删除</span>
+                    </div>
+                </li>
+
+                <li class="clearfix add_message">
+                    <p class="add_mes" @click="keywordDataAdd()">
+                        <span>+</span> 添加新分类
+                    </p>
+                </li>
+            </ul>
+            <div class="clearfix tool_btn">
+                <span class="sure" @click="keywordDataSure()">保存</span>
+                <span class="del-1" @click="keywordDataClosePop()">取消</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 创建弹窗弹窗 -->
+    <div class="creat_text_pop" v-show="creatPop.show">
+        <div class="creat_pop">
+            <h3>分类 ：{{ creatPop.type }}</h3>
+            <span>内容 : </span>
+            <textarea v-model="creatPop.content"></textarea>
+            <p class="keyword_p">#NickName# => CC英文名 </p>
+            <p class="keyword_p"> #RelationShip# => 与学员关系</p>
+            <p class="keyword_p">#StudentName# => 学员英文名</p>
+            <P class="clearfix tool_btn">
+                <span class="sure" @click="listDataCreatSure()">{{ creatPop.creat ? '创建' : '确定'}}</span>
+                <span class="del-3" @click="listDataCreatHide()">取消</span>
+            </P>
+        </div>
+    </div>
+
+    <!-- 删除弹层 -->
+</div>
+<script type="text/javascript">
+//    var listData = [{"id":"29","content":"\u8bf7\u95ee\u5b69\u5b50\u82f1\u6587\u540d\u5b57\u662f\u4ec0\u4e48\u5440\uff1f","sort":"1"},{"id":"27","content":"\u60a8\u597d\uff0c\u6211\u662f\u5b69\u5b50\u7684\u8bfe\u7a0b\u8001\u5e08#NickName#\uff0c\u5f88\u9ad8\u5174\u8ba4\u8bc6\u60a8\uff01\u5b69\u5b50\u7684\u4f53\u9a8c\u8bfe\u7531\u6211\u6765\u8d1f\u8d23\uff0c\u60a8\u6709\u4efb\u4f55\u95ee\u9898\u53ef\u4ee5\u968f\u65f6\u4e0e\u6211\u6c9f\u901a\uff0c\u6211\u4f1a\u7b2c\u4e00\u65f6\u95f4\u5e2e\u60a8\u89e3\u7b54\u3002","sort":"2"},{"id":"28","content":"\u8bf7\u95ee\u5b69\u5b50\u7684\u82f1\u6587\u540d\u662f#StudentName#\u5bf9\u5427\uff1f","sort":"3"},{"id":"52","content":"OOI","sort":"4"},{"id":"53","content":"FEWA;GJEGJELAGRRSEGAE","sort":"5"},{"id":"57","content":"#NickName#","sort":"6"},{"id":"67","content":"{\u9752\u5c11}\u8bfe\u524d\u63d0\u9192","sort":"7"}];
+//    var keywordData = [{"id":"20","name":"\u5f00\u573a\u767d"},{"id":"21","name":"\u5339\u914d\u4f53\u9a8c\u8bfe"},{"id":"33","name":"55"},{"id":"34","name":"66"},{"id":"32","name":"44"},{"id":"31","name":"33"},{"id":"30","name":"22"},{"id":"29","name":"22"},{"id":"28","name":"11"},{"id":"27","name":"\u6559\u6750"},{"id":"26","name":"\u8bbe\u5907"},{"id":"25","name":"\u8bfe\u524d\u51c6\u5907"},{"id":"36","name":"\u5fae\u4fe1\u6dfb\u52a0\u7533\u8bf7\u8bed"},{"id":"35","name":"\u8bfe\u524d\u5e38\u89c1\u95ee\u9898\u89e3\u7b54"},{"id":"40","name":"\u53d1\u9001\u6559\u6750\u9884\u7ea6\u8ddf\u8fdb"},{"id":"39","name":"\u53d1\u9001\u6559\u6750\u9884\u7ea6\u8ddf\u8fdb"},{"id":"38","name":"\u53d1\u9001\u6559\u6750\u9884\u7ea6\u8ddf\u8fdb"},{"id":"37","name":"\u53d1\u9001\u6559\u6750\u9884\u7ea6\u8ddf\u8fdb"},{"id":"41","name":"\u53d1\u9001\u6559\u6750\u9884\u7ea6\u8ddf\u8fdb"},{"id":"42","name":"test"}];
+
+    var listData = [
+//            {
+//                id : 1,
+//                content : "您好，我是孩子的课程老师#MyName#，很高兴认识您！孩子的体验"
+//            },
+//            {
+//                id : 2,
+//                content : "您好，我是孩子的课程老师#MyName#，很高兴认识您！孩子的体验课由我来负您好，我是孩子的课程老师#MyName#，很高兴认识您！孩子的体验课由我来负您好，我是孩子的课程老师#MyName#，很高兴认识您！孩子的体验课由我来负您好，我是孩子的课程老师#MyName#，很高兴认识您！孩子的体验课由我来负"
+//            }
+        ]
+
+    var keywordData = [
+        {
+            id : 1,
+            name : "开场白",
+            tagList : ['1','2']
+        },
+        {
+            id : 2,
+            name : "匹配体验课",
+            tagList : ['1','4']
+        },
+        {
+            id : 3,
+            name : "渗透理念1",
+            tagList : []
+        },
+        {
+            id : 4,
+            name : "渗透理念2",
+            tagList : ['1','2']
+        },
+        {
+            id : 5,
+            name : "渗透理念3",
+            tagList : ['3']
+        },
+        {
+            id : 6,
+            name : "渗透理念4",
+            tagList : ['1']
+        },
+        {
+            id : 7,
+            name : "渗透理念5",
+            tagList : ['1','2']
+        }
+    ];
+    var lableSel= [{"id":"1","tag_name":"\u5df2\u4ed8\u8d39","type":"1","user_group":"1","status":"1","tag_short":"\u4ed8","tag_brief":"","tag_class":"1","tag_posion":"1"},{"id":"2","tag_name":"\u5df2\u4f53\u9a8c","type":"1","user_group":"1","status":"1","tag_short":"\u4f53","tag_brief":"","tag_class":"1","tag_posion":"2"},{"id":"3","tag_name":"\u5df2\u7ea6\u8bfe","type":"1","user_group":"1","status":"1","tag_short":"\u7ea6","tag_brief":"\u4e03\u5929\u4ee5\u4e0a\u672a\u4e0a\u8bfe","tag_class":"1","tag_posion":"3"},{"id":"4","tag_name":"\u672a\u7ea6\u8bfe","type":"1","user_group":"1","status":"1","tag_short":"\u672a","tag_brief":"\u4e03\u5929\u4ee5\u4e0a\u672a\u4e0a\u8bfe","tag_class":"1","tag_posion":"4"},{"id":"35","tag_name":"\u7f3a\u5e2d\u4e0e\u53d6\u6d88","type":"1","user_group":"1","status":"1","tag_short":"\u7f3a","tag_brief":"","tag_class":"1","tag_posion":"5"}]
+
+
+</script>
+<% include ../common/bottom.ejs %>
+</body>
+

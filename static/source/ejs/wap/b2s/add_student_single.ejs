@@ -1,0 +1,23 @@
+<% include ../common/top.ejs %>
+<body data-init="formCommon" version="20160305">
+	<div class="main-wrap login-wrap">
+		<div class="form-wrap reg-step1 input-stu">
+			<form action="#" autocomplete="off" rel="from">
+				<p class="input-stu-tip">请输入学生姓名</p>
+				<dl class="cfix">
+					<dt></dt>
+					<dd>
+						<input type="text" rel="stuname" class="input-t-style" placeholder="学生姓名" />
+					</dd>
+				</dl>
+				<p class="error-tips"></p>
+				<p class="input-prompt">注意：如果不知道邀请码，请联系学生的老师。</p>
+				<div class="submit-btn">
+					<input type="submit" class="input-submit" value="下一步" />
+				</div>
+			</form>
+		</div>
+		<p class="to_login">我已激活, <a href="#">去登录&gt;</a></p>
+	</div>
+</body>
+<% include ../common/bottom.ejs %>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>英语学习，口语学习首选的英语学习网站，51talk无忧英语，外教一对一，在线学英语！</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="{<info.keywords>}"/>
+    <meta name="description" content="51tailk无忧英语专业提供网络英语外教一对一培训教学,专注于真人英语外教一对一培训,让您足不出户,网上平价学英语.英语外教一对一培训服务热线4000-51-51-51"/>
+    <link rel="stylesheet" type="text/css" href="<%= cssPath %>common/commons.css">
+    <link rel="stylesheet" type="text/css" href="<%= cssPath %>teenager/w_ten_class.css">
+</head>
+<body>
+<!-- 公共区域 -->
+<%- include("../common/w_nav.ejs",{
+  wrapClass:"teenager-nav-list",
+  navList:[
+    {
+      className:"crt",
+      text:"51Talk美国小学",
+      url:"http://junior.51talk.com/"
+    },
+    {
+      className:"",
+      text:"学习理念",
+      url:"http://junior.51talk.com/index/feature"
+    },
+    {
+      className:"",
+      text:"青少课程",
+      url:"http://junior.51talk.com/index/system"
+    },
+    {
+      className:"",
+      text:"外教师资",
+      url:"http://junior.51talk.com/index/teachers"
+    },
+    {
+      className:"",
+      text:"上课流程",
+      url:"http://junior.51talk.com/index/guide"
+    }
+  ],
+  isIndex:false, //判断是否为首页
+  isNorth:false //判断是否为美小
+
+  }) %>
+  <div>
+    <% include ../common/w_banner.ejs %>
+  </div>
+<!-- /公共区域 -->
+<!-- 青少年-上课流程 -->
+<div class="class-flow" data-init="teenager/index" id="container">
+  <h3 class="flow-h3"><img data-src="<%=imagessrc%>teenager/ten_c_tit.png" width="599" height="38" src="<%=imagessrc%>common/deafult.png"></h3>
+  <div class="centerMth openClass">
+    <div class="flow-line"></div>
+    <div class="flow-img">
+      <p><img data-src="<%=imagessrc%>teenager/ten_c_pro01.png" width="316" height="140" src="<%=imagessrc%>common/deafult.png"></p>
+      <p><img data-src="<%=imagessrc%>teenager/ten_c_pro02.png" width="734" height="249" src="<%=imagessrc%>common/deafult.png"></p>
+      <p><img data-src="<%=imagessrc%>teenager/ten_c_pro04.png" width="455" height="249" src="<%=imagessrc%>common/deafult.png"></p>
+    </div>
+  </div>
+</div>
+<!-- right side bar -->
+<% include ../common/w_side_bar.ejs %>
+<!-- /right side bar-->
+  <% include ../common/w_footer_home.ejs %>
+</body>
+<script src="<%= jsPath%>common/jquery.min.js"></script>
+<script src="<%= jsPath%>vendor.js" id="seajsnode"></script>
+</html>

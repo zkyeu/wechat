@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <title>51Talk-无忧英语</title>
+    <script src="/js/wap/project/speech_20170216/flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/wap/speech_20170216/speech_20170216.css">
+</head>
+<body>
+<div class="page-index" data-init="index" id="container">
+    <div class="pc-banner" id="j_banner_join">
+        <a href="#">
+            <img src="/images/wap/speech_20170216/btn_banner.jpg"/>
+            <span class="fly"></span>
+        </a>
+    </div>
+    <div class="pc-main">
+        <div class="activity-process">
+            <div class="pc-inner">
+                <div class="lt"></div>
+                <div class="main-con">
+                    <div class="step-process">
+                        <img class="step-pic" src="/images/wap/speech_20170216//step1.png"/>
+                    </div>
+                </div>
+                <div class="r-btn-box">
+                    <a href="#" class="r-btn r-btn-red">
+                        <span class="text-inner">活动详情</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="awards-setting">
+            <div class="pc-inner">
+                <div class="lt"></div>
+                <div class="main-con">
+                    <div class="awards-info">
+                        <div class="list">
+                            <img class="code-pic" src="/images/wap/speech_20170216//j1.png"/>
+                            <img class="code-pic" src="/images/wap/speech_20170216//j2.png"/>
+                            <img class="code-pic" src="/images/wap/speech_20170216//j3.png"/>
+                            <img class="code-pic" src="/images/wap/speech_20170216//j4.png"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="r-btn-box">
+                    <a id="j_join_btn" href="javascript:void(0);" class="r-btn r-btn-orange" data-url="apply.html">
+                        <span class="text-inner">我要参赛</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="cooperative-partner">
+            <div class="pc-inner">
+                <img src="/images/wap/speech_20170216//partner1.jpg"/>
+            </div>
+        </div>
+    </div>
+    <div class="pc-footer">
+        <img src="/images/wap/speech_20170216//code2.jpg"/>
+    </div>
+
+    <!-- 登录信息 -->
+    <input id="j_login_status" type="hidden" value="0"/>
+    <!-- 登录信息 -->
+</div>
+
+<!-- 登陆框 -->
+<div id="j_modal_box" class="d-modal hide">
+    <!-- 登录表单 -->
+    <div id="j_login_form" class="animated zoomIn tip">
+        <a href="javascript:void(0)" class="close"></a>
+        <h3 class="title">51Talk会员登录</h3>
+        <div class="d-form">
+            <div id="j_login_info" class="f-error-tip hide"></div>
+            <div class="f-item">
+                <input name="user_name" type="text" class="f-text" placeholder="填写手机号参加大赛">
+            </div>
+            <div class="f-item">
+                <input name="password" type="password" class="f-text" placeholder="请输入您的密码">
+            </div>
+            <div class="f-btn-box">
+                <a id="j_login_btn" href="javascript:void(0);" class="f-btn">登 录</a>
+            </div>
+            <div class="f-tip clearfix">
+                <a id="j_reg_link" href="javascript:void(0);" class="reg-link">立即注册</a>
+                <a id="j_forget_link" href="javascript:void(0);" class="forget-link">忘记密码</a>
+            </div>
+            <div class="third-landing">
+                <div class="landing-title">
+                    <span class="txt">使用第三方账户登录</span>
+                </div>
+                <div class="landing-list">
+                    <a href="#" class="item qq">
+                        <img class="step-pic" src="/images/wap/speech_20170216//qq1.png">
+                    </a>
+                    <a href="#" class="item sina">
+                        <img class="step-pic" src="/images/wap/speech_20170216//sina1.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 登录表单 -->
+    
+    <!-- 注册表单 -->
+    <div id="j_reg_form" class="animated zoomIn tip hide">
+        <a href="javascript:void(0)" class="close"></a>
+        <h3 class="title">注册成为51Talk会员</h3>
+        <h4 class="sub-title">活动多多，好礼多多</h4>
+        <div class="d-form">
+            <div id="j_reg_info" class="f-error-tip hide"></div>
+            <div class="f-item">
+                <input name="mobile" type="text" class="f-text" placeholder="填写手机号参加大赛">
+            </div>
+            <div class="f-item">
+                <input name="mobile_code" type="text" placeholder="请输入验证码" class="f-text cd_code">
+                <span class="f-btn y_code" id="j_getCode">获取验证码</span>
+            </div>
+            <div class="f-item">
+                <input name="password" type="password" placeholder="请输入您的密码" class="f-text">
+            </div>
+            <div id="intro" class="f-item">
+                <p>若您有推荐人/推荐码，请点这里</p>
+                <input  name="tuicode" type="text"  placeholder="推荐人手机号/推荐码/没有不填" class="f-text hide">
+            </div>
+            <div class="f-btn-box">
+                <a id="j_reg_btn" href="javascript:void(0);" class="f-btn">提交</a>
+            </div>
+            <div class="f-tip">
+                已有账号，立即<a id="j_login_link" href="javascript:void(0);">登录</a>
+            </div>
+        </div>
+    </div>
+    <!-- 注册表单 -->
+</div>
+</body>
+<script id="seajsnode" src="/js/wap/project/speech_20170216/vendor.js"></script>
+</html>

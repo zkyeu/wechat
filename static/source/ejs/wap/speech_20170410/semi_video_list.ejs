@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta content="yes" name="apple-mobile-web-app-capable" /> 
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+    <meta content="telephone=no" name="format-detection" /> 
+    <title>51Talk-无忧英语_视频列表</title>
+    <script src="<%= jsPath %>flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="<%= csslink %>">
+</head>
+<body>
+<div class="vedio_page" data-init="index" id="container"> 
+    <div class="search_box">
+        <div class="default">复赛视频<i class="searchBtn"></i></div>
+        <div class="searching">
+            <input type="text" placeholder="搜索视频" class="searBox"  />
+            <i class="searchBtn"></i>
+            <span></span>
+        </div>
+    </div>
+    <ul class="vedio_top vedio_nav" data-sta="1">
+        <li class="active"><a href="javascript:;">年级分类</a></li>
+        <li><a href="javascript:;">小低组</a></li>
+        <li><a href="javascript:;" class="border0">小高组</a></li>
+    </ul>
+    <div class="P_noVideo">很抱歉，没搜到</div>
+    <div class="vedio_main" >
+        <div class="vedio_foot">
+            <div class="list">
+                <div class="vedio">
+                    <img src="<%= imagessrc %>upload.png" class="width100 videoPic" data-src="<%= imagessrc %>video.mp4" />
+                    <!-- <video style="height:100%;width:100%;" class="videoMain" >
+                          <source src="<%= imagessrc %>video2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                     </video> -->
+                     <span class="player"></span>
+                </div>
+                <div class="intro">
+                    <h3>快乐的小吉妞妞一小子</h3>
+                    <h3>dorem</h3>
+                    <p>郝昕陈</p>
+                    <p>幼儿组（3-6岁）</p>
+                </div>
+            </div>
+             <div class="list">
+                <div class="vedio">
+                    <img src="<%= imagessrc %>upload.png" class="width100 videoPic" data-src="<%= imagessrc %>video2.mp4" />
+                </div>
+                <div class="intro">
+                    <h3>快乐的小吉妞妞一小子</h3>
+                    <h3>dorem</h3>
+                    <p>郝昕陈</p>
+                    <p>幼儿组（3-6岁）</p>
+                </div>
+            </div>
+             <div class="list">
+                <div class="vedio">
+                    <img src="<%= imagessrc %>upload.png" class="width100 videoPic" data-src="<%= imagessrc %>video.mp4" />
+                </div>
+                <div class="intro">
+                    <h3>快乐的小吉妞妞一小子</h3>
+                    <h3>dorem</h3>
+                    <p>郝昕陈</p>
+                    <p>幼儿组（3-6岁）</p>
+                </div>
+            </div>    
+        </div>
+        <div class="vedio_foot" style="display:none">
+            <div class="list">
+                <div class="vedio">
+                    <img src="<%= imagessrc %>upload.png" class="width100 videoPic" data-src="" />
+                </div>
+                <div class="intro">
+                    <h3>快乐的小吉妞妞一小子</h3>
+                    <h3>dorem</h3>
+                    <p>郝昕陈</p>
+                    <p>幼儿组（3-6岁）</p>
+                </div>
+            </div>
+             <div class="list">
+                <div class="vedio">
+                    <img src="<%= imagessrc %>upload.png" class="width100 videoPic" data-src="" />
+                </div>
+                <div class="intro">
+                    <h3>快乐的小吉妞妞一小子</h3>
+                    <h3>dorem</h3>
+                    <p>郝昕陈</p>
+                    <p>幼儿组（3-6岁）</p>
+                </div>
+            </div>
+        </div>
+        <div class="vedio_foot" style="display:none">
+            <div class="list">
+                <div class="vedio">
+                    <img src="<%= imagessrc %>upload.png" class="width100 videoPic" data-src="" />
+                </div>
+                <div class="intro">
+                    <h3>快乐的小吉妞妞一小子</h3>
+                    <h3>dorem</h3>
+                    <p>郝昕陈</p>
+                    <p>幼儿组（3-6岁）</p>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- 导航 -->
+    <div class="wap_nav">
+        <div class="list"><a href="javascript:;" class="active">首页</a></div>
+        <div class="list"><a href="javascript:;">初赛</a></div>
+        <div class="list"><a href="javascript:;">复赛视频</a></div>
+    </div>
+    <!-- 登录信息 -->
+    <input id="j_login_status" type="hidden" value="0"/>
+    <!-- 登录信息 -->
+</div>
+<!-- 视频播放 -->
+<div class="video_mask wap_video_mask" style="display:none">
+  <video style="height:422px;width:100%;" class="videoMain" controls="controls" >
+      <source src="" type="video/mp4">
+        Your browser does not support the video tag.
+ </video>
+</div>
+<!-- 登陆框 -->
+<div id="j_modal_box" class="d-modal d_wap_model hide">
+    <!-- 登录表单 -->
+    <div id="j_login_form" class="animated zoomIn tip">
+        <a href="javascript:void(0)" class="close"></a>
+        <h3 class="title">51Talk会员登录</h3>
+        <div class="d-form">
+            <div id="j_login_info" class="f-error-tip hide"></div>
+            <div class="f-item">
+                <input name="user_name" type="text" class="f-text" placeholder="填写手机号参加大赛">
+            </div>
+            <div class="f-item">
+                <input name="password" type="password" class="f-text" placeholder="请输入您的密码">
+            </div>
+            <div class="f-btn-box">
+                <a id="j_login_btn" href="javascript:void(0);" class="f-btn">登 录</a>
+            </div>
+            <div class="f-tip clearfix">
+                <a id="j_reg_link" href="javascript:void(0);" class="reg-link">立即注册</a>
+                <a id="j_forget_link" href="javascript:void(0);" class="forget-link">忘记密码</a>
+            </div>
+            <div class="third-landing">
+                <div class="landing-title">
+                    <span class="txt">使用第三方账户登录</span>
+                </div>
+                <div class="landing-list">
+                    <a href="#" class="item qq">
+                        <img class="step-pic" src="/images/wap/speech_20170216//qq1.png">
+                    </a>
+                    <a href="#" class="item sina">
+                        <img class="step-pic" src="/images/wap/speech_20170216//sina1.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 登录表单 -->
+    
+    <!-- 注册表单 -->
+    <div id="j_reg_form" class="animated zoomIn tip hide">
+        <a href="javascript:void(0)" class="close"></a>
+        <h3 class="title">注册成为51Talk会员</h3>
+        <h4 class="sub-title">活动多多，好礼多多</h4>
+        <div class="d-form">
+            <div id="j_reg_info" class="f-error-tip hide"></div>
+            <div class="f-item">
+                <input name="mobile" type="text" class="f-text" placeholder="填写手机号参加大赛">
+            </div>
+            <div class="f-item">
+                <input name="mobile_code" type="text" placeholder="请输入验证码" class="f-text cd_code">
+                <span class="f-btn y_code" id="j_getCode">获取验证码</span>
+            </div>
+            <div class="f-item">
+                <input name="password" type="password" placeholder="请输入您的密码" class="f-text">
+            </div>
+            <div id="intro" class="f-item">
+                <p>若您有推荐人/推荐码，请点这里</p>
+                <input  name="tuicode" type="text"  placeholder="推荐人手机号/推荐码/没有不填" class="f-text hide">
+            </div>
+            <div class="f-btn-box">
+                <a id="j_reg_btn" href="javascript:void(0);" class="f-btn">提交</a>
+            </div>
+            <div class="f-tip">
+                已有账号，立即<a id="j_login_link" href="javascript:void(0);">登录</a>
+            </div>
+        </div>
+    </div>
+    <!-- 注册表单 -->
+</div>
+</body>
+<script id="seajsnode" src="<%= jssrc %>"></script>
+</html>

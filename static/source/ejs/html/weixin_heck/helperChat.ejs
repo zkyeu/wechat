@@ -1,0 +1,331 @@
+<% include ../common/top_b2s.ejs %>
+<link rel="stylesheet" type="text/css" href="<%= csslinkb2s %>helperChat.css">
+</head>
+<body data-init="helperChat" class="weixin_heck">
+<div id="app"></div>
+<script type="text/javascript">
+ /*   var localInfo;
+    var user = localStorage.getItem("wxUser");
+    if(user != "1420"){
+        localInfo = {
+            admin_id:'999',
+            admin_name:'liuchenxu',
+            wechat_id:'wxid_vtvul86o3uf322',
+            device_id:'liliang-xiaohao',
+            id:'999',
+            img:"/images/html/weixin_heck/cchead.jpg",
+            grouphead:"/images/html/weixin_heck/grouphead.jpg",
+            groupheader:"/images/html/weixin_heck/groupheader.jpg",
+            v_code:'',
+            ws_host:'yafwechat.51talk.com:8801',
+            fileicon:"/images/html/weixin_heck/file_icon.png",
+            user_group:'3',
+            userGroupList:[{"id":"1","name":"\u6210\u4ebaCC","amount":"0"},{
+                "id":"2",
+                "name":"\u6210\u4ebaSS",
+                "amount":"0"
+            },{"id":"3","name":"\u9752\u5c11CC","amount":"29"},{
+                "id":"4",
+                "name":"\u9752\u5c11SS",
+                "amount":"0"
+            },{"id":"5","name":"\u7f8e\u5c0fCC","amount":"13"},{
+                "id":"6",
+                "name":"\u7f8e\u5c0fCST",
+                "amount":"0"
+            },{"id":"7","name":"\u8fbe\u62c9\u65af","amount":"0"},{"id":"8","name":"B2S","amount":"0"}],
+            rank_list:'yuyumei',
+            nick_name:'liliang小号',
+            is_trust:'0',//1为替代者。0为正常登陆
+            trust_user:'0',
+            admin_type:"cc", //cc 或者is
+            //        labelList : ["\u65b0\u8d2d\u4e70","\u5feb\u5230\u671f","\u5df2\u8fc7\u671f","\u65ad\u8bfe","\u9ad8\u9891"]
+            labelList:{
+                "1":[{
+                    "id":"14",
+                    "tag_name":"已付费",
+                    "type":"1",
+                    "user_group":"3",
+                    "status":"1",
+                    "tag_short":"付",
+                    "tag_brief":"付费的学员",
+                    "tag_class":"1",
+                    "tag_posion":"1"
+                },{
+                    "id":"15",
+                    "tag_name":"已体验",
+                    "type":"1",
+                    "user_group":"3",
+                    "status":"1",
+                    "tag_short":"体",
+                    "tag_brief":"",
+                    "tag_class":"1",
+                    "tag_posion":"2"
+                },{
+                    "id":"16",
+                    "tag_name":"已约课",
+                    "type":"1",
+                    "user_group":"3",
+                    "status":"1",
+                    "tag_short":"约",
+                    "tag_brief":"",
+                    "tag_class":"1",
+                    "tag_posion":"3"
+                },{
+                    "id":"17",
+                    "tag_name":"未约课",
+                    "type":"1",
+                    "user_group":"3",
+                    "status":"1",
+                    "tag_short":"未",
+                    "tag_brief":"",
+                    "tag_class":"1",
+                    "tag_posion":"4"
+                },{
+                    "id":"36",
+                    "tag_name":"缺席与取消",
+                    "type":"1",
+                    "user_group":"3",
+                    "status":"1",
+                    "tag_short":"缺",
+                    "tag_brief":"",
+                    "tag_class":"1",
+                    "tag_posion":"5"
+                }],
+                "2":[{
+                    "id":"18",
+                    "tag_name":"高意向",
+                    "type":"1",
+                    "user_group":"3",
+                    "status":"2",
+                    "tag_short":"高",
+                    "tag_brief":"",
+                    "tag_class":"2",
+                    "tag_posion":"1"
+                },{
+                    "id":"19",
+                    "tag_name":"中意向",
+                    "type":"1",
+                    "user_group":"3",
+                    "status":"2",
+                    "tag_short":"中",
+                    "tag_brief":"",
+                    "tag_class":"2",
+                    "tag_posion":"2"
+                },{
+                    "id":"20",
+                    "tag_name":"低意向",
+                    "type":"1",
+                    "user_group":"3",
+                    "status":"2",
+                    "tag_short":"低",
+                    "tag_brief":"",
+                    "tag_class":"2",
+                    "tag_posion":"3"
+                }]
+            },
+            allData:{"\u7f8e\u5c0fCC":{"\u4e0a\u6d77IT\u90e8\u95e8":{"user_name":"test1","admin_id":"3984"},"WHCC_009\u7ec4":{"user_name":"test01","admin_id":"8492"},"\u6280\u672f\u90e8":{"user_name":"wangguan","admin_id":"1420"},"BJIS_006\u7ec4[\u6210]":{"user_name":"lijia","admin_id":"3668"},"BJCC_016\u7ec4[\u9752]":{"user_name":"madengfeng","admin_id":"621"},"BJCC_029\u7ec4[\u9752]":{"user_name":"wangweixing","admin_id":"4777"},"BJCC_023\u7ec4[\u7f8e]":{"user_name":"zhuhongqiangcc","admin_id":"5525"},"BJCC_011\u7ec4[\u9752]":{"user_name":"gaozijun","admin_id":"5027"},"BJCC_005\u7ec4[\u7f8e]":{"user_name":"lipian","admin_id":"7909"},"BJCC_020\u7ec4[\u9752]":{"user_name":"guoyijuan","admin_id":"4779"},"BJCC_012\u7ec4[\u7f8e]":{"user_name":"cuiyahui","admin_id":"3431"},"BJCC_026\u7ec4[\u7f8e]":{"user_name":"lanchao","admin_id":"7438"},"BJCC_022\u7ec4[\u7f8e]":{"user_name":"fuyujiao","admin_id":"7778"},"BJCC_010\u7ec4[\u9752]":{"user_name":"liuyucc11","admin_id":"3099"},"BJCC_\u65b0\u5175\u8425\u7ec4":{"user_name":"tianl","admin_id":"12"},"BJIS_005\u7ec4[\u6210]":{"user_name":"jiangshan","admin_id":"8735"}},"\u6210\u4ebaCC":{"\u5317\u4eac\u56fd\u8d38\u4f53\u9a8c\u5e97":{"user_name":"test","admin_id":"1164"},"WHCC_001\u7ec4":{"user_name":"wangjie01","admin_id":"4422"}},"\u6210\u4ebaSS":{"BJIS_005\u7ec4[\u6210]":{"user_name":"liuchenxu","admin_id":"7216"}}},
+            allDatas:[
+                {
+                    "name": "美小CC",
+                    "list": [
+                        {
+                            "name": "上海IT部门1",
+                            "list": [
+                                {
+                                    "user_name": "test1",
+                                    "admin_id": "3984"
+                                },
+                                {
+                                    "user_name": "test2",
+                                    "admin_id": "3985"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "上海IT部门2",
+                            "list": [
+                                {
+                                    "user_name": "test21",
+                                    "admin_id": "39284"
+                                },
+                                {
+                                    "user_name": "test11",
+                                    "admin_id": "39824"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "美小ss",
+                    "list": [
+                        {
+                            "name": "北京",
+                            "list": [
+                                {
+                                    "user_name": "test11",
+                                    "admin_id": "39842"
+                                },
+                                {
+                                    "user_name": "test144",
+                                    "admin_id": "398455"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "上海IT部门3",
+                            "list": [
+                                {
+                                    "user_name": "test1123",
+                                    "admin_id": "3984312"
+                                },
+                                {
+                                    "user_name": "test111",
+                                    "admin_id": "123"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            userGroupList:[{"id":"1","name":"\u6210\u4ebaCC","amount":"7"},{"id":"2","name":"\u6210\u4ebaSS","amount":"0"},{"id":"3","name":"\u9752\u5c11CC","amount":"0"},{"id":"4","name":"\u9752\u5c11SS","amount":"0"},{"id":"5","name":"\u7f8e\u5c0fCC","amount":"18"},{"id":"6","name":"\u7f8e\u5c0fCST","amount":"0"},{"id":"7","name":"\u83f2\u5c0f\u8fbe\u62c9\u65af","amount":"0"},{"id":"8","name":"B2S","amount":"0"},{"id":"9","name":"\u7f8e\u5c0f\u8fbe\u62c9\u65af","amount":"0"}]
+        }
+    }else{
+        localInfo = {
+
+            admin_id:"999",
+            is_trust:0,//1为替代者。0为正常登陆
+            trust_user:0,
+            admin_name:"xiaozhushou",
+            wechat_id:"wxid_tiyf63bothlp21",
+            id:"999",
+            img:"/images/html/weixin_heck/cchead.jpg",
+            grouphead:"/images/html/weixin_heck/grouphead.jpg",
+            groupheader:"/images/html/weixin_heck/groupheader.jpg",
+            fileicon:"/images/html/weixin_heck/file_icon.png",
+            v_code:"",
+            ws_host:"",
+            nick_name:"Anson",
+            device_id:"3",
+            user_group:"7",
+            rank_list:"test1,test2",
+            userGroupList:[{"id":"1","name":"\u6210\u4ebaCC","amount":"0"},{
+                "id":"2",
+                "name":"\u6210\u4ebaSS",
+                "amount":"0"
+            },{"id":"3","name":"\u9752\u5c11CC","amount":"29"},{
+                "id":"4",
+                "name":"\u9752\u5c11SS",
+                "amount":"0"
+            },{"id":"5","name":"\u7f8e\u5c0fCC","amount":"13"},{
+                "id":"6",
+                "name":"\u7f8e\u5c0fCST",
+                "amount":"0"
+            },{"id":"7","name":"\u8fbe\u62c9\u65af","amount":"0"},{"id":"8","name":"B2S","amount":"0"}],
+            isLocal:true,
+            admin_type:"cc", //cc 或者is
+            labelList:{
+                "1":[{
+                    "id":"14",
+                    "tag_name":"已付费",
+                    "type":"1",
+                    "user_group":"3",
+                    "status":"1",
+                    "tag_short":"付",
+                    "tag_brief":"付费的学员",
+                    "tag_class":"1",
+                    "tag_posion":"1"
+                },{
+                    "id":"15",
+                    "tag_name":"已体验",
+                    "type":"1",
+                    "user_group":"3",
+                    "status":"1",
+                    "tag_short":"体",
+                    "tag_brief":"",
+                    "tag_class":"1",
+                    "tag_posion":"2"
+                },{
+                    "id":"16",
+                    "tag_name":"已约课",
+                    "type":"1",
+                    "user_group":"3",
+                    "status":"1",
+                    "tag_short":"约",
+                    "tag_brief":"",
+                    "tag_class":"1",
+                    "tag_posion":"3"
+                },{
+                    "id":"17",
+                    "tag_name":"未约课",
+                    "type":"1",
+                    "user_group":"3",
+                    "status":"1",
+                    "tag_short":"未",
+                    "tag_brief":"",
+                    "tag_class":"1",
+                    "tag_posion":"4"
+                },{
+                    "id":"36",
+                    "tag_name":"缺席与取消",
+                    "type":"1",
+                    "user_group":"3",
+                    "status":"1",
+                    "tag_short":"缺",
+                    "tag_brief":"",
+                    "tag_class":"1",
+                    "tag_posion":"5"
+                }],
+                "2":[{
+                    "id":"18",
+                    "tag_name":"高意向",
+                    "type":"1",
+                    "user_group":"3",
+                    "status":"2",
+                    "tag_short":"高",
+                    "tag_brief":"",
+                    "tag_class":"2",
+                    "tag_posion":"1"
+                },{
+                    "id":"19",
+                    "tag_name":"中意向",
+                    "type":"1",
+                    "user_group":"3",
+                    "status":"2",
+                    "tag_short":"中",
+                    "tag_brief":"",
+                    "tag_class":"2",
+                    "tag_posion":"2"
+                },{
+                    "id":"20",
+                    "tag_name":"低意向",
+                    "type":"1",
+                    "user_group":"3",
+                    "status":"2",
+                    "tag_short":"低",
+                    "tag_brief":"",
+                    "tag_class":"2",
+                    "tag_posion":"3"
+                }]
+            }
+        }
+    }*/
+
+var localInfo = {
+    admin_id: '999',
+    admin_name: 'test',
+    crm_id: '1164',
+    id : '999',
+    img : 'http://one.frontend.com/static/' + "/images/html/weixin_heck/cchead.jpg",
+    grouphead : 'http://one.frontend.com/static/' + "/images/html/weixin_heck/grouphead.jpg",
+    groupheader : 'http://one.frontend.com/static/' + "/images/html/weixin_heck/groupheader.jpg",
+    v_code : '4185399ad86b4dc98dea23d95c6ed53d',
+    ws_host: '172.16.0.92:8801',
+    fileicon : 'http://one.frontend.com/static/' + "/images/html/weixin_heck/file_icon.png",
+    userGroupList:{"1":"\u6210\u4ebaCC","2":"\u6210\u4ebaSS","3":"\u9752\u5c11CC","4":"\u9752\u5c11SS","5":"\u7f8e\u5c0fCC","6":"\u7f8e\u5c0fCST","7":"\u83f2\u5c0f\u8fbe\u62c9\u65af","8":"B2S","9":"\u7f8e\u5c0f\u8fbe\u62c9\u65af"}
+}
+
+
+</script>
+</body>
+<% include ../common/bottom.ejs %>

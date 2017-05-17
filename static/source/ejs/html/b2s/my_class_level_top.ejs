@@ -1,0 +1,241 @@
+<% include ../common/top.ejs %>
+<body id="container" data-init="index">
+<!-- 公共头 -->
+<% include ../common/b2s/b2s_header.ejs %>
+<!--弹层-->
+<div class="dialog tea-dialog">
+  <form class="content">
+    <div class="tips">
+      <h4>创建</h4>
+      <a class="close" href="javascript:;"></a>
+    </div>
+    <div class="info"></div>
+    <div class="prompt-text">请录入上述信息，以便我们根据您的教学进度未学生排课</div>
+    <div class="submit">
+        <a href="javascript:;">创建</a>
+    </div>
+  </form>
+</div>
+
+<!-- 中间内容 -->
+<div class="mycls">
+  <div class="widthMain">
+    <!-- banner -->
+    <% include ../common/b2s/b2s_banner.ejs %>
+    <div class="central">
+      <i class="cls-icon"></i>
+      <div class="stu_tit">
+        <dl>
+          <dt><img src="<%= imagessrc%>stu.jpg" alt=""></dt>
+          <dd class="intro_one"><span>流川枫</span> 同学</dd>
+          <dd>班级：三年二班</dd>
+          <dd>老师：林徽因</dd>
+        </dl>
+        <p class="stu_number">学生邀请码：123456</p>
+      </div>
+      <!-- 侧栏 -->
+      <% include ../common/b2s/b2s_sidebar.ejs %>
+      <div class="cls-main">
+        <!-- 我的班级 -->
+        <div class="cls-tab class-grade">
+          
+          <!-- 空列表占位 -->
+          <div class="grade-null hide">
+            <div class="grade-t"><p>您当前还没有班级，立即创建班级邀请学生加入</p></div>
+            <div class="create-class">
+              <div class="create-new-class">创建新班级</div>
+              <a class="create-box add"  href="javascript:; data-title="创建班级"
+              data-submit="立即创建"
+              data-type="class"
+              data-obj='[{"label":"年级：","type":2,"name":"grade","tip":"年级不能为空","holder":"请选择年级","select":{"请选择年级":"","小班":"-3","中班":"-2","大班":"-1","学前班":"0","一年级":"1","二年级":"2","三年级":"3","四年级":"4","五年级":"5","六年级":"6","初一":"7","初二":"8","初三":"9"}},{"label":"班级：","type":2,"name":"index","tip":"班级不能为空","holder":"请选择班级", "select":{"请选择班级":"","一班":"1","二班":"2","三班":"3","四班":"4","五班":"5","六班":"6","七班":"7","八班":"8","九班":"9","十班":"10","十一班":"11","十二班":"12","十三班":"13","十四班":"14","十五班":"15","十六班":"16","十七班":"17","十八班":"18","十九班":"19","二十班":"20"}},{"label":"班级：","type":1,"name":"name","tip":"班级不能为空","holder":"请输入班级"}]' ">
+                
+              </a>
+              <div class="arrow"></div>
+            </div>
+          </div>
+         <!--  <div class="grade-null">
+              <img src="<%= imagessrc%>blank.jpg" alt="">
+          </div> -->
+          <!-- 班级列表 -->
+          <div class="grade-item" class-id="111">
+            <span class="g-tit-text" detail-url="http://www.baidu.com" data-work="0" data-flag="0" data-value = "六年级 1班，2班，3班">布置作业</span>
+            <h3 class="g-tit pos-info clearfix">
+              <span class="g-tit-t">六年级</span>
+              <a href="javascript:;" class="g-tit-teaching zindex-n" grade="4">
+                <span></span>选择教材版本<i></i></a>
+              
+              <div class="select-prompt">
+                <!-- <a href="javascript:;" id="nBtn"></a> -->
+              </div>
+              <div class="h-mask-box show maskId"></div>
+            </h3>
+            <div class="g-cont">
+              <ul class="g-list clearfix">
+                <li class="g-l-item g-l-active">
+                  <a href="javascript:;">
+                    <h3 class="g-list-top"><span class="tenIcon g-t-left">1 班</span><span class="g-t-right">已有16人</span></h3>
+                    <ul class="g-l-cont">
+                      <li>激活学生数：<span class="l-c-cont">25人</span></li>
+                    </ul>
+                  </a>
+                  <a class="delete-btn" deleteHref="http://www.baidu.com"></a>
+                </li>
+                <li class="g-l-item">
+                  <a href="javascript:;">
+                    <h3 class="g-list-top"><span class="tenIcon g-t-left">1 班</span><span class="g-t-right">已有16人</span></h3>
+                    <ul class="g-l-cont">
+                      <li>激活学生数：<span class="l-c-cont">25人</span></li>
+                    </ul>
+                  </a>
+                </li>
+                <li class="g-l-item">
+                  <a href="javascript:;">
+                    <h3 class="g-list-top"><span class="tenIcon g-t-left">1 班</span><span class="g-t-right">已有16人</span></h3>
+                    <ul class="g-l-cont">
+                      <li>激活学生数：<span class="l-c-cont">25人</span></li>
+                    </ul>
+                  </a>
+                </li>
+                <li class="g-l-item">
+                  <a href="javascript:;">
+                    <h3 class="g-list-top"><span class="tenIcon g-t-left">2 班</span><span class="g-t-right">已有16人</span></h3>
+                    <ul class="g-l-cont">
+                      <li>激活学生数：<span class="l-c-cont">25人</span></li>
+                    </ul>
+                  </a>
+                </li>
+                <li class="g-l-item">
+                  <a href="javascript:;">
+                    <h3 class="g-list-top"><span class="tenIcon g-t-left">2 班</span><span class="g-t-right">已有16人</span></h3>
+                    <ul class="g-l-cont">
+                      <li>激活学生数：<span class="l-c-cont">25人</span></li>
+                    </ul>
+                  </a>
+                </li>
+                <li class="g-l-item">
+                  <a href="javascript:;">
+                    <h3 class="g-list-top"><span class="tenIcon g-t-left">2 班</span><span class="g-t-right">已有16人</span></h3>
+                    <ul class="g-l-cont">
+                      <li><span class="not-work">未布置作业</span></li>
+                    </ul>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="grade-item border-line" class-id="222">
+            <span class="g-tit-text" detail-url="http://www.ifeng.com" data-work="0" data-flag="1" data-value="八年级 2班">布置作业</span>
+            <h3 class="g-tit clearfix">
+              <span class="g-tit-t">八年级</span>
+              <div class="g-tit-change clearfix">
+                <span></span>
+                <p class="book_text">辽师大版-快乐英语(一年级起点)-一年级(下)</p>
+                <p class="book_all">辽师大版-快乐英语(一年级起点)-一年级(下)</p>
+                <p class="ra_icon"></p>
+                <a href="javascript:;" class="book_change">更多</a>
+              </div>
+              </h3>
+            <div class="g-cont">
+              <ul class="g-list clearfix">
+                <li class="g-l-item">
+                  <a href="javascript:;">
+                    <h3 class="g-list-top"><span class="tenIcon g-t-left">2 班</span><span class="g-t-right">已有16人</span></h3>
+                    <ul class="g-l-cont">
+                      <li>激活学生数：<span class="l-c-cont">25人</span></li>
+                    </ul>
+                  </a>
+                </li>
+                <li class="g-l-item">
+                  <a href="javascript:;">
+                    <h3 class="g-list-top"><span class="tenIcon g-t-left">2 班</span><span class="g-t-right">已有16人</span></h3>
+                    <ul class="g-l-cont">
+                      <li>激活学生数：<span class="l-c-cont">25人</span></li>
+                    </ul>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="grade-item border-line">
+            <div class="create-new-class">创建新班级</div>
+            <a class="create-box add"  href="javascript:; data-title="创建班级"
+            data-prompt="请录入上述信息，以便我们根据您的教学进度未学生排课"
+            data-submit="立即创建"
+            data-type="class"
+            data-obj='[{"label":"年级：","type":2,"name":"grade","tip":"年级不能为空","holder":"请选择年级","select":{"请选择年级":"","小班":"-3","中班":"-2","大班":"-1","学前班":"0","一年级":"1","二年级":"2","三年级":"3","四年级":"4","五年级":"5","六年级":"6","初一":"7","初二":"8","初三":"9"}},{"label":"班级：","type":2,"name":"index","tip":"班级不能为空","holder":"请选择班级", "select":{"请选择班级":"","一班":"1","二班":"2","三班":"3","四班":"4","五班":"5","六班":"6","七班":"7","八班":"8","九班":"9","十班":"10","十一班":"11","十二班":"12","十三班":"13","十四班":"14","十五班":"15","十六班":"16","十七班":"17","十八班":"18","十九班":"19","二十班":"20"}},{"label":"使用教材：","type":1,"name":"teaching_materials","tip":"请输入正确的使用教材","holder":"例如：北师大版本、上教版"},{"label":"学习进度：","type":1,"name":"learn_schedule","tip":"请输入正确的学习进度","holder":"例如：第一单元、第三课"},{"label":"教学进度：","type":1,"name":"teaching_schedule","tip":"请输入正确教学进度","holder":"例如：每周1节课、每周2节课"}]'">
+            </a>
+            <!--
+{"label":"性别：","type":3,"name":"sex","tip":"老师不能为空","radio":{"男":"1","女":"2"}}
+          -->
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>
+<div class="h-mask-box hide" id="maskId"></div>
+<div class="h-popup-box hide" id="popUpId">
+  <div class="main">
+    <div class="close-btn" id="closeId"></div>
+    <h3>布置作业</h3>
+    <div class="text-box">
+      <p></p>
+      <p>布置作业班级：</p>
+      <div class="work-class">
+        <p id="classInfo"></p>
+        <p></p>
+      </div>
+      <p>作业内容：</p>
+      <div class="work-class">
+        <p>每周去上一节外教课，共四节。</p>       
+        <p>上课软件  51TalkAC</p>
+        <p>请登录微信服务号“51Talk中小学英语”或在电脑上登</p>
+        <p>录s.51talk.com查看作业详情</p>
+      </div>
+      <p class="work-detail"><a id="workDetail" href="javascript:;">作业详情></a></p>
+      <p></p>
+      <p></p>
+      <p class="work-info">点击“布置作业”后，我们会通过短信和微信替您通知学生来上课。</p>
+    </div>
+  </div>
+  <div class="btn-box">
+    <p></p>
+    <div class="btn" id="btnBox"><!--<a id="workBtn">布置作业</a>--></div>
+  </div>
+</div>
+<div class="add_teaching add_tea" id="addTeaching">
+  <form>
+    <div class="teaching_box">
+      <div class="seach_tit">
+        <span class="close-btn" id="closeBtn"></span>
+        <span>选择教材版本</span>
+        <span class="grade-tit">六年级</span>
+        <div class="seach_box">
+          <input type="text" placeholder="输入关键词搜索教材" class="seach_input" grade="1" >
+          <span></span>
+        </div>
+      </div>
+      <div class="window-box">
+          <div class="teaching_book">
+              <ul class="bookList clearfix">
+                
+              </ul>
+          </div>
+          <div class="diy_teaching clearfix">
+            
+            <div class="text_box">
+              <input type="text" placeholder="" class="diyname">
+              <span>确定</span>
+            </div>
+            <span class="diy_text"> 自定义教材</span>
+          </div>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="t-shade-box" id="shadeBox"></div> 
+<input type="hidden" id="classId" value=""/>
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

@@ -1,0 +1,111 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: 
+ */
+html,
+body {
+  background: #ccc;
+  height: 100%;
+  width: 100%;
+}
+.heck_top {
+  height: 80px;
+  background: #ffdb69;
+  border-bottom: 1px solid #dc9855;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height: 70px;
+  background: #303030;
+}
+.statistics_center {
+  background: #fff;
+  width: 960px;
+  padding: 10px 20px;
+  height: calc(100% - 20px);
+  margin: 0 auto;
+}
+.statistics_center h2 {
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+}
+.statistics_center ul li {
+  float: left;
+  padding: 0 10px;
+  color: #fff;
+  border-radius: 4px;
+  height: 30px;
+  line-height: 30px;
+  background: #ff7e00;
+  margin-right: 20px;
+  position: relative;
+}
+.statistics_center ul li a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.statistics_center ul li:first-child {
+  color: black;
+  border-radius: 0;
+  border: 0;
+  background: #fff;
+  font-size: 16px;
+}
+.statistics_center .content_table {
+  height: calc(100% - 150px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-top: 30px;
+}
+.statistics_center .content_table table {
+  width: 100%;
+  border-radius: 4px;
+}
+.statistics_center .content_table table tr:first-child {
+  background: #f5d79e;
+}
+.statistics_center .content_table table th {
+  line-height: 26px;
+}
+.statistics_center .content_table table td {
+  border: 1px solid #dcdcdc;
+  word-break: break-all;
+  line-height: 26px;
+  text-align: center;
+  width: 33.3%;
+  padding: 0 5px;
+}
+.statistics_center .content_more {
+  height: calc(100% - 150px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-top: 30px;
+  width: 100%;
+}
+.statistics_center .content_more table {
+  width: 100%;
+  border-radius: 4px;
+}
+.statistics_center .content_more table tr:first-child {
+  background: #f5d79e;
+}
+.statistics_center .content_more table td {
+  border: 1px solid #dcdcdc;
+  padding: 0 10px;
+  text-align: center;
+  line-height: 26px;
+  word-break: break-all;
+}
+.statistics_center .content_more table .f-th {
+  width: 60%;
+}

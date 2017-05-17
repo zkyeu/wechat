@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="app下载专页">
+    <meta name="keywords" content="app下载专页">
+    <title>欢迎下载51Talk App</title>
+    <link rel="stylesheet" type="text/css" href="/css/html/studyDay/studyDay.css">
+</head>
+<body>
+<!--购物车-->
+<input type="hidden" id="cartType" value="cart">
+<input type="hidden" id="cartID" value="">
+<input type="hidden" id="actArr" value="">
+<input type="hidden" id="downMoney" value="0">
+<input type="hidden" id="showAgree" value="n">
+<form id="form-cart" name="point_form" action="/pay/order" method="post" target="_blank">
+  <div class="m-cart" id="cart" style="right:-255px; " ><!-- right从 0 到 -251  -->
+    <input type="hidden" name="cart" value='{"cart":[],"package":"off","earphone":"off"}'>
+    <div class="cart-hd"><em class="jsCount">0</em></div>
+    <div class="cart-bd"><!-- width从 0 到 251  -->
+      <div class="cart-in">
+        <div class="title">我的购物车（<em class="jsCount">0</em>）
+          <div class="u-pages">
+            <a class="prev dis-prev" href="javascript:void(0)">&lt;</a>
+            <span class="crt"><em class="jsPageNow">1</em><em>/</em><em class="jsPageCount">1</em></span>
+            <a class="next dis-next" href="javascript:void(0)">&gt;</a>
+          </div>
+        </div>
+        <div class="products">
+            <div class="jsWrap">
+            </div>
+        </div>
+        <div class="addeds" style="visibility: hidden;">
+            <dl class="product">
+                <a class="s-fc6" href="#level">立即购买配套教材，学习效果更佳！</a>
+            </dl>
+            <dl class="product">
+                <dt class="added">
+                    <label class="u-lab jsPackageLabel">
+                        <input class="f-dn" type="checkbox" name="package">
+
+                        <span class="u-txt">+<em class="jsPackage">0</em>元，您还可以选购<a href="javascript:;">电话包</a></span>
+                    </label>
+                </dt>
+            </dl>
+            <dl class="product" style="border-top: 1px solid rgb(228, 234, 238);">
+                <dt class="added">
+                <label class="u-lab jsEarphoneLabel">
+                    <input class="f-dn" type="checkbox" name="earphone">
+                   
+                    <span class="u-txt" data-cart="">+50元，选购高保真耳麦(双插头)</span>
+                </label>
+                </dt>
+            </dl>
+            <p class="differ" style="display:none;">补差价金额：
+                <em class="jsMinuend">10288</em>&nbsp;-&nbsp;
+                <em class="jsMeiosis">3588</em>&nbsp;=&nbsp;
+                <em class="jsDifference">6700</em>
+            </p>
+        </div>
+        <div class="total-orders">订单总金额：<em class="jsTotal" data-total="5799">23045</em></div>
+        <div class="total-orders-stagin" style="display: none;">金额总计：<em class="jsTotal" data-total="5799"></em></div>
+        <div class="submit">
+          <input class="button jsSubmit" type="submit" value="提交订单" style="width: 117px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</form>  
+<!-- 顶部 -->
+
+
+<div class="container" data-init="index">
+  <div class="banner">
+        <div class="part1" id="part1">
+             <div class="cai1"></div>
+             <div class="cai2"></div>
+              <h3 class="title"></h3>
+              <div class="classBox">
+                  <h3 class="label">三好学生必备</h3><div class="libao"></div>
+                  <ul class="classList clearfix">
+                      <li class="clearfix">
+                          <img src="/images/html/studyDay/item180.jpg">
+                          <div class="item">
+                              <h3 class="desc">青少经典英语18单元学习套餐</h3>
+                              <p class="price"><span class="cur">￥6648 </span><span class="old">￥7188</span></p>
+                          </div>
+                          <a href="javascript:;" data-point="nor" data-id="49168" data-cart="{&quot;id&quot;:49167,&quot;price&quot;:&quot;4088&quot;,&quot;package&quot;:&quot;450&quot;,&quot;cash_card&quot;:&quot;0&quot;,&quot;point_type&quot;:&quot;point&quot;,&quot;point_value&quot;:&quot; 90 &quot;,&quot;expire_days&quot;:&quot;180&quot;}" data-text="购&nbsp;买" class="buy u-btn jsPre active"></a>
+                          <div class="zhenlibao"></div>
+                      </li>
+                      <li class="clearfix">
+                          <img src="/images/html/studyDay/item360.jpg">
+                          <div class="item">
+                              <h3 class="desc">青少经典英语36单元学习套餐</h3>
+                              <p class="price"><span class="cur">￥10388</span><span class="old">￥14988</span></p>
+                          </div>
+                          <a href="javascript:;" data-point="nor" data-id="49167" data-cart="{&quot;id&quot;:49167,&quot;price&quot;:&quot;4088&quot;,&quot;package&quot;:&quot;450&quot;,&quot;cash_card&quot;:&quot;0&quot;,&quot;point_type&quot;:&quot;point&quot;,&quot;point_value&quot;:&quot; 90 &quot;,&quot;expire_days&quot;:&quot;180&quot;}" data-text="购&nbsp;买" class="buy u-btn jsPre hover2"></a>
+                      </li>
+                      <li class="clearfix">
+                          <img src="/images/html/studyDay/point180.jpg">
+                          <div class="item">
+                              <h3 class="desc">180次次卡学习套餐</h3>
+                              <p class="price"><span class="cur">￥6648</span><span class="old">￥7188</span></p>
+                          </div>
+                          <a href="javascript:;" data-point="nor" data-id="49167" data-cart="{&quot;id&quot;:49167,&quot;price&quot;:&quot;4088&quot;,&quot;package&quot;:&quot;450&quot;,&quot;cash_card&quot;:&quot;0&quot;,&quot;point_type&quot;:&quot;point&quot;,&quot;point_value&quot;:&quot; 90 &quot;,&quot;expire_days&quot;:&quot;180&quot;}" data-text="购&nbsp;买" class="buy u-btn jsPre active"></a>
+                      </li>
+                      <li class="clearfix">
+                          <div class="shengyu">今日还剩<span>10039</span>个名额</div>
+                          <img src="/images/html/studyDay/point270.jpg">
+                          <div class="item">
+                              <h3 class="desc">270次次卡学习套餐</h3>
+                              <p class="price"><span class="cur">￥8688</span><span class="old">￥10888</span></p>
+                          </div>
+                          <a href="javascript:;" data-point="nor" data-id="49167" data-cart="{&quot;id&quot;:49167,&quot;price&quot;:&quot;4088&quot;,&quot;package&quot;:&quot;450&quot;,&quot;cash_card&quot;:&quot;0&quot;,&quot;point_type&quot;:&quot;point&quot;,&quot;point_value&quot;:&quot; 90 &quot;,&quot;expire_days&quot;:&quot;180&quot;}" data-text="购&nbsp;买" class="buy u-btn jsPre active"></a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="classBox">
+                  <h3 class="label">专业外教首推</h3>
+                  <ul class="classList clearfix">
+                      <li class="clearfix por">
+                          <img src="/images/html/studyDay/point60.jpg">
+                          <div class="item">
+                              <h3 class="desc">60次次卡学习套餐</h3>
+                              <p class="price"><span class="cur">￥2333</span><span class="old">￥3688</span></p>
+                          </div>
+                          <span class="half"></span>
+                          <a href="javascript:;" data-point="nor" data-id="49167" data-cart="{&quot;id&quot;:49167,&quot;price&quot;:&quot;4088&quot;,&quot;package&quot;:&quot;450&quot;,&quot;cash_card&quot;:&quot;0&quot;,&quot;point_type&quot;:&quot;point&quot;,&quot;point_value&quot;:&quot; 90 &quot;,&quot;expire_days&quot;:&quot;180&quot;}" data-text="购&nbsp;买" class="buy u-btn jsPre active"></a>
+                      </li>
+                      <li class="clearfix">
+                          <img src="/images/html/studyDay/month3.jpg">
+                          <div class="item">
+                              <h3 class="desc">3个月包月学习套餐</h3>
+                              <p class="price"><span class="cur">￥2988</span><span class="old">￥4666</span></p>
+                          </div>
+                          <a href="javascript:;" data-point="nor" data-id="49167" data-cart="{&quot;id&quot;:49167,&quot;price&quot;:&quot;4088&quot;,&quot;package&quot;:&quot;450&quot;,&quot;cash_card&quot;:&quot;0&quot;,&quot;point_type&quot;:&quot;point&quot;,&quot;point_value&quot;:&quot; 90 &quot;,&quot;expire_days&quot;:&quot;180&quot;}" data-text="购&nbsp;买" class="buy u-btn jsPre active"></a>
+                      </li>
+                  </ul>
+              </div>
+              <a href="#" class="btnMore">前往查看更多课程</a>
+              <div class="decoration"></div>
+          </div>
+  </div>
+  <div class="contentBg">
+      <div class="content">
+           
+          <div class="part1" id="part1">
+            <div class="wuding"></div>
+            <div class="pao"></div>
+              <h3 class="tit2"></h3>
+              <div class="flower-t1"></div>
+              <div class="lotteryBox">
+                  <div class="prizeDetail">
+                      <div class="prizeList">
+                          <h3 class="prizeTitle">中奖名单</h3>
+                          <div class="dots"></div>
+                          <ul class="nameList">
+                              <li>absefd 学员抽中 歌帝梵巧克力</li>
+                              <li>Elisa 学员抽中 乐高积木盒</li>
+                              <li>Eason 学员抽中 1400元代金券</li>
+                              <li>LULU 学员抽中 彼得兔经典故事集</li>
+                              <li>李白 学员抽中 1000元代金券</li>
+                              <li>111111111111111111122222222</li>
+                          </ul>
+                      </div>
+                      <div class="rule">
+                          <ul class="ruleList">
+                              <li>1. 活动时间：1月6日11:00:00——1月17日 23:59:59。</li>
+                              <li>2. 活动期间每位同学有1次抽奖机会,中奖信息将在中奖后10分钟内发到您pc端站内信。</li>
+                              <li>3. 抽中课实物奖品的同学，需要活动期间购买5000元及以上套餐才能获得奖品。</li>
+                              <li>4. 图片仅供参考，以实物为准，奖品将在活动结束后两周内由客服联系寄出。</li>
+                              <li>5. 本活动最终解释权归51Talk所有。</li>
+                          </ul>
+                          <a href="javascript:;" id="introduce" class="more">点击查看“2000元奖学金券”说明</a>
+                      </div>
+                  </div>
+                  <div class="lottery">
+                      <div class="prizeBox">
+                          <ul class="prizes" id="prizeList">
+                              <li class="active"><span class="prize1"></span></li>
+                              <li><span class="prize2"></span></li>
+                              <li><span class="prize3"></span></li>
+                              <li><span class="prize4"></span></li>
+                              <li><span class="prize5" id="pointer"></span></li>
+                              <li><span class="prize6"></span></li>
+                              <li><span class="prize7"></span></li>
+                              <li><span class="prize8"></span></li>
+                              <li><span class="prize9"></span></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <div class="snow1"></div>
+              <a href="javascript:;" class="btnMore" id="logBtn">我的中奖记录</a>
+              <div class="box"></div>
+          </div>
+          <div class="part3" id="part3">
+              <div class="wuding"></div>
+              <div class="flower-t2"></div>
+              <div class="blank"></div>
+              <h3 class="tit3"></h3>
+              <div class="pao"></div>
+              <div class="gift">
+                  <ul class="clearfix">
+                      <li>
+                          <img src="/images/html/studyDay/service1.png">
+                          <dl>
+                            <dt>官网全新改版</dt>
+                            <dd>使用更便捷</br>内容更丰富</dd>
+                          </dl>
+                      </li>
+                      <li>
+                          <img src="/images/html/studyDay/service2.png">
+                          <dl>
+                            <dt>青少经典英语教材全新升级</dt>
+                            <dd>更科学、完备的教学体系</br>让孩子学得有规划、有收获</dd>
+                          </dl>
+                      </li>
+                      <li>
+                          <img src="/images/html/studyDay/service3.png">
+                          <dl>
+                            <dt>升级版体验课</dt>
+                            <dd>个性化的课程选择</br>重视您的每一课</dd>
+                          </dl>
+                      </li>
+                  </ul>
+              </div>
+              <div class="box"></div>
+          </div>
+          <div class="part4" id="part4">
+             <div class="wuding"></div>
+             <div class="flower-t3"></div>
+             <div class="flower-t4"></div>
+              <div class="blank"></div>
+              <h3 class="tit4"></h3>
+              <div class="pao"></div>
+              <div class="classBox">
+                  <ul class="classList clearfix">
+                      <li>
+                          <img src="/images/html/studyDay/open1.jpg">
+                          <p><span>王亚楠&nbsp;</span>|&nbsp;12月19日&nbsp;19:00-19:50</p>
+                          <p>Merry Christmas&nbsp;圣诞狂欢夜</p>
+                          <h3 class="price"><span class="new">￥29</span><span class="old">原价￥199</span></h3>
+                          <a href="javascript:;" class="order">一键预约</a>
+                      </li>
+                      <li>        
+                          <img src="/images/html/studyDay/open2.jpg">
+                          <p><span>梁颖&nbsp;</span>|&nbsp;12月20日&nbsp;14:00-14:50</p>
+                          <p>读名著&nbsp;|&nbsp;圣诞特辑：麦琪的礼物</p>
+                          <h3 class="price"><span class="new">￥0</span><span class="old">原价￥0</span></h3>
+                          <a href="javascript:;" class="order">一键预约</a>
+                      </li>
+                      <li>  
+                          <img src="/images/html/studyDay/open3.jpg">
+                          <p><span>苏佩雯&nbsp;</span>|&nbsp;12月21日&nbsp;22:00—22:50</p>
+                          <p>商务口语&nbsp;|&nbsp;圣诞狂欢</p>
+                          <h3 class="price"><span class="new">￥0</span><span class="old">原价￥0</span></h3>
+                          <a href="javascript:;" class="order">一键预约</a>
+                      </li>
+                      <li>   
+                          <img src="/images/html/studyDay/open4.jpg">
+                          <p><span>Jack&nbsp;</span>|&nbsp;12月23日&nbsp;14:00—14:50</p>
+                          <p>圣诞特辑&nbsp;| 玩欧洲 学英语</p>
+                          <h3 class="price"><span class="new">￥0</span><span class="old">原价￥0</span></h3>
+                          <a href="javascript:;" class="order">一键预约</a>
+                      </li>
+                      <li>   
+                          <img src="/images/html/studyDay/open5.jpg">
+                          <p><span>Michelle&nbsp;</span>|&nbsp;12月24日&nbsp;15:00-15:50</p>
+                          <p>圣诞特辑&nbsp;| 槲寄生下吻你没商量！</p>
+                          <h3 class="price"><span class="new">￥29</span><span class="old">原价￥199</span></h3>
+                          <a href="javascript:;" class="order">一键预约</a>
+                      </li>
+                      <li>  
+                          <img src="/images/html/studyDay/open6.jpg">
+                          <p><span>米桔缇&nbsp;</span>|&nbsp;12月25日&nbsp;19:00-19:50</p>
+                          <p>圣诞专题&nbsp;| 如何过最像样的圣诞节</p>
+                          <h3 class="price"><span class="new">￥29</span><span class="old">原价￥199</span></h3>
+                          <a href="javascript:;" class="order">一键预约</a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="box"></div>
+              <a href="#" class="btnMore">查看更多公开课</a>
+          </div>
+
+      </div>
+       <div style="height:50px"></div>
+  </div>  
+</div>
+
+<!--describe1 -->
+
+<div class="describe-rule describe1 hide">
+    <span class="close"></span>
+    <ul>
+        <li>赠送新年礼包说明:</li>
+        <li>1. 成功购买"赠新年礼包"指定款后可获得“新年礼包”1个。</li>
+        <li>2. 礼包内容含：51Talk定制台历一个、定制红包、定制春联
+    一 对、实体次卡两张（面额为3次）、专属代金券三张。  </li>
+        <li>3. 邮寄配送请您在完成购买后登录会员中心-账户设置-个人信
+    息底部中补充收货地址和联系方式，工作人员将于3-5个作
+    日内快递给您。</li>
+        <li>4. 注意事项：新年礼包为赠品，不得退换。实体次卡可转赠亲    
+    友，新注册后可自动充值到账户，不记名不挂失，过期作
+    废。专属代金券需按最低消费金额使用，每张代金券仅可
+    使用一次，过期作废。 </li>
+    </ul>
+</div>
+<div class="describe-rule describe2 hide">
+    <span class="close"></span>
+    <ul>
+        <li>2000元奖学金券说明:</li>
+        <li>1. 抽中2000元奖学金券后，在活动期间购买60次学习套餐并
+   在有效期90天内消耗完毕（不得请假或者缺席）即可获得一 
+   张2000元的奖学金券，用户购买5000元以上套餐时可使用。</li>
+        <li>2. 奖学金券发放：活动期间购买的套餐消耗完毕后，2000元
+    奖学金券将通过站内信的形式发放账户中。</li>
+    </ul>
+</div>
+<div class="mask" id="mask"></div>
+<div class="prizeLog" id="prizeLog">
+    <div class="front">
+        <a href="javascript:;" class="btn" id="closeLog"></a>
+        <div class="log yesLog">
+            <h3>您已获得</h3>
+            <p>51Talk纪念U盘</p>
+        </div>
+        <div class="log noLog">您还没有参与抽奖，快去抽奖吧！</div>
+    </div>
+</div>
+<div class="dialog" id="dialog">
+    <div class="box">
+        <a href="javascript:;" class="close" id="closeDialog"></a>
+        <h3 class="title">恭喜获得：<span id="myPrize"></span></h3>
+        <div class="detail" id="prize">
+            <img src="/images/html/studyDay/prize1.png">
+            <img src="/images/html/studyDay/prize2.png">
+            <img src="/images/html/studyDay/prize3.png">
+            <img src="/images/html/studyDay/prize4.png">
+            <img src="/images/html/studyDay/prize5.png">
+            <img src="/images/html/studyDay/prize6.png">
+            <img src="/images/html/studyDay/prize7.png">
+            <img src="/images/html/studyDay/prize8.png">
+            <img src="/images/html/studyDay/prize8.png">
+        </div>
+    </div>
+    
+</div>
+<div class="flower1"></div>
+<div class="flower-left"></div>
+<div class="flower-right"></div>
+
+<!-- 尾部 -->
+<!-- 尾部 -->
+<div class="info">
+  <div class="centerMth">
+    <p class="tc_p">
+      <a href="javascript:;">关于我们</a>
+      <a href="javascript:;">加入我们</a>
+      <a href="javascript:;">企业培训</a>
+      <a href="javascript:;">网站地图</a>
+      <a href="javascript:;">o2o代理招募</a>
+    </p>
+    <p class="link-word">
+      <em>友情链接</em>
+    </p>
+    <span class="link-info">
+      <a href="http://www.putclub.com" target="_blank">普特英语听力</a> 
+      <a href="http://www.en8848.com.cn/" target="_blank">原版英语学习网</a> 
+      <a href="http://chinaenglish.com.cn" target="_blank">中国英语网</a> 
+      <a href="http://shop.kongfz.com/" target="_blank">网上书店</a> 
+      <a href="http://www.jiyifa.com/  " target="_blank">记忆力</a> 
+      <a href="http://www.sharewithu.com/" target="_blank">尚友留学</a> 
+      <a href="http://www.chuanke.com/" target="_blank">传课网</a> 
+      <a href="http://www.lampbrother.net " target="_blank">php教程</a> 
+      <a href="http://www.533.com/" target="_blank">留学</a> 
+      <a href="http://gd.huatu.com/ " target="_blank">广东人事考试网</a> 
+      <a href="http://gaokao.juren.com" target="_blank">高考录取分数线</a> 
+      <a href="http://www.xiaoma.com " target="_blank">小马过河</a> 
+      <a href="http://www.ewteacher.com" target="_blank">英语教师网 </a> 
+      <a href="http://www.wiseway.com.cn/" target="_blank">留学咨询</a> 
+      <a href="http://www.51talkenglish.com" target="_blank">英语在线学习</a> 
+      <a href="http://www.tingclass.net" target="_blank">英语听力</a> 
+      <a href="http://www.chinavoa.com" target="_blank">voa英语学习网</a> 
+      <a href="http://www.hztbc.com/" target="_blank">企业培训</a> 
+      <a href="http://www.jiajiao114.com/" target="_blank">家教网</a> 
+      <a href="http://beijing.xueda.com/" target="_blank">北京一对一辅导</a> 
+      <a href="http://www.zgjsks.com" target="_blank">教师网</a> 
+      <a href="http://www.gaosiedu.com" target="_blank">高思教育</a> 
+      <a href="http://www.qeo.cn/ " target="_blank">求艺网</a> 
+      <a href="http://www.zuowenren.com/" target="_blank">小学生作文</a> 
+      <a href="http://gaokao.koolearn.com" target="_blank">新东方在线高考</a> 
+      <a href="http://www.171english.cn/" target="_blank">给力英语网</a> 
+      <a href="http://www.5haoxue.net/" target="_blank">好学教育</a> 
+      <a href="http://www.pxto.com.cn/" target="_blank">培训网</a> 
+      <a href="http://www.gaodun.com/" target="_blank">高顿网校</a> 
+      <a href="http://yy.zxxk.com/" target="_blank">英语学科网</a> 
+      <a href="http://www.zk168.com.cn/" target="_blank">华考范文网</a> 
+      <a href="http://xuexiao.chazidian.com/" target="_blank">学校大全</a> 
+      <a href="http://www.1mishu.com" target="_blank">21世纪秘书网</a> 
+      <a href="http://www.gwyoo.com/" target="_blank">公务员之家</a> 
+      <a href="http://www.bosidata.com/" target="_blank">调研报告</a> 
+      <a href="http://www.xuexifangfa.com/" target="_blank">学习方法</a> 
+      <a href="http://chengyu.eduu.com" target="_blank">成语大全</a> 
+      <a href="http://www.jobeast.com/ " target="_blank">中国外语人才网</a> 
+      <a href="http://www.china-pub.com/" target="_blank">英语书籍</a> 
+      <a href="http://www.kuakao.com/" target="_blank">考研</a> 
+      <a href="http://www.zzyjs.com/" target="_blank">在职研究生</a> 
+      <a href="http://www.24en.com/" target="_blank">爱思英语网</a> 
+      <a href="http://www.cmr.com.cn" target="_blank">远程教育</a> 
+      <a href="http://www.hq88.com/" target="_blank">企业培训</a> 
+      <a href="http://www.zaixian-fanyi.com/" target="_blank">在线翻译</a> 
+      <a href="http://www.yuwenmi.com/" target="_blank">语文迷</a> 
+      <a href="http://www.hteacher.net/" target="_blank">教师招聘考试</a> 
+      <a href="http://www.zgsydw.com/ " target="_blank">事业单位招聘网</a> 
+      <a href="http://www.51offer.com" target="_blank">英国留学</a> 
+      <a href="http://www.yiminjiayuan.com/" target="_blank">移民家园网</a> 
+      <a href="http://www.enread.com/" target="_blank">英文阅读网</a> 
+      <a href="http://www.kekenet.com" target="_blank">可可英语 </a> 
+    </span>
+    <div class="link-ti">
+      <ul class="link-ul">
+        <li><a href="javascript:;"><img src="/images/html/www/fot_certif01.png" alt=""></a></li>
+        <li><a href="javascript:;"><img src="/images/html/www/fot_certif02.png" alt=""></a></li>
+        <li><a href="javascript:;"><img src="/images/html/www/fot_certif03.png" alt=""></a></li>
+        <li><a href="javascript:;"><img src="/images/html/www/fot_certif04.png" alt=""></a></li>
+      </ul>
+    </div>
+    <p class="link-ft">
+      Copyright©北京大生知行科技有限公司<em>|</em>
+      <a href="/page/privacy/" target="_blank" title="隐私声明">隐私声明</a><em>|</em>
+      <a href="/page/terms/" target="_blank" title="用户协议">用户协议</a><em>|</em>
+      <a href="jICP.html" target="_blank" title="京ICP证110696号">京ICP证110696号</a><em></em>
+      <a href="http://www.miibeian.gov.cn" target="_blank" title="京ICP备11031999号">京ICP备11031999号</a><em></em>
+      <a href="javascript:;" target="_blank" title="京公网安备11010802018414号" style="cursor:text;">京公网安备11010802018414号</a><em></em>   
+    </p>
+     <p class="link-ft"><a href="TVlicence.html" target="_blank">广播电视节目制作经营许可证（京）字第05497号</a></p>
+  </div>
+</div>
+
+
+
+
+
+
+<script src="/js/html/project/studyDay/vendor.js" id="seajsnode"></script>
+</body>
+</html>
+
+
+
+

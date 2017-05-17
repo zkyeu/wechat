@@ -1,0 +1,107 @@
+/**
+ * 默认样式
+ * @author:  liliang（liliang05@51talk.com）
+ * @update:  2017年 05月02日 星期六 17时25分59秒 CST
+ * @note:    黑鸟项目后台课程教材对应链接后台报表
+ */
+
+// 图片path
+@imgMpath: "../../../images/html/weixin_heck/";
+html, body{
+    width: 100%;
+  background: #EDEDED;
+}
+
+.w90{width: 90%;}
+.dn{display: none;}
+
+.less-title{
+  height: 80px;
+  line-height: 80px;
+  font-size: 20px;
+  text-align: center;
+  color:#252525;
+}
+.lesson-con{
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: #fff;
+  border: solid 1px #dcdcdc;
+  padding: 20px;
+  .block-con{
+    border-top:#ddd dashed 1px;
+    padding-top: 20px;
+    font-size: 14px;
+    color:#696969;
+    &.no-border{
+      border:none;
+    }
+    h5{
+      font-size: 16px;
+      color: #696969;
+    }
+    .con-list{
+      ul{
+        list-style: none;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap:wrap;
+        padding: 20px 0;
+        li{
+          display: flex;
+          justify-content: flex-start;
+          margin-right: 30px;
+          padding: 5px;
+          input{
+            display: none;
+          }
+          label{
+            display: block;
+            padding-left: 20px;
+            height: 25px;
+            background: url("@{imgMpath}kecheng.png") 0 2px no-repeat;
+            &.cut-sel{
+              background-position: 0 -22px;
+            }
+          }
+        }
+      }
+    }
+    table{
+      width: 100%;
+      border: #dcdcdc solid 1px;
+      font-size: 12px;
+      tr{
+        th{
+          height: 32px;
+          line-height: 32px;
+          color: #fff;
+          text-align: center;
+          background-color: #393939;
+          border: 1px solid #dcdcdc;
+
+        }
+        td{
+          padding: 8px 10px;
+          text-align: center;
+          border: #f0f0f0 solid 1px;
+          a{
+            color: #008eff;
+          }
+          &:last-child{
+            color: #fc4e4d;
+            padding: 0 10px;
+          }
+          &:nth-child(1){
+            text-align: left;
+          }
+          &:nth-child(2){
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+
+
+}

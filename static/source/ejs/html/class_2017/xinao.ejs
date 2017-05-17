@@ -1,0 +1,53 @@
+<% include ../common/class_top.ejs %>
+<body>
+<div class="pic-bg" style="background-image:url(<%= imagessrc%>/1.jpg)"></div>
+<div class="wt-main" id="container" data-init="class">
+    <div class="nav-tab">
+        <div class="list f-cb">
+            <ul>
+                <li class="must on">必学词汇 20%</li>
+                <li class="talk">对话练习 0%</li>
+                <li class="words">单词本</li>
+                <li class="grammar">语法</li>
+            </ul>
+        </div>
+    </div>
+    <div class="sub-class">
+        <div class="box">
+            <div class="box-main">
+                <div class="choose-ans">
+                    <!--<a href="#" class="audio-btn"></a>-->
+                    <div class="word">
+                        <span class="letter">
+                          together
+                          <img class="cover-tag hide" src="<%= imagessrc%>/cover1.png" />
+                        </span>
+                    </div>
+                    <div class="tc options">
+                        <ul>
+                            <li class="item">
+                                <i class="s">A</i>
+                                <span class="tt">快乐</span>
+                            </li>
+                            <li class="item">
+                                <i class="s">B</i>
+                                <span class="tt">在一起</span>
+                            </li>
+                            <li class="item">
+                                <i class="s">C</i>
+                                <span class="tt">好好可放到一起</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="pagenation">
+                <a href="#" class="btn prev-btn"></a>
+                <a href="#" class="btn guessed-btn"></a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+</body>
+<% include ../common/class_bottom.ejs %>

@@ -1,0 +1,28 @@
+<% include ../common/top.ejs %>
+<body data-init="acstuAll" swfHref="" audioPath="" page-tag="all,stu,play">
+    <div class="ac-tem">
+        <div class="ac-tem-stu-all">
+            <div class="ac-dialog-ifr">
+                <iframe src="" scrolling="no" frameborder="0"></iframe>
+                <div class="ac-stu-all">
+                    <p class="play-all-timmer">倒计时：<i>59</i>秒</p>
+                    <p class="play-all-detail"><i>1</i>/2</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+var dataArr = {
+    arr:[
+    ["/templates/html/ac_dialog/ac_stu_pair_play.html",20],
+    ["/templates/html/ac_dialog/ac_game_pair_student_play.html",20],
+    ["/templates/html/ac_dialog/ac_stu_voice_play.html",20],
+    ["/templates/html/ac_dialog/ac_stu_read_play.html",20],
+    ["/templates/html/ac_dialog/ac_stu_choice_play.html",20]
+    ],
+    buffer : 5,
+    result : "http://www.baidu.com"
+}
+</script>
+<% include ../common/bottom.ejs %>

@@ -1,0 +1,104 @@
+<% include ../common/reg_top.ejs %>
+<body>
+	<% include ../common/reg_header.ejs %>
+	<section class="expric" data-init="reg" id="container">
+	    <b>只需最后一步即可完成预约</b>
+	    <!-- 第一种情况 -->
+	    <div class="exp-t-one" id="expLt">
+	    	<p class="title">请选择体验课类型</p>
+	    	<ul class="exp-les">
+	    		<li class="les-on" type="ct"><a href="javascript:;">中教体验课</a></li>
+	    		<li type="wt"><a href="javascript:;">外教体验课</a></li>
+	    	</ul>
+	    	<h3 class="t-wd">温馨提示：如果您没有学过英语，推荐您选择中教体验课。</h3>
+	    	<div class="chr-mr">
+		    	<div class="chr-tea">
+			    	<p class="title">请选择上课方式</p>
+				   	<div class="t-lft"><i type="ac" class="i-it"></i>51Talk AC在线教室（电脑端）</div>
+			    	<ul class="ac-word">
+				    	<li><span>AC上课立赠100元代金券 + 300节/月公开课</span></li>
+				    	<li><span>高清晰度视频通话，零距离连线外教</span></li>
+				    	<li><span>教材互动一体化，操作极简，让你只关心学习</span></li>
+				    	<li><span>中英双语即时翻译，与外教对话无障碍</span></li>
+				    </ul>
+			    </div>
+			    <div class="chr-tea hide">
+			    	<p class="title">请选择上课方式</p>
+				    <div class="input ac-input">
+				   	 	<div class="left les-lt"><i class="lab2" type="app"></i>51Talk手机客户端</div>
+				    </div>
+				    <ul class="ac-word">
+				    	<li><span>手机AC上课立赠100元代金券+300节/月公开课</span></li>
+				    	<li><span>手机也能上课，随时随地轻松学习</span></li>
+				    </ul>
+				    <div class="input ac-input">
+				   	 	<div class="left les-lt"><i class="lab" type="ac"></i>51Talk AC在线教室（电脑端）</div>
+				    </div>
+				    <ul class="ac-word">
+				    	<li><span>AC上课立赠100元代金券 + 300节/月公开课</span></li>
+				    	<li><span>高清晰度视频通话，零距离连线外教</span></li>
+				    	<li><span>教材互动一体化，操作极简，让你只关心学习</span></li>
+				    	<li><span>中英双语即时翻译，与外教对话无障碍</span></li>
+				    </ul>
+				    <div class="input">
+				   	 	<div class="left les-lt"><i class="lab" type="qq"></i>Q Q:</div>
+				   	 	<div class="rt">
+				    		<input type="text" value="" name="qq" placeholder="请输入QQ账号">
+				    	</div>
+				    </div> 
+				    <div class="input">
+				   	 	<div class="left les-lt"><i class="lab" type="skype"></i>Skype:</div>
+				   	 	<div class="rt">
+				    		<input type="text" value="" name="skype" placeholder="请输入Skype账号">
+				    	</div>
+				    </div>
+			    </div>
+		    </div>
+	    </div>
+	    <!-- /第一种情况 -->
+	    <!-- 第二种情况 -->
+	    <div class="exp-t-two hide" id="expRt">
+	    	<p class="title">请选择上课方式</p>
+		    <div class="input ac-input">
+		   	 	<div class="left les-lt"><i class="lab2" type="app"></i>51Talk手机客户端</div>
+		    </div>
+		    <ul class="ac-word">
+		    	<li><span>手机AC上课立赠100元代金券+300节/月公开课</span></li>
+		    	<li><span>手机也能上课，随时随地轻松学习</span></li>
+		    </ul>
+		    <div class="input ac-input">
+		   	 	<div class="left les-lt"><i class="lab" type="ac"></i>51Talk AC在线教室（电脑端）</div>
+		    </div>
+		    <ul class="ac-word">
+		    	<li><span>AC上课立赠100元代金券 + 300节/月公开课</span></li>
+		    	<li><span>高清晰度视频通话，零距离连线外教</span></li>
+		    	<li><span>教材互动一体化，操作极简，让你只关心学习</span></li>
+		    	<li><span>中英双语即时翻译，与外教对话无障碍</span></li>
+		    </ul>
+		     
+		    <div class="input">
+		   	 	<div class="left les-lt"><i class="lab" type="qq"></i>Q Q:</div>
+		   	 	<div class="rt">
+		    		<input type="text" value="" name="qq" placeholder="请输入QQ账号">
+		    	</div>
+		    </div> 
+		    <div class="input">
+		   	 	<div class="left les-lt"><i class="lab" type="skype"></i>Skype:</div>
+		   	 	<div class="rt">
+		    		<input type="text" value="" name="skype" placeholder="请输入Skype账号">
+		    	</div>
+		    </div>
+	    </div>
+	    <!-- /第二种情况 -->
+     	<aside>
+	    	<form id="regForm">
+	    		<input name="tool" type="hidden" value="qq" />
+	    		<input name="course_type" type="hidden" value="ct">
+	    		<a href="#" class="btn" name="finish">完成预约</a>
+	    		<a href="#"><img src="<%= imagessrc%>rg_img01.png" class="rg-Bimg"></a>
+	    	</form>
+	    </aside>
+	</section>
+	<% include ../common/reg_footer.ejs %>
+</body>
+<% include ../common/reg_bottom.ejs %>

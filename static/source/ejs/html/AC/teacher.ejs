@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>老师课表</title>
+    <link rel="stylesheet" href="<%= csslink%>">
+</head>
+<body>
+	<div class="defaultTip" id="defaultTip">
+		<div class="tipImg" id="tipImg">
+			<img src="<%= imagessrc%>loadingList.gif">
+			<img src="<%= imagessrc%>noReserve.png" style="display:none;">
+			<img src="<%= imagessrc%>error.png" style="display:none;">
+		</div>
+		<p>No Reservation</p>
+		<a href="javascript:;" class="refreshBtn" id="refreshBtn"><i></i><span>Refresh</span></a>
+	</div>
+	<div class="teacher" id="teacher">
+		<div class="bannerWrap">
+			<div class="banner" id="banner">
+				<ul class="bannerList" id="bannerList"></ul>
+				<ul class="dots" id="dots"></ul>
+			</div>
+		</div>
+		
+		<div class="day-tap">
+			<ul class="day-left" id="classTab"></ul>
+			<div class="day-right" id="utcTime">
+				<span class="china-t">China Time:GMT+8</span>
+				<span class="time"></span>
+				<span class="China-day"></span>
+				<span class="China-week"></span>
+			</div>
+		</div>
+		<div class="teacher-c">
+			<ul class="pass-list" id="pass-list">
+				<li class="today active">Upcoming lessons <span class="today-tips">(0)</span></li>
+				<li class="pass">Completed lessons <span class="pass-tips">(0)</span></li>
+			</ul>
+			<div class="day-cont" id="listBox">
+				<div class="ipcom" id="myList"></div>
+				<div class="completed hide" id="myComplete"></div>
+			</div>
+		</div>
+	</div>
+	<div class="memoWin" style="display:none;">
+		<div class="header">
+			<h3>Lesson memo</h3>
+			<p>Katherine（Level 4）Classic English Junior Level1 > Unit1 > Lesson6 : Learn Hadoop and get certified</p>
+			<a href="javascript:;" class="close"></a>
+		</div>
+		<div class="content" style="margin-bottom:150px">
+			<div class="pronuncation">
+				<div class="title">
+					<span class="topTitle">Part 1. Pronunciation</span>
+					<span class="subTitle">(Please select at least 1 correction)</span>
+				</div>
+				<div class="keyWords">
+					<p class="com_p">Key words in this lesson</p>
+					<ul class="wordsList clearfix">
+						<li>
+							<i class="active"></i>
+							<span>envelope</span>
+						</li>
+						<li>
+							<i></i>
+							<span>envelope</span>
+						</li>
+						<li>
+							<i></i>
+							<span>envelope</span>
+						</li>
+						<li>
+							<i></i>
+							<span>envelope</span>
+						</li>
+						<li>
+							<i></i>
+							<span>envelope</span>
+						</li>
+					</ul>
+					<div class="com_dash review">
+						<p class="com_p">Pronunciation to review</p>
+						<ul class="reviewList clearfix">
+							<li><input type="text" value="envelope / envələʊp /"><i></i></li>
+							<li><input type="text" value="envelope / envələʊp /"><i></i></li>
+							<li><input type="text" value="envelope / envələʊp /"><i></i></li>
+							<li><input type="text" value="envelope / envələʊp /"><i></i></li>
+						</ul>
+						<span class="com_addView"></span>
+					</div>
+				</div>
+			</div>
+			<div class="com_solid grammer">
+				<div class="title">
+					<span class="topTitle">Part 2. Grammar / Syntax</span>
+					<span class="subTitle">(Please write at least 1 correction)</span>
+				</div>
+				<p class="com_p">Key words in this lesson</p>
+				<div class="gram_box">
+					<ul class="gramList clearfix">
+						<li>
+							<input type="text" class="error" value="incorrect">
+							<input type="text" class="succ" value="correct">
+							<i></i>
+						</li>
+						<li class="com_dashTop">
+							<input type="text" class="error" value="incorrect">
+							<input type="text" class="succ" value="correct">
+							<i></i>
+						</li>
+						<li class="com_dashTop">
+							<input type="text" class="error" value="incorrect">
+							<input type="text" class="succ" value="correct">
+							<i></i>
+						</li>
+					</ul>
+					<span class="com_addView"></span>
+				</div>
+			</div>
+			<div class="com_solid assessment">
+				<div class="title">
+					<span class="topTitle">Part 3. Assessment</span>
+					<span class="subTitle">(A personalized assessment is very helpful to your student's progress/success)</span>
+				</div>
+				<div class="evalu">
+					<p class="com_p">General Evaluation</p>
+					<ul class="wordsList normalList clearfix">
+						<li>
+							<i class="active"></i>
+							<span>A+</span>
+						</li>
+						<li>
+							<i></i>
+							<span>A</span>
+						</li>
+						<li>
+							<i></i>
+							<span>A-</span>
+						</li>
+						<li>
+							<i></i>
+							<span>B+</span>
+						</li>
+						<li>
+							<i></i>
+							<span>B</span>
+						</li>
+					</ul>
+					<div class="desc">Able to fully comprehend lesson tasks and respond spontaneously</div>
+					<div class="com_areaBox">
+						<textarea class="com_area"></textarea>
+						<span class="com_changeBtn">Change</span>
+					</div>
+				</div>
+				<div class="weakness com_dash">
+					<p class="com_p">Weakness</p>
+					<ul class="wordsList normalList clearfix">
+						<li>
+							<i class="active"></i>
+							<span>gram</span>
+						</li>
+						<li>
+							<i></i>
+							<span>gram</span>
+						</li>
+						<li>
+							<i></i>
+							<span>gram</span>
+						</li>
+						<li>
+							<i></i>
+							<span>gram</span>
+						</li>
+						<li>
+							<i></i>
+							<span>gram</span>
+						</li>
+					</ul>
+					<div class="desc">Able to fully comprehend lesson tasks and respond spontaneously</div>
+				</div>
+				<div class="suggestion com_dash">
+					<p class="com_p">Suggestion</p>
+					<div class="com_areaBox">
+						<textarea class="com_area"></textarea>
+						<span class="com_changeBtn">Change</span>
+					</div>
+				</div>
+				<div class="option com_dash">
+					<p class="com_p">Option more</p>
+					<div class="com_areaBox">
+						<textarea class="com_area"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="com_solid skill">
+				<div class="title">
+					<span class="topTitle">Part 4. Communication Skilll</span>
+				</div>
+				<ul class="scoreList">
+					<li class="clearfix">
+						<span>Pronunciation</span>
+						<div class="score">
+							<div>
+								<a href="javascript:;" class="active"></a>
+								<a href="javascript:;" class="active"></a>
+								<a href="javascript:;" class="active"></a>
+								<a href="javascript:;" class="active"></a>
+								<a href="javascript:;"></a>
+							</div>
+							<p class="desc">Able to fully comprehend lesson tasks and respond spontaneously</p>
+						</div>
+					</li>
+					<li class="clearfix">
+						<span>Pronunciation</span>
+						<div class="score">
+							<div>
+								<a href="javascript:;" class="active"></a>
+								<a href="javascript:;" class="active"></a>
+								<a href="javascript:;" class="active"></a>
+								<a href="javascript:;" class="active"></a>
+								<a href="javascript:;"></a>
+							</div>
+							<p class="desc">Able to fully comprehend lesson tasks and respond spontaneously</p>
+						</div>
+					</li>
+					<li class="clearfix">
+						<span>Pronunciation</span>
+						<div class="score">
+							<div>
+								<a href="javascript:;" class="active"></a>
+								<a href="javascript:;" class="active"></a>
+								<a href="javascript:;" class="active"></a>
+								<a href="javascript:;" class="active"></a>
+								<a href="javascript:;"></a>
+							</div>
+							<p class="desc">Able to fully comprehend lesson tasks and respond spontaneously</p>
+						</div>
+					</li>
+
+				</ul>
+			</div>
+			<div class="com_solid stage">
+				<div class="title">
+					<span class="topTitle">Part 5. Choose Stage</span>
+				</div>
+				<ul class="stageList mt15">
+					<li class="clearfix">
+						<a href="javascript:;" class="active"></a>
+						<div class="stageDesc">
+							<p class="stageType">Basic User</p>
+							<p class="desc">Able to fully comprehend lesson tasks and respond spontaneously</p>
+						</div>
+					</li>
+					<li class="clearfix">
+						<a href="javascript:;"></a>
+						<div class="stageDesc">
+							<p class="stageType">Basic User</p>
+							<p class="desc">Able to fully comprehend lesson tasks and respond spontaneously</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="com_solid level">
+				<div class="title">
+					<span class="topTitle">Part 6. Choose Level</span>
+				</div>
+				<ul class="wordsList normalList mt15 clearfix">
+					<li>
+						<i class="active"></i>
+						<span>level 0</span>
+					</li>
+					<li>
+						<i></i>
+						<span>level 1</span>
+					</li>
+					<li>
+						<i></i>
+						<span>level 2</span>
+					</li>
+					<li>
+						<i></i>
+						<span>level 3</span>
+					</li>
+					<li>
+						<i></i>
+						<span>level 4</span>
+					</li>
+				</ul>
+				<div class="desc">Able to fully comprehend lesson tasks and respond spontaneously</div>
+			</div>
+		</div>
+		
+	</div>
+	<!-- <script type="text/javascript" src="../../../js/html/project/AC/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../js/html/project/AC/AC.js"></script>
+	<script type="text/javascript" src="../../../js/html/project/AC/ZeroClipboard.min.js"></script> -->
+</body>
+</html>

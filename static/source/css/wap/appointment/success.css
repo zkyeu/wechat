@@ -1,0 +1,183 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ */
+.success-header {
+  height: 87px;
+  line-height: 87px;
+  background: url(../../../images/wap/appointment/success_topbar.png?v=78M6BdCAj%2F%2Br2V5%2BCBeGNw%3D%3D) no-repeat;
+  background-size: 100% 100%;
+}
+.success-header__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2rem;
+  color: #fff;
+}
+.success-header__wrap::before {
+  display: inline-block;
+  width: 49px;
+  height: 40px;
+  background: url(../../../images/wap/appointment/success_icon.png?v=iVad0VApo9js17m3UQw3LQ%3D%3D) no-repeat;
+  background-size: cover;
+  vertical-align: middle;
+  content: '';
+}
+.success-exclusive {
+  margin: 2rem 2.1rem 0;
+  padding-bottom: 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  border-bottom: #c7c7c7 dashed 1px;
+}
+.success-exclusive dd {
+  margin-top: 1.2rem;
+  line-height: 1.5;
+}
+.success-exclusive h1 {
+  color: #333;
+  font-size: 1.8rem;
+}
+.success-exclusive p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+.success-exclusive img {
+  max-width: 50%;
+}
+.success-before {
+  margin: 2rem 2.1rem 0;
+  padding-bottom: 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  border-bottom: #c7c7c7 dashed 1px;
+  border-bottom: none;
+}
+.success-before dd {
+  margin-top: 1.2rem;
+  line-height: 1.5;
+}
+.success-before h1 {
+  color: #333;
+  font-size: 1.8rem;
+}
+.success-before p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+.success-before img {
+  max-width: 50%;
+}
+.success-guide {
+  padding-top: 2.2rem;
+  background: url(../../../images/wap/appointment/bg.jpg?v=5ndB75HcG0FC6frv%2FwcBHw%3D%3D) repeat-x;
+  background-size: 100% 10px;
+}
+.success-guide__title {
+  font-size: 1.6rem;
+  color: #54a8fc;
+  text-align: center;
+}
+.success-guide__title::before,
+.success-guide__title::after {
+  display: inline-block;
+  height: 1px;
+  margin-right: 0.5rem;
+  background: #54a8fc;
+  content: '';
+}
+.success-guide__title::after {
+  margin: 0 0 0 0.5rem;
+}
+.success-guide__video {
+  margin: 1.5rem 1.8rem 0;
+  padding: 1.5rem 0 1rem;
+  border-top: #b1d6fd solid 1px;
+}
+.success-guide__tips {
+  font-size: 1.2rem;
+  color: #828282;
+  text-align: center;
+}
+.success-important {
+  margin-top: 1.5rem;
+  padding-top: 2.2rem;
+  background: url(../../../images/wap/appointment/bg.jpg?v=5ndB75HcG0FC6frv%2FwcBHw%3D%3D) repeat-x;
+  background-size: 100% 10px;
+}
+.success-important__title {
+  font-size: 1.6rem;
+  color: #54a8fc;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.success-important__title::before,
+.success-important__title::after {
+  display: inline-block;
+  height: 1px;
+  margin-right: 0.5rem;
+  background: #54a8fc;
+  content: '';
+}
+.success-important__title::after {
+  margin: 0 0 0 0.5rem;
+}
+.success-important dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.8rem 0;
+  margin: 0 1.8rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: #b1d6fd solid 1px;
+}
+.success-important dt {
+  -webkit-box-flex: 1.5;
+      -ms-flex: 1.5;
+          flex: 1.5;
+  margin-right: 2rem;
+}
+.success-important dd {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+.success-important dd h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  color: #333;
+}
+.success-important dd p {
+  line-height: 1.5;
+  font-size: 1.2rem;
+  color: #666;
+}
+.success-scan {
+  padding: 2.8rem 0;
+  background: #eef9ff;
+  border-top: #d5e7fc solid 1px;
+  text-align: center;
+}
+.success-scan img {
+  max-width: 50%;
+}
+.success-scan dd {
+  margin-top: 2rem;
+}
+.success-scan p {
+  font-size: 1.3rem;
+  color: #333;
+}

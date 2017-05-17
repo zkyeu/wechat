@@ -1,0 +1,45 @@
+<% include ../common/top.ejs %>
+<body>
+<input type="hidden" id="container" data-init=""/>
+<!-- 公共头 -->
+<% include ../common/b2s/b2s_header.ejs %>
+<!-- 中间内容 -->
+<div class="mycls">
+  <div class="widthMain">
+    <!-- banner -->
+    <% include ../common/b2s/b2s_banner.ejs %>
+    <div class="chang_color">
+      <i class="cls-icon"></i>
+     <p class="wei_text">应付金额 <span>￥300元</span></p>
+    
+       <div class="union_pay">
+            <p class="remitt_text">请于三日内汇款至以下公司账户：</p>
+            <table>
+              <tr class="first_text">
+                <td colspan=2 class="one_line">招商银行</td>
+              </tr>
+              <tr>
+                <td>公司账号</td>
+                <td>110909330010602</td>
+              </tr>
+              <tr>
+                <td>开户行</td>
+                <td>北京大生知行科技有限公司</td>
+              </tr>
+              <tr>
+                <td>分行名</td>
+                <td>招商银行北京海淀支行</td>
+              </tr>
+               <tr>
+                <td colspan=2 >银行汇款后烦请您致电 4000-51-51-51 通知我们。（由于汇款银行的不同，我们确认您的汇款大概需要1-3个工作日。）</td>
+              </tr>
+            </table>
+        </div>
+      
+    </div>
+  </div>
+</div>
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

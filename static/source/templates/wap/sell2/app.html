@@ -1,0 +1,99 @@
+
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title></title>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <link href="/css/wap/sell2/sell2.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <div data-init="sell2" class="sell2">
+      <header class="c-header"><a href="javascript:;" class="touch-area"><em class="arr"></em></a>选择上课班级</header>
+      <section class="top">
+        <ul class="top-step">
+          <li> <span>1</span><br/><span>购课成功</span></li>
+          <li class="active"> <span>2</span><br/><span>选择班级</span></li>
+          <li> <span>3</span><br/><span>完成</span></li>
+        </ul>
+      </section>
+      <section class="defaults-con">
+        <h2>默认条件</h2>
+        <ul class="clearfix">
+          <li>一年级</li>
+          <li>秋季班</li>
+          <li>春</li>
+          <li>全能拔高班</li>
+        </ul>
+      </section>
+      <section class="grade-select">
+        <h2> <span class="red">*</span><span>选择年级</span><span class="red">（必选）</span></h2>
+        <ul class="clearfix">
+          <li data-grade="101">一年级</li>
+          <li data-grade="102">二年级</li>
+          <li data-grade="103">三年级</li>
+          <li data-grade="104">四年级</li>
+          <li data-grade="105">五年级</li>
+          <li data-grade="106">六年级</li>
+        </ul>
+      </section>
+      <section class="semester-select">
+        <h2> <span class="red">*</span><span>选择学期</span><span class="red">（必选）</span></h2>
+        <ul class="clearfix">
+          <li data-semester="201">春</li>
+          <li data-semester="202">暑</li>
+          <li data-semester="203">秋</li>
+          <li data-semester="204">寒</li>
+        </ul>
+      </section>
+      <section style="display:none" class="classes-select">
+        <h2> <span class="red">*</span><span>选择班型</span><span class="red">（必选）</span></h2>
+        <ul class="clearfix">
+          <li data-classes="301">集训班48元</li>
+          <li data-classes="302">全能拔高班1800元</li>
+        </ul>
+      </section>
+      <section class="level-select">
+        <h2> <span class="red">*</span><span>选择班级层次</span><span class="red">（必选）</span></h2>
+        <ul class="borderN clearfix">
+          <li data-level="401">提高班A</li>
+          <li data-level="402">尖子班A+</li>
+        </ul>
+      </section>
+      <section style="display:none" class="time-select">
+        <section style="display:none" class="s-full">
+          <h3 class="full-tit">班级名额已满</h3>
+          <p class="full-text">请更换条件筛选班级</p>
+        </section>
+        <section class="select-h">
+          <h2> <span class="red">*</span><span>上课周期</span><span class="red">（必选）</span></h2>
+          <ul class="clearfix"></ul>
+        </section>
+      </section>
+      <form action="" id="formInfo" style="display:none" method="post">
+        <input type="hidden" id="prop_grade" value=""/>
+        <input type="hidden" id="prop_term" value=""/>
+        <input type="hidden" id="prop_classtype" value=""/>
+        <input type="hidden" id="prop_classlevel" value=""/>
+        <input type="hidden" id="class_first_date" value=""/>
+        <input type="hidden" id="class_last_date" value=""/>
+      </form>
+      <footer class="footer"> <a href="javascript:;" class="sign">筛选班级</a></footer>
+      <section class="dialog">
+        <section class="dialog-cont">
+          <h3>系统通知</h3>
+          <section class="dialog-inner">
+            <p class="info">此商品为特惠商品，仅限新用户购买此商品为特惠商品，仅限新用户购买此商品为特惠商品，仅限新用户购买</p>
+            <p class="know"> <a>知道了</a></p>
+          </section>
+        </section>
+      </section>
+    </div>
+    <script src="/js/wap/project/sell2/vendor.js" id="seajsnode"></script>
+  </body>
+</html>

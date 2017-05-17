@@ -1,0 +1,43 @@
+<% include ../common/top.ejs %>
+<body>
+  <div class="future" data-init="rem">
+    <div class="top">
+      <div class="widthMain">
+        <img src="<%= imagessrc%>pc_top.jpg" alt="" class="f_top">
+        <img src="<%= imagessrc%>plane.png" alt="" class="plane">
+      </div>
+    </div>
+    <div class="login">
+      <div class="widthMain">
+        <form action="" id="RegForm">
+          <ul class="list">
+            <li class="phone">
+              <input type="tel" placeholder="请输入您的手机号" id="sha-tel">
+            </li>
+            <li class="password">
+              <input type="password" placeholder="设置密码" id="sha-psd">
+            </li>
+            <li class="sure">
+              <input type="button" value="确认报名" id="sha-reg">
+            </li>
+            <li class="link">
+              <span><a href="javascript:;">已完成比赛，点此登录查看成绩</a></span>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="widthMain">
+        <img src="<%= imagessrc%>hat.png" alt="" class="hat">
+        <div class="cont">
+          <img src="<%= imagessrc%>pc_b1.jpg" alt="">
+          <img src="<%= imagessrc%>pc_b2.jpg" alt="">
+          <img src="<%= imagessrc%>pc_b3.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="<%= jssrc%>" id="seajsnode"></script>
+</html>

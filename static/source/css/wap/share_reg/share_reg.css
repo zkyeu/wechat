@@ -1,0 +1,307 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Wed Sep 23 2015 18:57:55 GMT+0800 (中国标准时间)
+ */
+/*
+* 默认样式
+* @file：   base.less
+* @author:  huhaili（huhaili@51talk.com）
+* @update:  2015-07-08
+* @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+*/
+html {
+  font-size: 62.5%;
+}
+@media only screen and (min-width: 481px) {
+  html {
+    font-size: 94%;
+  }
+}
+@media only screen and (min-width: 561px) {
+  html {
+    font-size: 109%;
+  }
+}
+@media only screen and (min-width: 641px) {
+  html {
+    font-size: 125%;
+  }
+}
+/*variable*/
+/*custom*/
+body {
+  font-family: "Microsoft YaHei";
+  color: #666666;
+  padding: 0px;
+  margin: 0px;
+  background: #ecf0f1;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+}
+input,
+button,
+select,
+textarea,
+dl,
+dd,
+dt {
+  font-family: "Microsoft YaHei";
+  outline: none;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 0;
+  padding: 0px;
+  margin: 0px;
+}
+ul,
+li {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #666666;
+  text-decoration: none;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  vertical-align: middle;
+}
+b {
+  font-weight: normal;
+}
+::-moz-selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+strong {
+  font-weight: normal;
+}
+/*nav*/
+header {
+  background: #fff;
+  padding: 1rem;
+}
+header img {
+  width: 8.65rem;
+  height: 2.95rem;
+}
+header .rt {
+  float: right;
+  background: url(../images//pre02.png?v=2015-09-23);
+  background-size: 2.3rem 2.3rem;
+  width: 35px;
+  height: 35px;
+  margin-top: 0.3rem;
+}
+header .rt:active {
+  background: url(../images//pre01.png?v=2015-09-23);
+  background-size: 100%;
+}
+.hd_word {
+  display: block;
+  position: relative;
+  background: #ffa800;
+  color: #fff;
+  font-size: 1.6rem;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+}
+.hd_word img {
+  position: absolute;
+  width: 0.9rem;
+  height: 1.8rem;
+  left: 1rem;
+  top: 1rem;
+}
+footer {
+  color: #ffffff;
+}
+footer dl {
+  display: block;
+  padding: 1.5rem 0.2rem;
+}
+footer dl dd {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+footer dl dd img {
+  width: 6.25rem;
+  height: 2.25rem;
+}
+footer b {
+  display: block;
+  padding: 2rem 0 1rem 0;
+  text-align: center;
+  line-height: 1.8rem;
+  font-size: 1rem;
+}
+footer .second {
+  font-size: 1.4rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+footer .second p {
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  background: #edbc30;
+}
+footer .second p span {
+  color: #333;
+}
+footer .second img {
+  width: 100%;
+}
+.btn {
+  margin: 2.8rem 1rem 0 1rem;
+  background: #edaf00;
+  display: block;
+  border-radius: 0.3rem;
+  color: #ffffff;
+  text-align: center;
+  padding: 0.6rem 0;
+  font-size: 1.6rem;
+  margin-bottom: 13rem;
+}
+.btns {
+  margin: 2.8rem 1rem 0 1rem;
+  background: #edaf00;
+  display: block;
+  border-radius: 0.3rem;
+  color: #ffffff;
+  text-align: center;
+  padding: 0.6rem 0;
+  font-size: 1.6rem;
+  margin-bottom: 5rem;
+}
+body {
+  max-width: 640px;
+  min-width: 320px;
+  margin: 0px auto;
+  background: #fff;
+}
+.posi {
+  width: 100%;
+  background-size: 100%;
+}
+.share {
+  position: relative;
+}
+.share .sha-ban {
+  width: 100%;
+  background-size: 100%;
+}
+.share .sha-clas,
+.share .sha-fot {
+  position: relative;
+  float: left;
+  width: 100%;
+  background: url(../../../images/wap/share_reg/share_bj.jpg?v=NaU9qsNnQpI%2FqY22xsW1ow%3D%3D) top center no-repeat;
+  background-size: 100%;
+  text-align: center;
+}
+.share .sha-clas h3,
+.share .sha-fot h3 {
+  width: 100%;
+  background-size: 100%;
+  font-size: 1.5rem;
+  color: #231815;
+  margin-top: 3rem;
+}
+.share .sha-clas .sha-input,
+.share .sha-fot .sha-input,
+.share .sha-clas .share-btn,
+.share .sha-fot .share-btn {
+  margin: 0 2.3rem 1rem 2.3rem;
+  padding: 0 1.2rem;
+  line-height: 4.4rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  text-align: left;
+  border-bottom: 0.1rem #ccc2aa solid;
+  font-size: 1.6rem;
+}
+.share .sha-clas .sha-input .input,
+.share .sha-fot .sha-input .input,
+.share .sha-clas .share-btn .input,
+.share .sha-fot .share-btn .input {
+  color: #bbb;
+  font-size: 1.6rem;
+  width: 100%;
+  border: none;
+  background: none;
+}
+.share .sha-clas .share-btn,
+.share .sha-fot .share-btn {
+  display: block;
+  margin: 2.3rem 2.3rem 3rem 2.3rem;
+  background: #ff8200;
+  text-align: center;
+  color: #fff;
+  font-size: 1.8rem;
+}
+.share .sha-clas .sha-hover,
+.share .sha-fot .sha-hover {
+  position: absolute;
+  bottom: -2.2rem;
+  left: 50%;
+  margin-left: -1.5rem;
+}
+.share .sha-clas .sha-hover img,
+.share .sha-fot .sha-hover img {
+  display: inline-block;
+  width: 3rem;
+  height: 4.8rem;
+}
+.share .sha-cer {
+  float: left;
+  width: 100%;
+}
+.share .sha-cer .sha-img {
+  width: 100%;
+  background-size: 100%;
+  margin-bottom: 4rem;
+}
+.share .sha-fot {
+  position: relative;
+  margin-top: 2rem;
+  height: auto;
+  background: none;
+}
+.share .sha-fot .sha-input {
+  background: #4f4f4f;
+}
+.share .share-wbtn {
+  text-align: center;
+  display: block;
+  font-size: 1.4rem;
+  line-height: 3rem;
+}

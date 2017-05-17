@@ -1,0 +1,40 @@
+<% include ../common/top_b2s_n.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>1v1_pay_course.css">
+</head>
+<body data-init="" class="pay_course_1v1">
+    <div class="course-top"><img src="<%= imagessrc%>1v1-pay-course-02.png"></div>
+    <div class="course-tit"><span>购买课程服务</span></div>
+    <ul class="course-items">
+        <li>
+            <div class="course-item-top course-item-bg1 icon-bg-01">
+                <div class="item-top-tit">外教VIP精品课</div>
+                <div class="item-top-prompt2">剩余30节课 每周二19：30上课</div>
+            </div>
+            <div class="course-item-bottom2 icon-color1"><a href="#"></a>查看特权</div>
+        </li>
+        <li>
+            <div class="course-item-top course-item-bg2  icon-bg-02">
+                <div class="item-top-tit">专属外教1对1课</div>
+                <div class="item-top-prompt3">剩余 <span>8次</span> 课次  有效期至 <span>2017年2月3日</span></div>
+            </div>
+            <div class="course-item-bottom2 icon-color2"><a href="#"></a>去约课</div>
+        </li>
+    </ul>
+    <div class="course-bottom">
+        <div class="course-bottom-in"><img src="<%= imagessrc%>1v1-pay-course-03.png"></div>
+    </div>
+
+
+<!-- loading -->
+<div id="fontSizeLoding">
+    <img src="<%= imagessrc%>eff_loading.gif">
+</div>
+<script type="text/javascript">
+window.onload = function(){
+    document.documentElement.style.fontSize = document.body.clientWidth / 7.5 + "px";
+    document.getElementById("fontSizeLoding").style.display = "none";
+}
+</script>
+</body>
+<!--公共尾部结束-->
+<% include ../common/bottom.ejs %>

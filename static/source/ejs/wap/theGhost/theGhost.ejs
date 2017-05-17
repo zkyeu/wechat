@@ -1,0 +1,36 @@
+<% include ../common/pupil_top.ejs %>
+<body>
+     <div class="box" id="container" data-init="theGhost">
+          
+          <div class="page_1">
+            <div class="music"></div>
+            <img src="<%= imagessrc%>/1.jpg" alt="">
+          </div>
+          <form id="formText" action="" method="">
+            <div class="page_2">
+                <div class="userBox">
+                    <input class="username phoneText" type="tel" id="phone" from="formText">
+                </div>
+                <img src="<%= imagessrc%>/2.jpg" alt="">
+            </div>
+            <div class="page_3">
+                <div class="passBox">
+                    <input class="password passwordText" type="password" id="pwd" from="formText">
+                </div>
+                <img src="<%= imagessrc%>/3.jpg" alt="">
+            </div>
+          </form>
+          <div class="page_4">
+            <img src="<%= imagessrc%>/4.jpg" alt="">
+          </div>
+          <div class="page_5">
+              <a href="javascript:;"><input type="submit" class="submit" from="formText" id="submit"></a>
+              <img src="<%= imagessrc%>/5.jpg" alt="">
+          </div>
+          <div class="page_6">
+            <img src="<%= imagessrc%>/6.jpg" alt="">
+          </div>
+     </div>
+</body>
+<% include ../common/bottom.ejs %>
+

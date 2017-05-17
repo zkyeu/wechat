@@ -1,0 +1,88 @@
+<% include ../common/top.ejs %>
+<body class="ac-tem-choice ac-tem-tea ac-tem-voice" data-init="acVoice" swfHref="" audioPath="" page-tag="voice,tea,send">
+	<div class="ac-tem">
+		<div class="ac-tem-tit">
+			<span class="ac-tem-tit-bg"></span>
+			<div class="ac-tem-tit-in ac-tem-wrap clearfix">
+				<a href="javascript:void(0);" class="ac-close ac-pair-spirts fr">Go back to class</a>
+			</div>
+		</div>
+	    <div class="ac-tem-con ac-tem-wrap">
+	    	<div class="ac-tem-info">
+				<ul class="clearfix">
+	            	<li class="ac-timmer" left-time="3600">
+	            		<span>00:00</span>
+	            	</li>
+	            	<!-- <li class="ac-beans">
+                        <span>+999</span>
+                    </li> -->
+	            </ul>
+	    	</div>
+	        <div class="ac-tem-content">
+                <!-- 排名 -->
+                <div class="ac-tem-ranking">
+                    <div class="ac-tem-ranking-bg"></div>
+                    <p>Discuss with the teacher </p>
+                </div>
+                <!-- 答题区域 -->
+                <div class="choice-wrap">
+                    <div class="choice-content">
+                         <div class="voice-content clearfix">
+                        <!-- 讨论题有图片情况 -->
+                             <img src="<%= imagessrc%>voice_img.png" class="voice-img" />
+                             <div class="question-text-img voice-text-scroll">
+                                 <p>1.Who is you favorite superhero?</p>
+                                 <p>2.What powers does he/she hace?</p>
+                                 <P>3.What would you like to dress up as for Costume Day?</P>
+                                 <p>4.What super power would you like to have?</p>
+                                 <p>5.What powers does he/she have?</p>
+                                 <p>6.What powers does he/she have?</p>
+                                 <p>7.What powers does he/she have?</p>
+                                 <p>8.What powers does he/she have?</p>
+                             </div>
+                        <!-- 讨论题没图片情况 -->
+                            <!-- <div class="question-text voice-text-scroll">
+                                <p>1.Who is you favorite superhero?</p>
+                                     <p>2.What powers does he/she hace?</p>
+                                     <P>3.What would you like to dress up as for Costume Day?</P>
+                                     <p>4.What super power would you like to have?</p>
+                                     <p>5.What powers does he/she have?</p>
+                                     <p>6.What powers does he/she have?</p>
+                                      <p>5.What powers does he/she have?</p>
+                                     <p>6.What powers does he/she have?</p>
+                            </div> -->
+                        <!-- 跟读题有图片情况 -->
+                           <!--  <div class="read-text-img voice-text-scroll"> -->
+                            <!-- 题目1行情况 -->
+                               <!--  <P class="read-question">I was born on May 10th.I was born on May 10th.I</P> -->
+                            <!-- 题目多行情况 -->
+                                <!-- <div class="more_read-question">I was born on May 10th.I was born on May 10th.I was born on May 10th.I was born on May 10th.I was born on May 10th.I was born on May 10th.</div>
+                                <img src="<%= imagessrc%>voice_img.png" class="" /> -->
+                            <!-- </div> -->
+                        <!-- 跟读题没图片情况 -->
+                            <!-- <div class="read-text voice-text-scroll">
+                                <P class="read-question">I was born on May 10th.n on May 10th.I on May 10th>I was born on May 10th.n on May 10th.I </P>
+                            </div> -->
+                         </div>   
+                    </div>
+                    <!-- 发送按钮 -->
+                    <div class="ac-tem-send">
+                        <input type="button" class="ac-btn ac-send btn-disabled" disabled />
+                    </div>
+                    <div class="ac-tem-tips">
+                        <div class="ac-tem-tips-inner">
+                            <ul class="clearfix">
+                                <li>Speak slower, be encouraging and patientpatientpatient.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <i class="choice-grass"></i>
+                </div>
+
+
+            </div>
+	    </div>
+	</div>
+<div class="choice-dialog choice-dialog-tea"></div>
+</body>
+<% include ../common/bottom.ejs %>

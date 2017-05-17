@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="app下载专页">
+    <meta name="keywords" content="app下载专页">
+    <title>欢迎下载51Talk App</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/html/weixin_heck/common.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/html/weixin_heck/friendCircle.css">
+</head>
+<body data-init="heckCircle" class="weixin_circle weixin_circle_new">
+    <!-- <div class="heck_top">
+        <div class="top-nav">
+            <span>朋友圈</span>
+        </div>
+    </div> -->
+    <input type="hidden" data-nick='winfred' wechat-id='1' id="data-self">
+    <div class="friend_comment"><h5>通知</h5><h6>新增评论<em>3</em>条</h6></div>
+    <input type="hidden" data-id="" id="data-id">
+    <input type="hidden" wechat-id="" id="wechat-id">
+    <div class="clear-fix heck_center" >
+        <div class="content">
+            
+            <h5 class="content-head">朋友圈</h5>
+
+            <div class="send_message">
+                <form rel="friendsCircle">
+                    <textarea placeholder="朋友圈内容"></textarea>
+                    <input id="start_upload" class="send_to_user" type="button" ajax-url="/CircleFriend/publishMoment" value="发布" />
+                    <div class="clear-fix select_mes" id="select_mes">
+                        <div class="Circle_library">朋友圈库</div>
+                        <div class="smail">
+                            <em>表情</em><span></span>
+                            <div class="face_panel" transition="trans2">
+                                <span class="face_panel_arr"></span>
+                                <ul class="face_type">
+                                    <li>请选择表情</li>
+                                </ul>
+                                <ul class="face_con">
+                                    <li >
+                                        <!-- qq表情 -->
+                                        <div  class="face_qq clearfix">
+                                            <span class="qqface qqface0" title="微笑"></span><span class="qqface qqface1" title="撇嘴"></span><span class="qqface qqface2" title="色"></span><span class="qqface qqface3" title="发呆"></span><span class="qqface qqface4" title="得意"></span><span class="qqface qqface5" title="流泪"></span><span class="qqface qqface6" title="害羞"></span><span class="qqface qqface7" title="闭嘴"></span><span class="qqface qqface8" title="睡"></span><span class="qqface qqface9" title="大哭"></span><span class="qqface qqface10" title="尴尬"></span><span class="qqface qqface11" title="发怒"></span><span class="qqface qqface12" title="调皮"></span><span class="qqface qqface13" title="呲牙"></span><span class="qqface qqface14" title="惊讶"></span><span class="qqface qqface15" title="难过"></span><span class="qqface qqface16" title="酷"></span><span class="qqface qqface17" title="冷汗"></span><span class="qqface qqface18" title="抓狂"></span><span class="qqface qqface19" title="吐"></span><span class="qqface qqface20" title="偷笑"></span><span class="qqface qqface21" title="愉快"></span><span class="qqface qqface22" title="白眼"></span><span class="qqface qqface23" title="傲慢"></span><span class="qqface qqface24" title="饥饿"></span><span class="qqface qqface25" title="困"></span><span class="qqface qqface26" title="惊恐"></span><span class="qqface qqface27" title="流汗"></span><span class="qqface qqface28" title="憨笑"></span><span class="qqface qqface29" title="悠闲"></span><span class="qqface qqface30" title="奋斗"></span><span class="qqface qqface31" title="咒骂"></span><span class="qqface qqface32" title="疑问"></span><span class="qqface qqface33" title="嘘"></span><span class="qqface qqface34" title="晕"></span><span class="qqface qqface35" title="疯了"></span><span class="qqface qqface36" title="衰"></span><span class="qqface qqface37" title="骷髅"></span><span class="qqface qqface38" title="敲打"></span><span class="qqface qqface39" title="再见"></span><span class="qqface qqface40" title="擦汗"></span><span class="qqface qqface41" title="抠鼻"></span><span class="qqface qqface42" title="鼓掌"></span><span class="qqface qqface43" title="糗大了"></span><span class="qqface qqface44" title="坏笑"></span><span class="qqface qqface45" title="左哼哼"></span><span class="qqface qqface46" title="右哼哼"></span><span class="qqface qqface47" title="哈欠"></span><span class="qqface qqface48" title="鄙视"></span><span class="qqface qqface49" title="委屈"></span><span class="qqface qqface50" title="快哭了"></span><span class="qqface qqface51" title="阴险"></span><span class="qqface qqface52" title="亲亲"></span><span class="qqface qqface53" title="吓"></span><span class="qqface qqface54" title="可怜"></span><span class="qqface qqface55" title="菜刀"></span><span class="qqface qqface56" title="西瓜"></span><span class="qqface qqface57" title="啤酒"></span><span class="qqface qqface58" title="篮球"></span><span class="qqface qqface59" title="乒乓"></span><span class="qqface qqface60" title="咖啡"></span><span class="qqface qqface61" title="饭"></span><span class="qqface qqface62" title="猪头"></span><span class="qqface qqface63" title="玫瑰"></span><span class="qqface qqface64" title="凋谢"></span><span class="qqface qqface65" title="嘴唇"></span><span class="qqface qqface66" title="爱心"></span><span class="qqface qqface67" title="心碎"></span><span class="qqface qqface68" title="蛋糕"></span><span class="qqface qqface69" title="闪电"></span><span class="qqface qqface70" title="炸弹"></span><span class="qqface qqface71" title="刀"></span><span class="qqface qqface72" title="足球"></span><span class="qqface qqface73" title="瓢虫"></span><span class="qqface qqface74" title="便便"></span><span class="qqface qqface75" title="月亮"></span><span class="qqface qqface76" title="太阳"></span><span class="qqface qqface77" title="礼物"></span><span class="qqface qqface78" title="拥抱"></span><span class="qqface qqface79" title="强"></span><span class="qqface qqface80" title="弱"></span><span class="qqface qqface81" title="握手"></span><span class="qqface qqface82" title="胜利"></span><span class="qqface qqface83" title="抱拳"></span><span class="qqface qqface84" title="勾引"></span><span class="qqface qqface85" title="拳头"></span><span class="qqface qqface86" title="差劲"></span><span class="qqface qqface87" title="爱你"></span><span class="qqface qqface88" title="NO"></span><span class="qqface qqface89" title="OK"></span><span class="qqface qqface90" title="爱情"></span><span class="qqface qqface91" title="飞吻"></span><span class="qqface qqface92" title="跳跳"></span><span class="qqface qqface93" title="发抖"></span><span class="qqface qqface94" title="怄火"></span><span class="qqface qqface95" title="转圈"></span><span class="qqface qqface96" title="磕头"></span><span class="qqface qqface97" title="回头"></span><span class="qqface qqface98" title="跳绳"></span><span class="qqface qqface99" title="投降"></span><span class="qqface qqface100" title="激动"></span><span class="qqface qqface101" title="乱舞"></span><span class="qqface qqface102" title="献吻"></span><span class="qqface qqface103" title="左太极"></span><span class="qqface qqface104" title="右太极"></span>
+                                        </div>
+                                        <div>其他表情</div>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="icon image_icon" id="browse">
+                            图片
+                        </div>
+                        <div class="show-lable" style="display: none;">
+                            <p>朋友圈可见标签：</p>
+                            <span onselectstart="return false" label-value="all">全部可见</span>
+                            <span onselectstart="return false" label-value="已付费">已付费</span>
+                            <span onselectstart="return false" label-value="未付费1">未付费1</span>
+                            <span onselectstart="return false" label-value="未付费2">未付费2</span>
+                            <span onselectstart="return false" label-value="未付费3">未付费3</span>
+                        </div>
+
+                        <div class="up_img">
+                            <p>最多可上传九张<span>&times;</span></p>
+                            <ul class="clear-fix">
+                                <li class="add_img" id="addImg">+</li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- 消息中心 -->
+            <div class="message_center">
+                <h5>消息中心</h5>
+                <div class="message_center_con">
+                    <ul>
+                        <!-- 没有新的消息 -->
+                        <!-- <li class="message_none">
+                            暂无新的消息
+                        </li> -->
+                        <!-- 有新的消息 -->
+                        <li data-url="http://www.baidu.com">
+                            <div class="message_user_info">
+                                <img src="../../../images/html/weixin_heck/cchead.jpg" />
+                        
+                                <div class="user_info">
+                                    <h6>winfred<span class="is_like"></span></h6>
+                                    <p title="It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.">It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.</p>
+                                    <span>3月4日  18:14</span>
+                                </div>
+                            </div>
+                            
+                            <div class="message_user_tt">
+                                <img src="../../../images/html/weixin_heck/border_thumb.jpg" class="message_user_img" />
+                            </div>
+                        </li>
+                        <li data-url="http://www.baidu.com">
+                            <div class="message_user_info">
+                                <img src="../../../images/html/weixin_heck/cchead.jpg" />
+                        
+                                <div class="user_info">
+                                    <h6>winfred</h6>
+                                    <p title="It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.">It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.</p>
+                                    <span>3月4日  18:14</span>
+                                </div>
+                            </div>
+                        
+                            <div class="message_user_tt">
+                                <p>滴滴司机很客气，但不知...</p>
+                            </div>
+                        </li>
+                        <li data-url="http://www.baidu.com">
+                            <div class="message_user_info">
+                                <img src="../../../images/html/weixin_heck/cchead.jpg" />
+                        
+                                <div class="user_info">
+                                    <h6>winfred</h6>
+                                    <p title="It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.">It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.</p>
+                                    <span>3月4日  18:14</span>
+                                </div>
+                            </div>
+
+                            <div class="message_user_tt">
+                                <p>滴滴司机很客气，但不知...</p>
+                            </div>
+                        </li>
+                        <li data-url="http://www.baidu.com">
+                            <div class="message_user_info">
+                                <img src="../../../images/html/weixin_heck/cchead.jpg" />
+                        
+                                <div class="user_info">
+                                    <h6>winfred</h6>
+                                    <p title="It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.">It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.</p>
+                                    <span>3月4日  18:14</span>
+                                </div>
+                            </div>
+                        
+                            <div class="message_user_tt">
+                                <p>滴滴司机很客气，但不知...</p>
+                            </div>
+                        </li>
+                        <li data-url="http://www.baidu.com">
+                            <div class="message_user_info">
+                                <img src="../../../images/html/weixin_heck/cchead.jpg" />
+                        
+                                <div class="user_info">
+                                    <h6>winfred</h6>
+                                    <p title="It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.">It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.</p>
+                                    <span>3月4日  18:14</span>
+                                </div>
+                            </div>
+                        
+                            <div class="message_user_tt">
+                                <p>滴滴司机很客气，但不知...</p>
+                            </div>
+                        </li>
+                        <li data-url="http://www.baidu.com">
+                            <div class="message_user_info">
+                                <img src="../../../images/html/weixin_heck/cchead.jpg" />
+                        
+                                <div class="user_info">
+                                    <h6>winfred</h6>
+                                    <p title="It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.">It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.It’s not the end.</p>
+                                    <span>3月4日  18:14</span>
+                                </div>
+                            </div>
+                        
+                            <div class="message_user_tt">
+                                <p>滴滴司机很客气，但不知...</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 消息中心 -->
+            
+            <!-- 朋友圈内容 -->
+            <!-- 猜你关注 -->
+            <div class="already_send_mes already_send_mes_guess">
+                <h6 class="already_send_mes_type">
+                    猜你关注
+                    <div class="personal">
+                        <a href="https://www.baidu.com">
+                            <div class="layer"></div>
+                            <img src="../../../images/html/weixin_heck/cchead.jpg">
+                        </a>
+                    </div>
+                </h6>
+
+                <!--视频-->
+                <div class="already_mes already_img_mes" wechat-mid="hh">
+                    <img src="../../../images/html/weixin_heck/cchead.jpg" class="person_detail" />
+                    <div class="mes_detail">
+                        <h4>winfred</h4>
+                        <p class="mes_detail_text">如果有道云笔记登录或同</p>
+                        <div class="share-video">
+                            <video controls >
+                                <source src="http://testtest1117.oss-cn-beijing.aliyuncs.com/5cf78580ead04253f5145ccb803abe2a.mp4">
+                            </video>
+                        </div>
+                        <!--评论-->
+                        <div class="comment_people">
+                            <!--自己名字设置 wechat-rid 为空，否则设置名字-->
+                            <div class="comment_s">
+                                <span class="comment_time">3月4日 18:14</span>
+                                <!-- 删除 -->
+                                <span class="close_btn"  delet-url="">删除</span>
+
+                                <div class="comment_op">
+                                    <!-- 点赞 -->
+                                    <span class="js-like-mes not-like" data-like=''></span>
+                                    <!--转发-->
+                                    <span class="js-broad-mes" data-admin-id="132999009811234599999" data-share-words="这里是转发的一句话内容！"></span>
+                                    <!-- 评论 -->
+                                    <span class="js-back-mes"></span>
+                                </div>
+
+                            </div>
+                            
+                            <div class="comment_h">
+                                <!-- <div class="comment_like">winfred，黑白</div> -->
+
+                                <div class="comment_g">
+                                    <p>
+                                        <em>Mark:</em> 好赞！
+                                    </p>
+                                    <i class="js-back-mes" wechat-rid="1" back-name="Mark">回复</i>
+                                </div>
+                                <div class="comment_g">
+                                    <p>
+                                        <em>Smart</em> 回复 <em>Mark:</em> 必须赞！！！
+                                    </p>
+                                    <i class="js-back-mes" wechat-rid="2" back-name="Smart">回复</i>
+                                </div>
+                                <div class="comment_g">
+                                    <p>
+                                        <em>Mark</em> 回复 <em>Smart:</em> 为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？
+                                    </p>
+                                    <i class="js-back-mes" wechat-rid="3" back-name="Mark">回复</i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--文章-->
+                <div class="already_mes already_img_mes" wechat-mid="hh">
+                    <img src="../../../images/html/weixin_heck/cchead.jpg" class="person_detail" />
+                    <div class="mes_detail">
+                        <h4>winfred</h4>
+                        <p class="mes_detail_text">如果有道云笔记登录或记的...</p>
+                        <div class="share-article">
+                            <a href="javascript:;">
+                                <dt>
+                                    <img src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=4044263107,811056825&fm=58">
+                                </dt>
+                                <dd>
+                                    <p>交互产品中的音效设计</p>
+                                    <p>用户界面音效用户界面音效是个很有意思的话题，在过去很长时间内在过去很长时间内在过去很长时间内在过去很长时间内在过去很长时间内在过去很长时间内</p>
+                                </dd>
+                            </a>
+                        </div>
+                        <!--评论-->
+                        <div class="comment_people">
+                            <!--自己名字设置 wechat-rid 为空，否则设置名字-->
+                            <div class="comment_s">
+                                <span class="comment_time">3月4日 18:14</span>
+                                <!-- 删除 -->
+                                <span class="close_btn"  delet-url="">删除</span>
+
+                                <div class="comment_op">
+                                    <!-- 点赞 -->
+
+                                    <span class="js-like-mes" data-like='[{"createtime":1489647114,"username":"1","nickname":"winfred"}]'></span>
+                                    <!--转发-->
+                                    <span class="js-broad-mes" data-admin-id="11323" data-share-words="12"></span>
+                                    <!-- 评论 -->
+                                    <span class="js-back-mes"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="comment_h">
+                                <div class="comment_like">winfred</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--正常消息-->
+                <div class="already_mes already_img_mes" wechat-mid="hh">
+                    <img src="../../../images/html/weixin_heck/cchead.jpg" class="person_detail" />
+                    <div class="mes_detail">
+                        <h4>winfred</h4>
+                        <p class="mes_detail_text">如果有道云笔...</p>
+                        <ul class="clear-fix">
+                            <li><img src="../../../images/html/weixin_heck/account_img2.png"></li>
+                            <li><img src="../../../images/html/weixin_heck/account_img2.png"></li>
+                            <li><img src="../../../images/html/weixin_heck/account_img2.png"></li>
+                            <li><img src="../../../images/html/weixin_heck/account_img2.png"></li>
+                            <li><img src="../../../images/html/weixin_heck/account_img2.png"></li>
+                            <li><img src="../../../images/html/weixin_heck/account_img2.png"></li>
+                            <li><img src="../../../images/html/weixin_heck/account_img2.png"></li>
+                            <li><img src="../../../images/html/weixin_heck/account_img2.png"></li>
+                            <li><img src="../../../images/html/weixin_heck/account_img2.png"></li>
+                        </ul>
+                    
+                        <!--评论-->
+                        <div class="comment_people">
+                            <!--自己名字设置 wechat-rid 为空，否则设置名字-->
+                            <div class="comment_s">
+                                <span class="comment_time">3月4日 18:14</span>
+                                <!-- 删除 -->
+                                <span class="close_btn"  delet-url="">删除</span>
+
+                                <div class="comment_op">
+                                    <!-- 点赞 -->
+                                    <span class="js-like-mes not-like" data-like='[{"createtime":1489647114,"username":"2","nickname":"黑白"}]'></span>
+                                    <!-- 评论 -->
+                                    <span class="js-back-mes"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="comment_h">
+                                <div class="comment_like">黑白</div>
+                                <div class="comment_g">
+                                    <p>
+                                        <em>Mark:</em> 好赞！
+                                    </p>
+                                    <i class="js-back-mes" wechat-rid="1" back-name="Mark">回复</i>
+                                </div>
+                                <div class="comment_g">
+                                    <p>
+                                        <em>Smart</em> 回复 <em>Mark:</em> 必须赞！！！
+                                    </p>
+                                    <i class="js-back-mes" wechat-rid="2" back-name="Smart">回复</i>
+                                </div>
+                                <div class="comment_g">
+                                    <p>
+                                        <em>Mark</em> 回复 <em>Smart:</em> 为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？
+                                    </p>
+                                    <i class="js-back-mes" wechat-rid="3" back-name="Mark">回复</i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="already_mes already_img_mes" wechat-mid="hh">
+                    <img src="../../../images/html/weixin_heck/cchead.jpg" class="person_detail" />
+                    <div class="mes_detail">               
+                        <h4>winfred</h4>
+                        <p class="mes_detail_text">如果有道云笔记登录...</p>
+                        <!--评论-->
+                        <div class="comment_people">
+                            <!--自己名字设置 wechat-rid 为空，否则设置名字-->
+                            <div class="comment_s">
+                                <span class="comment_time">3月4日 18:14</span>
+                                <!-- 删除 -->
+                                <span class="close_btn"  delet-url="">删除</span>
+
+                                <div class="comment_op">
+                                    <!-- 点赞 -->
+                                    <span class="js-like-mes" data-like='[{"createtime":1489647114,"username":"2","nickname":"黑白"},{"createtime":1489647114,"username":"1","nickname":"winfred"}]'></span>
+                                    <!-- 评论 -->
+                                    <span class="js-back-mes"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="comment_h">
+                                <div class="comment_like">黑白，winfred</div>
+                                <div class="comment_g">
+                                    <p>
+                                        <em>Mark:</em> 好赞！
+                                    </p>
+                                    <i class="js-back-mes" wechat-rid="1" back-name="Mark">回复</i>
+                                </div>
+                                <div class="comment_g">
+                                    <p>
+                                        <em>Smart</em> 回复 <em>Mark:</em> 必须赞！！！
+                                    </p>
+                                    <i class="js-back-mes" wechat-rid="2" back-name="Smart">回复</i>
+                                </div>
+                                <div class="comment_g">
+                                    <p>
+                                        <em>Mark</em> 回复 <em>Smart:</em> 为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？
+                                    </p>
+                                    <i class="js-back-mes" wechat-rid="3" back-name="Mark">回复</i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 其他内容 -->
+            <div class="already_send_mes">
+                <h6 class="already_send_mes_type">其他内容</h6>
+                <!--视频-->
+                <div class="already_mes already_img_mes" wechat-mid="hh">
+                    <img src="../../../images/html/weixin_heck/cchead.jpg" class="person_detail" />
+                    <div class="mes_detail">
+                        <h4>winfred</h4>
+                        <p class="mes_detail_text">如果有道云笔记登录或同</p>
+                        <div class="share-video">
+                            <video controls >
+                                <source src="http://testtest1117.oss-cn-beijing.aliyuncs.com/5cf78580ead04253f5145ccb803abe2a.mp4">
+                            </video>
+                        </div>
+                        <!--评论-->
+                        <div class="comment_people">
+                            <!--自己名字设置 wechat-rid 为空，否则设置名字-->
+                            <div class="comment_s">
+                                <span class="comment_time">3月4日 18:14</span>
+                                <!-- 删除 -->
+                                <span class="close_btn"  delet-url="">删除</span>
+
+                                <div class="comment_op">
+                                    <!-- 点赞 -->
+                                    <span class="js-like-mes"></span>
+                                    <!-- 评论 -->
+                                    <span class="js-back-mes"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="comment_h">
+                                <div class="comment_g">
+                                    <p>
+                                        <em>Mark:</em> 好赞！
+                                    </p>
+                                    <i class="js-back-mes" wechat-rid="1" back-name="Mark">回复</i>
+                                </div>
+                                <div class="comment_g">
+                                    <p>
+                                        <em>Smart</em> 回复 <em>Mark:</em> 必须赞！！！
+                                    </p>
+                                    <i class="js-back-mes" wechat-rid="2" back-name="Smart">回复</i>
+                                </div>
+                                <div class="comment_g">
+                                    <p>
+                                        <em>Mark</em> 回复 <em>Smart:</em> 为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？
+                                    </p>
+                                    <i class="js-back-mes" wechat-rid="3" back-name="Mark">回复</i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--文章-->
+                <div class="already_mes already_img_mes" wechat-mid="hh">
+                    <img src="../../../images/html/weixin_heck/cchead.jpg" class="person_detail" />
+                    <div class="mes_detail">
+                        <h4>winfred</h4>
+                        <p class="mes_detail_text">如果有道云笔记登录或记的...</p>
+                        <div class="share-article">
+                            <a href="javascript:;">
+                                <dt>
+                                    <img src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=4044263107,811056825&fm=58">
+                                </dt>
+                                <dd>
+                                    <p>交互产品中的音效设计</p>
+                                    <p>用户界面音效用户界面音效是个很有意思的话题，在过去很长时间内在过去很长时间内在过去很长时间内在过去很长时间内在过去很长时间内在过去很长时间内</p>
+                                </dd>
+                            </a>
+                        </div>
+                        <!--评论-->
+                        <div class="comment_people">
+                            <!--自己名字设置 wechat-rid 为空，否则设置名字-->
+                            <div class="comment_s">
+                                <span class="comment_time">3月4日 18:14</span>
+                                <!-- 删除 -->
+                                <span class="close_btn"  delet-url="">删除</span>
+
+                                <div class="comment_op">
+                                    <!-- 点赞 -->
+                                    <span class="js-like-mes"></span>
+                                    <!-- 评论 -->
+                                    <span class="js-back-mes"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="comment_h">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--正常消息-->
+                <div class="already_mes already_img_mes" wechat-mid="hh">
+                    <img src="../../../images/html/weixin_heck/cchead.jpg" class="person_detail" />
+                    <div class="mes_detail">
+                        <h4>winfred</h4>
+                        <p class="mes_detail_text">如果有道云笔...</p>
+                        <ul class="clear-fix">
+                            <li>
+                                <a rel=gallery href="../../../images/html/weixin_heck/account_img2.png">
+                                    <img src="../../../images/html/weixin_heck/account_img2.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a rel=gallery href="../../../images/html/weixin_heck/account_img2.png">
+                                    <img src="../../../images/html/weixin_heck/account_img2.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a rel=gallery href="../../../images/html/weixin_heck/account_img2.png">
+                                    <img src="../../../images/html/weixin_heck/account_img2.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a rel=gallery href="../../../images/html/weixin_heck/account_img2.png">
+                                    <img src="../../../images/html/weixin_heck/account_img2.png">
+                                </a>
+                            </li>
+                        </ul>
+                    
+                        <!--评论-->
+                        <div class="comment_people">
+                            <!--自己名字设置 wechat-rid 为空，否则设置名字-->
+                            <div class="comment_s">
+                                <span class="comment_time">3月4日 18:14</span>
+                                <!-- 删除 -->
+                                <span class="close_btn"  delet-url="">删除</span>
+
+                                <div class="comment_op">
+                                    <!-- 点赞 -->
+                                    <span class="js-like-mes"></span>
+                                    <!-- 评论 -->
+                                    <span class="js-back-mes"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="comment_h">
+                                <div class="comment_g">
+                                    <p>
+                                        <em>Mark:</em> 好赞！
+                                    </p>
+                                    <i class="js-back-mes" wechat-rid="1" back-name="Mark">回复</i>
+                                </div>
+                                <div class="comment_g">
+                                    <p>
+                                        <em>Smart</em> 回复 <em>Mark:</em> 必须赞！！！
+                                    </p>
+                                    <i class="js-back-mes" wechat-rid="2" back-name="Smart">回复</i>
+                                </div>
+                                <div class="comment_g">
+                                    <p>
+                                        <em>Mark</em> 回复 <em>Smart:</em> 为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？
+                                    </p>
+                                    <i class="js-back-mes" wechat-rid="3" back-name="Mark">回复</i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="already_mes already_img_mes" wechat-mid="hh">
+                    <img src="../../../images/html/weixin_heck/cchead.jpg" class="person_detail" />
+                    <div class="mes_detail">               
+                        <h4>winfred</h4>
+                        <p class="mes_detail_text">如果有道云笔记登录...</p>
+                        <!--评论-->
+                        <div class="comment_people">
+                            <!--自己名字设置 wechat-rid 为空，否则设置名字-->
+                            <div class="comment_s">
+                                <span class="comment_time">3月4日 18:14</span>
+                                <!-- 删除 -->
+                                <span class="close_btn"  delet-url="">删除</span>
+
+                                <div class="comment_op">
+                                    <!-- 点赞 -->
+                                    <span class="js-like-mes"></span>
+                                    <!-- 评论 -->
+                                    <span class="js-back-mes"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="comment_h">
+                                <div class="comment_g">
+                                    <p>
+                                        <em>Mark:</em> 好赞！
+                                    </p>
+                                    <i class="js-back-mes" wechat-rid="1" back-name="Mark">回复</i>
+                                </div>
+                                <div class="comment_g">
+                                    <p>
+                                        <em>Smart</em> 回复 <em>Mark:</em> 必须赞！！！
+                                    </p>
+                                    <i class="js-back-mes" wechat-rid="2" back-name="Smart">回复</i>
+                                </div>
+                                <div class="comment_g">
+                                    <p>
+                                        <em>Mark</em> 回复 <em>Smart:</em> 为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？为什么赞？
+                                    </p>
+                                    <i class="js-back-mes" wechat-rid="3" back-name="Mark">回复</i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 朋友圈内容 -->
+        </div>
+    </div>
+
+    <!-- 绑定弹层 -->
+    <div class="load_up">
+        <div>内容上传中。。。</div>
+    </div>
+    <div class="ifr">
+        <div class="show-circle">
+            <span><em>&times;</em><i></i></span>
+            <h5><span>朋友圈库</span></h5>
+            <iframe class="ifra" src="CircleLibrary.html"></iframe>
+        </div>
+    </div>
+    <!--<div class="footer"></div>-->
+    <div class="uptop"></div>
+<div class="zhuanfa-layer">
+    <div class="flex-layer" data-id="">
+        <div class="zhuanfa">
+            <div class="content">
+                <textarea placeholder=""></textarea>
+            </div>
+            <div class="zf-btn">
+                <span class="confirm" data-id="123">转发</span>
+                <span class="concel">取消</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<!--公共尾部结束-->
+<script src="../../../js/html/project/weixin_heck/vendor.js"></script>
+</html>

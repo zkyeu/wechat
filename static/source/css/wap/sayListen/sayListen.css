@@ -1,0 +1,250 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Tue Jun 14 2016 11:31:55 GMT+0800 (中国标准时间)
+ */
+/*初始化样式*/
+html {
+  font-size: 62.5%;
+}
+body {
+  color: #515050;
+  font-family: '黑体', STXihei, MingLiu;
+  width: 100%;
+  overflow-x: hidden;
+}
+cite,
+i,
+s,
+b {
+  font-style: normal;
+  font-weight: normal;
+}
+body,
+ul,
+li,
+p,
+dl,
+dt,
+dd,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+  padding: 0px;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+li {
+  list-style: none;
+}
+img {
+  border: 0px;
+  display: block;
+}
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+input {
+  font-family: 'Microsoft YaHei', STXihei, MingLiu;
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+@media only screen and (min-width: 481px) {
+  html {
+    font-size: 94%!important;
+  }
+}
+@media only screen and (min-width: 561px) {
+  html {
+    font-size: 109%!important;
+  }
+}
+@media only screen and (min-width: 641px) {
+  html {
+    font-size: 125%!important;
+  }
+}
+body {
+  background: #fbfaf6;
+}
+article {
+  width: 100%;
+}
+article section {
+  margin: 0 1rem 1rem;
+}
+article section p {
+  line-height: 1.8rem;
+}
+article .s_top {
+  margin: 2rem 1rem 1rem;
+  padding-bottom: 7.0rem;
+}
+article .s_top li {
+  margin-bottom: 2.0rem;
+}
+article .s_top li p {
+  line-height: 1.8rem;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  color: #333;
+}
+article .s_top li .s_cn {
+  color: #888;
+  font-size: 1.6rem;
+}
+article .s_top li .s_en {
+  color: #ff8200;
+}
+article footer {
+  width: 100%;
+  height: 8rem;
+  position: fixed;
+  bottom: 0;
+  background: #fbfaf6;
+  box-shadow: 0px 1px 2px #888;
+}
+article footer section {
+  height: 100%;
+  padding-top: 1.2rem;
+  position: relative;
+}
+article footer section i {
+  display: block;
+  height: 5.4rem;
+  width: 5.4rem;
+  background: url(../../../images/wap/sayListen/s_pause.png?v=cyJMg4kezf7riZ1KESm6Bw%3D%3D) no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 50%;
+  margin-top: -2.7rem;
+}
+article footer section .s_play {
+  background: url(../../../images/wap/sayListen/s_play.png?v=hMm8DMfvjxvgh81rDXnG1Q%3D%3D) no-repeat;
+  background-size: 100%;
+}
+article footer section progress {
+  height: 0.2rem;
+  width: 60%;
+  background: #999;
+  position: absolute;
+  top: 50%;
+  margin-top: -0.1rem;
+  margin-left: 6rem;
+}
+article footer section time {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 40%;
+  right: 0;
+}
+.m-say-audio {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2rem;
+}
+.m-say-audio .u-paly {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 9999px;
+  background: url(../../../images/wap/sayListen/s_pause.png?v=cyJMg4kezf7riZ1KESm6Bw%3D%3D) no-repeat;
+  background-size: 100%;
+  position: relative;
+}
+.m-say-audio .u-paly.on {
+  background: url(../../../images/wap/sayListen/s_play.png?v=hMm8DMfvjxvgh81rDXnG1Q%3D%3D) no-repeat;
+  background-size: 100%;
+}
+.m-say-audio .m-bar {
+  margin-left: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-left: none;
+  padding: 2.7rem 0 2.6rem 1.3rem;
+  height: 0.2rem;
+  overflow: hidden;
+}
+.m-say-audio .m-total {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  background: #b2b2b2;
+  height: 0.35rem;
+}
+.m-say-audio .u-time {
+  position: relative;
+  top: -0.41rem;
+  font-size: 1.2rem;
+  color: #888;
+  width: 3.5rem;
+  height: 1rem;
+  text-align: center;
+  margin-left: 0.4rem;
+}
+.m-say-audio .m-progress {
+  float: left;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 0.35rem;
+  background: #ff8200;
+  width: 0%;
+}
+.m-say-audio .u-point {
+  position: absolute;
+  top: -0.7rem;
+  right: -0.6rem;
+  float: left;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 9999px;
+  border: 1px solid #dadada;
+  background: #fff;
+}
+.m-say-header {
+  padding: 1rem 1.2rem 0.8rem;
+  background: #fff;
+  overflow: hidden;
+  border-bottom: 1px solid #cfcfcd;
+}
+.m-say-header img {
+  float: left;
+  width: 12.9rem;
+}
+.m-say-header a {
+  float: right;
+  width: 7.8rem;
+  padding: 0.7rem 0;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #ff8200;
+  background: #fff;
+  border: 1px solid #ff8200;
+  border-radius: 5px;
+}

@@ -1,0 +1,65 @@
+<% include ../common/top_b2s.ejs %>
+<style type="text/css">
+  body{
+    padding: 20px;
+  }
+  .recorderAppOuter{
+    position: fixed;
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.6);
+    visibility: hidden;
+  }
+  .recorderAppOuter .recorderApp{
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 50%;
+    top: 50%;
+  }
+  .recorderAppOuter.recorderOpen{
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+    z-index: 9999;
+  }
+  .recorderAppOuter.recorderOpen .recorderApp{
+    width: 240px;
+    height: 160px;
+    margin-left: -120px;
+    margin-top: -80px;
+  }
+  .recorder-wrap #stop{
+    display: none;
+  }
+  .recorder-wrap.recording #record{
+    display: none;
+  }
+  .recorder-wrap.recording #stop{
+    display: inline-block;
+  }
+  #time{
+    font-size: 16px;
+    color: #4c4c4c;
+  }
+  button{
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+    background: orange;
+    color: #fff;
+  }
+</style>
+</head>
+<body data-init="weixinRecorder">
+  <div class="recorder-wrap">
+    <button id="record">录音</button>
+    <button id="stop">停止</button>
+    <p>
+      <span id="time"></span>
+    </p>
+  </div>
+</body>
+<% include ../common/bottom.ejs %>

@@ -1,0 +1,233 @@
+<% include ../common/top.ejs %>
+<body>
+	<%include ../common/uc_header.ejs %>
+	<!-- 添加付费用户薅羊毛扫码弹层 start -->
+	<div class="scan-code">
+	  <div class="scan-code__img">
+	    <img src="<%=imagessrc%>code.jpg">
+	  </div>
+	  <div class="scan-code__viewdetail">
+	    <a href="javascript:;" title="查看详情"></a>
+	  </div>
+	</div>
+	<!-- 添加付费用户薅羊毛扫码弹层 end -->
+	<!--新版证书-->
+	<div class="certificate" data-init="certificate">
+		<!--banner部分-->
+		<div class="banner"><img src="<%=imagessrc%>banner.jpg"></div>
+		<!--中间内容部分包括左侧基本信息栏和右侧获取证书栏-->
+		<div class="container clearfix">
+			<!--左侧基本信息栏-->
+			<div class="bar">
+				<div class="header">
+					<img src="<%=imagessrc%>temp.jpg" alt="">
+					<em class="cover"></em>
+				</div>
+				<div class="name">yida</div>
+				<!--查看成人或青少证书-->
+				<a class="view" href="javascript:;">查看成人证书</a>
+				<ul class="clearfix">
+					<li><em>当前等级：</em>Level 4</li>
+					<li><em>获得证书：</em>2份</li>
+					<li><em>完成1对1：</em>12节课</li>
+					<li><em>累计说英语：</em>12节课</li>
+					<li><em>获得学豆：</em>12节课</li>
+				</ul>
+			</div>
+			<!--右侧获取证书栏  包含tab标签切换、证书列表、证书介绍、获取方式-->
+			<div class="cert-lst">
+				<!--tab标签切换-->
+				<div class="tab">
+					<a href="javascript:;">即将获得的证书<i></i></a>
+					<span>|</span>
+					<a href="javascript:;" class="current">已获得的证书<i></i></a>
+				</div>
+				<!--ps:young和young-get是一组、all-notget和all-get是一组、all-get和no-get是一组get和最后一个no-get是一组，一共四组-->
+				<!--青少即将获得的证书 Start-->
+				<div class="young switch">
+					<!--证书列表-->
+					<div class="cert-show">
+						<div class="tips">
+							<div class="mask">
+								<h1>距离经典英语Level 4的级别证书还差<em>20</em>节课</h1>
+								<h2>每周5节课，还需4周即可获得该证书，继续加油！</h2>
+								<a class="go" href="javascript:;">马上进行级别测试赢取阶段证书</a>
+							</div>
+						</div>
+					</div>
+					<!--获取方式-->
+					<% include ./module/all_introduce.ejs%>
+					<!--晋级体系-->
+					<% include ./module/all_access.ejs%>
+					<!--立即约课赢取级别证书-->
+					<% include ./module/earn.ejs%>
+				</div>
+				<!--青少即将获得的证书 End-->
+				<!--青少已经获得的证书 Start-->
+				<div class="young-get switch">
+					<!--证书列表-->
+					<div class="cert-show">
+						<%include ./module/list.ejs%>
+					</div>
+					<!--证书为空的占位图-->
+					<%include ./module/placeholder.ejs%>
+					<!--获取方式-->
+					<% include ./module/all_introduce.ejs%>
+					<!--晋级体系-->
+					<% include ./module/all_access.ejs%>
+					<!--立即约课赢取级别证书-->
+					<% include ./module/earn.ejs%>
+				</div>
+				<!--青少已经获得的证书 End-->
+				<!--成人青少即将获得的证书 Start-->
+				<div class="all-notget switch">
+					<!--证书列表-->
+					<div class="cert-show">
+						<div class="tips">
+							<div class="mask">
+								<h1>距离经典英语Level 4的级别证书还差<em>20</em>节课</h1>
+								<h2>每周5节课，还需4周即可获得该证书，继续加油！</h2>
+								<a class="go" href="javascript:;">马上进行级别测试赢取阶段证书</a>
+							</div>
+						</div>
+					</div>
+					<!--获取方式-->
+					<% include ./module/all_introduce.ejs%>
+					<!--晋级体系-->
+					<% include ./module/all_access.ejs%>
+					<!--立即约课赢取级别证书-->
+					<% include ./module/earn.ejs%>
+				</div>
+				<!--成人青少即将获得的证书 End-->
+				<!--成人青少已获得的证书 Start-->
+				<div class="all-get switch">
+					<!--证书列表-->
+					<div class="cert-show">
+						<%include ./module/list.ejs%>
+					</div>
+					<!--证书为空的占位图-->
+					<%include ./module/placeholder.ejs%>
+					<!--获取方式-->
+					<% include ./module/all_introduce.ejs%>
+					<!--晋级体系-->
+					<% include ./module/all_access.ejs%>
+					<!--立即约课赢取级别证书-->
+					<% include ./module/earn.ejs%>
+				</div>
+				<!--成人青少已获得的证书 End-->
+				<!--成人新学员即将获得的证书 Start-->
+				<div class="no-get switch">
+					<!--证书列表-->
+					<div class="cert-show">
+						<div class="tips">
+							<div class="mask">
+								<h1>距离经典英语Level 4的级别证书还差<em>20</em>节课</h1>
+								<h2>每周5节课，还需4周即可获得该证书，继续加油！</h2>
+								<a class="go" href="javascript:;">马上进行级别测试赢取阶段证书</a>
+							</div>
+						</div>
+					</div>
+					<!--证书介绍-->
+					<%include ./module/introduce.ejs%>
+					<!--获取方式介绍-->
+					<%include ./module/access.ejs%>
+				</div>
+				<!--成人新学员即将获得的证书 End-->
+				<!--成人新学员获得证书列表 Start-->
+				<div class="get switch">
+					<!--证书列表-->
+					<div class="cert-show">
+						<dl class="clearfix">
+							<dt><img src="<%=imagessrc%>cer_temp.jpg" alt="证书临时图片"></dt>
+							<dd>
+								<h1>Level3共学习45天，</h1>
+								<h2>晋级速度超过<em>60%</em>学员，表现很棒！</h2>
+								<ul class="clearfix">
+									<li><a href="javascript:;"><i class="download"></i>下载到本地</a></li>
+									<li><a href="javascript:;"><i class="express"></i>快递纸质证书</a></li>
+								</ul>
+								<div class="share-wrap">
+									<div class="txt">分享证书至：</div>
+									<div class="icon-lst">
+										<div class="share bdsharebuttonbox bdshare-button-style0-16 share_bc06 dq_div"  data-id="dq_06">
+								          <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+								          <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>  
+								          <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+								          <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+								        </div>
+									</div>
+								</div>
+							</dd>
+						</dl>
+						<dl class="old clearfix">
+							<dt><img src="<%=imagessrc%>cer_temp.jpg" alt="证书临时图片"></dt>
+							<dd>
+								<h1>Level3共学习45天，</h1>
+								<h2>晋级速度超过<em>60%</em>学员，表现很棒！</h2>
+								<ul class="clearfix">
+									<li><a href="javascript:;"><i class="download"></i>下载到本地</a></li>
+									<li><a href="javascript:;"><i class="express"></i>快递纸质证书</a></li>
+								</ul>
+								<div class="share-wrap">
+									<div class="txt">分享证书至：</div>
+									<div class="icon-lst">
+										<div class="share bdsharebuttonbox bdshare-button-style0-16 share_bc06 dq_div"  data-id="dq_06">
+								          <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+								          <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>  
+								          <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+								          <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+								        </div>
+									</div>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<!--证书为空的占位图-->
+					<%include ./module/placeholder.ejs%>
+					<!--证书介绍-->
+					<%include ./module/introduce.ejs%>
+					<!--获取方式介绍-->
+					<%include ./module/access.ejs%>
+				</div>
+				<!--成人新学员获得证书列表 End-->
+				<!--成人老学员即将获得证书 Start-->
+				<div class="no-get switch">
+					<!--证书列表-->
+					<div class="cert-show">
+						<div class="tips">
+							<div class="mask">
+								<h1>距离经典英语Level 4的级别证书还差<em>20</em>节课</h1>
+								<h2>每周5节课，还需4周即可获得该证书，继续加油！</h2>
+								<a class="go" href="javascript:;">马上进行级别测试赢取阶段证书</a>
+							</div>
+						</div>
+					</div>
+					<!--证书介绍-->
+					<%include ./module/introduce.ejs%>
+					<!--获取方式介绍-->
+					<%include ./module/access.ejs%>
+				</div>
+				<!--成人老学员即将获得证书 End-->
+				<!--成人老学员获得证书列表 Start-->
+				<div class="get switch">
+					<!--证书列表-->
+					<div class="cert-show">
+						<%include ./module/list.ejs%>
+						<%include ./module/list.ejs%>
+						<%include ./module/list.ejs%>
+					</div>
+					<!--证书为空的占位图-->
+					<%include ./module/placeholder.ejs%>
+					<!--证书介绍-->
+					<%include ./module/introduce.ejs%>
+					<!--获取方式介绍-->
+					<%include ./module/access.ejs%>
+				</div>
+				<!--成人老学员获得证书列表 End-->
+			</div>
+		</div>
+	</div>
+	<% include ../common/uc_footer.ejs %>
+	<script src="<%=jssrc%>"></script>
+</body>
+</html>

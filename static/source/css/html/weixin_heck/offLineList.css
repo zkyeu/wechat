@@ -1,0 +1,114 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: 
+ */
+html,
+body {
+  background: #f5f5f5;
+  width: 100%;
+  min-height: 500px;
+  overflow-y: auto;
+}
+.heck_top_32 {
+  height: 70px;
+  background: #323232;
+}
+.heck_top_32 .top_content {
+  width: 1052px;
+  height: 70px;
+  line-height: 70px;
+  margin: 0 auto;
+  font-size: 20px;
+  color: #fff;
+}
+.no_replacer {
+  width: 1054px;
+  margin: 0 auto;
+  font-size: 20px;
+  padding-top: 30px;
+}
+.margin-space {
+  margin-bottom: 100px;
+}
+.off_line_container {
+  width: 1052px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.off_line_container table {
+  width: 1052px;
+  border: #dcdcdc solid 1px;
+  border-radius: 5px;
+}
+.off_line_container table tr td:last-child {
+  border-top: #dcdcdc solid 1px;
+}
+.off_line_container table tr td:nth-child(1) {
+  border-top: #dcdcdc solid 1px;
+}
+.off_line_container .off_line_title {
+  width: 138px;
+  color: #969696;
+  vertical-align: middle;
+  border-right: #dcdcdc solid 1px;
+  background-color: #f8f9fb;
+}
+.off_line_container .off_line_title p {
+  padding: 0 20px;
+  font-size: 18px;
+}
+.off_line_container .off_line_title p span {
+  font-size: 14px;
+  float: right;
+  margin-top: 3px;
+}
+.off_line_container .replace_item {
+  background: #f8f9fb;
+  width: 100px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  padding: 20px 0;
+}
+.off_line_container .itme_list_on,
+.off_line_container .itme_list_off {
+  padding-bottom: 10px;
+  background: #fff;
+}
+.off_line_container .itme_list_on a,
+.off_line_container .itme_list_off a {
+  display: block;
+  padding: 6px 24px;
+  border: #dcdcdc solid 1px;
+  float: left;
+  border-radius: 20px;
+  margin: 10px 0 0 10px;
+}
+.off_line_container .itme_list_on a {
+  background-color: #f8f9fb;
+}
+.off_line_container .itme_list_on a.trust-self {
+  background: #ffdb69;
+}
+.off_line_container .itme_list_on a:hover {
+  background: #ddd;
+  cursor: pointer;
+}
+.off_line_container .itme_list_off a {
+  background-color: #ffdb69;
+}
+.off_line_container .itme_list_off a:hover {
+  background: #ff7e00;
+  color: #fff;
+  cursor: pointer;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height: 70px;
+  background: #303030;
+}

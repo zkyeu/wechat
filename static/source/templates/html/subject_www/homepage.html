@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="app下载专页">
+    <meta name="keywords" content="app下载专页">
+    <title>欢迎下载51Talk App</title>
+    <link rel="stylesheet" type="text/css" href="/css/html/subject_www/subject_www.css">
+</head>
+<body data-init="index">
+<!-- 导航 -->
+<div class="nav centerMth">
+    <a href="javascript:;" class="logo"><img src="/images/html/subject_www//logo.png" alt=""></a>
+    <ul class="menu">
+        <li><a href="javascript:;">小学英语</a></li>
+        <li><a href="javascript:;">教学理念</a></li>
+        <li class="active"><a href="javascript:;">课程体系</a></li>
+        <li><a href="javascript:;">优秀师资</a></li>
+        <li><a href="javascript:;">课堂展示</a></li>
+    </ul>
+    <a href="javascript:;" class="ac"><span class="d_ac"></span>下载AC在线教室</a>
+</div> 
+<div class="s_banner"> 
+  <div class="centerMth">
+    <img src="/images/html/subject_www/home_ads.jpg" alt="" class="banner_img">
+    <!--reg -->
+<div class="l-reg">
+  <p class="p-line"></p>
+  <ul class="reg-list">
+    <li class="on">注册</li>
+    <li>登录</li>
+  </ul>
+  <div class="reg-chg">
+    <div class="layer-test-pho change">
+      <div class="p-test">
+        <ul class="pho-list">
+          <li>
+            <input type="text" placeholder="请输入您的手机号" name="phone">
+            <div class="u-err error1"></div>
+          </li>
+          <li class="code-li">
+            <input type="text" placeholder="请输入短信验证码" name="msgcode" class="pho-code" id="mobile">
+            <div class="u-err error2"></div>
+            <span class="pho-t">免费获取</span>
+          </li>
+          <li>
+            <input type="password" placeholder="请设置您的密码" name="password">
+            <div class="u-err error3"></div>
+          </li>
+        </ul>
+        <div class="l-reg-btn" id="registerBtn" data-url-reg="111">下一步</div>
+      </div>
+       <!-- success -->
+      <div class="layer-success hide">
+        <h3>恭喜！</h3>
+        <p>您已成功注册51talk，<a href="javascript:;" class="suc-href">快速进群</a><br>找你的小伙伴吧</p>
+        <div class="l-reg-btn">进群找小伙伴</div>
+      </div>
+      <!-- /success -->
+    </div>
+    <div class="layer-test-login change hide">
+      <ul class="pho-list">
+        <li>
+          <input type="text" placeholder="请输入您的手机号" name="phone">
+          <div class="u-err error5"></div>
+        </li>
+        <li>
+          <input type="text" placeholder="请设置您的密码" name="password">
+          <div class="u-err error6"></div>
+        </li> 
+        <li class="forget">
+          <span class="login-selt">
+            <input type="hidden" name="radio" class="radio">
+            <i class="select-up"></i>
+            下次自动登录
+          </span>
+          <a href="javascript:;" class="forget-passwd">忘记密码？</a>
+        </li>
+      </ul>
+      <div class="l-reg-btn" id="loginBtn" data-url-layer="222">下一步</div>
+    </div>
+  </div>
+  <!-- 提交 -->
+  <div class="layer-send-code" style="display:none;">
+    <ul class="input-code">
+      <li>
+        <input type="text" placeholder="请输入图片验证码" name="phocode" class="pic-code">
+        <div class="u-err error4" style="dispaly:block;">请输入图片验证码</div>
+        <span class="input-code-btn">
+          <img id="verifycode" src="http://www.51talk.com/user/verify.php" onclick="this.src='http://www.51talk.com/user/verify.php'+'?a'+'='+new Date().getTime()" alt="单击更换验证码" title="单击更换验证码">
+        </span>
+      </li>
+      <li><div class="send-btn" id="sendBtn" data-url-code="2">提交</div></li>
+    </ul>
+  </div>
+  <!-- /提交 -->
+</div>
+<!-- /reg-->
+<!-- 年级 -->
+<div class="layer-grade" style="display:none;">
+  <h3 class="title">你是几年级的小朋友？</h3>
+  <span class="delete"></span>
+  <ul class="gra-list">
+    <li class="check">一年级</li>
+    <li>二年级</li>
+    <li>三年级</li>
+    <li>四年级</li>
+    <li>五年级</li>
+    <li>六年级</li>
+  </ul>
+  <div class="gra-nr">
+    <div class="qr-list">
+      <img src="/images/html/subject_www/layer_code.png">
+      <p class="q-title">
+        扫码进群,QQ群号：<span>16545634</span><br>
+        进群后，你可以跟小伙伴共同学习啦～！
+      </p>
+    </div>
+    <div class="qr-list" style="display:none;">
+      <img src="/images/html/subject_www/layer_code.png">
+      <p class="q-title">
+        扫码进群,QQ群号：<span>26545634</span><br>
+        进群后，你可以跟小伙伴共同学习啦～！
+      </p>
+    </div>
+    <div class="qr-list" style="display:none;">
+      <img src="/images/html/subject_www/layer_code.png">
+      <p class="q-title">
+        扫码进群,QQ群号：<span>36545634</span><br>
+        进群后，你可以跟小伙伴共同学习啦～！
+      </p>
+    </div>
+    <div class="qr-list" style="display:none;">
+      <img src="/images/html/subject_www/layer_code.png">
+      <p class="q-title">
+        扫码进群,QQ群号：<span>46545634</span><br>
+        进群后，你可以跟小伙伴共同学习啦～！
+      </p>
+    </div>
+    <div class="qr-list" style="display:none;">
+      <img src="/images/html/subject_www/layer_code.png">
+      <p class="q-title">
+        扫码进群,QQ群号：<span>56545634</span><br>
+        进群后，你可以跟小伙伴共同学习啦～！
+      </p>
+    </div>
+    <div class="qr-list" style="display:none;">
+      <img src="/images/html/subject_www/layer_code.png">
+      <p class="q-title">
+        扫码进群,QQ群号：<span>66545634</span><br>
+        进群后，你可以跟小伙伴共同学习啦～！
+      </p>
+    </div>
+  </div>
+</div>
+<!-- /年级 -->
+<!-- 体验用户 -->
+<div class="layer-pay-users" style="display:none;">
+  <div class="users-img"><img src="/images/html/subject_www/fine_tea_nadline.jpg"></div>
+  <h3 class="users-title">Hi,13693321513用户</h3>
+  <p class="users-cover">您还没有选课哦，进入会员中心<br>了解更多课程信息！</p>
+  <div class="l-reg-btn">进入我的会员中心</div>
+</div>
+<!-- /体验用户 -->
+<!-- 付费用户 -->
+<div class="layer-t-users" style="display:none;">
+  <div class="users-img"><img src="/images/html/subject_www/fine_tea_nadline.jpg"></div>
+  <h3 class="users-title">Hi,13693321513用户</h3>
+  <p class="users-ts">您已完成<i>9</i>节课<span>累计说英语<i>5</i>小时</span></p>
+  <div class="l-reg-btn">预约课程</div>
+  <div class="l-reg-btn b-reg-btn">进入我的会员中心</div>
+</div>
+<!-- /付费用户 -->
+  </div>
+</div>
+<div class="homepage" data-init="index">
+<!-- little-stu -->
+<div class="stu">
+  <div class="h-tit">
+    <h3 class="s-t">我们培养听说读写的全能小学员</h3> 
+    <p class="t-s"><span>中外教师联合授课</span></p>
+  </div>
+  <div class="home-relat">
+    <div class="radiu-text">
+      <ul class="r-list">
+        <li class="t-img01"></li>
+        <li class="t-img02"></li>
+        <li class="t-img03">高能</li>
+        <li class="t-img04">高分</li>
+        <li class="t-img05"></li>
+        <li class="t-img06"></li>
+      </ul>
+      <span class="t-add"></span>
+    </div>
+  </div>
+  <div class="s-img">
+    <span class="lt"></span>
+    <span class="rt"></span> 
+  </div>
+</div>
+<!-- /little-stu -->
+<!-- learning -->
+<div class="learning">
+  <div class="h-tit">
+    <h3 class="s-t">我们让学习更有效</h3> 
+    <p class="t-s"><span>分层教学</span></p>
+  </div>
+  <div class="home-relat">
+    <ul class="lea-list">
+      <li class="l-img01">
+        <i></i>
+        <span>入学测试</span>
+        <span class="ft">按学员水平分班</span>
+      </li>
+      <li class="l-img02"><i></i></li>
+      <li class="l-img03"><img src="/images/html/subject_www/home_e_lt.png"></li>
+      <li class="l-img04">
+        <img src="/images/html/subject_www/home_e_rt.png">
+      </li>
+      <li class="l-img05"><i></i></li>
+      <li class="l-img06">
+        <img src="/images/html/subject_www/home_bom.png">
+      </li>
+    </ul>  
+  </div>
+</div>
+<!-- /learning -->
+<!-- mark -->
+<div class="mark">
+  <div class="h-tit">
+    <h3 class="s-t">我们让提分看得见</h3> 
+    <p class="t-s"><span>专属优质教学服务</span></p>
+    <p class="t-t">讲 - 练 - 测 - 考 - 评</p>
+  </div>
+  <div class="home-relat mark-relat">
+    <img src="/images/html/subject_www/home_tbj.png" class="m-bj-img">
+    <ul class="mark-list">
+      <li class="m-img01"><i></i></li>
+      <li class="m-img02"><i></i></li>
+      <li class="m-img03"><i></i></li>
+      <li class="m-img04"><i></i></li>
+      <li class="m-img05"><i></i></li>
+      <li class="m-img06"><i></i></li>
+    </ul>
+  </div>
+</div>
+<!-- /mark -->
+<!-- service -->
+<div class="service">
+  <h3 class="sce-h3">服务保障</h3> 
+  <div class="home-relat">
+    <ul class="ser-list">
+      <li class="l-list01">
+        <i></i>
+        <span class="t-t">安心付费</span>
+        <span class="s-t">不满意？随时退！<br>每学期2次转班，2次调课<br>专属微信群</span>
+      </li>
+      <li class="l-list02">
+        <i></i>
+        <span class="t-t">EFL学习系统</span>
+        <span class="s-t">预习＋上课＋复习<br>保证学习效果</span>
+      </li>
+      <li class="l-list03">
+        <i></i>
+        <span class="t-t">专属成长档案</span>
+        <span class="s-t">记录孩子进步的点点滴滴制定专属<br>于您的私人学习规划，进步看得<br>见！</span>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- /service -->
+</div>
+<!-- 尾部 -->
+<div class="info">
+  <div class="centerMth">
+    <p class="tc_p">
+      <a href="javascript:;">关于我们</a>
+      <a href="javascript:;">加入我们</a>
+      <a href="javascript:;">企业培训</a>
+      <a href="javascript:;">网站地图</a>
+      <a href="javascript:;">o2o代理招募</a>
+    </p>
+    <p class="link-word">
+      <em>友情链接</em>
+    </p>
+    <span class="link-info">
+      <a href="http://www.putclub.com" target="_blank">普特英语听力</a> 
+      <a href="http://www.en8848.com.cn/" target="_blank">原版英语学习网</a> 
+      <a href="http://chinaenglish.com.cn" target="_blank">中国英语网</a> 
+      <a href="http://shop.kongfz.com/" target="_blank">网上书店</a> 
+      <a href="http://www.jiyifa.com/  " target="_blank">记忆力</a> 
+      <a href="http://www.sharewithu.com/" target="_blank">尚友留学</a> 
+      <a href="http://www.chuanke.com/" target="_blank">传课网</a> 
+      <a href="http://www.lampbrother.net " target="_blank">php教程</a> 
+      <a href="http://www.533.com/" target="_blank">留学</a> 
+      <a href="http://gd.huatu.com/ " target="_blank">广东人事考试网</a> 
+      <a href="http://gaokao.juren.com" target="_blank">高考录取分数线</a> 
+      <a href="http://www.xiaoma.com " target="_blank">小马过河</a> 
+      <a href="http://www.ewteacher.com" target="_blank">英语教师网 </a> 
+      <a href="http://www.wiseway.com.cn/" target="_blank">留学咨询</a> 
+      <a href="http://www.51talkenglish.com" target="_blank">英语在线学习</a> 
+      <a href="http://www.tingclass.net" target="_blank">英语听力</a> 
+      <a href="http://www.chinavoa.com" target="_blank">voa英语学习网</a> 
+      <a href="http://www.hztbc.com/" target="_blank">企业培训</a> 
+      <a href="http://www.jiajiao114.com/" target="_blank">家教网</a> 
+      <a href="http://beijing.xueda.com/" target="_blank">北京一对一辅导</a> 
+      <a href="http://www.zgjsks.com" target="_blank">教师网</a> 
+      <a href="http://www.gaosiedu.com" target="_blank">高思教育</a> 
+      <a href="http://www.qeo.cn/ " target="_blank">求艺网</a> 
+      <a href="http://www.zuowenren.com/" target="_blank">小学生作文</a> 
+      <a href="http://gaokao.koolearn.com" target="_blank">新东方在线高考</a> 
+      <a href="http://www.171english.cn/" target="_blank">给力英语网</a> 
+      <a href="http://www.5haoxue.net/" target="_blank">好学教育</a> 
+      <a href="http://www.pxto.com.cn/" target="_blank">培训网</a> 
+      <a href="http://www.gaodun.com/" target="_blank">高顿网校</a> 
+      <a href="http://yy.zxxk.com/" target="_blank">英语学科网</a> 
+      <a href="http://www.zk168.com.cn/" target="_blank">华考范文网</a> 
+      <a href="http://xuexiao.chazidian.com/" target="_blank">学校大全</a> 
+      <a href="http://www.1mishu.com" target="_blank">21世纪秘书网</a> 
+      <a href="http://www.gwyoo.com/" target="_blank">公务员之家</a> 
+      <a href="http://www.bosidata.com/" target="_blank">调研报告</a> 
+      <a href="http://www.xuexifangfa.com/" target="_blank">学习方法</a> 
+      <a href="http://chengyu.eduu.com" target="_blank">成语大全</a> 
+      <a href="http://www.jobeast.com/ " target="_blank">中国外语人才网</a> 
+      <a href="http://www.china-pub.com/" target="_blank">英语书籍</a> 
+      <a href="http://www.kuakao.com/" target="_blank">考研</a> 
+      <a href="http://www.zzyjs.com/" target="_blank">在职研究生</a> 
+      <a href="http://www.24en.com/" target="_blank">爱思英语网</a> 
+      <a href="http://www.cmr.com.cn" target="_blank">远程教育</a> 
+      <a href="http://www.hq88.com/" target="_blank">企业培训</a> 
+      <a href="http://www.zaixian-fanyi.com/" target="_blank">在线翻译</a> 
+      <a href="http://www.yuwenmi.com/" target="_blank">语文迷</a> 
+      <a href="http://www.hteacher.net/" target="_blank">教师招聘考试</a> 
+      <a href="http://www.zgsydw.com/ " target="_blank">事业单位招聘网</a> 
+      <a href="http://www.51offer.com" target="_blank">英国留学</a> 
+      <a href="http://www.yiminjiayuan.com/" target="_blank">移民家园网</a> 
+      <a href="http://www.enread.com/" target="_blank">英文阅读网</a> 
+      <a href="http://www.kekenet.com" target="_blank">可可英语 </a> 
+    </span>
+    <div class="link-ti">
+      <ul class="link-ul">
+        <li><a href="javascript:;"><img src="/images/html/www/fot_certif01.png" alt=""></a></li>
+        <li><a href="javascript:;"><img src="/images/html/www/fot_certif02.png" alt=""></a></li>
+        <li><a href="javascript:;"><img src="/images/html/www/fot_certif03.png" alt=""></a></li>
+        <li><a href="javascript:;"><img src="/images/html/www/fot_certif04.png" alt=""></a></li>
+      </ul>
+    </div>
+    <p class="link-ft">
+      Copyright©北京大生知行科技有限公司<em>|</em>
+      <a href="/page/privacy/" target="_blank" title="隐私声明">隐私声明</a><em>|</em>
+      <a href="/page/terms/" target="_blank" title="用户协议">用户协议</a><em>|</em>
+      <a href="jICP.html" target="_blank" title="京ICP证110696号">京ICP证110696号</a><em></em>
+      <a href="http://www.miibeian.gov.cn" target="_blank" title="京ICP备11031999号">京ICP备11031999号</a><em></em>
+      <a href="javascript:;" target="_blank" title="京公网安备11010802018414号" style="cursor:text;">京公网安备11010802018414号</a><em></em>   
+    </p>
+     <p class="link-ft"><a href="TVlicence.html" target="_blank">广播电视节目制作经营许可证（京）字第05497号</a></p>
+  </div>
+</div>
+
+
+
+
+
+
+</body>
+<!--公共尾部结束-->
+<script src="/js/html/project/subject_www/vendor.js"></script>
+</html>

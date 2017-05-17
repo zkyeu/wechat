@@ -1,0 +1,270 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ */
+/*
+* 默认样式
+* @file：   base.less
+* @author:  zhuning@51talk.com）
+* @update:  2015-10-29
+* @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+*/
+html {
+  font-size: 62.5%;
+  -webkit-user-select: none;
+}
+@media only screen and (min-width: 481px) {
+  html {
+    font-size: 94%;
+  }
+}
+@media only screen and (min-width: 561px) {
+  html {
+    font-size: 109%;
+  }
+}
+@media only screen and (min-width: 641px) {
+  html {
+    font-size: 125%;
+  }
+}
+body {
+  padding: 0;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 640px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+}
+input,
+button,
+select,
+textarea,
+dl,
+dd,
+dt {
+  font-family: "Microsoft YaHei";
+  outline: none;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 0;
+  padding: 0px;
+  margin: 0px;
+}
+ul,
+li {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  vertical-align: middle;
+}
+b {
+  font-weight: normal;
+}
+::-moz-selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+strong {
+  font-weight: normal;
+}
+html {
+  height: 100%;
+  background-color: #fff;
+}
+body {
+  font: 14px/1.5 "Microsoft YaHei";
+  color: #646464;
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.cfix:after {
+  content: ".";
+  font-size: 0;
+  line-height: 0;
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both;
+}
+.cfix {
+  *zoom: 1;
+}
+.center-left-fn {
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+.center-top-fn {
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+.center-fn {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+.bg-fff {
+  background-color: #fff;
+}
+.bg-f5 {
+  background-color: #f5f5f5;
+}
+.bg-f6 {
+  background-color: #f6f6f6;
+}
+.disselect-fn {
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+}
+.tc {
+  text-align: justify;
+  text-justify: inter-ideograph;
+  -webkit-text-align-last: justify;
+  /*chrome 20+*/
+}
+.plr10 {
+  padding: 0 10px;
+}
+body .pb100 {
+  padding-bottom: 100px;
+}
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+select {
+  -webkit-appearance: none;
+}
+.pay-tips-wrap {
+  height: 100%;
+  background: #f2f2f2;
+}
+.pay-tips-wrap .pay-tips-tit {
+  line-height: 58px;
+  border-bottom: 1px solid #c7c7c9;
+  background: #fff;
+  font-size: 18px;
+  color: #525252;
+  text-align: center;
+}
+.pay-tips-wrap .pay-tips-con {
+  height: 150px;
+  padding-top: 40px;
+  background: #fff;
+  text-align: center;
+}
+.pay-tips-wrap .pay-tips-con > img {
+  width: 69px;
+  height: 69px;
+}
+.pay-tips-wrap .pay-tips-con > p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: #1e1e1e;
+}
+.pay-tips-wrap .pay-tips-con2 {
+  height: 176px;
+  padding-top: 40px;
+  background: #fff;
+  text-align: center;
+}
+.pay-tips-wrap .pay-tips-con2 > img {
+  width: 69px;
+  height: 69px;
+}
+.pay-tips-wrap .pay-tips-con2 .con-tips1 {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: #1e1e1e;
+}
+.pay-tips-wrap .pay-tips-con2 .con-tips2 {
+  margin-top: 5px;
+  color: #999999;
+  font-size: 15px;
+}
+.pay-tips-wrap .pay-tips-bot {
+  padding-top: 36px;
+  border-top: 1px solid #d9d9d9;
+  text-align: center;
+}
+.pay-tips-wrap .pay-tips-bot p {
+  font-size: 15px;
+  color: #999999;
+  text-align: center;
+  position: relative;
+}
+.pay-tips-wrap .pay-tips-bot p:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -22px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border: 8px solid transparent;
+  border-top: 8px solid #c6c6c6;
+}
+.pay-tips-wrap .pay-tips-bot > img {
+  width: 45%;
+  margin-top: 26px;
+}
+.pay-tips-wrap .pay-tips-bot2 {
+  padding-top: 80px;
+  border-top: 1px solid #d9d9d9;
+  text-align: center;
+  line-height: 25px;
+  font-size: 15px;
+  color: #999999;
+}
+.pay-tips-wrap .pay-tips-bot2 a {
+  color: #ff3e3e;
+  text-decoration: underline;
+}

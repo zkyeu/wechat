@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>英语学习，口语学习首选的英语学习网站，51talk无忧英语，外教一对一，在线学英语！</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="keywords" content="{<info.keywords>}" />
+	<meta name="description" content="51tailk无忧英语专业提供网络英语外教一对一培训教学,专注于真人英语外教一对一培训,让您足不出户,网上平价学英语.英语外教一对一培训服务热线4000-51-51-51"/>
+	<link rel="stylesheet" type="text/css" href="<%= cssPath %>common/commons.css">
+  <link rel="stylesheet" type="text/css" href="<%= cssPath %>teenager/w_youth.css">
+</head>
+<body data-init="index">
+<!-- 公共区域 -->
+<%- include("../common/w_nav.ejs",{
+  wrapClass:"teenager-nav-list",
+  navList:[
+    {
+      className:"crt",
+      text:"51Talk美国小学",
+      url:"http://junior.51talk.com/"
+    },
+    {
+      className:"",
+      text:"学习理念",
+      url:"http://junior.51talk.com/index/feature"
+    },
+    {
+      className:"",
+      text:"青少课程",
+      url:"http://junior.51talk.com/index/system"
+    },
+    {
+      className:"",
+      text:"外教师资",
+      url:"http://junior.51talk.com/index/teachers"
+    },
+    {
+      className:"",
+      text:"上课流程",
+      url:"http://junior.51talk.com/index/guide"
+    }
+  ],
+  isIndex:false, //判断是否为首页
+  isNorth:false //判断是否为美小
+
+  }) %>
+  <div>
+    <% include ../common/w_banner.ejs %>
+  </div>
+<!-- /公共区域 -->
+<!-- 学习概念 -->
+<div class="youth_students" data-init="teenager/index" id="container">
+	<div class="at-nav you_nav">
+	    <ul class="centerMth">
+	      <li class="youth_nav on_cl">课程体系</li>
+	      <li class="youth_nav ">学前<span>（3-6岁）</span></li>
+	      <li class="youth_nav">小低<span>（6-9岁）</span></li>
+	      <li class="youth_nav">小高<span>（9-12岁）</span></li>
+	      <li class="youth_nav">初中<span>（12-17岁）</span></li>
+	    </ul>
+ 	</div>
+	<div class="y_system">
+		<div class="youth_width">
+			<div class="first_main">
+				<img data-src="<%=imagessrc%>teenager/class_tit.jpg" width="354" height="97">
+				<div class="cli_f">
+				 <div class="main_left">
+					<p class="you_text">青少全能新概念</p>
+					<p class="you_text_1">提分快、考试好</p>
+					<ul class="images_intro">
+						<li>
+							<img data-src="<%=imagessrc%>teenager/part_1.jpg" width="100" height="100" src="<%=imagessrc%>common/deafult.png">
+							<p class="image_text1">词汇</p>
+							<p class="image_text2">Words</p>
+						</li>
+						<li>
+							<img data-src="<%=imagessrc%>teenager/part_2.jpg" width="100" height="100" src="<%=imagessrc%>common/deafult.png">
+							<p class="image_text1">语法</p>
+							<p class="image_text2">Grammar</p>
+						</li>
+						<li>
+							<img data-src="<%=imagessrc%>teenager/part_3.jpg" width="100" height="100" src="<%=imagessrc%>common/deafult.png">
+							<p class="image_text1">篇章</p>
+							<p class="image_text2">Sections & Chapters</p>
+						</li>
+						<li>
+							<img data-src="<%=imagessrc%>teenager/part_4.jpg" width="100" height="100" src="<%=imagessrc%>common/deafult.png">
+							<p class="image_text1">听说</p>
+							<p class="image_text2">Speak & Listen</p>
+						</li>
+						<li>
+							<img data-src="<%=imagessrc%>teenager/part_5.jpg" width="100" height="100" src="<%=imagessrc%>common/deafult.png">
+							<p class="image_text1">模拟测试</p>
+							<p class="image_text2">Test</p>
+						</li>
+						<li>
+							<img data-src="<%=imagessrc%>teenager/part_6.jpg" width="100" height="100" src="<%=imagessrc%>common/deafult.png">
+							<p class="image_text1">综合培优</p>
+							<p class="image_text2">Synthesize</p>
+						</li>
+					</ul>
+					<ul class="images_text">
+						<li>小学三年级至初三</li>
+						<li>延续新概念一册经典内容，并进行科学模块化拆分</li>
+						<li>新概念一册， 144课，25min/课时，共288课时/年 </li>
+						<li>经过特殊培训且青少课程综合排名前200名的外籍教师</li>
+						<li>有小升初、中考需求或想系统学习语法的学员</li>
+						<li>每课1个语法点，精讲精练，综合提高</li>
+						<li>约1500个词汇，72个语法点及72篇篇章</li>
+					</ul>
+				</div>
+				<div class="main_left float_r">
+					<p class="you_text">经典英语青少版</p>
+					<p class="you_text_1">实战运用，提素质</p>
+					<ul class="images_intro">
+						<li>
+							<img data-src="<%=imagessrc%>teenager/part_7.jpg" width="100" height="100" src="<%=imagessrc%>common/deafult.png">
+							<p class="image_text1">艺术</p>
+							<p class="image_text2">Art</p>
+						</li>
+						<li>
+							<img data-src="<%=imagessrc%>teenager/part_8.jpg" width="100" height="100" src="<%=imagessrc%>common/deafult.png">
+							<p class="image_text1">生活场景</p>
+							<p class="image_text2">Life</p>
+						</li>
+						<li>
+							<img data-src="<%=imagessrc%>teenager/part_9.jpg" width="100" height="100" src="<%=imagessrc%>common/deafult.png">
+							<p class="image_text1">数学</p>
+							<p class="image_text2">Math</p>
+						</li>
+						<li>
+							<img  data-src="<%=imagessrc%>teenager/part_10.jpg" width="100" height="100" src="<%=imagessrc%>common/deafult.png">
+							<p class="image_text1">听说</p>
+							<p class="image_text2">Speak & Listen</p>
+						</li>
+						<li>
+							<img  data-src="<%=imagessrc%>teenager/part_12.jpg" width="100" height="100" src="<%=imagessrc%>common/deafult.png">
+							<p class="image_text1">自然科学</p>
+							<p class="image_text2">Science</p>
+						</li>
+						<li>
+							<img  data-src="<%=imagessrc%>teenager/part_11.jpg" width="100" height="100" src="<%=imagessrc%>common/deafult.png">
+							<p class="image_text1">社会科学</p>
+							<p class="image_text2">Social</p>
+						</li>
+					</ul>
+					<ul class="images_text">
+						<li>小学三年级至初三</li>
+						<li>延续新概念一册经典内容，并进行科学模块化拆分</li>
+						<li>新概念一册， 144课，25min/课时，共288课时/年 </li>
+						<li>经过特殊培训且青少课程综合排名前200名的外籍教师</li>
+						<li>有小升初、中考需求或想系统学习语法的学员</li>
+						<li>每课1个语法点，精讲精练，综合提高</li>
+						<li>约1500个词汇，72个语法点及72篇篇章</li>
+					</ul>
+				</div>
+			</div>
+				
+			</div>
+		</div>
+		<div class="youth_width hide">
+			<div class="class_part">
+				<div class="tit_class"></div>
+				<div class="class_img_box"><img class="class_img pindu" data-src="<%=imagessrc%>teenager/class_1.jpg" width="400" height="300" src="<%=imagessrc%>common/deafult.png"></div>
+				<p class="class_text">以听说，兴趣为主，让学员从此爱上英语学习。</p>
+				<p class="class_set">课程设置：共48课时，25min/课时</p>
+				<p class="class_set class_mo">授课模式：外教一对一</p>300
+				<a href="#" class="know_class">了解详情</a>
+			</div>
+			<div class="class_part par_right">
+				<div class="tit_class tit_class1"></div>
+				<div class="class_img_box"><img class="class_img pindu" data-src="<%=imagessrc%>teenager/class_2.jpg" width="400" height="300" src="<%=imagessrc%>common/deafult.png"></div>
+				<p class="class_text">英语学习的重要基础，讲授26个字母及字母组合发</p>
+				<p class="class_text text_next">音与拼写规律。</p>
+				<p class="class_set">课程设置：共48课时，25min/课时</p>
+				<p class="class_set class_mo">授课模式：外教一对一</p>
+				<a href="#" class="know_class">了解详情</a>
+			</div>
+		</div>
+		<div class="youth_width hide">
+			<div class="class_part">
+				<div class="tit_class"></div>
+				<div class="class_img_box"><img class="class_img pindu" data-src="<%=imagessrc%>teenager/class_3.jpg" width="400" height="300" src="<%=imagessrc%>common/deafult.png"></div>
+				<p class="class_text">以听说，兴趣为主，让学员从此爱上英语学习。</p>
+				<p class="class_set">课程设置：共48课时，25min/课时</p>
+				<p class="class_set class_mo">授课模式：外教一对一</p>
+				<a href="#" class="know_class">了解详情</a>
+			</div>
+			<div class="class_part par_right">
+				<div class="tit_class tit_class1"></div>
+				<div class="class_img_box"><img class="class_img pindu" data-src="<%=imagessrc%>teenager/class_4.jpg" width="400" height="300" src="<%=imagessrc%>common/deafult.png"></div>
+				<p class="class_text">英语学习的重要基础，讲授26个字母及字母组合发</p>
+				<p class="class_text text_next">音与拼写规律。</p>
+				<p class="class_set">课程设置：共48课时，25min/课时</p>
+				<p class="class_set class_mo">授课模式：外教一对一</p>
+				<a href="#" class="know_class">了解详情</a>
+			</div>
+		</div>
+		<div class="youth_width hide">
+			<div class="class_part">
+				<div class="tit_class"></div>
+				<div class="class_img_box"><img class="class_img pindu" data-src="<%=imagessrc%>teenager/class_5.jpg" width="400" height="300" src="<%=imagessrc%>common/deafult.png"></div>
+				<p class="class_text">以听说，兴趣为主，让学员从此爱上英语学习。</p>
+				<p class="class_set">课程设置：共48课时，25min/课时</p>
+				<p class="class_set class_mo">授课模式：外教一对一</p>
+				<a href="#" class="know_class">了解详情</a>
+			</div>
+			<div class="class_part par_right">
+				<div class="tit_class tit_class1"></div>
+				<div class="class_img_box"><img class="class_img pindu" data-src="<%=imagessrc%>teenager/class_6.jpg" width="400" height="300" src="<%=imagessrc%>common/deafult.png"></div>
+				<p class="class_text">英语学习的重要基础，讲授26个字母及字母组合发</p>
+				<p class="class_text text_next">音与拼写规律。</p>
+				<p class="class_set">课程设置：共48课时，25min/课时</p>
+				<p class="class_set class_mo">授课模式：外教一对一</p>
+				<a href="#" class="know_class">了解详情</a>
+			</div>
+		</div>
+		<div class="youth_width hide">
+			<div class="class_part">
+				<div class="tit_class"></div>
+				<div class="class_img_box"><img class="class_img pindu" data-src="<%=imagessrc%>teenager/class_7.jpg" width="400" height="300" src="<%=imagessrc%>common/deafult.png"></div>
+				<p class="class_text">以听说，兴趣为主，让学员从此爱上英语学习。</p>
+				<p class="class_set">课程设置：共48课时，25min/课时</p>
+				<p class="class_set class_mo">授课模式：外教一对一</p>
+				<a href="#" class="know_class">了解详情</a>
+			</div>
+			<div class="class_part par_right">
+				<div class="tit_class tit_class1"></div>
+				<div class="class_img_box"><img class="class_img pindu" data-src="<%=imagessrc%>teenager/class_8.jpg" width="400" height="300" src="<%=imagessrc%>common/deafult.png"></div>
+				<p class="class_text">英语学习的重要基础，讲授26个字母及字母组合发</p>
+				<p class="class_text text_next">音与拼写规律。</p>
+				<p class="class_set">课程设置：共48课时，25min/课时</p>
+				<p class="class_set class_mo">授课模式：外教一对一</p>
+				<a href="#" class="know_class">了解详情</a>
+			</div>
+		</div>
+	</div>
+	<div class="y_major bg_y_major">
+		<div class="major_cont">
+			<h3 class="youth_tit"><img data-src="<%=imagessrc%>teenager/y_top2.png" width="117" height="36" src="<%=imagessrc%>common/deafult.png"></h3>
+			<ul class="major_list">
+				<li>
+					<a href="javascript:;"><img data-src="<%=imagessrc%>teenager/y_top2_m.jpg" width="131" height="178" src="<%=imagessrc%>common/deafult.png"></a>
+					<h3><a href="http://baidu.com" target="_blank">详情介绍></a></h3>
+				</li>
+				<li>
+					<a href="javascript:;"><img data-src="<%=imagessrc%>teenager/y_top2_a.jpg" width="131" height="178" src="<%=imagessrc%>common/deafult.png"></a>
+					<h3><a href="http://baidu.com" target="_blank">详情介绍></a></h3>
+				</li>
+				<li>
+					<a href="javascript:;"><img data-src="<%=imagessrc%>teenager/y_top2_b.jpg" width="131" height="178" src="<%=imagessrc%>common/deafult.png"></a>
+					<h3><a href="javascript:;">详情介绍></a></h3>
+				</li>
+				<li>
+					<a href="javascript:;"><img data-src="<%=imagessrc%>teenager/y_top2_c.jpg" width="131" height="178" src="<%=imagessrc%>common/deafult.png"></a>
+					<h3><a href="javascript:;">详情介绍></a></h3>
+				</li>
+				<li>
+					<a href="javascript:;"><img data-src="<%=imagessrc%>teenager/y_top2_d.jpg" width="131" height="178" src="<%=imagessrc%>common/deafult.png"></a>
+					<h3><a href="javascript:;">详情介绍></a></h3>
+				</li>
+				<li>
+					<a href="javascript:;"><img data-src="<%=imagessrc%>teenager/y_top2_e.jpg" width="131" height="178" src="<%=imagessrc%>common/deafult.png"></a>
+					<h3><a href="javascript:;">详情介绍></a></h3>
+				</li>
+				<li class="mr0">
+					<a href="javascript:;"><img data-src="<%=imagessrc%>teenager/y_top2_f.jpg" width="131" height="178" src="<%=imagessrc%>common/deafult.png"></a>
+					<h3><a href="javascript:;">详情介绍></a></h3>
+				</li>
+			</ul>
+			<p class="youth_text major_now"><a href="javascript:;">现在就来体验</a></p>
+		</div>
+	</div>
+	<div class="y_selective bg_y_sel">
+		<div class="selective_cont">
+			<h3 class="youth_tit"><img data-src="<%=imagessrc%>teenager/y_top3.png" width="117" height="37" src="<%=imagessrc%>common/deafult.png"></h3>
+			<ul class="selective_list">
+				<li>
+					<a href="javascript:;" class="selective_img_b">
+						<span href="javascript:;" class="selective_img y_bgp4"></span>
+						<h3>学唱英文歌</h3>
+						<p>English Songs</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="selective_img_b">
+						<span href="javascript:;" class="selective_img y_bgp10"></span>
+						<h3>牛津阅读树</h3>
+						<p>Oxford Reading Tree</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="selective_img_b">
+						<span href="javascript:;" class="selective_img y_bgp1"></span>
+						<h3>综合英语</h3>
+						<p>Comprehensive English</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="selective_img_b">
+						<span href="javascript:;" class="selective_img y_bgp0"></span>
+						<h3>生活口语</h3>
+						<p>Daily English</p>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="selective_img_b">
+						<span href="javascript:;" class="selective_img y_bgp7"></span>
+						<h3>看漫画说英语</h3>
+						<p>Cartoon English</p>
+					</a>
+				</li>
+			</ul>
+			<p class="youth_text major_now"><a href="javascript:;">现在就来体验</a></p>
+		</div>
+	</div>
+    <div class="centerMth add-adult-top openClass">
+      <h3><img alt="" data-src="<%=imagessrc%>teenager/add-part2.png" width="315" height="38" src="<%=imagessrc%>common/deafult.png"></h3>
+      <p>51Talk基于CEFR为中国青少学员专业研发的英语级别体系，接轨剑桥少儿及通用英语、<br>
+			托福Junior、托福Primary、雅思等国际考试，且高于国内新课标要求,<br>为每位中国青少学员的英语学习提供清晰可衡量的成长进步计划。</p>
+      <div class="tz-img"><img alt="" data-src="<%=imagessrc%>teenager/y_top1_1.png" width="1000" height="585" src="<%=imagessrc%>common/deafult.png"></div>
+    </div>
+</div>
+<!-- right side bar -->
+<% include ../common/w_side_bar.ejs %>
+<!-- /right side bar-->
+	<% include ../common/w_footer_home.ejs %>
+</body>
+<script src="<%= jsPath%>common/jquery.min.js"></script>
+<script src="<%= jsPath%>vendor.js" id="seajsnode"></script>
+</html>

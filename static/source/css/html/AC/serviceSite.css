@@ -1,0 +1,419 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial, Verdana, Tahoma;
+  color: #738a93;
+  font-size: 13px;
+}
+a {
+  text-decoration: none;
+  color: #738a93;
+}
+i {
+  font-style: normal;
+}
+ul,
+li {
+  list-style: none;
+}
+img {
+  border: 0;
+  display: block;
+}
+h1,
+h2,
+h3,
+b {
+  font-weight: normal;
+}
+input {
+  outline: none;
+  border: none;
+}
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.inputBox {
+  width: 100px;
+  height: 22px;
+  border: 1px solid #dde4eb;
+  line-height: 22px;
+  border-radius: 2px;
+  font-size: 13px;
+  background-color: #fafbfd;
+  padding-left: 10px;
+  color: #c6ced3;
+}
+.line {
+  color: #dde4eb;
+}
+.container {
+  width: 850px;
+  margin: 0 auto;
+}
+.container .header {
+  height: 40px;
+  background-color: #f7f9fc;
+}
+.container .header .searchPart {
+  float: left;
+  height: 24px;
+  padding-top: 8px;
+  padding-left: 15px;
+}
+.container .header .searchPart .child {
+  float: left;
+  margin-right: 15px;
+}
+.container .header .searchPart .child .mr10 {
+  float: left;
+  margin-right: 10px;
+  margin-top: 2px;
+}
+.container .header .searchPart .child .timeSelect {
+  position: relative;
+  float: left;
+  color: #738a93;
+}
+.container .header .searchPart .child .timeSelect h3 {
+  cursor: pointer;
+}
+.container .header .searchPart .child .timeSelect .tri {
+  width: 16px;
+  height: 7px;
+  position: absolute;
+  right: 6px;
+  top: 8px;
+  background: url(../../../images/html/AC/searchIcons.png?v=TnMrQfv1D9ETmdqqkkvBxg%3D%3D) 0 -28px no-repeat;
+  cursor: pointer;
+}
+.container .header .searchPart .child .timeSelect .slideUp {
+  background-position: 0 0;
+}
+.container .header .searchPart .child .timeSelect .options {
+  display: none;
+  height: 90px;
+  width: 110px;
+  border: 1px solid #dde4eb;
+  margin-left: -11px;
+  background-color: #fff;
+  overflow-y: scroll;
+}
+.container .header .searchPart .child .timeSelect .options li {
+  height: 22px;
+  line-height: 22px;
+  padding-left: 10px;
+}
+.container .header .searchPart .child .timeSelect .options li:hover {
+  background-color: #eef2f6;
+}
+.container .header .searchBtn {
+  float: right;
+  position: relative;
+  height: 40px;
+}
+.container .header .searchBtn .exSearch {
+  float: right;
+  height: 40px;
+  line-height: 40px;
+  width: 116px;
+  background-color: #e1e8f0;
+}
+.container .header .searchBtn .exSearch i {
+  width: 16px;
+  height: 16px;
+  float: left;
+  background: url(../../../images/html/AC/searchIcons.png?v=TnMrQfv1D9ETmdqqkkvBxg%3D%3D) -129px 0 no-repeat;
+  margin: 12px 6px 0 20px;
+}
+.container .header .searchBtn .moreSel {
+  float: right;
+  height: 24px;
+  line-height: 24px;
+  margin-right: 20px;
+  margin-top: 8px;
+}
+.container .header .searchBtn .moreSel i {
+  width: 24px;
+  height: 24px;
+  float: right;
+  background: url(../../../images/html/AC/searchIcons.png?v=TnMrQfv1D9ETmdqqkkvBxg%3D%3D) -35px 0 no-repeat;
+  margin-left: 10px;
+}
+.container .header .searchBtn .moreSel .more {
+  background-position: -80px 0;
+}
+.container .header .searchBtn .tips {
+  position: absolute;
+  top: 48px;
+  right: 20px;
+  width: 258px;
+  display: none;
+}
+.container .header .searchBtn .tips .tri {
+  position: absolute;
+  top: -14px;
+  right: 20px;
+  width: 0px;
+  height: 0px;
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent transparent #666666 transparent;
+}
+.container .header .searchBtn .tips p {
+  height: 34px;
+  line-height: 34px;
+  color: #fff;
+  background: #666666;
+  border-radius: 4px;
+  text-align: center;
+}
+.container .moreCondition {
+  height: 50px;
+  background-color: #f7f9fc;
+  display: none;
+}
+.container .moreCondition .conditionList {
+  width: 820px;
+  margin: 0 auto;
+  padding-top: 16px;
+}
+.container .moreCondition .conditionList li {
+  float: left;
+  margin-right: 16px;
+}
+.container .moreCondition .conditionList li .mr16 {
+  margin-right: 6px;
+}
+.container .moreCondition .conditionList .last {
+  margin-right: 0;
+}
+.container .copyTip {
+  height: 30px;
+  text-align: center;
+}
+.container .copyTip span {
+  height: 24px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  color: #fff;
+  padding: 0 25px;
+  margin: 3px auto;
+  display: inline-block;
+  line-height: 24px;
+  display: none;
+}
+.container .list {
+  display: none;
+}
+.container .list .child {
+  width: 848px;
+  border: 1px solid #e1e8f0;
+}
+.container .list .child .half {
+  width: 400px;
+  position: relative;
+}
+.container .list .child .half .lineInfo {
+  line-height: 20px;
+  position: relative;
+}
+.container .list .child .half .lineInfo .leftb {
+  background: url(../../../images/html/AC/searchIcons.png?v=TnMrQfv1D9ETmdqqkkvBxg%3D%3D) -114px -22px no-repeat;
+  display: inline-block;
+  width: 15px;
+  height: 13px;
+}
+.container .list .child .half .lineInfo .rightb {
+  background: url(../../../images/html/AC/searchIcons.png?v=TnMrQfv1D9ETmdqqkkvBxg%3D%3D) -130px -21px no-repeat;
+  display: inline-block;
+  width: 15px;
+  height: 13px;
+  margin-right: 3px;
+}
+.container .list .child .half .lineInfo i {
+  margin-right: 5px;
+}
+.container .list .child .half .lineInfo span {
+  display: inline-block;
+  color: #ababab;
+  margin-right: 62px;
+}
+.container .list .child .half .lineInfo a {
+  color: #ff8200;
+  text-decoration: underline;
+  position: absolute;
+  right: 26px;
+  top: 0;
+}
+.container .list .child .half .title {
+  height: 20px;
+  display: none;
+}
+.container .list .child .half .loginInfo {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 20px;
+  height: 130px;
+  width: 100%;
+  z-index: 1;
+  background: #fff;
+  overflow-x: hidden;
+}
+.container .list .child .lll {
+  float: left;
+  margin-left: 20px;
+}
+.container .list .child .rrr {
+  float: right;
+  margin-right: 8px;
+}
+.container .list .child .classIntro {
+  height: 46px;
+}
+.container .list .child .classIntro .tags {
+  height: 26px;
+  margin: 10px 0 0 20px;
+  float: left;
+}
+.container .list .child .classIntro .tags li {
+  float: left;
+  width: 58px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border: 1px solid #738a93;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+.container .list .child .classIntro .ids {
+  height: 14px;
+  margin: 15px 7px 0 0;
+  float: right;
+}
+.container .list .child .classIntro .ids li {
+  float: left;
+  margin-left: 20px;
+  width: 170px;
+}
+.container .list .child .classIntro .ids li .left {
+  float: left;
+}
+.container .list .child .classIntro .ids li .left i {
+  color: #333333;
+}
+.container .list .child .classIntro .ids li .right {
+  float: right;
+  color: #ff8200;
+  text-decoration: underline;
+}
+.container .list .child .classIntro .ids .last {
+  margin-right: 30px;
+}
+.container .list .child .classTitle {
+  padding-left: 20px;
+  background-color: #eaeff4;
+  height: 42px;
+  line-height: 42px;
+  color: #333333;
+  margin-bottom: 15px;
+}
+.container .list .child .stInfo {
+  clear: both;
+}
+.container .list .child .stInfo .infoList {
+  margin-left: 20px;
+  border-right: 1px dashed #eee;
+  width: 400px;
+  height: 130px;
+  float: left;
+}
+.container .list .child .stInfo .infoList ul {
+  float: left;
+}
+.container .list .child .stInfo .infoList ul li {
+  width: 176px;
+  margin-right: 20px;
+  float: left;
+  line-height: 34px;
+  height: 34px;
+  position: relative;
+}
+.container .list .child .stInfo .infoList ul li .left {
+  width: 130px;
+}
+.container .list .child .stInfo .infoList ul li .left b {
+  width: 38px;
+  text-align: right;
+}
+.container .list .child .stInfo .infoList ul li .left i {
+  color: #333333;
+}
+.container .list .child .stInfo .infoList ul li .right {
+  float: right;
+  color: #ff8200;
+  text-decoration: underline;
+}
+.container .list .child .stInfo .infoList ul li .class {
+  color: #fff;
+  position: absolute;
+  padding: 5px;
+  border-radius: 3px;
+  line-height: 12px;
+  right: 0;
+  top: 6px;
+}
+.container .list .child .stInfo .infoList ul li .inclass {
+  background: #4edb8f;
+}
+.container .list .child .stInfo .infoList ul li .notInclass {
+  background: #e87b76;
+}
+.container .list .child .stInfo .last {
+  border-right: none;
+}
+.container .list .child .enterBox .enterRoom {
+  width: 120px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #ff8200;
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  display: inline-block;
+  float: right;
+  margin: 20px 30px 14px 0;
+}
+.container .searchBox {
+  display: none;
+  text-align: center;
+  margin-top: 160px;
+}
+.container .searchBox img {
+  width: 102px;
+  height: 92px;
+  display: inline-block;
+}
+.container .searchBox p {
+  margin-top: 30px;
+}
+.container .wait {
+  display: block;
+}
+.container .wait img {
+  width: 97px;
+}
+.container .noContent img {
+  width: 107px;
+  height: 110px;
+}

@@ -1,0 +1,48 @@
+<% include ../common/top.ejs %>
+<body data-init="answer">
+<form action="" method="get" id="answerForm">
+  <div class="dialog-wrap answer-wrap">
+    <div class="answer-tit">答题</div>
+    <div class="answer-question">How ____ you!</div>
+    <ul class="answer-option-pic cfix">
+      <li data-val="a" class="txt-no">
+        <dl>
+          <dt><img src="<%= imagessrc%>answer-pic-01.jpg" alt=""></dt>
+          <dd>
+            <span>A</span>
+          </dd>
+        </dl>
+      </li>
+      <li data-val="b">
+        <dl>
+          <dt><img src="<%= imagessrc%>answer-pic-01.jpg" alt=""></dt>
+          <dd>
+            <span>B</span>
+          </dd>
+        </dl>
+      </li>
+      <li data-val="c">
+        <dl>
+          <dt><img src="<%= imagessrc%>answer-pic-01.jpg" alt=""></dt>
+          <dd>
+            <span>C</span>
+          </dd>
+        </dl>
+      </li>
+      <li data-val="d" class="txt-yes">
+        <dl>
+          <dt><img src="<%= imagessrc%>answer-pic-01.jpg" alt=""></dt>
+          <dd>
+            <span>D</span>
+          </dd>
+        </dl>
+      </li>
+    </ul>
+    <input type="hidden" name="val" id="answerVal" value="">
+    <div class="answer-dialog">
+      <a href="http://www.51talk.com/"><input type="button" value="购买课程，参与答题" class="answer-buy"></a>
+    </div>
+  </div>
+</form>
+</body>
+<% include ../common/bottom.ejs %>

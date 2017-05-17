@@ -1,0 +1,170 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ */
+body,
+html {
+  min-height: 100%;
+  background-color: #638efc;
+}
+.index {
+  background-color: #638efc;
+}
+.index_banner {
+  position: relative;
+  color: #fff;
+}
+.index_banner img {
+  width: 100%;
+}
+.index_banner .levle {
+  position: absolute;
+  right: 0.266667rem;
+  top: 0.266667rem;
+  width: 0.866667rem;
+  height: 0.866667rem;
+  line-height: 0.866667rem;
+  text-align: center;
+  font-size: 0.4rem;
+  font-weight: 600;
+  background-color: #ff910f;
+  border-radius: 50%;
+}
+.index_banner .unit_info_wrap {
+  position: absolute;
+  top: 1.466667rem;
+  left: 0.746667rem;
+}
+.index_banner .unit_info_wrap p {
+  font-weight: 600;
+}
+.index_banner .unit_info_wrap p:nth-child(1),
+.index_banner .unit_info_wrap p:nth-child(2) {
+  line-height: 0.773333rem;
+  font-size: 0.773333rem;
+}
+.index_banner .unit_info_wrap p:nth-child(2) {
+  margin-top: 0.133333rem;
+}
+.index_banner .unit_info_wrap p:nth-child(3) {
+  margin-top: 0.346667rem;
+  font-size: 0.453333rem;
+}
+.index_containter {
+  position: relative;
+  margin: auto;
+}
+.index_containter .tit_level {
+  height: 1.6rem;
+  color: #fff;
+  text-align: center;
+  background-color: #5b86f6;
+  display: -ms-flexbox;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  display: -moz-box;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+}
+.index_containter .tit_level span {
+  display: inline-block;
+  font-weight: 900;
+}
+.index_containter .tit_level span:nth-child(1) {
+  margin-right: 0.266667rem;
+  width: 0.933333rem;
+  height: 0.933333rem;
+  line-height: 0.933333rem;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #638efc;
+  font-size: 0.506667rem;
+}
+.index_containter .tit_level span:nth-child(2) {
+  height: 0.933333rem;
+  font-size: 0.586667rem;
+  line-height: 0.933333rem;
+}
+.index_containter .import_konwledge {
+  overflow: hidden;
+  width: 85%;
+  margin: auto;
+}
+.index_containter .import_konwledge em {
+  display: inline-block;
+  width: 0.106667rem;
+  height: 0.373333rem;
+  line-height: 0.4rem;
+  vertical-align: top;
+  margin-top: 0.026667rem;
+  margin-right: 0.133333rem;
+  background: url(../../../images/wap/pre_class20170207/line.png?v=l6y%2BQLT2xZfb9kTAYWOv2g%3D%3D) no-repeat;
+  background-size: 0.106667rem 0.373333rem;
+}
+.index_containter .import_konwledge .line {
+  width: 100%;
+  border: 1px solid #5b86f6;
+}
+.index_containter .import_konwledge .tit_word {
+  margin-top: 0.8rem;
+  font-size: 0.4rem;
+  line-height: 0.4rem;
+  color: #fff;
+}
+.index_containter .import_konwledge .words_wrap {
+  margin-top: 0.2rem;
+  margin-bottom: 0.4rem;
+  text-align: left;
+  overflow: hidden;
+}
+.index_containter .import_konwledge .words_wrap span {
+  display: inline-block;
+  height: 0.533333rem;
+  padding: 0 0.266667rem;
+  margin-right: 0.133333rem;
+  margin-top: 0.2rem;
+  border-radius: 0.266667rem;
+  color: #dbf0ff;
+  line-height: 0.533333rem;
+  font-size: 0.373333rem;
+  border: 1px solid #92b0fd;
+}
+.index_containter .import_konwledge .tit_important {
+  margin-top: 0.4rem;
+  font-size: 0.4rem;
+  color: #fff;
+  line-height: 0.4rem;
+}
+.index_containter .import_konwledge .important_content {
+  margin-top: 0.266667rem;
+  padding-bottom: 2.2rem;
+  text-align: left;
+  font-size: 0.373333rem;
+  line-height: 0.56rem;
+  color: #dbf0ff;
+}
+.index .start_exercise_btn {
+  z-index: 99;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-top: 0.3rem;
+  padding-bottom: 0.533333rem;
+  max-width: 750px;
+  background-color: #638efc;
+}
+.index .start_exercise_btn a {
+  display: block;
+  margin: auto;
+  width: 8.533333rem;
+  height: 1.36rem;
+  background: url(../../../images/wap/pre_class20170207/start_exercise_btn.png?v=IHWj2%2Fge6BdgweV3wy8NPg%3D%3D) no-repeat;
+  background-size: 100% 100%;
+}
+.index .start_exercise_btn a:hover {
+  background: url(../../../images/wap/pre_class20170207/start_exercise_btn_hover.png?v=0t5as6o%2Fure7My%2BMuskBrw%3D%3D) no-repeat;
+  background-size: 100% 100%;
+}

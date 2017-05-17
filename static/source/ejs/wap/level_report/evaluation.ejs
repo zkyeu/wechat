@@ -1,0 +1,179 @@
+<% include ../common/top.ejs %>
+<body>
+<section class="evaluation" data-init="share">
+	<section class="course">
+		<div class="text">
+			<h3 class="title">
+				Grade1 > 第一单元 家庭和朋友 > 第二课
+			</h3>
+			<div class="content">
+				<p>She Is My Mother</p>
+				<p>她是我的妈妈</p> 
+			</div>
+		</div>
+		<div class="logo"></div>
+	</section>
+	<section class="comment">
+		<h3 class="tit">外教评语</h3>
+		<section class="user-top">
+			<dl class="user-cont">
+				<dt>
+					<section class="user-img">
+						<img src="<%=imagessrc%>user.jpg" alt="">
+					</section>
+					<p>Robert</p>
+				</dt>
+				<dd>Dear,<span>smith</span><br><span>What a nice student! Your lovely nice singing will surely hepi you learn willy English singing good well.</span>lly English singing good welly English singing good we</dd>
+			</dl>
+		</section>
+	</section>
+	<section class="performance">
+		<h3 class="tit">课堂表现</h3>
+		<ul>
+			<li class="interact">
+				<h3 class="subtit">互动情况</h3>
+				<div class="stars"><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="empty"></span></div>
+				<p class="remark">小朋友，你能较好地跟老师互动，下节课可更加自信哦！</p>
+			</li>
+			<li class="speak">
+				<h3 class="subtit">口语能力</h3>
+				<div class="stars"><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="empty"></span></div>
+				<p class="remark">小朋友，你能较好地跟老师互动，下节课可更加自信哦！</p>
+			</li>
+			<li class="listen">
+				<h3 class="subtit">听力能力</h3>
+				<div class="stars"><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="empty"></span></div>
+				<p class="remark">小朋友，你能较好地跟老师互动，下节课可更加自信哦！</p>
+			</li>
+			<li class="read">
+				<h3 class="subtit">阅读能力</h3>
+				<div class="stars"><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="empty"></span></div>
+				<p class="remark">小朋友，你能较好地跟老师互动，下节课可更加自信哦！</p>
+			</li>
+		</ul>
+	</section>
+	<section class="lesson">
+		<h3 class="tit">课堂掌握</h3>
+		<ul class="lesson-list">
+			<li class="color1">
+				<h3 class="l-tit"><span>3</span>个需要注意的发音 <i></i></h3>
+				<p>Climb 攀爬 /klɑɪm/ friend 朋友 /frend/ Animal 动物 / æn.ɪ.məl/  </p>
+			</li>
+			<li class="color2">
+				<h3 class="l-tit"><span>6</span>个新单词需要学习<i></i></h3>
+				<p>duck   pig   cow   cat   horse   dog </p>
+			</li>
+			<li class="color3">
+				<h3 class="l-tit"><span>2</span>个句子需要掌握<i></i></h3>
+				<p>Who is she? <br>  She is my mother.</p>
+			</li>
+			<li class="color4">
+				<h3 class="l-tit"><span>1</span>首歌谣可以学唱<i></i></h3>
+				<p>The bear went over the mountain.</p>
+			</li>
+		</ul>
+	</section>
+	<section class="weixin-share-tips"><i class="icon"></i>快去分享吧，为宝贝赢取3重奖励！</section>
+</section>
+<section class="mask">
+	<section class="share-guide">
+		<section class="share-guide__arr"></section>
+		<section class="share-guide__info">
+			<img src="<%=imagessrc%>share_info.png" alt="">
+		</section>
+		<section class="share-guide__close"></section>
+	</section>
+</section>
+</body>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="../../../js/wap/common/pind.js?v=1"></script>
+<% include ../common/bottom.ejs %>
+<script>
+        wx.config({
+            debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+            appId: '', // 必填，公众号的唯一标识
+            timestamp: , // 必填，生成签名的时间戳
+            nonceStr: '', // 必填，生成签名的随机串
+            signature: '',// 必填，签名，见附录1
+            jsApiList: [
+                'onMenuShareTimeline',//分享到朋友圈
+                'onMenuShareAppMessage', //分享给朋友
+                'onMenuShareQQ', //分享到QQ
+                'onMenuShareWeibo', //分享到腾讯微博
+                'onMenuShareQZone', //分享到QQ空间
+            ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+        });
+        wx.ready(function(){
+            wx.onMenuShareTimeline({
+                title: '', // 分享标题
+                link: '', // 分享链接
+                imgUrl: '', // 分享图标
+                success: function () { 
+                    // 用户确认分享后执行的回调函数
+                },
+                cancel: function () { 
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+            wx.onMenuShareAppMessage({
+                title: '', // 分享标题
+                desc: '', // 分享描述
+                link: '', // 分享链接
+                imgUrl: '', // 分享图标
+                type: '', // 分享类型,music、video或link，不填默认为link
+                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                success: function () { 
+                    // 用户确认分享后执行的回调函数
+                    $.ajax({
+                    	url: '',
+                    	type: '',
+                    	dataType: 'json',
+                    	data: {},
+                    	success: function(res) {
+                    		console.log(res);
+                    	}
+                    })
+                },
+                cancel: function () { 
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+            wx.onMenuShareQQ({
+                title: '', // 分享标题
+                desc: '', // 分享描述
+                link: '', // 分享链接
+                imgUrl: '', // 分享图标
+                success: function () { 
+                   // 用户确认分享后执行的回调函数
+                },
+                cancel: function () { 
+                   // 用户取消分享后执行的回调函数
+                }
+            });
+            wx.onMenuShareWeibo({
+                title: '', // 分享标题
+                desc: '', // 分享描述
+                link: '', // 分享链接
+                imgUrl: '', // 分享图标
+                success: function () { 
+                   // 用户确认分享后执行的回调函数
+                },
+                cancel: function () { 
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+            wx.onMenuShareQZone({
+                title: ' ', // 分享标题
+                desc: '', // 分享描述
+                link: '', // 分享链接
+                imgUrl: '', // 分享图标
+                success: function () { 
+                   // 用户确认分享后执行的回调函数
+                },
+                cancel: function () { 
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+            
+        });
+</script>

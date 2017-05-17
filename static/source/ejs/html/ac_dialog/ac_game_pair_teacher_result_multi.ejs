@@ -1,0 +1,60 @@
+<% include ../common/top.ejs %>
+<body data-init="acgamePair">
+    <div class="ac-dialog-wrap">
+        <div class="ac-dialog-header clearfix">
+            <p class="fl">Quiz</p>
+            <p class="fr">
+                <a href="javascript:void(0);" class="a-close">Go back to class</a>
+            </p>
+        </div>
+        <div class="ac-dialog-content game-pair">
+            <div class="game-content game-content-result">
+            </div>
+            <div class="game-result-teacher-multi">
+                <p class="game-result-timmer"></p>
+                <div class="game-result-con">
+                    <p>The students who got "Excellent!": <span data-flag="excellent">9</span></p>
+                    <p>The students who got "Very good!": <span data-flag="very_good">10</span></p> 
+                    <p>The students who got "Do better!": <span data-flag="do_better">11</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="ac-dialog-bottom">
+        </div>
+    </div>
+    <form name="class-info">
+        <input type="hidden" name="q_id" value="100" />
+        <input type="hidden" name="b2s_course_id" value="4653" />
+    </form>
+<script type="text/javascript">
+var dataJson = {
+    // type play 玩游戏 show 展示
+    type : "show",
+    // workTime 玩游戏的时间
+    workTime : 6000,
+    // closeTime 答案展示时间
+    closeTime : 10000,
+    // bufferTime 本道题老师端buffer时间 老师端看报告才用到
+    bufferTime : 0,
+    // 数据
+    dataArr : [
+        // 图片地址 | 配对id | 对错状态 0 错误 1 正确 9 无状态
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|1|0',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|1|0',
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|2|0',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|2|0',
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|3|0',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|3|0',
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|4|0',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|4|0',
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|5|0',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|5|0',
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|6|0',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|6|0'
+    ],
+    // 各种环境图片前缀
+    imgPath : ""
+};
+</script>
+</body>
+<% include ../common/bottom.ejs %>

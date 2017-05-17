@@ -1,0 +1,84 @@
+<% include ../common/top_b2s_n.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>code_manage.css">
+</head>
+<body data-init="code_manage" class="code_manage_body">
+    <div id="codeManageId">
+        <div class="search-box">
+            <div class="search-b">
+                <span></span>
+                <input id="searchId" type="text" value="" placeholder="搜索群名称"/>
+            </div>
+        </div>
+        <div class="tody-box" >
+        	<h2><span class="tody-icon"></span>今日新建</h2>
+        	<ul class="list-ul" id="todayContent">
+        		<li class="clearfix">
+                    <a href="javascript:;">
+            			<span class="li-icon"></span>
+            			<div class="li-text">
+        	    			<p>51Talk无忧英语小学家长群</p>
+        	    			<div>1班、2班、3班</div>
+        	    		</div>
+        	    		<div class="time-box">
+        	    			11:30
+        	    			<span></span>
+        	    		</div>
+                    </a>
+        		</li>
+                <li class="clearfix">
+                    <a href="javascript:;">
+                        <span class="li-icon"></span>
+                        <div class="li-text">
+                            <p>51Talk无忧英语小学家长群</p>
+                            <div>1班、2班、3班</div>
+                        </div>
+                        <div class="time-box">
+                            11:30
+                            <span></span>
+                        </div>
+                    </a>
+                </li>
+        	</ul>
+        </div>
+        <div class="history-box" >
+        	<h2><span class="history-icon"></span>今日新建</h2>
+            <ul class="list-ul" id="historyContent">
+                <li class="clearfix">
+                    <a href="javascript:;">
+                        <span class="li-icon"></span>
+                        <div class="li-text">
+                            <p>51Talk无忧英语小学家长群</p>
+                            <div>1班、2班、3班</div>
+                        </div>
+                        <div class="time-box">
+                            9月6号
+                            <span></span>
+                        </div>
+                    </a>
+                </li>
+                <li class="clearfix">
+                    <a href="javascript:;">
+                        <span class="li-icon"></span>
+                        <div class="li-text">
+                            <p>51Talk无忧英语小学家长群</p>
+                            <div>1班、2班、3班</div>
+                        </div>
+                        <div class="time-box">
+                            9月6号
+                            <span></span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+    <div class="dialog-wrap" style="display:none">
+        <div class="dialog-con">
+            <div class="dialog-tit">暂未上传二维码，请稍后再试！</div>
+            <div class="dialog-btn">我知道了</div>
+        </div>
+    </div>
+</body>
+<!--公共尾部结束-->
+<% include ../common/bottom.ejs %>

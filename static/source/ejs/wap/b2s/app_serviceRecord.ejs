@@ -1,0 +1,87 @@
+<% include ../common/top.ejs %>
+<body data-init="app_serviceRecord">
+<!-- <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>"> -->
+<div class="serviceRecord-wrap">
+	<div class="serviceRecord-item">
+		<div class="serviceRecord-item-tit">
+			<h3><span class="beingProcessed">处理中</span>【咨询求助】我登录不上了<span class="font-1">—— 来自motorola Nexus 6 系统版本：23 客户端版本：3.6.0</span></h3>
+			<p>分类&nbsp;关于客户端&nbsp;&nbsp;提交时间&nbsp;2016/03/28 18:18</p>
+		</div>
+		<div class="serviceRecord-item-con">
+			<h4>处理详情：</h4>
+			<div class="serviceRecord-item-con-part">您好，客服在14点以及19点 已跟您致电将问题解决，如果有问题请您及时致电4000515151或在线客服联系我们，非常感谢您的支持与理解，祝您学习进步！</div>
+			<p class="cfix">
+				<span class="fl">处理时间&nbsp;2016/03/29 19:37</span>
+			</p>
+		</div>
+	</div>
+	<div class="serviceRecord-item">
+		<div class="serviceRecord-item-tit">
+			<h3><span class="finishProcessing">处理完</span>【咨询求助】我登录不上了<span class="font-1">—— 来自motorola Nexus 6 系统版本：23 客户端版本：3.6.0</span></h3>
+			<p>分类&nbsp;关于客户端&nbsp;&nbsp;提交时间&nbsp;2016/03/28 18:18</p>
+		</div>
+		<div class="serviceRecord-item-con">
+			<h4>处理详情：</h4>
+			<div class="serviceRecord-item-con-part">您好，客服在14点以及19点 已跟您致电将问题解决，如果有问题请您及时致电4000515151或在线客服联系我们，非常感谢您的支持与理解，祝您学习进步！</div>
+			<!-- 每循环一次id值不可重复，用js_开头 -->
+			<p class="cfix" id="js_1">
+				<span class="fl">处理时间&nbsp;2016/03/29 19:37</span>
+				<span class="solve fr js_solve_show js_solve" >问题解决了吗？</span>
+				<span class="solve2 fr js_solve_show js_solveYes disnone" >问题已解决<a href="javascript:void(0);">修改</a></span>
+				<span class="solve2 fr js_solve_show js_solveNo disnone" >问题未解决<a href="javascript:void(0);">修改</a></span>
+			</p>
+		</div>
+	</div>
+	<div class="serviceRecord-item">
+		<div class="serviceRecord-item-tit">
+			<h3><span class="finishProcessing">处理完</span>【咨询求助】我登录不上了<span class="font-1">—— 来自motorola Nexus 6 系统版本：23 客户端版本：3.6.0</span></h3>
+			<p>分类&nbsp;关于客户端&nbsp;&nbsp;提交时间&nbsp;2016/03/28 18:18</p>
+		</div>
+		<div class="serviceRecord-item-con">
+			<h4>处理详情：</h4>
+			<div class="serviceRecord-item-con-part">您好，客服在14点以及19点 已跟您致电将问题解决，如果有问题请您及时致电4000515151或在线客服联系我们，非常感谢您的支持与理解，祝您学习进步！</div>
+			<p class="cfix" id="js_2">
+				<span class="fl">处理时间&nbsp;2016/03/29 19:37</span>
+				<span class="solve fr js_solve_show js_solve" >问题解决了吗？</span>
+				<span class="solve2 fr js_solve_show js_solveYes disnone" >问题已解决<a href="javascript:void(0);">修改</a></span>
+				<span class="solve2 fr js_solve_show js_solveNo disnone" >问题未解决<a href="javascript:void(0);">修改</a></span>
+			</p>
+		</div>
+	</div>
+</div>
+<div class="serviceRecord-dialog disnone" id="js_dialog">
+	<div class="serviceRecord-dialog-con">
+		<div class="serviceRecord-dialog-close js_dialog_close"></div>
+		<div class="serviceRecord-dialog-part js_dialog1">
+			<div class="part-text">问题解决了吗？</div>
+			<div class="part-img"><img src="<%= imagessrc%>app-serviceRecord-04.png" /></div>
+		</div>
+		<div class="serviceRecord-dialog-btn js_dialog1">
+			<span class="unsolved js_unsolved">问题未解决</span>
+			<span class="resolved js_resolved">问题已解决</span>
+		</div>
+		
+		<div class="serviceRecord-dialog-part2 disnone js_dialog2">
+			<div class="part-text">问题未解决？</div>
+			<div class="part-input">
+				<textarea class="js_textarea" data-maxlength="200" name="" placeholder="请填写未解决问题的详情，以便我们继续帮您解决。"></textarea>
+				<span class="textareaRemaining js_textareaRemaining">0/200</span>
+			</div>
+		</div>
+		<div class="serviceRecord-dialog-btn2 disnone js_dialog2">
+			<span class="js_submit">确定</span>
+		</div>
+	</div>
+	<!-- <div class="serviceRecord-dialog-con border1 disnone">
+		<div class="serviceRecord-dialog-close js_dialog_close"></div>
+		<div class="serviceRecord-dialog-part js_dialog1">
+			<div class="part-text">问题解决了吗？</div>
+			<div class="part-img"><img src="<%= imagessrc%>app-serviceRecord-04.png" /></div>
+		</div>
+	</div> -->
+</div>
+<div class="serviceRecord-wrap2">
+	<div class="serviceRecord-noRecord">暂无服务记录</div>
+</div>
+</body>
+<% include ../common/bottom.ejs %>

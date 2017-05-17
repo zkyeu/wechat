@@ -1,0 +1,60 @@
+<% include ../common/top.ejs %>
+<body class="ac-tem-pair ac-tem-stu" data-init="beforeClass" swfHref="" audioPath="" page-tag="pair,stu,play">
+    <div class="header-box">
+        <ul class="clear">
+            <li class="done-p">单词听说</li>
+            <li class="current-p">词义辨识</li>
+            <li class="not-done">单词拼写</li>
+            <li class="not-done">句型学习</li>
+            <li class="not-done">语法视频</li>
+            <li class="not-done">阅读学习</li>
+        </ul>
+    </div>
+	<div class="ac-tem">
+		<!-- <div class="ac-tem-tit">
+			<span class="ac-tem-tit-bg"></span>
+			<div class="ac-tem-tit-in ac-tem-wrap clearfix">
+				<a href="javascript:void(0);" class="ac-close ac-pair-spirts fr">Go back to class</a>
+			</div>
+		</div> -->
+	    <div class="ac-tem-con ac-tem-wrap">
+	        <div class="ac-tem-content"></div>
+	    </div>
+	</div>
+<form method="post" action="ac_stu_pair_result.html" name="gamePlay">
+    <input type="hidden" name="goCount" />
+    <input type="hidden" name="playTime" />
+    <input type="hidden" name="resultArr" />
+</form>
+<script type="text/javascript">
+var dataJson = {
+    // type play 玩游戏 show 展示
+    type : "play",
+    // workTime 玩游戏的时间
+    workTime : 3600000,
+    // closeTime 答案展示时间
+    closeTime : 3000,
+    // bufferTime 本道题老师端buffer时间 老师端看报告才用到
+    bufferTime : 8000,
+    // 数据
+    dataArr : [
+      //  图片地址 | 成功音频 如没有 为"" | 配对id | 对错状态 0 错误 1 正确 9 无状态
+        '/images/html/before_class/ac_game_pair_back_answer1.png|http://s.51talk.com/upload/b2s_mp3/16/05/11/6547420160511090654.mp3|1|9',
+        '/images/html/before_class/ac_game_pair_back_answer2.png|http://s.51talk.com/upload/b2s_mp3/16/05/11/6547420160511090654.mp3|1|9',
+        '/images/html/before_class/ac_game_pair_back_answer1.png|/images/html/before_class/fail.mp3|2|9',
+        '/images/html/before_class/ac_game_pair_back_answer2.png|/images/html/before_class/fail.mp3|2|9',
+        '/images/html/before_class/ac_game_pair_back_answer1.png|/images/html/before_class/fail.mp3|3|9',
+        '/images/html/before_class/ac_game_pair_back_answer2.png|/images/html/before_class/fail.mp3|3|9',
+        '/images/html/before_class/ac_game_pair_back_answer1.png|/images/html/before_class/fail.mp3|4|9',
+        '/images/html/before_class/ac_game_pair_back_answer2.png|/images/html/before_class/fail.mp3|4|9',
+        '/images/html/before_class/ac_game_pair_back_answer1.png|/images/html/before_class/fail.mp3|5|9',
+        '/images/html/before_class/ac_game_pair_back_answer2.png|/images/html/before_class/fail.mp3|5|9',
+        '/images/html/before_class/ac_game_pair_back_answer1.png|/images/html/before_class/fail.mp3|6|9',
+        '/images/html/before_class/ac_game_pair_back_answer2.png|/images/html/before_class/fail.mp3|6|9'
+    ],
+    // 各种环境图片前缀
+    imgPath : ""
+};
+</script>
+</body>
+<% include ../common/bottom.ejs %>

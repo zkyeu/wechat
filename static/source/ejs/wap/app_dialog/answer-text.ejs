@@ -1,0 +1,21 @@
+<% include ../common/top.ejs %>
+<body data-init="answer">
+<form action="" method="get" id="answerForm">
+  <div class="dialog-wrap answer-wrap">
+    <div class="answer-tit">答题</div>
+    <div class="answer-question">How ____ you!</div>
+    <ul class="answer-option-txt cfix">
+      <li data-val="a"><span class="yes-no txt-no">A</span>areare</li>
+      <li data-val="b"><span class="yes-no">B</span>is</li>
+      <li data-val="c"><span class="yes-no txt-yes">C</span>a</li>
+      <li data-val="d"><span class="yes-no">D</span>old are</li>
+    </ul>
+    <input type="hidden" name="val" id="answerVal" value="">
+    <div class="answer-dialog">
+      <a href="http://www.51talk.com/"><input type="button" value="购买课程，参与答题" class="answer-buy"></a>
+    </div>
+  </div>
+<!-- <img src="<%= imagessrc%>account-headicon-agent.png" alt=""> -->
+</form>
+</body>
+<% include ../common/bottom.ejs %>

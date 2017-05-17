@@ -1,0 +1,31 @@
+<% include ../common/top.ejs %>
+<body id="container" data-init="index">
+<!-- 公共头 -->
+<% include ../common/b2s/b2s_header.ejs %>
+<!-- banner -->
+<% include ../common/b2s/b2s_ce_banner.ejs %>
+<!-- 中间内容 -->
+<div class="ce-content">
+	<div class="widthMain">
+		<div class="apply-seccess hide">
+			<dl class="apply-s-tit">
+				<dt class="tenIcon apply-s-img"></dt>
+				<dd class="apply-s-t">申请提交成功!</dd>
+			</dl>
+			<p class="apply-s-text">网站登录账号、密码已发送至手机号：<span class="apply-s-mobile">13676565544</span> 请注意查收。我们将在3个工作日内完成信息审核。
+您可以通过已填写的手机或邮箱登录网站，查看审核进度。感谢关注！</p>
+		</div>
+		<div class="apply-fail">
+			<dl class="apply-s-tit">
+				<dt class="tenIcon apply-s-img"></dt>
+				<dd class="apply-s-t">很遗憾，您的资料审核未通过。</dd>
+				<dd class="apply-s-t hide">资料正在审核中，请耐心等待。</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

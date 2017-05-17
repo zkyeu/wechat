@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <title>答题结果</title>
+    <script src="<%= jsPath %>flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="<%= csslink %>">
+</head>
+<body>
+<div class="examPage" data-init="exam" id="container">
+    <!-- 测评报告 -->
+    <div id="j_grade_result" class="test-result">
+        <div class="t-header">
+            <img src="<%= imagessrc %>test-bg.png"/>
+            <div class="t-text">
+                <h3>您孩子本次考试成绩为</h3>
+                <h2 id="j_grade">A</h2>
+            </div>
+        </div>
+        <div class="t-dash">
+            <span class="point-le"></span>
+            <span class="point-ri"></span>
+        </div>
+        <div class="t-main">
+            <p>恭喜你可爱的小朋友，你已经做好准备开启英语学习之路了。在这个过程中，你会碰到很多很多有意思的人和事，希望你在51Talk学习生活中高高兴兴，养成好的阅读习惯，为了明天能够更好，咱们加油吧！</p>
+            <p>这个阶段的宝宝，你的词汇量是基础阶段，需要注意多背诵单词哦，但是你已经能读懂好多句子啦，恭喜你哦，希望你能够多多的练习英语，提高阅读故事跟长文章的能力哦。</p>
+        </div>
+        <div class="t-dash">
+            <span class="point-le"></span>
+            <span class="point-ri"></span>
+        </div>
+        <div class="t-complete">
+            <a id="j_complete_btn" href="javascript:;">完成</a>
+        </div>
+    </div>
+</div>
+</body>
+<script id="seajsnode" src="<%= jssrc %>"></script>
+</html>

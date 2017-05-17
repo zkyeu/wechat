@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta content="yes" name="apple-mobile-web-app-capable" /> 
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+    <meta content="telephone=no" name="format-detection" /> 
+    <title>欢迎下载51Talk App</title>
+    <link rel="stylesheet" type="text/css" href="/css/wap/Tmall_Code/Tmall_Code.css">
+</head>
+<body>
+   <header></header>
+   <article class="t_login" data-init="tmall">
+     <h3>登录</h3>
+     <form id="LoginForm" method="POST" target="ssoLoginFrame" action="http://login.51talk.com/sso/login">
+     <input type="hidden" value="1" name="client">
+        <div class="t_group">
+          <input type="text" class="courseCode" placeholder="邮箱/手机号"  name="user_name" id="user_name" />
+          <p class="t_tip tip_username" ><i></i>您的<em>邮箱</em>已注册！</p>
+        </div>
+        <div class="t_group">
+          <input type="text"  name="password2" id="password2" class="courseCode" placeholder="密码" />
+          <p class="t_tip tip_password"><i></i>密码输入错误，还剩<em>三</em>次机会！</p>
+        </div>
+        <div class="t_group">
+         <!--  <input type="button"  class="subCode t_loginL" value="登录" data-href="http:\\wwww.baidu.com" /> -->
+          <a href="javascript:;" class="subCode t_loginL" data-href="http:\\wwww.baidu.com">登录</a>
+          <a href="javascript:;" class="t_home" data-href="http:\\www.baidu.com"></a>
+        </div>
+        <input type="hidden" name="public_key" id="public_key" value="" />
+        <input type="hidden" name="la" id="login_la">
+        <input type="hidden" name="group" id="group" value="4">
+        <input type="hidden" name="password" id="password">
+     </form>
+   </article>
+         <section>
+        <img src="/images/wap/Tmall_Code/t_boy.png"  alt="">
+     </section>
+</body>
+<!--公共尾部结束-->
+<script id="seajsnode" src="/js/wap/project/Tmall_Code/vendor.js"></script>
+</html>

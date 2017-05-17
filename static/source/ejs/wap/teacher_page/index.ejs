@@ -1,0 +1,54 @@
+<% include ../common/top.ejs %>
+<body>
+<header class="dl-hd" id="container" data-init="teacher_page">
+   <img src="<%= imagessrc%>ld_logo.png">
+   <a href="javascript:;" class="hd-tit">官网首页</a>
+</header>
+<section class="dl-cer">
+  <header class="cr-img">
+    <img src="<%= imagessrc%>ld_nav.png">
+    <p>我最近在51Talk又完美的完成了一节外教课<span>【博物馆在哪儿?】</span>, 每天在线跟外教练习口语, 提高非常快！</p>  
+  </header>
+  <ul class="nav">
+    <li>已完成<span><b>236</b>节</span></li>
+    <li>累计说英语<span><b>45</b>天</span></li>
+    <li>对话过<span><b>16</b>位外教</span></li>
+  </ul>
+  <article>
+    <h3>我喜欢的老师推荐给你！</h3>
+    <dl class="cr-dl">
+      <dt><img src="<%= imagessrc%>banner_home3.jpg"></dt>
+      <dd>Rosecharm</dd>
+      <dd>
+        <img src="<%= imagessrc%>star01s.png">
+        <span>平分92.6</span>
+      </dd>
+      <dd>英语教育经验：1年</dd>
+      <dd>适合学员水平：中级以上水平</dd>
+    </dl>
+    <!-- <audio src="<%= imagessrc%>md.mp3" controls="controls">您的浏览器不支持 audio 标签。</audio> -->
+    <!-- 视频播放器 -->
+    <div class="player">
+      <div class="switch-on jsPlayer" data-audioSrc="md.mp3"><i></i></div><!-- switch-on/switch-off -->
+      <div class="controls"><!-- 缓冲cont-buff/进度cont-prog -->
+        <span class="cont-buff"></span>
+        <span class="cont-prog"></span>
+      </div>
+      <div class="tit">听听外教英文自我介绍</div>
+   </div>
+    <p class="cr-word wdlink">Hi , 我是51Talk的Chrismaire老师。我教英语有一段时间了, 对教学充满热情, 因为可以结识新的朋友。我会和大家分享知识，同时提高我的教学技巧。在有空的时候我喜欢读书，踢足球以及听音乐等。我是一个充满热情，耐心的老师。我的教学理念是为学生营造充满互动，趣味的课堂。课上见！对教学充满热情，因为可以结识新的朋友。我会和大家分享知识，同时提高我的教学技巧。在有空的时候，我喜欢读书，踢足球以及听音乐等。我是一个充满热情，耐心的老师。我的教学理念是为学生营造充满互动，趣味的课堂。课上见！</p>
+    <p class="cr-btn"><a href="javascript:;">...显示全部>></a></p>
+  </article>
+</section>
+<footer class="dl-ft">
+  <p class="tit">立即领取<span>免费课程</span></p>
+  <form method="POST" id="RegForm" action="share">
+    <ul class="dl-input">
+      <li><input type="number" placeholder="请输入您的手机号" id="dl-tel"></li>
+      <li><input type="password" placeholder="设置您的密码" id="dl_password"></li>
+      <li><a href="javascript:;" id="sha-reg">免费领取体验课</a></li>
+    </ul>
+  </form>
+</footer> 
+</body>
+<% include ../common/bottom.ejs %>

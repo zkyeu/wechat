@@ -1,0 +1,323 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Fri Jul 01 2016 17:31:07 GMT+0800 (中国标准时间)
+ */
+/*
+* 默认样式
+* @file：   base.less
+* @author:  huhaili（huhaili@51talk.com）
+* @update:  2015-07-08
+* @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+*/
+html {
+  font-size: 62.5%;
+}
+@media only screen and (min-width: 481px) {
+  html {
+    font-size: 94%;
+  }
+}
+@media only screen and (min-width: 561px) {
+  html {
+    font-size: 109%;
+  }
+}
+@media only screen and (min-width: 641px) {
+  html {
+    font-size: 125%;
+  }
+}
+/*variable*/
+/*custom*/
+body {
+  font: 1.4rem;
+  font-family: "Microsoft YaHei";
+  color: #666;
+  padding: 0px;
+  margin: 0px;
+  background: #ecf0f1;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+input,
+button,
+select,
+textarea,
+dl,
+dd,
+dt,
+figure {
+  font-family: "Microsoft YaHei";
+  outline: none;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 0;
+  padding: 0px;
+  margin: 0px;
+}
+ul,
+li {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  vertical-align: middle;
+  border: none;
+}
+b {
+  font-weight: normal;
+}
+::-moz-selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+strong {
+  font-weight: normal;
+}
+input {
+  background-color: transparent;
+}
+body {
+  width: 100%;
+  font-family: "Microsoft YaHei";
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+img {
+  vertical-align: top;
+}
+input {
+  background-color: transparent;
+  line-height: 1;
+}
+.hide {
+  display: none;
+}
+input::-webkit-input-placeholder {
+  color: #57515c;
+}
+input::-moz-placeholder {
+  color: #57515c;
+}
+section {
+  height: auto;
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.top {
+  position: relative;
+  width: 100%;
+}
+.top .topT {
+  position: relative;
+}
+.top .topImg {
+  width: 100%;
+}
+.contentOne {
+  width: 100%;
+  position: relative;
+  background-color: #2183f6;
+}
+.contentOne div {
+  position: relative;
+  background-color: #2183f6;
+}
+.contentOne div .send_btn {
+  width: 29.5rem;
+  height: 4rem;
+  margin-left: -14.75rem;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  bottom: 3rem;
+  background: url(../../../images/wap/study_section/send_btn.png?v=7SOjywqH8QoTIcPuIMhNTg%3D%3D) no-repeat;
+  background-size: 100% 100%;
+}
+.contentOne .receive-box {
+  position: relative;
+  width: 29.5rem;
+  height: 11.85rem;
+  left: 50%;
+  top: 0;
+  margin-left: -14.75rem;
+}
+.contentOne .receive-box img {
+  width: 100%;
+}
+.contentOne .receive-box .receive {
+  cursor: pointer;
+  width: 2.4rem;
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  color: #fff;
+  display: -ms-flexbox;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  display: -moz-box;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+}
+.contentOne img {
+  width: 100%;
+}
+.contentTwo {
+  width: 100%;
+  padding-bottom: 2.5rem;
+  position: relative;
+  background-color: #96c3fd;
+}
+.contentTwo img {
+  width: 100%;
+}
+.contentTwo .best_teacher {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  border-radius: 0.6rem;
+  background-color: #fff;
+}
+.contentTwo .best_teacher .teacher {
+  position: relative;
+}
+.contentTwo .best_teacher .teacher .time {
+  z-index: 10;
+  position: absolute;
+  top: 0.5rem;
+  left: -0.5rem;
+  width: 5.65rem;
+  height: 2.25rem;
+  line-height: 1.85rem;
+  font-size: 1.2rem;
+  padding-left: 1.2rem;
+  color: #fff;
+  background: url(../../../images/wap/study_section/time_bg.png?v=rrxCNI9v007rjxemag1AXw%3D%3D) no-repeat;
+  background-size: 100% 100%;
+}
+.contentTwo .best_teacher .teacher .message {
+  overflow: hidden;
+  position: relative;
+}
+.contentTwo .best_teacher .teacher .message .details {
+  position: relative;
+  margin: 3.6rem 1rem 1.5rem 7.5rem;
+}
+.contentTwo .best_teacher .teacher .message .details .tit01 {
+  color: #2d7ef7;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+.contentTwo .best_teacher .teacher .message .details .tit01 span {
+  font-size: 1rem;
+  vertical-align: top;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+.contentTwo .best_teacher .teacher .message .details .tit02 {
+  margin-top: 0.25rem;
+  color: #f65b57;
+  font-size: 1.3rem;
+}
+.contentTwo .best_teacher .teacher .message .details .tit03 {
+  margin-top: 0.25rem;
+  color: #2d7ef7;
+  font-size: 0.9rem;
+  line-height: 1.8rem;
+}
+.contentTwo .best_teacher .teacher .message .details .tit03 span {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.contentTwo .best_teacher .teacher .message .details .tit04 {
+  height: 2.2rem;
+  line-height: 2.2rem;
+  color: #2d7ef7;
+  font-size: 0.9rem;
+}
+.contentTwo .best_teacher .teacher .message .details .tit04 .send_btn02 {
+  float: right;
+  width: 7.3rem;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  text-align: center;
+  border-radius: 1.1rem;
+  display: inline-block;
+  color: #fff;
+  font-size: 1.2rem;
+  background-color: #f95a52;
+}
+.contentTwo .best_teacher .teacher .message .details .tit04 span {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.contentTwo .best_teacher .teacher .message img {
+  position: absolute;
+  left: 1rem;
+  top: 3.7rem;
+  width: 5.5rem;
+  height: 5.5rem;
+}
+.contentTwo .best_teacher .line {
+  height: 0.3rem;
+}
+.contentTwo .best_teacher .line img {
+  width: 100%;
+}
+footer {
+  background-color: #2183f6;
+  height: 6.5rem;
+}
+footer .bottom {
+  text-align: center;
+  line-height: 6.5rem;
+  height: 6.5rem;
+  font-size: 0.9rem;
+  color: #fff;
+}

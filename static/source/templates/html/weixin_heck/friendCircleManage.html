@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="app下载专页">
+    <meta name="keywords" content="app下载专页">
+    <title>欢迎下载51Talk App</title>
+    <link rel="stylesheet" type="text/css" href="/css/html/weixin_heck/common.css">
+<link rel="stylesheet" type="text/css" href="/css/html/weixin_heck/friendCircleManage.css">
+<link rel="stylesheet" type="text/css" href="/css/html/weixin_heck/layui.css">
+</head>
+<body data-init="friendCircleManage" class="weixin_circle">
+
+
+
+<input type="hidden" data-id="" id="data-id">
+<input type="hidden" wechat-id="" id="wechat-id">
+<div class="clear-fix heck_center" >
+    <div class="content">
+        <div class="send_message">
+            <h5 class="title">快来分享吧！</h5>
+            <form rel="friendsCircle">
+                <textarea placeholder="朋友圈内容"></textarea>
+                <input id="start_upload" class="send_to_user" type="button" ajax-url="/DelayCircleFriend/publishDelay" value="发 布" />
+                <div class="clear-fix select_mes" id="select_mes">
+                    <div class="smail">
+                        <em>表情</em><span></span>
+                        <div class="face_panel" transition="trans2">
+                            <span class="face_panel_arr"></span>
+                            <ul class="face_type">
+                                <li>请选择表情</li>
+                            </ul>
+                            <ul class="face_con">
+                                <li >
+                                    <!-- qq表情 -->
+                                    <div  class="face_qq clearfix">
+                                        <span class="qqface qqface0" title="微笑"></span><span class="qqface qqface1" title="撇嘴"></span><span class="qqface qqface2" title="色"></span><span class="qqface qqface3" title="发呆"></span><span class="qqface qqface4" title="得意"></span><span class="qqface qqface5" title="流泪"></span><span class="qqface qqface6" title="害羞"></span><span class="qqface qqface7" title="闭嘴"></span><span class="qqface qqface8" title="睡"></span><span class="qqface qqface9" title="大哭"></span><span class="qqface qqface10" title="尴尬"></span><span class="qqface qqface11" title="发怒"></span><span class="qqface qqface12" title="调皮"></span><span class="qqface qqface13" title="呲牙"></span><span class="qqface qqface14" title="惊讶"></span><span class="qqface qqface15" title="难过"></span><span class="qqface qqface16" title="酷"></span><span class="qqface qqface17" title="冷汗"></span><span class="qqface qqface18" title="抓狂"></span><span class="qqface qqface19" title="吐"></span><span class="qqface qqface20" title="偷笑"></span><span class="qqface qqface21" title="愉快"></span><span class="qqface qqface22" title="白眼"></span><span class="qqface qqface23" title="傲慢"></span><span class="qqface qqface24" title="饥饿"></span><span class="qqface qqface25" title="困"></span><span class="qqface qqface26" title="惊恐"></span><span class="qqface qqface27" title="流汗"></span><span class="qqface qqface28" title="憨笑"></span><span class="qqface qqface29" title="悠闲"></span><span class="qqface qqface30" title="奋斗"></span><span class="qqface qqface31" title="咒骂"></span><span class="qqface qqface32" title="疑问"></span><span class="qqface qqface33" title="嘘"></span><span class="qqface qqface34" title="晕"></span><span class="qqface qqface35" title="疯了"></span><span class="qqface qqface36" title="衰"></span><span class="qqface qqface37" title="骷髅"></span><span class="qqface qqface38" title="敲打"></span><span class="qqface qqface39" title="再见"></span><span class="qqface qqface40" title="擦汗"></span><span class="qqface qqface41" title="抠鼻"></span><span class="qqface qqface42" title="鼓掌"></span><span class="qqface qqface43" title="糗大了"></span><span class="qqface qqface44" title="坏笑"></span><span class="qqface qqface45" title="左哼哼"></span><span class="qqface qqface46" title="右哼哼"></span><span class="qqface qqface47" title="哈欠"></span><span class="qqface qqface48" title="鄙视"></span><span class="qqface qqface49" title="委屈"></span><span class="qqface qqface50" title="快哭了"></span><span class="qqface qqface51" title="阴险"></span><span class="qqface qqface52" title="亲亲"></span><span class="qqface qqface53" title="吓"></span><span class="qqface qqface54" title="可怜"></span><span class="qqface qqface55" title="菜刀"></span><span class="qqface qqface56" title="西瓜"></span><span class="qqface qqface57" title="啤酒"></span><span class="qqface qqface58" title="篮球"></span><span class="qqface qqface59" title="乒乓"></span><span class="qqface qqface60" title="咖啡"></span><span class="qqface qqface61" title="饭"></span><span class="qqface qqface62" title="猪头"></span><span class="qqface qqface63" title="玫瑰"></span><span class="qqface qqface64" title="凋谢"></span><span class="qqface qqface65" title="嘴唇"></span><span class="qqface qqface66" title="爱心"></span><span class="qqface qqface67" title="心碎"></span><span class="qqface qqface68" title="蛋糕"></span><span class="qqface qqface69" title="闪电"></span><span class="qqface qqface70" title="炸弹"></span><span class="qqface qqface71" title="刀"></span><span class="qqface qqface72" title="足球"></span><span class="qqface qqface73" title="瓢虫"></span><span class="qqface qqface74" title="便便"></span><span class="qqface qqface75" title="月亮"></span><span class="qqface qqface76" title="太阳"></span><span class="qqface qqface77" title="礼物"></span><span class="qqface qqface78" title="拥抱"></span><span class="qqface qqface79" title="强"></span><span class="qqface qqface80" title="弱"></span><span class="qqface qqface81" title="握手"></span><span class="qqface qqface82" title="胜利"></span><span class="qqface qqface83" title="抱拳"></span><span class="qqface qqface84" title="勾引"></span><span class="qqface qqface85" title="拳头"></span><span class="qqface qqface86" title="差劲"></span><span class="qqface qqface87" title="爱你"></span><span class="qqface qqface88" title="NO"></span><span class="qqface qqface89" title="OK"></span><span class="qqface qqface90" title="爱情"></span><span class="qqface qqface91" title="飞吻"></span><span class="qqface qqface92" title="跳跳"></span><span class="qqface qqface93" title="发抖"></span><span class="qqface qqface94" title="怄火"></span><span class="qqface qqface95" title="转圈"></span><span class="qqface qqface96" title="磕头"></span><span class="qqface qqface97" title="回头"></span><span class="qqface qqface98" title="跳绳"></span><span class="qqface qqface99" title="投降"></span><span class="qqface qqface100" title="激动"></span><span class="qqface qqface101" title="乱舞"></span><span class="qqface qqface102" title="献吻"></span><span class="qqface qqface103" title="左太极"></span><span class="qqface qqface104" title="右太极"></span>
+                                    </div>
+                                    <div>其他表情</div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="icon image_icon" id="browse">
+                        图片
+                    </div>
+                    <div class="up_img">
+                        <p>最多可上传九张<span>&times;</span></p>
+                        <ul class="clear-fix">
+                            <li class="add_img" id="addImg">+</li>
+                        </ul>
+                    </div>
+                    <div class="times">
+                        定时发送
+                        <div id="setTime">
+                            <ul class="layui-form">
+                                <li class="layui-form-item">
+                                    <label class="layui-form-label">发布时间:</label>
+                                    <div class="layui-input-inline">
+                                        <input required type="text" id="layui-laydate-input" onclick="layui.laydate({elem: this})" class="layui-input">
+                                    </div>
+                                </li>
+                                <li class="putHours">
+                                    <select></select>时
+                                </li>
+                                <li class="putMinut">
+                                    <select></select>分
+                                </li>
+                            </ul>
+                            <span class="closeTimeBtn">&times;</span></div>
+                    </div>
+                </div>
+                <div class="sel-types">
+                    <p>面向用户类型：</p>
+                    <p onselectstart="return false" label-value="all">全部可见</p>
+                    <p onselectstart="return false" label-value="aaa">已付费</p>
+                    <p onselectstart="return false" label-value="ddd">未付费</p>
+                    <p onselectstart="return false" label-value="fff">未付费</p>
+                    <p onselectstart="return false" label-value="ffsf">CCC</p>
+                </div>
+            </form>
+        </div>
+        <div class="already_send_mes" >
+            <div class="already_mes already_img_mes" id="hh">
+                <div class="paddings  border-bt">
+                    <div class="persondetail">
+                        <div class="detail-left"><img src="#"></div>
+                        <div class="detail-right">
+                            <p>名字信息<span>2016-12-20 10:09</span></p>
+                            <p><span>面向用户类型：</span><i>成人CC</i><i>成人CC</i><i>成人CC</i><i>成人CC</i><i>CCC</i></p>
+                        </div>
+                        <span class="close_btn"  delet-url="">&times;</span>
+                    </div>
+                    <p class="text">51Talk无忧英语，在线英语培训，外教1对1。8400多名专业外教在线授课。课程包括：职场英语、成人英语、小学英语、青少英语等。最新力荐：青少全能新概念，听说读写 会考试！培养双优！</p>
+                    <ul class="clear-fix">
+                        <li><img src="/images/html/weixin_heck/account_img2.png"></li>
+                        <li><img src="/images/html/weixin_heck/account_img2.png"></li>
+                        <li><img src="/images/html/weixin_heck/account_img2.png"></li>
+                        <li><img src="/images/html/weixin_heck/account_img2.png"></li>
+                        <li><img src="/images/html/weixin_heck/account_img2.png"></li>
+                        <li><img src="/images/html/weixin_heck/account_img2.png"></li>
+                        <li><img src="/images/html/weixin_heck/account_img2.png"></li>
+                        <li><img src="/images/html/weixin_heck/account_img2.png"></li>
+                        <li><img src="/images/html/weixin_heck/account_img2.png"></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="already_mes already_img_mes" wechat-mid="hh">
+                <div class="paddings  border-bt">
+                    <div class="persondetail">
+                        <div class="detail-left"><img src="#"></div>
+                        <div class="detail-right">
+                            <p>名字信息</p>
+                            <p>2016-12-20 10:09</p>
+                        </div>
+                        <span class="close_btn"  delet-url="">&times;</span>
+                    </div>
+                    <p class="text">51Talk无忧英语，在线英语培训，外教1对1。8400多名专业外教在线授课。课程包括：职场英语、成人英语、小学英语、青少英语等。最新力荐：青少全能新概念，听说读写 会考试！培养双优！</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 绑定弹层 -->
+<div class="load_up">
+    <div>内容上传中。。。</div>
+</div>
+<div class="uptop"></div>
+</body>
+<!--公共尾部结束-->
+<script src="/js/html/project/weixin_heck/vendor.js"></script>
+</html>

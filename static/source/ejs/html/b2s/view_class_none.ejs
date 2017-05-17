@@ -1,0 +1,96 @@
+<% include ../common/top.ejs %>
+<body>
+  <input type="hidden" id="container" data-init="index">
+<!-- 公共头 -->
+<% include ../common/b2s/b2s_header.ejs %>
+
+<!-- 弹层 -->
+<div class="dialog tea-dialog">
+  <form class="content">
+    <div class="tips">
+      <h4>创建</h4>
+      <a class="close" href="javascript:;"></a>
+    </div>
+    <div class="info"></div>
+    <div class="prompt-text">请录入上述信息，以便我们根据您的教学进度未学生排课</div>
+    <div class="submit">
+        <a href="javascript:;">创建</a>
+    </div>
+  </form>
+</div>
+<!-- 中间内容 -->
+<input type="hidden" id="container" data-init="">
+<div class="mycls">
+  <div class="widthMain">
+    <!-- banner -->
+    <% include ../common/b2s/b2s_banner.ejs %>
+    <div class="central">
+      <i class="cls-icon"></i>
+      <div class="stu_tit">
+        <dl>
+          <dt><img src="<%= imagessrc%>stu.jpg" alt=""></dt>
+          <dd class="buy-tag">
+            <em>
+              <i class="tag-i"><i class="arr-out"><i class="arr-in"></i></i>已购买 精品外教辅导课</i>
+            </em>
+          </dd>
+          <dd><span>流川枫</span> 同学</dd>
+          <dd>班级：三年二班</dd>
+          <dd>老师：林徽因</dd>
+        </dl>
+        <p class="stu_number">学生邀请码：123456</p>
+      </div>
+      <%include ../common/b2s/b2s_sidebar%>
+      <div class="cls-main">
+        <!-- 近期公开课 -->
+        <div class="cls-tab cls-list">
+          <div class="stu-cls stu-taste tea-class">
+            <div class="stu-tit-l">
+              <ul>
+                <li class="cur">
+                  <a href="">精品辅导课</a>
+                  <i>&nbsp;</i>
+                </li>
+                <li>
+                  <a href="beyond_public_class_top.html">校园公开课</a>
+                  <i>&nbsp;</i>
+                </li>
+              </ul>
+              <a href="javascript:;" class="do-cls"><i class="tenIcon do-icon"  style="display:inline-block;"></i>如何上课</a>
+            </div>
+          </div>
+        </div> 
+        <div class="view_class_none">
+          <img src="<%= imagessrc%>empty.png" alt="">
+          <p class="view_none_text">您的精品辅导课为空</p>
+          <p class="view_none_text">请先 <a class="create-box add" href="javascript:; data-title="创建班级"
+              data-submit="立即创建"
+              data-type="class"
+              data-obj='[{"label":"年级：","type":2,"name":"grade","tip":"年级不能为空","holder":"请选择年级","select":{"请选择年级":"","小班":"-3","中班":"-2","大班":"-1","学前班":"0","一年级":"1","二年级":"2","三年级":"3","四年级":"4","五年级":"5","六年级":"6","初一":"7","初二":"8","初三":"9"}},{"label":"班级：","type":2,"name":"index","tip":"班级不能为空","holder":"请选择班级", "select":{"请选择班级":"","一班":"1","二班":"2","三班":"3","四班":"4","五班":"5","六班":"6","七班":"7","八班":"8","九班":"9","十班":"10","十一班":"11","十二班":"12","十三班":"13","十四班":"14","十五班":"15","十六班":"16","十七班":"17","十八班":"18","十九班":"19","二十班":"20"}},{"label":"班级：","type":1,"name":"name","tip":"班级不能为空","holder":"请输入班级"}]' "> 创建班级</a></p>
+        </div>
+            
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 底部浮层 -->
+<div class="btm_float"></div>
+<div class="btm_float_show">
+  <!-- 左侧提示 -->
+  <div class="tit_hand_left">
+    <p class="hide">微信扫描二维码，登录学生账户<br/>获取课程详情和上课信息</p>
+    <p>微信扫描二维码，登录老师账户<br/>获取课程详情和学生信息
+    </p>
+  </div>
+  <!-- 右侧二维码和关闭按钮 -->
+  <div class="code_right">  
+    <i class="close_ly"></i>
+    <p>关注"51Talk"中小学英语</p>
+  </div>
+</div>
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+</body>
+<% include ../common/bottom.ejs %>
+<script type="text/javascript" src="http://static.51talk.com/static/js/html/lib/ckplayer/ckplayer.min.js?v=1458124036737"></script>

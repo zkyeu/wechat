@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一对多班课列表</title>
+    <link rel="stylesheet" href="/css/html/class_list20170424/class_list20170424.css">
+</head>
+<body>
+<!-- header  -->
+
+<!-- author:zhangtian pms:21574  timestamp:2016/4/19-->
+<!-- 用户中心首页头部  -->
+
+<div class="g-hd">
+  <div class="m-top" id="jsHead">
+    <div class="g-in f-cb">
+      <div class="m-menu f-fl">
+        <a class="user __dim__o" setdata="UserMenu_username" href="http://www.51talk.com/user/index">hi,<em class="nick">Sunny</em>！</a><i>|</i><a class="msg __dim__o" setdata="UserMenu_msg" href="http://www.51talk.com/user/wll">消息<span class="num">6</span></a><i>|</i><a class="__dim__o" setdata="UserMenu_logout" href="/index/logout">退出</a>
+      </div>
+      <ul class="m-link f-ib f-fr">
+        <li><a href="http://www.51talk.com/" class="__dim__o" setdata="HeadLink_1">官网首页</a></li>
+        <li><a href="http://www.51talk.com/pay/product" class="__dim__o" setdata="HeadLink_2">购买课程</a></li>
+        <li><a href="http://www.51talk.com/index/system" class="__dim__o" setdata="HeadLink_3">课程介绍</a></li>
+        <li>
+          <a href="http://www.51talk.com/testing/index/?type=login" class="__dim__o" setdata="HeadLink_4">英语水平</a>
+        </li>
+        <li><a target="_blank" href="http://www.51talk.com/page/faq" class="__dim__o" setdata="HeadLink_5">常见问题</a></li>
+        <li><a target="_blank" href="http://www.51talk.com/cet/cet.php" class="__dim__o" setdata="HeadLink_6">企业培训</a></li>
+        <li class="jsMore follow"><a href="http://www.51talk.com/page/about/" class="__dim__o" setdata="HeadLink_7">关注我们</a>
+          <ul class="jsUl">
+            <li class="tsina"><a href="http://weibo.com/51talk" rel="nofollow" target="_blank">新浪微博</a></li>
+            <li class="tqq"><a href="http://e.t.qq.com/t51talk" rel="nofollow" target="_blank">腾讯微博</a></li>
+          </ul>
+        </li>
+   			<li><a href="http://www.51talk.com/user/invitefriend" target="_blank" class="__dim__o" setdata="HeadLink_8">邀请有礼</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- /m-top -->
+  <div class="m-head">
+    <div class="g-in">
+      <h1 class="logo"><a href="http://www.51talk.com/" class="__dim__o" setdata="nav_51talk_logo">51talk 无忧英语</a></h1>
+      <ul class="nav">
+        <li class="crt"><a href="http://www.51talk.com/user/index" class="__dim__o" setdata="nav_1">首页</a></li>
+        <li><a href="http://www.51talk.com/user/remind" class="__dim__o" setdata="nav_2">账户设置</a></li>
+        <li><a href="http://www.51talk.com/pay/product" class="__dim__o" setdata="nav_3">购买课程</a></li>
+        <li><a href="http://bbs.51talk.com" target="_blank" hidefocus="true" style="outline:none;" class="__dim__o" setdata="nav_4">学习社区</a></li>
+      </ul>
+      <div class="contact">
+        <p class="bizapp"><a href="javascript:void(0)" onclick="javascript:window.open('http://wpa.b.qq.com/cgi/wpa.php?ln=1&amp;key=XzkzODA3NjYwOF8yNTE3NDVfNDAwNjMyMDA1MV8yXw','_blank','height=544px,width=644px,toolbar=no,scrollbars=no,menubar=no,status=no');" rel="nofollow" class="__dim__o" setdata="nav_contact_QQ">客服在线咨询 (09:00-22:30)</a></p>
+        <p class="phone">4000-51-51-51</p>
+      </div>
+        <a class="file_style f-fr addFile addStyle03 __dim__o" href="http://www.51talk.com/user/invitefriend" setdata="nav_ad_logo" title="邀请好友送次卡 " target="_blank"></a>
+    </div>
+  </div>
+</div>
+<div class="g-in">
+    <div class="m-ad-lg">
+    <!-- /notice -->
+        <div class="m-side m-count" id="silderY">
+            <div class="bd" style="height:160px;">
+                <ul data-silder="ul" style="position: absolute; height: 1280px; top: -160px;">
+                    <li style="position:relative;">
+                        <a class="__dim__o" setdata="ad_picture" href="/pay/product" target="_blank">
+                            <img src="http://static.51talk.com/upload/ad/2016041518335494800.png?v=1461036216708" height="160" width="1000" alt="51talk">
+                        </a>
+                        <div class="m-timer">
+                            <i class="u-rd-l"></i>
+                            <i class="u-rd-r"></i>
+                            <div class="m-timer-mn f-cb">
+                                <div class="m-lt">
+                                    <span class="u-txt">购买人数</span>
+                                    <span class="u-colon">:</span>
+                                    <span class="u-num">2884</span>
+                                </div>
+                                <div class="m-rt jsSilderDate" data-timer="31480000">
+                                    <span class="u-line">距结束</span>
+                                    <i>00</i><span class="u-txt-day">天</span>
+                                    <i>08</i><span class="u-colon">:</span>
+                                    <i>44</i><span class="u-colon">:</span>
+                                    <i>41</i>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a setdata="ad_picture" href="http://www.51talk.com/Activity/turntable" target="_blank" class="jsImgPv __dim__o" data-pvlog="168">
+                            <img src="http://static.51talk.com/upload/ad/2016/0413/146051386799510_thumb.png?v=1461036216708" height="160" width="1000" alt="销售推广">
+                        </a>
+                    </li>
+                    <li>
+                        <a setdata="ad_picture" href="http://www.51talk.com/page/eulanding" target="_blank" class="jsImgPv __dim__o" data-pvlog="167">
+                            <img src="http://static.51talk.com/upload/ad/2016/0412/146043782688114_thumb.png?v=1461036216708" height="160" width="1000" alt="欧美推广">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/course/ct/" target="_blank">
+                            <img src="http://static.51talk.com/upload/ad/edm/ctbanner1000X160__7f0.png?v=1461036216708" height="160" width="1000">
+                        </a>
+                    </li>
+                    <li style="position:relative;">
+                        <a class="__dim__o" setdata="ad_picture" href="/pay/product" target="_blank">
+                        <img src="http://static.51talk.com/upload/ad/2016041518335494800.png?v=1461036216708" height="160" width="1000" alt="51talk">
+                        </a>
+                        <div class="m-timer">
+                            <i class="u-rd-l"></i>
+                            <i class="u-rd-r"></i>
+                            <div class="m-timer-mn f-cb">
+                                <div class="m-lt">
+                                    <span class="u-txt">购买人数</span>
+                                    <span class="u-colon">:</span>
+                                    <span class="u-num">2884</span>
+                                </div>
+                                <div class="m-rt jsSilderDate" data-timer="31480000">
+                                    <span class="u-line">距结束</span>
+                                    <i>00</i><span class="u-txt-day">天</span>
+                                    <i>08</i><span class="u-colon">:</span>
+                                    <i>44</i><span class="u-colon">:</span>
+                                    <i>41</i>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a setdata="ad_picture" href="http://www.51talk.com/Activity/turntable" target="_blank" class="jsImgPv __dim__o" data-pvlog="168">
+                            <img src="http://static.51talk.com/upload/ad/2016/0413/146051386799510_thumb.png?v=1461036216708" height="160" width="1000" alt="销售推广">
+                        </a>
+                    </li>
+                    <li>
+                        <a setdata="ad_picture" href="http://www.51talk.com/page/eulanding" target="_blank" class="jsImgPv __dim__o" data-pvlog="167">
+                            <img src="http://static.51talk.com/upload/ad/2016/0412/146043782688114_thumb.png?v=1461036216708" height="160" width="1000" alt="欧美推广">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/course/ct/" target="_blank">
+                            <img src="http://static.51talk.com/upload/ad/edm/ctbanner1000X160__7f0.png?v=1461036216708" height="160" width="1000">
+                        </a>
+                    </li>
+                </ul>
+                <ul class="hd" data-silder="points"><li class=""></li><li class="crt"></li><li></li><li></li></ul>
+            </div>
+        </div>
+        <!-- /m-side -->
+    </div>
+</div>
+<!-- /header  -->
+<div class="g-in f-cb">
+  <div class="g-sd-l">
+    <div class="m-s-menu">
+        <ul>
+            <input id="ue_intro" type="hidden" value="">
+            <li data-intro="-14|-4|120|128" class="learn">学习</li> 
+        	<li><a href="http://www.51talk.com/merge/index">立即约课</a></li>
+            <li>
+                <a href="http://www.51talk.com/course/perfect_course" target="_blank">精品小班课<i class="icon-new"></i></a>
+            </li>
+            <li><a href="http://www.51talk.com/user/appoint">已预约课程</a></li>
+            <li><a href="http://www.51talk.com/user/review">上课记录</a></li>
+            <li id="li_newProgress">
+                <a href="http://www.51talk.com/study/studyplandetails" target="_blank" style="z-index:1000">学习进度</a>
+            </li>
+        </ul>
+        
+        <ul>
+        	<li data-intro="-14|-10|120|106" class="exercise">练习</li>
+        	<li><a href="http://www.51talk.com/user/study_center_zx" target="_blank">EFL课前课后练习</a></li>
+        	<li><a href="http://www.51talk.com/italk/index/" target="_blank">iTalk视频练习</a></li>
+        </ul>
+        <ul>
+        	<li data-intro="-14|-8|120|70" class="test">测试</li>
+        	<li><a href="/user/certificate">阶段性水平测试</a></li>
+        </ul>
+        <ul>
+            <li data-intro="-14|0|120|106" class="coach">辅导</li>
+            <li>
+                <a href="http://www.51talk.com/course/pt_course">学习方法课 
+                </a>
+            </li>
+            <li><a href="http://bbs.51talk.com" target="_blank">免费公开课</a></li>
+            <li>
+                <a href="http://www.51talk.com/course/lc_course" target="_blank">精彩Life Club</a>
+            </li>
+        </ul>
+        <ul style="background: none;">
+            <li><a href="http://www.51talk.com/ac/51TalkAC.php" target="_blank">AC电脑上课软件</a></li>
+            <li><a href="http://www.51talk.com/app/download_app.php" target="_blank">手机客户端</a></li>
+            <li><a href="http://www.51talk.com/user/downloads">上课百宝箱</a></li>
+            <li><a href="http://class.51talk.com/detect-flash.html?pc=1&amp;uid=2193798" target="_blank">网络环境测试</a></li>
+            <li><a href="http://www.51talk.com/user/playtalk">玩转51Talk <i class="icon-new"></i></a></li>
+        </ul>
+    </div>
+    <!-- /m-s-menu -->
+</div>
+  <div class="g-center">
+    <div class="cls-list201704" id="container" data-init="index">
+      <div class="nav-t">
+        <p class="tt">课程概况</p>
+        <p class="ts">课程数：<i>20</i><span class="s-f">进行中：<i>6</i></span>已完成：<i>3</i></p>
+      </div>
+      <div class="item">
+        <ul class="i-ul" id="courseList">
+          <li>
+            <dl class="u-dl">
+              <dt class="addBd"><img src="/images/html/class_list20170424/ac02.jpg"></dt>
+              <dd>
+                <span class="t">雅思写作5.5基础班</span>
+                <span class="cls-node">
+                  <a href="javascript:;" class="cls-node-img">
+                    <span class="join-node"><img src="/images/html/class_list20170424/class_code_img.png" class="join-img"><i class="join-title">扫二维码，加入班级</i>
+                    </span>
+                  </a> 
+                </span>
+              </dd> 
+              <dd>上课周期：<span class="time">2016/5/10--2016/10/20</span>课时：70</dd>
+              <dd>
+                <span class="add-cls-fruq">补课次数：7/10</span>
+                <span class="add-cls-tes">中教老师：
+                  <a href="javascript:;" class="name cls-ud-name">马林林
+                    <div class="layer">
+                      <span class="tranU">1</span><span class="tranD">2</span>
+                      <dl>
+                        <dt><img src="/images/html/class_list20170424/ac05.jpg"></dt>
+                        <dd>姓名： 张阏</dd>
+                        <dd>简介：51Talk托福阅读教师，原新东方托福阅读名师， 7年一线教学经验，2年新东方某中心教学管理经验。</dd>
+                      </dl>
+                    </div>
+                  </a>
+              </dd>
+              <dd>
+                <span class="add-cls-time">上课时间：</span>
+                <span class="add-cls-week">
+                  <ul>
+                    <li>周一17:00-17:35</li>
+                    <li>周二18:00-18:15</li>
+                    <li>周三18:10-18:33</li>
+                  </ul>
+                </span>
+              <dd>课程进度<span class="speed"><i></i></span><span class="c-rate"><i>30%</i></span></dd>
+            </dl>
+            <div class="reser reser-t">
+              <span class="t-nav"><a href="javascript:;" class="b-class" target="_blank">查看课表</a></span>
+              <span class="n-time">下节课：2016/6/10 17:00</span>
+            </div>
+          </li>
+          <li>
+            <dl class="u-dl">
+              <dt class="addBd"><img src="/images/html/class_list20170424/ac02.jpg"></dt>
+              <dd>
+                <span class="t">雅思写作5.5基础班</span>
+                <span class="cls-node">
+                  <a href="javascript:;" class="cls-node-img">
+                    <span class="join-node"><img src="/images/html/class_list20170424/class_code_img.png" class="join-img"><i class="join-title">扫二维码，加入班级</i>
+                    </span>
+                  </a> 
+                </span>
+              </dd> 
+              <dd>上课周期：<span class="time">2016/5/10--2016/10/20</span>课时：70</dd>
+              <dd>
+                <span class="add-cls-fruq">补课次数：7/10</span>
+                <span class="add-cls-tes">中教老师：
+                  <a href="javascript:;" class="name cls-ud-name">马林林
+                    <div class="layer">
+                      <span class="tranU">1</span><span class="tranD">2</span>
+                      <dl>
+                        <dt><img src="/images/html/class_list20170424/ac05.jpg"></dt>
+                        <dd>姓名： 张阏</dd>
+                        <dd>简介：51Talk托福阅读教师，原新东方托福阅读名师， 7年一线教学经验，2年新东方某中心教学管理经验。</dd>
+                      </dl>
+                    </div>
+                  </a>
+              </dd>
+              <dd>
+                <span class="add-cls-time">上课时间：</span>
+                <span class="add-cls-week">
+                  <ul>
+                    <li>周一17:00-17:35</li>
+                    <li>周二18:00-18:15</li>
+                    <li>周三18:10-18:33</li>
+                  </ul>
+                </span>
+              <dd>课程进度<span class="speed"><i></i></span><span class="c-rate"><i>80%</i></span></dd>
+            </dl>
+            <div class="reser reser-t">
+              <span class="t-nav"><a href="JavaScript:;" class="b-class" target="_blank">查看课表</a><a href="JavaScript:;" class="cls-t-renawal">续订课程</a></span>
+              <span class="n-time">下节课：2016/6/10 17:00</span>
+            </div>
+          </li>
+          <li>
+            <dl class="u-dl">
+              <dt class="addBd"><img src="/images/html/class_list20170424/ac02.jpg"></dt>
+              <dd>
+                <span class="t">雅思写作5.5基础班</span>
+                <span class="cls-node">
+                  <a href="javascript:;" class="cls-node-img">
+                    <span class="join-node"><img src="/images/html/class_list20170424/class_code_img.png" class="join-img"><i class="join-title">扫二维码，加入班级</i>
+                    </span>
+                  </a> 
+                </span>
+              </dd> 
+              <dd>上课周期：<span class="time">2016/5/10--2016/10/20</span>课时：70</dd>
+              <dd>
+                <span class="add-cls-fruq">补课次数：7/10</span>
+                <span class="add-cls-tes">中教老师：
+                  <a href="javascript:;" class="name cls-ud-name">马林林
+                    <div class="layer">
+                      <span class="tranU">1</span><span class="tranD">2</span>
+                      <dl>
+                        <dt><img src="/images/html/class_list20170424/ac05.jpg"></dt>
+                        <dd>姓名： 张阏</dd>
+                        <dd>简介：51Talk托福阅读教师，原新东方托福阅读名师， 7年一线教学经验，2年新东方某中心教学管理经验。</dd>
+                      </dl>
+                    </div>
+                  </a>
+              </dd>
+              <dd>
+                <span class="add-cls-time">上课时间：</span>
+                <span class="add-cls-week">
+                  <ul>
+                    <li>周一17:00-17:35</li>
+                    <li>周二18:00-18:15</li>
+                    <li>周三18:10-18:33</li>
+                  </ul>
+                </span>
+              <dd>课程进度<span class="speed"><i></i></span><span class="c-rate"><i>100%</i></span></dd>
+            </dl>
+            <div class="reser reser-t">
+              <span class="t-nav"><a href="JavaScript" class="b-class" target="_blank">查看课表</a></span>
+              <span class="n-time">下节课：2016/6/10 17:00</span>
+            </div>
+          </li>
+          <li>
+            <dl class="u-dl">
+              <dt class="addBd"><img src="/images/html/class_list20170424/ac02.jpg"></dt>
+              <dd>
+                <span class="t">雅思写作5.5基础班</span>
+                <span class="cls-node">
+                  <a href="javascript:;" class="cls-node-img">
+                    <span class="join-node"><img src="/images/html/class_list20170424/class_code_img.png" class="join-img"><i class="join-title">扫二维码，加入班级</i>
+                    </span>
+                  </a> 
+                </span>
+              </dd> 
+              <dd>上课周期：<span class="time">2016/5/10--2016/10/20</span>课时：70</dd>
+              <dd>
+                <span class="add-cls-fruq">补课次数：7/10</span>
+                <span class="add-cls-tes">中教老师：
+                  <a href="javascript:;" class="name cls-ud-name">马林林
+                    <div class="layer">
+                      <span class="tranU">1</span><span class="tranD">2</span>
+                      <dl>
+                        <dt><img src="/images/html/class_list20170424/ac05.jpg"></dt>
+                        <dd>姓名： 张阏</dd>
+                        <dd>简介：51Talk托福阅读教师，原新东方托福阅读名师， 7年一线教学经验，2年新东方某中心教学管理经验。</dd>
+                      </dl>
+                    </div>
+                  </a>
+              </dd>
+              <dd>
+                <span class="add-cls-time">上课时间：</span>
+                <span class="add-cls-week">
+                  <ul>
+                    <li>周一17:00-17:35</li>
+                    <li>周二18:00-18:15</li>
+                    <li>周三18:10-18:33</li>
+                  </ul>
+                </span>
+              <dd>课程进度<span class="speed"><i></i></span><span class="c-rate"><i>100%</i></span></dd>
+            </dl>
+            <div class="reser reser-h">
+              <span class="t-nav">
+                <a href="javascript:;" class="b-class"><img src="/images/html/class_list20170424/complete.png"></a>
+              </span>
+              <span class="n-time">课程已顺利完成</span>
+            </div>
+          </li>
+          <li>
+            <dl class="u-dl">
+              <dt class="addBd"><img src="/images/html/class_list20170424/ac02.jpg"></dt>
+              <dd>
+                <span class="t">雅思写作5.5基础班</span>
+                <span class="cls-node">
+                  <a href="javascript:;" class="cls-node-img">
+                    <span class="join-node"><img src="/images/html/class_list20170424/class_code_img.png" class="join-img"><i class="join-title">扫二维码，加入班级</i>
+                    </span>
+                  </a> 
+                </span>
+              </dd> 
+              <dd>上课周期：<span class="time">2016/5/10--2016/10/20</span>课时：70</dd>
+              <dd>
+                <span class="add-cls-fruq">补课次数：7/10</span>
+                <span class="add-cls-tes">中教老师：
+                  <a href="javascript:;" class="name cls-ud-name">马林林
+                    <div class="layer">
+                      <span class="tranU">1</span><span class="tranD">2</span>
+                      <dl>
+                        <dt><img src="/images/html/class_list20170424/ac05.jpg"></dt>
+                        <dd>姓名： 张阏</dd>
+                        <dd>简介：51Talk托福阅读教师，原新东方托福阅读名师， 7年一线教学经验，2年新东方某中心教学管理经验。</dd>
+                      </dl>
+                    </div>
+                  </a>
+              </dd>
+              <dd>
+                <span class="add-cls-time">上课时间：</span>
+                <span class="add-cls-week">
+                  <ul>
+                    <li>周一17:00-17:35</li>
+                    <li>周二18:00-18:15</li>
+                    <li>周三18:10-18:33</li>
+                  </ul>
+                </span>
+              <dd>课程进度<span class="speed"><i></i></span><span class="c-rate"><i>100%</i></span></dd>
+            </dl>
+            <div class="reser reser-h">
+              <span class="t-nav">
+                <a href="javascript:;" class="b-class"><img src="/images/html/class_list20170424/complete.png"></a>
+              </span>
+              <span class="n-time">课程已顺利完成</span>
+            </div>
+          </li>
+          <li>
+            <dl class="u-dl">
+              <dt class="addBd"><img src="/images/html/class_list20170424/ac02.jpg"></dt>
+              <dd>
+                <span class="t">雅思写作5.5基础班</span>
+                <span class="cls-node">
+                  <a href="javascript:;" class="cls-node-img">
+                    <span class="join-node"><img src="/images/html/class_list20170424/class_code_img.png" class="join-img"><i class="join-title">扫二维码，加入班级</i>
+                    </span>
+                  </a> 
+                </span>
+              </dd> 
+              <dd>上课周期：<span class="time">2016/5/10--2016/10/20</span>课时：70</dd>
+              <dd>
+                <span class="add-cls-fruq">补课次数：7/10</span>
+                <span class="add-cls-tes">中教老师：
+                  <a href="javascript:;" class="name cls-ud-name">马林林
+                    <div class="layer">
+                      <span class="tranU">1</span><span class="tranD">2</span>
+                      <dl>
+                        <dt><img src="/images/html/class_list20170424/ac05.jpg"></dt>
+                        <dd>姓名： 张阏</dd>
+                        <dd>简介：51Talk托福阅读教师，原新东方托福阅读名师， 7年一线教学经验，2年新东方某中心教学管理经验。</dd>
+                      </dl>
+                    </div>
+                  </a>
+              </dd>
+              <dd>
+                <span class="add-cls-time">上课时间：</span>
+                <span class="add-cls-week">
+                  <ul>
+                    <li>周一17:00-17:35</li>
+                    <li>周二18:00-18:15</li>
+                    <li>周三18:10-18:33</li>
+                  </ul>
+                </span>
+              <dd>课程进度<span class="speed"><i></i></span><span class="c-rate"><i>100%</i></span></dd>
+            </dl>
+            <div class="reser reser-h">
+              <span class="t-nav">
+                <a href="javascript:;" class="b-class"><img src="/images/html/class_list20170424/complete.png"></a>
+              </span>
+              <span class="n-time">课程已顺利完成</span>
+            </div>
+          </li>
+          <li>
+            <dl class="u-dl">
+              <dt class="addBd"><img src="/images/html/class_list20170424/ac02.jpg"></dt>
+              <dd>
+                <span class="t">雅思写作5.5基础班</span>
+                <span class="cls-node">
+                  <a href="javascript:;" class="cls-node-img">
+                    <span class="join-node"><img src="/images/html/class_list20170424/class_code_img.png" class="join-img"><i class="join-title">扫二维码，加入班级</i>
+                    </span>
+                  </a> 
+                </span>
+              </dd> 
+              <dd>上课周期：<span class="time">2016/5/10--2016/10/20</span>课时：70</dd>
+              <dd>
+                <span class="add-cls-fruq">补课次数：7/10</span>
+                <span class="add-cls-tes">中教老师：
+                  <a href="javascript:;" class="name cls-ud-name">马林林
+                    <div class="layer">
+                      <span class="tranU">1</span><span class="tranD">2</span>
+                      <dl>
+                        <dt><img src="/images/html/class_list20170424/ac05.jpg"></dt>
+                        <dd>姓名： 张阏</dd>
+                        <dd>简介：51Talk托福阅读教师，原新东方托福阅读名师， 7年一线教学经验，2年新东方某中心教学管理经验。</dd>
+                      </dl>
+                    </div>
+                  </a>
+              </dd>
+              <dd>
+                <span class="add-cls-time">上课时间：</span>
+                <span class="add-cls-week">
+                  <ul>
+                    <li>周一17:00-17:35</li>
+                    <li>周二18:00-18:15</li>
+                    <li>周三18:10-18:33</li>
+                  </ul>
+                </span>
+              <dd>课程进度<span class="speed"><i></i></span><span class="c-rate"><i>100%</i></span></dd>
+            </dl>
+            <div class="reser reser-h">
+              <span class="t-nav">
+                <a href="javascript:;" class="b-class"><img src="/images/html/class_list20170424/complete.png"></a>
+              </span>
+              <span class="n-time">课程已顺利完成</span>
+            </div>
+          </li>
+        </ul>
+        <!-- <div class="m-pagenavi">
+            <div class="pagination" id="pagination"></div>
+        </div> -->
+        <!-- /g-mncw -->
+        <div class="m-pagenavi">
+          <a href="#" class="p">上一页</a>
+          <a href="#">1</a>
+          <a class="crt" href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#">6</a>
+          <a href="#">7</a>
+          <a href="#">8</a>
+          <a href="#">9</a>
+          <span>...</span>
+          <a href="#">72</a>
+          <a href="#" class="n">下一页</a>
+        </div>
+        <!-- /m-pagenavi -->
+      </div>
+    </div>
+  </div>
+</div>
+<div class="g-ft">
+    <div class="g-in f-tac">
+        <div class="links">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://www.51talk.com/page/about/" target="_blank" title="关于我们">关于我们</a><i>|</i>
+            <a href="http://Zhaopin.51talk.com" target="_blank" title="加入我们">加入我们</a><i>|</i>
+            <a href="http://www.51talk.com/page/cet/" target="_blank" title="企业培训">企业培训</a><i>|</i>
+            <a href="http://www.51talk.com/page/sitemap/" target="_blank" title="网站地图">网站地图</a><i>|</i>
+			<a href="http://www.51talk.com/page/o2o/" target="_blank" title="O2O代理招募">O2O代理招募</a><i>|</i>
+            <a href="http://www.51talk.com/ac/51TalkAC.php" target="_blank" title="AC客户端">AC客户端</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <div class="trust">
+            <a href="http://www.51honest.org/wscredit/detail.credit?action=preLevel&amp;credcode=NO.20000038643" target="_blank" title="信星认证" class="t1"></a>
+            <a href="http://www.itrust.org.cn/home/index/itrust_certifi/wm/1579059481.html" target="_blank" title="企业信用认证" class="t2"></a>
+            <a href="http://www.315online.com.cn/member/315120032.html" target="_blank" title="网上交易保障" class="t3"></a>
+            <a href="#" title="支付宝特约商户" class="t4"></a>
+        </div>
+        <p class="piped">Copyrigh©北京大生知行科技有限公司<i>|</i>
+            <a href="/page/privacy/" target="_blank" title="隐私声明">隐私声明</a><i>|</i>
+            <a href="/page/terms/" target="_blank" title="用户协议">用户协议</a><i>|</i>
+            <a href="/page/icp/" target="_blank" title="京ICP证110696号">京ICP证110696号</a><em></em>
+            <a href="http://www.miibeian.gov.cn" target="_blank" title="京ICP备11031999号">京ICP备11031999号</a><em></em>
+            <a href="javascript:;" target="_blank" title="京公网安备11010802018414号" style="cursor:text;">京公网安备11010802018414号</a><em></em>
+            <!--
+            <script type="text/javascript">
+                var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                document.write(unescape("%3Cspan id='cnzz_stat_icon_1253020514'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1253020514%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+            -->
+                    </p>
+        <img style="display:none;" src="http://beacon.51talk.com/a.gif?v=085efa12c07b067e11f367b7106a1577&amp;site=1&amp;type=1&amp;uuid=d9d7c5807aaf551f3dd1742656417503&amp;uid=U3925242411&amp;ref=http%3A%2F%2Fwww.51talk.com%2F" border="0" alt="">
+    </div>
+</div>
+<script src="/js/html/project/class_list20170424/vendor.js"></script>
+</body>
+</html>

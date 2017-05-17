@@ -1,0 +1,30 @@
+<% include ../common/user_center/up_top.ejs %>
+<style>
+.m-c-schedule .m-classic .cont_r{margin-left: 485px;}
+.m-c-schedule .m-classic .cont_r .rows .row-p{padding-left: 0;}
+.m-c-schedule .m-classic .cont_r .rows .undone{background-position: 82px 7px;}
+.m-c-schedule .m-classic .cont_r .rows .row{padding-left: 16px;}
+</style>
+<body data-init="up_class_21574">
+<!-- author:zhangtian pms:21574  timestamp:2016/4/19-->
+<!-- 用户中心首页头部  -->
+<% include ../common/user_center/up_g_h.ejs %>
+<% include ../common/user_center/up_g_b.ejs %>
+<div class="g-in f-cb">
+	<% include ../common/user_center/up_s_bar.ejs %>
+	<div class="g-center">
+		<div class="up-class-gless up-class-21574" id="toggleCourse" debug="1">
+			<% include ../../../components/html/up_class_21574/ejs/modules/up_class_m.ejs %>
+			<% include ../../../components/html/up_class_21574/ejs/modules/up_class_n.ejs %>
+			<% include ../../../components/html/up_class_21574/ejs/modules/up_class_l.ejs %>
+		</div>
+	</div>
+	<% include ../common/user_center/up_r_bar.ejs %>
+</div>
+<% include ../common/user_center/up_g_f.ejs %>
+<% include ../../../components/html/up_class_21574/ejs/modules/up_class_record.ejs %>
+<% include ../../../components/html/up_class_21574/ejs/modules/up_class_evaluate.ejs %>
+<div class="m-load" id="m-load" style="display: none;">正在努力加载中</div>
+<div id="classMask"></div>
+</body>
+<% include ../common/user_center/up_bottom.ejs %>

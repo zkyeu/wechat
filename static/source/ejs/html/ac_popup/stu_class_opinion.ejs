@@ -1,0 +1,68 @@
+<% include ../common/top.ejs %>
+<body data-init="acTGrade">
+    <div class="ac-popup-wrap">
+        <div class="ac-popup-content class-opinion-h">
+        	<div class="stu-box">
+        		<div class="tit-des">
+        			<span  class="opinion-i"></span>请家长及时关注学习服务号，以免延误孩子顺利上课！</div>
+    			<div class="stu-content">
+    				<form>
+                        <ul class="class-opinion">
+                            <li>
+                                <span class="first-s"><i></i>授课形式
+                                <input type="hidden" value="0"/>
+                                </span>
+                                <span><i></i>授课形式</span>
+                                <span><i></i>一般</span>
+                                <span><i></i>不满意</span>
+                            </li>
+                            <li>
+                                <span class="first-s"><i></i>教材评价</span>
+                                <span><i></i>感兴趣</span>
+                                <span><i></i>一般</span>
+                                <span><i></i>不感兴趣</span>
+                            </li>
+                            <li>
+                                <span class="first-s"><i></i>主题难度</span>
+                                <span><i></i>太难</span>
+                                <span><i></i>简单</span>
+                                <span><i></i>适中</span>
+                            </li>
+                            <li>
+                                <span class="first-s"><i></i>外教老师</span>
+                                <span><i></i>很满意</span>
+                                <span><i></i>一般</span>
+                                <span><i></i>不很满意</span>
+                            </li>
+                            <li>
+                                <span class="first-s"><i></i>孩子和外教互动情况</span>
+                                <div class="m-text">
+                                    <span><i></i>兴趣浓厚，交流顺畅</span>
+                                    <span><i></i>参与互动，简单交流</span>
+                                    <span><i></i>愿意参加，发音和交流有待提高</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="first-s"><i></i>为了提高孩子的听说能力，您愿意尝试51talk的线上1对1外教课程吗？</span>
+                                <div class="m-text">
+                                    <span><i></i>愿意</span>
+                                    <span><i></i>不愿意</span>
+                                    <span><i></i>不考虑</span>
+                                </div>
+                            </li>
+                        </ul>           
+                    </form>
+    			</div>
+        	</div>
+        </div>
+        <div class="ac-popup-bottom">
+             <input type="button" value="提交" class="btn-teasend js-opinion">
+        </div>
+    </div>
+</body>
+<% include ../common/bottom.ejs %>
+<script type="text/javascript">
+    var submitCb = function(r){
+        console.log(r);
+    }
+</script>

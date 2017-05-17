@@ -1,0 +1,130 @@
+<% include ../common/top.ejs %>
+<body data-init="share" class="push_class effect">
+    <script type="text/javascript">
+        window.onload = function(){
+            document.documentElement.style.fontSize = document.body.clientWidth / 6.4 + "px";
+             document.getElementsByClassName("fontSizeLoding")[0].style.display = "none";
+        };
+    </script>
+    <div class="logo">
+        <img src="<%= imagessrc%>logo_1.png" />
+        <span>外教同步辅导教材</span>
+    </div>
+    <div class="effect_content">
+        <p class="title">很遗憾，王娟同学错过了一堂外教课</p>
+        <div class="effect_little_box">
+            <P class="not_attend_class_mes">课程信息</P>
+            <div class="not_attend">
+                <img src="<%= imagessrc%>e_tit_img.png"/>
+            </div>
+            <p class="before_img">第一课</p>
+            <p class="lesson_intro">读书 G1 Lesson 1 I read a book</p>
+            <p class="before_img class_time">上课时间</p>
+            <p class="lesson_intro">2016-06-18 &nbsp;  <span>|</span>  &nbsp; 19:00-19:30</p>
+            <P class="not_attend_int">
+                <span class="not_left">全年级已有<i>23人出席</i></span>
+                <span class="not_right">英语累计时间<i>100分钟</i></span>
+            </P>
+            <div class="no_attend_three_box">
+                <div class="no_attend_box">
+                    <p class="clo_1">25个</p>
+                    <p class="clo_2">60个</p>
+                    <p class="clo_3">89%</p>
+                </div>
+                <div class="cfix no_attend_p">
+                    <p>掌握单词 </p>
+                    <p>学习语法点</p>
+                    <P>发音准确度</P>
+                </div>
+            </div>
+        </div>
+        <div class="effect_little_box">
+            <P class="not_attend_class_mes">课程信息</P>
+            <p class="not_attend_parent">爸爸妈妈，请督促孩子坚持和外教学英语！</p>
+            <div class="not_attend">
+                <img src="<%= imagessrc%>e_tit_img.png"/>
+            </div>
+            <p class="before_img">下一节课内容预告</p>
+            <p class="lesson_intro">读书 G1 Lesson 1 I read a book</p>
+            <p class="before_img class_time">上课时间</p>
+            <p class="lesson_intro">2016-06-18 &nbsp;  <span>|</span>  &nbsp; 19:00-19:30</p>
+        </div>
+        <div class="effect_little_box vip_table table_box">
+            <P class="app_text">51Talk外教辅导课专属APP"无忧课堂"</P>
+            <div class="app_img_box">
+                <img src="<%= imagessrc%>down_app.png" alt="">
+            </div>
+            <p class="payed_app_text">再也不怕错过上课啦！</p>
+            <p class="payed_app_text">课后作业说做就做！</p>
+            <p class="payed_app_text">同班同学PK学习榜！</p>
+            <div class="cfix payed_app_load">
+                <a href="javascript:;" class="payed_app_load_teaching">IOS下载</a>
+                <a href="javascript:;" class="payed_app_load_teaching load_vioce payed_app_load_vioce">Android下载</a>
+            </div>
+            
+        </div>
+        <div class="effect_little_box table_box">
+            <p class="before_img learn_tag">跟你一起听课的还有</p>
+            <ul class="cfix payed_listen_stu">
+                <li>
+                    <img src="/images/wap/b2s/account-headicon-agent.png" alt="">
+                    <p>张三</p>
+                </li>
+                <li>
+                    <img src="/images/wap/b2s/account-headicon-agent.png" alt="">
+                    <p>张三</p>
+                </li>
+                <li>
+                    <img src="/images/wap/b2s/account-headicon-agent.png" alt="">
+                    <p>张三</p>
+                </li>
+                <li>
+                    <img src="/images/wap/b2s/account-headicon-agent.png" alt="">
+                    <p>张三</p>
+                </li>
+                <li>
+                    <img src="/images/wap/b2s/account-headicon-agent.png" alt="">
+                    <p>张三</p>
+                </li>
+
+            </ul>
+            <p class="payed_invite_stu  share-btn" >邀请好友一起学习</p>
+        </div>
+    </div>
+<!-- loading -->
+    <div class="fontSizeLoding">
+        <img src="<%= imagessrc%>eff_loading.gif">
+    </div>
+<!-- 分享弹层 -->
+     <div class="stu-audio-dialog">
+            <div class="arrows">
+                <img src="<%= imagessrc%>stu-audio-dialog01.png" alt="">
+            </div>
+            <!-- <div class="share-WeChat">
+                <dl>
+                    <dt><a href="javascript:void(0);"><img src="<%= imagessrc%>stu-audio-dialog02.png" alt=""></a></dt>
+                    <dd>微信好友</dd>
+                </dl>
+                <dl>
+                    <dt><a href="javascript:void(0);"><img src="<%= imagessrc%>stu-audio-dialog03.png" alt=""></a></dt>
+                    <dd>朋友圈</dd>
+                </dl>
+            </div> -->
+            <div class="share-prompt">点击右上角分享至微信好友或朋友圈</div>
+            <div class="share-bottom">
+                <div class="share-qq">
+                    <dl>
+                        <dt><a href="javascript:void(0);"><img src="<%= imagessrc%>stu-audio-dialog04.png" alt=""></a></dt>
+                        <dd>QQ好友</dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="javascript:void(0);"><img src="<%= imagessrc%>stu-audio-dialog05.png" alt=""></a></dt>
+                        <dd>QQ空间</dd>
+                    </dl>
+                </div>
+                <div class="share-cancel">取&nbsp;消</div>
+            </div>
+    </div>
+</body>
+<!--公共尾部结束-->
+<% include ../common/bottom.ejs %>

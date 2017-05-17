@@ -1,0 +1,53 @@
+<% include ../common/top.ejs %>
+<body data-init="pay2">
+<form action="" method="get" id="answerForm">
+  <div class="dialog-wrap answer-wrap-pay">
+    <div class="answer-pay-con">
+      <div class="answer-pay-cost4 answer-pay-cost4-2">
+        <ul class="pay-cost-items js_pay">
+          <li class="js_radio" data-payid="111" data-price="598" data-discount="100">
+            <dl class="cfix">
+              <dt class="fl icon-radio icon-radio-yes"><span class="font1">VIP新生特惠包</span><br><span  class="font2">中教课2次，外教课6次</span></dt>
+              <dd class="fr"><span  class="font3">¥ 748</span><br><span  class="font4">¥598</span></dd>
+            </dl>
+          </li>
+          <li class="js_radio" data-payid="222" data-price="1098" data-discount="200">
+            <dl class="cfix">
+              <dt class="fl icon-radio icon-radio-no"><span class="font1">1个月课程包</span><br><span  class="font2">中教课4次，外教课12次</span></dt>
+              <dd class="fr"><span  class="font3">¥ 1398</span><br><span  class="font4">¥1098</span></dd>
+            </dl>
+          </li>
+          <li class="js_radio" data-payid="333" data-price="1598" data-discount="300">
+            <dl class="cfix">
+              <dt class="fl icon-radio icon-radio-no"><span class="font1">3个月课程包</span><br><span  class="font2">中教课12次，外教课36次</span></dt>
+              <dd class="fr"><span  class="font3">¥ 1998</span><br><span  class="font4">¥1598</span></dd>
+            </dl>
+          </li>
+          <!-- <li class="js_select">
+            <dl class="cfix">
+              <dt class="fl icon-select"><span class="font1">已购买精品课，立享优惠</span></dt>
+              <dd class="fr"><span  class="font2">- ¥<span class="js_discount">100</span></span></dd>
+            </dl>
+          </li> -->
+          <li class="bg1">
+            <dl class="cfix">
+              <dt class="fl"></dt>
+              <dd class="fr"><span class="font1">实付金额：</span>&nbsp;<span class="font4">¥<span class="js_actualAmount">598</span></span></dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="answer-pay-bottom">
+      <span class="alipay" data-pay="alipay">支付宝购买</span>
+      <span class="WeChat js_weixin" data-pay="weixin.qq">微信购买</span>
+      <input type="hidden" name="XX1" id="vipPayId" value="111">
+      <input type="hidden" name="XX2" id="vipPay" value="">
+      <!-- 时间戳 -->
+      <input name="x5" value="" class="js_timestamp" type="hidden">
+    </div>
+  </div>
+<!-- <img src="<%= imagessrc%>account-headicon-agent.png" alt=""> -->
+</form>
+</body>
+<% include ../common/bottom.ejs %>

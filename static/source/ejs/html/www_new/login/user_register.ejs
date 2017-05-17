@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>英语学习，口语学习首选的英语学习网站，51talk无忧英语，外教一对一，在线学英语！</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="{<info.keywords>}"/>
+    <meta name="description" content="51tailk无忧英语专业提供网络英语外教一对一培训教学,专注于真人英语外教一对一培训,让您足不出户,网上平价学英语.英语外教一对一培训服务热线4000-51-51-51"/>
+    <link rel="stylesheet" type="text/css" href="<%= cssPath %>common/commons.css">
+    <link rel="stylesheet" type="text/css" href="<%= cssPath %>login/user_login.css">
+</head>
+<body>
+<!-- 顶部 -->
+<div class="wrap-nav wrap-nav-index" style="border-bottom:none;">
+  <% include ../common/w_header.ejs %>
+  <div class="wrap-box">
+    <a href="javascript:;" class="logo">
+      <i></i>
+      <b><span>美国纽交所上市公司（股票代码：COE）</span>全球信赖的在线英语领导品牌</b>
+    </a>        
+  </div>
+</div>
+<!-- /顶部 -->
+<div class="user_register" data-init="login/user_register" id="container">
+  <h3 class="title">注册51Talk会员</h3>
+  <p class="p-tit">只需10秒完成注册，登录会员中心即可立即预约一节免费的外教一对一体验课！</p>
+  <form action="/ajax/register" id="registerForm" method="post">
+  <div class="login">
+    <ul>
+      <li>
+        <span class="lt-title"><i>*</i>手机号：</span>
+        <div class="rt-input">
+          <input type="text" name="mobile" placeholder="请输入中国大陆手机号" id="mobile" value="" class="s-input">
+        </div>
+        <div class="error">
+          <i class="e-img"></i>
+          <span></span>
+        </div>
+      </li>
+      <li>
+        <span class="lt-title"><i>*</i>密码：</span>
+        <div class="rt-input">
+          <input type="text" name="password" placeholder="6-20位数字、字母和特殊字符" value="" id="password2" class="s-input">
+        </div>
+        <div class="error">
+          <i class="e-img"></i>
+          <span></span>
+        </div>
+      </li>
+      <li>
+        <span class="lt-title"><i>*</i>电子邮箱：</span>
+        <div class="rt-input">
+          <input type="text" name="email" placeholder="建议使用常用邮箱，便于您接收课程信息" id="email" class="s-input">
+        </div>
+        <div class="error">
+          <i class="e-img"></i>
+          <span></span>
+        </div>
+      </li>
+      <li>
+        <span class="lt-title">英文名：</span>
+        <div class="rt-input">
+          <input type="text" name="nickname" placeholder="方便老师上课时称呼您" id="nickname" class="s-input">
+        </div>
+        <div class="error">
+          <i class="e-img"></i>
+          <span></span>
+        </div>
+      </li>
+      <li>
+        <span class="lt-title">推荐手机号/推荐码：</span>
+        <div class="rt-input">
+          <input type="text" name="recMobile" placeholder="没有可不填" id="recMobile" class="s-input">
+        </div>
+        <div class="error">
+          <i class="e-img"></i>
+          <span></span>
+        </div>
+      </li>
+      <li class="last-list">
+        <div class="rt-input">
+          <input type="hidden" value="1" class="inputChed">
+          <span class="checkbox checked" id="checkbox"></span>
+          <span class="f-word">我已阅读并同意<a href="javascript:;">《51Talk用户注册协议》</a></span>
+        </div>
+        <div class="error">
+          <i class="e-img"></i>
+          <span>1111</span>
+        </div>
+      </li>
+    </ul>
+    <a href="javascript:;" class="user-btn" id="register">注册</a>
+    <p class="num-href">已有51Talk帐号？<a href="javascript:;">立即登录 ></a></p>
+  </div>
+  </form>
+</div>
+<!-- 尾部 -->
+<% include ../common/w_footer_home.ejs %>
+<!-- /尾部 -->
+</body>
+<script src="<%= jsPath%>common/jquery.min.js"></script>
+<script src="<%= jsPath%>vendor.js"  id="seajsnode"></script>
+</html>

@@ -1,0 +1,63 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ */
+.share {
+  position: relative;
+  height: 100%;
+}
+.share .btn-wrap {
+  position: absolute;
+  left: 0;
+  bottom: 5%;
+  width: 100%;
+  text-align: center;
+}
+.share .btn-wrap a {
+  margin-top: 0.5rem;
+}
+.share .btn-wrap .share-btn {
+  display: inline-block;
+  width: 85%;
+  height: 50px;
+  background: url(../../../images/wap/pre_class20170207/share.png?v=8uIoPgJvqj%2FmihTNhVWaeg%3D%3D) center center no-repeat;
+  background-size: cover;
+}
+.share .btn-wrap .replay-btn {
+  display: inline-block;
+  width: 85%;
+  height: 50px;
+  background: url(../../../images/wap/pre_class20170207/replay.png?v=wMm3zH79RiLWa2yCppt2Nw%3D%3D) center center no-repeat;
+  background-size: cover;
+}
+.tryagain {
+  background: url(../../../images/wap/pre_class20170207/tryagain.jpg?v=zniupVmdsDjMo1nsYwsaqw%3D%3D) center center no-repeat;
+  background-size: cover;
+}
+.good {
+  background: url(../../../images/wap/pre_class20170207/good.jpg?v=BzybKQHAW%2Fy8CqPuWzO%2F1w%3D%3D) center center no-repeat;
+  background-size: cover;
+}
+.very-good {
+  background: url(../../../images/wap/pre_class20170207/very_good.jpg?v=xURJrFX423X1HeDNhYvvcQ%3D%3D) center center no-repeat;
+  background-size: cover;
+}
+.perfect {
+  background: url(../../../images/wap/pre_class20170207/perfect.jpg?v=cZk18ydP7eaE6ncdu3C5vw%3D%3D) center center no-repeat;
+  background-size: cover;
+}
+.share-mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+.share-mask .share-guide {
+  text-align: right;
+}
+.share-mask .share-guide img {
+  margin-right: 5%;
+  max-width: 85%;
+}

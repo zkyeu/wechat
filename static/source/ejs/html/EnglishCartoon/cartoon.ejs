@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>英语学习，口语学习首选的英语学习网站，51talk无忧英语，外教一对一，在线学英语！</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="keywords" content="{<info.keywords>}" />
+  <meta name="description" content="51tailk无忧英语专业提供网络英语外教一对一培训教学,专注于真人英语外教一对一培训,让您足不出户,网上平价学英语.英语外教一对一培训服务热线4000-51-51-51"/>
+  <link rel="stylesheet" type="text/css" href="<%= csslink%>">
+  <script type="text/javascript" src="http://sdk.cloud.chivox.com/chivoxsdk-js/v3.0/load_core.js"></script>
+</head>
+<body data-init="index">
+<!-- 驰声必备 start-->
+    <div id="aiPanel"><em class="play"></em><em class="record recordOff"></em><div>
+<!-- 驰声必备 end-->
+<!-- 录音弹层开始 -->
+<div style="display:none" id="aiMediaDialog" class="aiMediaDialog aiMediaDialogClosed" >
+    <div class="dialogTitle">
+        设置面板
+        <button class="dialogCloseButton">
+            X
+        </button>
+    </div>
+    <div class="dialogFlashError">
+        <p class="flashVersion hidden">
+            您电脑的Flash版本过低，请点击此链接升级。
+            <br/>
+            <a href="http://get.adobe.com/flashplayer/" target="_blank">点击下载最新Flash版本</a>
+        </p>
+        <p class="flashPlugin hidden">
+            您的电脑没有安装或者禁用Flash插件，请确认。
+            <br/>
+            <a href="http://get.adobe.com/flashplayer/" target="_blank">点击下载最新Flash版本</a>
+        </p>
+    </div>
+    <div class="dialogBody">
+        <div id="recorder">
+        </div>
+    </div>
+    <div class="dialogInfo">
+        <a href="javascript:void(0);" onClick="$('#speak_tishi').slideToggle();">查看提示</a>
+        <img id="speak_tishi" style="display:none;" src="http://cdn.iciba.com/web/dayWord/js/jqueryUI/img/flash.gif">
+        <h5>状态信息</h5>
+        <ul>
+            <li class="loadFlashPlayer hidden">
+                <span class="info">正在下载Flash播放器...</span>
+            </li>
+            <li class="loadFlashRecorder hidden">
+                <span class="info">正在下载Flash录音机...</span>
+            </li>
+            <li class="connectServerInit hidden">
+                <span class="error">还没有连接录音服务器</span>
+            </li>
+            <li class="connectServerStart hidden">
+                <span class="info">正在连接录音服务器，请稍候...</span>
+            </li>
+            <li class="connectServerSuccess hidden">
+                <span class="success">连接录音服务器成功</span>
+            </li>
+            <li class="connectServerError hidden">
+                <span class="error">连接录音服务器失败，请<a href="javascript:aiPanel.recorder.reconnect();">重试</a></span>
+            </li>
+            <li class="micStatusAllow hidden">
+                <span class="success">Flash可以访问麦克风</span>
+            </li>
+            <li class="micStatusDisallow hidden">
+                <span class="error">Flash不能访问麦克风，请设置</span>
+            </li>
+            <li class="micStatusError hidden">
+                <span class="error">没有找到录音设备，请检查</span>
+            </li>
+            <li class="mmscfgError hidden">
+                <span class="error">Flash被禁止访问麦克风，请手动删除 mms.cfg文件，然后重试</span>
+            </li>
+        </ul>
+    </div>
+    <div class="dialogButton">
+        <button class="okButton">
+            确定
+        </button>
+    </div>
+</div>
+<div id="player"></div>
+<div class="dialogBody"></div>
+<div id="recorder"></div>
+<!-- 录音弹层结束 -->
+<!-- 顶部 -->
+<% include ../common/www/w_header.ejs %>
+<!-- 导航 -->
+<% include ../common/www/w_nav.ejs %>
+
+
+
+
+<!-- 动漫列表 -->
+<div class="cartoonList cartoon">
+  <div class="g-list">
+    <div class="list-width">
+      <ul class="clearfix">
+        <li>
+          <div class="list-left"><div class="playNow" data-url="<%= imagessrc%>/mp3/1.mp3"></div></div>
+          <p class="list-right">Hickory, Dickory, Dock(5)</p>
+        </li>
+        <li>
+          <div class="list-left"><div class="playNow" data-url="<%= imagessrc%>/mp3/2.mp3"></div></div>
+          <p class="list-right">Wheels On The Bus</p>
+        </li>
+        <li>
+          <div class="list-left"><div class="playNow" data-url="<%= imagessrc%>/mp3/3.mp3"></div></div>
+          <p class="list-right">Twinkle Twinkle Little Star</p>
+        </li>
+        <li>
+          <div class="list-left"><div class="playNow" data-url="<%= imagessrc%>/mp3/4.mp3"></div></div>
+          <p class="list-right">If You Are Happy</p>
+        </li>
+        <li>
+          <div class="list-left"><div class="playNow" data-url="<%= imagessrc%>/mp3/5.mp3"></div></div>
+          <p class="list-right">字母歌</p>
+        </li>
+        <li>
+          <div class="list-left"><div class="playNow" data-url="<%= imagessrc%>/mp3/6.mp3"></div></div>
+          <p class="list-right">Ten Little Indians</p>
+        </li>
+        <li>
+          <div class="list-left"><div class="playNow" data-url="<%= imagessrc%>/mp3/7.mp3"></div></div>
+          <p class="list-right">We Like Fruit</p>
+        </li>
+        <li>
+          <div class="list-left"><div class="playNow" data-url="<%= imagessrc%>/mp3/8.mp3"></div></div>
+          <p class="list-right">five little monkey</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- 成人结束 -->
+<!-- 尾部 -->
+<% include ../common/www/w_footer_reg.ejs %>
+<% include ../common/www/w_footer_home.ejs %>
+<script src="<%= jssrc%>"></script>
+</body>

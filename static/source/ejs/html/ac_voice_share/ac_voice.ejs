@@ -1,0 +1,45 @@
+<% include ../common/top.ejs %>
+<body>
+<input type="hidden" id="container" data-init="ac_voice" />
+
+<div class="ac-voice-box" id="acVoiceBox">
+  <div class="ac-voice-top">
+    <span class="close-box" id="closeBtn"></span>
+  </div>
+  <div class="ac-voice-main" >
+    <div class="ac-voice-img">
+      <ul class="img-list clearfix" id="imgBox"></ul>
+    </div>
+    <div class="ac-voice-info">
+      <div class="ac-info-l">
+        <h1 id="acInfoTitle"></h1>
+        <ul id="imgFlagId" class="clearfix"></ul>
+      </div>
+      <div class="ac-info-r clearfix">
+        
+        <div id="startPlay">
+          <i class="start-play"></i>
+          <span >开始播放</span>
+        </div>
+        <div id="startVoice">
+          <i class="start-voice"></i>
+          <span>开始配音</span>
+        </div>
+        <div id="playVoice">
+          <i class="play-voice"></i>
+          <span>播放配音</span>
+        </div>
+      </div>
+
+    </div>
+    
+
+  </div>
+  <div id="voiceBtn" class="voice-btn-box"><a class="voice-btn"  href="javascript:;">配音完成</a></div>
+<div class="flash-swf" id="flashswf"></div>
+
+</div>
+<div id="mp3Box"></div>
+
+</body>
+<% include ../common/uc_bottom.ejs %>

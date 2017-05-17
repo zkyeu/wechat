@@ -1,0 +1,331 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Mon Jan 18 2016 15:05:19 GMT+0800 (中国标准时间)
+ */
+/*
+* 默认样式
+* @file：   base.less
+* @author:  zhuning@51talk.com）
+* @update:  2015-10-29
+* @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+*/
+html {
+  font-size: 62.5%;
+}
+@media only screen and (min-width: 481px) {
+  html {
+    font-size: 94%;
+  }
+}
+@media only screen and (min-width: 561px) {
+  html {
+    font-size: 109%;
+  }
+}
+@media only screen and (min-width: 641px) {
+  html {
+    font-size: 125%;
+  }
+}
+body {
+  padding: 0;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 640px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+}
+input,
+button,
+select,
+textarea,
+dl,
+dd,
+dt {
+  font-family: "Microsoft YaHei";
+  outline: none;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 0;
+  padding: 0px;
+  margin: 0px;
+}
+ul,
+li {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  vertical-align: middle;
+}
+b {
+  font-weight: normal;
+}
+::-moz-selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+strong {
+  font-weight: normal;
+}
+.dl-hd {
+  margin: 0 1.5rem;
+  height: 4.25rem;
+  line-height: 4.25rem;
+  font-size: 1.2rem;
+}
+.dl-hd img {
+  width: 6.8rem;
+  height: 2.25rem;
+}
+.dl-hd .hd-tit {
+  float: right;
+}
+.dl-cer {
+  font-size: 1.5rem;
+}
+.dl-cer .cr-img {
+  position: relative;
+}
+.dl-cer .cr-img img {
+  width: 100%;
+  height: auto;
+}
+.dl-cer .cr-img p {
+  position: absolute;
+  top: 2.4rem;
+  left: 0;
+  right: 0;
+  margin: 0 2rem;
+  color: #5f3013;
+  line-height: 2.2rem;
+}
+.dl-cer .cr-img p span {
+  color: #ff3434;
+}
+.dl-cer .nav {
+  display: -webkit-box;
+  -webkit-box-align: center;
+  height: 5.6rem;
+  border: 1px #dbdee0 solid;
+  font-size: 1.3rem;
+  background-color: #fbfbfb;
+}
+.dl-cer .nav li {
+  -webkit-box-flex: 1;
+  text-align: center;
+  border-left: 1px #dbdee0 solid;
+}
+.dl-cer .nav li:first-child {
+  border: none;
+}
+.dl-cer .nav li span {
+  display: block;
+  margin-top: .3rem;
+}
+.dl-cer .nav li span b {
+  color: #ff3434;
+}
+.dl-cer article h3 {
+  font-size: 1.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+.dl-cer article .cr-dl {
+  font-size: 1.3rem;
+  margin: 0 1.5rem;
+}
+.dl-cer article .cr-dl dt {
+  float: left;
+  width: 5.65rem;
+  margin-top: .5rem;
+}
+.dl-cer article .cr-dl dt img {
+  width: 5.65rem;
+  height: 5.65rem;
+  border-radius: 50%;
+  border: 1px #dcdfe1 solid;
+}
+.dl-cer article .cr-dl dd {
+  margin: 0 0 .7rem 8rem;
+}
+.dl-cer article .cr-dl dd img {
+  width: 6rem;
+  height: .9rem;
+  margin-top: -0.5rem;
+}
+.dl-cer article .cr-dl dd span {
+  color: #ff3434;
+  margin-left: .5rem;
+}
+.dl-cer article .cr-word {
+  margin: 0 1.5rem;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+}
+.dl-cer article .wdlink {
+  height: 6.6rem;
+  overflow: hidden;
+}
+.dl-cer article .cr-btn {
+  color: #eee;
+  margin: 1rem 1.5rem 0 1.5rem;
+}
+.dl-ft {
+  background-color: #323232;
+  padding: 2rem 1.5rem;
+  margin-top: 2rem;
+}
+.dl-ft .tit {
+  text-align: center;
+  color: #fff;
+  font-size: 2.25rem;
+}
+.dl-ft .tit span {
+  color: #ffd200;
+  margin-left: 0.5rem;
+}
+.dl-ft .dl-input {
+  margin: 1rem 0;
+}
+.dl-ft .dl-input li {
+  height: 4rem;
+  line-height: 4rem;
+  margin: 1.5rem 0;
+  padding: 0 1rem;
+  background-color: #fff;
+  border-radius: .5rem;
+  overflow: hidden;
+  font-size: 1.6rem;
+}
+.dl-ft .dl-input li input {
+  width: 100%;
+  font-size: 1.6rem;
+  color: #bbb;
+}
+.dl-ft .dl-input li:last-child {
+  border: none;
+  background-color: #ff4c4c;
+  text-align: center;
+  color: #fff;
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+.dl-ft .dl-input li:last-child a {
+  color: #fff;
+  display: block;
+}
+.player {
+  display: -webkit-box;
+  background: #fff;
+  -webkit-box-flex: 1;
+  box-sizing: border-box;
+  -webkit-box-align: center;
+  height: 3.3rem;
+  padding: 0 1.5rem;
+  width: 100%;
+  background-color: #f6f8fa;
+  margin: 2rem 0;
+}
+.player .switch-on {
+  display: -webkit-box;
+  width: 1.8rem;
+}
+.player .switch-on i {
+  width: 0rem;
+  height: 0rem;
+  border-width: 0.85rem;
+  border-style: dashed dashed dashed solid;
+  border-color: transparent transparent transparent #ff8200;
+  overflow: hidden;
+  margin-left: .6rem;
+  margin-right: -6rem;
+  display: block;
+}
+.player .switch-off {
+  display: -webkit-box;
+}
+.player .switch-off i {
+  width: .4rem;
+  height: 1.5rem;
+  display: block;
+  border-left: .2rem #ff8200 solid;
+  border-right: .2rem #ff8200 solid;
+  overflow: hidden;
+  margin-left: .6rem;
+  margin-right: .4rem;
+}
+.player .controls {
+  position: relative;
+  height: .3rem;
+  display: -webkit-box;
+  -webkit-box-flex: 1;
+  background-color: #b2b2b2;
+  margin-left: 1rem;
+}
+.player .cont-buff {
+  position: absolute;
+  height: .3rem;
+  overflow: hidden;
+  background: #ffe0bf;
+}
+.player .cont-prog {
+  position: absolute;
+  height: .3rem;
+  background: #ff8200;
+}
+.player .cont-prog:before {
+  content: '';
+  position: absolute;
+  top: -0.5rem;
+  right: -1.3rem;
+  width: 1.3rem;
+  height: 1.3em;
+  background: url(../../../images/wap/teacher_page/ld_roll.png?v=b7IKK6rbGU73q%2FQXx39jOg%3D%3D) no-repeat;
+  background-size: 1.3rem 1.3rem;
+}
+.player .time {
+  line-height: .325rem;
+  margin: 0.7rem 2.4rem 0 1.5rem ;
+  font-size: 1.4rem;
+  color: #b2b2b2;
+}
+.player .tit {
+  color: #ff8200;
+  font-size: 1.3rem;
+  margin-left: 1.5rem;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}

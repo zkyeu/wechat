@@ -1,0 +1,84 @@
+<% include ../common/starOfHope.ejs %>
+
+<body>
+<section class="teengers" id="container" data-init="eng">
+  <img src="<%= imagessrc%>/top.jpg" alt="" class="oneSt">
+  <article class="concept">
+    <h3 class="part_t"><span class="part_l">大赛简介</span><span class="part_r">Competition concept</span></h3>
+    <article class="c_cont">
+      <p class="c_text">2016年度中央电视台希望之星英语风采大赛正在如火如荼地进行中，为了能让更多的优秀选手在更大的舞台上展示自己的风采，南京赛区组委会与国内最大的在线英语品牌51Talk无忧英语进行合作，举行南京赛区复活赛，通过在线口语比赛的形式，获胜选手将直接进入南京赛区决赛。<span class="l_y"></span><span class="r_y"></span></p>
+      <article class="c_bottom">
+        <span class="c_obj">参赛对象</span>
+        参加南京赛区复赛但未晋级决赛的各组别选手。
+      </article>
+    </article>
+  </article>
+  <article class="registration">
+    <h3 class="part_t"><span class="part_l">报名登录</span><span class="part_r">Competition for registration</span></h3>
+    <form action="" id="reg1_form">
+      <input type="hide" id="register_from" value="" name="register_from">
+      <ul class="ones_logIn">
+        <li>
+          <input type="tel" name="mobile" placeholder="请输入您的手机号" id="reg1_tel">
+        </li>
+        <li>
+          <input type="password" name="password" placeholder="请设置您的密码" id="reg1_passwd">        
+        </li>
+        <li class="ageSelect">
+            <span class="similarSel" id="similarSel" date-gradeNum="" date-englishNum="" date-groupNum="">选择年级组</span>
+            <span class="selOption" id="selOption"></span>
+            <div class="ageList" id="ageList">
+              <span date-gradeNum="77" date-englishNum="1" date-groupNum="7" class="r_color">幼儿组</span>
+              <span date-gradeNum="44" date-englishNum="4" date-groupNum="4" date-grade="1">小低组（1-2年级)</span>
+              <span date-gradeNum="44" date-englishNum="2" date-groupNum="4" date-grade="3">小中组(3-4年级)</span>
+              <span date-gradeNum="44" date-englishNum="2" date-groupNum="4" date-grade="5">小高组（5-6年级）</span>
+              <span date-gradeNum="13" date-englishNum="3" date-groupNum="6">初中组</span>
+              <span date-gradeNum="7" date-englishNum="3" date-groupNum="5">高中组</span>
+              <span date-gradeNum="15" date-englishNum="3" date-groupNum="2">大学组</span>
+            </div>
+          <!-- <select name="" id="">
+            <option value ="1">选择年级组</option>
+            <option value ="2">幼儿组</option>
+            <option value ="4">小低组（1-2年级)</option>
+            <option value ="5">小中组(3-4年级)</option>
+            <option value ="6">小高组（5-6年级）</option>
+            <option value ="5">初中组</option>
+            <option value ="6">高中组</option>
+            <option value="7">大学组</option>
+          </select> -->
+        </li>
+        <li>
+          <a href="#" class="free" id="reg1">立即报名</a>
+        </li>
+      </ul>
+    </form>
+    <p><span class="r_color">注意：</span>若选手已是51Talk用户，则需要重新注册一个新的账号来参加此次复活赛。</p>
+  </article>
+  <article class="schedule">
+    <h3 class="part_t"><span class="part_l">大赛流程</span><span class="part_r">Competition schedule</span></h3>
+    <article class="s_img">
+      <img src="<%= imagessrc%>schedule.jpg" alt="">
+    </article>
+  </article>
+  <article class="selection">
+    <h3 class="part_t"><span class="part_l">评选标准</span><span class="part_r">The selection criteria</span></h3>
+    <article class="c_cont">
+      <article class="c_text_c">
+        <p class="c_text">本次复活赛采取外籍评审在线一对一评级的形式：选手报名成功后，需在专题页面预约比赛具体时间，每位选手比赛时长为25分钟。比赛结束后，根据评审评定等级公布晋级结果。</p>
+        
+      </article>
+      <article class="c_bottom">
+        <span class="c_obj">注意事项</span>
+        <p class="s_text"><span class="s_icon"></span>选手在报名成功后，请务必在个人中心页面预约比赛时间，复活赛成绩将作为晋级南京赛区决赛的唯一依据；</p>
+        <p class="s_text"><span class="s_icon"></span>选手参赛请根据预约比赛时间准时参加，逾期视为自动放弃参赛资格；</p>
+        <p class="s_text"><span class="s_icon"></span>请选手及家长及时关注希望之星英语风采大赛南京赛区微信公众号（Star-of-Outlook）、官网（www.jsxwjy.cn），查询比赛成绩及晋级情况。</p>
+      </article>
+    </article>
+    <img src="<%= imagessrc%>bottom_bg.jpg" alt="">
+  </article>
+  <footer>
+    <p>Copyright©北京大生知行科技有限公司</p>
+  </footer>      
+</section>
+</body>
+<% include ../common/bottom.ejs %>

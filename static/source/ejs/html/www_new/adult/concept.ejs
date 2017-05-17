@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>英语学习，口语学习首选的英语学习网站，51talk无忧英语，外教一对一，在线学英语！</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="keywords" content="{<info.keywords>}" />
+	<meta name="description" content="51tailk无忧英语专业提供网络英语外教一对一培训教学,专注于真人英语外教一对一培训,让您足不出户,网上平价学英语.英语外教一对一培训服务热线4000-51-51-51"/>
+	<link rel="stylesheet" type="text/css" href="<%= cssPath %>common/commons.css">
+  <link rel="stylesheet" type="text/css" href="<%= cssPath %>adult/w_concept.css">
+	<!--[if IE 6]><script src="../js/lib/DD_belatedPNG_0.0.8a.min.js"></script><![endif]-->
+</head>
+<body>
+<!-- 公共区域 -->
+<%- include("../common/w_nav.ejs",{
+  wrapClass:"adult-nav-list",
+  navList:[
+    {
+      className:"crt",
+      text:"51Talk成人英语",
+      url:"http://adult.51talk.com/"
+    },
+    {
+      className:"",
+      text:"学习理念",
+      url:"http://www.51talk.com/index/feature"
+    },
+    {
+      className:"",
+      text:"课程体系",
+      url:"http://www.51talk.com/index/system"
+    },
+    {
+      className:"",
+      text:"外教师资",
+      url:"http://www.51talk.com/index/teachers"
+    },
+    {
+      className:"",
+      text:"学习体系",
+      url:"http://www.51talk.com/index/guide"
+    },
+    {
+      className:"",
+      text:"名师课堂",
+      url:"http://www.51talk.com/index/multiClass"
+    }
+  ],
+  isIndex:false, //判断是否为首页
+  isNorth:false //判断是否为美小
+
+  }) %>
+  <div>
+    <% include ../common/w_banner.ejs %>
+  </div>
+<!-- /公共区域 -->
+<!-- 学习概念 -->
+<div class="concept" data-init="adult/index" id="container">
+	<div class="c_topYears">
+		<h3 class="t_title"></h3>
+		<p class="t_how">英语是如何学会的？</p>
+		<div class="t_cont">
+			<img data-src="<%=imagessrc%>adult/concept_years.jpg" width="1000" height="199" src="<%=imagessrc%>common/deafult.png">
+			<ul>
+				<li>
+					<h3>6 Years</h3>
+					<p>小学 6 年</p>
+				</li>
+				<li>
+					<h3>6 Years</h3>
+					<p>中学 6 年</p>
+				</li>
+				<li>
+					<h3>4 Years</h3>
+					<p>大学 4 年</p>
+				</li>
+				<li class="t_contM">
+					<h3>16 Years</h3>
+					<p>没学好英语</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="c_howTLearn">
+		<img data-src="<%=imagessrc%>adult/concept_16years.png" width="859" height="38" src="<%=imagessrc%>common/deafult.png" class="h_title">
+		<p class="h_explain">用汉语学英语，再花16年也还是学不会。从小到大，我们背过无数单词，语法，句型……英语还是说不出口。
+<br>这就好像在陆地上学游泳，道理显而易见。所以，用英语学英语，
+<br>这是我们认同并践行的英语学习理念基础。</p>
+	</div>
+	<div class="c_item">
+		<div class="i_item i_item1">
+			<div class="i_top">
+				<i class="i_left"></i>
+				<i class="i_center"></i>
+				<i class="i_right"></i>
+				<img data-src="<%=imagessrc%>adult/concept_tit1.png" width="213" height="123" src="<%=imagessrc%>common/deafult.png" class="i_tit">
+			</div>
+			<h3 class="i_title"><img data-src="<%=imagessrc%>adult/concept_item1.png" width="698" height="27" src="<%=imagessrc%>common/deafult.png"></h3>
+			<p class="i_text">8000多名优选外教的雄厚师资，精心研发的1对1在线互动平台，为您提供可靠的学习保障。</p>
+			<ul class="i_list">
+				<li class="list_i m_right30">
+					<img data-src="<%=imagessrc%>adult/concept_w.png" width="485" height="185" src="<%=imagessrc%>common/deafult.png" class="p_right42">
+					<div class="list_bottom">
+						<p>纯外教授课，为您提供沉浸式的母语环境，告别中式英语，建立英文思维</p>
+					</div>
+				</li>
+				<li class="list_i">
+					<img data-src="<%=imagessrc%>adult/concept_pop.png" width="485" height="185" src="<%=imagessrc%>common/deafult.png" class="p_right50">
+					<div class="list_bottom">
+						<p>外教投入全部注意力与您在课堂上进行互动练习一节课您有超过一半的时间开口说英文</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="c_item c_gray">
+		<div class="i_item i_item2">
+			<div class="i_top">
+				<i class="i_left"></i>
+				<i class="i_center"></i>
+				<i class="i_right"></i>
+				<img data-src="<%=imagessrc%>adult/concept_tit2.png" width="213" height="123" src="<%=imagessrc%>common/deafult.png" class="i_tit">
+			</div>
+			<h3 class="i_title"><img data-src="<%=imagessrc%>adult/concept_item2.png" width="644" height="27" src="<%=imagessrc%>common/deafult.png"></h3>
+			<p class="i_text">老师随你约，课程随心选，手机上课更easy……轻松学习，高频练习，容易坚持，当然更见效果！</p>
+			<ul class="i_list">
+				<li class="list_i m_right30">
+					<img data-src="<%=imagessrc%>adult/concept_s.png" width="485" height="185" src="<%=imagessrc%>common/deafult.png" class="p_right53">
+					<div class="list_bottom">
+						<p>每课25分钟，随时随地利用碎片时间约课上课，短时高频学习好过
+周末突击</p>
+					</div>
+				</li>
+				<li class="list_i">
+					<img data-src="<%=imagessrc%>adult/concept_were.png" width="485" height="185" src="<%=imagessrc%>common/deafult.png" class="p_right23">
+					<div class="list_bottom">
+						<p>自由约课，选择喜欢的老师，选择想要学习的课程。在51Talk只
+要是学英语，都是你说了算</p>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+	<div class="c_item">
+		<div class="i_item i_item3">
+			<div class="i_top">
+				<i class="i_left"></i>
+				<i class="i_center"></i>
+				<i class="i_right"></i>
+				<img data-src="<%=imagessrc%>adult/concept_tit3.png" width="213" height="123" src="<%=imagessrc%>common/deafult.png" class="i_tit">
+			</div>
+			<h3 class="i_title"><img data-src="<%=imagessrc%>adult/concept_item3.png" width="838" height="27" src="<%=imagessrc%>common/deafult.png"></h3>
+			<p class="i_text">根据您的偏好，我们会为您推荐更适合的外教，和各种趣味的课程……在51Talk，您学到的不只是语言。</p>
+			<ul class="i_list">
+				<li class="list_i m_right30">
+					<img data-src="<%=imagessrc%>adult/concept_major.png" width="485" height="185" src="<%=imagessrc%>common/deafult.png" class="p_right0">
+					<div class="list_bottom">
+						<p>51Talk精心研发了提升听说读写综合能力课程，雅思托福、商务
+英语等专业课程，以及旅游、影视等兴趣类课程的完整课程体系</p>
+					</div>
+				</li>
+				<li class="list_i">
+					<img data-src="<%=imagessrc%>adult/concept_interest.png" width="485" height="185" src="<%=imagessrc%>common/deafult.png" class="p_right17">
+					<div class="list_bottom">
+						<p>旅游英语，美剧进行时，热点话题课程，你所感兴趣的课程在
+51Talk均能找到，让课程不再枯燥</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="c_empty c_gray openClass">
+		<div class="i_top">
+			<i class="i_left"></i>
+			<i class="i_center"></i>
+			<i class="i_right"></i>
+			<img data-src="<%=imagessrc%>adult/concept_tit4.png" width="269" height="136" src="<%=imagessrc%>common/deafult.png" class="i_tit">
+		</div>
+	</div>
+</div>
+<!-- 尾部 -->
+<!-- right side bar -->
+<% include ../common/w_side_bar.ejs %>
+<!-- /right side bar-->
+<% include ../common/w_footer_home.ejs %>
+</body>
+<script src="<%= jsPath%>common/jquery.min.js"></script>
+<script src="<%= jsPath%>vendor.js" id="seajsnode"></script>
+</html>

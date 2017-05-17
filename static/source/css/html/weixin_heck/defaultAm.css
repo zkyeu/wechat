@@ -1,0 +1,157 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: 
+ */
+/**
+ * 默认样式
+ * @author:  liliang（liliang05@51talk.com）
+ * @update:  2017年03月06日 星期四 17时45分37秒 CST
+ * @note:    黑鸟项目后台中转页面样式
+ */
+html,
+body {
+  width: 100%;
+  background: #252525;
+}
+.big-bg {
+  position: relative;
+  width: 70vw;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 5vh;
+}
+.title,
+.title-detail,
+#chartLable,
+.enter,
+.trust-user-list {
+  position: relative;
+  opacity: 0;
+  font-family: "Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+}
+.title {
+  color: #fff;
+  font-size: 36px;
+  text-align: center;
+  -webkit-animation: myfirst 1s ease 1s 1;
+          animation: myfirst 1s ease 1s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.title-detail {
+  color: #e1e1e1;
+  font-size: 16px;
+  text-align: center;
+  margin: 2vh 0;
+  -webkit-animation: toup 2s;
+          animation: toup 2s;
+  -webkit-animation: myfirst 1.3s ease 1.8s 1;
+          animation: myfirst 1.3s ease 1.8s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.title-detail i {
+  font-size: 32px;
+  color: #fcc900;
+  padding-left: 5px;
+  line-height: 40px;
+}
+.title-detail span {
+  font-size: 28px;
+  color: #fcc900;
+  padding-right: 5px;
+}
+#chartLable {
+  -webkit-animation: toup 5s;
+          animation: toup 5s;
+  -webkit-animation: myfirst 2s ease 2.3s 1;
+          animation: myfirst 2s ease 2.3s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.enter {
+  -webkit-animation: myfirst 3s ease 2.3s 1;
+          animation: myfirst 3s ease 2.3s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.enter a {
+  width: 200px;
+  height: 40px;
+  display: block;
+  line-height: 40px;
+  border-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: 2vh;
+}
+.enter a:hover {
+  background-color: #ffd533;
+}
+.enter .ablBtn {
+  background: #fcc800;
+  color: #393939;
+}
+.enter .disBtn {
+  background: #ddd;
+  color: #000;
+}
+.trust-user-list {
+  -webkit-animation: myfirst 3s ease 3s 1;
+          animation: myfirst 3s ease 3s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  margin-top: 3vh;
+  color: #fff;
+  display: none;
+}
+.trust-user-list dt {
+  float: left;
+  width: 50px;
+  font-size: 16px;
+  line-height: 30px;
+}
+.trust-user-list dd {
+  margin-left: 50px;
+}
+.trust-user-list dd li {
+  list-style: none;
+  display: inline-block;
+  float: left;
+  min-width: 100px;
+  padding: 0 15px;
+  height: 30px;
+  border-radius: 100px;
+  border: solid 2px #fcc900;
+  line-height: 32px;
+  text-align: center;
+  font-size: 14px;
+  margin: 0 0 10px 20px;
+  cursor: pointer;
+}
+.trust-user-list dd li:hover {
+  background-color: #fcc900;
+  color: #252525;
+}
+@-webkit-keyframes myfirst {
+  0% {
+    opacity: 0;
+    top: 40px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+@keyframes myfirst {
+  0% {
+    opacity: 0;
+    top: 40px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}

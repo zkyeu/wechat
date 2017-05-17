@@ -1,0 +1,21 @@
+<% include ../common/top_b2s_n.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>1v4_choose_class3.css">
+</head>
+<body data-init="" class="choose_class_finish">
+    <div class="hint-img"><img src="<%= imagessrc%>1v4_choose_class-5.png"></div>
+    <div class="hint-text">您的美教1对4全程托管班体验课已结束<span class="font1">您可以联系您的中教老师进行续费购买 :  )</span></div>
+
+
+<!-- loading -->
+<div id="fontSizeLoding">
+    <img src="<%= imagessrc%>eff_loading.gif">
+</div>
+<script type="text/javascript">
+window.onload = function(){
+    document.documentElement.style.fontSize = document.body.clientWidth / 7.5 + "px";
+    document.getElementById("fontSizeLoding").style.display = "none";
+}
+</script>
+</body>
+<!--公共尾部结束-->
+<% include ../common/bottom.ejs %>

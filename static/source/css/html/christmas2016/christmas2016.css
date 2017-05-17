@@ -1,0 +1,44 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+<<<<<<< .working
+<<<<<<< .working
+ * update: Thu Dec 08 2016 18:52:46 GMT+0800 (中国标准时间)
+||||||| .merge-left.r268273
+ * update: Mon Dec 12 2016 19:32:51 GMT+0800 (中国标准时间)
+=======
+ * update: Tue Dec 13 2016 14:56:02 GMT+0800 (中国标准时间)
+||||||| .merge-left.r268283
+ * update: Tue Dec 13 2016 14:56:02 GMT+0800 (中国标准时间)
+=======
+ * update: Tue Dec 13 2016 15:03:07 GMT+0800 (中国标准时间)
+>>>>>>> .merge-right.r268284
+>>>>>>> .merge-right.r268274
+ */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "微软雅黑";
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}
+img {
+  border: 0;
+  display: block;
+}
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+/* @import "../common/www/w_header.less";
+@import "../common/www/w_footer.less"; */

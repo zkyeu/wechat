@@ -1,0 +1,446 @@
+<% include ../common/top.ejs %>
+<body>
+<!-- 顶部 -->
+<div class="pri-header">
+  <!-- 顶部 -->
+  <div class="header">
+    <a href="javascript:;" class="hr-lt">
+      <i></i>
+      <b><span>美国纽交所上市公司（股票代码：COE）</span>全球信赖的在线英语领导品牌</b>
+      <!-- 青少 -->
+      <b class="qs-tit hide">外教1对1，在家学英语</b>
+    </a>
+    <div class="hr-rt">
+      <div class="rt-top">
+        <ul>
+          <li><span class="rt_username">hi,studentstudenthw</span><a href="http://www.51talk.com/trial/index" title="会员中心">会员中心</a><a href="/index/logout" title="退出">退出</a></li>
+          <li><a href="javascript:;">登录</a></li>
+          <li><a href="javascript:;">免费注册</a></li>
+          <li><a href="javascript:;">企业培训</a></li>
+          <li class="jsMore">
+            <a href="javascript:;">微博</a>
+            <!-- 微博弹层 -->
+            <div class="weibo jsUl">
+              <a href="javascript:;"></a>
+            </div>    
+          </li>
+          <li class="jsMore">
+            <a href="javascript:;">微信</a>
+            <!-- 微信弹层 -->
+            <div class="weixin jsUl">
+              <a href="javascript"><img src="<%= imagessrc%>/top_weixin.png" alt=""></a>
+            </div>
+          </li>
+          <li></li>
+        </ul>
+      </div>
+      <span><i></i>4000-51-51-51</span>
+    </div>
+  </div>
+</div>
+<input type="hidden" id="cartType" value="cart">
+<input type="hidden" id="cartID" value="">
+<input type="hidden" id="actArr" value="">
+<input type="hidden" id="downMoney" value="0">
+<input type="hidden" id="showAgree" value="n">
+<div class="pri-main" data-init="battle">
+    <div class="banner">
+      <div class="widthMain1030" id="widthMain1030">
+          <ul>
+            <li><a href="#nav1" class="nav1"></a></li>
+            <li><a href="#nav2" class="nav2"></a></li>
+            <li><a href="#nav3" class="nav3"></a></li>
+            <li><a href="#nav4" class="nav4"></a></li>
+            <li><a href="#nav5" class="nav5"></a></li>
+          </ul>
+          <img src="<%= imagessrc%>banner_b.jpg" alt="" class="banner_b">
+      </div>
+    </div>
+    <div class="coupon" id="nav1">
+      <div class="widthMain">
+        <img src="<%= imagessrc%>d_1.png" alt="">
+        <div class="coupon-box">
+          <div class="treasure">
+            <img src="<%= imagessrc%>box.png" alt="">
+            <a href="javascript:;" class="coupon-btn"></a>
+          </div>
+          <div class="coupon-num">
+            <div class="cou-get-img">
+              <img src="<%= imagessrc%>c_mony.png" alt="">
+              <p>600<span>元</span></p>
+            </div>
+            <p class="cou-get">恭喜您获得<span>600</span>元代金券</p>
+            <a href="javascript:;" class="coupon-btn"></a>
+          </div>
+        </div>
+        <ul class="coupon-details">
+          <li>活动详情:</li>
+          <li>1.活动时间：12月2日-12月12日</li>
+          <li>2.活动使用规则：</li>
+          <li>每个用户仅能领取一次代金券；</li>
+          <li>代金券领取后可在站内信查看；</li>
+          <li>代金券仅在12.08-12.18活动期间可使用</li>
+        </ul>
+        <span class="garden"></span>
+      </div>
+    </div>
+    <div class="pri-list02" id="nav2">
+      <div class="widthMain">
+        <img src="<%= imagessrc%>d_2.png" alt="">
+        <div class="center-cont">
+          <div class="center-top">
+            <h3 class="pri-list-tit"></h3>
+            <ul class="pri-list02-l clearfix" style="display:block;">
+              <li>
+                  <img class="img1" src="<%= imagessrc%>g1.jpg">
+                  <div class="box">
+                      <p class="des">青少经典英语18单元学习套餐</p>
+                      <p class="price"><span class="least"><b>￥6648</b></span> <small>￥10388</small> </p>
+                      <p class="goumai"><a href="javascript:;" data-point="nor" data-id="23217" data-cart='{"id":23217,"price":"5799","package":"0","cash_card":"0","point_type":"junior_point","point_value":"1","expire_days":"365","point_title":"wwwww"}' data-text="购&nbsp;买" class="buy u-btn jsPre active"></a></p>
+
+                  </div>
+                   <!-- <span class="hot"></span> -->
+                   <div class="hover"></div> 
+              </li>
+              <li>
+                  <img src="<%= imagessrc%>g1.jpg">
+                  <div class="box">
+                      <p class="des">青少经典英语36单元学习套餐</p>
+                      <p class="price"><span class="least"><b>￥10388</b></span> <small>￥14988</small></p>
+                      <p class="goumai"><a href="javascript:;" data-point="nor" data-id="9167" data-cart='{"id":9167,"price":"4088","package":"450","cash_card":"0","point_type":"point","point_value":" 90 ","expire_days":"180"}' data-text="购&nbsp;买" class="buy u-btn jsPre active"></a></p>
+                  </div>
+                  <!-- <span class="rebat"></span> -->
+                  <div class="hover"></div> 
+              </li>
+                <li>
+                  <img src="<%= imagessrc%>g1.jpg">
+                  <div class="box">
+                      <p class="des">180次次卡学习套餐</p>
+                      <p class="price"><span class="least"><b>￥6648</b></span> <small>7188</small> </p>
+                      <p class="goumai"><a href="javascript:;"  class="buy u-btn jsPre active" data-point="nor" data-id="9077" data-cart='{"id":9077,"price":"14666","package":"3600","cash_card":"0","point_type":"month","point_value":" 24 ","expire_days":"720"}' data-text="购&nbsp;买" ></a></p>
+                  </div>
+                  <div class="hover"></div>
+              </li>
+              <li>
+                  <img src="<%= imagessrc%>g1.jpg">
+                  <div class="box">
+                      <p class="des">270次次卡学习套餐</p>
+                      <p class="price"><span class="least"><b>￥8688</b></span> <small>￥10888</small> </p>
+                      <p class="goumai"><a href="javascript:;"  class="buy u-btn jsPre active" data-point="nor" data-id="90730" data-cart='{"id":90730,"price":"14666","package":"3600","cash_card":"0","point_type":"month","point_value":" 24 ","expire_days":"720"}' data-text="购&nbsp;买" ></a></p>
+                  </div>
+                  <div class="hover"></div> 
+            </ul>
+          </div>
+          <div class="center-top center-top2">
+            <h3 class="pri-list-tit"></h3>
+            <ul class="pri-list02-l clearfix" style="display:block;">
+              <li>
+                  <img class="img1" src="<%= imagessrc%>g1.jpg">
+                  <div class="box">
+                      <p class="des">60次次卡学习套餐</p>
+                      <p class="price"><span class="least"><b>￥2333</b></span> <small>￥3688</small> </p>
+                      <p class="goumai"><a href="javascript:;" data-point="nor" data-id="333217" data-cart='{"id":333217,"price":"5799","package":"0","cash_card":"0","point_type":"ct","point_value":"1","expire_days":"365"}' data-text="购&nbsp;买" class="buy u-btn jsPre active"></a></p>
+
+                  </div>
+                   <!-- <span class="hot"></span> -->
+                   <div class="hover"></div> 
+              </li>
+              <li>
+                  <img src="<%= imagessrc%>g1.jpg">
+                  <div class="box">
+                      <p class="des">3个月包月学习套餐</p>
+                      <p class="price"><span class="least"><b>￥2988</b></span> <small>￥4666</small></p>
+                      <p class="goumai"><a href="javascript:;" data-point="nor" data-id="49167" data-cart='{"id":49167,"price":"4088","package":"450","cash_card":"0","point_type":"point","point_value":" 90 ","expire_days":"180"}' data-text="购&nbsp;买" class="buy u-btn jsPre active"></a></p>
+                  </div>
+                  <!-- <span class="rebat"></span> -->
+                  <div class="hover"></div> 
+              </li>
+                <li>
+                  <img src="<%= imagessrc%>g1.jpg">
+                  <div class="box">
+                      <p class="des">90次次卡学习套餐</p>
+                      <p class="price"><span class="least"><b>￥1999</b></span> <small>4000</small> </p>
+                      <p class="goumai"><a href="javascript:;"  class="buy u-btn jsPre active" data-point="nor" data-id="69077" data-cart='{"id":69077,"price":"14666","package":"3600","cash_card":"0","point_type":"month","point_value":" 24 ","expire_days":"720"}' data-text="购&nbsp;买" ></a></p>
+                  </div>
+                  <div class="hover"></div>
+              </li>
+              <li>
+                  <img src="<%= imagessrc%>g1.jpg">
+                  <div class="box">
+                      <p class="des">60次次卡学习套餐</p>
+                      <p class="price"><span class="least"><b>￥1999</b></span> <small>￥3928</small> </p>
+                      <p class="goumai"><a href="javascript:;"  class="buy u-btn jsPre active" data-point="nor" data-id="89077" data-cart='{"id":89077,"price":"14666","package":"3600","cash_card":"0","point_type":"month","point_value":" 24 ","expire_days":"720"}' data-text="购&nbsp;买" ></a></p>
+                  </div>
+                  <div class="hover"></div> 
+            </ul>
+          </div>
+        </div>
+        <span class="garden"></span>
+        <span class="garden s-garden"></span>
+      </div>  
+      <a href="javascript:;" target="_blank" class="l_btn">
+      </a>
+    </div>
+    <div class="rota" id="nav3">
+      <div class="widthMain">
+        <div class="lt">
+            <div class="prize_list">
+                <ul class="names">
+                    <li><span>absefd01</span>学员抽中<b>3张次卡</b></li>
+                    <li><span>songyueyang02</span>学员抽中<b>100元代金卷</b></li>
+                    <li><span>二爷03</span>学员抽中<b>500元代金卷</b></li>
+                    <li><span>LULU04</span>学员抽中<b>3张次卡</b></li>
+                    <li><span>柳文锋05</span>学员抽中<b>3张次卡</b></li>
+                    <li><span>二爷06</span>学员抽中<b>500元代金卷</b></li>
+                    <li><span>LULU07</span>学员抽中<b>3张次卡</b></li>
+                    <li><span>柳文锋08</span>学员抽中<b>3张次卡</b></li>
+                    <li><span>柳文锋09</span>学员抽中<b>3张次卡</b></li>
+                    <li><span>二爷10</span>学员抽中<b>500元代金卷</b></li>
+                    <li><span>LULU11</span>学员抽中<b>3张次卡</b></li>
+                    <li><span>柳文锋12</span>学员抽中<b>3张次卡</b></li>
+                </ul>
+            </div>
+          <ul class="tit">
+            <li>活动规则：</li>
+            <li>1.活动时间：12月2日11：00：00——12月12日 23：59：59</li>
+            <li>2.在活动期间用户购买套餐实际支付4000元及以上后获得一次抽奖机会</li>
+            <li>3.图片仅供参考，以实物为准，非实物类将自动充入账户，实物类将在活动结束后
+由客服联系寄出</li>
+            <li>4.本活动最终解释权归51Talk所有</li>
+          </ul>
+        </div>
+        <div class="dial-bg" id="lottery" prize_site="" prize_id="" nick_name="" prize_name="">
+          <ul class="l_grid clearfix">
+             <li  class="l_prize l_prize-0 l_now"><img src="<%= imagessrc%>card3.png" alt=""></li>
+            <li class="l_prize l_prize-1"><img src="<%= imagessrc%>u.png" alt=""></li>
+            <li class="l_prize l_prize-2"><img src="<%= imagessrc%>mac.png" alt=""></li>
+            <li class="l_prize l_prize-7"><img src="<%= imagessrc%>pro.png" alt=""></li>
+            <li class="pointer"></li>
+            <li class="l_prize l_prize-3"><img src="<%= imagessrc%>jd100.png" alt=""></li>
+            <li class="l_prize l_prize-6"><img src="<%= imagessrc%>kindle.png" alt=""></li>
+            <li class="l_prize l_prize-5"><img src="<%= imagessrc%>l_card.png" alt=""></li>
+            <li class="l_prize l_prize-4" ><img src="<%= imagessrc%>card5.png" alt=""></li>
+          </ul>
+        </div>
+        <a href="javascript:;" class="l_btn" id="prize_log"></a>
+        <span class="garden"></span>
+      </div>
+    </div>
+    <div class="pri-list04" id="nav4"> 
+      <div class="widthMain">
+        <div class="usa-package">
+          <p class="package-tit">美小2单元学习套餐</p>
+          <p class="package-mony"><span class="p-m-left">￥3633</span><span class="p-m-right">原价￥4388</span></p>
+        </div>
+        <a href="javascript:;" target="_blank" class="l_btn"></a>
+        <span class="garden"></span>
+      </div>
+    </div>
+    <div class="pri-list03" id="nav5">
+      <div class="widthMain">
+          <img src="<%= imagessrc%>d_5.png" alt="">
+          <div class="usa-center">
+            <ul class="list clearfix">
+              <li>
+                <div class="hover"></div>
+                <img src="<%= imagessrc%>d_5_01.jpg">
+                <div class="box">
+                    <p class="author clearfix"><strong>佩雯</strong><span>| 12月5日  21:05—21:55</span></p>
+                    <p class="des">Touchstone剑桥口语 精讲版</p>
+                    <p class="price"><strong>￥29</strong><span>原价￥199</span></p>
+                    <div class="buy"><a href="javascript:;" class="order"></a></div>
+                </div>
+              </li>
+              <li>
+                <div class="hover"></div>
+                <img src="<%= imagessrc%>d_5_02.jpg">
+                <div class="box">
+                    <p class="author clearfix"><strong>张阏</strong><span>| 12月6日   13:00—13:50</span></p>
+                    <p class="des">词汇抱团恋 </p>
+                    <p class="price"><strong>￥29</strong><span>原价￥199</span></p>
+                    <div class="buy"><a href="javascript:;" class="order"></a></div>
+                </div>
+              </li>
+              <li>
+                <div class="hover"></div>
+                <img src="<%= imagessrc%>d_5_03.jpg">
+                <div class="box">
+                    <p class="author clearfix"><strong>宋芳</strong><span> | 12月7日  21:05—21:55</span></p>
+                    <p class="des">新概念二册 | 精讲精练</p>
+                    <p class="price"><strong>￥29</strong><span>原价￥199</span></p>
+                    <div class="buy"><a href="javascript:;" class="order"></a></div>
+                </div>
+              </li>
+              <li>
+                <div class="hover"></div>
+                <img src="<%= imagessrc%>d_5_04.jpg">
+                <div class="box">
+                    <p class="author clearfix"><strong>Jack</strong><span>| 12月8日   21:05—21:55</span></p>
+                    <p class="des">玩欧洲 学英语 </p>
+                    <p class="price"><strong>￥29</strong><span>原价￥199</span></p>
+                    <div class="buy"><a href="javascript:;" class="order"></a></div>
+                </div>
+              </li>
+               <li>
+                <div class="hover"></div>
+                <img src="<%= imagessrc%>d_5_05.jpg">
+                <div class="box">
+                    <p class="author clearfix"><strong>梁颖</strong><span>| 12月9日 21:05—21:55</span></p>
+                    <p class="des">新概念英语 | 第三册精讲精练</p>
+                    <p class="price"><strong>￥29</strong><span>原价￥199</span></p>
+                    <div class="buy"><a href="javascript:;" class="order"></a></div>
+                </div>
+              </li>
+              <li>
+                <div class="hover"></div>
+                <img src="<%= imagessrc%>d_5_06.jpg">
+                <div class="box">
+                    <p class="author clearfix"><strong>孜瑜</strong><span>| 12月10日 10:00—10:50</span></p>
+                    <p class="des">新概念英语 | 第一册精讲</p>
+                    <p class="price"><strong>￥29</strong><span>原价￥399</span></p>
+                    <div class="buy"><a href="javascript:;" class="order"></a></div>
+                </div>
+              </li>
+
+              <li>
+                <div class="hover"></div>
+                <img src="<%= imagessrc%>d_5_07.jpg">
+                <div class="box">
+                    <p class="author clearfix"><strong>3Q</strong><span>| 12月11日  21:05—21:55</span></p>
+                    <p class="des">Q谈语法 精讲精练 </p>
+                    <p class="price"><strong>￥29</strong><span>原价￥199</span></p>
+                    <div class="buy"><a href="javascript:;" class="order"></a></div>
+                </div>
+              </li>
+              <li>
+                <div class="hover"></div>
+                <img src="<%= imagessrc%>d_5_08.jpg">
+                <div class="box">
+                    <p class="author clearfix"><strong>王曦</strong><span>| 12月12日 20:00—20:50</span></p>
+                    <p class="des">Remy美剧口语大课堂 | 畅谈《老友记》</p>
+                    <p class="price"><strong>￥29</strong><span>原价￥199</span></p>
+                    <div class="buy"><a href="javascript:;" class="order"></a></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <a href="javascript:;" target="_blank" class="l_btn"></a>
+          <span class="garden l-garden2"></span>
+      </div>
+      
+    </div>
+    
+</div>
+<div class="dialog" id="dialog">
+    <div class="info">
+        <div class="box">
+            <a href="javascript:;" class="close"></a>
+            <h3>恭喜获得：<span class="prizeName">350元代金券</span></h3>
+            <div class="detail">
+                <img src="<%= imagessrc%>card3_2.png" alt="">
+                <img src="<%= imagessrc%>u_2.png" alt="">
+                <img src="<%= imagessrc%>mac_2.png" alt="">
+                <img src="<%= imagessrc%>jd100_2.png" alt="">
+                <img src="<%= imagessrc%>card5_2.png" alt="">
+                <img src="<%= imagessrc%>l_card_2.png" alt="">
+                <img src="<%= imagessrc%>kindle_2.png" alt="">
+                <img src="<%= imagessrc%>pro_2.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 我的抽奖记录和未抽奖 -->
+<div class="dialog2" id="dialog2">
+    <div class="tip tip-1">
+        <a href="javascript:;" class="close"></a>
+        <div class="gold_box"></div>
+        <div class="text text2">
+            <h3>您还没有参与抽奖，快去抽奖吧！</h3>
+        </div>
+    </div>
+    <div class="tip tip-2">
+        <a href="javascript:;" class="close"></a>
+        <div class="gold_box"></div>
+        <div class="text text1">
+            <p>您已获得</p>
+            <h3>迪士尼亲子票2张</h3>
+        </div>
+    </div>
+</div>
+
+
+<!-- 尾部 -->
+<% include ../common/www/w_footer_home.ejs %>
+<!-- 系统通知 -->
+<div class="sysInfo">
+  <div class="dtInfo">
+    <p class="tit">系统通知</p>
+    <p class="test">
+      请先登录访问
+      <a href="/user/user_login.php?from_url=/activity/dodisney" class="down" id="down" target="_blank">我知道了</a>
+    </p>
+  </div> 
+</div>
+<form id="form-cart" name="point_form" action="/pay/order" method="post" target="_blank">
+  <div class="m-cart" id="cart" style="right:-255px; " ><!-- right从 0 到 -251  -->
+    <input type="hidden" name="cart" value='{"cart":[],"package":"off","earphone":"off"}'>
+    <div class="cart-hd"><em class="jsCount">0</em></div>
+    <div class="cart-bd"><!-- width从 0 到 251  -->
+      <div class="cart-in">
+        <div class="title">我的购物车（<em class="jsCount">0</em>）
+          <div class="u-pages">
+            <a class="prev dis-prev" href="javascript:void(0)">&lt;</a>
+            <span class="crt"><em class="jsPageNow">1</em><em>/</em><em class="jsPageCount">1</em></span>
+            <a class="next dis-next" href="javascript:void(0)">&gt;</a>
+          </div>
+        </div>
+        <div class="products">
+            <div class="jsWrap">
+            </div>
+        </div>
+        <div class="addeds" style="visibility: hidden;">
+            <dl class="product">
+                <a class="s-fc6" href="#level">立即购买配套教材，学习效果更佳！</a>
+            </dl>
+            <dl class="product">
+                <dt class="added">
+                    <label class="u-lab jsPackageLabel">
+                        <input class="f-dn" type="checkbox" name="package">
+
+                        <span class="u-txt">+<em class="jsPackage">0</em>元，您还可以选购<a href="javascript:;">电话包</a></span>
+                    </label>
+                </dt>
+            </dl>
+            <dl class="product" style="border-top: 1px solid rgb(228, 234, 238);">
+                <dt class="added">
+                <label class="u-lab jsEarphoneLabel">
+                    <input class="f-dn" type="checkbox" name="earphone">
+                   
+                    <span class="u-txt" data-cart="">+50元，选购高保真耳麦(双插头)</span>
+                </label>
+                </dt>
+            </dl>
+            <p class="differ" style="display:none;">补差价金额：
+                <em class="jsMinuend">10288</em>&nbsp;-&nbsp;
+                <em class="jsMeiosis">3588</em>&nbsp;=&nbsp;
+                <em class="jsDifference">6700</em>
+            </p>
+        </div>
+        <div class="total-orders">订单总金额：<em class="jsTotal" data-total="5799">23045</em></div>
+        <div class="total-orders-stagin" style="display: none;">金额总计：<em class="jsTotal" data-total="5799"></em></div>
+        <div class="submit">
+          <input class="button jsSubmit" type="submit" value="提交订单" style="width: 117px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</form>  
+
+<div class="alert_dialog">
+    <span class="close_alert"></span>
+    <p>只能购买同一类型的套餐哦！</p>
+</div>
+<!-- /m-cart -->
+</body>
+<script src="<%= jssrc%>" id="seajsnode"></script>
+</html>

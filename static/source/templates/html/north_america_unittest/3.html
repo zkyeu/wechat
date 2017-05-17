@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var xuexi = getCookie("tttttt");
+		console.log(xuexi);
+		if(!xuexi){
+			console.log("已经设置cookies");
+			setCookie("tttttt","li");	
+		}else{
+			console.log("还没设置cookies");
+		}
+
+		function getCookie(name)
+		{
+		    var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+		 
+		    if(arr=document.cookie.match(reg))
+		 
+		        return (arr[2]);
+		    else
+		        return null;
+		}
+
+		function setCookie(name,value)
+		{
+		    var Days = 30; 
+		    var exp = new Date(); 
+		    exp.setDate(exp.getDate()+Days)
+        	document.cookie=name+ "=" +escape(value)+((Days==null) ? "" : ";expires="+exp.toGMTString());
+		}
+	</script>
+	
+</body>
+</html>
+
+

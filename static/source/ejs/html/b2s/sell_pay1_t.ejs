@@ -1,0 +1,172 @@
+<% include ../common/top.ejs %>
+<link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>sell_pay_t.css">
+<body id="container" data-init="index">
+<!-- 公共头 -->
+<% include ../common/b2s/b2s_header.ejs %>
+<div class="dialog">
+  <div class="content">
+    <div class="tips">
+      <h4>创建班级</h4>
+      <a class="close" href="javascript:;"></a>
+    </div>
+    <div class="info"></div>
+    <div class="submit">
+        <a href="javascript:;">立即创建</a>
+    </div>
+  </div>
+</div>
+<!-- 中间内容 -->
+<div class="mycls bg-s">
+  <div class="widthMain">
+    <!-- banner -->
+    <% include ../common/b2s/b2s_banner.ejs %>
+    <div class="central central-bg">
+      <i class="cls-icon"></i>
+      <div class="stu_tit">
+        <dl>
+          <dt><img src="<%= imagessrc%>stu.jpg" alt=""></dt>
+          <dd class="intro_one"><span>流川枫</span> 同学</dd>
+          <dd>班级：三年二班</dd>
+          <dd>老师：林徽因</dd>
+        </dl>
+      </div>
+    <!-- 侧栏 -->
+    <% include ../common/b2s/b2s_sidebar_new.ejs %>
+      <div class="cls-main color-s">
+        <!-- 我的班级 -->
+        <div class="cls-tab rct top-value">
+          <div class="class-pay"></div>
+          <div>
+            <a href="javascript:;">
+              <img src="<%= imagessrc%>rct_banner1.jpg"/>
+            </a>
+          </div>
+          <div class="pay-info bg-many clearfix">
+            <div class="left-box top-left02">
+              <div class="class-tit">外教VIP精品课</div>
+              <div class="class-des-t">拓展学校课堂知识  1对20外教小班授课</div>
+              <div class="class-n">
+                <span>共30节课   1节/周</span>
+              </div>
+              <div class="class-price">
+                <span><i>￥</i>298<i>/月</i></span>
+                原价￥500
+              </div>
+              <div class="class-btn btn-many btn-t1">
+                <a href="javascript:;">立即报名</a>
+              </div>
+              
+            </div>
+            <div class="right-box">
+              <div class="class-info">VIP学员特权</div>
+              <ul>
+                <li><span></span>外教授课</li>
+                <li><span></span>趣味课外作业</li>
+                <li><span></span>精品课作业</li>
+                <li><span></span>同步课标拓展教材</li>
+                <li><span></span>上课举手发言</li>
+                <li><span></span>上课答题</li>
+              </ul>
+            </div>
+          </div>
+          <!-- 非小达拉斯 -->
+          <!-- <div class="pay-info bg-one clearfix">
+            <div class="left-box top-left02">
+              <div class="class-tit">1对1外教全程托管班</div>
+              <div class="class-des-t">外教1对1练口语 中教班课提成绩</div>
+              <div class="class-n">
+                <span>4节/周</span>
+              </div>
+              <div class="class-price class-price-o class-price-s">
+                <span class="th-s">VIP新生特会包198/月</i></span>
+                原价￥390
+              </div>
+              
+              <div class="class-btn btn-one">
+                <a href="javascript:;">立即报名</a>
+              </div>
+              
+            </div>
+            <div class="left-box top-left02">
+              <div class="class-tit">外教专属1对1课</div>
+              <div class="class-des-t">量身定制教材 1对1外教全程互动授课</div>
+              <div class="class-n">
+                <span>15节课/月   随时约课</span>
+              </div>
+              <div class="class-price class-price-o">
+                <span><i>￥</i>598<i>/月</i></span>
+                原价￥898
+              </div>
+               <div class="class-vip"><span>VIP立减100元</span> ￥498/月</div>
+              <div class="class-btn btn-one">
+                <a href="javascript:;">立即报名</a>
+              </div>
+              
+            </div>
+
+            <div class="right-box">
+              <div class="class-info">付费学员服务</div>
+              <ul>
+                <li><span></span>1对1专属外教</li>
+                <li><span></span>25分钟强互动</li>
+                <li><span></span>青少化上课教室</li>
+                <li><span></span>中教全程辅导</li>
+                <li><span></span>专用教材学习</li>
+                <li><span></span>制定学习规划</li>
+              </ul>
+            </div>
+          </div> -->
+
+          <!-- 美小达拉斯 -->
+          <div class="pay-info bg-two clearfix">
+            <div class="countDown-wrap">
+              <p class="countDown js_countDown js_sell_pay1_t" unknownPrice="?48" salePrice="148" systime="1494661853" startTime="1494661863" endTime="1494661873">距离<i class="js_startendtext">结束</i>仅剩<i class="js_day">0</i>天 <span class="countDown-box js_hour">00</span>：<span class="countDown-box js_minute">00</span>：<span class="countDown-box js_second">00</span></p>
+            </div>
+            <div class="left-box top-left03">
+              <div class="class-tit">美国小学精英托管班</div>
+              <div class="class-des-t">在家上美国小学，给孩子更高的起点！</div>
+              <div class="class-n">
+                <span>共8节课，4节/周</span>
+              </div>
+              <div class="class-price class-price-o class-price-s">
+                <!-- <span class=""><em>￥298/月</em></span> -->
+                <span class="th-m">VIP新生特会包<i class="js_price">198</i>/月</span>
+                原价￥500
+              </div>
+              
+              <div class="class-btn btn-one js_countDown_btn1">
+                <a href="javascript:;">立即报名</a>
+              </div>
+              <div class="class-btn btn-notStarted disnone js_countDown_btn2">
+                <a href="javascript:;">活动暂未开始</a>
+              </div>
+              
+            </div>
+            <div class="right-box">
+              <div class="class-info">付费学员服务</div>
+              <ul>
+                <li><span></span>北美外教1对1</li>
+                <li><span></span>沉浸式个性化教学</li>
+                <li><span></span>中教全程辅导</li>
+                <li><span></span>权威学术教材</li>
+                <li><span></span>一站式学习平台</li>
+              </ul>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>
+<input type="hidden" id="priceId" value="598"/>
+<input type="hidden" id="discountPrice" value="100"/>
+<input type="hidden" id="packageId" value="1"/>
+<!--公共弹层-->
+<div class="layer hide" id="layerTip">
+  <p>温馨提示<i class="tenIcon ly-icon"></i></p>
+  <div class="ly-tit">该课程是通过AC客户端上课，请<a href="javascript:;">点击下载</a>安装。如已经安装,请以学生身份注册账户，登录AC上课。</div>  
+</div>
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

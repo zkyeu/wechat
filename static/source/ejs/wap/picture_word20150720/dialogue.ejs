@@ -1,0 +1,48 @@
+<% include ../common/top.ejs %>
+<body>
+    <div class="whole">
+        <section id="dg_wrapper" >
+            <article data-init="51audio" id="container">
+                <h3 class="title">The football is white。The football is white。The football is white。The football is white。The football is white。The football is white。The football is white。</h3>
+                <ul>
+                    <li class="bigImg">
+                        <img class="jsPlayer" data-audiosrc="md.mp3" src="<%= imagessrc%>pw_img01.jpg">
+                        <div class="switch-on switch" ><i></i></div>
+                    </li>
+<!--                     <li class="bigImg">
+                        <h3 class="title">The football is white。</h3>
+                        <img class="jsPlayer" data-audiosrc="1.mp3" src="<%= imagessrc%>pw_img04.jpg">
+                        <div class="switch-on switch" ><i></i></div>
+                    </li> -->
+                </ul>
+            </article>
+            <article>
+                <div class="jsPlayer switch-on  switch" data-audiosrc="2.mp3" id="realword"></div>
+                <ul>
+                    <li class="smallImg" answer="1" onclick='isRight(this,1)' id="realone">
+                        <img src="<%= imagessrc%>pw_img.jpg"><span></span><span style="display: none" class="fail"></span><span class="correct" style="display: none"></span>
+                    </li>
+                    <li class="smallImg" answer="0" onclick='isRight(this,0)' data-err-index="0">
+                        <img src="<%= imagessrc%>pw_img01.jpg"><span></span><span style="display: none" class="fail"></span><span class="correct" style="display: none"></span>
+                        <span class="mask"></span>
+                    </li>
+                    <!-- <li class="smallImg" answer="0" onclick='isRight(this,0)' data-err-index="1">
+                        <img src="<%= imagessrc%>pw_img02.jpg"><span></span><span style="display: none" class="fail"></span><span style="display: none" class="correct"></span>
+                        <span class="mask"></span>
+                    </li> -->
+                </ul>
+            </article>
+            <!-- <article><a href="javascript:;" onclick="submit()" style="display: none" id="next">下一页</a></article> -->
+        </section>
+        <div class="next" id="next" onclick="submit()">
+            <a href="javascript:;">下一页</a>
+            <form id="c_dia" style="dispaly: none" action="http://www.baidu.com" methond="post">
+                <input id="c_count" name="count" type="hidden">
+                <input id="c_restime" name="restime" type="hidden">
+            </form>
+        </div>
+    </div>
+    <audio id="success" src="yes.mp3"></audio>
+    <audio id="fault" src="no.mp3"></audio>
+</body>
+<% include ../common/reg_bottom.ejs %>

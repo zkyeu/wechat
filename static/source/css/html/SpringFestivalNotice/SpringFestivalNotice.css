@@ -1,0 +1,521 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Mon Jan 25 2016 18:13:04 GMT+0800 (中国标准时间)
+ */
+/**
+ * 默认样式
+ * @file：   base.less
+ * @author:  chenxiaosong（chenxiaosong@51talk.com）
+ * @update:  2015-10-12
+ * @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  background-color: #fff;
+  _background-image: url(about:blank);
+  _background-attachment: fixed;
+  _overflow-x: hidden;
+}
+body {
+  font: 13px 'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial, Verdana, Tahoma;
+  color: #1e1e1e;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+}
+input,
+button,
+select,
+textarea {
+  font-family: 'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial, Verdana, Tahoma;
+  outline: none;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 0;
+}
+a {
+  color: #1e1e1e;
+  text-decoration: none;
+  outline: none;
+}
+a:hover {
+  color: #ff9600;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  vertical-align: middle;
+}
+::-moz-selection {
+  background-color: #ff9600;
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background-color: #ff9600;
+  color: white;
+  text-shadow: none;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  *zoom: 1;
+  *display: inline;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.relative {
+  position: relative;
+}
+.relativez {
+  position: relative;
+  zoom: 1;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.hidden {
+  overflow: hidden;
+}
+.ft12 {
+  font-size: 12px;
+}
+.ft13 {
+  font-size: 13px;
+}
+.ft14 {
+  font-size: 14px;
+}
+.ft15 {
+  font-size: 15px;
+}
+.ft16 {
+  font-size: 16px;
+}
+.ft18 {
+  font-size: 18px;
+}
+.ft19 {
+  font-size: 19px;
+}
+.ft20 {
+  font-size: 20px;
+}
+.normal {
+  font-weight: normal;
+}
+.bold {
+  font-weight: bold;
+}
+.tal {
+  text-align: left;
+}
+.tac {
+  text-align: center;
+}
+.tar {
+  text-align: right;
+}
+.f-taj {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+.f-vam,
+.f-vama * {
+  vertical-align: middle;
+}
+.f-wsn {
+  word-wrap: normal;
+  white-space: nowrap;
+}
+.f-pre {
+  overflow: hidden;
+  text-align: left;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.f-wwb {
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.f-ti {
+  overflow: hidden;
+  text-indent: -30000px;
+}
+.f-ti2 {
+  text-indent: 2em;
+}
+.f-lhn {
+  line-height: normal;
+}
+.f-tdu,
+.f-tdu:hover {
+  text-decoration: underline;
+}
+.f-tdn,
+.f-tdn:hover {
+  text-decoration: none;
+}
+.f-toe {
+  overflow: hidden;
+  word-wrap: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.f-csp {
+  cursor: pointer;
+}
+.f-csd {
+  cursor: default;
+}
+.f-csh {
+  cursor: hand;
+}
+.f-csm {
+  cursor: move;
+}
+.f-usn {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.fm-arrow-pos {
+  border-style: solid;
+  border-color: #ffa800;
+  border-width: 1px;
+}
+body {
+  background: #dedede;
+}
+.sf_header {
+  height: 80px;
+  width: 100%;
+  background-color: #ffa800;
+}
+.sf_header .sf_headerIn {
+  width: 700px;
+  height: 80px;
+  margin: 0 auto;
+}
+.sf_header .sf_headerIn .sf_header_l {
+  float: left;
+  width: 180px;
+  height: 80px;
+  position: relative;
+}
+.sf_header .sf_headerIn .sf_header_l i {
+  height: 50px;
+  width: 150px;
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  background: url(../../../images/html/SpringFestivalNotice/sf_logo.png?v=h6%2B6EG4Q0MpNKLAxQQUMew%3D%3D) no-repeat;
+}
+.sf_header .sf_headerIn .sf_header_m {
+  height: 80px;
+  width: 370px;
+  float: left;
+  position: relative;
+  font-size: 14px;
+  line-height: 80px;
+  text-indent: 20px;
+}
+.sf_header .sf_headerIn .sf_header_m i {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  height: 40px;
+  width: 1px;
+  border-right: 1px solid #000;
+}
+.sf_header .sf_headerIn .sf_header_r {
+  height: 80px;
+  position: relative;
+  float: left;
+}
+.sf_header .sf_headerIn .sf_header_r i {
+  height: 30px;
+  width: 132px;
+  display: block;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  background: url(../../../images/html/SpringFestivalNotice/sf_logo.png?v=h6%2B6EG4Q0MpNKLAxQQUMew%3D%3D) no-repeat -150px 0;
+}
+.sf_banner {
+  height: 320px;
+  width: 700px;
+  margin: 0 auto;
+  background: url(../../../images/html/SpringFestivalNotice/sf_banner.jpg?v=ld8oXbpqaZAs5yFAjg2O6w%3D%3D) no-repeat;
+}
+.sf_title {
+  width: 645px;
+  height: 82px;
+  margin: 0 auto;
+  padding: 50px 35px 40px 20px;
+  background: #fff;
+}
+.sf_title h3 {
+  font-size: 16px;
+  color: #ff8200;
+  font-weight: 900;
+}
+.sf_title p {
+  font-size: 14px;
+  line-height: 25px;
+}
+.sf_plan {
+  margin: 0 auto;
+  width: 645px;
+  height: 500px;
+  padding: 0 35px 0 20px;
+  background: #fff;
+}
+.sf_plan h3 {
+  margin-bottom: 45px;
+  color: #ffa800;
+  font-size: 16px;
+}
+.sf_plan .sf_plan01 span {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+.sf_plan .sf_plan01 span h4 {
+  text-indent: 20px;
+}
+.sf_plan .sf_plan01 span i {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  display: block;
+  height: 16px;
+  width: 16px;
+  text-align: center;
+  line-height: 16px;
+  background: #ffa800;
+  color: #fff;
+}
+.sf_plan .sf_plan01 p {
+  margin: 24px auto 55px;
+  font-size: 14px;
+  color: #999999;
+}
+.sf_plan .sf_plan01 p em {
+  color: #ffa800;
+}
+.sf_plan .sf_plan01 p span {
+  color: #000;
+}
+.sf_plan .sf_line {
+  height: 4px;
+  width: 100%;
+  border-top: 1px solid #ccc;
+}
+.sf_wish {
+  width: 645px;
+  margin: 0 auto;
+  padding: 55px 35px 50px 20px;
+  height: 50px;
+  position: relative;
+  background: #fff;
+}
+.sf_wish h3 {
+  font-size: 16px;
+  color: #ff8200;
+  line-height: 30px;
+}
+.sf_wish i {
+  height: 100px;
+  width: 210px;
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 30px;
+  background: url(../../../images/html/SpringFestivalNotice/sf_bot.jpg?v=jyYippI%2Bz6oFLdksHTRTYA%3D%3D) no-repeat;
+}
+.sf_bot {
+  height: 70px;
+  width: 100%;
+  margin: 0 auto;
+  background: #ffa800;
+  padding-top: 20px;
+}
+.sf_bot .sf_botIn {
+  text-align: center;
+  line-height: 28px;
+  font-size: 13px;
+}
+.sf_footer {
+  width: 700px;
+  height: 38px;
+  padding: 20px 0;
+  margin: 0 auto;
+  font-size: 12px;
+}
+.sf_footer p {
+  line-height: 24px;
+}
+.sf_footer a {
+  font-szie: 12px;
+  color: #ffa800;
+}

@@ -1,0 +1,119 @@
+<% include ../common/top.ejs %>
+<link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>sell_pay.css">
+<body id="container" data-init="index">
+  <input type="hidden" data-init="sellPay">
+<!-- 公共头 -->
+<% include ../common/b2s/b2s_header.ejs %>
+<div class="dialog">
+  <div class="content">
+    <div class="tips">
+      <h4>创建班级</h4>
+      <a class="close" href="javascript:;"></a>
+    </div>
+    <div class="info"></div>
+    <div class="submit">
+        <a href="javascript:;">立即创建</a>
+    </div>
+  </div>
+</div>
+<!-- 中间内容 -->
+<div class="mycls bg-s">
+  <div class="widthMain">
+    <!-- banner -->
+    <% include ../common/b2s/b2s_banner.ejs %>
+    <div class="central">
+      <i class="cls-icon"></i>
+      <div class="stu_tit">
+        <dl>
+          <dt><img src="<%= imagessrc%>stu.jpg" alt=""></dt>
+          <dd class="intro_one"><span>流川枫</span> 同学</dd>
+          <dd>班级：三年二班</dd>
+          <dd>老师：林徽因</dd>
+        </dl>
+        <p class="stu_number">学生邀请码：123456</p>
+      </div>
+    <!-- 侧栏 -->
+    <% include ../common/b2s/b2s_sidebar.ejs %>
+      <div class="cls-main color-s">
+        <!-- 我的班级 -->
+        <div class="cls-tab rct top-value">
+          <div class="class-pay"></div>
+          <div>
+            <img src="<%= imagessrc%>banner_01.jpg"/>
+          </div>
+          <div class="pay-info bg-many clearfix">
+            <div class="left-box top-left02">
+              <div class="class-tit">外教VIP精品课</div>
+              <div class="class-des-t">拓展学校课堂知识  1对20外教小班授课</div>
+              <div class="class-n">
+                <span>共30节课   1节/周</span>
+                <span class="class-o-p"><i></i>仅有3次课次就用完喽！</span>
+              </div>
+              <div class="class-price">
+                <span><i>￥</i>298<i>/月</i></span>
+                原件￥500
+              </div>
+              <div class="class-btn btn-many btn-t1">
+                <a href="javascript:;">立即续报</a>
+              </div>
+              
+            </div>
+            <div class="right-box">
+              <div class="class-info">付费学员服务</div>
+              <ul>
+                <li><span></span>外教授课</li>
+                <li><span></span>趣味课外作业</li>
+                <li><span></span>精品课作业</li>
+                <li><span></span>同步课标拓展教材</li>
+                <li><span></span>上课举手发言</li>
+                <li><span></span>上课答题</li>
+              </ul>
+            </div>
+          </div>
+          <div class="pay-info bg-one clearfix">
+            <div class="left-box top-left02">
+              <div class="class-tit">外教专属1对1课</div>
+              <div class="class-des-t">量身定制教材 1对1外教全程互动授课</div>
+              <div class="class-n">
+                <span>15节课/月   随时约课</span>
+                <span class="class-n-p"><i></i>仅有3次课次就用完喽！</span>
+              </div>
+              <div class="class-price class-price-o">
+                <span><i>￥</i>598<i>/月</i></span>
+                原件￥898
+              </div>
+              <div class="class-vip">￥498/月  <span>VIP优惠价</spn></div>
+              <div class="class-btn btn-one">
+                <a href="javascript:;">立即续报</a>
+              </div>
+              
+            </div>
+            <div class="right-box">
+              <div class="class-info">VIP学员特权</div>
+              <ul>
+                <li><span></span>1对1专属教学</li>
+                <li><span></span>量身定制教材</li>
+                <li><span></span>青少化上课教室</li>
+                <li><span></span>自主约课 高频学习</li>
+                <li><span></span>25分钟全程强互动</li>
+                <li><span></span>专业级别测评课</li>
+              </ul>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>
+<input type="hidden" id="priceId" value="598"/>
+<input type="hidden" id="discountPrice" value="100"/>
+<input type="hidden" id="packageId" value="1"/>
+<!--公共弹层-->
+<div class="layer hide" id="layerTip">
+  <p>温馨提示<i class="tenIcon ly-icon"></i></p>
+  <div class="ly-tit">该课程是通过AC客户端上课，请<a href="javascript:;">点击下载</a>安装。如已经安装,请以学生身份注册账户，登录AC上课。</div>  
+</div>
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

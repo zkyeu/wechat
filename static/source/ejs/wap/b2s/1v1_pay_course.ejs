@@ -1,0 +1,59 @@
+<% include ../common/top_b2s_n.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>1v1_pay_course.css">
+</head>
+<body data-init="" class="pay_course_1v1">
+    <div class="course-top"><img src="<%= imagessrc%>1v1-pay-course-02.png"></div>
+    <div class="course-tit"><span>购买课程服务</span></div>
+    <ul class="course-items">
+        <li>
+            <a href="#"></a>
+            <div class="course-item-top course-item-bg1">
+                <div class="item-top-tit">外教VIP精品课</div>
+                <div class="item-top-introduce">拓展学校课堂知识  1对20外教小班授课</div>
+            </div>
+            <div class="course-item-bottom cfix">
+                <div class="course-item-bottom-l fl"><span class="font0">¥298</span><span class="font1">/年</span><span class="font2">原价 ¥500</span></div>
+                <div class="course-item-bottom-r fr"><span class="font3">共32节 1节/周</span></div>
+            </div>
+        </li>
+        <li>
+            <a href="#"></a>
+            <div class="course-item-top course-item-bg2">
+                <div class="item-top-tit">专属外教1对1课</div>
+                <div class="item-top-introduce">量身定制教材  1对1外教全程互动授课</div>
+            </div>
+            <div class="course-item-bottom cfix">
+                <div class="course-item-bottom-l2 fl"><span class="font4">¥298</span><span class="font1-1">/年</span><span class="font2">原价 ¥500</span><br><span class="font5">¥498/月 VIP价</span></div>
+                <div class="course-item-bottom-r fr"><span class="font3">15节/月 随时约课</span></div>
+            </div>
+        </li>
+        <li>
+            <a href="#"></a>
+            <div class="course-item-top course-item-bg2">
+                <div class="item-top-tit">专属外教1对1课</div>
+                <div class="item-top-introduce">量身定制教材  1对1外教全程互动授课</div>
+            </div>
+            <div class="course-item-bottom cfix">
+                <div class="course-item-bottom-l3 fl"><span class="font1-3">了解产品特色</span></div>
+                <div class="fr course-item-bottom-r1"><img src="<%= imagessrc%>app-serviceRecord-01.png"></div>
+            </div>
+        </li>
+    </ul>
+    <div class="course-bottom">
+        <div class="course-bottom-in"><img src="<%= imagessrc%>1v1-pay-course-03.png"></div>
+    </div>
+
+
+<!-- loading -->
+<div id="fontSizeLoding">
+    <img src="<%= imagessrc%>eff_loading.gif">
+</div>
+<script type="text/javascript">
+window.onload = function(){
+    document.documentElement.style.fontSize = document.body.clientWidth / 7.5 + "px";
+    document.getElementById("fontSizeLoding").style.display = "none";
+}
+</script>
+</body>
+<!--公共尾部结束-->
+<% include ../common/bottom.ejs %>

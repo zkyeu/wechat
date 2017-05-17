@@ -1,0 +1,25 @@
+<!-- 倒计时 -->
+<%
+	var needTime = !((pageTag.pType == "stu" && pageTag.fType == "result") || (pageTag.fType == "send"));
+	var lefttime = 2000;
+	if( (pageTag.fType == "result" || pageTag.fType == "result_multi") && (pageTag.pType == "tea") ){
+		lefttime = 10;
+	}
+%>
+<div class="ac-tem-info">
+	<ul class="clearfix">
+    	<li class="ac-timmer"<%= needTime ? " left-time="+lefttime+"" : "" %>>
+    		<span><%= needTime ? "" : "00:00" %></span>
+    	</li>
+    	<!-- <li class="ac-beans">
+            <span>+999</span>
+        </li> -->
+    </ul>
+    <% if(pageTag.fType == "play"){ %>
+    <div class="ac-drag-t">
+        <div class="ac-drag-i">
+            <p>Listen and choose the correct answer to the question.</p>
+        </div>
+    </div>
+    <% } %>
+</div>

@@ -1,0 +1,66 @@
+<% include ../common/top.ejs %>
+<%
+    var pageTag = {
+        gType : "drag",
+        pType : "tea",
+        fType : "result_multi",
+        dragType : "1"
+    }
+%>
+<% include module/drag/h.ejs %>
+    <div class="ac-tem">
+
+        <% include module/drag/t.ejs %>
+
+        <div class="ac-tem-con">
+            <div class="ac-tem-wrap">
+                <!-- 倒计时模块 -->
+                <% include module/drag/i.ejs %>
+                
+                <!-- 答题模块 -->
+                <% include module/drag/m.ejs %>
+
+            </div>
+        </div>
+
+        <div class="ac-tem-result-mask"></div>
+        <div class="ac-tem-result-wait">
+            <div class="wait-tips">
+                <a href="javascript:void(0);" class="wait-tips-close"></a>
+                <dl class="wait-tips-in">
+                    <dt>Student answering now</dt>
+                    <dd><span>Tips：</span>please no speaking, the student is logining his/her voice, the student is logining his/her voice, the student is logining his/her voice</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="ac-tem-result-con">
+            <div class="ac-tem-result-con-in">
+                <ul class="tea-choice-result-multi">
+                    <li>
+                        <dl class="clearfix">
+                            <dt>Excellent：</dt>
+                            <dd data-flag="excellent">0</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl class="clearfix">
+                            <dt>Very Good：</dt>
+                            <dd data-flag="very_good">0</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl class="clearfix">
+                            <dt>Do Better：</dt>
+                            <dd data-flag="do_better">0</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<form name="class-info" action="http://www.baidu.com">
+    <input type="hidden" name="q_id" value="100" />
+    <input type="hidden" name="b2s_course_id" value="4653" />
+</form>
+</body>
+<% include ../common/bottom.ejs %>

@@ -1,0 +1,110 @@
+<% include ../common/top.ejs %>
+<body>
+  <!-- <input type="hidden" id="container" data-init="teaClass"> -->
+<!-- 公共头 -->
+<% include ../common/b2s/b2s_header.ejs %>
+<!-- 中间内容 -->
+<input type="hidden" id="container" data-init="">
+<div class="mycls">
+  <div class="widthMain">
+    <!-- banner -->
+    <% include ../common/b2s/b2s_banner.ejs %>
+    <div class="central">
+      <i class="cls-icon"></i>
+      <div class="stu_tit">
+        <dl>
+          <dt><img src="<%= imagessrc%>stu.jpg" alt=""></dt>
+          <dd class="buy-tag">
+            <em>
+              <i class="tag-i"><i class="arr-out"><i class="arr-in"></i></i>已购买 精品外教辅导课</i>
+            </em>
+          </dd>
+          <dd><span>流川枫</span> 同学</dd>
+          <dd>班级：三年二班</dd>
+          <dd>老师：林徽因</dd>
+        </dl>
+        <p class="stu_number">学生邀请码：123456</p>
+      </div>
+      <%include ../common/b2s/b2s_sidebar%>
+      <div class="cls-main">
+        <!-- 近期公开课 -->
+        <div class="cls-tab cls-list">
+          <div class="stu-cls stu-taste tea-class">
+            <div class="stu-tit-l">
+              <ul>
+                <li class="cur">
+                  <a href="">精品辅导课</a>
+                  <i>&nbsp;</i>
+                </li>
+                <li>
+                  <a href="beyond_public_class_top.html">校园公开课</a>
+                  <i>&nbsp;</i>
+                </li>
+              </ul>
+              <a href="javascript:;" class="do-cls"><i class="tenIcon do-icon"  style="display:inline-block;"></i>如何上课</a>
+            </div>
+          </div>
+        </div> 
+        <a href="" class="view_s_return">< 返回</a>
+        <table class="view_student">
+            <thead>
+              <tr>
+                <td width="102">上课日期</td>
+                <td width="102">上课时间</td>
+                <td width="64">班级</td>
+                <td>学生</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="2">2016.08.18</td>
+                <td rowspan="2">19:00-19:30</td>
+                <td>6班</td>
+                <td  class="stu_name">白居易 白居易 白居易白居易白居 易白居 易白居易白 居易 白居易白居易白居易白居易白居易白居易白居易</td>
+              </tr>
+              <tr>
+                <td>2班</td>
+                <td>穆罕默德</td>
+              </tr>
+              <tr>
+                <td rowspan="3">2016.08.18</td>
+                <td>19:00-19:30</td>
+                <td>一班</td>
+                <td>温庭筠</td>
+              </tr>
+              <tr>
+                <td rowspan="2">19:00-19:30</td>
+                <td>一班</td>
+                <td>杜甫</td>
+              </tr>
+              <tr>
+                <td>一班</td>
+                <td>欧阳修</td>
+              </tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 底部浮层 -->
+<div class="btm_float"></div>
+<div class="btm_float_show">
+  <!-- 左侧提示 -->
+  <div class="tit_hand_left">
+    <p class="hide">微信扫描二维码，登录学生账户<br/>获取课程详情和上课信息</p>
+    <p>微信扫描二维码，登录老师账户<br/>获取课程详情和学生信息
+    </p>
+  </div>
+  <!-- 右侧二维码和关闭按钮 -->
+  <div class="code_right">  
+    <i class="close_ly"></i>
+    <p>关注"51Talk"中小学英语</p>
+  </div>
+</div>
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+</body>
+<% include ../common/bottom.ejs %>
+<script type="text/javascript" src="http://static.51talk.com/static/js/html/lib/ckplayer/ckplayer.min.js?v=1458124036737"></script>

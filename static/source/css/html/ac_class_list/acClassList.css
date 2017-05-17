@@ -1,0 +1,313 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ */
+.acClassList {
+  min-width: 840px;
+  padding: 10px;
+}
+.acClassList .banner {
+  width: 740px;
+  height: 68px;
+  line-height: 68px;
+  padding-left: 100px;
+  margin: 0px auto 0px;
+  color: #ff8020;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ff8020;
+  background: url(../../../images/html/ac_class_list/notice.png?v=R3SadWiBsCK8Zq59xxEiuQ%3D%3D) no-repeat left;
+}
+.acClassList .class_number {
+  font-size: 16px;
+  padding: 30px 0 20px;
+}
+.acClassList .class_number span {
+  color: #a3a3a3;
+}
+.acClassList .find_class_list {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 10px;
+}
+.acClassList .find_class_list .float {
+  font-size: 16px;
+  float: left;
+  padding-right: 10px;
+  line-height: 30px;
+  border-radius: 4px;
+  border: 1px solid #e5e5e5;
+  height: 30px;
+  margin-right: 10px;
+}
+.acClassList .find_class_list .float p {
+  padding-right: 20px;
+  padding-left: 10px;
+  background: url(../../../images/html/ac_class_list/select.png?v=GaH0q0rVpTPlrfiT6R1oHw%3D%3D) no-repeat right;
+  cursor: pointer;
+}
+.acClassList .find_class_list .float .both_s {
+  background-position-x: 140px;
+}
+.acClassList .find_class_list .float ul {
+  background: #fff;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #e5e5e5;
+  position: relative;
+  top: 11px;
+  display: none;
+  z-index: 999;
+}
+.acClassList .find_class_list .float ul li {
+  cursor: pointer;
+  color: #8e8e8e;
+}
+.acClassList .find_class_list .float ul li:hover {
+  background-color: #f1f1f1;
+  color: #3a3a3a;
+}
+.acClassList .find_class_list .float ul:after {
+  position: absolute;
+  content: "";
+  width: 22px;
+  height: 9px;
+  top: -9px;
+  background: url(../../../images/html/ac_class_list/raduis.png?v=5Ptu9SCX3wTramCcGrKPxA%3D%3D) no-repeat;
+}
+.acClassList .find_class_list .choose_class {
+  width: 95px;
+}
+.acClassList .find_class_list .choose_class ul {
+  width: 105px;
+}
+.acClassList .find_class_list .choose_time {
+  width: 120px;
+}
+.acClassList .find_class_list .choose_time ul {
+  width: 130px;
+}
+.acClassList .find_class_list .choose_classTap {
+  width: 95px;
+}
+.acClassList .find_class_list .choose_classTap ul {
+  width: 105px;
+}
+.acClassList .find_class_list .choose_select {
+  width: 360px;
+  position: relative;
+}
+.acClassList .find_class_list .choose_select p {
+  background-color: #eeeeee;
+}
+.acClassList .find_class_list .choose_select ul {
+  width: 130px;
+}
+.acClassList .find_class_list .choose_select .select_box {
+  float: left;
+  width: 165px;
+}
+.acClassList .find_class_list .choose_select input {
+  position: absolute;
+  height: 26px;
+  width: 170px;
+  top: 0;
+  width: 193px;
+  padding-left: 10px;
+  border: 1px solid #fff;
+}
+.acClassList .find_class_list .choose_select input.cli {
+  border: 1px solid #ff8020;
+}
+.acClassList .find_class_list .search {
+  padding: 0 15px;
+  background-color: #ff8020;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 0;
+}
+.acClassList .find_class_list .sub_btn {
+  display: none;
+}
+.acClassList .class_message .class_box {
+  font-size: 16px;
+}
+.acClassList .class_message .class_box .start_time {
+  float: left;
+  padding: 10px 0;
+  color: #ff8020;
+  padding-left: 24px;
+  padding-right: 10px;
+  background: url(../../../images/html/ac_class_list/icon-ra.png?v=sPcHIm2UPdyI32x8V5vMPQ%3D%3D) no-repeat left;
+}
+.acClassList .class_message .class_box .time_gray {
+  color: #d7d7d7;
+  background: url(../../../images/html/ac_class_list/icon_gray.png?v=KHeURbrAj4IjdQI4u28X8w%3D%3D) no-repeat left;
+}
+.acClassList .class_message .class_box .class_right {
+  padding: 15px 0 10px 0;
+  border-bottom: 1px dotted #e6e6e6;
+  margin-left: 78px;
+}
+.acClassList .class_message .class_box .class_right .lesson_image {
+  position: relative;
+  width: 130px;
+  height: 100px;
+  float: left;
+}
+.acClassList .class_message .class_box .class_right .lesson_image img {
+  width: 130px;
+  height: 100px;
+}
+.acClassList .class_message .class_box .class_right .lesson_image p {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.acClassList .class_message .class_box .class_right .lesson_image span {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  display: block;
+  width: 56px;
+  height: 56px;
+  background: url(../../../images/html/ac_class_list/lesson-icon.png?v=98HPed2Ig8Yce%2BGBYUvKkA%3D%3D) no-repeat;
+}
+.acClassList .class_message .class_box .class_right .lesson_image .icon_1 {
+  background-position: 0 0;
+}
+.acClassList .class_message .class_box .class_right .lesson_image .icon_2 {
+  background-position: 0 -70px;
+}
+.acClassList .class_message .class_box .class_right .lesson_image .icon_3 {
+  background-position: 0 -145px;
+}
+.acClassList .class_message .class_box .class_right .lesson_image .icon_4 {
+  background-position: 0 -218px;
+}
+.acClassList .class_message .class_box .class_right .lesson_mesage {
+  float: left;
+  padding-left: 15px;
+  max-width: 470px;
+}
+.acClassList .class_message .class_box .class_right .lesson_mesage .title {
+  font-size: 16px;
+  color: #474747;
+  padding-bottom: 50px;
+  max-width: 470px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+.acClassList .class_message .class_box .class_right .lesson_mesage .inter_class {
+  position: relative;
+}
+.acClassList .class_message .class_box .class_right .lesson_mesage .inter_class .tips {
+  display: none;
+  z-index: 88;
+  position: absolute;
+  width: 310px;
+  height: 108px;
+  border: 1px solid #cccccc;
+  background: #fff;
+  left: 40px;
+  top: -127px;
+  padding: 10px 0 0 10px;
+}
+.acClassList .class_message .class_box .class_right .lesson_mesage .inter_class .tips:before {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 122px;
+  width: 12px;
+  height: 6px;
+  background: url(../../../images/html/ac_class_list/t-icon.png?v=GSfoGzp1i9ZJ5PDf4GtNhg%3D%3D) no-repeat;
+}
+.acClassList .class_message .class_box .class_right .lesson_mesage .inter_class .tips p {
+  font-size: 12px;
+  color: #b2b2b2;
+  line-height: 32px;
+}
+.acClassList .class_message .class_box .class_right .lesson_mesage .inter_class .tips p a {
+  color: #08008c;
+}
+.acClassList .class_message .class_box .class_right .lesson_mesage .inter_class .tips span {
+  position: absolute;
+  top: 0px;
+  right: 7px;
+  cursor: pointer;
+}
+.acClassList .class_message .class_box .class_right .lesson_mesage .inter_class .canot_in,
+.acClassList .class_message .class_box .class_right .lesson_mesage .inter_class .btn_in,
+.acClassList .class_message .class_box .class_right .lesson_mesage .inter_class .canot_do {
+  float: left;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+.acClassList .class_message .class_box .class_right .lesson_mesage .inter_class .btn_in {
+  width: 100px;
+  background: #ff8020;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4px;
+}
+.acClassList .class_message .class_box .class_right .lesson_mesage .inter_class .canot_in {
+  color: #b2b2b2;
+  padding: 0 8px 0 28px;
+  position: relative;
+}
+.acClassList .class_message .class_box .class_right .lesson_mesage .inter_class .canot_in:before {
+  content: "";
+  width: 1px;
+  height: 14px;
+  background: #b2b2b2;
+  position: absolute;
+  right: 0;
+  top: 9px;
+}
+.acClassList .class_message .class_box .class_right .lesson_mesage .inter_class .in_gray {
+  background: #d6d6d6;
+  color: #aeaeae;
+}
+.acClassList .class_message .class_box .class_right .lesson_mesage .inter_class .canot_do {
+  color: #b2b2b2;
+  padding-left: 10px;
+}
+.acClassList .class_message .class_box .class_right .lesson_school {
+  text-align: center;
+  width: 150px;
+  float: right;
+  border-left: 1px dotted #e6e6e6;
+  height: 100px;
+}
+.acClassList .class_message .class_box .class_right .lesson_school p {
+  text-align: center;
+  padding: 20px 5px 15px 5px;
+}
+.acClassList .class_message .class_box .class_right .lesson_school .more {
+  cursor: pointer;
+}
+.acClassList .class_message .class_box .class_right .lesson_school span {
+  border-radius: 999px;
+  border: 1px solid #ff8020;
+  text-align: center;
+  padding: 3px 10px;
+  height: 30px;
+  line-height: 30px;
+  color: #ff8020;
+  margin: 0 auto;
+}
+.acClassList .class_message .class_box .class_right .lesson_class {
+  padding-top: 30px;
+  height: 70px;
+}

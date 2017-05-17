@@ -1,0 +1,23 @@
+<% include ../common/top.ejs %>
+<body data-init="addStudent">
+	<div class="add-s-box">
+		<form action="http://www.baidu.com" rel="addStudent">
+			<div id="mainBox" class="add-s-enter">
+				<div class="enter-name">输入学生姓名：</div>
+				<div class="textarea-box" id="textareaBox"><textarea></textarea></div>
+				<p class="error-tips"></p>
+				<div class="add-s-info">
+					<div class="add-s-title">注意事项</div>
+					<p>1、请输入每个学生的中文名，不要包含字母、标点或特殊符号</p>
+					<p>2、每个学生姓名占一行，用回车键（Enter）换行</p>
+				</div>
+			</div>
+			<div id="bottomBox" class="bottomBox">
+				<input type="hidden" name="textarea" />
+				<input type="submit" id="sureId" class="add-s-btn1" value="确定"/>
+			</div>
+		</form>
+	</div>
+	
+</body>
+<% include ../common/bottom.ejs %>

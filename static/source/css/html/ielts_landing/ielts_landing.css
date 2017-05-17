@@ -1,0 +1,540 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Mon Dec 28 2015 18:41:34 GMT+0800 (中国标准时间)
+ */
+/**
+ * 默认样式
+ * @file：   base.less
+ * @author:  chenxiaosong（chenxiaosong@51talk.com）
+ * @update:  2015-10-12
+ * @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  background-color: #fff;
+  _background-image: url(about:blank);
+  _background-attachment: fixed;
+  _overflow-x: hidden;
+}
+body {
+  font: 13px 'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial, Verdana, Tahoma;
+  color: #1e1e1e;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+}
+input,
+button,
+select,
+textarea {
+  font-family: 'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial, Verdana, Tahoma;
+  outline: none;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 0;
+}
+a {
+  color: #1e1e1e;
+  text-decoration: none;
+  outline: none;
+}
+a:hover {
+  color: #ff9600;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  vertical-align: middle;
+}
+::-moz-selection {
+  background-color: #ff9600;
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background-color: #ff9600;
+  color: white;
+  text-shadow: none;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  *zoom: 1;
+  *display: inline;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.relative {
+  position: relative;
+}
+.relativez {
+  position: relative;
+  zoom: 1;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.hidden {
+  overflow: hidden;
+}
+.ft12 {
+  font-size: 12px;
+}
+.ft13 {
+  font-size: 13px;
+}
+.ft14 {
+  font-size: 14px;
+}
+.ft15 {
+  font-size: 15px;
+}
+.ft16 {
+  font-size: 16px;
+}
+.ft18 {
+  font-size: 18px;
+}
+.ft19 {
+  font-size: 19px;
+}
+.ft20 {
+  font-size: 20px;
+}
+.normal {
+  font-weight: normal;
+}
+.bold {
+  font-weight: bold;
+}
+.tal {
+  text-align: left;
+}
+.tac {
+  text-align: center;
+}
+.tar {
+  text-align: right;
+}
+.f-taj {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+.f-vam,
+.f-vama * {
+  vertical-align: middle;
+}
+.f-wsn {
+  word-wrap: normal;
+  white-space: nowrap;
+}
+.f-pre {
+  overflow: hidden;
+  text-align: left;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.f-wwb {
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.f-ti {
+  overflow: hidden;
+  text-indent: -30000px;
+}
+.f-ti2 {
+  text-indent: 2em;
+}
+.f-lhn {
+  line-height: normal;
+}
+.f-tdu,
+.f-tdu:hover {
+  text-decoration: underline;
+}
+.f-tdn,
+.f-tdn:hover {
+  text-decoration: none;
+}
+.f-toe {
+  overflow: hidden;
+  word-wrap: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.f-csp {
+  cursor: pointer;
+}
+.f-csd {
+  cursor: default;
+}
+.f-csh {
+  cursor: hand;
+}
+.f-csm {
+  cursor: move;
+}
+.f-usn {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.fm-arrow-pos {
+  border-style: solid;
+  border-color: #ffa800;
+  border-width: 1px;
+}
+.info {
+  background: #303030;
+  color: #ffffff;
+  padding: 35px 0 65px 0;
+}
+.info .link-ti {
+  margin-top: 15px;
+  padding-top: 30px;
+}
+.info .link-ti .link-ul {
+  width: 610px;
+  height: 49px;
+  margin: 0px auto;
+}
+.info .link-ti .link-ul li {
+  float: left;
+  width: 152px;
+}
+.info .link-ft {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+.info .link-ft em {
+  margin: 0 5px;
+}
+.info .link-ft a {
+  color: #ffffff;
+}
+.g-in {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.btnStyleA {
+  display: inline-block;
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+}
+.st_banner {
+  position: relative;
+  width: 100%;
+  height: 627px;
+  min-height: 627px;
+  background: #68baeb url(../../../images/html/ielts_landing//st_01.jpg?v=BZOmK6gMvei%2BVggMXERP7w%3D%3D) no-repeat;
+  background-position: top center;
+  text-align: center;
+}
+.st_banner .st_logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+}
+.st_banner .st_pc {
+  display: block;
+  height: 508px;
+  width: 612px;
+  position: absolute;
+  z-index: 999;
+  top: 262px;
+  left: 50%;
+  margin-left: -306px;
+  background: url(../../../images/html/ielts_landing//st_pc01.png?v=vPDhmgrCd8NVSEpId%2B%2By6Q%3D%3D) no-repeat;
+  background-position: top center;
+  cursor: pointer;
+}
+.st_banner .st_pc .st-btn {
+  position: absolute;
+  z-index: 1000;
+  display: inline-block;
+  height: 45px;
+  width: 195px;
+  background-color: #6abbec;
+  border-radius: 5px;
+  line-height: 45px;
+  font-size: 18px;
+  text-align: center;
+  overflow: hidden;
+  top: 284px;
+}
+.st_banner .st_pc .st-btn a {
+  display: inline-block;
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+}
+.st_banner .st_pc .st_alap {
+  left: 80px;
+}
+.st_banner .st_pc .st_alap:hover {
+  color: #ffffff;
+}
+.st_banner .st_pc .st_imap {
+  right: 80px;
+  background-color: #e82a47;
+}
+.st-upg {
+  position: relative;
+  width: 100%;
+  height: 356px;
+  text-align: center;
+  margin-top: 84px;
+  background: url(../../../images/html/ielts_landing//st_02.jpg?v=e8ZktkVSxGdAtO4HJ0XPmw%3D%3D) no-repeat;
+  background-position: top center;
+}
+.st-count {
+  position: relative;
+  width: 100%;
+  height: 374px;
+  text-align: center;
+  margin-top: 38px;
+  background: url(../../../images/html/ielts_landing//st_08.jpg?v=22BTVNHauVJUwANQv9pnEg%3D%3D) no-repeat;
+  background-position: top center;
+}
+.st-shotl {
+  position: relative;
+  width: 100%;
+  height: 926px;
+  text-align: center;
+  margin-top: 40px;
+  background: url(../../../images/html/ielts_landing//st_03.jpg?v=64vd0KA6UXiaxVw3PQsiwA%3D%3D) no-repeat;
+  background-position: top center;
+}
+.st-speak {
+  position: relative;
+  width: 100%;
+  height: 379px;
+  text-align: center;
+  margin-top: 38px;
+  background: url(../../../images/html/ielts_landing//st_04.jpg?v=3acAErZFZcmKfTN9%2BLjyuQ%3D%3D) no-repeat;
+  background-position: top center;
+}
+.st-introt {
+  position: relative;
+  width: 100%;
+  height: 370px;
+  text-align: center;
+  margin-top: 40px;
+  margin-left: 30px;
+  background: url(../../../images/html/ielts_landing//st_05.jpg?v=TZ7zvpNiPfTUc8bB8Op0bw%3D%3D) no-repeat;
+  background-position: top center;
+}
+.st-reserve {
+  width: 100%;
+  height: 173px;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: -110px;
+  background: url(../../../images/html/ielts_landing//st_06.png?v=W%2B%2B1sMXQf4oZ2BxUqkyVew%3D%3D) no-repeat;
+  background-position: top center;
+}
+.st-reserve .st-reserve01 {
+  position: relative;
+  width: 1000px;
+  height: 173px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.st-reserve .st-reserve01 .st-btn {
+  position: absolute;
+  z-index: 1000;
+  display: inline-block;
+  height: 45px;
+  width: 195px;
+  background-color: #6abbec;
+  border-radius: 5px;
+  line-height: 45px;
+  font-size: 18px;
+  text-align: center;
+  overflow: hidden;
+  right: -60px;
+}
+.st-reserve .st-reserve01 .st-btn a {
+  display: inline-block;
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+}
+.st-reserve .st-reserve01 .st_imap01 {
+  background-color: #e82a47;
+  top: 0;
+}
+.st-reserve .st-reserve01 .st_alap01 {
+  top: 60px;
+}
+.st-feature {
+  position: relative;
+  width: 100%;
+  height: 90px;
+  text-align: center;
+  margin-top: 30px;
+  background: url(../../../images/html/ielts_landing//st_07.jpg?v=2SERsi6MLwZEwJokq%2Fihdw%3D%3D) no-repeat;
+  background-position: top center;
+}

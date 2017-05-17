@@ -1,0 +1,106 @@
+<% include ../common/pupil_top.ejs %>
+<body>
+<section class="teengers" id="container" data-init="engCC">
+  <img src="<%= imagessrc%>teenager_girl.jpg" alt="" class="oneSt">
+  <article class="logIn_sms">
+    <form id="reg1_form">
+      <ul class="OneS_logIn">
+        <li>
+          <input id="reg2_tel" type="tel" name="mobile" placeholder="输入您的手机号">
+        </li>
+        <li>
+          <input class="tel_code" id="authCode" name="authCode" type="tel" placeholder="请输入图形验证码">
+          <span class="tel_btn" style="background: none;">
+            <img style="border: 1px solid #d0d0d0;float:left;cursor: pointer;"
+                 id="verifycode" src="http://www.51talk.com/passport/authCode"
+                 height="60" width="140" onclick="this.src='http://www.51talk.com/passport/authCode'+'?a'+'='+new Date().getTime()"
+                 alt="单击更换验证码" title="单击更换验证码">
+          </span>
+        </li>
+        <li>
+          <input class="tel_code" id="tel2_code" name="mobile_code" type="tel" placeholder="请输入验证码">
+          <!--<span class="tel_btn" id="getsms">获取验证码</span>-->
+          <span class="tel_btn" id="getsms_new">获取验证码</span>
+        </li>
+        <li>
+          <input id="reg2_passwd" type="password" placeholder="设置您的密码">        
+        </li>
+        <li>
+          <a id="reg1" href="#">免费试听</a>
+        </li>
+        </ul>
+    </form>
+  </article>
+  <article class="tws">
+    <h3 class="tws_title">英式思维教学，让英语学习有效果</h3>
+    <ul class="tws_list">
+      <li>
+        <dt><img src="<%= imagessrc%>//list4.png" alt=""></dt>
+        <dd><h3 class="list_tit">全天18小时，随时上课</h3></dd>
+      </li>
+      <li>
+        <dt><img src="<%= imagessrc%>/list2.png" alt=""></dt>
+        <dd><h3 class="list_tit">8000多名外教任选</h3></dd>
+      </li>
+      <li>
+        <dt><img src="<%= imagessrc%>/list1.png" alt=""></dt>
+        <dd><h3 class="list_tit">对标CCSA课程体系<br/>更科学严谨</h3></dd>
+      </li>
+    </ul>
+  </article>
+  <article class="level_down">
+     <span>
+       <b class="arrow-down"></b>
+     </span>
+  </article>
+  <article class="level_img"><img src="<%= imagessrc%>/t_levle.png" alt=""></article>
+<!--   <article class="fos">
+    <section class="fos_t">
+      <hgroup>
+        <h3 class="trs_titT">启蒙和语言学习同步进行</h3>
+        <h4 class="trs_titB">ENLIGHTENING AND LEARNING TOGETHER</h4>
+      </hgroup>
+      <section class="fos_text">
+        <p class="trs_text">拥有专业自主研发教材，及多种国际标准教材。更有模仿、看图等趣味分类课程，自由选择。<span class="fos_pl"></span><span class="fos_pr"></span></p>
+      </section>
+    </section>
+  </article> -->
+  <article class="open">
+    <section class="fos_t">
+      <hgroup>
+        <h3 class="trs_titT">免费公开课<span>好玩<i></i>有用</span></h3>
+        <h4 class="trs_titB">FREE OPEN COURSE</h4>
+      </hgroup>
+      <section class="fos_text">
+        <img src="<%= imagessrc%>/pupil_cc.png" alt="">
+        <p>合适中小学，趣味学英语的同时，增长知识面。</p>
+      </section>
+    </section>
+  </article>
+  <article class="sis">
+    <h3 class="trs_titT mb2">家长心声</h3>
+    <ul class="sis_list">
+      <li class="mb2">
+        <p class="sis_text">“高兴的跟老师一起手舞足蹈。”</p>
+        <dl class="sis_dl">
+          <dt class="sis_l"><img src="<%= imagessrc%>/pupil_2.jpg" alt=""></dt>
+          <dd class="sis_r">Joanna</dd>
+        </dl>
+      </li>
+      <li class="mb2">
+        <p class="sis_text">“通过两年时间在51Talk学习英语，从LV2到LV9！”</p>
+        <dl class="sis_dl">
+          <dt class="sis_l"><img src="<%= imagessrc%>/pupil_3.jpg" alt=""></dt>
+          <dd class="sis_r">Vic</dd>
+        </dl>
+      </li>
+    </ul>
+    <section class="sis_fb mb2"><img src="<%= imagessrc%>/last.jpg" alt=""></section>
+    <section class="sis_fb"><a href="#" class="sis_now">马上和宝贝来体验</a></section>
+  </article>
+  <article class="foot_lina">
+    <img src="<%=imagessrc%>pupil_b1.jpg" alt="" />
+  </article>
+</section>
+</body>
+<% include ../common/bottom.ejs %>

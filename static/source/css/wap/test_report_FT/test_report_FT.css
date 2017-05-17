@@ -1,0 +1,349 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Fri Sep 23 2016 10:35:11 GMT+0800 (中国标准时间)
+ */
+/*
+* 默认样式
+* @file：   base.less
+* @author:  zhuning@51talk.com）
+* @update:  2015-10-29
+* @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+*/
+html {
+  font-size: 62.5%;
+  -webkit-user-select: none;
+}
+@media only screen and (min-width: 481px) {
+  html {
+    font-size: 94%;
+  }
+}
+@media only screen and (min-width: 561px) {
+  html {
+    font-size: 109%;
+  }
+}
+@media only screen and (min-width: 641px) {
+  html {
+    font-size: 125%;
+  }
+}
+body {
+  padding: 0;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 640px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+}
+input,
+button,
+select,
+textarea,
+dl,
+dd,
+dt {
+  font-family: "Microsoft YaHei";
+  outline: none;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 0;
+  padding: 0px;
+  margin: 0px;
+}
+ul,
+li {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  vertical-align: middle;
+}
+b {
+  font-weight: normal;
+}
+::-moz-selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+strong {
+  font-weight: normal;
+}
+body,
+html {
+  overflow-x: hidden;
+}
+.tr_report {
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+  font-family: "Microsoft YaHei";
+  /* 青少 */
+}
+.tr_report .header {
+  height: 4rem;
+  width: 100%;
+  background: url(../../../images/wap/test_report_FT/ft_logo.png?v=1dy%2BXEgdxqUmVgHk50rbPA%3D%3D) no-repeat 1rem center;
+  background-size: 19.85rem 2.1rem;
+  line-height: 4rem;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+.tr_report .header a {
+  float: right;
+  color: #ff8200;
+  font-size: 1.2rem;
+}
+.tr_report .ft_banner {
+  position: relative;
+}
+.tr_report .ft_banner img {
+  width: 100%;
+}
+.tr_report .ft_banner p {
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  font-size: 2.5rem;
+  color: #813d19;
+  font-weight: 900;
+  line-height: 3rem;
+}
+.tr_report .ft_banner p span {
+  font-weight: normal;
+}
+.tr_report .ft_level {
+  width: 100%;
+  padding: 8.5rem 0 1.5rem;
+}
+.tr_report .ft_level .level {
+  display: block;
+  width: 25.5rem;
+  margin: 0 auto;
+}
+.tr_report .ft_level .ft_levelIn {
+  width: 25.5rem;
+  margin: 0 auto;
+  position: relative;
+}
+.tr_report .ft_level .ft_now {
+  position: absolute;
+  color: #00c1bb;
+  text-align: center;
+}
+.tr_report .ft_level .ft_now h4 {
+  margin: 0;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+.tr_report .ft_level .ft_now p {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+.tr_report .ft_level .ft_now i {
+  display: inline-block;
+  width: 0.9rem;
+  height: 1rem;
+  background: url(../../../images/wap/test_report_FT/ft_now.png?v=C7A5OaU0W6Kd9kMjvGv89Q%3D%3D) no-repeat center;
+  background-size: 100%;
+}
+.tr_report .ft_level .ft_level1 {
+  top: 2.5rem;
+  left: -0.6rem;
+}
+.tr_report .ft_level .ft_level2 {
+  top: 1.0rem;
+  left: 4.0rem;
+}
+.tr_report .ft_level .ft_level3 {
+  top: -0.6rem;
+  left: 8.5rem;
+}
+.tr_report .ft_level .ft_level4 {
+  top: -2rem;
+  left: 13.0rem;
+}
+.tr_report .ft_level .ft_level5 {
+  top: -3.5rem;
+  left: 17.5rem;
+}
+.tr_report .ft_level .ft_level6 {
+  top: -5.2rem;
+  left: 22.2rem;
+}
+.tr_report .ft_level .ft_goal {
+  position: absolute;
+  color: #f00000;
+  text-align: center;
+}
+.tr_report .ft_level .ft_goal h4 {
+  margin: 0;
+  fonty-size: 0.9rem;
+  white-space: nowrap;
+}
+.tr_report .ft_level .ft_goal p {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+.tr_report .ft_level .ft_goal i {
+  display: inline-block;
+  width: 3.3rem;
+  height: 4.4rem;
+  background: url(../../../images/wap/test_report_FT/ft_goal.png?v=UKsYTBjeXW5SNmypF0mZew%3D%3D) no-repeat center;
+  background-size: 100%;
+}
+.tr_report .ft_level .ft_goal1 {
+  top: -0.5rem;
+  left: 1.0rem;
+}
+.tr_report .ft_level .ft_goal2 {
+  top: -2.3rem;
+  left: 5.5rem;
+}
+.tr_report .ft_level .ft_goal3 {
+  top: -3.8rem;
+  left: 10rem;
+}
+.tr_report .ft_level .ft_goal4 {
+  top: -5.3rem;
+  left: 14.5rem;
+}
+.tr_report .ft_level .ft_goal5 {
+  top: -6.8rem;
+  left: 19rem;
+}
+.tr_report .ft_level .ft_goal6 {
+  top: -8rem;
+  left: 23.5rem;
+}
+.tr_report .ft_level_junior .level {
+  width: 17.8rem;
+}
+.tr_report .ft_level_junior .ft_levelIn {
+  width: 17.8rem;
+}
+.tr_report .ft_level_junior .ft_level_junior1 {
+  top: 0rem;
+  left: -0.4rem;
+}
+.tr_report .ft_level_junior .ft_level_junior2 {
+  top: -1.8rem;
+  left: 4.4rem;
+}
+.tr_report .ft_level_junior .ft_level_junior3 {
+  top: -3.3rem;
+  left: 9.2rem;
+}
+.tr_report .ft_level_junior .ft_level_junior4 {
+  top: -4.8rem;
+  left: 14rem;
+}
+.tr_report .ft_level_junior .ft_goal_junior1 {
+  top: -3.5rem;
+  left: 1.0rem;
+}
+.tr_report .ft_level_junior .ft_goal_junior2 {
+  top: -5.2rem;
+  left: 6.0rem;
+}
+.tr_report .ft_level_junior .ft_goal_junior3 {
+  top: -6.6rem;
+  left: 10.6rem;
+}
+.tr_report .ft_level_junior .ft_goal_junior4 {
+  top: -8.2rem;
+  left: 15.6rem;
+}
+.tr_report .ft_model {
+  padding: 0 1rem;
+  margin-top: 2rem;
+}
+.tr_report .ft_model .title {
+  height: 3.5rem;
+  line-height: 3.5rem;
+  border-left: 0.2rem solid #ff8200;
+  background: #efefef;
+  width: 100%;
+  text-indent: 1.5rem;
+  font-size: 1.5rem;
+}
+.tr_report .ft_model .title span {
+  font-size: 1.2rem;
+}
+.tr_report .ft_model .ft_model_one {
+  line-height: 1.8rem;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  text-align: justify;
+}
+.tr_report .footer {
+  background: #323232;
+  padding: 1rem 1.5rem 1.5rem;
+  height: 18rem;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 2rem;
+}
+.tr_report .footer h3 {
+  color: #fff;
+  font-size: 1.8rem;
+  margin: 0;
+}
+.tr_report .footer h3 span {
+  color: #ffcd00;
+}
+.tr_report .footer input,
+.tr_report .footer .subBtn {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  height: 3.4rem;
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+  padding: 0 1.8rem;
+  font-size: 1.2rem;
+}
+.tr_report .footer .subBtn {
+  font-size: 1.5rem;
+  line-height: 3.4rem;
+  background: #ff3434;
+  color: #fff;
+  -webkit-appearance: none;
+}
+.tr_report .footerCopy {
+  position: fixed;
+  bottom: 0;
+  min-width: 320px;
+  max-width: 640px;
+}

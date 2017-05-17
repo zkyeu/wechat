@@ -1,0 +1,166 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Tue Oct 25 2016 18:16:54 GMT+0800 (中国标准时间)
+ */
+/*
+* 默认样式
+* @file：   base.less
+* @author:  zhuning@51talk.com）
+* @update:  2015-10-29
+* @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+*/
+html {
+  font-size: 62.5%;
+  -webkit-user-select: none;
+}
+@media only screen and (min-width: 481px) {
+  html {
+    font-size: 94%;
+  }
+}
+@media only screen and (min-width: 561px) {
+  html {
+    font-size: 109%;
+  }
+}
+@media only screen and (min-width: 641px) {
+  html {
+    font-size: 125%;
+  }
+}
+body {
+  padding: 0;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 640px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+}
+input,
+button,
+select,
+textarea,
+dl,
+dd,
+dt {
+  font-family: "Microsoft YaHei";
+  outline: none;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 0;
+  padding: 0px;
+  margin: 0px;
+}
+ul,
+li {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  vertical-align: middle;
+}
+b {
+  font-weight: normal;
+}
+::-moz-selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+strong {
+  font-weight: normal;
+}
+body,
+html {
+  font-family: "Microsoft YaHei";
+}
+img {
+  vertical-align: top;
+  display: block;
+  border: none;
+}
+.topPart {
+  width: 100%;
+  padding-top: 5%;
+  text-align: center;
+}
+.topPart p {
+  font-size: 1.8rem;
+  color: #383838;
+  line-height: 2.5rem;
+}
+.topPart p span {
+  color: #ff5400;
+  font-size: 2.0rem;
+  font-weight: 900;
+}
+.topPart .e-get {
+  display: inline-block;
+  text-align: center;
+  font-size: 2.2rem;
+  color: #2788ff;
+  margin-top: 1rem;
+  border-bottom: 2px solid #2788ff;
+}
+.bottomPart {
+  width: 100%;
+  position: relative;
+}
+.bottomPart img {
+  width: 100%;
+}
+.bottomPart .btn-logo {
+  position: absolute;
+  bottom: 35px;
+  left: 0;
+  width: 100%;
+}
+.bottomPart .btn-logo ul {
+  width: 62%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.bottomPart .btn-logo ul li {
+  float: left;
+}
+.bottomPart .btn-logo ul li .e-usa {
+  width: 7.9rem;
+}
+.bottomPart .btn-logo ul li .e-facebook {
+  width: 2.75rem;
+}
+.bottomPart .btn-logo ul li .e-twitter {
+  width: 2.75rem;
+}
+.bottomPart .btn-logo ul .e-fb {
+  margin-left: 15%;
+}

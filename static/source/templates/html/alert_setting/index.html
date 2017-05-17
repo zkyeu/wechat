@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>自动调整教材弹出层</title>
+    <link rel="stylesheet" href="/css/html/alert_setting/alert_setting.css">
+</head>
+<body>
+<!-- 课程更新 -->
+<div class="systemLayer" id="container" data-init="alert_setting">
+  <div class="into">
+    <div class="hd">
+      <a class="close" href="javascript:;" title="关闭"></a><h4>系统消息</h4>
+    </div>
+    <div class="cotent">
+      <div class="bd">
+        <p>课程取消成功</p>
+        <p>是否为您更新后续您已预约的经典英语教材顺序？</p>
+        <p><input type="checkbox" checked="checked" value="" class="checkbox">记住我的选择，以后不再提示</p>
+      </div>
+      <!-- 1:代表更新 2:代表不更新 -->
+      <div class="ft">
+        <span class="update" id="update" data-url="http://www.baidu.com">更新</span>
+        <span class="notUpdate" data-href="http://www.baidu.com">不更新</span>
+      </div>
+    </div>
+  </div> 
+</div>
+<!-- /课程更新 -->
+<!-- 课程取消 -->
+<div class="classLayer hide">
+  <div class="into">
+    <div class="hd">
+      <a class="close" href="javascript:;" title="关闭"></a><h4>系统消息</h4>
+    </div>
+    <div class="cotent">
+      <div class="bd">
+        <p>课程取消成功</p>
+        <p>后续您已预约的经典英语教材顺序已调整成功。</p>
+      </div>
+      <div class="ft">
+        <span class="know" data-know-url="http://www.baidu.com">知道了</span>
+      </div>
+    </div>
+  </div> 
+</div>
+<!-- /课程取消 -->
+<script src="/js/html/project/alert_setting/vendor.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<% include ../common/user_center/up_top.ejs %>
+<link rel="stylesheet" href="http://static.51talk.com/static/css/up_style.css">
+<body>
+<!-- 用户中心首页头部  -->
+<% include ../common/user_center/up_g_h.ejs %>
+<% include ../common/user_center/up_g_b.ejs %>
+<div class="g-in f-cb">
+  <% include ../common/user_center/up_s_bar.ejs %>
+  <div class="e-lesson" id="container" data-init="lesson">
+    <!-- nav -->
+    <div class="les-n">
+      <ul class="n-t">
+        <li>
+          <span class="t1">美国小学课程</span>
+          <span>Grade 1</span>
+        </li>
+        <li class="c-li">></li>
+        <li>
+          <span class="t1">第一单元 家庭和朋友</span>
+          <span class="t2">Family And Friend</span>
+        </li>
+      </ul>
+      <ul class="n-w">
+        <li class="f-t"><span>LESSON  4</span></li>
+        <li>What Place Do You Like Best?</li>
+        <li>妈妈和我</li>
+      </ul>
+    </div>
+    <!-- comment -->
+    <div class="les-com">
+      <h2>外教评语</h2>
+      <dl class="com-d">
+        <dt><img src="<%= imagessrc%>online_sys2.jpg"><span class="ts">Ellenna</span></dt>
+        <dd>Dear，Bubble</dd>
+        <dd>I would like to extend my appreciation for your interest to learn and participation in our lesson. I will teach you all the best. See you here at 51Talk!</dd>
+        <dd>
+        <!-- 0失败 1成功 -->
+          <a href="javascript:;" class="d-rev hide"  data-tagid="aa" data-appointid="bb" data-url="51talk.com" >自动翻译</a>
+          <div class="sus">
+            <!-- 加载失败 -->
+            <div class="fail hide"><i></i>加载失败，请重新翻译</div>
+            <!-- 进行中 -->
+            <div class="cont hide"><img src="<%= imagessrc%>icon.gif">自动翻译</div>
+            <!-- 成功 -->
+            <div class="succ"><span class="succ-t">中文翻译中文翻译中文翻译中文翻译中文翻译中文翻译中文中文翻译中文中文翻译中文翻译中文翻译中文翻译中文翻译中文翻译中文翻译</span>
+              <div class="s-ft"><i></i>翻译结果由有道词典提供，仅供参考</div>
+            </div>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <!-- perf -->
+    <div class="les-per">
+      <h2>课堂表现</h2>
+      <ul class="per-u">
+        <li>
+          <span class="per-img01"></span>
+          <span class="star01"></span>
+          <span class="per-ts">小朋友，真棒！希望你多跟老师互动，勇敢地说英文哦！</span>
+        </li>
+        <li>
+          <span class="per-img02"></span>
+          <span class="star02"></span>
+          <span class="per-ts">小朋友，真棒！希望你多跟老师互动，勇敢地说英文哦！</span>
+        </li>
+        <li>
+          <span class="per-img03"></span>
+          <span class="star03"></span>
+          <span class="per-ts">小朋友，真棒！希望你多跟老师互动，勇敢地说英文哦！</span>
+        </li>
+        <li>
+          <span class="per-img04"></span>
+          <span class="star04"></span>
+          <span class="per-ts">小朋友，真棒！希望你多跟老师互动，勇敢地说英文哦！</span>
+        </li>
+      </ul>
+    </div>
+    <!-- Mastery -->
+    <div class="les-msy">
+      <h2>课堂掌握</h2>
+      <ul class="msy-u">
+        <li class="prou">
+          <div class="p-lt">
+            <h4>【 需要注意的发音 】</h4>
+            <div class="lt hide">
+              <span>cat  [kæt]</span>
+              <span>boss  [bɑs]</span>
+            </div>
+            <!-- 内容为空 -->
+            <p class="p-ts">哇哦，小朋友这堂课的发音都掌握啦，太棒了！</p>
+          </div>
+          <div class="rt">
+            <span class="num">8</span>
+          </div>
+        </li>
+        <li class="word">
+          <div class="p-lt">
+            <h4>【 本节课单词 】</h4>
+            <div class="lt">
+              <span>cat</span>
+              <span>boss</span>
+              <span>good</span>
+              <span>lesson</span>
+              <span>meomo</span>
+              <span>today</span>
+              <span>cat</span>
+              <span>boss</span>
+              <span>dog</span>
+              <span>years</span>
+            </div>
+            <!-- 内容为空 -->
+            <p class="p-ts hide">本节课暂时没有需要学习的单词，小朋友继续加油哦！</p>
+          </div>
+          <div class="rt">
+            <span class="num">8</span>
+          </div>
+        </li>
+        <li class="sent">
+          <div class="p-lt">
+            <h4>【 本节课句子 】</h4>
+            <div class="lt">
+              <span>This is a dog</span>
+              <span>I am 6 years old</span>
+              <span>This is a dog.</span>
+              <span>I am 6 years old.</span>
+              <span>This is a dog.</span>
+            </div>
+          </div>
+          <div class="rt">
+            <span class="num">8</span>
+          </div>
+          <!-- 内容为空 -->
+          <p class="p-ts hide">本节课暂时没有需要学习的句子，小朋友继续加油哦！</p>
+        </li>
+        <li class="ballad">
+          <div class="p-lt">
+            <h4>【 歌谣 】</h4>
+            <div class="lt">
+              <span>This is a dog this is book well doing sell</span>
+            </div>
+          </div>
+          <div class="rt">
+            <span class="num">18</span>
+          </div>
+          <!-- 内容为空 -->
+          <p class="p-ts hide">本节课暂时没有需要学习的歌谣，小朋友继续加油哦！</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<% include ../common/user_center/up_g_f.ejs %>
+</body>
+<% include ../common/user_center/up_bottom.ejs %>

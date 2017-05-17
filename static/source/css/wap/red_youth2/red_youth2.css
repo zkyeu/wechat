@@ -1,0 +1,262 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Thu Jan 28 2016 13:43:18 GMT+0800 (中国标准时间)
+ */
+/*
+* 默认样式
+* @file：   base.less
+* @author:  zhuning@51talk.com）
+* @update:  2015-10-29
+* @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+*/
+html {
+  font-size: 62.5%;
+}
+@media only screen and (min-width: 481px) {
+  html {
+    font-size: 94%;
+  }
+}
+@media only screen and (min-width: 561px) {
+  html {
+    font-size: 109%;
+  }
+}
+@media only screen and (min-width: 641px) {
+  html {
+    font-size: 125%;
+  }
+}
+body {
+  padding: 0;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 640px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+}
+input,
+button,
+select,
+textarea,
+dl,
+dd,
+dt {
+  font-family: "Microsoft YaHei";
+  outline: none;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 0;
+  padding: 0px;
+  margin: 0px;
+}
+ul,
+li {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  vertical-align: middle;
+}
+b {
+  font-weight: normal;
+}
+::-moz-selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+strong {
+  font-weight: normal;
+}
+body {
+  width: 100%;
+}
+h3 {
+  margin: 0;
+  padding: 0;
+}
+img {
+  vertical-align: top;
+}
+input {
+  background-color: transparent;
+  line-height: 1;
+}
+.red_youth {
+  width: 100%;
+  margin: 0 auto;
+}
+.red_youth .head_1 {
+  width: 100%;
+}
+.logIn {
+  position: relative;
+}
+.logIn_img {
+  width: 100%;
+}
+.logIn_go {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 1rem;
+}
+.logIn_go .red_xl {
+  width: 1.8rem;
+  position: absolute;
+  right: 0.4rem;
+  top: 37%;
+}
+.logIn_list {
+  margin: 0 2.5rem;
+  margin-top: 1.5rem;
+}
+.logIn_list li {
+  height: 4rem;
+  width: 100%;
+  line-height: 4rem;
+  background-color: #fff;
+  margin-bottom: 1rem;
+  border-radius: 7px;
+}
+.logIn_list input {
+  color: #999;
+  float: left;
+  text-align: center;
+  padding: 1.1rem 0;
+  width: 100%;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+}
+.logIn_list a {
+  float: left;
+  width: 100%;
+  height: 100%;
+  font-size: 1.8rem;
+  text-align: center;
+  background: url(../../../images/wap/red_youth/red_button.png?v=aiscKlOzPdk%2BU3LdjCdF0Q%3D%3D) 0 0 no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+}
+.cont .tit {
+  font-size: 1.8rem;
+  height: 4.15rem;
+  line-height: 4.15rem;
+  text-align: center;
+  background-color: #fdd15e;
+  color: #803d38;
+}
+.cont .item {
+  padding-top: 3rem;
+  text-align: center;
+}
+.cont .item h3 {
+  font-size: 2.4rem;
+  height: 3.1rem;
+}
+.cont .item p {
+  font-size: 1.5rem;
+  height: 4rem;
+}
+.cont .item img {
+  width: 78.7%;
+}
+.cont .item.color1 {
+  background-color: #ebf5ff;
+  border-bottom: 1px solid #c3c4bf;
+}
+.cont .item.color1 h3 {
+  color: #1e92ff;
+}
+.cont .item.color1 p {
+  color: #394957;
+}
+.cont .item.color2 {
+  background-color: #fff;
+}
+.cont .item.color2 h3 {
+  color: #77cb37;
+}
+.cont .item.color2 p {
+  color: #526146;
+}
+.cont .item.color3 {
+  background-color: #fffcf7;
+  border-bottom: 1px solid #cccbca;
+}
+.cont .item.color3 h3 {
+  color: #ffa800;
+}
+.cont .item.color3 p {
+  color: #333;
+}
+.bottom {
+  padding-bottom: 2rem;
+  background-color: #ff553b;
+  padding-top: 2rem;
+}
+.bottom .bottom_tit {
+  height: 3.65rem;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #fff;
+}
+.bottom .logIn_list a {
+  background: none;
+  color: #ff553b;
+}
+.bottom .red_text {
+  color: #ba3622;
+  font-size: 1.3rem;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.bottom .red_bottom {
+  font-size: 1.4rem;
+  height: 1.2rem;
+  color: #fdcac5;
+  text-align: center;
+}
+@media screen and (max-width: 320px) {
+  .logIn_go {
+    height: 26.6rem;
+  }
+  .logIn_go .logIn_img {
+    width: 100%;
+    height: 100%;
+  }
+  .logIn_go .dt_img {
+    margin-left: 6rem;
+  }
+}

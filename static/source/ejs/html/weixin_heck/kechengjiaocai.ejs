@@ -1,0 +1,50 @@
+<% include ../common/top_b2s.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%=csslinkb2s%>lessonCount.css">
+</head>
+<body data-init="lessonCount">
+<div class="less-title">课程教材对应链接后台报表</div>
+<div class="lesson-con w90">
+    <div class="block-con no-border">
+        <h5>选择教材版本</h5>
+        <div class="con-list">
+            <ul id="lesson-banben">
+
+            </ul>
+        </div>
+    </div>
+    <div class="block-con dn jibie">
+        <h5>选择级别</h5>
+        <div class="con-list">
+            <ul id="lesson-jibie">
+
+            </ul>
+        </div>
+    </div>
+    <div class="block-con dn danyuan">
+        <h5>选择教材单元</h5>
+        <div class="con-list">
+            <ul id="lesson-danyuan">
+
+            </ul>
+        </div>
+    </div>
+    <div class="block-con dn table">
+        <table border="0" cellspacing="0" cellpadding="0">
+            <thead>
+            <tr>
+                <th>课程名称</th>
+                <th>文件名</th>
+                <th>文件日期</th>
+                <th>文件大小</th>
+                <th>链接</th>
+            </tr>
+            </thead>
+            <tbody id="lesson-table">
+
+            </tbody>
+
+        </table>
+    </div>
+</div>
+</body>
+<% include ../common/bottom.ejs %>

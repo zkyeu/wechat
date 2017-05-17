@@ -1,0 +1,187 @@
+<% include ../common/top.ejs %>
+<body>
+<div id="container" data-init="online" class="online_form">
+  <div class="o_top">
+    <div class="o_top_c comWidth">
+      <img src="<%= imagessrc%>logo.png" alt="" class="o_top_img">
+      <a href="javascript:;" class="o_top_right">login</a>
+    </div>
+  </div>
+  <div class="o_cont comWidth">
+    <div class="cont_top">
+      <ul class="c_top_l">
+        <li class="active_l">Application <i></i></li>
+        <li>Done <i></i></li>
+      </ul>
+    </div>
+    <div class="o_c_c">
+      <h3 class="o_c_tit">Online Application Form</h3>
+      <p class="o_c_text">Please provide your complete information below. <span>All fields are required.</span></p>
+      <ul class="o_c_l">
+        <li>
+          <div class="c_l_l">Name</div>
+          <div class="c_l_r">
+            <div class="firstN"><input type="text" placeholder="First Name"></div>
+            <div class="lastN"><input type="text" placeholder="Last Name"></div>
+          </div>
+        </li>
+        <li>
+          <div class="c_l_l">Birthday</div>
+          <div class="c_l_r">
+            <select class="u-sel2" name="region_id"><option value="">Month</option><option value="2">1</option><option value="19">2</option><option value="27">3</option><option value="33">4</option><option value="40">5</option><option value="49">6</option><option value="57">7</option><option value="63">8</option><option value="71">9</option><option value="81">10</option><option value="86">11</option><option value="96">12</option></select>
+            <select class="u-sel2" name="region_id"><option value="">Day</option><option value="2">1</option><option value="19">2</option><option value="27">3</option><option value="33">4</option><option value="40">5</option><option value="49">6</option><option value="57">7</option><option value="63">8</option><option value="71">9</option></select>
+            <select class="u-sel2 o_last" name="region_id"><option value="">Year</option><option value="2">2016</option><option value="19">2015</option><option value="27">2014</option><option value="33">2013</option><option value="40">2012</option><option value="49">2011</option></select>
+          </div>
+        </li>
+        <li>
+          <div class="c_l_l">Email Address</div>
+          <div class="c_l_r">
+            <div class="dress"><input type="text"></div>
+          </div>
+        </li>
+        <li>
+          <div class="c_l_l">Mobile Number</div>
+          <div class="c_l_r">
+            <div class="dress"><input type="text" placeholder="09xxxxxxxxxxx"></div>
+          </div>
+        </li>
+        <li>
+          <div class="c_l_l">Skype ID</div>
+          <div class="c_l_r">
+            <div class="dress"><input type="text" placeholder="For express processing,please provide skype ID."></div>
+          </div>
+        </li>
+        <li class="location_s">
+          <div class="c_l_l">Location</div>
+          <div class="c_l_r">
+            <select class="u-sel2" name="region_id"><option value="">*Region</option><option value="2">1</option><option value="19">2</option><option value="27">3</option><option value="33">4</option><option value="40">5</option><option value="49">6</option><option value="57">7</option><option value="63">8</option><option value="71">9</option><option value="81">10</option><option value="86">11</option><option value="96">12</option></select>
+            <select class="u-sel2 o_last" name="region_id"><option value="">*Cicy</option><option value="2">1</option><option value="19">2</option><option value="27">3</option><option value="33">4</option><option value="40">5</option><option value="49">6</option><option value="57">7</option><option value="63">8</option><option value="71">9</option></select>
+          </div>
+        </li>
+        <li class="educational_s">
+          <div class="c_l_l">Educational Attainment</div>
+          <div class="c_l_r">
+            <select class="u-sel2 o_s_1" name="region_id"><option value="">College Graduate</option><option value="2">1</option><option value="19">2</option><option value="27">3</option><option value="33">4</option><option value="40">5</option><option value="49">6</option><option value="57">7</option><option value="63">8</option><option value="71">9</option><option value="81">10</option><option value="86">11</option><option value="96">12</option></select>
+            <select class="u-sel2 o_s_2" name="region_id"><option value="">University</option><option value="2">1</option><option value="19">2</option><option value="27">3</option><option value="33">4</option><option value="40">5</option><option value="49">6</option><option value="57">7</option><option value="63">8</option><option value="71">9</option></select>
+            <select class="u-sel2 o_last" name="region_id"><option value="">Others</option><option value="2">2016</option><option value="19">2015</option><option value="27">2014</option><option value="33">2013</option><option value="40">2012</option><option value="49">2011</option></select>
+          </div>
+        </li>
+        <li class="desired_s">
+          <div class="c_l_l">Desired Position</div>
+          <div class="c_l_r">
+            <select class="u-sel2" name="region_id"><option value="">Home-Based Online English Teacher</option><option value="2">1</option><option value="19">2</option><option value="27">3</option><option value="33">4</option><option value="40">5</option><option value="49">6</option><option value="57">7</option><option value="63">8</option><option value="71">9</option><option value="81">10</option><option value="86">11</option><option value="96">12</option></select>
+          </div>
+        </li>
+        <li class="desired_s">
+          <div class="c_l_l">Internet</div>
+          <div class="c_l_r">
+            <select class="u-sel2" name="region_id"><option value="">Select Internet Provider</option><option value="2">1</option><option value="19">2</option><option value="27">3</option><option value="33">4</option><option value="40">5</option><option value="49">6</option><option value="57">7</option><option value="63">8</option><option value="71">9</option><option value="81">10</option><option value="86">11</option><option value="96">12</option></select>
+          </div>
+        </li>
+        <li class="connection_s">
+          <div class="c_l_l">Connection Type</div>
+          <div class="c_l_r">
+            <ul class="type_list">
+              <li><label for=""><input name="Connection" type="radio" value="" />DSL/LAN cable</label></li>
+              <li><label for=""><input name="Connection" type="radio" value="" />Wireless</label></li>
+            </ul>
+          </div>
+        </li>
+        <li class="desired_s">
+          <div class="c_l_l">Preffered Interview Time</div>
+          <div class="c_l_r">
+            <select class="u-sel2" name="region_id"><option value="">Select Internet Time</option><option value="2">1</option><option value="19">2</option><option value="27">3</option><option value="33">4</option><option value="40">5</option><option value="49">6</option><option value="57">7</option><option value="63">8</option><option value="71">9</option><option value="81">10</option><option value="86">11</option><option value="96">12</option></select>
+          </div>
+        </li>
+        <li class="connection_s">
+          <div class="c_l_l">Can Start Immediately</div>
+          <div class="c_l_r">
+            <ul class="type_list">
+              <li><label for=""><input name="Immediately" type="radio" value="" />Yes</label></li>
+              <li><label for=""><input name="Immediately" type="radio" value="" />No</label></li>
+            </ul>
+          </div>
+        </li>
+        <li class="desired_s">
+          <div class="c_l_l">Where do you hear us</div>
+          <div class="c_l_r">
+            <select class="u-sel2" name="region_id"><option value="">Please select an answer</option><option value="2">1</option><option value="19">2</option><option value="27">3</option><option value="33">4</option><option value="40">5</option><option value="49">6</option><option value="57">7</option><option value="63">8</option><option value="71">9</option><option value="81">10</option><option value="86">11</option><option value="96">12</option></select>
+          </div>
+        </li>
+      </ul>
+      <div class="premium">
+        <div class="premium_top">Premium bonus applicable</div>
+      </div> 
+      <ul class="o_c_l">
+        <li class="desired_s">
+          <div class="c_l_l">English Teaching Experience</div>
+          <div class="c_l_r">
+            <select class="u-sel2" name="region_id"><option value="">Teaching Adult</option><option value="2">1</option><option value="19">2</option><option value="27">3</option><option value="33">4</option><option value="40">5</option><option value="49">6</option><option value="57">7</option><option value="63">8</option><option value="71">9</option><option value="81">10</option><option value="86">11</option><option value="96">12</option></select>
+          </div>
+        </li>
+        <li>
+          <div class="c_l_l">d</div>
+          <div class="c_l_r">
+            <div class="dress">
+              <input class="u-ipt2" type="text" placeholder="Upload Your Resume in doc,docx with 2M" id="inp_resume" name="inp_resume">
+              <div class="u_browse">
+                  <div class="u_box">
+                      <input type="file" name="resume">
+                      Browse
+                  </div>
+              </div>  
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="c_l_l">Years of Teaching Experience</div>
+          <div class="c_l_r">
+            <div class="dress"><input type="text" placeholder="Input number here"></div>
+          </div>
+        </li>
+        <li class="connection_s certificate_s">
+          <div class="c_l_l">Certificate</div>
+          <div class="c_l_r">
+            <ul class="type_list">
+              <li><label><input type="checkbox" name="certificate" value="10" class="non_none">None</label></li>
+              <li><label><input type="checkbox" name="certificate" value="10" class="non_none">TESOL</label></li>
+              <li><label><input type="checkbox" name="certificate" value="10" class="non_none">TEFL</label></li>
+              <li class="minWidth"><label><input type="checkbox" name="certificate" value="10" class="non_none">CELTA</label></li>
+              <li class="bottomN"><label><input type="checkbox" name="certificate" value="10" class="non_none">CELTYL</label></li>
+              <li class="bottomN"><label><input type="checkbox" name="certificate" value="10" class="non_none">TKT(4 score)</label></li>
+              <li class="bottomN"><label><input type="checkbox" name="certificate" value="10" class="non_none">Others</label></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="c_l_l">d</div>
+          <div class="c_l_r">
+            <div class="dress">
+              <input class="u-ipt2" type="text" placeholder="Upload Your Resume in doc,docx with 2M" id="inp_resume" name="inp_resume">
+              <div class="u_browse">
+                  <div class="u_box">
+                      <input type="file" name="resume">
+                      Browse
+                  </div>
+              </div>  
+            </div>
+          </div>
+        </li>
+        <li class="desired_s">
+          <div class="c_l_l">English Teaching Experience</div>
+          <div class="c_l_r">
+            <select class="u-sel2" name="region_id"><option value="">Select Mandarin proficiency</option><option value="2">1</option><option value="19">2</option><option value="27">3</option><option value="33">4</option><option value="40">5</option><option value="49">6</option><option value="57">7</option><option value="63">8</option><option value="71">9</option><option value="81">10</option><option value="86">11</option><option value="96">12</option></select>
+          </div>
+        </li>
+      </ul>
+      <div class="o_bottom"><a href="javascript:;" class="o_sub">Submit</a></div>
+    </div>
+    <div class="o_done">
+      <h3 class="o_done_top">Congratulations!</h3>
+      <p class="o_done_b">We have received your application which is now being evaluated by our Talent Acquisition team. Please expect a call or a message within 48 business hours for your phone interview. For faster processing, please check your email often as most of our communication will be sent online. <br>
+For other inquiries, you may contact our Recruitment Hotline at <span>(02) 779 – 5151 / 09175765132</span> (Mon-Fri, 9am-9pm) or send us an email at <span>careers@51talk.com</span> (Subject Title: Recruitment Inquiry) during weekends.</p>
+    </div>
+  </div>
+</div>
+</body>
+<% include ../common/bottom.ejs %>

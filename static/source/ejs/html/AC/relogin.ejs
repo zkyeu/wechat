@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        html,body{
+            height: 100%;
+            position: relative;
+        }
+        .box{
+            width: 300px;
+            height: 200px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -150px;
+            margin-top: -100px;
+            text-align: center;
+        }
+        .box p{
+            font-size: 16px;
+            color: #7f939c;
+            font-family: "微软雅黑";
+            line-height: 32px;
+            margin-bottom: 24px;
+        }
+        .box a{
+            display: inline-block;
+            width: 100px;
+            height: 28px;
+            line-height: 28px;
+            border: 1px solid #ff8200;
+            color: #ff9907;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="<%= imagessrc%>relogin.png">
+        <p>let us relogin please !</p>
+        <a href="javascript:;">Re login</a>
+    </div>
+</body>
+</html>

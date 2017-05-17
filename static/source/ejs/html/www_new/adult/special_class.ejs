@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>英语学习，口语学习首选的英语学习网站，51talk无忧英语，外教一对一，在线学英语！</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="keywords" content="{<info.keywords>}" />
+  <meta name="description" content="51tailk无忧英语专业提供网络英语外教一对一培训教学,专注于真人英语外教一对一培训,让您足不出户,网上平价学英语.英语外教一对一培训服务热线4000-51-51-51"/>
+  <link rel="stylesheet" type="text/css" href="<%= cssPath %>common/commons.css">
+  <link rel="stylesheet" type="text/css" href="<%= cssPath %>adult/special_class.css">
+  <!--[if IE 6]><script src="../js/lib/DD_belatedPNG_0.0.8a.min.js"></script><![endif]-->
+</head>
+<body>
+<!-- 公共区域 -->
+<%- include("../common/w_nav.ejs",{
+  wrapClass:"adult-nav-list",
+  navList:[
+    {
+      className:"crt",
+      text:"51Talk成人英语",
+      url:"http://adult.51talk.com/"
+    },
+    {
+      className:"",
+      text:"学习理念",
+      url:"http://www.51talk.com/index/feature"
+    },
+    {
+      className:"",
+      text:"课程体系",
+      url:"http://www.51talk.com/index/system"
+    },
+    {
+      className:"",
+      text:"外教师资",
+      url:"http://www.51talk.com/index/teachers"
+    },
+    {
+      className:"",
+      text:"学习体系",
+      url:"http://www.51talk.com/index/guide"
+    },
+    {
+      className:"",
+      text:"名师课堂",
+      url:"http://www.51talk.com/index/multiClass"
+    }
+  ],
+  isIndex:false, //判断是否为首页
+  isNorth:false //判断是否为美小
+
+  }) %>
+<!-- /公共区域 -->
+<div class="cls-top" data-init="adult/index" id="container">
+  <!-- 视频播放 -->
+  <div class="video_play" data-vedioSrc="http://static.51talk.com/static/js/html/lib/ckplayer/ckplayer.swf">
+    <a href="javascript:;" class="video"><i></i></a>
+  </div>
+</div>
+<div class="cls-banner">
+  <div class="widthMain">
+    <ul>
+      <li><a href="javascript:;" class="b-nav active" data-name="cls-ielts" name="cls-top"><span>雅思</span></a></li>
+      <li><a href="javascript:;" class="b-nav" data-name="toe-hr"><span>托福</span></a></li>
+      <li><a href="javascript:;" class="b-nav" data-name="cls-cpt"><span>新概念</span></a></li>
+      <li><a href="javascript:;" class="b-nav" data-name="cls-pro"><span>语音</span></a></li>
+      <li class="last"><a href="javascript:;" class="b-nav" data-name="tw-hf"><span>语法</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="cls-toefl">
+  <div class="widthMain">
+    <p class="cls-ts"><img data-src="<%=imagessrc%>adult/cls_tit01.png" width="717" height="34" src="<%=imagessrc%>common/deafult.png"/></p>
+    <div class="cls-img">
+      <a href="javascript:;" class="online">详情咨询客服</a>
+    </div>
+  </div>  
+</div>
+<!-- 系列二 -->
+<div class="cls-ielts">
+  <div class="widthMain">
+    <p class="cls-ts"><img data-src="<%=imagessrc%>adult/cls_tit02.png" width="875" height="40" src="<%=imagessrc%>common/deafult.png"/></p>
+    <a href="javascript:;" class="toe-hf">
+      <dl>
+        <dt><img data-src="<%=imagessrc%>adult/cls_toefl02.png" width="306" height="410" src="<%=imagessrc%>common/deafult.png" class="lt-img"/></dt>
+        <dd class="price">
+          <span class="wd lt">￥26000</span>
+          <span class="wd rt">原件:￥3600</span>
+        </dd>
+        <dd class="c-dd">
+          <span class="c-js">课程简介</span>
+          <span class="c-nr">课程涵盖雅思听、说、读、写四个科目，立足于官方评分标准，基于对真题的分析，通过针对性训练和各项基本技能的培养，帮助学员掌握所有题型的解题方法和技巧，最终达到全科理想成绩。</span>
+        </dd>
+        <dd>
+          <span class="c-js">上课时间（平日19:00 - 21:00）</span>
+          <span class="c-nr">阅读全能班  06月06日 - 06月28日<em>|</em>听力全能班  06月07日 - 06月29日</span>
+          <span class="c-nr">口语全能班  06月08日 - 06月30日<em>|</em>写作全能班  06月09日 - 07月01日</span>
+        </dd>
+      </dl>
+    </a>
+    <div class="c-pos cls-cod">
+      <a href="javascript:;" class="scan-cod-not" data-name="1" data-num="1000" data-img="1">点击微信扫码支付</a>
+      <a href="javascript:;" class="online">在线咨询</a>
+    </div>
+    <!-- 分享 -->
+    <div class="cls-share">
+      <a href="javascript" class="sha-img sFied"  shareContent="我在51Talk和老外1对1在线聊天..." shareLink="http://www.51talk.com?66"></a>
+      <div class="cls-bds bdsharebuttonbox bdshare-button-style0-16">
+        <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+      </div>
+    </div>
+    <!-- /分享 -->
+  </div>  
+  <div class="widthMain toe-hr">
+    <a href="javascript:;" class="toe-hf">
+      <dl>
+        <dt><img data-src="<%=imagessrc%>adult/cls_toefl01.png" width="306" height="410" src="<%=imagessrc%>common/deafult.png" class="lt-img"/></dt>
+        <dd class="price">
+           <span class="wd lt">￥26000</span>
+          <span class="wd rt">原件:￥3600</span>
+        </dd>
+        <dd class="c-dd">
+          <span class="c-js">课程简介</span>
+          <span class="c-nr">课程涵盖雅思听、说、读、写四个科目，立足于官方评分标准，基于对真题的分析，通过针对性训练和各项基本技能的培养，帮助学员掌握所有题型的解题方法和技巧，最终达到全科理想成绩。</span>
+        </dd>
+        <dd>
+          <span class="c-js">上课时间（平日19:00 - 21:00）</span>
+          <span class="c-nr">阅读全能班  06月06日 - 06月28日<em>|</em>听力全能班  06月07日 - 06月29日</span>
+          <span class="c-nr">口语全能班  06月08日 - 06月30日<em>|</em>写作全能班  06月09日 - 07月01日</span>
+        </dd>
+      </dl>
+    </a>
+    <div class="c-pos cls-cod">
+      <a href="javascript:;" class="scan-cod" data-name="托福全能拔高班托福全能拔高班" data-num="2000" data-img="2" data-id="2">点击微信扫码支付</a>
+      <a href="javascript:;" class="online">在线咨询</a>
+    </div>
+    <!-- 分享 -->
+    <div class="cls-share">
+      <a href="javascript" class="sha-img sFied" shareContent="我在51Talk和老外1对1在线聊天..." shareLink="http://www.51talk.com?66"></a>
+      <div class="cls-bds bdsharebuttonbox bdshare-button-style0-16">
+        <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+      </div>
+    </div>
+    <!-- /分享 -->
+  </div>  
+</div>
+<!-- /系列二 -->
+<!-- /系列三 -->
+<div class="cls-cpt">
+  <div class="widthMain">
+    <p class="cls-ts"><img data-src="<%=imagessrc%>adult/cls_tit03.png" width="877" height="40" src="<%=imagessrc%>common/deafult.png"/></p>
+    <div class="cp-list">
+      <ul class="lst-ul">
+        <li class="on-fst">新概念英语<span>(一册)</span></li>
+        <li>新概念英语<span>(二册)</span></li>
+        <li>新概念英语<span>(三册)</span></li>
+      </ul>
+      <div class="cls-lay">
+        <div class="cls-nr">
+          <ul>
+            <li>
+            <!-- 分享 -->
+              <div class="cls-share">
+                <a href="javascript:;" class="sha-img sFied" shareContent="我在51Talk和老外1对1在线聊天..." shareLink="http://www.51talk.com?66"></a>
+                <div class="cls-bds bdsharebuttonbox bdshare-button-style0-16">
+                  <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                  <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                  <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                  <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+                </div>
+              </div>
+            <!-- /分享 -->
+            </li>
+            <li class="li-t">
+              <span class="wd lt">￥26000</span>
+              <span class="wd rt">原件:￥3600</span>
+            </li>
+            <li>
+              <span class="c-js">课程简介</span>
+              <span class="c-nr">采用享誉全球的经典教材《新概念英语》，该教材以其科学的教学体系、先进的教学理念帮助了一代又一代中国人。教材选取文章文笔优美，内容贴近生活，使学习者快速掌握地道实用的语言。</span>
+            </li>
+            <li>
+              <span class="c-js">上课时间</span>
+              <span class="c-nr">7月班：7月14日-8月16日<em>|</em>8月班：8月22日-9月22日 平日 19:00-21:00</span>
+            </li>
+            <li>
+              <a href="javascript:;" class="scan-cod" data-name="3" data-num="3000" data-img="3" data-id="3">点击微信扫码支付</a>
+              <a href="javascript:;" class="online">在线咨询</a>
+            </li>
+          </ul>
+        </div>
+        <div class="cls-nr hide">
+          <ul>
+            <li>
+              <!-- 分享 -->
+              <div class="cls-share">
+                <a href="javascript:;" class="sha-img sFied" shareContent="我在51Talk和老外1对1在线聊天..." shareLink="http://www.51talk.com?66"></a>
+                <div class="cls-bds bdsharebuttonbox bdshare-button-style0-16">
+                  <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                  <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                  <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                  <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+                </div>
+              </div>
+            <!-- /分享 -->
+            </li>
+            <li class="li-t">
+              <span class="wd lt">￥1800</span>
+              <span class="wd rt">原件:￥1200</span>
+            </li>
+            <li>
+              <span class="c-js">课程简介</span>
+              <span class="c-nr">采用享誉全球的经典教材《新概念英语》，该教材以其科学的教学体系、先进的教学理念帮助了一代又一代中国人。教材选取文章文笔优美，内容贴近生活，使学习者快速掌握地道实用的语言。</span>
+            </li>
+            <li>
+              <span class="c-js">上课时间</span>
+              <span class="c-nr">7月班：7月14日-8月16日<em>|</em>8月班：8月22日-9月22日 平日 19:00-21:00</span>
+            </li>
+            <li>
+              <a href="javascript:;" class="scan-cod" data-name="4" data-num="4000" data-img="4" data-id="4">点击微信扫码支付</a>
+              <a href="javascript:;" class="online">在线咨询</a>
+            </li>
+          </ul>
+        </div>
+        <div class="cls-nr hide">
+          <ul>
+            <li>
+              <!-- 分享 -->
+              <div class="cls-share">
+                <a href="javascript:;" class="sha-img sFied" shareContent="我在51Talk和老外1对1在线聊天..." shareLink="http://www.51talk.com?66"></a>
+                <div class="cls-bds bdsharebuttonbox bdshare-button-style0-16">
+                  <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                  <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                  <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                  <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+                </div>
+              </div>
+            <!-- /分享 -->
+            </li>
+            <li class="li-t">
+              <span class="wd lt">￥3000</span>
+              <span class="wd rt">原件:￥2600</span>
+            </li>
+            <li>
+              <span class="c-js">课程简介</span>
+              <span class="c-nr">采用享誉全球的经典教材《新概念英语》，该教材以其科学的教学体系、先进的教学理念帮助了一代又一代中国人。教材选取文章文笔优美，内容贴近生活，使学习者快速掌握地道实用的语言。</span>
+            </li>
+            <li>
+              <span class="c-js">上课时间</span>
+              <span class="c-nr">7月班：7月14日-8月16日<em>|</em>8月班：8月22日-9月22日 平日 19:00-21:00</span>
+            </li>
+            <li>
+              <a href="javascript:;" class="scan-cod" data-name="5" data-num="5000" data-img="5">点击微信扫码支付</a>
+              <a href="javascript:;" class="online">在线咨询</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+<!-- /系列三 -->
+<!-- 系列四 -->
+<div class="cls-ielts cls-pro">
+  <div class="widthMain">
+    <p class="cls-ts"><img data-src="<%=imagessrc%>adult/cls_tit04.png" width="735" height="40" src="<%=imagessrc%>common/deafult.png"/></p>
+    <a href="javascript:;" class="toe-hf">
+      <dl>
+        <dt><img data-src="<%=imagessrc%>adult/cls_speech01.jpg" width="306" height="410" src="<%=imagessrc%>common/deafult.png" class="lt-img"/></dt>
+        <dd class="price">
+           <span class="wd lt">￥26000</span>
+          <span class="wd rt">原件:￥3600</span>
+        </dd>
+        <dd class="c-dd">
+          <span class="c-js">课程简介</span>
+          <span class="c-nr">课程涵盖雅思听、说、读、写四个科目，立足于官方评分标准，基于对真题的分析，通过针对性训练和各项基本技能的培养，帮助学员掌握所有题型的解题方法和技巧，最终达到全科理想成绩。</span>
+        </dd>
+        <dd>
+          <span class="c-js">上课时间（平日19:00 - 21:00）</span>
+          <span class="c-nr">阅读全能班  06月06日 - 06月28日<em>|</em>听力全能班  06月07日 - 06月29日</span>
+          <span class="c-nr">口语全能班  06月08日 - 06月30日<em>|</em>写作全能班  06月09日 - 07月01日</span>
+        </dd>
+      </dl>
+    </a>
+    <div class="c-pos cls-cod">
+      <a href="javascript:;" class="scan-cod" data-name="6" data-num="6000" data-img="6">点击微信扫码支付</a>
+      <a href="javascript:;" class="online">在线咨询</a>
+    </div>
+    <!-- 分享 -->
+    <div class="cls-share">
+      <a href="javascript" class="sha-img sFied" shareContent="我在51Talk和老外1对1在线聊天..." shareLink="http://www.51talk.com?66"></a>
+      <div class="cls-bds bdsharebuttonbox bdshare-button-style0-16">
+        <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+      </div>
+    </div>
+    <!-- /分享 -->
+  </div>  
+  <div class="widthMain tw-hf">
+    <a href="javascript:;" class="toe-hf">
+      <dl>
+        <dt><img data-src="<%=imagessrc%>adult/cls_speech02.jpg" width="306" height="410" src="<%=imagessrc%>common/deafult.png" class="lt-img"/></dt>
+        <dd class="price">
+           <span class="wd lt">￥26000</span>
+          <span class="wd rt">原件:￥3600</span>
+        </dd>
+        <dd class="c-dd">
+          <span class="c-js">课程简介</span>
+          <span class="c-nr">课程涵盖雅思听、说、读、写四个科目，立足于官方评分标准，基于对真题的分析，通过针对性训练和各项基本技能的培养，帮助学员掌握所有题型的解题方法和技巧，最终达到全科理想成绩。</span>
+        </dd>
+        <dd>
+          <span class="c-js">上课时间（平日19:00 - 21:00）</span>
+          <span class="c-nr">阅读全能班  06月06日 - 06月28日<em>|</em>听力全能班  06月07日 - 06月29日</span>
+          <span class="c-nr">口语全能班  06月08日 - 06月30日<em>|</em>写作全能班  06月09日 - 07月01日</span>
+        </dd>
+      </dl>
+    </a>
+    <div class="c-pos cls-cod">
+      <a href="javascript:;" class="scan-cod" data-name="7" data-num="7000" data-img="7">点击微信扫码支付</a>
+      <a href="javascript:;" class="online">在线咨询</a>
+    </div>
+    <!-- 分享 -->
+    <div class="cls-share">
+      <a href="javascript" class="sha-img sFied"  shareContent="我在51Talk和老外1对1在线聊天..." shareLink="http://www.51talk.com?66"></a>
+      <div class="cls-bds bdsharebuttonbox bdshare-button-style0-16">
+        <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+      </div>
+     </div>
+    <!-- /分享 -->
+  </div>  
+</div>
+<!-- /系列四 -->
+<div class="cls-tage">
+  <div class="widthMain">
+    <p class="cls-ts"><img data-src="<%=imagessrc%>adult/cls_tit05.png" width="639" height="46" src="<%=imagessrc%>common/deafult.png"/></p>
+    <ul class="list">
+      <li>
+        <i class="l-icon l-img01"></i>
+        <span>中外籍专家强强联手，<br>精品课程完美呈现！</span>
+      </li>
+      <li>
+        <i class="l-icon l-img02"></i>
+        <span>各科名师十八班武艺在手，<br>网络平台尽显其能！</span>
+      </li>
+      <li>
+        <i class="l-icon l-img03"></i>
+        <span>互动、答疑、讲解、批改，<br>贴心服务全程陪伴！</span>
+      </li>
+      <li class="last">
+        <i class="l-icon l-img04"></i>
+        <span>多维度，多角度技巧呈现，<br>助考生笑傲考场！</span>
+      </li>
+    </ul>
+  </div>  
+</div>
+<div class="cls-disc"> 
+  <div class="widthMain">
+    <p class="cls-ts"><img data-src="<%=imagessrc%>adult/cls_tit06.png" width="595" height="45" src="<%=imagessrc%>common/deafult.png"/></p>
+    <ul class="list">
+      <li>
+        <img data-src="<%=imagessrc%>adult/cls_ser01.jpg" width="295" height="135" src="<%=imagessrc%>common/deafult.png"/>
+        <span class="l-t">QQ学习群</span>
+        <span class="l-s">全程大咖陪伴，疑问随时扫除<br>名师集中答疑，备考不再烦忧</span>  
+      </li>
+      <li>
+        <img data-src="<%=imagessrc%>adult/cls_ser02.jpg" width="295" height="135" src="<%=imagessrc%>common/deafult.png"/>
+        <span class="l-t">批改服务</span>
+        <span class="l-s">授课老师亲自批改，写<br>作、口语作业从此无忧</span>  
+      </li>
+      <li class="last">
+        <img data-src="<%=imagessrc%>adult/cls_ser03.jpg" width="295" height="135" src="<%=imagessrc%>common/deafult.png"/>
+        <span class="l-t">课程回放</span>
+        <span class="l-s">直播课程录像回放<br>课堂所学扎根于心</span>  
+      </li>
+    </ul> 
+  </div>
+</div>
+<div class="cls-c-gra"></div>
+<div class="cls-master">
+  <div class="widthMain">
+    <p class="cls-ts"><img data-src="<%=imagessrc%>adult/cls_tit07.png" width="401" height="46" src="<%=imagessrc%>common/deafult.png"/></p>
+    <ul class="u-tea">
+      <li class="fst">
+        <dl>
+          <dt><img data-src="<%=imagessrc%>adult/tea_daiyun.png" width="130" height="130" src="<%=imagessrc%>common/deafult.png"/></dt>
+          <dd><span class="f-t">戴 云</span><span class="f-st">51Talk课程产品副总裁</span></dd>
+          <dd><span class="f-w">曾任北京新东方学校校长教学助理，新东方高级教学培训师，教授学生数十万人，被爱戴他的学生们尊称为“教主”。曾获“新东方10周年功勋奖”、“新东方20周年功勋人物奖”和“北京市园丁奖”等。参与翻译出版了《新托福官方指南》， 编著出版了《托福iBT语法精要》、《托福iBT词汇10000》、《托福高分范文大全》、《雅思语法精要及剑桥雅思阅读长难句分析》等畅销书。</span></dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt><img data-src="<%=imagessrc%>adult/cls_tea01.png" width="130" height="130" src="<%=imagessrc%>common/deafult.png"/></dt>
+          <dd><span class="f-t">苏佩雯</span></dd>
+          <dd> <span class="f-w">51Talk托福口语、托福听力名师。原北京新东方学校优秀教师。英国爱丁堡大学硕士，有十多年教授托福、雅思、商务英语、学术英语、海外日常口语和听力、面试面签口语和听力等课程经验。</span></dd>
+        </dl>
+      </li>
+      <li class="last">
+        <dl>
+          <dt><img data-src="<%=imagessrc%>adult/cls_tea02.png" width="130" height="130" src="<%=imagessrc%>common/deafult.png"/></dt>
+          <dd><span class="f-t">曲琼琼</span></dd>
+          <dd><span class="f-w">51Talk托福写作、新概念英语、语法名师。原北京新东方学校资深教师，曾任新东方北美VIP托福写作教研组组长。从教多年，拥有丰富的教学经验，高分学员数量部门第一。</span></dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt><img data-src="<%=imagessrc%>adult/cls_tea03.png" width="130" height="130" src="<%=imagessrc%>common/deafult.png"/></dt>
+          <dd><span class="f-t">黎小明</span></dd>
+          <dd><span class="f-w">51Talk托福阅读、托福写作名师。原北京新东方学校优秀教师。英语专业八级，托福分数112，曾获北京新东方学校北美项目部新教师考核一等奖，北京新东方学校新教师培训授课竞赛“授课十佳”。</span></dd>
+        </dl>
+      </li>
+      <li class="last">
+        <dl>
+          <dt><img data-src="<%=imagessrc%>adult/cls_tea04.png" width="130" height="130" src="<%=imagessrc%>common/deafult.png"/></dt>
+          <dd><span class="f-t">唐长志</span></dd>
+          <dd><span class="f-w">51Talk雅思口语、雅思听力名师。原北京新东方学校优秀教师。英国德蒙福特大学西方史专业，留英四年，雅思分数8.0。</span></dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt><img data-src="<%=imagessrc%>adult/cls_tea05.png" width="130" height="130" src="<%=imagessrc%>common/deafult.png"/></dt>
+          <dd><span class="f-t">梁 颖</span></dd>
+          <dd><span class="f-w">51Talk雅思阅读、雅思听力名师。原北京新东方学校优秀教师。英国纽卡斯尔大学应用语言学与英语教学专业硕士，雅思阅读满分，有多年语法、阅读教学经验。</span></dd>
+        </dl>
+      </li>
+      <li class="last">
+        <dl>
+          <dt><img data-src="<%=imagessrc%>adult/cls_tea06.png" width="130" height="130" src="<%=imagessrc%>common/deafult.png"/></dt>
+          <dd><span class="f-t">刘 芸</span></dd>
+          <dd><span class="f-w">51Talk雅思写作、托福写作、SAT写作名师。原北京新东方学校资深教师。国家二级英语翻译，曾获全国英语网络写作大赛一等奖，CCTV英语演讲大赛复赛一等奖等，多本英语学习畅销书作者。</span></dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt><img data-src="<%=imagessrc%>adult/cls_tea07.png" width="130" height="130" src="<%=imagessrc%>common/deafult.png"/></dt>
+          <dd><span class="f-t">左高超</span></dd>
+          <dd><span class="f-w">51Talk托福写作、雅思写作、SAT语法与写作、新概念英语第三册及第四册名师。原北京新东方学校资深教师。北京理工大学硕士。曾获2011年“北京新东方优秀教师”称号，多次获得“优秀导师”称号。</span></dd>
+        </dl>
+      </li>
+      <li class="last">
+        <dl>
+          <dt><img data-src="<%=imagessrc%>adult/cls_tea08.png" width="130" height="130" src="<%=imagessrc%>common/deafult.png"/></dt>
+          <dd><span class="f-t">谢昕呈</span></dd>
+          <dd><span class="f-w">51Talk托福写作、托福口语、语音课程名师。原北京新东方资深教师。曾任北京新东方成人英语教师培训班英语口语教学法培训师，外研社《英语学习》杂志常驻撰稿人，多部英语辅导书籍作者。</span></dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt><img data-src="<%=imagessrc%>adult/cls_tea09.png" width="130" height="130" src="<%=imagessrc%>common/deafult.png"/></dt>
+          <dd><span class="f-t">温利民</span></dd>
+          <dd><span class="f-w">51Talk雅思、托福、SAT全科名师。13年国外考试培训经验；原北京新东方资深讲师、新教师培训师；新西兰奥克兰大学英语教育硕士、中央民族大学哲学硕士。独创“八卦图教学法”。</span></dd>
+        </dl>
+      </li>
+      <li class="last">
+        <dl>
+          <dt><img data-src="<%=imagessrc%>adult/cls_tea10.png" width="130" height="130" src="<%=imagessrc%>common/deafult.png"/></dt>
+          <dd><span class="f-t">常芮</span></dd>
+          <dd><span class="f-w">51Talk雅思写作、听力名师。原环球雅思写作金牌讲师，中国慕课(MOOC)语培项目特约讲师，北京第二外国语学院海培项目特约讲师，英国剑桥大学优秀交换生。雅思听力满分获得者，雅思总分8.0。</span></dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt><img data-src="<%=imagessrc%>adult/cls_tea11.png" width="130" height="130" src="<%=imagessrc%>common/deafult.png"/></dt>
+          <dd><span class="f-t">梁孜瑜</span></dd>
+          <dd><span class="f-w">51Talk新概念英语名师，原新东方优秀英语教师， get app合作讲师， 教授新概念1、2、3册6年，面授学员达6万余人，网络授课学员达10余人，进行大学讲座达百余场。曾任深圳卫视电视栏目嘉宾。</span></dd>
+        </dl>
+      </li>
+      <li class="last">
+        <dl>
+          <dt><img data-src="<%=imagessrc%>adult/cls_tea12.png" width="130" height="130" src="<%=imagessrc%>common/deafult.png"/></dt>
+          <dd><span class="f-t">宋芳</span></dd>
+          <dd><span class="f-w">51Talk新概念名师，原北京新东方优秀教师。后赴英国利兹大学攻读语言学硕士。授课风趣幽默，对英语语言有系统的理解和深入的研究，能敏锐察觉到学生学习短板，擅长学习方法指导。</span></dd>
+        </dl>
+      </li>
+    </ul>
+  </div>  
+</div>
+<div class="cls-bom">
+  <div class="widthMain"><a href="#cls-top" class="c-btn"><img data-src="<%=imagessrc%>adult/cls_bom_btn.png" width="815" height="245" src="<%=imagessrc%>common/deafult.png"/></a></div>
+</div>
+<!-- layer -->
+<form action="/pay/orderPay" method="post" id="ordeForm">
+  <div class="cls-layer hide">
+    <div class="mask"></div>
+    <div class="c-pay">
+      <p>请选择支付方式：</p>
+      <div class="c-tip">
+        <ul>
+          <li class="alipay clHover" data-urlB="http://www.51talk.com/pay/orderPay">
+            <input type="hidden" id="alipay" name="payMethod" value="alipay"  class="c-input" checked="checked">
+            <span class="u-rad"></span>
+            <img data-src="<%=imagessrc%>adult/alipay.png" width="185" height="53" src="<%=imagessrc%>common/deafult.png"/>
+          </li>
+          <li class="wx" data-urlT="http://www.51talk.com/pay/weixin/689165">
+            <input type="hidden" id="weixin" name="payMethod" value="weixin" class="c-input">
+            <span class="u-rad"></span>
+            <img data-src="<%=imagessrc%>adult/weixin.png" width="185" height="53" src="<%=imagessrc%>common/deafult.png" />
+          </li>
+        </ul>
+      </div>
+      <input type="hidden" class="dadaId">
+      <input type="hidden" class="pwTh">
+      <input type="submit" class="payMt" value="确认付款">
+    </div>
+  </div>
+</form>
+<!-- /layer -->
+<!-- 尾部 -->
+<!-- right side bar -->
+<% include ../common/w_side_bar.ejs %>
+<!-- /right side bar-->
+<% include ../common/w_footer_home.ejs %>
+<script src="<%= jsPath%>common/jquery.min.js"></script>
+<script src="<%= jsPath%>vendor.js" id="seajsnode"></script>
+<script src="http://static.51talk.com/js/new_user/ckplayer/ckplayer.js"></script>
+</body>
+<style>
+.cls-bds a{
+  width: 32px;
+  height: 27px;
+  margin:12px 6px 0px 0;
+  display: inline-block;
+  background: url('/images/html/summer26120/cls_l_icon.png') no-repeat;
+  *background: url('/images/html/summer26120/cls_l_icon.png') no-repeat;
+}  
+.cls-bds .bds_qzone{
+  background-position: 19px -69px;
+}
+.cls-bds .bds_weixin{
+  background-position: 19px -96px;
+}
+.cls-bds .bds_tsina{
+  background-position: 19px -120px;
+}
+.cls-bds .bds_sqq{
+  background-position: 19px -146px;
+}
+</style>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+	<meta content="yes" name="apple-mobile-web-app-capable" /> 
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+	<meta content="telephone=no" name="format-detection" /> 
+	<title>购买成功</title>
+	<link rel="stylesheet" type="text/css" href="/css/wap/brandDay20170426/brandDay20170426.css">		
+</head>
+<body>
+
+		<section class="container">
+	 			<img src="/images/wap/brandDay20170426/bg1.jpg" class="bg" />
+	 			<form class="info" id="info">
+	 				<input type="text" class="myInput" placeholder="手机号"/>
+	 				<input type="text" class="myInput" placeholder="设置密码"/>
+	 				<input type="submit" class="myInput getCoupon">
+	 				<!-- <a href="javascript:;" class="myInput getCoupon"></a> -->
+	 				<div class="loginBox">
+	 					<a href="#" class="loginButton"></a>
+	 				</div>
+	 			</form>
+		</section>
+		<section class="container">
+		 	<img src="/images/wap/brandDay20170426/bg2.jpg" class="bg" />
+		 	<img src="/images/wap/brandDay20170426/bg3.jpg" class="bg" />
+		 	<a href="#info" class="myInput getCoupon2"></a>
+		</section>
+		<section class="container">
+		 	<img src="/images/wap/brandDay20170426/bg4.jpg" class="bg" />
+		</section>
+		<script>
+		 	window.onload = function(){
+		 		var oW = document.body.offsetWidth;
+		 		oW = oW >640 ? 640: oW;
+		 		var fs = oW/640*20;
+		 		var oHtml = document.getElementsByTagName('html')[0];
+		 		oHtml.style.fontSize = fs + 'px';
+		 	}
+		</script>
+</body>
+</html>

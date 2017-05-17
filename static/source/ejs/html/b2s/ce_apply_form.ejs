@@ -1,0 +1,102 @@
+<% include ../common/top.ejs %>
+<body id="container" data-init="index">
+<!-- 公共头 -->
+<% include ../common/b2s/b2s_header.ejs %>
+<!-- banner -->
+<% include ../common/b2s/b2s_ce_banner.ejs %>
+<!-- 中间内容 -->
+<div class="ce-content">
+	<div class="widthMain">
+		<div class="aly-cls">
+      <h3 class="aly-tit">校企合作申请</h3>
+      <div class="aly-form">
+        <form class="control" id="applyForm" action="http://www.baidu.com">
+          <div class="group cls-ipt">
+            <label class="u-lab" for="old_pass">
+              <span class="u-txt">学校名称：</span>
+              <input class="u-ipt school-name" type="text" maxlength="20" placeholder="选择学校">
+            </label>
+          </div>
+          <div class="group gp-file">
+            <label class="u-lab">
+              <span class="u-txt">学校logo：</span>
+              <input class="u-file school-logo" type="file" accept=".jpg,.jpeg,.png,.gif">
+              <!-- <input type="hidden" class="logoVal"> -->
+              <span class="upload">
+                <img src="<%= imagessrc%>defult.png" alt="" class="defult">
+              </span>
+            </label>
+            <span class="sug-img"></span>
+            <span class="sug-selt hide">
+              <a href="javascript:;" class="sug-pre">预览</a>
+              <a href="javascript:;" class="sug-det">删去</a>
+            </span>
+            <span class="u-txt error hide"><i class="tenIcon err-icon"></i>文件大小不能超过2M</span>
+          </div>
+          <div class="group">
+            <label class="u-lab">
+              <span class="u-txt">详细地址：</span>
+              <input class="u-ipt address" type="text">
+            </label>
+          </div>
+          <div class="group">
+            <label class="u-lab">
+              <span class="u-txt">联系人：</span>
+              <input class="u-ipt relatives" type="text">
+            </label>
+          </div>
+          <div class="group">
+            <label class="u-lab">
+              <span class="u-txt">职位：</span>
+              <ul class="group-ul info-sex">
+                <li><i class="tenIcon check-icon" data-id="1"></i>班主任</li>
+                <li><i class="tenIcon check-icon" data-id="2"></i>学科主任</li>
+                <li><i class="tenIcon check-icon" data-id="3"></i>代课老师</li>
+                <li><i class="tenIcon check-icon" data-id="4"></i>年级主任（段长）</li>
+                <input type="hidden" class="sex-radio">
+              </ul>
+            </label>
+            <span class="u-txt error check-err hide"><i class="tenIcon err-icon"></i>信息不能为空</span>
+          </div>
+          <div class="group">
+            <label class="u-lab">
+              <span class="u-txt">座机：</span>
+              <input class="u-ipt call-num" type="text">
+            </label>
+          </div>
+          <div class="group tel-gp">
+            <label class="u-lab" for="tel">
+                <span class="u-txt">手机号码：</span>
+                <input class="u-ipt tel" name="mobile" type="tel" maxlength="11" placeholder="请填写您的手机号码" value="">
+            </label>
+            <span class="u-btn hover sendCode">获取验证码</span>
+            <span class="u-txt error hide"><i class="tenIcon err-icon"></i>请填写有效信息</span>
+          </div>
+          <div class="group">
+            <label class="u-lab" for="code">
+                <span class="u-txt">验证码：</span>
+                <!-- focus 类通过JS动态添加(IE6/7) -->
+                <input class="u-ipt code" name="code" type="text" maxlength="6" placeholder="请填写短信验证码" value="">
+            </label> 
+            <span class="u-txt error hide"><i class="tenIcon err-icon"></i>验证码有误</span>
+          </div>
+          <div class="group">
+            <label class="u-lab">
+              <span class="u-txt">邮箱：</span>
+              <input class="u-ipt email" type="text">
+            </label>
+            <span class="u-txt error hide"><i class="tenIcon err-icon"></i>邮箱填写错误</span>
+          </div>
+          <div class="sibmit">
+            <!--<a href="javascript:;" class="reset">重置所有信息</a>-->
+            <input class="u-btn md active" type="button" value="提交">
+          </div>
+        </form>
+      </div>  
+    </div>
+	</div>
+</div>
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

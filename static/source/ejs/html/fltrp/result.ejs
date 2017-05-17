@@ -1,0 +1,151 @@
+<!--结果页-->
+<% include ../common/top.ejs %>
+<body>
+	<% include ./result_header.ejs %>
+	<div class="container" data-init="fltrp">
+		<!--通过优秀-->
+		<div class="result_excellent wrap clearfix">
+			<h1 class="title">Congratulations！您的考试得分<em>98</em>分</h1>
+			<ul class="clearfix">
+				<li class="exc"><i></i>得分80分及以上获得优秀证书</li>
+				<li class="unlock"><i></i>得分60分及以上解锁教材学习</li>
+			</ul>
+			<div class="certificate">
+				<div class="share bdsharebuttonbox bdshare-button-style0-16 share_bc06 dq_div"  data-id="dq_06">
+		          <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+		          <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>  
+		          <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+		          <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+		        </div>
+				<img src="<%=imagessrc%>temp.jpg">
+				<div class="btn-lst">
+					<a href="javascript:;" class="download">下载到本地</a><a href="javascript:;" class="express">快递纸质证书</a>
+				</div>
+			</div>
+			<!--测评概况-->
+			<div class="measure">
+				<h2 class="title">测评概况</h2>
+				<div class="base">
+					<ul class="clearfix">
+						<li>用时：<em>42:00</em></li>
+						<li>正确：<em>45题</em></li>
+						<li>错误：<em>5题</em></li>
+						<li>得分：<em>98分</em></li>
+					</ul>
+				</div>
+				<table class="table">
+					<thead>
+						<tr>
+							<td>词汇</td>
+							<td>语法</td>
+							<td>阅读</td>
+							<td>听力</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><em>8</em>/10</td>
+							<td><em>8</em>/10</td>
+							<td><em>8</em>/10</td>
+							<td><em>8</em>/10</td>
+						</tr>
+					</tbody>
+				</table>
+				<a class="view" href="javascript:;">查看解析</a>
+			</div>
+		</div>
+		<!--通过非优秀-->
+		<div class="result_pass wrap clearfix">
+			<h1 class="title">Congratulations！您的考试得分<em>78</em>分</h1>
+			<ul class="clearfix">
+				<li class="exc"><i></i>得分60分及以上获得优秀证书</li>
+				<li class="unlock"><i></i>得分60分及以上解锁教材学习</li>
+			</ul>
+			<div class="certificate">
+				<div class="share bdsharebuttonbox bdshare-button-style0-16 share_bc06 dq_div"  data-id="dq_06">
+		          <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+		          <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>  
+		          <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+		          <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+		        </div>
+				<img src="<%=imagessrc%>temp.jpg">
+				<div class="btn-lst">
+					<a href="javascript:;" class="download">下载到本地</a><a href="javascript:;" class="express">快递纸质证书</a>
+				</div>
+			</div>
+			<!--测评概况-->
+			<div class="measure">
+				<h2 class="title">测评概况</h2>
+				<div class="base">
+					<ul class="clearfix">
+						<li>用时：<em>42:00</em></li>
+						<li>正确：<em>45题</em></li>
+						<li>错误：<em>5题</em></li>
+						<li>得分：<em>78分</em></li>
+					</ul>
+				</div>
+				<table class="table">
+					<thead>
+						<tr>
+							<td>词汇</td>
+							<td>语法</td>
+							<td>阅读</td>
+							<td>听力</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><em>8</em>/10</td>
+							<td><em>8</em>/10</td>
+							<td><em>8</em>/10</td>
+							<td><em>8</em>/10</td>
+						</tr>
+					</tbody>
+				</table>
+				<a class="view" href="javascript:;">查看解析</a>
+			</div>
+		</div>
+		<!--未通过-->
+		<div class="result_fail wrap clearfix">
+			<h1 class="title">很遗憾，您的考试得分<em>59</em>分</h1>
+			<ul class="clearfix">
+				<li class="exc"><i></i>得分60分以下无法获得优秀证书</li>
+				<li class="unlock"><i></i>得分60分以下无法解锁教材学习</li>
+			</ul>
+			<!--测评概况-->
+			<div class="measure">
+				<h2 class="title">测评概况</h2>
+				<div class="base">
+					<ul class="clearfix">
+						<li>用时：<em>42:00</em></li>
+						<li>正确：<em>45题</em></li>
+						<li>错误：<em>5题</em></li>
+						<li>得分：<em>59分</em></li>
+					</ul>
+				</div>
+				<table class="table">
+					<thead>
+						<tr>
+							<td>词汇</td>
+							<td>语法</td>
+							<td>阅读</td>
+							<td>听力</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><em>8</em>/10</td>
+							<td><em>8</em>/10</td>
+							<td><em>8</em>/10</td>
+							<td><em>8</em>/10</td>
+						</tr>
+					</tbody>
+				</table>
+				<a class="view" href="javascript:;">查看解析</a>
+			</div>
+		</div>
+	</div>
+	<% include ../common/uc_footer.ejs %>
+	<script src="<%=jssrc%>"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<% include ../common/top.ejs %>
+<body id="container" data-init="add_teaching">
+<!-- 公共头 -->
+<% include ../common/b2s/b2s_header.ejs %>
+<!--弹层-->
+<div class="dialog tea-dialog">
+  <form class="content">
+    <div class="tips">
+      <h4>创建</h4>
+      <a class="close" href="javascript:;"></a>
+    </div>
+    <div class="info"></div>
+    <div class="prompt-text">请录入上述信息，以便我们根据您的教学进度未学生排课</div>
+    <div class="submit">
+        <a href="javascript:;" >创建</a>
+    </div>
+  </form>
+</div>
+
+<!-- 中间内容 -->
+<div class="mycls">
+  <div class="widthMain">
+    <!-- banner -->
+    <% include ../common/b2s/b2s_banner.ejs %>
+    <div class="central">
+      <i class="cls-icon"></i>
+      <div class="stu_tit">
+        <dl>
+          <dt><img src="<%= imagessrc%>stu.jpg" alt=""></dt>
+          <dd class="intro_one"><span>流川枫</span> 同学</dd>
+          <dd>班级：三年二班</dd>
+          <dd>老师：林徽因</dd>
+        </dl>
+        <p class="stu_number">学生邀请码：123456</p>
+      </div>
+      <!-- 侧栏 -->
+      <% include ../common/b2s/b2s_sidebar.ejs %>
+      <div class="cls-main">
+        <!-- 我的班级 -->
+        <div class="cls-tab add_teaching">
+          <form>
+            <div class="teaching_box">
+              <div class="seach_tit">
+                <span>选择教材版本</span>
+                <div class="seach_box">
+                  <input type="text" placeholder="输入关键词搜索教材" class="seach_input" grade="1" >
+                  <span></span>
+                </div>
+              </div>
+              <div class="teaching_book">
+                  <ul class="bookList clearfix">
+                    
+                  </ul>
+              </div>
+              <div class="diy_teaching clearfix">
+                
+                <div class="text_box">
+                  <input type="text" placeholder="" class="diyname">
+                  <span>确定</span>
+                </div>
+                <span class="diy_text"> 自定义教材</span>
+              </div>
+            </div>
+          </form>
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>
+<div class="h-mask-box hide" id="maskId"></div>
+<div class="h-popup-box hide" id="popUpId">
+  <div class="main">
+    <div class="close-btn" id="closeId"></div>
+    <h3>布置作业</h3>
+    <div class="text-box">
+      <p></p>
+      <p>布置作业班级：</p>
+      <div class="work-class">
+        <p id="classInfo"></p>
+        <p></p>
+      </div>
+      <p>作业内容：</p>
+      <div class="work-class">
+        <p>每周去上一节外教课，共四节。</p>       
+        <p>上课软件  51TalkAC</p>
+        <p>请登录微信服务号“51Talk中小学英语”或在电脑上登</p>
+        <p>录s.51talk.com查看作业详情</p>
+      </div>
+      <p class="work-detail"><a id="workDetail" href="javascript:;">作业详情></a></p>
+      <p></p>
+      <p></p>
+      <p class="work-info">点击“布置作业”后，我们会通过短信和微信替您通知学生来上课。</p>
+    </div>
+  </div>
+  <div class="btn-box">
+    <p></p>
+    <div class="btn" id="btnBox"><!--<a id="workBtn">布置作业</a>--></div>
+  </div>
+</div>
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

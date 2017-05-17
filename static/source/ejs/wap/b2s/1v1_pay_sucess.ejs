@@ -1,0 +1,29 @@
+<% include ../common/top_b2s_n.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>1v1_pay_sucess.css">
+</head>
+<body data-init="" class="pay_sucess_1v1">
+    <div class="sucess_pay">
+        <img src="<%= imagessrc%>pay_sucess_1v1.png">
+        <div class="sucess_text">
+            <p class="text_1">支付成功</p>
+            <p class="text_2">获得外教VIP精品课32节特权！</p>
+        </div>
+    </div>
+    <div class="class_intro">
+        <p>恭喜您获得</p>
+        <p>VIP专享“外教1对1课”特惠报名权</p>
+        <p><a href=""></a>立即使用VIP特惠</p>
+    </div>
+<!-- loading -->
+<div id="fontSizeLoding">
+    <img src="<%= imagessrc%>eff_loading.gif">
+</div>
+<script type="text/javascript">
+window.onload = function(){
+    document.documentElement.style.fontSize = document.body.clientWidth / 6.4 + "px";
+    document.getElementById("fontSizeLoding").style.display = "none";
+}
+</script>
+</body>
+<!--公共尾部结束-->
+<% include ../common/bottom.ejs %>

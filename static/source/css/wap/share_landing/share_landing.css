@@ -1,0 +1,289 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Tue Dec 29 2015 11:28:05 GMT+0800 (中国标准时间)
+ */
+/*
+* 默认样式
+* @file：   base.less
+* @author:  zhuning@51talk.com）
+* @update:  2015-10-29
+* @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+*/
+html {
+  font-size: 62.5%;
+}
+@media only screen and (min-width: 481px) {
+  html {
+    font-size: 94%;
+  }
+}
+@media only screen and (min-width: 561px) {
+  html {
+    font-size: 109%;
+  }
+}
+@media only screen and (min-width: 641px) {
+  html {
+    font-size: 125%;
+  }
+}
+body {
+  padding: 0;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 640px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+}
+input,
+button,
+select,
+textarea,
+dl,
+dd,
+dt {
+  font-family: "Microsoft YaHei";
+  outline: none;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 0;
+  padding: 0px;
+  margin: 0px;
+}
+ul,
+li {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  vertical-align: middle;
+}
+b {
+  font-weight: normal;
+}
+::-moz-selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+strong {
+  font-weight: normal;
+}
+.sha-hd {
+  background-color: #fff;
+  margin: 0 2rem;
+}
+.sha-hd ul {
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  height: 4.25rem;
+}
+.sha-hd ul li {
+  -webkit-box-flex: 2;
+  box-flex: 2;
+}
+.sha-hd ul li:nth-child(1) {
+  -webkit-box-flex: 0.7;
+  box-flex: 0.7;
+}
+.sha-hd ul li:nth-child(2) {
+  border-left: 1px #bfbfbf solid;
+  padding-left: 0.7rem;
+}
+.sha-hd ul li:nth-child(2) span {
+  display: block;
+  margin-top: 0.5rem;
+}
+.sha-hd ul li:nth-child(3) {
+  text-align: right;
+}
+.sha-hd ul li img {
+  width: 6.8rem;
+  height: 2.25rem;
+}
+.sha-hd ul li a {
+  font-size: 1.2rem;
+  color: #999;
+}
+.sha-bg header {
+  position: relative;
+  text-align: center;
+  background-color: #ffc602;
+}
+.sha-bg header .sha-img01 {
+  width: 100%;
+  height: auto;
+}
+.sha-bg header nav {
+  position: absolute;
+  top: 20.7rem;
+  left: 0;
+  right: 0;
+}
+.sha-bg header nav p {
+  font-size: 1.8rem;
+  color: #fff;
+}
+.sha-bg header nav p span {
+  color: #fff000;
+  font-size: 2.4rem;
+}
+.sha-bg header nav h3 {
+  font-size: 1.6rem;
+}
+.sha-bg article .sha-word {
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  height: 5.2rem;
+  background-color: #fff9e6;
+  text-align: center;
+  padding: 0 0.5rem;
+}
+.sha-bg article .sha-word li {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  margin-left: 0.5rem;
+}
+.sha-bg article .sha-word li p span {
+  display: block;
+  margin-top: 0.5rem;
+}
+.sha-bg article .sha-word li p span em {
+  color: #ff7200;
+  font-size: 1.5rem;
+}
+.sha-bg article .sha-word li img {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  margin: 0 0.5rem;
+}
+.sha-bg article .sha-word li:first-child {
+  min-width: 12rem;
+  max-width: 18rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.sha-bg article .sha-icon {
+  padding-top: 4rem;
+}
+.sha-bg article .sha-icon img {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+.sha-ft {
+  background-color: #ffc600;
+  padding: 2rem 0;
+}
+.sha-ft p {
+  text-align: center;
+  font-size: 1.7rem;
+}
+.sha-ft p:first-child {
+  color: #ff4c4c;
+  font-size: 2.1rem;
+  margin-bottom: 1rem;
+}
+.sha-ft ul {
+  margin: 1rem 2rem;
+}
+.sha-ft ul li {
+  height: 4.4rem;
+  line-height: 4.4rem;
+  margin: 1rem 0;
+  padding: 0 1rem;
+  background-color: #fff;
+  border-radius: .5rem;
+  border-bottom: .1rem #e5b200 solid;
+  overflow: hidden;
+  font-size: 1.6rem;
+}
+.sha-ft ul li input {
+  width: 100%;
+  font-size: 1.6rem;
+  color: #bbb;
+}
+.sha-ft ul li:last-child {
+  border: none;
+  background-color: #ff4c4c;
+  text-align: center;
+  color: #fff;
+  font-size: 1.8rem;
+}
+.sha-ft ul li:last-child a {
+  color: #fff;
+  display: block;
+}
+.sha-bj-img {
+  float: left;
+}
+@media only screen and (min-width: 400px) {
+  .sha-bg header nav {
+    top: 23.8rem;
+  }
+}
+@media only screen and (max-device-width: 375px) {
+  .sha-bg header nav {
+    top: 22rem;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 330px) {
+  .sha-bg header nav {
+    top: 18.5rem;
+  }
+  .sha-bg article .sha-word li:first-child {
+    min-width: 12rem;
+    max-width: 16rem;
+  }
+}
+@media only screen and (min-width: 432px) {
+  .sha-bg header nav {
+    top: 25.6rem;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .sha-bg header nav {
+    top: 18rem;
+  }
+  .sha-bg article .sha-word li:first-child {
+    min-width: 9rem;
+    max-width: 12rem;
+  }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}

@@ -1,0 +1,22 @@
+<% include ../common/top.ejs %>
+<body data-init="answer">
+<form action="" method="get" id="answerForm">
+  <div class="dialog-wrap answer-wrap-pay">
+    <div class="answer-pay-con">
+      <div class="answer-pay-tit">购买精品辅导课VIP</div>
+      <div class="answer-pay-text">获得举手发言、上课答题、趣味课外作业等特权。</div>
+      <dl class="answer-pay-cost3">
+        <dt>外交精品课32节<br><span class="line-through">原价500元</span><br>外教1对1课6节 中教课2节<br><span class="line-through">原价480元</span></dt>
+        <dd><span class="price">298<span>元</span></span><input type="hidden" name="XX1" value="bbb"></dd>
+      </dl>
+    </div>
+    <div class="answer-pay-bottom">
+      <span class="alipay" data-pay="alipay">支付宝购买</span>
+      <span class="WeChat" data-pay="weixin.qq">微信购买</span>
+      <input type="hidden" name="XX2" id="vipPay" value="">
+    </div>
+  </div>
+<!-- <img src="<%= imagessrc%>account-headicon-agent.png" alt=""> -->
+</form>
+</body>
+<% include ../common/bottom.ejs %>

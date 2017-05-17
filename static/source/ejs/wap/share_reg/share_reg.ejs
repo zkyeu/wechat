@@ -1,0 +1,39 @@
+<% include ../common/top.ejs %>
+<body>
+<div class="share" data-init="share" id="container">
+  <!-- <img src="<%= imagessrc%>share_bj.gif" alt="" class="sha-bj"> -->
+  <img src="<%= imagessrc%>top_gz.jpg" alt="" width="0" height="0" style="float:left;">
+  <img src="<%= imagessrc%>share_bar.jpg" alt="" class="sha-ban" >
+  <div class="sha-clas">
+    <h3>现在注 册还可多得3节课程</h3>
+    <form action="doLogin" method="post" id="regForm">
+      <div class="sha-input">
+        <input type="text" name="text" class="input" placeholder="请输入手机号" id="user_name">
+      </div> 
+      <div class="sha-input">
+        <input type="password" name="password" class="input" placeholder="设置您的密码" id="password">
+      </div> 
+    </form>
+    <a href="javascript:;" class="share-btn" name="register">注 册</a>
+    <a href="javascript:;" class="sha-hover"><img src="<%= imagessrc%>sha_btn.png" alt=""></a>
+  </div>
+  <div class="sha-cer">
+    <img src="<%= imagessrc%>share_01.jpg" alt="" class="sha-img">
+    <img src="<%= imagessrc%>share_02.png" alt="" class="sha-img">
+    <img src="<%= imagessrc%>share_03.png" alt="" class="sha-img">
+  </div>
+  <div class="sha-fot">
+    <form action="doLogin" method="post" id="regFormfot">
+      <div class="sha-input">
+        <input type="text" name="text" class="input user_name" placeholder="请输入手机号">
+      </div> 
+      <div class="sha-input">
+        <input type="password" name="password" class="input password" placeholder="设置您的密码">
+      </div> 
+    </form>
+    <a href="javascript:;" class="share-btn" name="registerBig">注 册</a>
+  </div>
+   <a href="javascript:;" class="share-wbtn">活动规则></a>
+</div>
+</body>
+<% include ../common/bottom.ejs %>

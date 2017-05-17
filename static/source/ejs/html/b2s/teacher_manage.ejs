@@ -1,0 +1,122 @@
+<% include ../common/top.ejs %>
+<body id="container" data-init="index">
+<!-- 公共头 -->
+<% include ../common/b2s/b2s_header.ejs %>
+<!--弹层-->
+<% include b2s_common/diaglog.ejs %>
+<!-- 中间内容 -->
+<div class="mycls">
+  <div class="widthMain">
+    <!-- banner -->
+    <% include ../common/b2s/b2s_banner.ejs %>
+    <div class="central">
+      <i class="cls-icon"></i>
+        <div class="stu_tit">
+        <dl>
+          <dt><img src="<%= imagessrc%>tea.jpg" alt=""></dt>
+          <dd class="intro_one"><span>流川枫</span> 老师</dd>
+          <dd>班级：2个</dd>
+          <dd>学生：60人</dd>
+        </dl>
+        <p class="stu_number">学生邀请码：123456</p>
+      </div>
+    <!-- 侧栏 -->
+    <% include ../common/b2s/b2s_sidebar.ejs %>
+      <div class="cls-main">
+        <!-- 老师管理 -->
+        <div class="cls-tab add-tea">
+          <a 
+            href="javascript:;" 
+            class="tea-btn add" 
+            data-title="创建班级xxxx"
+            data-submit="立即创建"
+            data-type="teacher"
+            data-obj='[{"label":"姓名：","type":1,"name":"name","tip":"姓名不能为空","holder":"请输入姓名"},{"label":"手机：","type":1,"name":"mobile","tip":"手机号不能为空","holder":"请输入手机号"},{"label":"邮箱：","type":1,"name":"email","tip":"邮箱不能为空","holder":"请输入邮箱"},{"label":"性别：","type":2,"name":"sex","tip":"请选择性别","holder":"请选择性别","select":{"请选择":"","男":"1","女":"2"}}]'>
+            <span class="tenIcon grade-icon" ></span>
+            添加老师
+          </a>
+          <table class="tea-tab">
+            <thead>
+              <tr>
+                <td>姓名</td>
+                <td>手机</td>
+                <td>邮箱</td>
+                <td>性别</td>
+                <td>操作</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>冰淇淋</td>
+                <td>13698754462</td>
+                <td>2006yangfengyu@163.com</td>
+                <td>女</td>
+                <td><a href="javascript:;">删去</a></td>
+              </tr>
+              <tr>
+                <td>冰淇淋</td>
+                <td>13698754462</td>
+                <td>2006yangfengyu@163.com</td>
+                <td>女</td>
+                <td><a href="javascript:;">删去</a></td>
+              </tr>
+              <tr>
+                <td>冰淇淋</td>
+                <td>13698754462</td>
+                <td>2006yangfengyu@163.com</td>
+                <td>女</td>
+                <td><a href="javascript:;">删去</a></td>
+              </tr>
+              <tr>
+                <td>冰淇淋</td>
+                <td>13698754462</td>
+                <td>2006yangfengyu@163.com</td>
+                <td>女</td>
+                <td><a href="javascript:;">删去</a></td>
+              </tr>
+              <tr>
+                <td>冰淇淋</td>
+                <td>13698754462</td>
+                <td>2006yangfengyu@163.com</td>
+                <td>女</td>
+                <td><a href="javascript:;">删去</a></td>
+              </tr>
+              <tr>
+                <td>冰淇淋</td>
+                <td>13698754462</td>
+                <td>2006yangfengyu@163.com</td>
+                <td>女</td>
+                <td><a href="javascript:;">删去</a></td>
+              </tr>
+              <tr>
+                <td>冰淇淋</td>
+                <td>13698754462</td>
+                <td>2006yangfengyu@163.com</td>
+                <td>女</td>
+                <td><a href="javascript:;">删去</a></td>
+              </tr>
+              <tr>
+                <td>冰淇淋</td>
+                <td>13698754462</td>
+                <td>2006yangfengyu@163.com</td>
+                <td>女</td>
+                <td><a href="javascript:;">删去</a></td>
+              </tr>
+              <tr>
+                <td>冰淇淋</td>
+                <td>13698754462</td>
+                <td>2006yangfengyu@163.com</td>
+                <td>女</td>
+                <td><a href="javascript:;">删去</a></td>
+              </tr>
+            </tbody>
+          </table>  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

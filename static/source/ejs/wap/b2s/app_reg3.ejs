@@ -1,0 +1,36 @@
+<% include ../common/top.ejs %>
+<body class="app-wrap app-bg1" data-init="appForm">
+	<p class="app-reg2-t">北京109小学-3年级3班-赵雷</p>
+	<div class="app-container">
+		<form action="" rel="form">
+			<div class="app-reg-c">
+				<h6>请绑定一个家长的手机号</h6>
+				<ul class="app-input app-input-2">
+					<li>
+						<dl>
+							<dt></dt>
+							<dd>
+								<input type="tel" placeholder="请输入手机号" class="app-input-t" maxlength="11" rel="phone" />
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt></dt>
+							<dd>
+								<input type="tel" placeholder="请输入验证码" class="app-input-t" maxlength="6" rel="verifycode" />
+								<div class="send-verify">
+									<input type="button" value="获取验证码" send-url="http://www.baidu.com" send-type="2" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+			<div class="app-input-s-w">
+				<input type="submit" class="app-input-s" value="下一步" />
+			</div>
+		</form>
+	</div>
+</body>
+<% include ../common/bottom.ejs %>

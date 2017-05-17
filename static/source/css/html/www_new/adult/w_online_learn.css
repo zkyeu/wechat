@@ -1,0 +1,344 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Mon Dec 05 2016 11:37:51 GMT+0800 (中国标准时间)
+ */
+.info {
+  background: #303030;
+  color: #888;
+  padding: 30px 0 60px 0;
+}
+.info .centerMth {
+  width: 966px;
+  margin: 0 auto;
+}
+.info .tc_p {
+  text-align: center;
+}
+.info .tc_p a {
+  color: #888;
+  margin: 0 12px;
+}
+.info .tc_p a:hover {
+  color: #ff9600;
+}
+.info .link-word {
+  position: relative;
+  height: 18px;
+  margin-top: 30px;
+  border-top: 1px #424242 solid;
+}
+.info .link-word em {
+  position: absolute;
+  text-align: center;
+  top: -10px;
+  left: 50%;
+  margin-left: -36px;
+  width: 72px;
+  background: #303030;
+}
+.info .link-info {
+  line-height: 22px;
+}
+.info .link-info a {
+  margin-left: 10px;
+  color: #888;
+}
+.info .link-ti {
+  border-top: 1px #424242 solid;
+  margin-top: 15px;
+  padding-top: 30px;
+}
+.info .link-ti .link-ul {
+  width: 610px;
+  height: 49px;
+  margin: 0px auto;
+}
+.info .link-ti .link-ul li {
+  float: left;
+  width: 152px;
+}
+.info .link-ft {
+  text-align: center;
+  margin-top: 20px;
+}
+.info .link-ft em {
+  margin: 0 5px;
+}
+.info .link-ft a {
+  color: #888;
+}
+.concept .c_howTLearn {
+  background-color: #efefef;
+  text-align: center;
+  padding: 40px 0 124px 0;
+}
+.concept .m-online-title {
+  margin: 0px auto;
+  width: 1000px;
+  padding-top: 75px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+.concept .m-online-title .m-online-imgs {
+  margin-top: 45px;
+  position: relative;
+  height: 684px;
+}
+.concept .m-online-title .m-online-imgs a {
+  position: absolute;
+}
+.concept .m-online-title .m-online-imgs .online-learn {
+  left: 0;
+  top: 0;
+}
+.concept .m-online-title .m-online-imgs .online-learn:hover {
+  left: -2px;
+  top: -2px;
+}
+.concept .m-online-title .m-online-imgs .online_pratice {
+  right: 0;
+  top: 0;
+}
+.concept .m-online-title .m-online-imgs .online_pratice:hover {
+  right: -2px;
+  top: -2px;
+}
+.concept .m-online-title .m-online-imgs .online-enhance {
+  left: 0;
+  bottom: 0;
+}
+.concept .m-online-title .m-online-imgs .online-enhance:hover {
+  left: -2px;
+  bottom: -2px;
+}
+.concept .m-online-title .m-online-imgs .online-test {
+  right: 0;
+  bottom: 0;
+}
+.concept .m-online-title .m-online-imgs .online-test:hover {
+  right: -2px;
+  bottom: -2px;
+}
+.concept .m-online-box {
+  padding-top: 80px;
+}
+.concept .m-online-box .m-online-desc {
+  width: 1000px;
+  margin: 0 auto;
+}
+.concept .m-online-box .m-online-desc .online-sys .online-sys-img {
+  margin-bottom: 40px;
+}
+.concept .m-online-box .m-online-desc .online-sys li {
+  width: 320px;
+  margin-right: 20px;
+  float: left;
+}
+.concept .m-online-box .m-online-desc .online-sys li.last {
+  margin-right: 0;
+}
+.concept .m-online-box .m-online-desc .online-sys li img {
+  border: none;
+}
+.concept .m-online-box .m-online-desc .online-sys li p {
+  line-height: 24px;
+  font-size: 15px;
+  padding: 15px 24px;
+  color: #1e1e1e;
+  background-color: #fff;
+  text-align: left;
+}
+.concept .m-online-box .m-online-desc .online-weLearn {
+  padding-top: 75px;
+  padding-bottom: 30px;
+}
+.concept .m-online-box .m-online-desc .online-secondTitle {
+  position: relative;
+  height: 205px;
+  background-color: #fff;
+  margin-bottom: 75px;
+}
+.concept .m-online-box .m-online-desc .online-secondTitle img {
+  padding-top: 50px;
+}
+.concept .m-online-box .m-online-desc .online-secondTitle a {
+  position: absolute;
+  bottom: 76px;
+  width: 80px;
+  height: 80px;
+  z-index: 999;
+  cursor: pointer;
+}
+.concept .m-online-box .m-online-desc .online-secondTitle .hrefLeft {
+  right: 218px;
+}
+.concept .m-online-box .m-online-desc .online-secondTitle .hrefRight {
+  right: 130px;
+}
+.concept .m-online-box .m-online-desc .online-freq-prac .u-freq-myTitle {
+  font-size: 20px;
+  line-height: 60px;
+  color: #666;
+  margin-bottom: 30px;
+}
+.concept .m-online-box .m-online-desc .online-freq-prac .online-freq-list .u-freq-left {
+  float: left;
+  width: 480px;
+}
+.concept .m-online-box .m-online-desc .online-freq-prac .online-freq-list .u-freq-left .left-img {
+  border: 1px solid #ffa800;
+  width: 478px;
+}
+.concept .m-online-box .m-online-desc .online-freq-prac .online-freq-list .u-freq-right {
+  float: right;
+  width: 480px;
+}
+.concept .m-online-box .m-online-desc .online-freq-prac .online-freq-list .u-freq-right .right-img {
+  border: 1px solid #00b3d7;
+  width: 478px;
+}
+.concept .m-online-box .m-online-desc .online-freq-prac .online-freq-list .u-freq-desc1 {
+  padding: 20px 25px;
+  color: #fff;
+  background-color: #ffa800;
+  *width: 430px;
+  /* width: 480px;
+            *width: 440px; */
+}
+.concept .m-online-box .m-online-desc .online-freq-prac .online-freq-list .u-freq-desc1 li {
+  width: 196px;
+  height: 125px;
+  float: left;
+}
+.concept .m-online-box .m-online-desc .online-freq-prac .online-freq-list .u-freq-desc1 .u-freq-Box {
+  padding-right: 17px;
+  border-right: 1px solid #fff;
+}
+.concept .m-online-box .m-online-desc .online-freq-prac .online-freq-list .u-freq-desc1 .no-pl {
+  padding-right: 0;
+  padding-left: 17px;
+  border: none;
+}
+.concept .m-online-box .m-online-desc .online-freq-prac .online-freq-list .u-freq-desc1 h4 {
+  font-size: 20px;
+  line-height: 20px;
+  margin-bottom: 16px;
+}
+.concept .m-online-box .m-online-desc .online-freq-prac .online-freq-list .u-freq-desc1 p {
+  font-size: 13px;
+  line-height: 22px;
+  text-align: left;
+}
+.concept .m-online-box .m-online-desc .online-freq-prac .online-freq-list .u-freq-desc2 {
+  padding: 20px 0;
+  color: #fff;
+  background-color: #00b3d7;
+  width: 480px;
+}
+.concept .m-online-box .m-online-desc .online-freq-prac .online-freq-list .u-freq-desc2 li {
+  width: 130px;
+  height: 123px;
+  float: left;
+  padding: 0 14px;
+  border-right: 1px solid #fff;
+}
+.concept .m-online-box .m-online-desc .online-freq-prac .online-freq-list .u-freq-desc2 .no-br {
+  border-right: none;
+}
+.concept .m-online-box .m-online-desc .online-freq-prac .online-freq-list .u-freq-desc2 h4 {
+  font-size: 20px;
+  line-height: 20px;
+  margin-bottom: 16px;
+}
+.concept .m-online-box .m-online-desc .online-freq-prac .online-freq-list .u-freq-desc2 p {
+  font-size: 13px;
+  line-height: 22px;
+  text-align: left;
+}
+.concept .m-online-box .m-online-desc .online-freq-prac .online-freq-list .u-href-desc {
+  display: inline-block;
+  width: 100%;
+  height: 210px;
+}
+.concept .m-online-box .m-online-desc .online-freq-prac .online-freq-list .u-href-desc img {
+  padding-top: 30px;
+  padding-bottom: 12px;
+}
+.concept .m-online-box .m-online-desc .online-freq-prac .online-freq-list .u-href-desc p {
+  font-size: 15px;
+  line-height: 22px;
+  color: #999999;
+}
+.concept .m-online-box .m-online-desc .online-test .u-freq-myTitle,
+.concept .m-online-box .m-online-desc .online-help .u-freq-myTitle {
+  font-size: 20px;
+  line-height: 60px;
+  color: #666;
+  margin-bottom: 30px;
+}
+.concept .m-online-box .m-online-desc .online-test .u-test-img,
+.concept .m-online-box .m-online-desc .online-help .u-test-img {
+  margin-bottom: 80px;
+}
+.concept .m-online-box .m-online-desc .online-help {
+  padding-bottom: 80px;
+  overflow: hidden;
+}
+.concept .m-online-box .m-online-desc .online-help .online-help-list {
+  width: 1050px;
+}
+.concept .m-online-box .m-online-desc .online-help .online-help-list li {
+  width: 475px;
+  float: left;
+  margin-right: 50px;
+  background-color: #fff;
+}
+.concept .m-online-box .m-online-desc .online-help .online-help-list li p {
+  height: 122px;
+  padding: 28px 28px 0;
+  text-align: left;
+  font-size: 15px;
+  line-height: 24px;
+  color: #1e1e1e;
+}
+.concept .m-online-box {
+  padding-bottom: 0;
+}
+.online-learn-download {
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 70px;
+  height: 336px;
+}
+.online-learn-download li {
+  float: left;
+  width: 310px;
+  margin-right: 35px;
+  text-align: center;
+}
+.online-learn-download li img {
+  margin-bottom: 20px;
+}
+.online-learn-download li h3 {
+  font-size: 15px;
+  line-height: 24px;
+  margin-bottom: 10px;
+  color: #1e1e1e;
+}
+.online-learn-download li a {
+  display: inline-block;
+  width: 170px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #ffa800;
+  border-radius: 4px;
+  color: #fff;
+}
+.online-learn-download li a:hover {
+  color: #fff;
+}
+.online-learn-download .last {
+  margin-right: 0;
+}

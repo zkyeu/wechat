@@ -1,0 +1,63 @@
+<% include ../common/top.ejs %>
+<body data-init="app_assignment_matching">
+<!-- <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>"> -->
+<div class="assignment-wrap">
+	
+	<div class="assignment-wrap-top"></div>
+	<div class="assignment-bg"></div>
+	<div class="assignment-con">
+		<dl class="assignment-tit">
+			<dt>选择对应图片的单词</dt>
+			<dd>choose the corresponding picture of the word</dd>
+		</dl>
+		<div class="assignment-item4">
+			<canvas id="canvas" width="400" height="500">      
+				
+			</canvas>
+			<ul class="assignment-item4-con" id="matching" weixinContent='{"category":"1","answerStatus":1,"wordingStart":"","wordingTitle":"","wordingEnd":"","answerUrl":"http:\/\/s.51talk.com\/wapnew\/WxHomework\/getHomework?homeworkId=658","questionDetail":[{"id":"167","pic":"http://one.frontend.com/static/source/images/wap/b2s/app-assignment-4.jpg","word":"Hamburger1 Hamburger2 Hamburger HamburgerHamburger3 Hamburger4 Hamburger5 Hamburger6"},{"id":"168","pic":"http://one.frontend.com/static/source/images/wap/b2s/app-assignment-4.jpg","word":"Bread"},{"id":"169","pic":"http://one.frontend.com/static/source/images/wap/b2s/app-assignment-4.jpg","word":"Rice"},{"id":"170","pic":"http://one.frontend.com/static/source/images/wap/b2s/app-assignment-4.jpg","word":"Noodle"}],"displaySequence":{"pic":"169,170,167,168","word":"169,167,170,168"},"answer":{"user":"167,169,168,170","correct":"1"}}'>
+				<li class="cfix">
+					<span class="assignment-item4-con-pic">
+						<img src="<%= imagessrc%>app-assignment-4.jpg" />
+					</span>
+					<span class="assignment-item4-con-text">Eat</span>
+				</li>
+				<li class="cfix">
+					<span class="assignment-item4-con-pic">
+						<img src="<%= imagessrc%>app-assignment-4.jpg" />
+					</span>
+					<span class="assignment-item4-con-text">Book</span>
+				</li>
+				<li class="cfix">
+					<span class="assignment-item4-con-pic">
+						<img src="<%= imagessrc%>app-assignment-4.jpg" />
+					</span>
+					<span class="assignment-item4-con-text">Water</span>
+				</li>
+				<li class="cfix">
+					<span class="assignment-item4-con-pic">
+						<img src="<%= imagessrc%>app-assignment-4.jpg" />
+					</span>
+					<span class="assignment-item4-con-text">Apple</span>
+				</li>
+			</ul>
+		</div>
+		<div class="assignment-result">
+			<div class="assignment-result1">
+				<img src="<%= imagessrc%>app-assignment-2.png" />
+			</div>
+			<div class="assignment-result2">
+				<img src="<%= imagessrc%>app-assignment-3.png" />
+			</div>
+			<div class="assignment-result3">
+				<img src="<%= imagessrc%>app-assignment-7.png" />
+			</div>
+		</div>
+	</div>
+	<div class="assignment-bottom">
+		13489031345 <a href="#">点击退出</a>
+	</div>
+	<div class="assignment-wrap-bottom"></div>
+
+</div>
+</body>
+<% include ../common/bottom.ejs %>

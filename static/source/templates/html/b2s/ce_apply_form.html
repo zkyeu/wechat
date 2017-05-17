@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="app下载专页">
+    <meta name="keywords" content="app下载专页">
+    <title>欢迎下载51Talk App</title>
+    <link rel="stylesheet" type="text/css" href="/css/html/b2s/b2s.css">
+</head>
+<body id="container" data-init="index">
+<!-- 公共头 -->
+<div class="header">
+  <div class="widthMain">
+    <div class="hd-lt">
+      <i class="tenIcon h-icon"></i>
+      <b></b>
+    </div>
+    <div class="hd-rt">
+      <a href="javascript:;" class="a_color">AC客户端</a> 
+      <a href="javascript:;" class="com-hr-a show-img">微信服务号
+        <img src="/images/html/b2s/home_code.png" />
+      </a>
+      <b>林徽因</b>
+      <a href="javascript:;" class="sign">退出</a> 
+    </div>
+  </div>
+</div>
+<!-- banner -->
+<div class="ce-banner">
+	<div class="widthMain">
+		<img src="/images/html/b2s/ce_banner.png" alt="" class="ce-banner-img">
+	</div>
+</div>
+<!-- 中间内容 -->
+<div class="ce-content">
+	<div class="widthMain">
+		<div class="aly-cls">
+      <h3 class="aly-tit">校企合作申请</h3>
+      <div class="aly-form">
+        <form class="control" id="applyForm" action="http://www.baidu.com">
+          <div class="group cls-ipt">
+            <label class="u-lab" for="old_pass">
+              <span class="u-txt">学校名称：</span>
+              <input class="u-ipt school-name" type="text" maxlength="20" placeholder="选择学校">
+            </label>
+          </div>
+          <div class="group gp-file">
+            <label class="u-lab">
+              <span class="u-txt">学校logo：</span>
+              <input class="u-file school-logo" type="file" accept=".jpg,.jpeg,.png,.gif">
+              <!-- <input type="hidden" class="logoVal"> -->
+              <span class="upload">
+                <img src="/images/html/b2s/defult.png" alt="" class="defult">
+              </span>
+            </label>
+            <span class="sug-img"></span>
+            <span class="sug-selt hide">
+              <a href="javascript:;" class="sug-pre">预览</a>
+              <a href="javascript:;" class="sug-det">删去</a>
+            </span>
+            <span class="u-txt error hide"><i class="tenIcon err-icon"></i>文件大小不能超过2M</span>
+          </div>
+          <div class="group">
+            <label class="u-lab">
+              <span class="u-txt">详细地址：</span>
+              <input class="u-ipt address" type="text">
+            </label>
+          </div>
+          <div class="group">
+            <label class="u-lab">
+              <span class="u-txt">联系人：</span>
+              <input class="u-ipt relatives" type="text">
+            </label>
+          </div>
+          <div class="group">
+            <label class="u-lab">
+              <span class="u-txt">职位：</span>
+              <ul class="group-ul info-sex">
+                <li><i class="tenIcon check-icon" data-id="1"></i>班主任</li>
+                <li><i class="tenIcon check-icon" data-id="2"></i>学科主任</li>
+                <li><i class="tenIcon check-icon" data-id="3"></i>代课老师</li>
+                <li><i class="tenIcon check-icon" data-id="4"></i>年级主任（段长）</li>
+                <input type="hidden" class="sex-radio">
+              </ul>
+            </label>
+            <span class="u-txt error check-err hide"><i class="tenIcon err-icon"></i>信息不能为空</span>
+          </div>
+          <div class="group">
+            <label class="u-lab">
+              <span class="u-txt">座机：</span>
+              <input class="u-ipt call-num" type="text">
+            </label>
+          </div>
+          <div class="group tel-gp">
+            <label class="u-lab" for="tel">
+                <span class="u-txt">手机号码：</span>
+                <input class="u-ipt tel" name="mobile" type="tel" maxlength="11" placeholder="请填写您的手机号码" value="">
+            </label>
+            <span class="u-btn hover sendCode">获取验证码</span>
+            <span class="u-txt error hide"><i class="tenIcon err-icon"></i>请填写有效信息</span>
+          </div>
+          <div class="group">
+            <label class="u-lab" for="code">
+                <span class="u-txt">验证码：</span>
+                <!-- focus 类通过JS动态添加(IE6/7) -->
+                <input class="u-ipt code" name="code" type="text" maxlength="6" placeholder="请填写短信验证码" value="">
+            </label> 
+            <span class="u-txt error hide"><i class="tenIcon err-icon"></i>验证码有误</span>
+          </div>
+          <div class="group">
+            <label class="u-lab">
+              <span class="u-txt">邮箱：</span>
+              <input class="u-ipt email" type="text">
+            </label>
+            <span class="u-txt error hide"><i class="tenIcon err-icon"></i>邮箱填写错误</span>
+          </div>
+          <div class="sibmit">
+            <!--<a href="javascript:;" class="reset">重置所有信息</a>-->
+            <input class="u-btn md active" type="button" value="提交">
+          </div>
+        </form>
+      </div>  
+    </div>
+	</div>
+</div>
+<!-- 公共尾部 -->
+<div class="footer">
+  <div class="widthMain">
+    <p class="link-ft">
+      Copyright©北京大生知行科技有限公司<em>|</em>
+      <a href="/page/privacy/" target="_blank" title="隐私声明">隐私声明</a><em>|</em>
+      <a href="/page/terms/" target="_blank" title="用户协议">用户协议</a><em>|</em>
+      京ICP证110696号 京ICP备11031999号
+    </p>
+  </div>  
+</div>
+</body>
+<!--公共尾部结束-->
+<script src="/js/html/project/b2s/vendor.js"></script>
+</html>

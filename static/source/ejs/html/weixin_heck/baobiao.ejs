@@ -1,0 +1,78 @@
+<% include ../common/top_b2s.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%=csslinkb2s%>tableStyle.css">
+<link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>layui.css">
+</head>
+<body data-init="baobiao">
+<div class="pad20px content-width80 clearfix">
+    <div class="page-title">KPI报表</div>
+
+    <div class="ptb20 clear-fix">
+        <div class="guide-link fl">
+            全部 > <a href="#">某团队</a> > <a href="#">某人</a>
+        </div>
+        <div class="set-pos fr">
+            <div class="select-time">
+                <div class="layui-form-pane">
+                    <div class="layui-form-item">
+                        <div class="layui-input-inline">
+                            <input class="layui-input sel-time" placeholder="开始日期"  onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD'})" id="stime">
+                        </div>
+                        <span class="zhizi">至</span>
+                        <div class="layui-input-inline  sel-time">
+                            <input class="layui-input" placeholder="截止日期" onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD'})"  id="etime">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="add-btn">
+                <a href="javascript:;" id="countBtn">统计查询</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-box">
+        <table class="table-detail" border="1" cellspacing="0" cellpadding="0">
+            <thead>
+                <tr>
+                    <th>团队</th>
+                    <th>分配的leads数</th>
+                    <th>添加的好友数</th>
+                    <th>微信添加率</th>
+                    <th>互动学员数</th>
+                    <th>学员回复消息数</th>
+                    <th>员工回复消息数</th>
+                    <th>黑鸟发送消息数</th>
+                </tr>
+            </thead>
+            <tbody class="sel-dom">
+                <tr>
+                    <td><a href="#" class="have-next">AAA</a></td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>AAA</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 class="dn">暂无相关数据！</h5>
+    </div>
+</div>
+<script>
+    var start_time = '2017-03-10';
+    var end_time = '2017-03-16';
+</script>
+</body>
+<% include ../common/bottom.ejs %>

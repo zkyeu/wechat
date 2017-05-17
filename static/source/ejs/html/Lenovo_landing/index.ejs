@@ -1,0 +1,125 @@
+<% include ../common/top.ejs %>
+<body>
+<div id="container" data-init="teenagers">
+  <div class="head">
+    <div class="widthMain">
+      <div class="nav">
+        <img src="<%= imagessrc%>lenovo.png" class="lt">
+        <img src="<%= imagessrc%>q_logo_rt.png" class="rt">
+      </div>
+      <div class="baner">
+        <img src="<%= imagessrc%>q_img.jpg" class="ban-img">
+        <div class="bar-rt" >
+          <img src="<%= imagessrc%>q_tit01.png" class="rt-tit">
+          <form action="name" id="t-regForm">
+            <div class="rt-input">
+              <input type="email" name="email" placeholder="请输入您的邮箱" class="pow-input jsCheck">
+              <input type="tel" name="mobile" placeholder="请输入您的手机号" class="pow-input jsCheck">
+              <input type="password" name="password" placeholder="请设置您的密码" class="pow-input jsCheck">
+              <a href="javascript:;" class="ctr-btn jsSubmit">立即抢课</a>
+            </div>
+
+          </form> 
+        </div>   
+      </div>
+    </div>
+  </div>
+  <!-- 文字内容 -->
+  <div class="ten-word">
+    <div class="widthMain">
+      <p>尊敬的联想用户：</p>
+      <span>您好！为了给您提供最优质的英语外教资源，提升对话世界的能力，联想将携手51Talk为您提供在线外教一对一课程，注册即可领取课程，先抢先得，随时随地预约体验！另外，如果您想购买更多课程，还可以享受联想用户的专享价格特权。爱好英语的小伙伴们，还等什么，赶快领取课程体验吧！</span>
+    </div>
+  </div>
+  <div class="time-img">
+    <div class="widthMain">
+      <img src="<%= imagessrc%>q_titie_bj.png" class="tit">
+    </div>
+  </div>
+  <div class="langer">
+    <div class="widthMain">
+      <p><img src="<%= imagessrc%>q_tit02.png"></p>
+      <img src="<%= imagessrc%>q_tit03.png">
+      <img src="<%= imagessrc%>q_img02.jpg" class="rt-img">
+    </div>
+  </div>
+  <div class="free">
+    <div class="widthMain">
+      <p><img src="<%= imagessrc%>q_tit04.png"></p>
+      <div class="fr-main">
+        <img src="<%= imagessrc%>q_img03.jpg"> 
+        <div class="fr-rt">
+          <img src="<%= imagessrc%>q_tit05.png" class="rt-img">
+          <div class="fr-bom">
+            <form action="" id="t-regForm-bom">
+              <div class="form">
+                <input type="email" name="email" placeholder="请输入您的邮箱" class="pow-input jsCheck">
+                <input type="tel" name="mobile" placeholder="请输入您的手机号" class="pow-input jsCheck">
+                <input type="password" name="password" placeholder="请设置您的密码" class="pow-input jsCheck">  
+              </div>
+              <a href="javascript:;" class="ctr-btn jsSubmit">立即抢课</a>
+            </form>
+          </div> 
+        </div>
+      </div>
+    </div> 
+  </div>
+  <!-- 学员心声 -->
+  <div class="m_evaluation">
+    <div class="widthMain">
+      <h1 class="m_courseT"><img src="<%= imagessrc%>q_tit_06.png" alt=""></h1>
+      <div class="m_courseL s_cb"></div>
+      <div class="m_student">
+        <div class="m_studentI f_p1">
+          <p class="m_studentE">通过朋友介绍，我开始在 51Talk 学习。我比较喜欢类似闯关的形式，因此选择俩经典英语和 iTalk 视频教程，每一次通关都代表着我的进步，让我很有成就感。我每天都在上面学习，着已经成为我生活的一部分，长期坚持下来，我的口语真的进步很大。我还让我的女儿在上面学习，也推荐俩很多朋友！</p>
+          <dl class="s_dl7">
+            <dt><img src="<%= imagessrc%>vincent.png" alt=""></dt>
+            <dd><span>Vincent</span><br/>职业：公司总裁</dd>
+          </dl>
+        </div>
+        <div class="m_studentI f_p2">
+          <p class="m_studentE m_s1">我从7岁开始在51talk学习，现已有了一年的时间啦！51talk不仅帮助我每天提供了一个浸入式的英文环境，还可以让我同来自北上广深的小伙伴们一样，学习最棒的英文课程！一年下来，我已经顺利地完成了L2-L9的课程，自己英文的听说能力得到了很大的提升！因此，我屡屡在各项英语比赛中获奖，更是取得了代表江西省去北京参加“希望之星”全国总决赛的好成绩！</p>
+          <dl class="s_dl7">
+            <dt><img src="<%= imagessrc%>pr_img02.png" alt=""></dt>
+            <dd><span>Vic</span><br/>CCTV希望之星英语风采大赛-江西省冠军</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 星光璀璨 -->
+  <div class="m_star">
+    <div class="widthMain">
+      <h1 class="m_courseT"><img src="<%= imagessrc%>q_tit_07.png" alt=""></h1>
+      
+      <div class="star_lina"><img src="<%= imagessrc%>star_lina.png" alt=""></div>
+      <div class="star_lina_r"><img src="<%= imagessrc%>star_lina_r.jpg" alt=""></div>
+    </div>
+  </div>
+  <!-- 合作企业 -->
+  <div class="cooper">
+    <div class="widthMain">
+      <h3 class="cop-h3">合作企业</h3>
+      <ul class="cop-ul">
+        <li><a href="javascript:;"><img src="<%= imagessrc%>fot_xiaomi.png" alt=""></a></li>
+        <li><a href="javascript:;"><img src="<%= imagessrc%>fot_jd.png" alt=""></a></li>
+        <li><a href="javascript:;"><img src="<%= imagessrc%>fot_bank.png" alt=""></a></li>
+        <li><a href="javascript:;"><img src="<%= imagessrc%>fot_sony.png" alt=""></a></li>
+        <li><a href="javascript:;"><img src="<%= imagessrc%>fot_state.png" alt=""></a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- 尾部注册 -->
+  <div class="g_bottom">
+    <div class="widthMain">
+      <p class="piped">Copyrigh&copy;北京大生知行科技有限公司<i>|</i>
+      <a href="#" target="_blank">隐私声明</a><i>|</i>
+      <a href="#" target="_blank">用户协议</a><i>|</i>
+      京ICP证110696号&nbsp;京ICP备11031999号
+      <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253020514'%3E%3C/span%3E%3Cscript _src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1253020514%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+      </p>
+    </div>
+  </div>
+</div>
+</body>
+<% include ../common/bottom.ejs %>

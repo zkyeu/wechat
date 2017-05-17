@@ -1,0 +1,192 @@
+@charset "UTF-8";
+
+// 导入core中的基础文件
+//-----------------------------------------------------
+@import "sassCore/_base";
+
+
+// *, :after, :before{ @include box-sizing; }
+
+// dev 图片路径
+// $imgPath : '../image/';
+
+
+$indent: 0.18rem;
+
+.g-mn{
+  position: relative;
+  width: 100%;
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+  background-color: #fff;
+  -webkit-overflow-scrolling: touch;
+}
+
+.m-head{
+  padding: 0.35rem 0;
+  text-align: center;
+  background-color: #f2f2f2;
+  .title{
+    font-size: $indent;
+    color: #484849;
+    a{
+      font-size: 0.24rem;
+      color: #ff8200;
+    }
+  }
+  .desc{
+    padding-top: 0.15rem;
+    font-size: 0.12rem;
+  }
+}
+
+.u-tit{
+  padding-top: 0.3rem;
+  padding-left: $indent;
+  margin-bottom: 0.1rem;
+  .cur{
+    display: inline-block;
+    width: 0.28rem;
+    height: 0.28rem;
+    line-height: 0.28rem;
+    color: #fff;
+    font-size: 0.12rem;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    background-color: #ff8200;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+  .cap{
+    display: inline-block;
+    height: 0.28rem;
+    line-height: 0.28rem;
+    font-size: 0.16rem;
+    color: #ff8200;
+    vertical-align: sub;
+  }
+}
+
+.f-tac{ text-align: center; }
+
+[class|=m-sec] .u-img{ width: 82%; }
+.m-sec-1{
+  .desc{
+    padding-left: $indent;
+    padding-right: $indent;
+    line-height: 1.7;
+    font-size: 0.12rem;
+    color: #999;
+  }
+  .f-tac{ margin-top: $indent; }
+}
+.m-sec-2 .u-img{ margin-top: 0.14rem; }
+.m-sec-3 .f-tac{ margin-bottom: 0.4rem; }
+
+.m-recom{
+  padding-top: 0.36rem;
+  padding-bottom: 0.25rem;
+  background-color: #f2f2f2;
+  .cap{
+    height: 0.28rem;
+    line-height: 0.28rem;
+    margin-bottom: 0.16rem;
+    font-size: 0.16rem;
+    color: #ff8200;
+    text-align: center;
+  }
+  //推荐
+  .recom{
+    margin-bottom: 0.4rem;
+    text-align: center;
+    overflow: hidden;
+    li{
+      float: left;
+      width: 50%;
+      font-size: 0.12rem;
+      color: #999;
+      &:before{
+        content:'';
+        display: block;
+        width: 0.92rem;
+        height: 0.92rem;
+        margin: 0 auto 0.15rem;
+        background: url(#{$imgPath}icon-recom.png) 0 0 no-repeat;
+        background-size: cover;
+      }
+      &:last-child:before{ background-position: right 0; }
+    }
+  }
+  //常见问题
+  .def-list{
+    padding: 0 $indent;
+    margin-bottom: 0.05rem;
+    line-height: 1.8;
+    dt{
+      font-size: 0.13rem;
+      color: #ff8200;
+    }
+    dd{
+      font-size: 0.12rem;
+      color: #999;
+    }
+  }
+}
+
+.m-foot{
+  padding-top: 0.12rem;
+  padding-bottom: 0.12rem;
+  line-height: 1.7;
+  font-size: 0.12rem;
+  color: #fff;
+  text-align: center;
+  background-color: #666;
+}
+
+
+// media queries
+//-----------------------------------------------------
+@include max-screen(319px){
+  html{ font-size: 95px; }
+}
+
+@include min-screen(320px){
+}
+
+@include min-screen(340px){
+}
+
+@include min-screen(360px){
+}
+
+@include min-screen(400px){
+}
+
+@include min-screen(480px){
+  html{ font-size: 105px; }
+}
+
+@include min-screen(540px){
+  html{ font-size: 110px; }
+}
+
+@include min-screen(640px){
+  html{ font-size: 115px; }
+}
+
+@include min-screen(720px){
+  html{ font-size: 120px; }
+}
+
+@include min-screen(768px){
+  html{ font-size: 130px; }
+  .g-mn{ box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+}
+
+@include iphone6-plus{
+  html{ font-size: 105px; }
+}
+
+@include ipad{ }

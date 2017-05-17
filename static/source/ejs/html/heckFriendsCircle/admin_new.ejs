@@ -1,0 +1,158 @@
+<% include ../common/top_b2s.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>admin_new.css">
+</head>
+<body data-init="adminNew" class="heck_admin">
+    <div class="heck_top"></div>
+    <div v-cloak class="border-height">
+        <div class="clear-fix admin_center">
+            <div class="project_list" >
+                <p>知识库</p>
+                <ul>
+                    <li class="active"><a href="javascript:;"></a>美国小学<span>(29)</span></li>
+                    <li><a href="javascript:;"></a>B2S<span>(8)</span></li>
+                    <li class=""><a href="javascript:;"></a>美国小学<span>(29)</span></li>
+                    <li><a href="javascript:;"></a>B2S<span>(8)</span></li>
+                    <li class="active"><a href="javascript:;"></a>美国小学<span>(29)</span></li>
+                    <li><a href="javascript:;"></a>B2S<span>(8)</span></li>
+                    <li class=""><a href="javascript:;"></a>美国小学<span>(29)</span></li>
+                    <li><a href="javascript:;"></a>B2S<span>(8)</span></li>
+                    <!-- <input type="text" v-bind:readonly="isReadOnly"/ value="hhhh"> -->  <!-- reading -->
+                </ul>
+            </div>
+            <div class="content_list" v-if="(!!user_group)">
+                <div class="clear-fix label_list">
+                    <ul class="clear-fix">
+                        <li class="active"><a href="javascript:;"></a>开场白<i></i></li>
+                        <li><a href="javascript:;"></a>匹配体验课<i></i></li>
+                        <li><a href="javascript:;"></a>渗透理念<i></i></li>
+                    </ul>
+                    <div class="lable_administration" @click="toolPopShow()">标签管理</div>
+                </div>
+                
+                <div class="lable_inner" v-if="(!!keyword_id)">
+                    <dl class="clear-fix" v-for="x in listData.resultArr">
+                        <dt>{{$index + 1}}</dt>
+                        <dd class="text" :title="listData.resultJson[x].content">{{ listData.resultJson[x].content }}
+                        </dd>
+                        <dd class="tool">
+                            <ul class="clear-fix">
+                                <li class="down" title="下移" @click="listDataMove($index,'down')"></li>
+                                <li class="up" title="上移" @click="listDataMove($index,'up')"></li>
+                                <li class="chenge" title="编辑" @click="listDataDeal('edit',x)"></li>
+                                <li class="delet" title="删除" @click="listDataDel(x)"></li>
+                            </ul>
+                            <!-- <div class="pop" v-show="x.flag">
+                                <h5 class="delet_mes">确定删除该消息吗？</h5>
+                                <p class="clear-fix">
+                                    <span class="sure_btn" @click="listDataDelSure(x)">确定</span>
+                                    <span class="not_btn" @click="listDataDelHide
+                                    (x)">取消</span>
+                                </p>
+                            </div> -->
+                        </dd>
+                    </dl>
+                    <p class="add_normal_text" @click="listDataDeal('add')"><span>+ </span> 新建</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 标签管理弹层 -->
+        <div class="tool_pop" v-show="toolPop.show">
+            <div class="tool_content">
+                <h3>标签管理</h3>
+                <ul>
+                   <li class="clear-fix" v-for="x in keywordData.resultArr">
+                        <p :class="keywordData.resultJson[x].flag ? 'change_t' : 'normal_t'">
+                            <input type="text" v-model="keywordData.resultJson[x].name" :readonly="!keywordData.resultJson[x].flag" />
+                            <span class="right" @click="keywordDataRight(x)"></span>
+                            <span class="error" @click="keywordDataClose(x)" v-if="!keywordData.resultJson[x].isNew"></span>
+                        </p>
+                        <p class="change_tool">
+                            <span class="t-up" @click="keywordDataMove($index,'up')">上移&nbsp;&nbsp;|</span>
+                            <span class="t-down" @click="keywordDataMove($index,'down')">&nbsp;&nbsp;下移&nbsp;&nbsp;|</span>
+                            <span class="t-change" @click = "keywordDataChange(x)">&nbsp;&nbsp;修改&nbsp;&nbsp;|</span>
+                            <span class="t-del" @click="keywordDataDelet(x)">&nbsp;&nbsp;删除</span>
+                        </p>
+                   </li>
+
+                   <li class="clear-fix add_message">
+                        <p class="add_mes" @click="keywordDataAdd()">
+                            <span>+</span> 添加新标签
+                        </p>
+                   </li> 
+                </ul>
+                <P class="clear-fix tool_btn">
+                    <span class="sure" @click="keywordDataSure()">保存</span>
+                    <span class="del-1" @click="keywordDataClosePop()">取消</span>
+                </P>
+            </div>
+        </div>
+
+        <!-- 创建弹窗弹窗 -->
+        <div class="creat_text_pop" v-show="creatPop.show">
+            <div class="creat_pop">
+                <h3>分类 ：{{ creatPop.type }}</h3> 
+                <span>内容 : </span>
+                <textarea v-model="creatPop.content"></textarea>
+                <P class="clear-fix tool_btn">
+                    <span class="sure" @click="listDataCreatSure()">{{ creatPop.creat ? '创建' : '确定'}}</span>
+                    <span class="del-3" @click="listDataCreatHide()">取消</span>
+                </P>
+            </div>
+        </div>
+ 
+    <!-- 删除弹层 -->
+    </div>
+<div class="footer"></div>
+<script type="text/javascript">
+var listData = [
+        {
+            id : 1,
+            content : "您好，我是孩子的课程老师#MyName#，很高兴认识您！孩子的体验"
+        },
+        {
+            id : 2,
+            content : "您好，我是孩子的课程老师#MyName#，很高兴认识您！孩子的体验课由我来负您好，我是孩子的课程老师#MyName#，很高兴认识您！孩子的体验课由我来负您好，我是孩子的课程老师#MyName#，很高兴认识您！孩子的体验课由我来负您好，我是孩子的课程老师#MyName#，很高兴认识您！孩子的体验课由我来负"
+        }
+    ] 
+var listData = [];
+var listData = [{"id":"28","content":"\u53d1\u751f\u5927\u7eb2332"},{"id":"25","content":"\u597d\u7684\u653e\u5927\u91cf\u7684\u5496\u55b1\u560e\u560e\u70e6\u6b7b\u4e86\u5676\u7ed9\u6211\u4e2a\u672a\u63a5\u597d\u7684\u653e\u5927\u91cf\u7684\u5496\u55b1\u560e\u560e\u70e6\u6b7b\u4e86\u5676\u7ed9\u6211\u4e2a\u672a\u63a5\u597d\u7684\u653e\u5927\u91cf\u7684\u5496\u55b1\u560e\u560e\u70e6\u6b7b\u4e86\u5676\u7ed9\u6211\u4e2a\u672a\u63a5\u597d\u7684\u653e\u5927\u91cf\u7684\u5496\u55b1\u560e\u560e\u70e6\u6b7b\u4e86\u5676\u7ed9\u6211\u4e2a\u672a\u63a5\u597d\u7684\u653e\u5927\u91cf\u7684\u5496\u55b1\u560e\u560e\u70e6\u6b7b\u4e86\u5676\u7ed9\u6211\u4e2a\u672a\u63a5\u597d\u7684\u653e\u5927\u91cf\u7684\u5496\u55b1\u560e\u560e\u70e6\u6b7b\u4e86\u5676\u7ed9\u6211\u4e2a\u672a\u63a5\u597d\u7684\u653e\u5927\u91cf\u7684\u5496\u55b1\u560e\u560e\u70e6\u6b7b\u4e86\u5676\u7ed9\u6211\u4e2a\u672a\u63a5\u597d\u7684\u653e\u5927\u91cf\u7684\u5496\u55b1\u560e\u560e\u70e6\u6b7b\u4e86\u5676\u7ed9\u6211\u4e2a\u672a\u7684\u653e\u5927\u91cf\u7684\u5496\u55b1\u560e\u560e\u70e6\u6b7b\u4e863\u5676\u7ed9\u6211\u4e2a\u672a\u63a53333\u597d\u7684\u653e\u5927\u91cf\u7684\u5496\u55b1"},{"id":"29","content":"\u53d1\u751f\u5927\u7eb2345"}];
+ 
+
+var keywordData = [
+    {
+        id : 1,
+        name : "开场白"
+    },
+    {
+        id : 2,
+        name : "匹配体验课"
+    },
+    {
+        id : 3,
+        name : "渗透理念1"
+    },
+    {
+        id : 4,
+        name : "渗透理念2"
+    },
+    {
+        id : 5,
+        name : "渗透理念3"
+    },
+    {
+        id : 6,
+        name : "渗透理念4"
+    },
+    {
+        id : 7,
+        name : "渗透理念5"
+    }
+]
+
+
+</script>
+<% include ../common/bottom.ejs %>
+</body>
+

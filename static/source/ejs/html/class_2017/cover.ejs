@@ -1,0 +1,129 @@
+<% include ../common/class_top.ejs %>
+<body onload="changRecordSize()">
+<div class="pic-bg"></div>
+<!-- 驰声必备 start-->
+<div id="aiPanel">
+    <em class="play"></em>
+    <em class="record recordOff"></em>
+    <em class="replay replayOff"></em>
+<div>
+<!-- 录音弹层开始 -->
+<!-- 录音弹层开始 -->
+<div id="aiMediaDialog" class="aiMediaDialog aiMediaDialogClosed" >
+    <div class="dialogTitle">
+        设置面板
+        <button class="dialogCloseButton">X</button>
+    </div>
+    <div class="dialogFlashError">
+        <p class="flashVersion hidden">
+            您电脑的Flash版本过低，请点击此链接升级。
+            <br/>
+            <a href="http://get.adobe.com/flashplayer/" target="_blank">点击下载最新Flash版本</a>
+        </p>
+        <p class="flashPlugin hidden">
+            您的电脑没有安装或者禁用Flash插件，请确认。
+            <br/>
+            <a href="http://get.adobe.com/flashplayer/" target="_blank">点击下载最新Flash版本</a>
+        </p>
+    </div>
+    <div class="dialogBody">
+        <div id="recorder">
+        </div>
+    </div>
+    <div class="dialogInfo">
+        <a href="javascript:void(0);" onClick="$('#speak_tishi').slideToggle();">查看提示</a>
+        <img id="speak_tishi" style="display:none;" src="http://cdn.iciba.com/web/dayWord/js/jqueryUI/img/flash.gif">
+        <h5>状态信息</h5>
+        <ul>
+            <li class="loadFlashPlayer hidden">
+                <span class="info">正在下载Flash播放器...</span>
+            </li>
+            <li class="loadFlashRecorder hidden">
+                <span class="info">正在下载Flash录音机...</span>
+            </li>
+            <li class="connectServerInit hidden">
+                <span class="error">还没有连接录音服务器</span>
+            </li>
+            <li class="connectServerStart hidden">
+                <span class="info">正在连接录音服务器，请稍候...</span>
+            </li>
+            <li class="connectServerSuccess hidden">
+                <span class="success">连接录音服务器成功</span>
+            </li>
+            <li class="connectServerError hidden">
+                <span class="error">连接录音服务器失败，请<a href="javascript:aiPanel.recorder.reconnect();">重试</a></span>
+            </li>
+            <li class="micStatusAllow hidden">
+                <span class="success">Flash可以访问麦克风</span>
+            </li>
+            <li class="micStatusDisallow hidden">
+                <span class="error">Flash不能访问麦克风，请设置</span>
+            </li>
+            <li class="micStatusError hidden">
+                <span class="error">没有找到录音设备，请检查</span>
+            </li>
+            <li class="mmscfgError hidden">
+                <span class="error">Flash被禁止访问麦克风，请手动删除 mms.cfg文件，然后重试</span>
+            </li>
+        </ul>
+    </div>
+    <div class="dialogButton">
+        <button class="okButton">
+            确定
+        </button>
+    </div>
+</div>
+<div id="player"></div>
+<div id="player2"></div>
+<div id="fightplayer"></div>
+<div id="tipplayer"></div>
+<div class="dialogBody"></div>
+<div id="recorder"></div>
+<!-- 录音弹层结束 -->
+<!-- 驰声必备 end-->
+<div class="wt-main" id="container" data-init="class">
+    <div class="sub-class" style="margin-top: 30px;">
+        <div class="box">
+            <div class="f-cb n-cover">
+                <p class="tc tt">
+                    Where is the zoo？
+                </p>
+                <div class="monsters">
+                    <ul>
+                        <li class="animated bounce infinite item item1">
+                            <img src="<%= imagessrc%>monster/1-monster_small.png"/>
+                        </li>
+                        <li class="animated bounce infinite item item2">
+                            <img src="<%= imagessrc%>monster/4-monster_big.png" />
+                        </li>
+                        <li class="animated bounce infinite item item3">
+                            <img src="<%= imagessrc%>monster/3-monster_big.png" />
+                        </li>
+                        <li class="animated bounce infinite item item4">
+                            <img src="<%= imagessrc%>monster/7-monster_small.png" />
+                        </li>
+                        <li class="animated bounce infinite item item5">
+                            <img src="<%= imagessrc%>monster/5-monster_small.png" />
+                        </li>
+                        <li class="animated bounce infinite item item6">
+                            <img src="<%= imagessrc%>monster/6-monster_small.png" />
+                        </li>
+                        <li class="animated bounce infinite item item7">
+                            <img src="<%= imagessrc%>monster/2-monster_big.png" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--封面页音乐-->
+<div id="j_cover_audio" class="hide" media-audio="<%= imagessrc%>audio/cover.mp3"></div>
+<!--拼一拼页音乐-->
+<div id="j_fight_audio" class="hide" media-audio="<%= imagessrc%>audio/pin.mp3"></div>
+<!--正确或者错误提示音-->
+<!-- 升级 -->
+<div id="j_audio_disabled" class="hide" media-audio="<%= imagessrc%>audio/disabled.mp3"></div>
+<div class="dialog_mask hide"></div>
+</body>
+<% include ../common/class_bottom.ejs %>

@@ -1,0 +1,155 @@
+<% include ../common/top.ejs %>
+<body>
+<div class="les-lt" data-init="lesson29229">
+  <!-- lesson -->
+    <div class="les-l">
+      <div class="l-top">
+        <h3>Lesson</h3>
+        <table cellpadding="0" cellspacing="0" class="l-tab">
+          <tr>
+            <td class="l-d">Lesson Date</td>
+            <td>2015-04-12 20:00-21:00</td>
+          </tr>
+          <tr>
+            <td class="l-d">Lesson</td>
+            <td>第六课 领略加州万种风情 California is a beautiful state</td>
+          </tr>
+        </table>
+      </div>
+      <div class="layer l-bom">
+        <h3>AC Record</h3>
+        <div class="ac-red">
+          <ul class="red-u">
+            <li>
+              <span class="start">Start</span>
+              <div class="rt">
+                <span class="l-icon"></span>
+                <span class="time">20:00:00</span>
+              </div>
+            </li>
+            <li>
+              <span class="ln">ln</span>
+              <div class="rt">
+                <div class="rt-t">
+                  <span class="time l-time">20:00:05 <i class="i-f">late</i></span>
+                </div>
+                <div class="rt-u">
+                  <span class="time l-time">Penalty <i class="i-f">-30 peso</i></span>
+                  <a href="javascript:;" class="view">Appeal</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="ln">Out</span>
+              <div class="rt">
+                <div class="rt-t">
+                  <span class="time l-time">20:00:05 <i class="i-f">late</i></span>
+                </div>
+                <div class="rt-u">
+                  <span class="time l-time">Penalty <i class="i-f">-30 peso</i></span>
+                  <a href="javascript:;" class="view">Appeal</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="start">End</span>
+              <div class="rt">
+                <span class="time">20:00:00</span> 
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <!-- ac record -->
+    <div class="les-r">
+      <h3>Appeal</h3>
+      <div class="r-lev">
+        <div class="lev-t">
+          <span class="lt">Late</span>
+           <!-- one -->
+           <div class="colt">
+             <ul>
+               <li class="colt-fst"><i>1</i></li>
+               <li class="colt-two"><i>2</i></li>
+               <li><i>3</i></li>
+             </ul>
+           </div>
+           <!-- /one -->
+           <div class="r-btn"><a href="javascript:;"><i class="r-up"></i></a></div>
+        </div>
+      </div>
+      <div class="r-lev">
+        <div class="lev-t">
+          <span class="lt">Leave Early</span>
+           <!-- one -->
+           <div class="colt hide">
+             <ul>
+               <li class="colt-fst"><i>1</i></li>
+               <li class="colt-two"><i>2</i></li>
+               <li><i>3</i></li>
+             </ul>
+           </div>
+           <!-- /one -->
+           <div class="r-btn r-btn-hover"><a href="javascript:;"><i class="r-up"></i></a></div>
+        </div>
+        <div class="lev-crt">
+          <ul class="c-nav">
+            <li class="colt-fst">
+              <i>1</i>
+              <span>Submit</span>
+            </li>
+            <li class="colt-two">
+              <i>2</i>
+              <span>Processing</span>
+            </li>
+            <li>
+              <i>3</i>
+              <span>Complete</span>
+            </li>
+          </ul>
+          <ul class="c-list">
+            <li>
+              <span class="t-t">Reason ：</span>
+              <span class="select">
+                <input type="text" class="selt" value="Select Reason">
+                <i class="s-img"></i>
+              </span>
+              <!-- select -->
+              <div class="l-slt hide">
+                <ul>
+                  <li class="ched">Natural Calamities</li>
+                  <li>Family Emergency</li>
+                  <li>AC/MyPage Issues</li>
+                  <li>Admin Error</li>
+                  <li>Other</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <span class="t-t">Proof ：</span>
+              <div class="clk">
+                <input style="display:none;" type="file" id="fileinput" multiple="multiple" accept="image/*" />
+                <span class="btn" id="btn1">Click here to upload proofs</span>
+                <div class="uplist hide" id="gallery">
+                  <ul style="float:left">
+                  </ul>
+                  <div class="phpadd" id="btn2"><img src="<%= imagessrc%>p_add.png"></div>
+                </div>
+                <span class="word">At most 3 pictures, the size must be lower than 2M/Picture,.JPG,JPEG,PNG are acceptable.</span>
+              </div>
+            </li>
+            <li>
+              <span class="t-t">Remark ：</span>
+              <span class="c-text">
+                <textarea class="textarea"></textarea>
+              </span>
+            </li>
+          </ul>
+          <input type="button" class="lst-btn" value="Submit">
+        </div>
+      </div>
+    </div>
+</div>
+</body>
+<% include ../common/bottom.ejs %>

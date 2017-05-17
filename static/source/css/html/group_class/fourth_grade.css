@@ -1,0 +1,276 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Wed Sep 07 2016 19:11:42 GMT+0800 (中国标准时间)
+ */
+.fourth-grade {
+  margin-top: 10px;
+}
+.fourth-grade .common-bg {
+  width: 785px;
+  height: 540px;
+  padding: 50px 85px 0 130px;
+  background-position: top center;
+}
+.fourth-grade .common-bg h2 {
+  font-size: 24px;
+  color: #ff6d02;
+  font-weight: bold;
+}
+.fourth-grade .common-bg .play-wrap {
+  height: 125px;
+  margin: 15px 0;
+}
+.fourth-grade .common-bg .play-wrap .play-btn {
+  float: left;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 20px 30px 0 0;
+  background: url(../../../images/html/group_class/play-normal.png?v=KgBV7B9aigCpOcy4ArmUiQ%3D%3D) no-repeat;
+  cursor: pointer;
+}
+.fourth-grade .common-bg .play-wrap .play-btn:hover {
+  margin-top: 17px;
+}
+.fourth-grade .common-bg .play-wrap .playing {
+  background: url(../../../images/html/group_class/playing.gif?v=b56%2FHGtlMFJgIcVxsLhJ2A%3D%3D) no-repeat;
+}
+.fourth-grade .common-bg .play-wrap .pic {
+  float: left;
+  width: 140px;
+  height: 118px;
+  background: #fff url(../../../images/html/group_class/fourth_grade.png?v=oxisDuxFDVpkLVVzP%2BtfDA%3D%3D) no-repeat;
+  border: #dec125 solid 2px;
+}
+.fourth-grade .common-bg h3 {
+  font-size: 20px;
+  color: #666;
+  font-weight: bold;
+}
+.fourth-grade .common-bg .option ul {
+  counter-reset: li;
+}
+.fourth-grade .common-bg .option li {
+  height: 45px;
+  line-height: 45px;
+  margin-top: 8px;
+  padding-left: 25px;
+  font-size: 20px;
+  color: #dbbc09;
+  font-weight: bold;
+  border-radius: 10px;
+  background: #ffffee;
+  border: #dec125 solid 2px;
+}
+.fourth-grade .common-bg .option li:before {
+  margin-right: 5px;
+  content: counter(li, upper-latin) ': ';
+  counter-increment: li;
+}
+.fourth-grade .common-bg .option li:hover {
+  border: #efa500 solid 2px;
+}
+.fourth-grade .common-bg .option .current {
+  border: #ea7118 solid 2px;
+  background: #ea7118;
+  color: #fff;
+}
+.fourth-grade .common-bg .option .current:hover {
+  border-color: #ea7118;
+}
+.fourth-grade .first-question .play-wrap .pic {
+  background-position: -167px 0;
+}
+.fourth-grade .second-question .play-wrap .pic {
+  background-position: -173px -180px;
+}
+.fourth-grade .third-question .play-wrap .pic {
+  background-position: -663px 0;
+}
+.fourth-grade .fourth-question .play-wrap .pic {
+  background-position: -333px 0;
+}
+.fourth-grade .fifth-question .play-wrap .pic {
+  background-position: -10px -180px;
+}
+.fourth-grade .sixth-question h3,
+.fourth-grade .seventh-question h3,
+.fourth-grade .eighth-question h3,
+.fourth-grade .ninth-question h3,
+.fourth-grade .tenth-question h3,
+.fourth-grade .eleventh-question h3,
+.fourth-grade .twelfth-question h3,
+.fourth-grade .thirteenth-question h3 {
+  margin: 10px 0 15px;
+}
+.fourth-grade .sixth-question .option li,
+.fourth-grade .seventh-question .option li,
+.fourth-grade .eighth-question .option li,
+.fourth-grade .ninth-question .option li,
+.fourth-grade .tenth-question .option li,
+.fourth-grade .eleventh-question .option li,
+.fourth-grade .twelfth-question .option li,
+.fourth-grade .thirteenth-question .option li {
+  margin-top: 15px;
+}
+.fourth-grade .fourteenth-question {
+  position: relative;
+}
+.fourth-grade .fourteenth-question .content {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #dbbc09;
+}
+.fourth-grade .fourteenth-question .content .pic {
+  float: right;
+  width: 140px;
+  height: 118px;
+  margin-left: 15px;
+  background: url(../../../images/html/group_class/fourth_grade.png?v=oxisDuxFDVpkLVVzP%2BtfDA%3D%3D) no-repeat;
+}
+.fourth-grade .fourteenth-question .list-select .list {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  background: #fff;
+  color: #f8d200;
+  border: #f8d200 solid 2px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0px 8px;
+  width: 180px;
+  cursor: pointer;
+}
+.fourth-grade .fourteenth-question .list-select ul {
+  counter-reset: li;
+}
+.fourth-grade .fourteenth-question .list-select li {
+  line-height: 38px;
+  height: 38px;
+}
+.fourth-grade .fourteenth-question .list-select li:hover {
+  color: #efa500;
+}
+.fourth-grade .fourteenth-question .list-select li:before {
+  content: counter(li, upper-latin) ':';
+  counter-increment: li;
+}
+.fourth-grade .fourteenth-question p {
+  padding: 15px 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #666;
+}
+.fourth-grade .fourteenth-question p span {
+  display: inline-block;
+  padding: 0 15px;
+  color: #dbbc09;
+  border-bottom: solid 2px #dbbc09;
+  position: relative;
+  cursor: pointer;
+  font-size: 18px;
+  height: 20px;
+  text-align: center;
+}
+.fourth-grade .fourteenth-question p span:after {
+  width: 12px;
+  height: 8px;
+  content: "1";
+  text-indent: -10000px;
+  display: block;
+  background: url(../../../images/html/group_class/jiao.png?v=gzWmscUPCAHPSybq%2BxbYxw%3D%3D) 0 0 no-repeat;
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+.fourth-grade .fifteenth-question .content {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #dbbc09;
+}
+.fourth-grade .fifteenth-question .content .pic {
+  float: right;
+  width: 140px;
+  height: 118px;
+  margin-left: 15px;
+  background: url(../../../images/html/group_class/fourth_grade.png?v=oxisDuxFDVpkLVVzP%2BtfDA%3D%3D) -496px 0 no-repeat;
+}
+.fourth-grade .fifteenth-question .lastone li {
+  float: left;
+  margin: 0;
+  margin-right: 20px;
+  padding: 0;
+  font-size: 18px;
+  border: none;
+  background: none;
+  cursor: default;
+}
+.fourth-grade .fifteenth-question .lastone li:hover {
+  background: none;
+  color: #efa500;
+  border: none;
+}
+.fourth-grade .fifteenth-question .lastone .current {
+  background: none;
+  color: #ea7118;
+  border: none;
+}
+.fourth-grade .fifteenth-question .lastone .current:hover {
+  background: none;
+  border: none;
+}
+.fourth-grade .fifteenth-question .eighteenth-question {
+  margin-top: 15px;
+}
+.fourth-grade .sixteenth-question .content {
+  font-size: 20px;
+  font-weight: bold;
+  color: #dbbc09;
+}
+.fourth-grade .sixteenth-question .content .pic {
+  float: right;
+  width: 140px;
+  height: 118px;
+  margin-left: 15px;
+  background: url(../../../images/html/group_class/fourth_grade.png?v=oxisDuxFDVpkLVVzP%2BtfDA%3D%3D) -496px 0 no-repeat;
+}
+.fourth-grade .sixteenth-question .nineteenth-question .lastone li:after {
+  display: inline-block;
+  width: 113px;
+  height: 29px;
+  content: '';
+  background: url(../../../images/html/group_class/fourth_grade.png?v=oxisDuxFDVpkLVVzP%2BtfDA%3D%3D) no-repeat;
+  vertical-align: text-bottom;
+}
+.fourth-grade .sixteenth-question .nineteenth-question .lastone li:nth-child(1):after {
+  width: 122px;
+  background-position: -346px -223px;
+}
+.fourth-grade .sixteenth-question .nineteenth-question .lastone li:nth-child(2):after {
+  background-position: -516px -224px;
+}
+.fourth-grade .sixteenth-question .nineteenth-question .lastone li:nth-child(3):after {
+  background-position: -683px -223px;
+}
+.fourth-grade .sixteenth-question .nineteenth-question .lastone li:nth-child(4):after {
+  background-position: -18px -414px;
+}
+.fourth-grade .sixteenth-question .nineteenth-question .lastone .current {
+  color: #fff;
+}
+.fourth-grade .seventeenth-question .content {
+  font-size: 20px;
+  font-weight: bold;
+  color: #dbbc09;
+}
+.fourth-grade .seventeenth-question .content .pic {
+  float: right;
+  width: 140px;
+  height: 118px;
+  margin-left: 15px;
+  background: url(../../../images/html/group_class/fourth_grade.png?v=oxisDuxFDVpkLVVzP%2BtfDA%3D%3D) -496px 0 no-repeat;
+}

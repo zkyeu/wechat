@@ -1,0 +1,18 @@
+<% include ../common/reg_top.ejs %>
+<body>
+<section class="fri-reg" data-init="frireg" id="container">
+    <article class="fri-ber">
+        <img src="<%= imagessrc%>fri_ber.jpg" alt="" class="fri-bj">
+        <img src="<%= imagessrc%>fri_logo.png" alt="" class="fri-img">
+    </article>
+    <article class="fri-iframe">
+        <form action="doLogin" method="post" id="regForm">
+            <input type="text" name="text" class="input" placeholder="请输入手机号" id="user_name"> 
+            <input type="password" name="password" class="input" placeholder="设置您的密码" id="password">
+        </form>   
+    </article>
+    <a href="#" class="btn" name="register">注册</a>
+    <a href="http://mp.weixin.qq.com/s?__biz=MjM5NTc3OTA2MQ==&mid=207971933&idx=1&sn=0a23561fb159d76872a79a56acb4eb40#rd " class="fri-message">活动规则></a>
+</section> 
+</body>
+<% include ../common/reg_bottom.ejs %>

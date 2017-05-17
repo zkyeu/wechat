@@ -1,0 +1,29 @@
+<% include ../common/top.ejs %>
+<body id="container" data-init="new_student">
+<!-- 公共头 -->
+<% include ../common/b2s/b2s_header.ejs %>
+<!-- 中间内容 -->
+<div class="ce-content">
+	<div class="widthMain">
+		<div class="perfect-info">
+			<h3 class="hello_stu">你好！王诗龄 同学！</h3>
+			<form action="http://www.baidu.com" method="get" id="new_student_Form">
+				<ul class="info-cont">
+					<li><span class="info-user">手机号：</span><input placeholder="请输入手机号" type="text" class="china-name findjsBlank mobile-text tel stu_tel">
+					<span class="get-code-btn sendCode">获取验证码</span><p class="info-tip hide find-error"><span class="tenIcon"></span>手机号有误</p></li>
+					<li><span class="info-user">验证码：</span><input placeholder="请输入验证码" type="text" class="china-name findjsBlank stu_code"><p class="info-tip hide"><span class="tenIcon"></span>验证码有误</p></li>
+					<li><span class="info-user">新密码：</span><input placeholder="请输入密码"  type="text" class="china-name findjsBlank stu_pass"><p class="info-tip hide"><span class="tenIcon"></span>密码不能为空</p></li>
+				</ul>
+				<button type="button" value="进入班级" class="to_class">进入班级</button>
+				<!-- <div class="info-submit info-submit-findps">
+				<button type="button" value="取消" class="infor-submit cancel-btn">取消</button>
+				<button type="button" value="确定" class="infor-submit">确定</button>
+				</div> -->
+			</form>
+		</div>
+	</div>
+</div>
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

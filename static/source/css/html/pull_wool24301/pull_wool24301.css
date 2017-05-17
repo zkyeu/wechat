@@ -1,0 +1,1163 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: 
+ * update: Tue Dec 27 2016 11:45:17 GMT+0800 (中国标准时间)
+ */
+/**
+ * 默认样式
+ * @file：   base.less
+ * @author:  chenxiaosong（chenxiaosong@51talk.com）
+ * @update:  2015-10-12
+ * @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  background-color: #efefef;
+  _background-image: url(about:blank);
+  _background-attachment: fixed;
+  _overflow-x: hidden;
+}
+body {
+  font: 14px 'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial, Verdana, Tahoma;
+  color: #1e1e1e;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+}
+input,
+button,
+select,
+textarea {
+  font-family: 'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial, Verdana, Tahoma;
+  outline: none;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 0;
+}
+a {
+  color: #1e1e1e;
+  text-decoration: none;
+  outline: none;
+}
+a:hover {
+  color: #ff8200;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  vertical-align: middle;
+}
+::-moz-selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  *zoom: 1;
+  *display: inline;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.relative {
+  position: relative;
+}
+.relativez {
+  position: relative;
+  zoom: 1;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.hidden {
+  overflow: hidden;
+}
+.ft12 {
+  font-size: 12px;
+}
+.ft13 {
+  font-size: 13px;
+}
+.ft14 {
+  font-size: 14px;
+}
+.ft15 {
+  font-size: 15px;
+}
+.ft16 {
+  font-size: 16px;
+}
+.ft18 {
+  font-size: 18px;
+}
+.ft19 {
+  font-size: 19px;
+}
+.ft20 {
+  font-size: 20px;
+}
+.normal {
+  font-weight: normal;
+}
+.bold {
+  font-weight: bold;
+}
+.tal {
+  text-align: left;
+}
+.tac {
+  text-align: center;
+}
+.tar {
+  text-align: right;
+}
+.f-taj {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+.f-vam,
+.f-vama * {
+  vertical-align: middle;
+}
+.f-wsn {
+  word-wrap: normal;
+  white-space: nowrap;
+}
+.f-pre {
+  overflow: hidden;
+  text-align: left;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.f-wwb {
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.f-ti {
+  overflow: hidden;
+  text-indent: -30000px;
+}
+.f-ti2 {
+  text-indent: 2em;
+}
+.f-lhn {
+  line-height: normal;
+}
+.f-tdu,
+.f-tdu:hover {
+  text-decoration: underline;
+}
+.f-tdn,
+.f-tdn:hover {
+  text-decoration: none;
+}
+.f-toe {
+  overflow: hidden;
+  word-wrap: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.f-csp {
+  cursor: pointer;
+}
+.f-csd {
+  cursor: default;
+}
+.f-csh {
+  cursor: hand;
+}
+.f-csm {
+  cursor: move;
+}
+.f-usn {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.fm-arrow-pos {
+  border-style: solid;
+  border-color: #ffa800;
+  border-width: 1px;
+}
+.i-icon {
+  display: inline-block;
+  background: url(../../../images/html/pull_wool24301/all_icon.png?v=on7ZVTmBcZhR6kq1Gu%2BMxA%3D%3D) no-repeat;
+}
+body {
+  background: url(../../../images/html/pull_wool24301/m_bj.jpg?v=F87pf4rtaXrEtUqMB6PtJw%3D%3D) repeat;
+  overflow-x: hidden;
+}
+.container {
+  margin: 0px auto;
+  position: relative;
+  height: 2250px;
+  background: url(../../../images/html/pull_wool24301/m_top_bj.png?v=Q9nspGyBcnQYiS6CvOQAeg%3D%3D) top center no-repeat;
+}
+.container .word {
+  width: 650px;
+  text-align: center;
+  color: #fff600;
+  position: absolute;
+  top: 180px;
+  left: 50%;
+  margin-left: -325px;
+  font-weight: bold;
+}
+.container .word b {
+  color: #fff;
+  display: block;
+  letter-spacing: 8px;
+  font-size: 32px;
+  margin-bottom: 28px;
+}
+.container .word b em {
+  color: #fff600;
+}
+.container .word i {
+  font-size: 24px;
+}
+.container .nav {
+  position: absolute;
+  top: 366px;
+  left: 50%;
+  margin-left: -342px;
+  height: 170px;
+  width: 750px;
+}
+.container .award {
+  position: absolute;
+  top: 530px;
+  width: 1000px;
+  font-size: 22px;
+  left: 50%;
+  margin-left: -500px;
+}
+.container .award b {
+  display: block;
+  color: #fff;
+  font-size: 22px;
+  margin-left: 20px;
+}
+.container .award ul {
+  display: block;
+  margin: 30px 0px 0px 0px;
+}
+.container .award ul li {
+  float: left;
+  width: 215px;
+  margin: 45px 0px 0px 90px;
+  _margin: 45px 0px 0px 55px;
+  position: relative;
+}
+.container .award ul li .icon-top {
+  display: block;
+  margin-left: 17px;
+}
+.container .award ul li .icon-top a {
+  background: url(../../../images/html/pull_wool24301/ft.png?v=WhbT3QzNSQ5AfALoZuX7cQ%3D%3D) no-repeat;
+  display: inline-block;
+  width: 36px;
+  height: 38px;
+  margin-left: -5px;
+}
+.container .award ul li .icon-top a.a1 {
+  background-position: -36px 0px;
+  width: 40px;
+}
+.container .award ul li .icon-top a.a2 {
+  background-position: -78px 0px;
+}
+.container .award ul li .round-box {
+  display: block;
+  border-radius: 8px;
+  background: #e0df2d;
+  height: 140px;
+  text-align: center;
+  margin: -6px 0px 0px 0px;
+  font-size: 18px;
+  color: #777600;
+}
+.container .award ul li .round-box i {
+  line-height: 70px;
+  display: block;
+  font-weight: bold;
+}
+.container .award ul li .round-box i .font {
+  color: #3e5534;
+  font-weight: bold;
+}
+.container .award ul li .round-box .two {
+  background: #fff;
+  font-size: 26px;
+  color: #ff6600;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 5px;
+}
+.container .award ul li .round-box .two .font {
+  font-size: 36px;
+  color: #ff6600;
+  margin: 0 5px;
+}
+.container .award ul li .cr-icon {
+  position: absolute;
+  top: 95px;
+  left: 235px;
+}
+.container .award ul li .cr-icon a {
+  background: url(../../../images/html/pull_wool24301/all_icon.png?v=on7ZVTmBcZhR6kq1Gu%2BMxA%3D%3D) no-repeat;
+  display: inline-block;
+  width: 45px;
+  height: 36px;
+  background-position: -12px -130px;
+}
+.container .award ul li .cr-icon a.a1 {
+  background-position: -100px -130px;
+}
+.container .award ul li .big-icon {
+  position: absolute;
+  left: 305px;
+  top: 35px;
+}
+.container .award ul li .big-icon .a2 {
+  background: url(../../../images/html/pull_wool24301/all_icon.png?v=on7ZVTmBcZhR6kq1Gu%2BMxA%3D%3D) no-repeat;
+  display: inline-block;
+  background-position: -530px 0px;
+  width: 255px;
+  height: 170px;
+  color: #777600;
+  font-size: 25px;
+  padding: 40px 0px 0px 40px;
+}
+.container .award ul li .big-icon .a2 p {
+  font-size: 24px;
+  color: #ff6600;
+  font-weight: bold;
+}
+.container .award ul li .big-icon .a2 p .font {
+  font-size: 44px;
+}
+.container .award .ft-bom {
+  position: absolute;
+  background: url(../../../images/html/pull_wool24301/ft_bom.png?v=q0V41ayQz0Eqk%2FF8YiJl%2FQ%3D%3D) no-repeat;
+  width: 860px;
+  height: 170px;
+  top: 575px;
+  left: 75px;
+  font-size: 26px;
+  text-align: center;
+  line-height: 170px;
+  font-size: 30px;
+  color: #777600;
+  font-weight: bold;
+}
+.container .award .ft-bom i {
+  color: #ff6600;
+  font-weight: bold;
+  font-size: 24px;
+}
+.container .award .ft-bom i .font {
+  font-size: 46px;
+  margin: 0 5px;
+}
+.container .reward {
+  position: absolute;
+  width: 1000px;
+  font-size: 22px;
+  top: 1330px;
+  left: 50%;
+  color: #FFF;
+  margin-left: -495px;
+}
+.container .reward b {
+  letter-spacing: 3px;
+  padding-left: 15px;
+}
+.container .reward b .font {
+  color: #fcff00;
+}
+.container .reward .rew-tab {
+  width: 1000px;
+  background: #1f510b;
+  height: 350px;
+  margin-top: 16px;
+}
+.container .reward .rew-tab .nogift {
+  text-align: center;
+  padding-top: 60px;
+}
+.container .reward .rew-tab dl {
+  display: block;
+}
+.container .reward .rew-tab dl dd {
+  float: left;
+  width: 32%;
+  text-align: center;
+  color: #509516;
+  margin-top: 10px;
+}
+.container .reward .others {
+  float: left;
+  overflow: hidden;
+  width: 850px;
+  height: 200px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  border-radius: 20px;
+  background-color: #4e931c;
+  margin: 20px 0px 0px 75px;
+  _margin: 40px 0px 0px 30px;
+}
+.container .reward .others tr {
+  width: 850px;
+}
+.container .reward .others tr td {
+  width: 283px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.container .reward .others tr td .tel {
+  margin-left: 15px;
+}
+.container .reward .others tr td .tel img {
+  margin: 5px 0 0 10px;
+  float: left;
+}
+.container .reward .others tr td .status {
+  margin-left: 113px;
+}
+.container .reward .others tr td .for {
+  margin-left: 135px;
+}
+.container .reward .others .act {
+  background-color: #488C17;
+}
+.container .reward .others .yellow {
+  color: #FFFC00;
+  background-color: #488C17;
+}
+.container .rules {
+  position: absolute;
+  top: 1690px;
+  z-index: 1;
+}
+.container .rules .reward-ct {
+  width: 850px;
+  line-height: 25px;
+  font-size: 15px;
+  margin-top: -10px;
+  padding: 70px 70px 60px 80px;
+  background-image: url(../../../images/html/pull_wool24301/rules_bj.png?v=04ljDaiccdCEn%2FI2BjQr5Q%3D%3D);
+}
+.container .rules .reward-ct p {
+  display: block;
+  margin-left: 23px;
+}
+.container .rules .reward-ct .lt-p {
+  margin-left: 30px;
+}
+.container .rules .xq {
+  position: absolute;
+  top: 35px;
+  left: -10px;
+  background: url(../../../images/html/pull_wool24301/lt_bj.png?v=SbEUjoa5Wavtnk9LMdgFyg%3D%3D) no-repeat;
+  width: 180px;
+  height: 59px;
+  padding-left: 10px;
+  line-height: 48px;
+}
+.container .rules .btm {
+  position: absolute;
+  bottom: 23px;
+  left: 0px;
+}
+.bdshare-button-style0-16 li {
+  float: left;
+  position: relative;
+  width: 123px;
+  height: 159px;
+  background: url(../../../images/html/pull_wool24301/li_grey.png?v=alIt19kTe5eRIdZ4HfUioA%3D%3D);
+  margin-top: -40px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.bdshare-button-style0-16 li span {
+  position: absolute;
+  top: 152px;
+  left: 32px;
+  font-size: 16px;
+  color: #595900;
+}
+.bdshare-button-style0-16 li .smsP {
+  position: absolute;
+  background-position: 0;
+  top: 61px;
+  left: 10px;
+  width: 67px;
+  height: 50px;
+  background-image: url(../../../images/html/pull_wool24301/sms_1.png?v=pmb78sILYrgyb35bsmGT%2Fg%3D%3D);
+}
+.bdshare-button-style0-16 li .linkP {
+  position: absolute;
+  background-position: 0;
+  top: 60px;
+  left: 10px;
+  width: 72px;
+  height: 46px;
+  background-image: url(../../../images/html/pull_wool24301/link_1.png?v=rb4v5SXeeD8IrCLNdDHxww%3D%3D);
+}
+.bdshare-button-style0-16 li .bds_tsina {
+  position: absolute;
+  background-position: 0;
+  top: 56px;
+  left: 10px;
+  width: 67px;
+  height: 50px;
+  background-image: url(../../../images/html/pull_wool24301/sina_1.png?v=EhsCrmUENhmOI7Dg3A9vpA%3D%3D);
+}
+.bdshare-button-style0-16 li .bds_fri {
+  position: absolute;
+  background-position: 0;
+  top: 56px;
+  left: 10px;
+  width: 67px;
+  height: 50px;
+  background-image: url(../../../images/html/pull_wool24301/webchat_1.png?v=f9VsHNX6ezDAFEyaqAOELw%3D%3D);
+}
+.bdshare-button-style0-16 li .bds_weixinF {
+  position: absolute;
+  background-position: 0;
+  top: 56px;
+  left: 10px;
+  width: 67px;
+  height: 50px;
+  background-image: url(../../../images/html/pull_wool24301/webchat_f_1.png?v=IeKwbXuyRxuelcL69zHYZg%3D%3D);
+}
+.bdshare-button-style0-16 li .bds_weixin {
+  position: absolute;
+  background-position: 0;
+  top: 56px;
+  left: 10px;
+  width: 67px;
+  height: 50px;
+  background-image: url(../../../images/html/pull_wool24301/webchat_1.png?v=f9VsHNX6ezDAFEyaqAOELw%3D%3D);
+}
+.bdshare-button-style0-16 li .bds_tqq {
+  position: absolute;
+  background-position: 0;
+  top: 56px;
+  left: 10px;
+  width: 67px;
+  height: 50px;
+  background-image: url(../../../images/html/pull_wool24301/qq_1.png?v=5yq7jP0dqK3jOXf%2Fy7Fj6A%3D%3D);
+}
+.bdshare-button-style0-16 li .smsPR {
+  position: absolute;
+  background-position: 0;
+  top: 51px;
+  left: 10px;
+  width: 72px;
+  height: 46px;
+  background-image: url(../../../images/html/pull_wool24301/sms_2.png?v=wBYtVgnYSuGG37fM1Irt6g%3D%3D);
+}
+.bdshare-button-style0-16 li .linkPR {
+  position: absolute;
+  background-position: 0;
+  top: 50px;
+  left: 10px;
+  width: 72px;
+  height: 46px;
+  background-image: url(../../../images/html/pull_wool24301/link_2.png?v=zvzqwaiPUlSsOledWoRVlg%3D%3D);
+}
+.bdshare-button-style0-16 li .bds_tsinaR {
+  position: absolute;
+  background-position: 0;
+  top: 46px;
+  left: 10px;
+  width: 67px;
+  height: 50px;
+  background-image: url(../../../images/html/pull_wool24301/sina_2.png?v=ij2A6uLDBs5Jsq3joiCzUg%3D%3D);
+}
+.bdshare-button-style0-16 li .bds_weixinR {
+  position: absolute;
+  background-position: 0;
+  top: 46px;
+  left: 10px;
+  width: 67px;
+  height: 50px;
+  background-image: url(../../../images/html/pull_wool24301/webchat_2.png?v=xjojaL4L1mAavLBf3hN6gw%3D%3D);
+}
+.bdshare-button-style0-16 li .bds_weixinFR {
+  position: absolute;
+  background-position: 0;
+  top: 46px;
+  left: 10px;
+  width: 67px;
+  height: 50px;
+  background-image: url(../../../images/html/pull_wool24301/webchat_f_2.png?v=2016-12-27);
+}
+.bdshare-button-style0-16 li .bds_tqqR {
+  position: absolute;
+  background-position: 0;
+  top: 46px;
+  left: 10px;
+  width: 67px;
+  height: 50px;
+  background-image: url(../../../images/html/pull_wool24301/qq_2.png?v=Z0sU6gHGLIxbyJHDepPgzQ%3D%3D);
+}
+.bdshare-button-style0-16 li:hover {
+  float: left;
+  position: relative;
+  width: 123px;
+  height: 159px;
+  background: url(../../../images/html/pull_wool24301/li_hand.png?v=0B0F3QSC%2Fjyuv%2F4X2XpTkQ%3D%3D);
+  margin-top: -40px;
+}
+.bdshare-button-style0-16 li:hover span {
+  position: absolute;
+  top: 152px;
+  left: 32px;
+  font-size: 18px;
+  color: #f60;
+  font-weight: bold;
+}
+.bdshare-button-style0-16 li:hover .smsP {
+  position: absolute;
+  background-position: 0;
+  top: 51px;
+  left: 10px;
+  width: 72px;
+  height: 46px;
+  background-image: url(../../../images/html/pull_wool24301/sms_2.png?v=wBYtVgnYSuGG37fM1Irt6g%3D%3D);
+}
+.bdshare-button-style0-16 li:hover .linkP {
+  position: absolute;
+  background-position: 0;
+  top: 50px;
+  left: 10px;
+  width: 67px;
+  height: 50px;
+  background-image: url(../../../images/html/pull_wool24301/link_2.png?v=zvzqwaiPUlSsOledWoRVlg%3D%3D);
+}
+.bdshare-button-style0-16 li:hover .bds_tsina {
+  position: absolute;
+  background-position: 0;
+  top: 46px;
+  left: 10px;
+  width: 67px;
+  height: 50px;
+  background-image: url(../../../images/html/pull_wool24301/sina_2.png?v=ij2A6uLDBs5Jsq3joiCzUg%3D%3D);
+}
+.bdshare-button-style0-16 li:hover .bds_fri {
+  position: absolute;
+  background-position: 0;
+  top: 46px;
+  left: 10px;
+  width: 67px;
+  height: 50px;
+  background-image: url(../../../images/html/pull_wool24301/webchat_2.png?v=xjojaL4L1mAavLBf3hN6gw%3D%3D);
+}
+.bdshare-button-style0-16 li:hover .bds_weixinF {
+  position: absolute;
+  background-position: 0;
+  top: 46px;
+  left: 10px;
+  width: 67px;
+  height: 50px;
+  background-image: url(../../../images/html/pull_wool24301/webchat_f_2.png?v=2016-12-27);
+}
+.bdshare-button-style0-16 li:hover .bds_weixin {
+  position: absolute;
+  background-position: 0;
+  top: 46px;
+  left: 10px;
+  width: 67px;
+  height: 50px;
+  background-image: url(../../../images/html/pull_wool24301/webchat_2.png?v=xjojaL4L1mAavLBf3hN6gw%3D%3D);
+}
+.bdshare-button-style0-16 li:hover .bds_tqq {
+  position: absolute;
+  background-position: 0;
+  top: 46px;
+  left: 10px;
+  width: 67px;
+  height: 50px;
+  background-image: url(../../../images/html/pull_wool24301/qq_2.png?v=Z0sU6gHGLIxbyJHDepPgzQ%3D%3D);
+}
+.face {
+  display: inline-block;
+  background: url(../../../images/html/pull_wool24301/all_icon.png?v=on7ZVTmBcZhR6kq1Gu%2BMxA%3D%3D) no-repeat;
+  width: 116px;
+  height: 90px;
+  position: absolute;
+  top: 145px;
+  left: -95px;
+  background-position: 0px 0px;
+}
+.face.r-face {
+  top: auto;
+  left: auto;
+  bottom: 65px;
+  right: -90px;
+  background-position: -150px 0px;
+}
+.face.r-face.ru-face {
+  bottom: -5px;
+  right: 70px;
+  background-position: -320px -10px;
+}
+.bg {
+  background: #000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  filter: "Alpha(opacity=20)";
+  opacity: 0.2;
+  display: none;
+}
+.sms {
+  z-index: 10;
+  width: 835px;
+  height: 365px;
+  position: fixed;
+  top: 232px;
+  left: 50%;
+  margin-left: -417px;
+  background: #F7F7F7;
+  display: none;
+}
+.sms .title {
+  float: left;
+  margin-left: 30px;
+  margin-top: 40px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #FF8200;
+}
+.sms .cbtn {
+  float: right;
+  cursor: pointer;
+  width: 43px;
+  height: 43px;
+  background: url(../../../images/html/pull_wool24301/close.png?v=m3sUmoSDG7ZVX2QRcEeAVA%3D%3D);
+}
+.sms .smsForm {
+  float: left;
+  position: relative;
+  margin-top: 36px;
+  margin-left: 20px;
+  width: 780px;
+  height: 175px;
+  background-color: #FFFFFF;
+}
+.sms .smsForm form {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+}
+.sms .smsForm .info {
+  width: 260px;
+  line-height: 30px;
+  border: 1px solid #CCCCCC;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 0px 10px;
+}
+.sms .smsForm .info input {
+  width: 100%;
+  border: 0;
+  color: #a7a7a7;
+}
+.sms .smsForm .inviteBtn {
+  position: absolute;
+  width: 190px;
+  height: 15px;
+  background-color: #ff8200;
+  top: 180px;
+  left: 255px;
+  text-align: center;
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.sms .smsForm .content {
+  width: 408px;
+  height: 100px;
+  position: absolute;
+  right: 30px;
+  top: 38px;
+  background: url(../../../images/html/pull_wool24301/sms_info.png?v=aU7CDPNnoe%2FMo%2B5gIB7v5w%3D%3D);
+  padding: 10px;
+}
+.sms .smsForm .smsInfoTitle {
+  font-size: 15px;
+  font-weight: bold;
+  color: #3C9BCC;
+  position: absolute;
+  left: 30px;
+  top: 10px;
+  line-height: 25px;
+}
+.sms .smsForm .smsCon {
+  position: absolute;
+  left: 30px;
+  top: 35px;
+}
+.sms .smsForm .smsContent {
+  font-size: 10px;
+  color: #A7A7A7;
+  line-height: 20px;
+}
+.sms .smsForm .smsf1 .tips {
+  display: none;
+  font-size: 10px;
+  position: absolute;
+  left: 30px;
+  top: 8px;
+  color: red;
+}
+.sms .smsForm .smsf2 {
+  display: none;
+  position: absolute;
+  left: 30px;
+  top: 30px;
+}
+.sms .smsForm .smsf2 .succ {
+  font-size: 30px;
+  color: green;
+  position: absolute;
+  left: 50px;
+  top: 42px;
+  width: 120px;
+  height: 40px;
+}
+.sms .smsForm .smsf2 .sureBtn {
+  position: absolute;
+  width: 190px;
+  height: 15px;
+  background-color: #ff8200;
+  top: 180px;
+  left: 255px;
+  text-align: center;
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: hand;
+  cursor: pointer;
+}
+.link {
+  z-index: 10;
+  width: 835px;
+  height: 290px;
+  position: fixed;
+  top: 232px;
+  left: 50%;
+  margin-left: -417px;
+  background: #F7F7F7;
+  display: none;
+}
+.link .title {
+  float: left;
+  margin-left: 30px;
+  margin-top: 30px;
+  color: #FF8200;
+  font-weight: bold;
+  font-size: 15px;
+}
+.link .cbtn {
+  float: right;
+  cursor: pointer;
+  width: 43px;
+  height: 43px;
+  background: url(../../../images/html/pull_wool24301/close.png?v=m3sUmoSDG7ZVX2QRcEeAVA%3D%3D);
+}
+.link .linkForm {
+  float: left;
+  position: relative;
+  margin-top: 20px;
+  margin-left: 30px;
+  width: 770px;
+  height: 125px;
+  background-color: #FFFFFF;
+}
+.link .linkForm .tips {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+}
+.link .linkForm .info {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  width: 725px;
+  height: 30px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  border: 1px solid #CCCCCC;
+}
+.link .linkForm .info:focus {
+  border: 1px solid #ff8200;
+}
+.link .linkForm .inviteBtn {
+  position: absolute;
+  width: 190px;
+  height: 15px;
+  background-color: #FF8200;
+  top: 145px;
+  left: 285px;
+  text-align: center;
+  color: #FFFFFF;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  font-size: 15px;
+  cursor: hand;
+  cursor: pointer;
+  font-weight: bold;
+}
+.bdshare-button-style0-16 .red {
+  background: url(../../../images/html/pull_wool24301/li_red.png?v=L%2Bn5O3CmzZI7DaqeiLlSpw%3D%3D) repeat;
+}
+.bdshare-button-style0-16 .red div {
+  position: absolute;
+  width: 74px;
+  height: 64px;
+  top: 52px;
+  left: 10px;
+}
+.bdshare-button-style0-16 .red span {
+  position: absolute;
+  top: 152px;
+  left: 32px;
+  font-size: 18px;
+  color: #f60;
+  font-weight: bold;
+  cursor: pointer;
+}
+.alert {
+  display: none;
+  position: absolute;
+  width: 243px;
+  height: 155px;
+  top: 232px;
+  left: 50%;
+  margin-left: -150px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  -webkit-box-shadow: -3px 3px 0 0 rgba(0, 0, 0, 0.03);
+          box-shadow: -3px 3px 0 0 rgba(0, 0, 0, 0.03);
+}
+.alert .title {
+  position: relative;
+  width: 243px;
+  height: 30px;
+  background-color: #FF8200;
+  border-radius: 5px 5px 0 0;
+}
+.alert .title h4 {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  color: #FFFFFF;
+}
+.alert .title a {
+  float: right;
+  width: 9px;
+  height: 9px;
+  margin: 5px 10px 0 0;
+  cursor: pointer;
+}
+.alert .infobox {
+  position: relative;
+  width: 232px;
+  height: 120px;
+}
+.alert .infobox .info {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  line-height: 22px;
+}
+.alert .infobox .btn {
+  position: absolute;
+  top: 85px;
+  left: 90px;
+  width: 70px;
+  height: 22px;
+  line-height: 22px;
+  color: #FF8200;
+  border: 1px solid #FF8200;
+  text-align: center;
+  cursor: hand;
+  cursor: pointer;
+  border-radius: 2px;
+}

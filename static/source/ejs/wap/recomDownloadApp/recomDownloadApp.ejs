@@ -1,0 +1,331 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+	<meta content="yes" name="apple-mobile-web-app-capable" /> 
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+	<meta content="telephone=no" name="format-detection" /> 
+	<title>51Talk-无忧英语</title>
+	<link rel="stylesheet" type="text/css" href="<%= csslink%>">
+	<link rel="stylesheet" type="text/css" href="/css/wap/recomDownloadApp/mobiscroll.css">      
+</head>
+<body>
+
+	<section  id="container" data-init="share">
+		   <header>
+		   	 	<img src="<%= imagessrc%>rd_logo.png" alt="">
+		   	 	<a href="javascript:;" target="_blank"></a>
+		   </header>
+		   	<div class="m-addyoung-name" id="container" data-init="addname">
+			    <input type="hidden" name="sex_info">
+			    <h3 class="title">为了让学员更好的体验51Talk的服务，请填写学员姓名</h3>
+			    <ul class="m-list">
+			        <!-- 中文名字 -->
+			        <li class="m-cname">
+			            <label for="">中文名：</label>
+			            <input name="chName" type="text" placeholder="用于课程顾问沟通">
+			            <span class="error-tit">姓名输入错误</span>
+			        </li>
+			        <!--  英文名字 -->
+			        <li class="m-ename">
+			            <label for="">英文名：</label>
+			            <input type="text" name="engName" placeholder="用于外教老师沟通">
+			            <span class="error-tit">2-20位，仅限字母</span>
+			            <span class="rct-name" id="userinfo_namelist" data-url="">推荐英文名</span>
+			        </li>
+			        <li class="m-namelist">
+			          <div class="enameBox"> 
+			            <div class="nameTab clearfix">
+			                <div class="names">
+			                    <a href="javascript:;" class="boyname active" data-url="">男孩英文名</a>
+			                    <span class="line">|</span>
+			                    <a href="javascript:;" class="girlname" data-url="">女孩英文名</a>
+			                </div>
+			                <a href="javascript:;" class="refresh" id="refresh_info" data-attr="">换一换</a>
+			            </div>
+			            <div class="u-loadding"><img src="<%= imagessrc%>u_loading.gif" class="u-cal">正在努力加载中</div>
+			            <div class="u-nameList u-showname">
+			                <ul class="namesList clearfix" style="display:block;">
+			                    <li><a href="javascript:;">Berg</a><span>11111</span></li>
+			                    <li><a href="javascript:;">Michealia</a><span>蜜雪莉雅</span></li>
+			                    <li><a href="javascript:;">Catherina</a><span>凯瑟琳</span></li>
+			                    <li><a href="javascript:;">Bevis</a><span>比维斯</span></li>
+			                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+			                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+			                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+			                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+			                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+			                    <li><a href="javascript:;">Michealia</a><span>蜜雪莉雅</span></li>
+			                    <li><a href="javascript:;">Catherina</a><span>凯瑟琳</span></li>
+			                    <li><a href="javascript:;">Bevis</a><span>比维斯</span></li>
+			                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+			                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+			                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+			                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+			                    <li><a href="javascript:;">Berg</a><span>伯格蜜雪莉雅蜜雪莉雅</span></li>
+			                    <li><a href="javascript:;">MichealiMichealiaa</a><span>蜜雪莉雅蜜雪莉雅</span></li>
+			                    <li><a href="javascript:;">Catherina</a><span>凯瑟琳蜜雪莉雅</span></li>
+			                    <li><a href="javascript:;">Bevis</a><span>比维斯蜜雪莉雅</span></li>
+			                </ul>
+			                <ul class="namesList clearfix">
+			                    <li><a href="javascript:;">Berg</a><span>22222</span></li>
+			                    <li><a href="javascript:;">Michealia</a><span>蜜雪莉雅</span></li>
+			                    <li><a href="javascript:;">Catherina</a><span>凯瑟琳</span></li>
+			                    <li><a href="javascript:;">Bevis</a><span>比维斯</span></li>
+			                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+			                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+			                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+			                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+			                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+			                    <li><a href="javascript:;">Michealia</a><span>蜜雪莉雅</span></li>
+			                    <li><a href="javascript:;">Catherina</a><span>凯瑟琳</span></li>
+			                    <li><a href="javascript:;">Bevis</a><span>比维斯</span></li>
+			                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+			                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+			                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+			                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+			                    <li><a href="javascript:;">Berg</a><span>伯格蜜雪莉雅蜜雪莉雅</span></li>
+			                    <li><a href="javascript:;">MichealiMichealiaa</a><span>蜜雪莉雅蜜雪莉雅</span></li>
+			                    <li><a href="javascript:;">Catherina</a><span>凯瑟琳蜜雪莉雅</span></li>
+			                    <li><a href="javascript:;">Bevis</a><span>比维斯蜜雪莉雅</span></li>
+			                </ul>
+			            </div>
+			          </div>
+			        </li>
+			        <!-- 孩子性别 -->
+			        <li class="m-sex">
+			          <label for="">孩子性别：</label>
+			          <div class="child-sex">
+			            <span class=""><i></i>女孩</span>
+			            <span class=""><i></i>男孩</span>
+			          </div>
+			          <span class="error-sex">请填写性别</span>
+			        </li>
+			        <!-- 孩子生日 -->
+			        <li class="m-birthday">
+			          <label for="">孩子生日：</label>
+			            <input type="text" class="date_picker" name="birthday" id="appDate">
+			            <span class="error-tit">日期错误</span>
+			            <img src="<%= imagessrc%>u-icon3.png" class="u-cal">
+			        </li>
+			    </ul>
+			    <a href="javascript:;" class="subtn" infoUrl = "xxxx">确定</a>
+			</div>
+		  <div class="m-addadult-name" id="container" data-init="addname">
+		    <input type="hidden" name="sex_info">
+		    <h3 class="title">为了让学员更好的体验51Talk的服务，请填写学员姓名</h3>
+		    <ul class="m-list">
+		        <!-- 中文名字 -->
+		        <li class="m-cname">
+		            <label for="">中文名：</label>
+		            <input name="chName" type="text" placeholder="用于课程顾问沟通">
+		            <span class="error-tit">姓名输入错误</span>
+		        </li>
+		        <!--  英文名字 -->
+		        <li class="m-ename">
+		            <label for="">英文名：</label>
+		            <input type="text" name="engName" placeholder="用于外教老师沟通">
+		            <span class="error-tit">2-20位，仅限字母</span>
+		            <span class="rct-name" id="userinfo_namelist" data-url="">推荐英文名</span>
+		        </li>
+		        <li class="m-namelist">
+		          <div class="enameBox"> 
+		            <div class="nameTab clearfix">
+		                <div class="names">
+		                    <a href="javascript:;" class="boyname active" data-url="">男孩英文名</a>
+		                    <span class="line">|</span>
+		                    <a href="javascript:;" class="girlname" data-url="">女孩英文名</a>
+		                </div>
+		                <a href="javascript:;" class="refresh" id="refresh_info" data-attr="">换一换</a>
+		            </div>
+		            <div class="u-loadding"><img src="<%= imagessrc%>u_loading.gif" class="u-cal">正在努力加载中</div>
+		            <div class="u-nameList u-showname">
+		                <ul class="namesList clearfix" style="display:block;">
+		                    <li><a href="javascript:;">Berg</a><span>11111</span></li>
+		                    <li><a href="javascript:;">Michealia</a><span>蜜雪莉雅</span></li>
+		                    <li><a href="javascript:;">Catherina</a><span>凯瑟琳</span></li>
+		                    <li><a href="javascript:;">Bevis</a><span>比维斯</span></li>
+		                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+		                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+		                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+		                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+		                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+		                    <li><a href="javascript:;">Michealia</a><span>蜜雪莉雅</span></li>
+		                    <li><a href="javascript:;">Catherina</a><span>凯瑟琳</span></li>
+		                    <li><a href="javascript:;">Bevis</a><span>比维斯</span></li>
+		                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+		                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+		                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+		                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+		                    <li><a href="javascript:;">Berg</a><span>伯格蜜雪莉雅蜜雪莉雅</span></li>
+		                    <li><a href="javascript:;">MichealiMichealiaa</a><span>蜜雪莉雅蜜雪莉雅</span></li>
+		                    <li><a href="javascript:;">Catherina</a><span>凯瑟琳蜜雪莉雅</span></li>
+		                    <li><a href="javascript:;">Bevis</a><span>比维斯蜜雪莉雅</span></li>
+		                </ul>
+		                <ul class="namesList clearfix">
+		                    <li><a href="javascript:;">Berg</a><span>22222</span></li>
+		                    <li><a href="javascript:;">Michealia</a><span>蜜雪莉雅</span></li>
+		                    <li><a href="javascript:;">Catherina</a><span>凯瑟琳</span></li>
+		                    <li><a href="javascript:;">Bevis</a><span>比维斯</span></li>
+		                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+		                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+		                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+		                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+		                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+		                    <li><a href="javascript:;">Michealia</a><span>蜜雪莉雅</span></li>
+		                    <li><a href="javascript:;">Catherina</a><span>凯瑟琳</span></li>
+		                    <li><a href="javascript:;">Bevis</a><span>比维斯</span></li>
+		                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+		                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+		                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+		                    <li><a href="javascript:;">Berg</a><span>伯格</span></li>
+		                    <li><a href="javascript:;">Berg</a><span>伯格蜜雪莉雅蜜雪莉雅</span></li>
+		                    <li><a href="javascript:;">MichealiMichealiaa</a><span>蜜雪莉雅蜜雪莉雅</span></li>
+		                    <li><a href="javascript:;">Catherina</a><span>凯瑟琳蜜雪莉雅</span></li>
+		                    <li><a href="javascript:;">Bevis</a><span>比维斯蜜雪莉雅</span></li>
+		                </ul>
+		            </div>
+		          </div>
+		        </li>
+		    </ul>
+		    <a href="javascript:;" class="subtn" infoUrl = "xxxx">确定</a>
+		  </div>
+		   <article class="rd_tit">
+		   		<img src="<%= imagessrc%>rd_hi.png" alt="">
+		   </article>
+			<article class="rd_contain">
+			  <ul>
+	        <li>
+	            <span>上课时间</span>
+	            <span>2016-3-15 12:30:00</span>
+	        </li>
+	        <li>
+	            <span>课程名称</span>
+	            <span>剑桥国际英语 寻求改变的时刻(挑战级) Time for a change</span>
+	        </li>
+	        <li>
+	            <span>上课工具</span>
+	            <span>51Talk手机客户端 <a href="javascript:;" target="_blank">点此安装</a></span>
+	        </li>
+	    </ul>
+			</article>
+			<article class="rd_tips">
+				<p>温馨提示：您所选的上课方式为51Talk手机客户端，
+
+为保证您能顺畅完成，请确保您的手机已安装51Talk
+
+手机客户端，或通过已预约课程中的“修改课程”更
+
+换上课方式 ( AC电脑客户端或qq )。</p>
+				<a href="javascript:;" class="luck_draw"></a>
+			</article>
+			<!-- 家长必读·体验课指南 -->
+			<article class="rd_parent">
+					<a  href="javscript:;">家长必读·体验课指南 ></a>
+			</article>
+			 <article class="rd_wayTit">
+	    	<img src="<%= imagessrc%>wechat.png" alt="">
+	    </article>
+	    <article class="rd_weChatMain">
+	    		<div class="weChatImg">
+	    				<img src="<%=imagessrc%>weChat-adult.jpg" />
+	    		</div>
+	    		<div class="weChatTxt">
+	    				<h3>
+			    				关注官方公众号，免费领取500本
+									精美电子绘本，附音频！
+							</h3>
+							<p>
+									点击微信右上角“＋”, 选择“添
+									加朋友—公众号”, 输入“文案3”
+									并搜索 , 关注51Talk官方公众号。
+							</p>
+
+	    		</div>
+	    </article>
+	    <article class="rd_wayTit">
+	    	<img src="<%= imagessrc%>rd_way.png" alt="">
+	    </article>
+			<article class="rd_step rd_step1">
+				<i>1</i>
+				<p>打开51talk手机客户端，登录后进入app首页, 
+       看已预约课程。<a href="javascript:;" class="rd_immediately">点此安装提前预习</a></p>
+       	<img src="<%=imagessrc%>rd_step1.png" alt="">
+			</article>
+			<article class="rd_step rd_step1">
+				<i>2</i>
+				<p>课前打开51Talk手机客户端, 点击“开始上课”
+进入教室。 </p>
+       	<img src="<%=imagessrc%>rd_step2.png" alt="">
+			</article>
+			<article class="rd_step rd_step3">
+				<i>3</i>
+				<p>开始上课。推荐使用wifi网络，上课更流畅。 </p>
+       	<img src="<%=imagessrc%>rd_step3.jpg" alt="">
+			</article>
+			 <article class="rd_wayTit">
+	    	<img src="<%= imagessrc%>rd_Q.png" alt="">
+	    </article>
+	    <article class="rd_Q">
+	    	<p>Q: 我已经成功预约了，通过什么方式上课？</p>
+	    	<p>A: 您可以通过51Talk手机客户端上课，也可以进入”
+课程管理”修改上课方式。</p>
+	    </article>
+	     <article class="rd_Q">
+	    	<p>Q: 上课前需要准备什么？</p>
+	    	<p>A: 一台已安装51Talk手机客户端的手机，您可根据需
+要选择是否佩戴耳机。</p>
+	    </article>
+	     <article class="rd_Q">
+	    	<p>Q: 能看到老师视频吗？</p>
+	    	<p>A: 您可根据网络情况，选择是否开启老师视频。轻触
+右上角视频即可看到老师，但老师看不到您。</p>
+	    </article>
+	     <article class="rd_Q rd_QLast">
+	    	<p>Q: 上完课后，何时能看到我的测评结果？</p>
+	    	<p>A: 外教会在课后第一时间为您生成专属的测评报告，
+届时您可再51Talk手机客户端上查看，或登录官网（
+<a href="javascript:;" target="_blank">www.51Talk.com </a>)查看更详细的报告。
+</p>
+	    </article>
+	    <article class="rd_btn">
+	    	<a href="javascript:;">查看已预约课程</a>
+	    </article>
+     <!--  <footer>
+      		<img src="<%= imagessrc%>rd_bot.jpg" alt="">
+      		<p>Copyright©北京大生知行科技有限公司</p>
+      		<p>京ICP证110696号 京ICP备11031999号</p>
+      </footer> -->
+      <footer>
+		    <aside class="second">   
+		       <!--  <a href="javascript:;" class="secondLink" data-type="1" data-url="http://a.app.qq.com/o/simple.jsp?pkgname=com.talk51.dasheng"><img src="<%= imagessrc%>base.png"></a> -->
+		        <p><span>客服热线：</span>4000-51-51-51</p>
+		    </aside>
+		</footer>
+	</section>
+	<!-- 弹窗 -->
+		<section class="rd_sWin" style="display:none">
+ 			<header>温馨提示</header>
+			<article>
+				<section>
+				 	<p>亲爱的学员,您已经选择通过51Talk手机客户端上课,请确认您的手机是否已安装。</p>
+				</section>
+				<section>
+					 <span id="rd_alreadySetup">我已安装</span>
+					 <a href="http://www.baidu.com"  target="_blank" >立即安装</a>
+				 </section>
+			</article>
+		</section>
+	<!-- 弹窗结束 -->
+</body>
+<script src="<%= jssrc%>" ></script> r
+<script src="/js/wap/project/recomDownloadApp/jquery.js"></script>
+<script src="/js/wap/project/recomDownloadApp/mobiscroll.js"></script>
+<script>
+	$(".rd_immediately").click(function(){
+
+	})
+</script>
+</html>

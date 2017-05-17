@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />-->
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>51Talk-无忧英语</title>
+    <script src="<%= jsPath%>flexible.js"></script>
+    <link rel="stylesheet" type="text/css" href="<%= csslink%>">
+</head>
+<body>
+<header class="header" id="container" data-init="index">
+    <img src="<%= imagessrc%>banner1.png"  class="banner" alt="">
+</header>
+
+<section class="rota">
+    <div class="dial-bg" id="lottery">
+        <ul class="l_grid clearfix">
+            <li class="l_prize l_prize-0 l_now"><img src="<%= imagessrc%>juan1.png" alt=""></li>
+            <li class="l_prize l_prize-1"><img src="<%= imagessrc%>gkk.png" alt=""></li>
+            <li class="l_prize l_prize-2"><img src="<%= imagessrc%>xiaomi.png" alt=""></li>
+            <li class="l_prize l_prize-7"><img src="<%= imagessrc%>ipd.png" alt=""></li>
+            <li class="pointer"></li>
+            <li class="l_prize l_prize-3"><img src="<%= imagessrc%>jdk2.png" alt=""></li>
+            <li class="l_prize l_prize-6"><img src="<%= imagessrc%>yf.png" alt=""></li>
+            <li class="l_prize l_prize-5"><img src="<%= imagessrc%>jdk.png" alt=""></li>
+            <li class="l_prize l_prize-4"><img src="<%= imagessrc%>juan2.png" alt=""></li>
+        </ul>
+    </div>
+
+    <div class="prize_list">
+        <div class="caption">
+            <img alt="" src="<%= imagessrc%>winning_record.png">
+        </div>
+        <div class="names">
+            <ul class="name_list">
+                <li><span>absefd01</span><b>抽中3张次卡</b></li>
+                <li><span>songyueyang02</span><b>抽中100元代金卷</b></li>
+                <li><span>二爷03</span><b>500元代金卷</b></li>
+                <li><span>LULU04</span><b>3张次卡</b></li>
+                <li><span>柳文锋05</span><b>3张次卡</b></li>
+                <li><span>二爷06</span><b>500元代金卷</b></li>
+                <li><span>LULU07</span><b>3张次卡</b></li>
+                <li><span>柳文锋08</span><b>3张次卡</b></li>
+                <li><span>柳文锋09</span><b>3张次卡</b></li>
+                <li><span>二爷10</span><b>500元代金卷</b></li>
+                <li><span>LULU11</span><b>3张次卡</b></li>
+                <li><span>柳文锋12</span><b>3张次卡</b></li>
+            </ul>
+        </div>
+    </div>
+
+    <a href="javascript:;" class="l_btn" id="prize_log">查看中奖记录</a>
+
+    <div class="rules">
+        <div class="caption">
+            <img src="<%= imagessrc%>title_rules.png" alt="">
+        </div>
+        <ul class="info">
+            <li>1.活动时间：11月4日11:00:00-11月13日 23:59:59；</li>
+            <li>2.每位同学有1次抽奖机会（仅限11月4日-13日已预约体验课学员才可以抽奖哦）；</li>
+            <li>3.中奖信息将在中奖后10分钟内发到您pc端站内信；</li>
+            <li>4.图片仅供参考，以实物为准，抽中课程或实物奖品的同学，需在11月4日-11月13日期间购买5000元及以上套餐，活动结束后，奖品由客服联系寄出；</li>
+            <li>5.本活动最终解释权归51Talk所有。</li>
+        </ul>
+    </div>
+</section>
+
+<section class="pri-list">
+    <div class="caption">
+        <img alt="" src="<%= imagessrc%>title_winner.png">
+    </div>
+    <div class="course_list">
+        <ul id="course">
+            
+            <li>
+                <img alt="" src="<%= imagessrc%>ms3.png">
+                <span class="label discount discount5"></span>
+                <div class="text">
+                    <p class="package_name">美小2单元学习套餐</p>
+                    <p class="desc">
+                        <span class="price_new">￥1999</span>
+                        <span class="price_old">￥4000</span>
+                    </p>
+                </div>
+                <a href="" class="btn_buy">一键抢购</a>
+            </li>
+            
+        </ul>
+        <a href="javascript:;" class="l_btn">查看更多课程</a>
+    </div>
+</section>
+
+<section class="footer">
+    <p class="info">Copyright©北京大生知行科技有限公司</p>
+</section>
+
+<!-- 我的奖品 -->
+<div class="dialog" id="dialog">
+    <div class="info">
+        <div class="box">
+            <a href="javascript:;" class="close"></a>
+            <h3>恭喜获得：<span class="prizeName">350元代金券</span></h3>
+            <div class="detail">
+                <img src="<%= imagessrc%>juan1_2.png" alt="">
+                <img src="<%= imagessrc%>gkk_2.png" alt="">
+                <img src="<%= imagessrc%>xiaomi_2.png" alt="">
+                <img src="<%= imagessrc%>ipd_2.png" alt="">
+                <img src="<%= imagessrc%>jdk2_2.png" alt="">
+                <img src="<%= imagessrc%>yf_2.png" alt="">
+                <img src="<%= imagessrc%>jdk_2.png" alt="">
+                <img src="<%= imagessrc%>juan2_2.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 我的抽奖记录和未抽奖 -->
+<div class="dialog2" id="dialog2">
+    <div class="tip tip-1">
+        <a href="javascript:;" class="close"></a>
+        <div class="gold_box"></div>
+        <div class="text text2">
+            <h3>您还没有参与抽奖，快去抽奖吧！</h3>
+        </div>
+    </div>
+    <div class="tip tip-2">
+        <a href="javascript:;" class="close"></a>
+        <div class="gold_box"></div>
+        <div class="text text1">
+            <p>您已获得</p>
+            <h3>迪士尼亲子票2张</h3>
+        </div>
+    </div>
+</div>
+</body>
+
+<script id="seajsnode" src="<%= jssrc%>"></script>
+</html>

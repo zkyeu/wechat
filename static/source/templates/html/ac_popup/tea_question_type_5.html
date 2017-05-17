@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="app下载专页">
+    <meta name="keywords" content="app下载专页">
+    <title>欢迎下载51Talk App</title>
+    <link rel="stylesheet" type="text/css" href="/css/html/ac_popup/ac_popup.css">
+</head>
+<body data-init="teaType3" AC-type="send" class="">
+    <div class="ac-popup-wrap">
+        <div class="ac-popup-header clearfix">
+            <p class="fl">Quiz</p>
+            <p class="fr">
+                <a href="javascript:void;" class="a-close">Go back to class</a>
+            </p>
+        </div>
+        <div class="ac-popup-content">
+            <p class="type_title tea_type_5">Result</p>
+            <!-- 学生答案 -->
+           <!--  <p class="type_4_text">Student's Answer : <span class="text_a tea_a">A</span></p>
+            <p class="type_4_text">Did not answer</p>
+            <p class="type_4_text">Correct Answer : <span class="text_a text_b tea_b">B</span></p> -->
+            <!-- 倒计时 -->
+            <p class="type_4_text answer_now">Student answering now</p>
+            <p class="type_4_text"><span class="actimmer">Time remaining: <span class="time_se"><i>60</i> </span>seconds</span></p>
+            <div class="type_4_content tea_con">
+                <p class="cont_text tea_text_5">I was born on May 10th.</p>
+                <div class="type_btn" yinpin="/images/html/ac_voice_share/horse.mp3">
+                    <div class="ac_tip">点击此处播放</div>
+                </div>
+                <!-- 三个选项 -->
+                <div class="teaChoose_5_3 clearfix">
+                    <p><i>A </i><img src="/images/html/ac_popup/tea_1.jpg" /></p>
+                    <p ><i>B </i><img src="/images/html/ac_popup/tea_2.jpg" /></p>
+                    <p><i>C</i> <img src="/images/html/ac_popup/tea_3.jpg" /></p>
+                </div>
+                <!-- 四个选项 -->
+               <!--  <div class="teaChoose_5_4 clearfix">
+                    <p><i>A </i><img src="/images/html/ac_popup/tea_1.jpg" /></p>
+                    <p><i>B </i><img src="/images/html/ac_popup/tea_2.jpg" /></p>
+                    <p><i>C</i> <img src="/images/html/ac_popup/tea_3.jpg" /></p>
+                     <p><i>D</i> <img src="/images/html/ac_popup/tea_3.jpg" /></p>
+                </div> -->
+            </div>
+        </div>
+        <div class="ac-popup-bottom">
+          <!--   <input type="button" value="Send to students" class="btn-teasend btn-disabled" disabled="disabled"  /> -->
+        </div>
+    </div>
+    <div id="mp3Box"></div>
+
+
+
+
+    <!-- 增加提示遮罩层 -->
+    
+
+    <script>
+        function acCallback(r,t){
+            // window.location.assign("http://www.baidu.com");
+        }     
+    </script>
+</body>
+<!--公共尾部结束-->
+<script src="/js/html/project/ac_popup/vendor.js"></script>
+</html>
+<script type="text/javascript">
+   ;(function(){
+        var type = $("body").attr("AC-type");
+        if(!type) return;
+        var $body = $("body");
+        var href = $("link[type$=css]").attr("href").split("com")[0]+"com/";
+        if($(".actimmer,.ans-remind").length){
+            var top = $(".actimmer,.ans-remind").offset().top +"px";
+            var left = $(".actimmer,.ans-remind").offset().left +"px";
+        }
+         var tipsFn = new function(){
+            var me = this;
+
+            me.initCss = function(){
+                $("head").append('<style>.ac_confim{\
+                    width:100%;\
+                    height:100%;\
+                    background: black;\
+                    opacity: 0.3;\
+                    filter: Alpha(opacity=3);\
+                    -moz-opacity:0.3;\
+                    position: fixed;\
+                    top:0;\
+                    left:0;\
+                    display: none;\
+                    z-index: 60;\
+                }\
+                .confim_box{\
+                        z-index: 65;\
+                        display: none;\
+                        width:830px;\
+                        height:450px;\
+                        position: absolute;\
+                        left:50%;\
+                        top:50px;\
+                        margin-left:-415px;\
+                }\
+                .confim_box .confirm{\
+                        display: none;\
+                        text-align: center;\
+                        color: #fff;\
+                        position: absolute;\
+                    }\
+                .confim_box .confirm p{\
+                            text-align: center;\
+                        }\
+                 .confim_box .confirm a{\
+                            font-size: 20px;\
+                            text-decoration: underline;\
+                            color:#dace1a;\
+                        }\
+                .confim_box .confirm .last_text{\
+                            margin-bottom:10px;\
+                    }\
+                .confim_box .confirm_1{\
+                    width: 215px;\
+                    height:202px;\
+                    background: url("/images/html/ac_popup/confirm_1.png") no-repeat;\
+                    right:0;\
+                    top:0;\
+                    padding-top: 60px;\
+                }\
+                .confim_box .confirm_2{\
+                    background: url("/images/html/ac_popup/confirm_2.png") no-repeat;\
+                    right:340px;\
+                    top:'+top+';\
+                    width:218px;\
+                    height:205px;\
+                    padding-top: 90px;\
+                }\
+                .confim_box .confirm_3{\
+                    background: url("/images/html/ac_popup/confirm_3.png") no-repeat;\
+                    left:60px;\
+                    top:162px;\
+                    width:239px;\
+                    height:155px;\
+                    padding-top: 48px;\
+                    padding-left: 19px;\
+                }\
+                .confim_box .confirm_4{\
+                    background: url("/images/html/ac_popup/confirm_4.png") no-repeat;\
+                    right:240px;\
+                    bottom:20px;\
+                    width:202px;\
+                    height:146px;\
+                    padding-top: 50px;\
+                }\
+                .relative-confirm{\
+                    position:relative;\
+                    z-index:300;\
+                    background:#fff;\
+                    padding:5px;\
+                }\
+                </style>');
+            }
+
+            me.domHtml = {
+                mask : '<div class="ac_confim"></div>',
+                confim_box : '<div class="confim_box"></div>',
+                confim_1: '<div class="confirm confirm_1">\
+                                <P>Click here to </P>\
+                                <p>go back to the classroom if </p>\
+                                <p>the student finishes</p>\
+                                <p class="last_text">answering.</p>\
+                                <a href="javascript:;">ok</a>\
+                            </div>',
+                confim_2: '<div class="confirm confirm_2">\
+                                <P>Suggested time for</P>\
+                                <p class="last_text"> answering.</p>\
+                                <a href="javascript:;">ok</a>\
+                            </div>' ,
+                confim_3:  '<div class="confirm confirm_3">\
+                                <P>Click here to move to </P>\
+                                <p class="last_text">the next question.</p>\
+                                <a href="javascript:;">ok</a>\
+                            </div>',
+                confim_4: '<div class="confirm confirm_4">\
+                                <P>Click here to send the </P>\
+                                <p class="last_text">question to the student.</p>\
+                                <a href="javascript:;">ok</a>\
+                            </div>'      
+            }
+
+            me.cookieFn = {
+                set:function(name,value,days,path,domain,secure){
+                    document.cookie=encodeURIComponent(name)+"="+encodeURIComponent(value)
+                    +(days?"; expires="+this.setDays(days):"")
+                    +(path?"; path="+path:"; path=/")
+                    +(domain?"; domain="+domain:"")
+                    +(secure?"; secure":"");
+                },
+                get:function(name){
+                    var cookie=document.cookie.split("; ");
+                    for(var i=0;i<cookie.length;i++){
+                        var arr2=cookie[i].split("=");
+                        if(decodeURIComponent(arr2[0])===name){
+                            return decodeURIComponent(arr2[1]);
+                        }
+                    }
+                    return "";
+                },
+                del:function(name){
+                    this.set(name,"",-1);
+                },
+                setDays:function(days){
+                    var date=new Date();
+                    date.setDate(date.getDate()+days);
+                    return date.toGMTString();
+                }
+            }
+
+            me.getHTML = function(){
+                for(var x in me.domHtml){
+                    me.domHtml[x] = $(me.domHtml[x]);
+                }
+            }
+
+            me.bindEvent = function(){//结果页
+                var domHtml = me.domHtml;
+
+                domHtml.confim_2.on("click","a",function(){
+                    $(".actimmer,.ans-remind").removeClass("relative-confirm");
+                    domHtml.confim_2.fadeOut(function(){
+                        domHtml.confim_1.fadeIn();
+                    });
+                });
+
+                domHtml.confim_1.on("click","a",function(){
+                    domHtml.confim_box.fadeOut();
+                    domHtml.mask.fadeOut();
+                    $(".a-close,.u-ac-close").removeClass("relative-confirm");
+                });
+                domHtml.confim_3.on("click","a",function(){
+                      domHtml.confim_3.fadeOut(function(){
+                        $(".ac-dialog-switch").css('z-index','5');
+                        domHtml.confim_4.fadeIn();
+                      });
+                });
+               domHtml.confim_4.on("click","a",function(){
+                    domHtml.confim_box.fadeOut();
+                    domHtml.mask.fadeOut();
+                    $(".btn-teasend,.s-t-s").removeClass("relative-confirm");
+                });
+            }
+
+            me.creatHTMLResult = function(){
+                $(".a-close,.u-ac-close").addClass("relative-confirm");
+                $(".actimmer,.ans-remind").addClass("relative-confirm");
+                var domHtml = me.domHtml;
+                domHtml.confim_box.show().append(domHtml.confim_2.show());
+                domHtml.confim_box.append(domHtml.confim_1);
+                domHtml.tips = domHtml.confim_box.add(domHtml.mask.show());
+                domHtml.tips.appendTo("body");
+            }
+
+            me.creatHTMLSendMore = function(){//一页多道题情况
+                $(".btn-teasend,.s-t-s").addClass("relative-confirm");
+                // $(".a-close").addClass("relative-confirm");
+                $(".ac-dialog-switch").css('z-index','300');
+                var domHtml = me.domHtml;
+                domHtml.confim_box.show().append(domHtml.confim_3.show());
+                domHtml.confim_box.append(domHtml.confim_4);
+                domHtml.tips = domHtml.confim_box.add(domHtml.mask.show());
+                domHtml.tips.appendTo("body");
+            }
+
+            me.creatHTMLSend = function(){//简单发送
+                $(".btn-teasend,.s-t-s").addClass("relative-confirm");
+                var domHtml = me.domHtml;
+                domHtml.confim_box.show().append(domHtml.confim_4.show());
+                domHtml.tips = domHtml.confim_box.add(domHtml.mask.show());
+                domHtml.tips.appendTo("body");
+            }
+
+            me.initResult = function(){
+                me.initCss();
+                me.getHTML();
+                me.bindEvent();
+                me.creatHTMLResult();
+            }
+
+            me.initSendMore = function(){
+                me.initCss();
+                me.getHTML();
+                me.bindEvent();
+                me.creatHTMLSendMore();
+            }
+
+            me.initSend = function(){
+                me.initCss();
+                me.getHTML();
+                me.bindEvent();
+                me.creatHTMLSend();
+            }
+
+
+        }
+
+        window.tipsFn = tipsFn;
+
+        //结果页
+
+        if(type == "result"){
+            if($(".ac-dialog-switch").length){
+              $(".ac-dialog-switch").css('z-index','5'); 
+            }
+            if(tipsFn.cookieFn.get("result")){
+                return;
+            }else{
+                tipsFn.initResult();
+                tipsFn.cookieFn.set("result",365);
+            }
+           
+           
+        }
+        //发送页
+        if(type == "send"){
+            var ac_more = $(".ac-dialog-switch").length;
+            if(ac_more){
+                //一页多道题的情况
+                if(tipsFn.cookieFn.get("sendMore")){
+                return;
+                }else{
+                    tipsFn.cookieFn.set("sendMore",365)
+                    tipsFn.initSendMore();
+                }  
+            }else{//
+                if(tipsFn.cookieFn.get("send")){
+                return;
+                }else{
+                    tipsFn.cookieFn.set("send",365)
+                    tipsFn.initSend();
+                }    
+            }
+        }
+        
+    })();
+</script>

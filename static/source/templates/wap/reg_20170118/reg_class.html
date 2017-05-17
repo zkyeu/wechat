@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+	<meta content="yes" name="apple-mobile-web-app-capable" /> 
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+	<meta content="telephone=no" name="format-detection" /> 
+	<title>预约完成</title>
+	<link rel="stylesheet" type="text/css" href="/css/wap/reg_20170118/reg_20170118.css">		
+</head>
+<body>
+	<header>
+		<img src="/images/wap/reg_20170118/logo.png">
+	    <a href="register.html" class="log_reg">注册</a>
+	</header>
+	<section class="red_bag">
+		<i></i><strong>您已获得一个<span>微信现金红包</span>，<span>约课后</span>即可提现，最高<span>5元</span>。</strong>
+	</section>
+	<section class="reg password" data-init="reg" id="container">
+		<form action="/user/tool" method="post" id="tabForm">
+		<p>免费评测课名额有限，每节课25分钟，课后您可获得 外教给出的专业测评报告，了解您真实的英语水平。<font>马上预约↓↓</font></p>
+		<p class="add_hd">*手机验证码已发送到您的手机</p>
+	    <div>
+	    	<h3><a>验证码错误</a><a class="a1">验证码正确</a></h3>
+	        <hgroup class="frist">
+	            <input name="mobile" type="text" readonly value="" class="mobile">  
+	        </hgroup>
+	        <p class="pis_mf">我们承诺您的手机号不会被泄露到第三方</p>
+	        <hgroup class="frist">
+	        	<div class="rt" style="width:45%"><input name="code" type="text" placeholder="请输入图片验证码" id="checked_imgcode" class="cd_code" value=""></div>
+						<div class="rt" style="width:55%">
+							<img style="margin-left:10px; border: 1px solid #d0d0d0;float:left;cursor: pointer;" id="verifycode" src="http://www.51talk.com/user/verify.php" height="35" width="80" onclick="this.src='http://www.51talk.com/user/verify.php'+'?a'+'='+new Date().getTime()" alt="单击更换验证码" title="单击更换验证码">
+							<a href="javascrpit:;" class="rtChange">点击换一张</a>
+						</div>
+	        </hgroup>
+
+	        <hgroup style="border:none;">
+		        <div class="rt"><input name="checked_code" type="text" placeholder="请输入验证码" id="checked_code" class="cd_code nouse"></div>
+	          <div class="rt">
+	          	<span class="y_code reg_class come_reg" id="getCode">获取验证码</span>
+	          </div>
+	        </hgroup>
+	    </div>
+	    <aside class="c-day">
+	    	<p>请选择上课日期</p>
+	        <ul>
+	        	<li><a class="active">今天</a></li>
+	            <li><a>明天</a></li>
+	            <li><a>07月2日</a></li>
+	            <li><a>07月3日</a></li>
+	            <li><a>07月4日</a></li>
+	            <li><a>07月5日</a></li>
+	            <li><a>07月6日</a></li>
+	        </ul>
+	    </aside>
+	    <aside class="c-time-today">
+	    	<p>请选择上课时间</p>
+	        <ul>
+	            <li><a>20点00分</a></li>
+	            <li><a>20点30分</a></li>
+	            <li><a>21点00分</a></li>
+	            <li><a>21点30分</a></li>
+	            <li><a>22点00分</a></li>
+	            <li><a>22点30分</a></li>
+	        </ul>
+	    </aside>
+	    <aside class="c-time-other" style="display: none">
+	    	<p>请选择上课时间</p>
+	        <ul>
+	        	<li><a>09点00分</a></li>
+	            <li><a>09点30分</a></li>
+	            <li><a>10点00分</a></li>
+	            <li><a>10点30分</a></li>
+	            <li><a>11点00分</a></li>
+	            <li><a>11点30分</a></li>
+	            <li><a>12点00分</a></li>
+	            <li><a>12点30分</a></li>
+	            <li><a>13点00分</a></li>
+	            <li><a>13点30分</a></li>
+	            <li><a>14点00分</a></li>
+	            <li><a>14点30分</a></li>
+	            <li><a>15点00分</a></li>
+	            <li><a>15点30分</a></li>
+	            <li><a>16点00分</a></li>
+	            <li><a>16点30分</a></li>
+	            <li><a>17点00分</a></li>
+	            <li><a>17点30分</a></li>
+	            <li><a>18点00分</a></li>
+	            <li><a>18点30分</a></li>
+	            <li><a>19点00分</a></li>
+	            <li><a>19点30分</a></li>
+	            <li><a>20点00分</a></li>
+	            <li><a>20点30分</a></li>
+	            <li><a>21点00分</a></li>
+	            <li><a>21点30分</a></li>
+	            <li><a>22点00分</a></li>
+	            <li><a>22点30分</a></li>
+	        </ul>
+	    </aside>
+	    <aside class="e-level">
+	    	<p>英语水平</p>
+	        <ul>
+	        	<li><a data="1">没学过英语</a></li>
+	            <li><a data="4">学过不能交流</a></li>
+	            <li><a data="2">能简单交流</a></li>
+	            <li><a data="3">能流利交流</a></li>
+	        </ul>
+	        <input type="hidden" class="check" name="english_level" id="englishLevel" value="" />
+	    </aside>
+	    <aside class="occup">
+	    	<p>所属人群</p>
+	        <ul>
+	        	<li><a data="1">上班族</a></li>
+	        	<li><a data="2">大学生</a></li>
+	        	<li><a data="5">高中生</a></li>
+	        	<li><a data="6">初中生</a></li>
+	        	<li><a data="4">小学生</a></li>
+	        	<li><a data="7">幼儿</a></li>
+	        	<li><a data="100">其他</a></li>
+	        </ul>
+	        <input type="hidden" name="occup" value="" />
+	    </aside>
+     	<aside style="display:none;" id="checkGrade">
+	        <p>年级</p>
+	        <ul>
+	            <li>
+	                <a href="javascript:;" data="1">一年级</a>
+	            </li>
+	            <li>
+	                <a href="javascript:;" data="2">二年级</a>
+	            </li>
+	            <li>
+	                <a href="javascript:;" data="3">三年级</a>
+	            </li>
+	            <li>
+	                <a href="javascript:;" data="4">四年级</a>
+	            </li>
+	            <li>
+	                <a href="javascript:;" data="5">五年级</a>
+	            </li>
+	            <li>
+	                <a href="javascript:;" data="6">六年级</a>
+	            </li>
+	        </ul>
+	        <input type="hidden" name="grade" value="" id="grade" />
+	    </aside>
+     	<aside style="display:none;" id="age">
+	        <p>年级</p>
+	        <ul>
+	            <li>
+	                <a href="javascript:;" data="-1">大班</a>
+	            </li>
+	            <li>
+	                <a href="javascript:;" data="-2">中班</a>
+	            </li>
+	            <li>
+	                <a href="javascript:;" data="-3">小班</a>
+	            </li>
+	            <li>
+	                <a href="javascript:;" data="-4">未上幼儿园</a>
+	            </li>
+	        </ul>
+	        <input type="hidden" name="age" value="" id="age" />
+	    </aside>
+		<aside style="display:none;"  id="mdSchool">
+		<p>年级</p>
+		<ul>
+			<li style="width:20%;">
+				<a href="javascript:;" data="3">初一</a>
+			</li>
+			<li style="width:20%;">
+				<a href="javascript:;" data="4">初二</a>
+			</li>
+			<li style="width:20%;">
+				<a href="javascript:;" data="5">初三</a>
+			</li>
+			<li style="width:40%;">
+				<a href="javascript:;" data="6">初四（四五制）</a>
+			</li>
+		</ul>
+<!-- 		<input type="hidden" name="age" value="" id="age" />
+ -->	</aside>
+	    <aside id="checkPurpose" class="checkPurpose add_check">
+	    	<p>学习目的</p>
+	        <ul>
+	        	<li><a data="1">综合英语能力</a></li>
+	        	<li><a data="2">出国旅游</a></li>
+	        	<li><a data="5">雅思托福</a></li>
+	        	<li><a data="6">毕业生找工作</a></li>
+	        	<li><a data="4">在职面试</a></li>
+	        </ul>
+	    </aside>
+	    <aside id="checkQQ" class="checkPurpose add_check">
+	    	<p>QQ号（选填）</p>
+	    	<section class="qqtext">为了外教能更方便的同您联系，请填写QQ号</section>
+	    	<div class="ac_rt"><input type="tel" placeholder="" id="checked_qq" class="cd_qq"></div>
+	    </aside>
+	    <aside>
+	        <input type="hidden" name="course_date" />
+        	<input type="hidden" name="course_time" />
+			<input type="hidden" name="purpose_desc" id="purpose" value=""/>
+	    	<a href="#" class="btns" id="tabSure">确定</a>
+	    </aside>
+		</form>
+	</section>
+	<footer>
+    <aside class="second">
+        <p><span>客服热线：</span>4000-51-51-51</p>
+    </aside>
+</footer>
+</body>
+<!--公共尾部结束-->
+<script src="/js/wap/project/reg_20170118/vendor.js" id="seajsnode"></script>
+</html>
+
+	        <!-- <script>
+	        	$(function(){
+	        		$(".rtChange").click(function(){
+	        			$(this).siblings("img").trigger("click");
+	        		})
+	        	})
+	        </script> -->

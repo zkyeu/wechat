@@ -1,0 +1,70 @@
+<% include ../common/top_b2s.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%=csslinkb2s%>defaultAm.css">
+</head>
+<body data-init="defaultAm">
+<div class="big-bg">
+    <div class="title">欢迎来到黑鸟项目</div>
+    <div class="title-detail">
+        昨天黑鸟帮助大家提升了<i class="counter"></i><span>%</span>的工作效率
+        <!--昨天黑鸟帮助大家提升了<i class="counter"  id="myTargetElement"></i><span>%</span>的工作效率-->
+    </div>
+    <div id="chartLable">
+
+    </div>
+    <div class="enter">
+        <!--<a href="javascript:;" id="enter" onclick="alert('请联系你的上级以开通黑鸟！')">点击进入</a>-->
+        <a href="javascript:;" id="enter">点击进入</a>
+    </div>
+    <div class="trust-user-list clear-fix">
+        <dt>托管</dt>
+        <dd id="trustList">
+            <!--<li  data-admin-id="1">王老师1</li>-->
+        </dd>
+    </div>
+</div>
+<script>
+    //数据表基本数据结构
+    var dataBase ={
+        //标题
+//        text: '报表统计',
+        //介绍
+//        subtext: '数据来自黑鸟团队',
+        //x轴显示
+        xAxis:['成人CC','成人SS','青少CC'],
+        // 图例显示
+        legend:[],
+        barData:{
+            a:[3,60,36],
+            markLine : {
+                lineStyle: {
+                    normal: {
+                        type: 'solid'
+                    }
+                },
+                data : [
+                    { xAxis: 160 }
+                ]
+            }
+        },
+        //图标相关
+        normal:{
+            colorList:['#c00','#ff8000','#efcf76','#8aadda','#238C00','#fff000'],
+            show: true,//显示
+            position: 'top'//bottom top inside
+
+        },
+        //数据表位置
+        grid:{
+            left: '1%',
+            right: '2%',
+            bottom: '3%',
+            containLabel: true
+        }
+    }
+
+
+
+</script>
+
+</body>
+<% include ../common/bottom.ejs %>

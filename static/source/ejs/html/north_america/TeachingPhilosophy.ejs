@@ -1,0 +1,131 @@
+<!-- meta -->
+<% include inc/meta.ejs %>
+<!-- meta end -->
+<body>
+<!-- 顶部 -->
+<%- include("../www_new/common/w_nav.ejs",{
+  wrapClass:"north-nav-list",
+  navList:[
+    {
+      className:"crt",
+      text:"51Talk美国小学",
+      url:"http://usa.51talk.com/"
+    },
+    {
+      className:"",
+      text:"教学理念",
+      url:"http://usa.51talk.com/index/teachingPhilosophy"
+    },
+    {
+      className:"",
+      text:"北美外教",
+      url:"http://usa.51talk.com/index/teacher"
+    },
+    {
+      className:"",
+      text:"美国小学课程",
+      url:"http://usa.51talk.com/index/course"
+    }
+  ],
+  isIndex:false, //判断是否为首页
+  isNorth:true //判断是否为美小
+
+  }) %>
+<!-- 回到顶部-->
+<div id="u-gotop" style="disblpay:block;">
+    <a href="javascript:;" title="回到顶部">回到顶部</a>
+</div>
+	<!-- container -->
+	<div id="container" class="TeachingPhilosophy" data-init="north_america">
+			<div class="t_banner"></div>
+			<div class="t_goals">
+				<h1 class="title">教学理念及教学目标</h1>
+				<img src="<%=imagessrc%>t_goals.png" />
+			</div>
+			<div class="t_features">
+				 <h1 class="title">4大教学优势</h1>
+				 <ul class="t_list clearfix">
+				 		<li>
+				 				<dl>
+				 					<dt>
+				 							<img src="<%=imagessrc%>t_feature1.jpg" />
+				 					</dt>
+				 					<dd>
+				 							<h3>激发学生学习兴趣</h3>
+				 							<p>
+				 								教学视频<br />
+				 								教学视频
+				 							</p>
+				 					</dd>
+				 				</dl>
+				 		</li>
+				 		<li>
+				 				<dl>
+				 					<dt>
+				 							<img src="<%=imagessrc%>t_feature2.jpg" />
+				 					</dt>
+				 					<dd>
+				 							<h3>启发式教学</h3>
+				 							<p>
+				 								英语母语式词汇学习和阅读理解<br />
+				 								策略，培养学生独立思考能力
+				 							</p>
+				 					</dd>
+				 				</dl>
+				 		</li>
+				 		<li>
+				 				<dl>
+				 					<dt>
+				 							<img src="<%=imagessrc%>t_feature3.jpg" />
+				 					</dt>
+				 					<dd>
+				 							<h3>情景式教学</h3>
+				 							<p>
+				 								全英文沉浸式环境<br />
+				 								培养学生母语思维
+				 							</p>
+				 					</dd>
+				 				</dl>
+				 		</li>
+				 		<li class="margin0">
+				 				<dl>
+				 					<dt>
+				 							<img src="<%=imagessrc%>t_feature4.jpg" />
+				 					</dt>
+				 					<dd>
+				 							<h3>语言输出练习</h3>
+				 							<p>
+				 								语言输出环境最大化<br />
+				 								专属1对1强互动练习
+
+				 							</p>
+				 					</dd>
+				 				</dl>
+				 		</li>
+				 </ul>
+			</div>
+			<div class="t_core">
+					<h1 class="title">核心教学理念</h1>
+					<p>
+						51Talk美国小学课程提倡以原汁原味的原版英文读物为导向，通过学科式语言教学的方式，在循序渐进提高学生英语水平的同时，<br />
+						加强学生各方面的能力，逐步做到与世界接轨。51Talk坚信，优质的教学环境会激发孩子无限的潜能。
+					</p>
+					<img src="<%=imagessrc%>t_core.jpg">
+			</div>
+			<div class="t_steps">
+					<h1 class="title">51Talk 六步活动教学法</h1>
+					<p>
+							6 步活动教学法：将 25 分钟教学时长拆解成 6 个步骤，每一个步骤，都有明确的教学目标，<br />
+							从而保持孩子注意力，让每一分钟的学习格外高效。
+					</p>
+					<img src="<%=imagessrc%>t_steps.jpg" />
+			</div>
+		 
+	</div>
+	<!-- container end -->
+</body>
+<!-- footer -->
+<% include ../www_new/common/w_footer_home.ejs %>
+<!-- footer end -->
+<script src="<%= jssrc%>" id="seajsnode"></script>
+</html>

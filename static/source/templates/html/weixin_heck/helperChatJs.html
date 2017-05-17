@@ -1,0 +1,2536 @@
+<div class="clear-fix heck_center" v-cloak>
+    <div class="labels_wrap" v-show="labelsWrap.show" :class="{'vis': labelsWrap.showvis}" style="display: none;" :style="labelsWrap.pos">
+        <ul>
+            <li v-for="x in labelsWrap.data" :class="{'is-sys' : x.status == 1}">{{ x.tag_name }}</li>
+        </ul>
+    </div>
+    <div class="user_list">
+        <span class="wx_mask" v-if="setGroupChat.flag"></span>
+        <div class="user_head">
+            <div class="user_head_in clearfix">
+                <img :src="wxData.localInfo.img" @click="showPersonalMask"/>
+                <p>{{ wxData.localInfo.admin_name }}</p>
+                <a href="/CircleFriend/circleFriendList" target="_blank" class="friend_cecal"
+                   v-if="wxData.localInfo.is_trust != 1" @click="sendCircleFriend">
+                    <i class="wx_counts more" v-if="wxData.comment > 999"></i><i class="wx_counts num" v-if="(wxData.comment > 0) && (wxData.comment <= 999)">{{ wxData.comment }}</i>
+                </a>
+                <div class="user_op" tabindex="-1" @blur="userOpHide">
+                    <span @click="userOpShow">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <em class="wx_counts more" v-if="newFriCount > 999"></em><em class="wx_counts num" v-if="(newFriCount > 0) && (newFriCount <= 999)">{{ newFriCount }}</em>
+                    </span>
+                    <ul class="user_op_pop" v-show="userOp.show" transition="trans1">
+                        <li @click="blackUseTips('show')">注意事项</li>
+                        <li @click="myStudy">我的学员</li>
+                        <li @click="addFriend({type:'0'})">添加好友</li>
+                        <li @click="getMyFriend">新的好友<i class="wx_counts more" v-if="newFriCount > 999"></i><i class="wx_counts num" v-if="(newFriCount > 0) && (newFriCount <= 999)">{{ newFriCount }}</i></li>
+                        <li @click="getChat('getGroupChat', '0')">群发个人</li>
+                        <li @click="getChat('getGroupChat', '1')">群发给群</li>
+                        <li @click="getChat('getChat')">发起群聊</li>
+                        <li @click="updateInfo">个人信息</li>
+                        <li @click="logoutTrust">托管</li>
+                        <li @click="userLogoutTrustByWX">退出</li>
+                    </ul>
+                </div>
+            </div>
+<!---->
+            <div class="lable-search">
+                <!-- 分类 -->
+                <user-types :local-info="wxData.localInfo"></user-types>
+                <!-- 搜索 -->
+                <user-search :sel-list="userListByType.slice()" :sel-data="wxData.msgList" :local-info="wxData.localInfo"></user-search>
+            </div>
+        </div>
+
+        <div class="user_progress" v-show="userProgress.isFirst">
+            <div class="user_progress_in">
+                <div class="sk-circle">
+                    <div class="sk-circle1 sk-child"></div>
+                    <div class="sk-circle2 sk-child"></div>
+                    <div class="sk-circle3 sk-child"></div>
+                    <div class="sk-circle4 sk-child"></div>
+                    <div class="sk-circle5 sk-child"></div>
+                    <div class="sk-circle6 sk-child"></div>
+                    <div class="sk-circle7 sk-child"></div>
+                    <div class="sk-circle8 sk-child"></div>
+                    <div class="sk-circle9 sk-child"></div>
+                    <div class="sk-circle10 sk-child"></div>
+                    <div class="sk-circle11 sk-child"></div>
+                    <div class="sk-circle12 sk-child"></div>
+                </div>
+                列表加载中，请稍后...
+            </div>
+        </div>
+        <div class="user_lists" style="display: none;" @scroll="scrollShow($event, userListByType.length)" v-else>
+            <dl v-for="x in userListByType.slice(0, showLength.userListByType.start)" track-by="$index"
+                :class="{'cur':x == wxData.curUserId, 'top' :  wxData.topList.indexOf(x) > -1 }"
+                @click="changeUser(x);">
+                <dt>
+                    <!-- 头像 -->
+                    <img :src="wxData.msgList[x].isGroup ? wxData.localInfo.grouphead : wxData.msgList[x].userInfo.img"/>
+                    <!-- 消息数 -->
+                    <span class="wx_counts more" v-if="wxData.msgList[x].noRead > 999"></span>
+                    <span class="wx_counts num"
+                          v-if="(wxData.msgList[x].noRead > 0) && (wxData.msgList[x].noRead <= 999)">{{ wxData.msgList[x].noRead }}</span>
+                    <!-- 消息数 -->
+                </dt>
+                <dd class="user_list_detail">
+                    <h6>{{ wxData.msgList[x].userInfo.c_remark || wxData.msgList[x].userInfo.nick }}</h6>
+                    <p>
+                        <span v-if="(wxData.msgList[x].at_fg >= 1 && wxData.msgList[x].atshow && wxData.msgList[x].lastMsg)">[有人@我<i
+                                    v-if="(wxData.msgList[x].at_fg == 2)">们</i>]</span>{{{ wxData.msgList[x].lastMsg }}}
+                    </p>
+                </dd>
+                <!-- 新标签 -->
+                <template v-if="!wxData.msgList[x].isGroup">
+                    <dd class="user_list_label" @mouseenter="showLabelTab($event, getLabel(x))" @mouseleave="hideLabelTab()">
+                        <ul v-if="getLabel(x).length != 0">
+                            <li v-for="label in getLabel(x)" :class="{'is-sys' : label.status == 1}">
+                                {{ label.tag_short }}
+                            </li>
+                        </ul>
+                    </dd>
+                    <dd class="user_list_label_s" @click.stop="showLabelEdit($event, x);" :class="{isOpen : x == showLabelEditor}"></dd>
+                </template>
+            </dl>
+        </div>
+    </div>
+
+    <div class="content_box" :class="{'content_box_group':setGroupChat.flag}">
+        <user-sel :sel-labels="labels" :sel-data="wxData.msgList" :local-info="wxData.localInfo"></user-sel>
+        <div class="content_box_none" v-if="!wxData.curUserId">
+            <span>未选择聊天</span><i></i>
+        </div>
+        <div class="content_inner" v-else>
+            <div class="content_text">
+                <!-- 昵称 -->
+                <div class="content_title">
+                    <p class="content_tit">
+                        <!-- 备注 || 昵称 -->
+                        <i>{{ wxData.msgList[wxData.curUserId].userInfo.c_remark ||
+                            wxData.msgList[wxData.curUserId].userInfo.nick }}<span
+                                    v-if="wxData.groupUserLists[wxData.curUserId] && wxData.groupUserLists[wxData.curUserId].length > 0">({{wxData.groupUserLists[wxData.curUserId].length}})</span><em v-if="wxData.msgList[wxData.curUserId].isGroup" @click="showGroupLayer"  :class="contentGroupLayer.show ? 'up-arrow' : 'down-arrow'"></em></i>
+
+                        <!-- 修改昵称 .isGroup群组  否则个人  v-if="wxData.msgList[wxData.curUserId].isGroup"  -->
+                        <!--<em class="content_title_edit" @click="editNameShow(wxData.msgList[wxData.curUserId].isGroup, wxData.msgList[wxData.curUserId].userInfo.c_remark || wxData.msgList[wxData.curUserId].userInfo.nick )"></em>-->
+                    </p>
+
+                    <!--个人备注&删除-->
+                    <div class="user-menu" v-if="!wxData.msgList[wxData.curUserId].isGroup" @click="userOptShow" tabindex="-1" @blur="userOptHide">
+                        <div class="user-menu-list" v-show="userOpt.show" transition="trans1">
+                            <ul>
+                                <li @click="editNameShow(wxData.msgList[wxData.curUserId].isGroup, wxData.msgList[wxData.curUserId].userInfo.c_remark || wxData.msgList[wxData.curUserId].userInfo.nick )">
+                                    修改备注
+                                </li>
+                                <li @click="showUserDetail(wxData.msgList[wxData.curUserId].userInfo.id)">
+                                    微信信息
+                                </li>
+                                <li @click="delFriend(wxData.msgList[wxData.curUserId].userInfo.id,wxData.msgList[wxData.curUserId].userInfo.c_remark || wxData.msgList[wxData.curUserId].userInfo.nick)">
+                                    删除联系人
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--群列表层-->
+                    <div class="content-group-show-layer" v-if="wxData.msgList[wxData.curUserId].isGroup && contentGroupLayer.show" transition="trans1" >
+                        <ul class="content-group-list">
+                            <li @click="getChat('add_group_mem')">
+                                <p></p>
+                                <p>添加</p>
+                            </li>
+                            <li @click="showGroupDelIcon">
+                                <p></p>
+                                <p>删除</p>
+                            </li>
+                            <template v-if="contentGroupLayer.show">
+                                <li v-for="x in wxData.groupUserLists[wxData.curUserId]">
+                                    <p @click="quickTab($event,x,wxData.groupUserLists[wxData.curUserId])">
+                                        <img :src="x.wechat_img" :title="x.wechat_nick">
+                                        <i v-show="contentGroupLayer.del" @click="delGroupDetailUser(x)">&minus;</i>
+                                    </p>
+                                    <p :title="x.wechat_nick">{{x.wechat_nick}}</p>
+                                </li>
+                            </template>
+                        </ul>
+                        <div class="group-bottom-btn clearfix">
+                            <span class="btn-global default" @click="groupPowerChange" v-if="wxData.showOwnnerBtn">群主管理权转让</span>
+                            <span class="btn-global default" @click="showAnnounceLayer" v-if="wxData.showOwnnerBtn">群公告</span>
+                            <span class="btn-global greey" @click="editNameShow(wxData.msgList[wxData.curUserId].isGroup, wxData.msgList[wxData.curUserId].userInfo.c_remark || wxData.msgList[wxData.curUserId].userInfo.nick )" >修改群备注名</span>
+                        </div>
+
+                    </div>
+                    <!-- 加人 -->
+                    <!--<em class="content_title_add" v-if="wxData.msgList[wxData.curUserId].isGroup" @click="getChat('addUsers')"></em>-->
+                </div>
+
+                <div class="content_message" @mouseup="getSelCon" @scroll="scrollFn">
+
+                    <!-- 拉取历史记录 -->
+                    <div class="get_history">
+                        <div v-show="!wxData.msgList[wxData.curUserId].historyMsg.isGetAll">
+                            <a href="javascript:void(0);" @click="getHistoryFn"
+                               v-show="!historyMsg.isLoading">查看历史纪录</a>
+                            <span v-else>加载中...</span>
+                        </div>
+                        <p v-else>已拉取全部历史纪录</p>
+                    </div>
+
+                    <!-- 消息 -->
+                    <dl v-for="x in wxData.msgList[wxData.curUserId].userMsg"
+                        :class="x.isCC ? 'mes_right' : 'mes_left'">
+                        <!--系统-->
+                        <template v-if="x.cnt_type == 400">
+                            <dt class="mes_tips clearfix" :title="x.content">
+                                <span class="del-friend"></span>
+                                <p class="addfriend clearfix">
+                                    【{{ x.name }}】开启了朋友验证，你还不是他（她）朋友。请先发送朋友验证请求，对方验证通过后，才能聊天。
+                                    <span @click="addDelFriend">申请好友></span>
+                                </p>
+                            </dt>
+                        </template>
+                        <template v-if="x.cnt_type == 4000">
+                            <dt class="mes_tips clearfix" :title="x.content">
+                                <span class="follow"></span>
+                            <p class="follow clearfix">{{ 'Follow提醒内容：' + x.content }}</p>
+                            </dt>
+                        </template>
+                        <template v-if="x.cnt_type == 5000 || x.cnt_type == 10000">
+                            <dt class="mes_tips clearfix" :title="x.content">
+                                <span></span>
+                                <p class="follow greey clearfix ">{{ x.content }}</p>
+                            </dt>
+                        </template>
+                        <!--常规-->
+                        <template v-else>
+                            <dt @click="quickTab($event,x,wxData.msgList[wxData.curUserId].isGroup)"
+                                :class="x.cnt_type == 400 || x.cnt_type == 4000 || x.cnt_type == 5000 ? 'dn' : ''">
+                                <img :src="x.isCC ? wxData.localInfo.img : wxData.msgList[wxData.curUserId].isGroup ? wxData.localInfo.groupheader : wxData.msgList[wxData.curUserId].userInfo.img"/>
+                            </dt>
+                            <dd @mouseenter="mesBackShowFn(x.isCC && $index + 1 == wxData.msgList[wxData.curUserId].userMsg.length, 1)" @mouseleave="mesBackShowFn(x.isCC && $index + 1 == wxData.msgList[wxData.curUserId].userMsg.length, 0)">
+                                <h6 :class="x.cnt_type == 400 || x.cnt_type == 4000 || x.cnt_type == 5000 ? 'dn' : ''">{{ (x.c_remark ||
+                                    x.name) ? (x.c_remark || x.name) : x.isCC ?
+                                    wxData.localInfo.admin_name : (wxData.msgList[wxData.curUserId].userInfo.c_remark ||
+                                    wxData.msgList[wxData.curUserId].userInfo.nick) }} <span>{{ x.time }}</span></h6>
+                                <!-- 撤回 -->
+                                <span class="mes_back" v-if="x.isCC && $index + 1 == wxData.msgList[wxData.curUserId].userMsg.length && mesBackShow">
+                                    <em @click="mesBack">撤回</em>
+                                </span>
+                                <!-- 消息内容 -->
+                                <!-- 文本消息 -->
+                                <pre v-if="x.cnt_type == 0" class="mes_con">{{{ x.content }}}</pre>
+                                <!--@人消息-->
+                                <pre v-if="x.cnt_type == 3100" class="mes_con">{{{ x.content.content }}}</pre>
+                                <!-- 图片消息 -->
+                                <p v-if="x.cnt_type == 1" class="mes_con mes_img">
+                                    <a rel="gallery" :href="x.content.split(',')[1] || x.content">
+                                        <img :src="x.content.split(',')[0] || x.content" class="weichat_img"/>
+                                    </a>
+                                </p>
+                                <!-- 图片上传消息 -->
+                                <p v-if="x.cnt_type == 9999" class="mes_con mes_img weichat_img_up">
+                                    <!-- 真实url -->
+                                    <a rel="gallery" :href="x.content[1]">
+                                        <!-- base64 -->
+                                        <img :src="x.content[0]" class="weichat_img"/>
+                                    </a>
+                                </p>
+                                <!-- 语音消息 -->
+                                <p v-if="x.cnt_type == 2" class="mes_con mes_voice" @click="playVoice(x.content)"
+                                   :class="{'mes_voice_isplaying':x.content == voicePlay.playVoiceSrc }"></p>
+
+                                <!-- 名片消息 -->
+                                <div v-if="x.cnt_type == 42 && typeof x.content == 'object'" class="mes_con mes_card"
+                                     @click="addFriend({wxAcc:x.content.wxid,type:'1'})">
+                                    <div class="mes_con_t">
+                                        <img :src="x.content._smallheadimgurl" class="fl"/>
+                                        <div class="mes_con_c fl">
+                                            <h4 :title="x.content._nickname">{{ x.content._nickname }}</h4>
+                                            <p :title="x.content.alias">{{ x.content.alias }}</p>
+                                        </div>
+                                        <em class="fl"></em>
+                                    </div>
+                                    <p class="mes_con_b">个人名片</p>
+                                </div>
+                                <!-- 兼容老的名片历史记录 -->
+                                <pre class="mes_con" v-if="x.cnt_type == 42 && typeof x.content == 'string'">{{ x.content }}</pre>
+
+                                <!-- 发文章消息 -->
+                                <div v-if="x.cnt_type == 3000" class="mes_con mes_article">
+                                    <div class="mes_con_box">
+                                        <div><img :src="x.content.icon"/></div>
+                                        <div>
+                                            <h4>{{ x.content.title }}</h4>
+                                            <p>{{ x.content.introduction }}</p>
+                                        </div>
+                                    </div>
+                                    <p><a :href="x.content.link" target="_blank">{{ x.content.link }}</a></p>
+                                </div>
+                                <!-- 收文章消息 -->
+                                <!-- 分享文章消息 -->
+                                <div v-if="x.cnt_type == 495" class="mes_con mes-share-article">
+                                    <i @click="shareArticleData(x.content,'article')">分享到朋友圈</i>
+                                    <div class="con-box">
+                                        <a :href="x.content.urlStr" target="_blank">
+                                            <div>
+                                                <h4>{{ x.content.title }}</h4>
+                                                <p>{{ x.content.desc }}</p>
+                                            </div>
+                                            <div>
+                                                <img :src="x.content.thumbUrl"/>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- 群邀请 -->
+                                <div v-if="x.cnt_type == 4950" class="mes_con mes-share-article">
+                                    <div class="con-box" @click="inviteGroupMem(x.content.localMsgId)">
+                                        <div>
+                                            <h4>{{ x.content.title }}</h4>
+                                            <p>{{ x.content.desc }}</p>
+                                        </div>
+                                        <div>
+                                            <img :src="x.content.thumbUrl"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 文件消息 -->
+                                <div v-if="x.cnt_type == 6000  && typeof x.content == 'object'"
+                                     class="mes_con mes_file">
+                                    <div class="mes_con_t">
+                                        <div class="mes_con_c fl">
+                                            <a :href="x.content.url" :title="x.content.title"></a>
+                                            <p>{{ x.content.title}}</p>
+                                        </div>
+                                        <em class="fr" :class="getFileClass(x.content.url)"></em>
+                                    </div>
+                                    <p class="mes_con_b">{{ x.content.size/1024 | _parseInt }}KB</p>
+                                </div>
+                                <!-- 视频消息 -->
+                                <p v-if="x.cnt_type == 6001" class="mes_con mes-video">
+                                    <i @click="shareArticleData(x.content,'video')">分享到朋友圈</i>
+                                    <video class="setVideo" controls>
+                                        <source :src="x.content.url">
+                                    </video>
+                                    <!--<span>{{'0:09'}}</span>-->
+                                    <!--<em @click="palyVideo"></em>-->
+                                </p>
+                                <!-- 其他消息 -->
+                                <pre v-if="contentType.types.indexOf((x.cnt_type + '')) == -1" class="mes_con">{{{ x.content }}}</pre>
+                            </dd>
+                        </template>
+                    </dl>
+                </div>
+            </div>
+            <div class="content_send">
+                <span class="content_message_tip" @click="gotoBottom"
+                      v-if="wxData.msgList[wxData.curUserId].noRead != 0">↓您有{{ wxData.msgList[wxData.curUserId].noRead }}条新消息</span>
+                <div class="content_tips" v-show="contentTip != ''" transition="contentTip" @mouseenter="contentTipShow"
+                     @mouseleave="contentTipHide">
+                    <p>{{ contentTip }}</p>
+                    <!--<span @click="sendMsgForce">强制发送</span>-->
+                </div>
+                <div class="send_progress">
+                    <i></i>
+                </div>
+                <chat-tools v-ref:chatTools></chat-tools>
+                <textarea class="send_text" v-model="wxData.msgList[wxData.curUserId].msgContent"
+                          @keyDown.enter="sendMsg" @focus="clearAtUs" placeholder="请在此输入"></textarea>
+                <div class="send_btn" v-if="!setGroupChat.flag">
+                    <input type="button" value="发送" @click="sendMsg"/>
+                    <span>按下Shift+Enter换行</span>
+                </div>
+                <!-- 群发到群 -->
+                <div class="send_btn send_btn_group" v-else>
+                    <input type="button" value="取消" @click="closeGroupChat">
+                    <input type="button" class="group_send"
+                           :class="{'dis' : setGroupChat.list.length == 0 || wxData.msgList[wxData.curUserId].msgContent == ''}"
+                           value="开始群发({{setGroupChat.list.length}})" @click="sendMsg"/>
+                    <span>按下Shift+Enter换行</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="user_message">
+        <span class="wx_mask" v-if="setGroupChat.flag"></span>
+        <div v-if="!!wxData.curUserId" class="user_mes_boxc" :class="{'group-dalasi':wxData.msgList[wxData.curUserId].isGroup}">
+            <!--个人-->
+            <template v-if="!wxData.msgList[wxData.curUserId].isGroup">
+                <div v-show="bindCrm.showBindCon" class="user_mes_box">
+                    <!-- 绑定按钮 -->
+                    <a href="javascript:void(0)" class="user_bind" @click="bindUser" v-show="bindCrm.showBindBtn">绑定用户</a>
+                    <!-- 头像 -->
+                    <img :src="wxData.msgList[wxData.curUserId].isGroup ? wxData.localInfo.grouphead : wxData.msgList[wxData.curUserId].userInfo.img" class="user_head"/>
+                </div>
+                <div v-show="bindCrm.showBindInfo" class="user_mes_conc">
+                    <!-- 解绑按钮 -->
+                    <!--<a href="javascript:void(0)" class="user_bind" @click="unbindUser">解除绑定</a>-->
+                    <dl>
+                        <dt class="user_mes_e">
+                            <div class="clearfix user_mes_c">
+                                <a :href="wxData.msgList[wxData.curUserId].crmInfo.user_login" target="_blank"><img :src="wxData.msgList[wxData.curUserId].isGroup ? wxData.localInfo.grouphead : wxData.msgList[wxData.curUserId].userInfo.img"/></a>
+                                <div class="user_mes_t">
+                                    <div class="user_mes_pp">
+                                        <span class="user_mes_enname"
+                                                  v-if="!!wxData.msgList[wxData.curUserId].crmInfo.nick_name"
+                                                  @keydown.enter.prevent  contenteditable="plaintext-only"
+                                                  @blur="enNameEdit($event,wxData.msgList[wxData.curUserId].crmInfo)">{{ wxData.msgList[wxData.curUserId].crmInfo.nick_name }}</span>
+                                        <div class="bind-btn-group">
+                                            <select class="user_mes_about"
+                                                    v-if="wxData.msgList[wxData.curUserId].crmInfo.member"
+                                                    v-model="wxData.msgList[wxData.curUserId].crmInfo.selectMember"
+                                                    @change="updateSelectMember(wxData.curUserId,wxData.msgList[wxData.curUserId].crmInfo)">
+                                                <option value="0" v-if="wxData.msgList[wxData.curUserId].crmInfo.selectMember == 0">
+                                                    请选择
+                                                </option>
+                                                <option v-for="x in wxData.msgList[wxData.curUserId].crmInfo.member" :value="$key">
+                                                    {{x}}
+                                                </option>
+                                            </select>
+                                            <div class="user-unbind" @click="unbindUser">
+                                                解除绑定
+                                            </div>
+                                            <div class="bind-menu">
+                                                <div class="bind-menu-style" @click="showBindMenuList" tabindex="-1" @blur="hideBindMenuList"></div>
+                                                <div class="bind-menu-group" v-show="cutUserMenuList" transition="trans1">
+                                                    <ul>
+                                                        <li @click="setAutoSend">设置自动发送</li>
+                                                        <li @click="recommendUser">推荐学员</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bind-user-detail">
+                                        <span v-if="!!wxData.msgList[wxData.curUserId].crmInfo.sex" class="sex" 
+                                        :class="{'man':wxData.msgList[wxData.curUserId].crmInfo.sex=='man', 'women':wxData.msgList[wxData.curUserId].crmInfo.sex =='woman'}"></span>
+                                        <span v-if="!!wxData.msgList[wxData.curUserId].crmInfo.age">{{ wxData.msgList[wxData.curUserId].crmInfo.age }}岁</span>
+                                        <span v-if="!!wxData.msgList[wxData.curUserId].crmInfo.city">{{ wxData.msgList[wxData.curUserId].crmInfo.city }}</span>
+                                        <template v-if="wxData.msgList[wxData.curUserId].crmInfo.crmUserType && wxData.msgList[wxData.curUserId].crmInfo.crmUserType.length != 0">
+                                            <span class="lable" v-for="x in wxData.msgList[wxData.curUserId].crmInfo.crmUserType">{{ x }}</span>
+                                        </template>
+                                        <span class="lable" v-if="!!wxData.msgList[wxData.curUserId].crmInfo.from_url">{{ wxData.msgList[wxData.curUserId].crmInfo.from_url }}</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </dt>
+                        <dd>
+                            <div class="uer-bind-info" v-if="wxData.msgList[wxData.curUserId].crmInfo.combo">
+                                <table>
+                                    <tbody>
+                                        <template v-if="false">
+                                            <tr>
+                                                <td>电话</td>
+                                                <td>13211111111</td>
+                                                <td><i class="tel"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>购买套餐</td>
+                                                <td colspan="2">
+                                                    <select class="taocan">
+                                                        <option v-for="x in 5" :value="$index">{{ x }}</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>套餐期限</td>
+                                                <td colspan="2">
+                                                    <p>2017-01-20 ~ 2017-05-20</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>最近上课</td>
+                                                <td colspan="2">
+                                                    <div>2017-12-10 8:00</div>
+                                                    <div :class="{'row-one':!showInfo,'row-two':showInfo}">
+                                                        <p>这里显示相关内容这里显示这里显示这里显示相关内容这里显示这里显示这里显示相关内容这里显示这里显示</p>
+                                                        <em class="down"></em>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>最近上课</td>
+                                                <td colspan="2">
+                                                    <div>2017-12-10 8:00</div>
+                                                    <div class="row-two">
+                                                        <p>这里显示相关内容这里显示这里显示这里显示相关内容这里显示这里显示这里显示相关内容这里显示这里显示</p>
+                                                        <em class="up"></em>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>最近预约</td>
+                                                <td colspan="2">
+                                                    <div>2017-12-10 8:00</div>
+                                                    <div class="row-one">
+                                                        <p>这里显示相关内容这里显示这里显示这里显示相关内容这里显示这里显示这里显示相关内容这里显示这里显示</p>
+                                                        <i class="yuyue"></i>
+                                                        <em class="down"></em>
+                                                    </div>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>备注信息</td>
+                                                <td>
+                                                    <p>1231231231</p>
+                                                </td>
+                                                <td>
+                                                    <i class="beizhu"></i>
+                                                </td>
+                                            </tr>
+                                        </template>
+                                        <template v-if="true">
+                                            <tr>
+                                                <td>电话</td>
+                                                <td>
+                                                    {{ wxData.msgList[wxData.curUserId].crmInfo.mobile || '暂无' }}
+                                                        <!--<div class="tel-icon" @click="handCall">-->
+                                                        <!--<div class="showtel">-->
+                                                        <!--<em><i></i></em>-->
+                                                        <!--<ul>-->
+                                                        <!--<li>1这里是什么鬼信息啊</li>-->
+                                                        <!--<li>2这里是什么鬼信息啊</li>-->
+                                                        <!--<li>3这里是什么鬼信息啊</li>-->
+                                                        <!--<li>4这里是什么鬼信息啊</li>-->
+                                                        <!--</ul>-->
+                                                        <!--</div>-->
+                                                        <!--</div>-->
+                                                </td>
+                                                <td>
+                                                    <i class="tel" @click="handCall"></i>
+                                                </td>
+                                            </tr>
+                                            <template v-if="wxData.msgList[wxData.curUserId].crmInfo.combo && wxData.msgList[wxData.curUserId].crmInfo.combo.length > 0">
+                                                <tr>
+                                                    <td>购买套餐</td>
+                                                    <td colspan="2">
+                                                        <select v-model="wxData.msgList[wxData.curUserId].crmInfo.comboSel" class="taocan">
+                                                            <option v-for="x in wxData.msgList[wxData.curUserId].crmInfo.combo" :value="$index">{{ x.name }}
+                                                            </option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>套餐期限</td>
+                                                    <td colspan="2">
+                                                        <p>
+                                                            {{ wxData.msgList[wxData.curUserId].crmInfo.combo[wxData.msgList[wxData.curUserId].crmInfo.comboSel].start_time | y_m_d }}
+                                                            ~ {{ wxData.msgList[wxData.curUserId].crmInfo.combo[wxData.msgList[wxData.curUserId].crmInfo.comboSel].end_time | y_m_d }}
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </template>
+                                            <template v-else>
+                                                <tr>
+                                                    <td>购买套餐</td>
+                                                    <td colspan="2">暂无</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>套餐期限</td>
+                                                    <td colspan="2">暂无</td>
+                                                </tr>
+                                            </template>
+                                            <tr v-if="wxData.msgList[wxData.curUserId].crmInfo.last.start_time">
+                                                <td>最近上课</td>
+                                                <td colspan="2">
+                                                    <div>{{ wxData.msgList[wxData.curUserId].crmInfo.last.start_time | y_m_d_h_m }}</div>
+                                                    <div :class="{'row-one':!showInfo.last,'row-two':showInfo.last}">
+                                                        <p :title="wxData.msgList[wxData.curUserId].crmInfo.last.course_name_cn + '' +  wxData.msgList[wxData.curUserId].crmInfo.last.unit_name_cn + '' + wxData.msgList[wxData.curUserId].crmInfo.last.lession_name_cn">
+                                                            {{ wxData.msgList[wxData.curUserId].crmInfo.last.course_name_cn + '' +
+                                                            wxData.msgList[wxData.curUserId].crmInfo.last.unit_name_cn + '' +
+                                                            wxData.msgList[wxData.curUserId].crmInfo.last.lession_name_cn }}
+                                                        </p>
+                                                        <em :class="{'down':!showInfo.last,'up':showInfo.last}" @click="showInfoFn('last')"></em>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <!--<tr v-if="wxData.msgList[wxData.curUserId].crmInfo.recent.start_time">-->
+                                            <tr>
+                                                <td>最近预约</td>
+                                                <td colspan="2">
+                                                    <div>{{ wxData.msgList[wxData.curUserId].crmInfo.recent.start_time }}</div>
+                                                    <div :class="{'row-one':!showInfo.recent,'row-two':showInfo.recent}">
+                                                        <template v-if="wxData.msgList[wxData.curUserId].crmInfo.recent.length != 0">
+                                                            <p :title="wxData.msgList[wxData.curUserId].crmInfo.recent.course_name_cn + '' + wxData.msgList[wxData.curUserId].crmInfo.recent.unit_name_cn + '' + wxData.msgList[wxData.curUserId].crmInfo.recent.lession_name_cn">
+                                                                {{ wxData.msgList[wxData.curUserId].crmInfo.recent.course_name_cn + '' +
+                                                                wxData.msgList[wxData.curUserId].crmInfo.recent.unit_name_cn + '' +
+                                                                wxData.msgList[wxData.curUserId].crmInfo.recent.lession_name_cn }}
+                                                            </p>
+                                                            <i class="yuyue" @click="sendClassLink"></i>
+                                                            <em :class="{'down':!showInfo.recent,'up':showInfo.recent}" @click="showInfoFn('recent')"></em>
+                                                        </template>
+                                                        <template v-else>
+                                                            <p>暂无</p>
+                                                        </template>
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>备注信息</td>
+                                                <td>
+                                                    <p :title="wxData.msgList[wxData.curUserId].crmInfo.remarkInfo.length > 0 ? wxData.msgList[wxData.curUserId].crmInfo.remarkInfo[0].content : ''">
+                                                        {{ wxData.msgList[wxData.curUserId].crmInfo.remarkInfo.length > 0 ? wxData.msgList[wxData.curUserId].crmInfo.remarkInfo[0].content : "暂无" }}
+                                                    </p></td>
+                                                <td>
+                                                    <i class="beizhu" @click="crmRemarkOpen(wxData.msgList[wxData.curUserId].crmInfo.user_id)"></i>
+                                                </td>
+                                            </tr>
+                                        </template>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="user_info_link">
+                                <a target="_blank" :href="wxData.msgList[wxData.curUserId].crmInfo.user_detail"
+                                   v-show="wxData.msgList[wxData.curUserId].crmInfo.user_detail">查看详情</a>
+                                <a href="javascript:void(0);" v-if="wxData.msgList[wxData.curUserId].showHW != 999 && wxData.msgList[wxData.curUserId].showHW" @click="homeWorkOneShow(wxData.curUserId)">作业批改</a>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            </template>
+
+            <!--群-->
+            <template v-else>
+                <!--达拉斯-->
+                <template v-if="true">
+                    <div class="group-right-top-layer" v-if="bindGroupCtl.groupType.dls">
+                        <div class="group-bind-row">
+                            <!--群头像-->
+                            <div class="group-bind-img">
+                                <img :src="wxData.msgList[wxData.curUserId].isGroup ? wxData.localInfo.grouphead : wxData.msgList[wxData.curUserId].userInfo.img"/>
+                            </div>
+                            <div class="group-bind-con">
+                                <div class="group-bind-con-up">
+                                    <!--群名字-->
+                                    <div class="group-name">{{ wxData.msgList[wxData.curUserId].userInfo.c_remark || wxData.msgList[wxData.curUserId].userInfo.nick }}</div>
+                                    <div class="bind-menu">
+                                        <!--绑定按钮-->
+                                        <div class="group-bind-btn" name="group-bind-btn" v-show="bindGroupCtl.showBindGroup && bindGroupCtl.userGroup == '7'" @click="bindGroupBtn">绑定商品</div>
+                                        <div class="group-bind-btn" name="group-unbind-btn" v-show="bindGroupCtl.canselBindGroup && bindGroupCtl.userGroup == '7'" @click="unbindGroup">解除绑定</div>
+                                        <!--绑定后的菜单-->
+                                        <div class="bind-menu-style" name="bind-menu-style" @click="groupBindMenu" v-show="bindGroupCtl.canselBindGroup">
+                                            <div class="bind-menu-group" transition="trans1" name="bind-menu-group" v-show="bindGroupCtl.menu">
+                                                <ul>
+                                                    <li name="setAutoSend">
+                                                        <a :href="bindGroupCtl.groupDetail.commodityUrl" target="_blank">商品详情</a>
+                                                    </li>
+                                                    <li name="recommendUser" class="class-detail-layer">
+                                                        班级信息
+                                                        <div class="class-detail-detail">
+                                                            <table>
+                                                                <tr>
+                                                                    <td>商品ID</td>
+                                                                    <td>{{bindGroupCtl.groupDetail.commodityId}}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>商品名称</td>
+                                                                    <td>{{bindGroupCtl.groupDetail.name}}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>中教班课</td>
+                                                                    <td>{{bindGroupCtl.groupDetail.courseName}}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>次卡套餐</td>
+                                                                    <td>{{bindGroupCtl.groupDetail.comboName}}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>上课周期</td>
+                                                                    <td>{{bindGroupCtl.groupDetail.startClassTime}} ~
+                                                                        {{bindGroupCtl.groupDetail.endClassTime}}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>下次上课</td>
+                                                                    <td>{{bindGroupCtl.groupDetail.newClassTime}}</td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="group-bind-con-down">
+                                    <!--群的二维码-->
+                                    <div class="show-wechat" v-if="bindGroupCtl.canselBindGroup">
+                                        <div class="wechat-img">
+                                            <img :src="bindGroupCtl.wechatCode">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group-bind-row-down">
+                            <!--如果绑定了-->
+                            <template v-if="bindGroupCtl.canselBindGroup">
+                                <a href="javascript:;" @click="setHWShow(wxData.curUserId)">布置作业</a>
+                                <a href="javascript:;" @click="homeWorkShow(wxData.curUserId)">作业批改</a>
+                                <a href="javascript:;" @click="homeWorkShowDetail(wxData.curUserId)">作业汇总</a>
+                            </template>
+                            <!--没有绑定-->
+                            <template v-if="bindGroupCtl.showBindGroup && bindGroupCtl.userGroup == '7'">
+                                绑定后，批改作业相关功能才可以使用
+                            </template>
+                        </div>
+                    </div>
+                </template>
+                <template v-if="false">
+                    <div class="group_mes_box" v-if="bindGroupCtl.groupType.dls">
+                        <div class="group-bind-head clearfix">
+                            <img :src="wxData.msgList[wxData.curUserId].isGroup ? wxData.localInfo.grouphead : wxData.msgList[wxData.curUserId].userInfo.img"/>
+                            <p>{{ wxData.msgList[wxData.curUserId].userInfo.c_remark || wxData.msgList[wxData.curUserId].userInfo.nick }}</p>
+                            <span v-show="bindGroupCtl.showBindGroup" @click="bindGroupBtn">绑定商品</span>
+                            <span v-show="bindGroupCtl.canselBindGroup" @click="unbindGroup">取消绑定</span>
+                        </div>
+                        <div class="group_mes_con">
+                            <div class="group-bind-con">
+                                <div class="group-detail">
+                                    <!--没有绑定显示群二维码-->
+                                    <div v-show="bindGroupCtl.showBindGroup">
+                                        <img class="single-img" :src="bindGroupCtl.wechatCode">
+                                    </div>
+
+                                    <!--显示群绑定信息-->
+                                    <div v-show="bindGroupCtl.canselBindGroup">
+                                        <div class="group-btn">
+                                            <a :href="bindGroupCtl.groupDetail.commodityUrl" target="_blank">商品详情</a>
+                                            <a href="javascript:void(0);" @click="setHWShow(wxData.curUserId)">布置作业</a>
+                                            <a href="javascript:void(0);" @click="homeWorkShow(wxData.curUserId)">作业批改</a>
+                                            <a href="javascript:void(0);" @click="homeWorkShowDetail(wxData.curUserId)">作业汇总</a>
+                                        </div>
+                                        <p><em>商&nbsp;品&nbsp;I&nbsp;D：</em><i>{{bindGroupCtl.groupDetail.commodityId}}</i>
+                                        </p>
+                                        <p><em>商品名称：</em><i>{{bindGroupCtl.groupDetail.name}}</i></p>
+                                        <p><em>中教班课：</em><i>{{bindGroupCtl.groupDetail.courseName}}</i></p>
+                                        <p><em>次卡套餐：</em><i>{{bindGroupCtl.groupDetail.comboName}}</i></p>
+                                        <p><em>上课周期：</em><i>{{bindGroupCtl.groupDetail.startClassTime}} ~
+                                                {{bindGroupCtl.groupDetail.endClassTime}}</i></p>
+                                        <p><em>下次上课：</em><i>{{bindGroupCtl.groupDetail.newClassTime}}</i></p>
+                                        <h5><img :src="bindGroupCtl.wechatCode"></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+                <!--CST-->
+                <div class="group_mes_box" v-if="bindGroupCtl.groupType.cst">
+                    <div class="group-bind-head clearfix">
+                        <img :src="wxData.msgList[wxData.curUserId].isGroup ? wxData.localInfo.grouphead : wxData.msgList[wxData.curUserId].userInfo.img"/>
+                        <p class="cst-title">{{ wxData.msgList[wxData.curUserId].userInfo.c_remark ||
+                            wxData.msgList[wxData.curUserId].userInfo.nick }}</p>
+                        <span class="cst-bind-btn" @click="setGroupToClass('bind')" v-show="classGroupInfo.bindBtn">设置为班级群</span>
+                        <span class="cst-bind-btn" @click="setGroupToClass('unbind')" v-show="!classGroupInfo.bindBtn">取消设置</span>
+                    </div>
+                    <div class="cst-con">
+                        <template v-if="!classGroupInfo.bindBtn">
+                            <div class="cst-btn-list">
+                                <span @click="setHWShow(wxData.curUserId)">布置作业</span>
+                                <span @click="homeWorkShow(wxData.curUserId)">作业批改</span>
+                                <span @click="homeWorkShowDetail(wxData.curUserId)">作业汇总</span>
+                            </div>
+                        </template>
+                        <template v-if="classGroupInfo.bindBtn">
+                            绑定后，批改作业相关功能才可以使用
+                        </template>
+                    </div>
+
+                </div>
+
+                <!--其他-->
+
+            </template>
+        </div>
+
+        <!-- 知识库 -->
+        <quick-con :is-show="!!wxData.curUserId" :is-group="wxData.curUserId && wxData.msgList[wxData.curUserId].isGroup" v-ref:quickCon></quick-con>
+
+    </div>
+</div>
+
+<!-- 绑定弹层 -->
+<div class="weixin_bind_bom" v-if="bindCrm.showBindPop" v-cloak>
+    <div class="weixin_bind">
+        <span class="close" @click="hideBindPop"><i>x</i></span>
+        <h3>绑定用户</h3>
+        <i class="border"></i>
+        <form action="#" @submit.prevent="bindSearch" autocomplete="off">
+            <p class="search">
+                <!-- 电话号码或ID号 -->
+                <input type="text" class="text_bind" placeholder="请输入电话号码或ID号搜索" v-model="bindCrm.searchKey">
+                <input type="submit" class="text_bind_sub"/>
+            </p>
+            <p class="result">
+                <input type="text" placeholder="搜索结果" readonly :value="bindCrmSearchResult"/>
+            </p>
+            <p class="sub_bind">
+                <a href="javascript:void(0)" @click="bindCrmFn">绑定</a>
+            </p>
+        </form>
+    </div>
+</div>
+
+<!--群组绑定-->
+<div class="update_mask" v-if="bindGroupCtl.showbindLayer">
+    <div class="bind-group-box">
+        <h5>绑定商品</h5>
+        <i></i>
+        <div class="input-in">
+            <label>商品&nbsp;&nbsp;&nbsp;ID</label>
+            <input type="text" placeholder="请输入商品ID" v-model="bindGroupCtl.searchKey">
+            <span @click="bindGroupSearch"></span>
+        </div>
+        <div class="input-in">
+            <label>商品名称</label>
+            <input type="text" placeholder="搜索结果" readonly :value="bindGroupSearchResult">
+        </div>
+        <div class="btn_foot" style="text-align: right">
+            <input type="button" value="确定" class="btn_sure"
+                   :class="{'btn_disable':this.bindGroupCtl.searchResult.name == ''}"
+                   :disabled="this.bindGroupCtl.searchResult.name == ''" @click="bindGroupFn"/>
+            <input type="button" class="btn_cancel" value="取消" @click="hideBindGroupLayer"/>
+        </div>
+    </div>
+</div>
+
+<!-- 选择联系人弹层 -->
+<!-- <user-sel :sel-labels="labels" :sel-data="wxData.msgList" :local-info="wxData.localInfo"></user-sel> -->
+
+<!-- 选择联系人模板 -->
+<template id="weixin_sel_bom">
+    <div class="weixin_sel_bom" :class="{'weixin_sel_getGroupChat':isGetGroupChat}" v-if="selShow">
+        <div class="weixin_sel">
+            <h5>{{ selTitle }}</h5>
+            <div class="sel_con clearfix" :class="{'sel_con_msg':isGetGroup}">
+                <div class="sel_con_l">
+                    <div class="sel_input">
+                        <select v-model="selLabel">
+                            <option value="">全部</option>
+                            <template v-for="x in localInfo.labelList">
+                                <option :value="xx.tag_name" v-for="xx in x">
+                                    {{xx.tag_name}}
+                                </option>
+                            </template>
+                        </select>
+                        <input type="text" placeholder="搜索" v-model="selFilter"/>
+                    </div>
+                    <!-- 全选 -->
+                    <div class="sel_all" @click="selUserAll">
+                        全选&nbsp;&nbsp;<i :class="{'sel_seled':isSelUserAll}"></i>
+                    </div>
+                    <!-- 勾选列表 -->
+                    <ul class="sel_list">
+                        <li v-for="x in selLists" @click="selUser(x)" track-by="$index">
+                            <img :src="selData[x].isGroup ? localInfo.grouphead : selData[x].userInfo.img"/>
+                            <p>{{ selData[x].userInfo.c_remark || selData[x].userInfo.nick }}</p>
+                            <i :class="{'sel_seled': selSelect.indexOf(x) > -1}"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sel_con_r">
+                    <p class="sel_tip">
+                        <span v-show="selSelect.length == 0">请勾选需要选择的联系人</span>
+                        <span v-else>已选择了{{ selSelect.length }}个联系人</span>
+                    </p>
+                    <ul class="sel_list">
+                        <li v-for="x in selSelect" track-by="$index">
+                            <img :src="selData[x].isGroup ? localInfo.grouphead : selData[x].userInfo.img"/>
+                            <p>{{ selData[x].userInfo.c_remark || selData[x].userInfo.nick }}</p>
+                            <i @click="selDel(x)"></i>
+                        </li>
+                    </ul>
+                    <!-- 输入框 -->
+                    <div class="sel_msg" v-if="isGetGroup">
+                        <textarea v-model="inputMsg" placeholder="请在此输入"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="sel_foot clearfix">
+                <!-- 操作 -->
+                <div v-if="!isPending.flag">
+                    <span class="sel_cancel" @click="selCancel">取消</span>
+                    <!-- 群发 -->
+                    <span class="sel_sure" :class="{'sel_nosure':selSelect.length == 0 || inputMsgVal == ''}"
+                          @click="selSure" v-if="isGetGroup">
+                        开始群发
+                        <em v-show="selSelect.length != 0">({{ selSelect.length }})</em>
+                    </span>
+                    <!-- 其他 -->
+                    <span class="sel_sure" :class="{'sel_nosure':selSelect.length == 0}" @click="selSure" v-else>
+                        确定
+                        <em v-show="selSelect.length != 0">({{ selSelect.length }})</em>
+                    </span>
+                </div>
+                <!-- 操作等待 -->
+                <div v-else>
+                    <span class="sel_sure sel_nosure" v-if="!isPending.isSure">{{ isPending.text }}</span>
+                    <span v-else class="sel_sure sel_isSure">{{ isPending.sureText }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<!-- 编辑名字弹层 -->
+<edit-name></edit-name>
+<!-- 编辑名字弹层模板 -->
+<template id="weixin_edit">
+    <div class="weixin_mask" v-if="editShow">
+        <div class="weixin_edit ani-pops">
+            <h5>修改{{ isGroup ? '群名称' : '备注' }}</h5>
+            <input type="text" v-model="editvalue"/>
+            <p v-if="!isGroup">备注名包含学员手机号或CRM账号系统将会自动绑定 </p>
+            <div class="sel_foot clearfix">
+                <span class="sel_cancel" @click="selCancel">取消</span>
+                <span class="sel_sure" :class="{'sel_nosure':editValue == ''}" @click="selSure">确定</span>
+            </div>
+        </div>
+    </div>
+</template>
+
+<!-- 知识库 -->
+<template id="quick_con">
+    <div class="user_mes_content" :class="{'group-label-con-height':isGroup}" v-if="isShow">
+        <dl class="user_mes_con">
+            <dt class="clearfix">
+                <div class="user_mes_sel" tabIndex="-1" @blur="selHide">
+                    <span @click="selShow">{{ tagSel.selName || '请选择标签' }}</span>
+                    <ul v-show="tagSel.selShow">
+                        <li v-for="x in tagSel.selData" @click="getTag(x)">{{ x.name }}</li>
+                    </ul>
+                </div>
+                <input type="text" v-model="inputData" debounce="500"/>
+                <div class="system-label" v-if="!isGroup">
+                    <template v-for="y in tagList">
+                        <i :class="{'active':y.id == labelId}"  @click="getTag(y)">{{ y.name }}</i>
+                    </template>
+                </div>
+            </dt>
+            <dd>
+                <p v-show="conList.length == 0">暂无信息</p>
+                <ul v-else :class="{'isSearch' : isSearch}">
+                    <li v-for="x in conList" @click="sendQuickCon(x.content)">
+                        <h4>{{{ x._content || x.content }}}</h4>
+                        <p>{{{ x._content || x.content }}}</p>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+</template>
+
+<!-- 搜索 -->
+<template id="user_search">
+    <div class="user_search">
+        <input type="text" placeholder="" v-model="selFilter" @blur="searchHide"/>
+        <div class="user_search_result" v-show="showSel" @mouseenter="cannotHide" @mouseleave="canHide">
+            <ul v-show="userListFilter.length != 0">
+                <li v-for="x in userListFilter" track-by="$index" @click="searchReturn(x)">
+                    <img :src="selData[x].isGroup ? localInfo.grouphead : selData[x].userInfo.img"/>
+                    <h6>{{ selData[x].userInfo.c_remark || selData[x].userInfo.nick }}</h6>
+                </li>
+            </ul>
+            <p v-else>找不到匹配的结果</p>
+        </div>
+    </div>
+</template>
+
+<!-- 分类 -->
+<template id="user_type">
+    <div class="user_type">
+        <ul>
+            <li @click="setType('')" :class="{cur: listType == ''}">全部</li>
+            <template v-for="x in selLabels">
+                <li v-for="xx in x" @click="setType(xx)" :class="{cur: listType == xx}">{{ xx }}</li>
+            </template>
+        </ul>
+    </div>
+</template>
+
+<template id="user_types">
+    <div class="user_type" tabIndex="-1" @blur="hideFn">
+        <h4 @click="showFn">{{ showType }}</h4>
+        <div class="wx_sel" v-show="show" style="display: none;" transition="trans1">
+            <ul>
+                <li @click="setType('')">全部</li>
+            </ul>
+            <ul>
+                <li @click="setType('todayFocus')">今日关注</li>
+            </ul>
+            <ul v-for="x in localInfo.labelList">
+                <li v-for="xx in x" @click="setType(xx.tag_name)">
+                    {{ xx.tag_name }}
+                </li>
+            </ul>
+        </div>
+    </div>
+</template>
+
+<!--<info-update :local-info="wxData.localInfo" :nick-name="wxData.localInfo.nick_name" :user-group="wxData.localInfo.user_group" :device-id="wxData.localInfo.device_id" :rank-list="wxData.localInfo.rank_list"></info-update>-->
+<info-update :local-info="wxData.localInfo" :nick-name="wxData.localInfo.nick_name" :user-group="wxData.localInfo.user_group" :device-id="wxData.localInfo.device_id" ></info-update>
+<!-- 补充个人信息 -->
+<template id="info_update">
+    <div class="weixin_mask" v-if="updateShow || initShow">
+        <div class="info_update ani-pops">
+            <h4>个人信息</h4>
+            <dl>
+                <dt>微信英文名</dt>
+                <dd>
+                    <input type="text" placeholder="请输入您在微信里的英文名" v-model="nickName" />
+                </dd>
+            </dl>
+            <dl>
+                <dt>设备编号</dt>
+                <dd>
+                    <input type="text" placeholder="请输入手机设备编号" v-model="deviceId"/>
+                </dd>
+            </dl>
+            <dl>
+                <dt>用户类型</dt>
+                <dd>
+                    <select v-model="userGroup">
+                        <option value="">请选择您的用户类型</option>
+                        <option v-for="x in localInfo.userGroupList" :value="x.id">{{ x.name }}</option>
+                    </select>
+                </dd>
+            </dl>
+            <!---->
+            <dl v-show="false">
+                <dt>上级账号</dt>
+                <dd>
+                    <!--<input type="text" placeholder="请输入上级账号，多个账号请用逗号分隔" v-model="rankList"/>-->
+                    <input type="text" placeholder="请输入上级账号，多个账号请用逗号分隔" />
+                </dd>
+            </dl>
+            <dl>
+                <dt>&nbsp;</dt>
+                <dd class="sel_foot">
+                    <span class="sel_sure" :class="{'sel_nosure':!canUpdate,'sel_int':initShow}" @click="updateInfoFn">确定</span>
+                    <span class="sel_cancel" @click="updateHide" v-if="!initShow" >取消</span>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</template>
+
+<add-friend :local-info="wxData.localInfo" v-ref:addFriend></add-friend>
+<!-- 增加好友 -->
+<template id="add_friend">
+    <div class="weixin_mask weixin_mask_addFri" v-if="addFriendShow">
+        <div class="info_update ani-pops add_friend">
+            <h4>添加好友</h4>
+            <!-- 卡片 -->
+            <template v-if="type == 1">
+                <dl>
+                    <dt>添加账号</dt>
+                    <dd>
+                        <input type="text" placeholder="请输入微信账号或手机号" v-model="wxAcc"/>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>个人介绍</dt>
+                    <dd>
+                        <input type="text" placeholder="请输入您的个人介绍" v-model="wxDes"/>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>&nbsp;</dt>
+                    <dd class="sel_foot">
+                        <span class="sel_sure" :class="{'sel_nosure':!canUpdate}" @click="addFriendFn">添加</span>
+                        <span class="sel_cancel" @click="addFriendHide">取消</span>
+                    </dd>
+                </dl>
+            </template>
+
+            <!-- 搜索 -->
+            <template v-else>
+                <template v-if="!toNext">
+                    <dl>
+                        <dt>添加账号</dt>
+                        <dd>
+                            <input type="text" placeholder="请输入微信账号或手机号" v-model="wxAcc"/>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>&nbsp;</dt>
+                        <dd class="sel_foot">
+                            <span class="sel_sure" :class="{'sel_nosure':!canUpdate}" @click="addFriendNext">下一步</span>
+                            <span class="sel_cancel" @click="addFriendHide">取消</span>
+                        </dd>
+                    </dl>
+                </template>
+
+                <template v-else>
+                    <dl class="add_friend_info">
+                        <dt>好友信息</dt>
+                        <dd>
+                            <div class="add_friend_info_in">
+                                <img :src="wechat_img" v-if="!!wechat_img"/>{{ wechat_nick }}
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>个人介绍</dt>
+                        <dd>
+                            <input type="text" placeholder="请输入您的个人介绍" v-model="wxDes"/>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>设置备注</dt>
+                        <dd>
+                            <input type="text" placeholder="对该好友进行备注" v-model="remark"/>
+                            <!--<input type="text" placeholder="对该好友进行备注" v-model="wechat_nick"/>-->
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>&nbsp;</dt>
+                        <dd class="sel_foot">
+                            <span class="sel_sure" :class="{'sel_nosure':!canUpdate}" @click="addFriendFn">添加</span>
+                            <span class="sel_cancel" @click="addFriendHide">取消</span>
+                        </dd>
+                    </dl>
+                </template>
+            </template>
+        </div>
+    </div>
+</template>
+
+<div class="mask-bg-layer  trans1-transition" v-if="addDelFriendInfo.show">
+    <div class="add-del-friend">
+        <h5>发送验证</h5>
+        <span class="title-tip"></span>
+        <div>
+            <dt>验证申请</dt>
+            <dd>
+                <textarea v-model="addDelFriendInfo.msg">你好，我是您在{{ addDelFriendInfo.nameTitle }}，以后我们都用微信进行沟通，麻烦通过一下。</textarea>
+                <div class="check-btn">
+                    <span class="btn confirm" @click="sendAddFriendBtn">发送</span>
+                    <span class="btn concel" @click="hideSendfriendBtn">取消</span>
+                </div>
+            </dd>
+        </div>
+    </div>
+</div>
+
+<template id="addDelFriend"></template>
+<!-- 聊天工具 -->
+<template id="chat_tools">
+    <ul class="chat_tools clearfix">
+        <send-face></send-face>
+        <send-img></send-img>
+        <send-article></send-article>
+        <send-file></send-file>
+        <send-voice v-ref:sendVoice></send-voice>
+    </ul>
+</template>
+
+<!-- 发送图片 -->
+<template id="send_img">
+    <li class="send_img" id="send_img">
+        <em id="send_img_btn" title="发送图片"></em>
+    </li>
+</template>
+
+<!-- 发送表情 -->
+<template id="send_face">
+    <li class="send_face" tabIndex="-1" @blur="sendFaceHide">
+        <em @click="sendFaceShow" title="表情"></em>
+        <div class="face_panel" v-show="show" transition="trans2">
+            <span class="face_panel_arr"></span>
+            <ul class="face_con">
+                <li v-for="x in faceData" v-show="x.type == curType">
+                    <!-- qq表情 -->
+                    <div v-if="x.type == 0" class="face_qq clearfix">
+                        <span v-for="xx in x.data" :title="xx.slice(1,-1)" class="qqface" :class="'qqface'+$index"
+                              @click="sendFace(x.type,xx)"></span>
+                    </div>
+                    <div v-else>其他表情</div>
+                </li>
+            </ul>
+            <ul class="face_type">
+                <li v-for="x in faceData" :class="{'cur':x.type == curType}" @click="changType(x.type)">{{ x.des }}</li>
+            </ul>
+        </div>
+    </li>
+</template>
+
+<!-- 发送文章 -->
+<template id="send_article">
+    <li class="send_article">
+        <em id="send_article_btn" @click="show" title="发送文章"></em>
+        <div class="weixin_mask" v-if="articleListShow">
+            <div class="send_article_box ani-pops">
+                <h4><span>文章</span></h4>
+                <div class="send_article_inner">
+                    <ul class="con-change clearfix">
+                        <li :class="{'cut-tab': $index+1 == articleCurrentPage }" v-for="x in navlist" @click="getArticle($index+1)">
+                            {{ x }}
+                        </li>
+                    </ul>
+                    <span class="loading" v-show="isLoading"></span>
+                    <ul class="con-show" v-else>
+                        <template v-if="articleListData.length > 0">
+                            <li v-for="x in articleListData" @click="cutAticle($index)"
+                                :class="{'select-li': $index == curArticleIndex }" title="{{x.introduction}}">
+                                <div class="up_box clearfix">
+                                    <div>
+                                        <p>{{x.title}}</p>
+                                        <p>{{x.introduction}}</p>
+                                    </div>
+                                    <div><img :src="x.icon"></div>
+                                </div>
+                                <div class="down_box clearfix" :class="{'sel-bor': $index == curArticleIndex }">
+                                    <a :href="x.link" target="_blank" title="{{x.title}}">{{x.link}}</a>
+                                </div>
+                            </li>
+                        </template>
+                        <template v-else>
+                            <li class="li-none">此分类下暂无文章</li>
+                        </template>
+                    </ul>
+                </div>
+                <!--分页-->
+                <!--<div class="pages clearfix">-->
+                <!--&lt;!&ndash;<em>&ndash;&gt;-->
+                <!--&lt;!&ndash;<a href="javascript:;" >上一页</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</em>&ndash;&gt;-->
+                <!--<em>-->
+                <!--<a v-for="x in articlePageCount" href="javascript:;" :class="{'cut': (x + 1) == articleCurrentPage }" @click="getArticle(x+1)">{{ x + 1 }}</a>-->
+                <!--</em>-->
+                <!--&lt;!&ndash;<em>&ndash;&gt;-->
+                <!--&lt;!&ndash;<a href="javascript:;" >下一页</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</em>&ndash;&gt;-->
+                <!--</div>-->
+                <div class="btn_foot">
+                    <input type="button" value="确定" class="btn_sure"
+                           :class="{'btn_disable':this.curArticleIndex == null}"
+                           :disabled="this.curArticleIndex == null" @click.stop="sendArticle"/>
+                    <input type="button" class="btn_cancel" value="取消" @click.stop="hide"/>
+                </div>
+            </div>
+        </div>
+    </li>
+</template>
+
+<crm-remark></crm-remark>
+<!-- crm备注 -->
+<template id="crm_remark">
+    <div class="weixin-mask" v-if="isshow">
+        <div class="send_article_box crm_remark ani-pops">
+            <div class="close-layer-btn-right" @click="hide">
+                <em></em>
+            </div>
+            <h4><span>备注内容</span></h4>
+            <div class="mark-info">
+                <span class="add_tip" v-show="showTip">
+                    您提交的信息将在5分钟之后显示
+                </span>
+                <div class="add-info-scroll">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>备注内容</th>
+                            <th>备注时间</th>
+                        </tr>
+                        </thead>
+                        <tr v-for="x in remarks">
+                            <td>{{ $index + 1 }}</td>
+                            <td>{{ x.content }}</td>
+                            <td>{{ x.add_time }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--<ul>-->
+                <!--<li v-for="x in remarks">-->
+                <!--<span>{{ $index + 1 }}</span>-->
+                <!--<p :title="x.content">{{ x.content }}</p>-->
+                <!--</li>-->
+                <!--</ul>-->
+                <div class="add_remark">
+                    <div>
+                        <input type="text" v-model="inputData"/>
+                        <span :class="{'dis': this._inputData == ''}" @click="addRemark">添加</span>
+                    </div>
+                    <div>
+                        <span :class="{'choose-show': demo}" @click="addRemarkTime">添加提醒时间：</span>
+                        <em><i>{{selYear}}</i>年</em>
+                        <select class="selMonth" v-model="selMonth">
+                            <option v-for="x in 12">{{x+1}}</option>
+                        </select>
+                        月
+                        <select class="selDay" v-model="selDay">
+                            <option v-for="x in 31">{{x+1}}</option>
+                        </select>
+                        日
+                    </div>
+                </div>
+            </div>
+            <!--<div class="btn_foot">-->
+            <!--<input type="button" class="btn_cancel" value="关闭"/>-->
+            <!--</div>-->
+        </div>
+    </div>
+
+</template>
+
+<!--发送文件-->
+<template id="send_file">
+    <li class="send_file">
+        <label title="发送文件">
+            <input type="file" id="send_file_button"/>
+        </label>
+        <p class="show-tip">发送文件需要电脑管理员权限，如果无法发送，请到OA填写IT工单：<a href="http://172.16.0.252:8080/WOListView.do"
+                                                               target="_blank">http://172.16.0.252:8080/WOListView.do</a>。<i></i>
+        </p>
+    </li>
+</template>
+
+<!--发送语音-->
+<template id="send_voice">
+    <li class="send_voice">
+        <em id="send_voice_btn" @click="open" title="发送语音"></em>
+        <div class="weixin_mask" v-if="creat" :class="{'voice_open': show}">
+            <!-- 录音flash -->
+            <div class="recorderAppOuter" :class="{'recorderOpen' : recorderOpen}">
+                <dl class="recorderTip">
+                    <dt>录音设置：</dt>
+                    <dd>
+                        1.点击允许，并勾选记住<br />
+                        2.点击关闭按钮<br />
+                        3.点击开始录音
+                    </dd>
+                </dl>
+                <object type="application/x-shockwave-flash" id="recorderApp" class="recorderApp" name="recorderApp" width="0" height="0" data="/recorder/recorder.swf"></object>
+            </div>
+
+            <div class="voice_con">
+                <!-- 录音第一步 -->
+                <dl class="voice_con_step1" v-if="!isStep2">
+                    <dt>点击按钮开始录音</dt>
+                    <dd class="btn-area">
+                        <span class="btn-s1" @click="start">开始录音</span>
+                        <span class="btn-s2" @click="close1">取消</span>
+
+                        <span v-if="pending" class="btn-pending">发送中...</span>
+                    </dd>
+                </dl>
+                <!-- 录音第二步 -->
+                <dl class="voice_con_step2" v-else>
+                    <dt v-if="!isOver" class="recorder-tip">
+                    <p></p>
+                    <span>录音中…{{ time }}秒</span>
+                    </dt>
+                    <dt v-else>
+                        完成录音{{ timeLimit }}秒，已停止录音，是否发送？
+                    </dt>
+                    <dd class="btn-area">
+                        <span class="btn-s3" @click="end">结束并发送</span>
+                        <span class="btn-s2" @click="close2">取消</span>
+
+                        <span v-if="pending" class="btn-pending">发送中...</span>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </li>
+</template>
+
+<!-- 粘贴发图 -->
+<send-paste></send-paste>
+<template id="send_paste">
+    <div class="weixin_mask" v-if="sendPasteShow">
+        <div class="info_update send_paste">
+            <h4>发送图片</h4>
+            <div class="send_paste_inner">
+                <img :src="imgSrc" v-if="imgSrc"/>
+                <span class="loading" v-else></span>
+            </div>
+            <div class="btn_foot">
+                <input type="button" :value="sureDisable ? '发送中...' : '确定'" class="btn_sure" @click="send"
+                       :class="{'btn_disable':sureDisable}" :disabled="sureDisable"/>
+                <input type="button" class="btn_cancel" value="取消" @click="hide" v-if="!sureDisable"/>
+            </div>
+        </div>
+    </div>
+</template>
+
+<errors-tip :device-id="wxData.localInfo.device_id"></errors-tip>
+<!-- 异常弹层 -->
+<template id="errors_tip">
+    <div class="error-tip" v-if="errorsTipShow">
+        <!-- net error -->
+        <template v-if="errors.netErr">
+            <div class="net-err">
+                <dt>
+                    <i></i>
+                    检查网络状态
+                </dt>
+                <dd>
+                    请确认您的电脑网络正常后 请点击按钮
+                    <span @click="reload">重新连接</span>
+                </dd>
+            </div>
+        </template>
+        <!-- phone error -->
+        <template v-else>
+            <!--cc-->
+            <div class="cc-err new-err" v-show="isss||iscc">
+                <!-- <dt>
+                    <i></i>
+                    你的微信处于掉线状态
+                </dt> -->
+                <dd>
+                    请稍等，黑鸟自动恢复中( <span class="red-font">{{ bTime }}秒</span> )
+                    <!-- <span class="red-font">{{ bTime }}秒</span> 后重新 <span class="red-font">刷新浏览器</span> -->
+                </dd>
+            </div>
+            <!--ss-->
+            <!-- <div class="ss-err" v-show="iscc">
+               <dt>
+                   <i></i>
+                   你的微信处于掉线状态，请尝试如下步骤
+               </dt>
+               <dd>
+                   1、<span class="red-font">{{ bTime }}秒</span> 后尝试 <span class="red-font">刷新浏览器</span></br>
+                   2、请双击苹果手机的Home键，杀掉微信进程，再 <span class="red-font">打开微信</span></br>
+                   3、确认 <span class="red-font">连接公司WiFi</span>
+               </dd>
+           </div> -->
+
+            <div class="cc-err new-err" v-show="errDetail">
+                <dd>
+                    黑鸟未能自动恢复，请手动点击按钮重启
+                </dd>
+                <p class="reset-err" v-if="resetError.send">正在发起重启</p>
+                <p class="reset-err" v-else :class="{'reset-err-i': resetError.show}" @click="resetErr">重启<span v-if="resetError.show">( <em class="red-font">{{ resetError.time }}秒</em>  )</span></p>
+            </div>
+
+            <div class="err-detail" v-show="showLast">
+                <dt class="fon18">
+                    <i></i>
+                    将微信账号复制后发到群里联系技术同学处理
+                </dt>
+                <dd>
+                    微信账号 : {{ wechatId }}</br>
+                    CRM账号：{{ crm}}
+                </dd>
+            </div>
+        </template>
+    </div>
+
+    <!--{{ deviceId }}-->
+</template>
+
+
+<!--版本升级-->
+<update-wechat :client-version="wxData.clientVersion" :cloud-version="wxData.cloudVersion"></update-wechat>
+<template id="update_wechat">
+    <div class="update_mask" v-if="updataShow">
+        <div class="update_layer">
+            <h3>版本更新提示</h3>
+            <p>发现新版的微信客户端，请更新客户端后才能继续使用。</p>
+            <!--<p :clientVersion="wxData.clientVersion">当前版本：{{clientVersion }}</p>-->
+            <p>当前版本：{{ clientVersion }}</p>
+            <p>最新版本：{{ cloudVersion }}</p>
+            <div class="divs" @click="onUpdate" v-if="waiting">立即升级</div>
+            <div>升级中，请等待,后台更新中...</div>
+        </div>
+    </div>
+</template>
+
+<!--浏览器检测-->
+<div class="update_mask2">
+    <div class="update_layer">
+        <h3>提示</h3>
+        <p>请在chrome【谷歌】浏览器中使用聊天功能</p>
+        <div class="divs"><a href="https://www.google.com.hk/chrome/browser/desktop/index.html" target="_blank"
+                             class="downlink">下载 Chrome</a></div>
+    </div>
+</div>
+
+<!--退出托管-->
+<logout :sel-list="wxData.userListPerson.slice()" :sel-data="wxData.msgList"></logout>
+<!-- 选择联系人模板 -->
+<template id="logout">
+    <div class="weixin_mask" v-if="logoutShow">
+        <div class="logout_sel ani-pops">
+            <h5>请选择托管账号<span @click="selHide">&times;</span></h5>
+            <div class="search"><input type="text" placeholder="搜索" v-model="selFilter"/></div>
+            <div>
+                <ul class="sel_list">
+                    <li v-for="x in selLists" @click="selUser(x)" track-by="$index">
+                        <img :src="selData[x].userInfo.img"/>
+                        <p>{{ selData[x].userInfo.c_remark || selData[x].userInfo.nick }}</p>
+                        <i :class="{'sel_seled': selSelect == x}"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="sel_foot clearfix">
+                <div>
+                    <span class="sel_cancel" @click="userLogout">退出</span>
+                    <span class="sel_sure sel_set" :class="{'sel_nosure':this.selSelect==''}" @click="userLogoutTrust">退出并托管</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<fn-tab></fn-tab>
+<!-- 复制到搜索框 -->
+<template id="fn_tab">
+    <div class="fn_tab" v-show="show" :style="pos" @click.stop="sendSelData" tabindex="-1" @blur="hide">
+        搜索
+    </div>
+</template>
+
+<quick-tab></quick-tab>
+<!--quick tab-->
+<template id="quick_tab">
+    <ul class="quick_tab clearfix" v-show="show" :style="pos" tabindex="-1" @blur="hide">
+        <li @click="atUser">@ TA</li>
+        <li @click="privateChat">私聊</li>
+        <li @click="getChatList">查看记录</li>
+        <!--<li @click="delCutUser" v-if="delShow.show">删除</li>-->
+        <li @click="delCutUser">删除</li>
+    </ul>
+    <!--聊天记录-->
+    <div class="weixin_mask" v-if="showChatList">
+        <div class="group-user-chatlist">
+            <h3>
+                <em @click="closeChatDetail">&times;</em>
+                <i></i>
+            </h3>
+            <h5><span>聊天记录</span></h5>
+            <div class="chat-content">
+                <div class="chat-type" class="clearfix" v-for="x in chatListDetail">
+
+                    <em class="chat-title">{{x.name}} {{x.time}}</em>
+                    <!--文字信息-->
+                    <p v-if="x.cnt_type == 0">{{ x.content }}</p>
+                    <!--@人-->
+                    <pre v-if="x.cnt_type == 3100" class="mes_con">{{{ x.content.content }}}</pre>
+                    <!--followtime-->
+                    <pre v-if="x.cnt_type == 4000" class="mes_con">{{{ 'Follow提醒内容：' + x.content }}}</pre>
+                    <!--课前提醒-->
+                    <pre v-if="x.cnt_type == 5000" class="mes_con">{{{ x.content.content }}}</pre>
+                    <!-- 图片消息 -->
+                    <p v-if="x.cnt_type == 1" class="mes_con mes_img">
+                        <a rel="gallery" :href="x.content.split(',')[1] || x.content">
+                            <img :src="x.content.split(',')[0] || x.content" class="weichat_img"/>
+                        </a>
+                    </p>
+                    <!-- 图片上传消息 -->
+                    <p v-if="x.cnt_type == 9999" class="mes_con mes_img weichat_img_up">
+                        <!-- 真实url -->
+                        <a rel="gallery" :href="x.content[1]">
+                            <!-- base64 -->
+                            <img :src="x.content[0]" class="weichat_img"/>
+                        </a>
+                    </p>
+                    <!-- 语音消息 -->
+                    <p v-if="x.cnt_type == 2" class="mes_con mes_voice mes-history-voice" @click="playVoice2(x.content)"
+                       :class="{'mes_voice_isplaying':x.content == voicePlay2.playVoiceSrc2 }"></p>
+                    <!-- 名片消息 -->
+                    <div v-if="x.cnt_type == 42 && typeof x.content == 'object'" class="mes_con mes_card">
+                        <div class="mes_con_t">
+                            <img :src="x.content._smallheadimgurl" class="fl"/>
+                            <div class="mes_con_c fl">
+                                <h4>{{ x.content._nickname }}</h4>
+                                <p>{{ x.content.alias }}</p>
+                            </div>
+                            <!--<em class="fl"></em>-->
+                        </div>
+                        <p class="mes_con_b">个人名片</p>
+                    </div>
+                    <!-- 兼容老的名片历史记录 -->
+                    <pre class="mes_con" v-if="x.cnt_type == 42 && typeof x.content == 'string'">{{x.content | paser $index}}</pre>
+                    <!-- 收文章消息 -->
+                    <div v-if="x.cnt_type == 495" class="mes_con mes-share-article">
+                        <div class="mes_con_box">
+                            <a :href="x.content.urlStr" target="_blank">
+                                <div><img :src="x.content.thumbUrl"/></div>
+                                <div>
+                                    <h4>{{ x.content.title }}</h4>
+                                    <p>{{ x.content.desc }}</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 文件消息 -->
+                    <div v-if="x.cnt_type == 6000  && typeof x.content == 'object'" class="mes_con mes_file">
+                        <div class="mes_con_t">
+                            <div class="mes_con_c fl">
+                                <a :href="x.content.url" :title="x.content.title"></a>
+                                <p>{{ x.content.title}}</p>
+                            </div>
+                            <em class="fr" :class="getFileClass(x.content.url)"></em>
+                        </div>
+                        <p class="mes_con_b">{{ x.content.size/1024 | _parseInt }}KB</p>
+                    </div>
+                    <!-- 视频消息 -->
+                    <p v-if="x.cnt_type == 6001  && typeof x.content == 'object'" class="mes_con mes-video">
+                        <video :src="x.content.url" controls></video>
+                        <!--<i></i>-->
+                    </p>
+                    <!-- 其他消息 -->
+                    <pre v-if="contentType.types.indexOf((x.cnt_type + '')) == -1"
+                         class="mes_con">{{{ x.content }}}</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="voice_play">
+        <audio id="voiceMsgPlayer2" preload="metadata" :src="voicePlay2.voiceSrc2" @playing="isPlaying"
+               @ended="isEnded"></audio>
+    </div>
+</template>
+
+<!--群主转让-->
+<change-owner></change-owner>
+<template id="changeGroupOwner">
+    <div class="flex-mask z99" v-if="show">
+        <div class="group-owner-change" v-show="showlayer">
+            <h5>选择新群主</h5>
+            <div class="search-owner">
+                <input type="text" v-model="search">
+                <span></span>
+            </div>
+            <div>
+                <ul class="group-user-list">
+                    <li v-for="x in selLists" @click="selUser(x.wechat_id,x)" track-by="$index" v-if="x.wechat_id.split('$')[1] != groupOwnner">
+                        <img :src="x.wechat_img"/>
+                        <p>{{ x.wechat_nick }}</p>
+                        <i :class="{'sel': sel ==x.wechat_id }"></i>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="new-owner-btn">
+                <span class="btn-global default" :class="{'disable': sel == ''}" @click="setNewOwner">确定</span>
+                <span class="btn-global greey" @click="hideChangeOwner">取消</span>
+            </div>
+        </div>
+        <div class="change-owner-ok" v-show="showOk">转让成功</div>
+    </div>
+</template>
+
+<!--群公告-->
+<group-announce></group-announce>
+<template id="groupAnnounce">
+    <div class="weixin_mask" v-if="show">
+        <div class="info_update ani-pops group-announce-layer clearfix">
+            <h4>群公告</h4>
+            <textarea placeholder="请在此处输入需要发布的公告内容" v-model="annContent"></textarea>
+            <div class="btn_foot announce-pad">
+                <input type="button" value="确定" class="btn_sure" :class="{'btn_disable':this.annContent == ''}"
+                       :disabled="this.annContent == ''" @click.stop="sendAnnounce"/>
+                <input type="button" class="btn_cancel" value="取消" @click.stop="hide"/>
+            </div>
+        </div>
+    </div>
+</template>
+
+<!--我的学员-->
+<my-study></my-study>
+<template id="myStudyLayer">
+    <div class="weixin-mask-low" v-if="show">
+        <div class="study-box">
+            <div class="top-box" border="1" cellspacing="0" cellpadding="0">
+                <span class="fl">查询时间：</span>
+                <span class="fl">
+                    <div class="input-wrap">
+                        <input type="text" class="input middle-input"  onclick="layui.laydate({elem: this})" v-model="startTime" id="studyStartTime">
+                    </div>
+                </span>
+                <span class="fl">至</span>
+                <span class="fl">
+                    <div class="input-wrap">
+                        <input type="text" class="input middle-input" onclick="layui.laydate({elem: this})"  v-model="endTime" id="studyEndTime">
+                    </div>
+                </span>
+                <span class="fl study-time-btn" @click="checkType('')">搜索</span>
+                <span class="close-layer-btn-right" @click="hideMyStudy"><em></em></span>
+            </div>
+
+                <div class="con-box">
+                    <div class="change-desk" v-if="cc">
+                        <ul>
+                            <li :class="{ 'cut' : cutBtn.appoint_status == 1 }" @click="checkType('classA')">已体验</li>
+                            <li :class="{ 'cut' : cutBtn.appoint_status == 2 }" @click="checkType('classB')">已约课</li>
+                            <li :class="{ 'cut' : cutBtn.appoint_status == 4 }" @click="checkType('classD')">缺席与取消</li>
+                            <li :class="{ 'cut' : cutBtn.appoint_status == 3 }" @click="checkType('classC')">未约课</li>
+                        </ul>
+                    </div>
+                    <template v-if="hasStudy">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th></th>
+                                <th>名称</th>
+                                <th>CRM</th>
+                                <th>注册时间</th>
+                                <template v-if="cc">
+                                    <th>体验课时间</th>
+                                </template>
+                                <template v-else>
+                                    <th>Leads分配时间</th>
+                                </template>
+                                <th>手机</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr v-for="x in curStudyList">
+                                <td class="sel-user" :class="{'sel-wait':x.add_user_status == 1}">
+                                    <label v-if="x.is_friend == 0 && x.add_user_status == 0" :class="{'cut-sel': cutSelUserList.indexOf(x.user_id) > -1 }">
+                                        <input type="checkbox" class="set-style" :value="x.user_id" v-model="cutSelUserList">
+                                    </label>
+                                </td>
+                                <td>{{x.nick_name}}</td>
+                                <td>{{x.user_id}}</td>
+                                <td>{{x.add_time}}</td>
+
+                                <template v-if="cc">
+                                    <!--明后天-->
+                                    <template v-if="x.date_type == 5">
+                                        <td class="class-a">后天 {{ x.appoint_time | m_d_h_m }}</td>
+                                    </template>
+                                    <template v-if="x.date_type == 4">
+                                        <td class="class-a">明天 {{ x.appoint_time | h_m}}</td>
+                                    </template>
+                                    <!--今天-->
+                                    <template v-if="x.date_type == 3">
+                                        <td class="class-b">今天 {{ x.appoint_time | h_m }}</td>
+                                    </template>
+                                    <!--昨天-->
+                                    <template v-if="x.date_type == 2">
+                                        <td class="class-c">昨天 {{ x.appoint_time | h_m }}</td>
+                                    </template>
+                                    <template v-if=" x.date_type == 1">
+                                        <td class="class-c">前天 {{ x.appoint_time | h_m }}</td>
+                                    </template>
+                                    <!--默认-->
+                                    <template  v-if="x.date_type == 0">
+                                        <td>{{ x.appoint_time | m_d_h_m }}</td>
+                                    </template>
+
+                                </template>
+                                <template v-else>
+                                    <td>{{x.dispatch_time}}</td>
+                                </template>
+
+                                <td>{{x.mobile}}</td>
+                                <td>
+                                    <div>
+                                        <template v-if="x.is_friend == 0">
+                                            <span class="mark" @click="crmRemarkTable(x.user_id)">
+                                            <p class="mark-info" v-if="x.remark_log">
+                                                {{ x.remark_log }}
+                                            </p>
+                                        </span>
+                                            <span class="tel" @click="telphone(x.user_id)"></span>
+                                            <span class="add" @click="goAddFriend(x.mobile,x.user_id,'fromMyStudy')">添加<em v-if="x.add_count > 0">{{ x.add_count }}次</em></span>
+                                            <span class="status" v-show="x.add_user_status == 2" title="通过该手机号无法搜索到学员微信，请电话联系学员"></span>
+                                        </template>
+                                        <template v-else>
+                                            <span class="chat" @click="studyChat(x.wechat_id)">开始聊天</span>
+                                        </template>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </template>
+                    <template v-else>
+                        <h5>暂无学员信息</h5>
+                    </template>
+                </div>
+            <div class="study-btn-style clearfix">
+                <template v-if="hasStudy">
+                    <template v-if="cutSelUserList.length">
+                        <div class="add-sel-list default" @click="selStudyList" >
+                            批量添加
+                            <span>({{ cutSelUserList.length }})</span>
+                        </div>
+                    </template>
+                    <template v-else>
+                        <div class="add-sel-list greey" v-else>
+                            批量添加
+                        </div>
+                    </template>
+                    <page></page>
+                </template>
+            </div>
+        </div>
+    </div>
+</template>
+
+<!--我的好友-->
+<my-friend></my-friend>
+<template id="myFriend">
+    <div class="weixin_mask" v-if="isShow">
+        <div class="myfriend-box friend-box">
+            <span class="close-layer-btn-right" @click="hide"><em></em></span>
+            <h5><span>新的好友</span></h5>
+            <div class="friend-box-in">
+                <template v-if="pending">
+                    <p class="none">加载中...</p>
+                </template>
+                <template v-else>
+                    <ul v-if="list.length != 0">
+                        <li v-for="x in list">
+                            <img :src="x.headimgurl" class="fl"/>
+                            <div class="fl friend-tit">
+                                <h6 title="{{ x.nickname }}">{{ x.nickname }}</h6>
+                                <p title="对方请求添加你为好友：{{ x.content }}">{{ x.content }}</p>
+                            </div>
+
+                            <div class="fr friend-op">
+                                <template v-if="x.encryptusername != ''">
+                                    <em @click="accept(x.encryptusername)" style="float: right">接受</em>
+                                    <!--<em v-if="false" @click="ignore(x.encryptusername)">忽略</em>-->
+                                </template>
+                                <template v-else>
+                                    <span>已接受</span>
+                                    <!--<span v-if="false">已忽略</span>-->
+                                </template>
+                            </div>
+                        </li>
+                    </ul>
+                    <p v-else class="none">暂无新的好友</p>
+                </template>
+            </div>
+        </div>
+    </div>
+</template>
+
+<!-- 批改作业 -->
+<home-work v-ref:homework></home-work>
+<!-- 批改作业 -->
+<template id="homeWork">
+    <div class="home-work-score" v-if="scoreShow">
+        <div class="info_update info_update_homework">
+            <h4>是否添加分数</h4>
+            <p class="score_tip">该分数不会显示在批改后的图片上，黑鸟系统会将该分数存<br/>下来用于生成学生的分数曲线，该功能之后会上线。</p>
+            <dl>
+                <dd>
+                    <input type="number" placeholder="请在此处输入该同学的作业分数" v-model="score"/>
+                </dd>
+            </dl>
+            <dl>
+                <dd class="sel_foot">
+                    <span class="sel_sure" :class="{'sel_nosure' : _score == ''}" @click="sendScore">添加分数</span>
+                    <a class="sel_force" href="javascript:void(0);" @click="sendScore(true)"
+                       v-if="_score == ''">直接发送</a>
+                </dd>
+            </dl>
+            <span class="close-btn" @click="hideScore">x</span>
+        </div>
+    </div>
+
+    <div class="home-work-score" v-if="scoreAudioShow">
+        <div class="info_update info_update_homework">
+            <h4>评语</h4>
+            <dl>
+                <dd>
+                    <textarea placeholder="请在此处输入评语" v-model="audioText"></textarea>
+                </dd>
+            </dl>
+            <dl>
+                <dd class="sel_foot">
+                    <span class="sel_sure" :class="{'sel_nosure' : _audioText == ''}" @click="checkListAudio">发送</span>&nbsp;&nbsp;&nbsp;
+                    <span class="sel_cancel" @click="scoreAudioHide">取消</span>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <div class="weixin_mask" v-if="isShow">
+        <div class="home-work">
+            <span class="home-work-close" @click="hide"></span>
+            <h4>作业批改</h4>
+            <div class="home-work-in">
+                <div class="home-work-time clearfix">
+                    <div class="home-work-time-in">
+                        <input type="text" onclick="layui.laydate({elem: this})" v-model="startTime"
+                               id="_startTime"/><span>至</span><input type="text" onclick="layui.laydate({elem: this})"
+                                                                     v-model="endTime" id="_endTime"/>
+                    </div>
+
+                    <a href="javascript:void(0);" @click="getHomeWork" class="home-work-time-btn">查询</a>
+                </div>
+
+                <div class="home-work-con">
+                    <audio id="voiceMsgPlayer3" preload="metadata" :src="voicePlay.voiceSrc" @playing="isPlaying"
+                           @ended="isEnded"></audio>
+                    <template v-if="pending">
+                        <p class="none">加载中...</p>
+                    </template>
+
+                    <template v-else>
+                        <p v-if="list.length == 0" class="none">暂无班级作业信息</p>
+
+                        <div class="home-work-list" v-else>
+
+                            <dl v-for="(key, x) in list" v-if="!!groupData[key]">
+                                <dt>
+                                    <img :src="(groupData[key] && groupData[key].wechat_img) || groupheader"/>
+                                </dt>
+
+                                <dd>
+                                    <h6>{{ (groupData[key] && groupData[key].wechat_nick) || key }}</h6>
+
+                                    <div class="home-work-list-in">
+
+                                        <ul class="clearfix" v-if="x.length > 0">
+                                            <li v-for="xx in x" v-if="$key != 'length'"
+                                                @mouseenter="shList(0 ,key, $key);" @mouseleave="shList(1 ,key, $key);">
+                                                <!-- 图片 -->
+                                                <template v-if="xx.message_type == 1">
+                                                    <p class="mes_img">
+                                                        <img :src="xx.content.split(',')[0] || xx.content"
+                                                             :id="'edit_img' + $key"/>
+                                                    </p>
+                                                    <span class="todo img-edit" v-show="xx.showTool"
+                                                          @click="editList(key, $key);"
+                                                          :class="{'cur-edit' : $key == cur$key}">批改</span>
+                                                </template>
+
+                                                <!-- 语音 -->
+                                                <template v-if="xx.message_type == 2">
+                                                    <p class="mes_voice" @click="playVoice(xx.content)"
+                                                       :class="{'mes_voice_isplaying':xx.content == voicePlay.playVoiceSrc }"></p>
+
+                                                    <span class="todo audio-edit" v-show="xx.showTool"
+                                                          @click="editListAudio(key, $key);">批改</span>
+                                                </template>
+
+                                                <div class="time">
+                                                    <i>{{ xx.add_time }}</i>
+                                                </div>
+
+                                                <span class="done" v-if="xx.status == 1">
+                                                    <p>已批改</p>
+                                                    <em></em>
+                                                </span>
+
+                                                <span class="del" v-show="xx.showTool"
+                                                      @click="delList(key, $key)">x</span>
+                                            </li>
+                                        </ul>
+
+                                        <p class="home-work-list-nodone" v-else>这位同学的作业还没有提交，别忘了提醒他快点交作业哦～</p>
+
+                                        <a href="javascript:void(0);" class="home-work-list-tip"
+                                           @click="homeWorkTip(key);">作业提醒</a>
+                                    </div>
+                                </dd>
+                            </dl>
+
+                        </div>
+                    </template>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</template>
+
+<!-- 批改作业单人 -->
+<home-work-one></home-work-one>
+<!-- 批改作业单人 -->
+<template id="homeWorkOne">
+    <div class="home-work-score" v-if="scoreShow">
+        <div class="info_update info_update_homework">
+            <h4>是否添加分数</h4>
+            <p class="score_tip">该分数不会显示在批改后的图片上，黑鸟系统会将该分数存<br />下来用于生成学生的分数曲线，该功能之后会上线。</p>
+            <dl>
+                <dd>
+                    <input type="number" placeholder="请在此处输入该同学的作业分数" v-model="score" />
+                </dd>
+            </dl>
+            <dl>
+                <dd class="sel_foot">
+                    <span class="sel_sure" :class="{'sel_nosure' : _score == ''}" @click="sendScore">添加分数</span>
+                    <a class="sel_force" href="javascript:void(0);" @click="sendScore(true)" v-if="_score == ''">直接发送</a>
+                </dd>
+            </dl>
+            <span class="close-btn" @click="hideScore">x</span>
+        </div>
+    </div>
+
+    <div class="home-work-score" v-if="scoreAudioShow">
+        <div class="info_update info_update_homework">
+            <h4>评语</h4>
+            <dl>
+                <dd>
+                    <textarea placeholder="请在此处输入评语" v-model="audioText"></textarea>
+                </dd>
+            </dl>
+            <dl>
+                <dd class="sel_foot">
+                    <span class="sel_sure" :class="{'sel_nosure' : _audioText == ''}" @click="checkListAudio">发送</span>&nbsp;&nbsp;&nbsp;
+                    <span class="sel_cancel" @click="scoreAudioHide">取消</span>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <div class="weixin_mask" v-if="isShow">
+        <div class="home-work">
+            <span class="home-work-close" @click="hide"></span>
+            <h4>作业批改</h4>
+            <div class="home-work-in">
+                <div class="home-work-time clearfix">
+                    <div class="home-work-time-in">
+                        <input type="text" onclick="layui.laydate({elem: this})" v-model="startTime" id="_startTime" /><span>至</span><input type="text" onclick="layui.laydate({elem: this})" v-model="endTime" id="_endTime" />
+                    </div>
+
+                    <a href="javascript:void(0);" @click="getHomeWork" class="home-work-time-btn">查询</a>
+                </div>
+
+                <div class="home-work-con">
+                    <audio id="voiceMsgPlayer3" preload="metadata" :src="voicePlay.voiceSrc" @playing="isPlaying" @ended="isEnded"></audio>
+                    <template v-if="pending">
+                        <p class="none">加载中...</p>
+                    </template>
+
+                    <template v-else>
+                        <p v-if="list.length == 0" class="none">暂无作业信息</p>
+
+                        <div class="home-work-list" v-else>
+
+                            <dl v-for="(key, x) in list" v-if="!!groupData[key]">
+                                <dt>
+                                    <img :src="groupData[key].img" />
+                                </dt>
+
+                                <dd>
+                                    <h6>{{ groupData[key].c_remark || groupData[key].nick }}</h6>
+
+                                    <div class="home-work-list-in">
+
+                                        <ul class="clearfix" v-if="x.length > 0">
+                                            <li v-for="xx in x" v-if="$key != 'length'" @mouseenter="shList(0 ,key, $key);" @mouseleave="shList(1 ,key, $key);">
+                                                <!-- 图片 -->
+                                                <template v-if="xx.message_type == 1">
+                                                    <p class="mes_img" >
+                                                        <img :src="xx.content.split(',')[0] || xx.content" :id="'edit_img' + $key" />
+                                                    </p>
+                                                    <span class="todo img-edit" v-show="xx.showTool" @click="editList(key, $key);" :class="{'cur-edit' : $key == cur$key}">批改</span>
+                                                </template>
+
+                                                <!-- 语音 -->
+                                                <template v-if="xx.message_type == 2">
+                                                    <p class="mes_voice" @click="playVoice(xx.content)" :class="{'mes_voice_isplaying':xx.content == voicePlay.playVoiceSrc }"></p>
+
+                                                    <span class="todo audio-edit" v-show="xx.showTool" @click="editListAudio(key, $key);">批改</span>
+                                                </template>
+
+                                                <div class="time">
+                                                    <i>{{ xx.add_time }}</i>
+                                                </div>
+
+                                                <span class="done" v-if="xx.status == 1">
+                                                    <p>已批改</p>
+                                                    <em></em>
+                                                </span>
+
+                                                <span class="del" v-show="xx.showTool" @click="delList(key, $key)">x</span>
+                                            </li>
+                                        </ul>
+
+                                        <p class="home-work-list-nodone" v-else>这位同学的作业还没有提交，别忘了提醒他快点交作业哦～</p>
+
+                                        <a href="javascript:void(0);" class="home-work-list-tip" @click="homeWorkTip(key);">作业提醒</a>
+                                    </div>
+                                </dd>
+                            </dl>
+
+                        </div>
+                    </template>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</template>
+
+<!-- 作业汇总 -->
+<home-work-detail></home-work-detail>
+<!-- 作业汇总 -->
+<template id="homeWorkDetail">
+    <div class="weixin_mask" v-if="isShow">
+        <div class="home-work-pop" v-show="hwShow">
+            <span class="home-work-pop-close" @click="hwHideFn"></span>
+            <iframe :src="hwSrc"></iframe>
+        </div>
+        <div class="home-work">
+            <span class="home-work-close" @click="hide"></span>
+            <h4>作业汇总</h4>
+            <div class="home-work-in">
+                <div class="home-work-time clearfix">
+                    <div class="home-work-time-in">
+                        <input type="text" onclick="layui.laydate({elem: this})" v-model="startTime" id="_startTime_2"/><span>至</span><input
+                                type="text" onclick="layui.laydate({elem: this})" v-model="endTime" id="_endTime_2"/>
+                    </div>
+
+                    <a href="javascript:void(0);" @click="getHomeWork" class="home-work-time-btn">查询</a>
+                </div>
+
+                <div class="home-work-con">
+                    <audio id="voiceMsgPlayer4" preload="metadata" :src="voicePlay.voiceSrc" @playing="isPlaying"
+                           @ended="isEnded"></audio>
+                    <template v-if="pending">
+                        <p class="none">加载中...</p>
+                    </template>
+
+                    <template v-else>
+                        <p v-if="list.length == 0" class="none">暂无作业汇总信息</p>
+
+                        <div class="home-work-list" v-else>
+                            <dl v-for="(key, x) in list" v-if="!!groupData[key]">
+                                <dt>
+                                    <img :src="(groupData[key] && groupData[key].wechat_img) || groupheader"/>
+                                </dt>
+
+                                <dd>
+                                    <h6>{{ (groupData[key] && groupData[key].wechat_nick) || key }}</h6>
+
+                                    <div class="home-work-list-in">
+
+                                        <ul class="clearfix" v-if="x.length > 0">
+                                            <li v-for="xx in x" v-if="$key != 'length'">
+                                                <template v-if="xx.message_type == 1">
+                                                    <p class="mes_img">
+                                                        <img :src="xx.content"/>
+                                                    </p>
+                                                </template>
+
+                                                <template v-if="xx.message_type == 2">
+                                                    <p class="mes_voice" @click="playVoice(xx.content)"
+                                                       :class="{'mes_voice_isplaying':xx.content == voicePlay.playVoiceSrc }"></p>
+                                                </template>
+
+                                                <span class="done">
+                                                    <p>已批改</p>
+                                                    <em></em>
+                                                </span>
+
+                                                <div class="time">
+                                                    <i>{{ xx.add_time }}</i>
+                                                </div>
+
+                                            </li>
+                                        </ul>
+
+                                        <a href="javascript:void(0);" class="home-work-list-tip" @click="preview(key);">预览</a>
+                                        <a href="javascript:void(0);" class="home-work-list-tip home-work-list-send"
+                                           @click="send(key);">发送</a>
+                                    </div>
+                                </dd>
+                            </dl>
+
+                        </div>
+                    </template>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</template>
+
+<!--设置自动发送-->
+<auto-send></auto-send>
+<template id="autoSend">
+    <div class="weixin_mask" v-if="show">
+        <div class="info_update ani-pops set-auto-send">
+            <h4>设置自动发送内容</h4>
+            <ul>
+                <li v-if="this.setTime.walkhalf.text != ''">
+                    <span :class="{'sure-sel':this.setTime.walkhalf.val != 0}" @click="setTimeCheck('walkhalf')"></span>
+                    <p>{{ setTime.walkhalf.text }}</p>
+                </li>
+                <li v-if="this.setTime.walkhour.text != ''">
+                    <span :class="{'sure-sel':this.setTime.walkhour.val != 0}" @click="setTimeCheck('walkhour')"></span>
+                    <p>{{ setTime.walkhour.text }}</p>
+                </li>
+                <li v-if="this.setTime.walkcut.text != ''">
+                    <span :class="{'sure-sel':this.setTime.walkcut.val != 0}" @click="setTimeCheck('walkcut')"></span>
+                    <p>{{ setTime.walkcut.text }}</p>
+                </li>
+            </ul>
+            <div class="btn-foot">
+                <span class="btn-ok" @click="confirmBtn">确定并完成设置</span>
+                <span @click="conselBtn">取消</span>
+            </div>
+        </div>
+    </div>
+</template>
+
+<!-- loading -->
+<div class="heck_loading" v-show="loading.show">
+    <div class="heck_loading_in">
+        <div class="heck_loader load3">
+            <span class="loader"></span>
+        </div>
+        <p>正在发送中...</p>
+    </div>
+</div>
+
+<div id="edit-img"></div>
+
+<!-- 分享到朋友圈 -->
+<div class="update_mask" v-if="shareArticle.show" v-cloak>
+    <div class="info_update ani-pops share-article">
+        <h4>分享到朋友圈</h4>
+        <template v-if="shareArticle.title">
+            <textarea type="text" placeholder="在此输入分享到朋友圈的话" v-model="shareArticle.dig"></textarea>
+            <div class="article-style clearfix">
+                <dt><img :src="shareArticle.icon"></dt>
+                <dd>
+                    <p>{{ shareArticle.title }}</p>
+                    <p>{{ shareArticle.desc }}</p>
+                </dd>
+            </div>
+        </template>
+        <template v-if="shareArticle.videoUrl">
+            <div class="article-style clearfix">
+                <dt>
+                    <video :src="shareArticle.videoUrl"></video>
+                    <span></span></dt>
+                <dd>
+                    <textarea class="dig" type="text" placeholder="在此输入分享到朋友圈的话" v-model="shareArticle.dig"></textarea>
+                </dd>
+            </div>
+        </template>
+
+        <div class="btn-foot">
+            <span class="btn-ok" @click="shareArticleBtn">发表分享</span>
+            <span @click="hideShareBtn">取消</span>
+        </div>
+    </div>
+</div>
+
+<!--分页组件-->
+<!--<page></page>-->
+<template id="page">
+    <ul class="pagination page-study">
+        <li v-show="current != 1" @click="current-- && goto(current)"><a href="#">上一页</a></li>
+        <li v-for="index in pages" @click="goto(index)" :class="{'active':current == index}" :key="index">
+            <a href="#">{{index}}</a>
+        </li>
+        <li v-show="allpage != current && allpage != 0 " @click="current++ && goto(current++)"><a href="#">下一页</a></li>
+    </ul>
+</template>
+
+<!--<template id="datalayer">-->
+    <!--<tr>-->
+        <!--<td v-for="item in items" v-bind:class="{'dp-last': month!= item.month, 'dp-today': cur == item.data, 'dp-select': sel == item.data}">-->
+            <!--<span @click="click(item)">{{ item.day }}</span>-->
+        <!--</td>-->
+    <!--</tr>-->
+<!--</template>-->
+
+<!--<template id="startTime">-->
+    <!--<div class="input-wrap">-->
+        <!--<input type="text" class="input middle-input" @focus="foc" @blur="hide" v-model="sel" :value="curTime" id="studyStartTime">-->
+    <!--</div>-->
+    <!--<div class="dp" v-show="show">-->
+        <!--<div class="dp-header"><a class="dp-h-1" @click="cy(-1)">«</a><a class="dp-h-2" @click="cm(-1)">‹</a>-->
+            <!--<span class="dp-ym">{{y}}年 {{m}}月</span>-->
+            <!--<a class="dp-h-3" @click="cm(1)">›</a><a class="dp-h-4" @click="cy(1)">»</a></div>-->
+        <!--<table class="dp-table">-->
+            <!--<thead>-->
+            <!--<tr>-->
+                <!--<th><span>一</span></th>-->
+                <!--<th><span>二</span></th>-->
+                <!--<th><span>三</span></th>-->
+                <!--<th><span>四</span></th>-->
+                <!--<th><span>五</span></th>-->
+                <!--<th><span>六</span></th>-->
+                <!--<th><span>日</span></th>-->
+            <!--</tr>-->
+            <!--</thead>-->
+            <!--<tbody>-->
+            <!--<tr is="calendar-line" v-for="cell in data" :items="cell" :month="m" :cur="cur" :sel="sel"></tr>-->
+            <!--</tbody>-->
+        <!--</table>-->
+
+    <!--</div>-->
+<!--</template>-->
+<!--<template id="endTime">-->
+    <!--<div class="input-wrap">-->
+        <!--<input type="text" class="input middle-input" @focus="foc" @blur="hide" v-model="sel" :value="curTime" id="studyEndTime">-->
+    <!--</div>-->
+    <!--<div class="dp" v-show="show">-->
+        <!--<div class="dp-header"><a class="dp-h-1" @click="cy(-1)">«</a><a class="dp-h-2" @click="cm(-1)">‹</a>-->
+            <!--<span class="dp-ym">{{y}}年 {{m}}月</span>-->
+            <!--<a class="dp-h-3" @click="cm(1)">›</a><a class="dp-h-4" @click="cy(1)">»</a></div>-->
+        <!--<table class="dp-table">-->
+            <!--<thead>-->
+            <!--<tr>-->
+                <!--<th><span>一</span></th>-->
+                <!--<th><span>二</span></th>-->
+                <!--<th><span>三</span></th>-->
+                <!--<th><span>四</span></th>-->
+                <!--<th><span>五</span></th>-->
+                <!--<th><span>六</span></th>-->
+                <!--<th><span>日</span></th>-->
+            <!--</tr>-->
+            <!--</thead>-->
+            <!--<tbody>-->
+            <!--<tr is="calendar-line-now" v-for="cell in data" :items="cell" :month="m" :cur="cur" :sel="sel"></tr>-->
+            <!--</tbody>-->
+        <!--</table>-->
+
+    <!--</div>-->
+<!--</template>-->
+
+<!--个人信息二维码弹层-->
+<div class="flex-mask z99" v-show="personalInfo.personalMask">
+    <div class="net-err personal-info">
+        <span class="close-layer-btn-right" @click="hidePersonalMask"><em></em></span>
+        <h5 class="yellow-title">
+            个人信息
+        </h5>
+        <div class="show-per-detail">
+            <div class="per-text clearfix">
+                <div class="clearfix">
+                    <dt>昵称</dt>
+                    <dd>{{ personalInfo.nick }}</dd>
+                </div>
+                <div class="show-copy">
+                    <dt>微信号</dt>
+                    <dd class="copytext" @click="copyWechatText" id="wechatName">
+                        {{ personalInfo.wechat_username }}
+                    </dd>
+                    <em>鼠标点击复制微信号</em>
+                </div>
+            </div>
+            <div class="per-img clearfix" @mouseover="showCopyBtn"  @mouseleave="hideCopyBtn">
+                <span class="copy-success" v-show="personalInfo.copyWechatImg">复制成功</span>
+                <img :src=personalInfo.qrcode_url />
+                <span class="copy-img" v-show="personalInfo.copyImgBtn" @click="copyImgBtn">右击【复制图片】</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--当前学员微信信息-->
+<cut-user-detail></cut-user-detail>
+<template id="cutUserDetail">
+    <div class="flex-mask z99" v-show="show">
+        <div class="net-err personal-info cut-user-detail">
+            <span class="close-layer-btn-right" @click="hideCutMask"><em></em></span>
+            <h5 class="yellow-title">
+                个人信息
+            </h5>
+            <div class="show-per-detail">
+                <div class="per-text">
+                    <div  class="jianju">
+                        <dt>昵称</dt>
+                        <dd :title="details.nickname">
+                            <i>{{ details.nickname }}</i>
+                            <span :class="{'meal':details.gender == 1,'femeal':details.gender == 2, 'no':details.gender == 0}"></span>
+                        </dd>
+                    </div>
+                    <div class="jianju">
+                        <dt>微信号</dt>
+                        <dd :title="details.weixinhao">{{ details.weixinhao }}</dd>
+                    </div>
+                    <div class="jianju">
+                        <dt>电话</dt>
+                        <dd>
+                            <p v-for="x in details.phonenumbers">{{x}}</p>
+                        </dd>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</template>
+
+
+<!--被迫掉线-->
+<div class="flex-mask repeat-enter-layer"  v-show="wxData.repeatEnter">
+    <div class="net-err repeat-enter">
+        <dt><i></i></dt>
+        <dd>你很可能重复打开了黑鸟</br>请确认只打开一个黑鸟窗口后重新刷新页面</dd>
+    </div>
+</div>
+
+<!--设置班级群-->
+<div class="flex-mask z99" v-show="classGroupInfo.show">
+    <div class="class-group-bind">
+        <div class="class-group-bind-tip">是否设置该群为班级群</div>
+        <div class="class-group-confirm">
+            <span class="btn confirm" @click="confirmClassGroup('yes')">确定</span>
+            <span class="btn concel" @click="confirmClassGroup('no')">取消</span>
+        </div>
+    </div>
+</div>
+
+<!--黑鸟注意事项-->
+<div class="flex-mask z99" v-show="blackUseTip">
+    <div class="black-bird-tips">
+        <span class="close-layer-btn-right"><em  @click="blackUseTips('hide')" transition="trans1"></em></span>
+        <h5>重点注意事项</h5>
+        <div class="tips-a">
+            1、 <span>绝不能</span>进行还原系统，抹机的操作；</br>
+            2、 <span>绝不能</span>删除预先安装的app及修改配置；</br>
+            3、 <span>绝不能</span>升级iOS系统；</br>
+            4、 <span>不能</span>升级为苹果App Store中的微信，等待黑鸟微信的更新提示；</br>
+            5、 尽量不要让手机重启，断电关机；</br>
+            6、 如果使用Apple ID登陆了苹果App Store，确保<span>不要</span>开启“查找我的iPhone”。
+        </div>
+        <div class="tips-b">
+            温馨提醒：</br>
+            1、 请每个人在群里的名片备注名字+所在组+座位号；</br>
+            2、 遇到问题第一时间在群里：描述问题、提供微信ID、座位号；</br>
+            3、 定期更新Google chrome浏览器至最新版本。
+        </div>
+    </div>
+</div>
+
+<set-hw></set-hw>
+<!-- 设置作业 -->
+<template id="setHW">
+    <div class="weixin_mask" v-if="show">
+        <div class="info_update ani-pops set-hw">
+            <h4>布置作业</h4>
+            <dl>
+                <dt>上传作业</dt>
+                <dd class="set-hw-list">
+                    <span class="set-loading" v-if="showLoading">上传中...</span>
+                    <ul>
+                        <li v-for="x in list">
+                            <img :src="x" />
+                        </li>
+                        <li class="set-hw-upload" id="set-hw-upload">
+                            <em id="set-hw-upload-btn"></em>
+                            <p>
+                                <span></span>
+                                点击上传
+                            </p>
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+                <dt>&nbsp;</dt>
+                <dd class="sel_foot">
+                    <span class="sel_sure" :class="{'sel_nosure':sel_nosure}" @click="subHW">布置</span>
+                    <span class="sel_cancel" @click="hide">取消</span>
+                    <div class="sending-hw" v-if="sending">发送中...</div>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</template>
+
+<!--托管-->
+<instead></instead>
+<template id="instead">
+    <div class="weixin_mask weixin_mask_addFri" v-if="show">
+        <div class="info_update ani-pops add_friend">
+            <h4>托管面板</h4>
+            <dl>
+                <dt>被托管账号</dt>
+                <dd>
+                    <input type="text" placeholder="请输入被托管人员CRM" v-model="crm"/>
+                </dd>
+            </dl>
+            <dl>
+                <dt>&nbsp;</dt>
+                <dd class="sel_foot">
+                    <span class="sel_sure" :class="{'sel_nosure':crm == ''}" @click="submitCrm">托管</span>
+                    <span class="sel_cancel" @click="hide">取消</span>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</template>
+
+<!--发送课程链接-->
+<send-class></send-class>
+<template id="sendLink">
+    <div class="weixin_mask weixin_mask_addFri" v-if="show">
+        <div class="info_update ani-pops add_friend">
+            <h4>发送课程链接</h4>
+            <div class="send-class-link">
+                <div class="clearfix">
+                    <span>课程名称：</span>
+                    <p>{{className}}</p>
+                </div>
+                <div class="clearfix">
+                    <span>教材链接：</span>
+                    <p><a :href="classLink" target="_blank">{{classLink}}</a></p>
+                </div>
+            </div>
+            <div class="send-class-btn">
+                <span class="btn-global default"  @click="sendLink">确定</span>
+                <span class="btn-global greey" @click="hide">取消</span>
+            </div>
+        </div>
+    </div>
+</template>
+
+<!--推荐学员-->
+<recommend></recommend>
+<template id="recommend">
+    <div class="flex-mask z99" v-if="show">
+        <div class="recommend">
+            <h5 class="yellow-title">推荐学员</h5>
+            <div class="rec-input">
+                <label>被推荐人手机号*</label>
+                <input type="tel" placeholder="必填" v-model="recMoble">
+            </div>
+            <div class="rec-input">
+                <label>备注</label>
+                <input type="text" placeholder="选填" v-model="des">
+            </div>
+            <div class="rec-btn">
+                <span class="btn-global default" :class="{'disable': recMoble == ''}" @click="addRecomd">确定</span>
+                <span class="btn-global greey" @click="hide">取消</span>
+            </div>
+        </div>
+    </div>
+</template>
+
+<label-editor></label-editor>
+<!-- 打标签 -->
+<template id="labelEditor">
+    <div class="label-editor" v-show="show" :class="{'vis': showvis}" style="display: none;" :style="pos" @blur="blurHide" tabIndex="-1">
+        <!-- 系统标签 -->
+        <ul v-if="sysList.length > 0" class="is-sys">
+            <li v-for="x in sysList" :title="x.tag_brief">
+                {{ x.tag_name }}
+            </li>
+        </ul>
+        <!-- 自定义标签 -->
+        <template v-for="x in labelList">
+            <ul v-if="$key != 1">
+                <li v-for="xx in x" :title="xx.tag_brief" :class="{'sel' : labelData.indexOf(xx.id) > -1}" @click="editLabel(xx)">
+                    <span></span>
+                    {{ xx.tag_name }}
+                </li>
+            </ul>
+        </template>
+    </div>
+</template>
+
+<!--语音播放-->
+<div class="voice_play">
+    <audio id="voiceMsgPlayer" preload="metadata" :src="voicePlay.voiceSrc" @playing="isPlaying" @ended="isEnded"></audio>
+</div>

@@ -1,0 +1,27 @@
+<% include ../common/top.ejs %>
+<body data-init="formCommon">
+	<div class="main-wrap">
+		<div class="form-wrap">
+			<form action="#" autocomplete="off" rel="from">
+				<dl class="cfix">
+					<dt>老师姓名</dt>
+					<dd class="dd-angent">
+						<input type="text" rel="teachername" class="input-t-style" />
+					</dd>
+				</dl>
+				<p class="error-tips"></p>
+				<dl class="cfix">
+					<dt>手机号码</dt>
+					<dd class="dd-angent">
+						<input type="tel" rel="teacherphone" class="input-t-style" maxlength="11" />
+					</dd>
+				</dl>
+				<p class="error-tips"></p>
+				<div class="submit-btn">
+					<input type="submit" class="input-submit" value="确定" />
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+<% include ../common/bottom.ejs %>

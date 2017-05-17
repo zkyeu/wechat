@@ -1,0 +1,278 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Mon Dec 05 2016 15:35:38 GMT+0800 (中国标准时间)
+ */
+.info {
+  background: #303030;
+  color: #888;
+  padding: 30px 0 60px 0;
+}
+.info .centerMth {
+  width: 966px;
+  margin: 0 auto;
+}
+.info .tc_p {
+  text-align: center;
+}
+.info .tc_p a {
+  color: #888;
+  margin: 0 12px;
+}
+.info .tc_p a:hover {
+  color: #ff9600;
+}
+.info .link-word {
+  position: relative;
+  height: 18px;
+  margin-top: 30px;
+  border-top: 1px #424242 solid;
+}
+.info .link-word em {
+  position: absolute;
+  text-align: center;
+  top: -10px;
+  left: 50%;
+  margin-left: -36px;
+  width: 72px;
+  background: #303030;
+}
+.info .link-info {
+  line-height: 22px;
+}
+.info .link-info a {
+  margin-left: 10px;
+  color: #888;
+}
+.info .link-ti {
+  border-top: 1px #424242 solid;
+  margin-top: 15px;
+  padding-top: 30px;
+}
+.info .link-ti .link-ul {
+  width: 610px;
+  height: 49px;
+  margin: 0px auto;
+}
+.info .link-ti .link-ul li {
+  float: left;
+  width: 152px;
+}
+.info .link-ft {
+  text-align: center;
+  margin-top: 20px;
+}
+.info .link-ft em {
+  margin: 0 5px;
+}
+.info .link-ft a {
+  color: #888;
+}
+.teachers .teacherT_tit {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.teachers .teacherT {
+  width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 77px;
+  padding-top: 80px;
+  text-align: center;
+}
+.teachers .teacherT .c_orange {
+  color: #ff9600;
+}
+.teachers .teacherT_text {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.teachers .teacherT_text a {
+  padding: 14px 19px;
+  line-height: 58px;
+  color: #fff;
+  font-size: 22px;
+  background-color: #ff9e00;
+  border-radius: 5px;
+}
+.teachers .teacherT_text a:hover {
+  background-color: #ffba00;
+}
+.teachers .teacherT_text a:active {
+  background-color: #e89000;
+}
+.teachers .teacherT_list {
+  height: 370px;
+}
+.teachers .teacherT_list li {
+  width: 284px;
+  float: left;
+  text-align: center;
+}
+.teachers .teacherT_list li.teacherT_l_w {
+  width: 432px;
+}
+.teachers .teacherT_list .teacherT_img {
+  width: 170px;
+  height: 170px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background: url(../../../../images/html/www_new/teachersIcon.png?v=oNwBp1aEVH3tWzoKzsxy5Q%3D%3D) no-repeat;
+}
+.teachers .teacherT_list .teacherT_img.teacherT_img1 {
+  background-position: 0 0;
+}
+.teachers .teacherT_list .teacherT_img.teacherT_img2 {
+  background-position: -170px 0;
+}
+.teachers .teacherT_list .teacherT_img.teacherT_img3 {
+  background-position: -340px 0;
+}
+.teachers .teacherT_list h3 {
+  line-height: 1;
+  font-size: 24px;
+  height: 53px;
+  color: #ff9600;
+}
+.teachers .teacherT_list .teacher_b {
+  line-height: 1;
+  font-size: 16px;
+  height: 28px;
+  color: #1e1e1e;
+}
+.teachers .teacherT_list .teacher_c {
+  width: 284px;
+  margin: 0 auto;
+  color: #7c7c7c;
+  font-size: 13px;
+  line-height: 24px;
+}
+.teachers .teacherB {
+  padding-top: 80px;
+  background-color: #efefef;
+}
+.teachers .teacherB .teacherB_width {
+  width: 1000px;
+  margin: 0 auto;
+}
+.teachers .teacherB_cont {
+  overflow: hidden;
+}
+.teachers .teacherB_list {
+  height: 472px;
+  margin-right: -32px;
+  margin-bottom: 42px;
+}
+.teachers .teacherB_list li {
+  width: 140px;
+  height: 236px;
+  float: left;
+  margin-right: 32px;
+  text-align: center;
+}
+.teachers .teacherB_list h3 {
+  font-size: 14px;
+  height: 26px;
+  line-height: 1;
+  color: #1e1e1e;
+}
+.teachers .teacherB_img {
+  width: 140px;
+  height: 140px;
+  margin-bottom: 16px;
+  position: relative;
+}
+.teachers .teacherB_img a {
+  display: block;
+}
+.teachers .teacherB_img span {
+  width: 43px;
+  height: 43px;
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  background-image: url(../../../../images/html/www_new/teachersIcon.png?v=oNwBp1aEVH3tWzoKzsxy5Q%3D%3D);
+  background-position: -394px -173px;
+}
+.teachers .teacherB_img img {
+  width: 140px;
+}
+.teachers .teacherB_star {
+  height: 14px;
+  overflow: hidden;
+}
+.teachers .teacherB_star span {
+  display: inline-block;
+  width: 15px;
+  height: 14px;
+  background-image: url(../../../../images/html/www_new/teachersIcon.png?v=oNwBp1aEVH3tWzoKzsxy5Q%3D%3D);
+  background-position: -481px -193px;
+  margin: 0 1px;
+  vertical-align: top;
+}
+.ten_teacherT_list .teacherT .teacherT_img {
+  background-image: url(../../../../images/html/www_new/teachersIcon.png?v=oNwBp1aEVH3tWzoKzsxy5Q%3D%3D);
+}
+.ten_teacherT_list .teacherT .teacherT_img.teacherT_img2 {
+  background-position: -340px 0;
+}
+.ten_teacherT_list .teacherT .teacherT_img.teacherT_img3 {
+  background-image: url(../../../../images/html/www_new/teachersIcon01.png?v=kSE%2BE6iOvWb8SWVGTKQBTA%3D%3D);
+  background-position: -340px 0;
+}
+.ten_teacherT_list .teacherT_text {
+  text-align: left;
+  text-indent: 34px;
+  margin-bottom: 70px;
+}
+.ten_teacherT_list .teacherT_text a {
+  width: 350px;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  font-size: 22px;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  background-image: url(../../../../images/html/www_new/teachersIcon.png?v=oNwBp1aEVH3tWzoKzsxy5Q%3D%3D);
+  background-repeat: no-repeat;
+  background-position: 0 -171px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+.ten_teacherT_list .teacherT_text a:hover {
+  background-color: transparent;
+  background-position: 0 -332px;
+}
+.ten_teacherT_list .teacherT_text a:active {
+  background-color: transparent;
+  background-position: 0 -279px;
+}
+.ten_teacherT_list .teacherT_text .teacher_icon {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  background-image: url(../../../../images/html/www_new/teachersIcon.png?v=oNwBp1aEVH3tWzoKzsxy5Q%3D%3D);
+  background-repeat: no-repeat;
+  background-position: -355px -177px;
+}
+.ten_teacherT_list .teacherT_list {
+  height: 304px;
+  width: 100%;
+}
+.ten_teacherT_list .teacherT_list li {
+  width: 33.3%;
+}
+.ten_teacherT_list .teacherT_list h3 {
+  height: 42px;
+  line-height: 1;
+}
+.ten_teacherT_list .teacherT_list p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #1e1e1e;
+}

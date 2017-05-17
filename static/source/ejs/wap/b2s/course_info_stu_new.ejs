@@ -1,0 +1,111 @@
+<% include ../common/top.ejs %>
+<body data-init="courseInfo">
+	<!-- 学生 -->
+
+	<!-- 精品外教课 已购买 即将开课 -->
+	<div class="tab-box homepage-box">
+		<div class="homepage-in"><a href="#"></a></div>
+		<ul>
+			<li class="cur">
+				<a href="">即将开课</a>
+			</li>
+			<li>
+				<a href="">往期课程</a>
+			</li>
+		</ul>
+	</div>
+	<!-- 推广上课软件 -->
+	<div class="class_software">
+		<div class="class_software_fix">
+			<div class="cfix class_software_box">
+				<p class="title">上课软件直通车<span></span></p>
+				<div class="l_ac">
+					<img src="<%= imagessrc%>ac_soft.png">
+					<a href="#"></a>
+				</div>
+				<div class="r_class">
+					<img src="<%= imagessrc%>class_soft.png">
+					<a href=""></a>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+	<div class="course-info-box">
+		<div class="course-info-tit tit-type2">
+			<h5>
+				<span>精品外教课</span>
+			</h5>
+		</div>
+		<ul class="course-info-list course-info-list_new">
+			<!-- 已购买 -->
+			<li>
+				<div class="item-top">
+					<img src="<%= imagessrc%>tea-class-schedule-01.jpg" alt="">
+					<span class="icon-vip"></span>
+					<p>第一课 你叫什么 Lesson 1 What is your name</p>
+				</div>
+				<div class="item_center_all">2016/10/12 20:30-21:00<span>课程编号：9999</span></div>
+				<div class="item-bottom-proceed info-list-download">
+					<a class="download-textbook" href="javascript:void(0);" textbook_publish="true" download-url="" paydetail-url="http://www.sohu.com">&nbsp;&nbsp;&nbsp;下载教材</a>
+				</div>
+			</li>
+			<!-- 未购买 -->
+			<li>
+				<div class="item-top">
+					<img src="<%= imagessrc%>tea-class-schedule-01.jpg" alt="">
+					<em><img src="<%= imagessrc%>lock-icon.png"></em>
+					<span class="icon-vip"></span>
+					<p>第一课 你叫什么 Lesson 1 What is your name</p>
+				</div>
+				<div class="item_center_all">2016/10/12 20:30-21:00<span>课程编号：9999</span></div>
+				<div class="item-bottom-proceed info-list-download">
+					<a class="download-textbook" href="javascript:void(0);" textbook_publish="false" download-url="http://www.baidu.com" paydetail-url="http://www.sohu.com">&nbsp;&nbsp;&nbsp;下载教材</a>
+				</div>
+			</li>
+
+			<li>
+				<div class="item-top">
+					<img src="<%= imagessrc%>tea-class-schedule-01.jpg" alt="">
+					<span class="icon-vip"></span>
+					<p>第一课 你叫什么 Lesson 1 What is your name</p>
+				</div>
+				<div class="item_center_num">教室编号：2098767</div>
+				<ul class="item-bottom-finish item-bottom-finish_new">
+					<li class="before_class_video movie_bg t_pc cls-top"  data-vedioSrc="http://www.baobeidashi.com/image/bm.mov"  data-width="80%" data-height="200">
+						<a href="javascript:void(0);"  class="btn_a video_play">课前视频</a>
+						<video style="display:none" src=""  preload="preload"></video>
+						<div style="width:30px;height:40px;display:none;"></div>
+					</li>
+					<li><a href="javascript:void(0);">&nbsp;&nbsp;&nbsp;下载教材</a></li>
+				</ul>
+			</li>
+			<li>
+				<div class="item-top">
+					<img src="<%= imagessrc%>tea-class-schedule-02.jpg" alt="">
+					<span class="icon-vip"></span>
+					<p>第二课 你叫什么 Lesson 1 What is your name</p>
+				</div>
+				<div class="item_center_num">教室编号：2098767</div>
+				<ul class="item-bottom-finish item-bottom-finish_new">
+					<li class="before_class_video movie_bg t_pc cls-top"  data-vedioSrc="http://www.baobeidashi.com/image/bm.mov"  data-width="80%" data-height="200">
+						<a href="javascript:void(0);" class="btn_a video_play">课前视频</a>
+					</li>
+					<li><a  class="no-textbook" href="javascript:void(0);">教材未上传</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<!-- 精品外教课 已购买 即将开课 -->
+
+	<!-- 未配课 -->
+	<div class="course-info-box">
+		<div class="course-info-config course-info-config-basic">
+			<img src="/images/wap/b2s/config-bg.png">
+			<p>入门外教课，正在配置中...</p>
+		</div>
+	</div>
+
+</body>
+<% include ../common/bottom.ejs %>

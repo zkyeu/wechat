@@ -1,0 +1,33 @@
+<% include ../common/top.ejs %>
+<body data-init="formCommon">
+	<div class="main-wrap login-wrap">
+		<div class="logo-wrap">
+			<img src="<%= imagessrc%>logo.png" alt="logo" />
+		</div>
+		<div class="form-wrap reg-step1">
+			<form action="#" autocomplete="off" rel="from">
+				<dl class="cfix">
+					<dt></dt>
+					<dd>
+						<input type="tel" rel="phone" class="input-t-style" placeholder="请输入手机号" maxlength="11" />
+					</dd>
+				</dl>
+				<p class="error-tips"></p>
+				<dl class="cfix">
+					<dt  class="dt2"></dt>
+					<dd>
+						<input type="password" rel="password" class="input-t-style" placeholder="请输入密码" />
+					</dd>
+				</dl>
+				<p class="error-tips"></p>
+				<div class="forget-psw cfix">
+					<a href="forgetpassword.html" class="fr">忘记密码？</a>
+				</div>
+				<div class="submit-btn">
+					<input type="submit" class="input-submit" value="学生登录" />
+				</div>
+			</form>
+		</div>		
+	</div>
+</body>
+<% include ../common/bottom.ejs %>

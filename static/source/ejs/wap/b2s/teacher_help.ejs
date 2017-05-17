@@ -1,0 +1,36 @@
+<% include ../common/top_b2s_n.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>teacher_help.css">
+</head>
+<body data-init="" class="" >
+    <div class="teacher_help">
+        <p class="title_top"><i>01</i> 班级管理</p>
+        <p class="little_title">1.1创建我的班级</p>
+        <img src="<%= imagessrc%>app_intro_img_1.png" class="first">
+        <p class="little_title">1.2邀请学生激活</p>
+        <img src="<%= imagessrc%>app_intro_img_2.png">
+        <p class="title_top"><i>02</i> 作业</p>
+        <p class="little_title">2.1 提醒学生去上课，并完成作业</p>
+        <img src="<%= imagessrc%>app_intro_img_3.png" class="first">
+        <p class="little_title">2.2 检查作业，奖励小红旗</p>
+        <img src="<%= imagessrc%>app_intro_img_4.png">
+        <p class="title_top"><i>03</i> 报告</p>
+        <p class="little_title">3.1 每周定期接收学习报告</p>
+        <img src="<%= imagessrc%>app_intro_img_5.png" class="first">
+        <p class="little_title">3.2 每月接收月度测评报告</p>
+        <img src="<%= imagessrc%>app_intro_img_6.png">
+    </div>
+    
+</body>
+<!-- loading -->
+<div id="fontSizeLoding">
+    <img src="<%= imagessrc%>eff_loading.gif">
+</div>
+<script type="text/javascript">
+window.onload = function(){
+    document.documentElement.style.fontSize = document.body.clientWidth / 7.5 + "px";
+    document.getElementById("fontSizeLoding").style.display = "none";
+}
+</script>
+</body>
+<!--公共尾部结束-->
+<% include ../common/bottom.ejs %>

@@ -1,0 +1,84 @@
+<% include ../common/top.ejs %>
+<body  data-init="index">
+<!-- 公共头 -->
+<input type="hidden" value="" data-init="video"/>
+<% include ../common/b2s/b2s_header.ejs %>
+<!-- 中间内容 -->
+<div class="mycls">
+  <div class="widthMain">
+    <!-- banner -->
+    <% include ../common/b2s/b2s_banner.ejs %>
+    <div class="central">
+      <i class="cls-icon"></i>
+      <div class="stu_tit">
+        <dl>
+          <dt><img src="<%= imagessrc%>stu.jpg" alt=""></dt>
+          <dd class="buy-tag">
+            <em>
+              <i class="tag-i"><i class="arr-out"><i class="arr-in"></i></i>已购买 精品外教辅导课</i>
+            </em>
+          </dd>
+      
+          <dd><span>流川枫</span> 同学</dd>
+          <dd>班级：三年二班</dd>
+          <dd>老师：林徽因</dd>
+        </dl>
+        <p class="stu_number">学生邀请码：123456</p>
+      </div>
+      <%include ../common/b2s/b2s_sidebar%>
+      <div class="cls-main">
+        <!-- 近期公开课 -->
+        <div class="cls-tab cls-list">
+          <div class="stu-cls stu-taste">
+            <div class="stu-tit-l stu-tit-border">
+            
+              <a href="javascript:;" class="do-cls"><i class="do-cls-i"></i>如何上课</a>
+            </div>
+            <div class="rct-banner">
+          
+                <img src="<%= imagessrc%>free_banner.jpg" alt="" />
+  
+            </div>
+            <div class="rct-text">
+              <p class="per_class">推荐课程</p>
+              <dl class="per-class-dl">
+                <dt class="work">
+                  <!-- <p class="free_box">三年级适用</p> -->
+                  <img src="<%= imagessrc%>2.jpg" alt="">
+                </dt>
+                <dd><a href="javascript:;" class="tit"> 亲子阅读树《Lost ans Found》失而复得（下）</a></dd>
+                 <dd>对话场景：<span class="sd-tit">在家中的厨房 In the kitchen at home</span></dd>
+                <dd class="center-dd dd-height">核心单词：<span class="sd-tit">pizza,add,pan,great,make,put,pizza,add,pan,great,</span></dd>
+                <dd>
+                  <!-- <div class="lt">
+                    <span class="time">
+                      <span class="sd-tit">上课时间：</span>每周三 
+                      <em>19:00-19:30</em>
+                     
+                  </span>
+
+                  </div> -->
+                  <div class="class-btn-box">
+                    <a href="javascript:;" class="load-down-tea"><span></span>下载教材</a>
+                    <div class="video-box t_pc cls-top" data-vedio="http://p.bokecc.com/flash/single/9A0993B2384AB21D_480033E8766AD7879C33DC5901307461_false_3A7743CB01E0E55B_1/player.swf" data-width="780" data-height="">
+                        <div class="btn-box"><a data-vedioSrc="http://p.bokecc.com/flash/single/9A0993B2384AB21D_480033E8766AD7879C33DC5901307461_false_3A7743CB01E0E55B_1/player.swf" href="javascript:;" class="pre-class-video video_play">课前视频</a></div>
+                    </div>
+                    <a href="javascript:;" class="go-class">去上课</a>
+                  </div>
+                </dd>
+                <dd class="classroom-num">教室编号：2098767</dd>
+              </dl>   
+            </div>
+          </div>
+          
+         
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>
+<input type="" type="hidden" id="swfSrcId" value="http://one.frontend.com/static/js/html/lib/ckplayer/ckplayer.swf"/>
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

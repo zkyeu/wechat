@@ -1,0 +1,29 @@
+<% include ../common/top.ejs %>
+<body>
+   <% include com/header.ejs %>
+   <article class="t_login" data-init="tmall">
+     <h3>登录</h3>
+     <form id="LoginForm" method="POST" target="ssoLoginFrame" action="http://login.51talk.com/sso/login">
+     <input type="hidden" value="1" name="client">
+        <div class="t_group">
+          <input type="text" class="courseCode" placeholder="邮箱/手机号"  name="user_name" id="user_name" />
+          <p class="t_tip tip_username" ><i></i>您的<em>邮箱</em>已注册！</p>
+        </div>
+        <div class="t_group">
+          <input type="text"  name="password2" id="password2" class="courseCode" placeholder="密码" />
+          <p class="t_tip tip_password"><i></i>密码输入错误，还剩<em>三</em>次机会！</p>
+        </div>
+        <div class="t_group">
+         <!--  <input type="button"  class="subCode t_loginL" value="登录" data-href="http:\\wwww.baidu.com" /> -->
+          <a href="javascript:;" class="subCode t_loginL" data-href="http:\\wwww.baidu.com">登录</a>
+          <a href="javascript:;" class="t_home" data-href="http:\\www.baidu.com"></a>
+        </div>
+        <input type="hidden" name="public_key" id="public_key" value="" />
+        <input type="hidden" name="la" id="login_la">
+        <input type="hidden" name="group" id="group" value="4">
+        <input type="hidden" name="password" id="password">
+     </form>
+   </article>
+   <% include com/f_bg.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

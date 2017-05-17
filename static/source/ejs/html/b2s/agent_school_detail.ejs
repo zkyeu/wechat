@@ -1,0 +1,199 @@
+<% include ../common/top.ejs %>
+<body>
+<input type="hidden" id="container" data-init="agent_school_detail" />
+<!-- 公共头 -->
+<% include ../common/b2s/b2s_header.ejs %>
+<!-- 中间内容 -->
+<div class="mycls mycls-agent">
+  <div class="widthMain">
+    <!-- banner -->
+    <div class="central">
+       <div class="stu_tit">
+        <dl>
+          <dt><img src="<%= imagessrc%>tea.jpg" alt=""></dt>
+          <dd class="intro_one"><span>代理商</span> 呵呵</dd>
+          <dd class="wel-login">欢迎登录</dd>
+        </dl>
+        <p class="stu_number">学生邀请码：123456</p>
+      </div>
+      <!-- 侧栏 -->
+      <% include ../common/b2s/b2s_sidebar.ejs %>
+      <div class="cls-main">
+        <div class="agent-list">
+          <ul class="list-nav clearfixed">
+            <li><a href="agent_school_list.html">学校列表</a></li>
+            <li><b>&gt;</b></li>
+            <li>北京101小学</li>
+          </ul>
+          <ul class="agent-list-tit clearfixed">              
+            <li>老师人数：5人</li>
+            <li>班级：6个</li>
+            <li>学生人数：180人</li>
+            <li>付费学生人数：172人</li>
+            <li>上课：29节</li>
+            <li class="add_s">添加老师</li>
+          </ul>
+          <div class="agent-list-con">
+            <table>
+              <thead>
+                <tr>
+                  <td>老师</td>
+                  <td>班级</td>
+                  <td>学生数量</td>
+                  <td>付费学生人数</td>
+                  <td>上课数量</td>
+                  <td>操作</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>王老师</td>
+                  <td>一年一班</td>
+                  <td>99人</td>
+                  <td>88人</td>
+                  <td>3节</td>
+                  <td class="to_tea" data-tid="0333">绑定班级</td>
+                </tr>               
+                <tr>
+                  <td>王老师</td>
+                  <td>一年一班</td>
+                  <td>99人</td>
+                  <td>88人</td>
+                  <td>3节</td>
+                  <td class="to_tea" data-tid="0323">绑定班级</td>
+                </tr>
+                <tr>
+                  <td>王老师</td>
+                  <td>一年一班</td>
+                  <td>99人</td>
+                  <td>88人</td>
+                  <td>3节</td>
+                  <td class="to_tea" data-tid="4333">绑定班级</td>
+                </tr>
+                <tr>
+                  <td>王老师</td>
+                  <td>一年一班</td>
+                  <td>99人</td>
+                  <td>88人</td>
+                  <td>3节</td>
+                  <td class="to_tea" data-tid="5333">绑定班级</td>
+                </tr>
+                <tr>
+                  <td>王老师</td>
+                  <td>一年一班</td>
+                  <td>99人</td>
+                  <td>88人</td>
+                  <td>3节</td>
+                  <td class="to_tea" data-tid="0733">绑定班级</td>
+                </tr> 
+                <tr>
+                <td></td>
+                <td colspan="3" class="bor_right">mmm</td>
+                <td class="bor_left"><p class="delet" _url="/s">删除</p></td>
+              </tr>
+              </tbody>
+            </table>
+          </div> 
+        </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+<div class="add_stu_confirm"></div>
+<div class="add_confirm">
+  <form action="http://www.baidu.com" method="" id="stu_name" rel="agent_detail">
+    <p class="tit">添加老师<span class='close_confirm'></span></p>
+     <ul class="cfix">
+          <li class="li_input">
+            老师姓名：<input type="text" rel="teaname" class="input-t-style" />
+          </li>
+          <li class="error-tips">
+            <!-- <span class="err-arr"></span> -->
+            <em></em>
+          </li>
+     </ul>
+     <ul class="cfix">
+          <li class="li_input">
+            手机号码：<input type="text" rel="phone" maxlength="11" class="input-t-style" />
+          </li>
+          <li class="error-tips">
+            <!-- <span class="err-arr"></span> -->
+            <em></em>
+          </li>
+     </ul>
+    <input class="add_sure tea_add_sure" type="submit" value="添加老师">
+  </form>
+</div>
+
+<div class="add_stu_confirm1"></div>
+<div class="add_confirm1 change_h">
+<form action="http://www.baidu.com" method="" id="stu_name" rel="agent_detail_class">
+    <p class="tit">绑定班级<span class='close_confirm1'></span></p>
+     <ul class="cfix">
+          <li class="li_input blank">
+            年级：<select class="op_s grade" data-url="http://s.51talk.com/agent/getGradeClassInfo" school-id="" rel="grade"> 
+                    <option value >请选择年级</option>  
+                    <option value ="1">一年级</option>  
+                    <option value ="2">二年级</option>  
+                    <option value="3">三年级</option>  
+                    <option value="4">四年级</option> 
+                    <option value="4">五年级</option>
+                    <option value="4">六年级</option>  
+                  </select>  
+          </li>
+          <li class="error-tips">
+            <!-- <span class="err-arr"></span> -->
+            <em></em>
+          </li>
+     </ul>
+     <ul class="cfix">
+          <li class="li_input blank">
+            班级：<select class="op_s " rel="classroom">
+                    <option value>请选择班级</option>  
+                    <option value ="1">一班</option>  
+                    <option value ="2">二班</option>  
+                    <option value="3">三班</option>  
+                    <option value="4">四班</option>
+                    <option value ="5">五班</option>  
+                    <option value ="6">六班</option>  
+                    <option value="7">七班</option>  
+                    <option value="8">八班</option>
+                    <option value ="9">九班</option>  
+                    <option value ="10">十班</option>  
+                    <option value="11">十一班</option>  
+                    <option value="12">十二班</option>
+                    <option value ="13">十三班</option>  
+                    <option value ="14">十四班</option>  
+                    <option value="15">十五班</option>  
+                    <option value="16">十六班</option>
+                    <option value ="17">十七班</option>  
+                    <option value ="18">十八班</option>  
+                    <option value="19">十九班</option>  
+                    <option value="10">二十班</option>  
+                  </select>  
+          </li>
+          <li class="error-tips">
+            <!-- <span class="err-arr"></span> -->
+            <em></em>
+          </li>
+      </ul>
+      <ul class="cfix">
+          <li class="li_input">
+            使用教材：<input type="text" rel="teachingtext" name="teaching_materials" class="input-t-style" placeholder="例如：北师大版本、上教版" />
+          </li>
+          <li class="error-tips">
+            <!-- <span class="err-arr"></span> -->
+            <em></em>
+          </li>
+     </ul>
+    <input type="hidden" value="" class="tea_id"> 
+    <input class="add_sure tea_add_sure" type="submit" value="绑定班级">
+</form>
+</div>
+</body>
+<% include ../common/bottom.ejs %>

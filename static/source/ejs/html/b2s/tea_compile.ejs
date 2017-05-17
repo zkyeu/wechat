@@ -1,0 +1,60 @@
+<% include ../common/top.ejs %>
+<body >
+<input type="hidden" id="container" data-init="tea_compile" />
+<!-- 首页头 -->
+<div class="header">
+  <div class="widthMain">
+    <div class="hd-lt">
+      <i class="tenIcon h-icon"></i>
+      <b></b>
+    </div>
+  </div>
+</div>
+<!-- 内容 -->
+<div  class="complie_thing">
+  <div class="complie_c">
+    <p class="class_name">—— 北京109中学小学实验部 ——</p>
+    <p class="wel_name suc_re">请验证手机号码</p>
+    <div class="com_form">
+      <form action="#" autocomplete="off" rel="reg" class="com_form_form">
+        <ul class="">
+          <li class="">手机号：</li>
+          <li class="">
+            <input type="tel" rel="phone" class="" readonly="readonly" value="12012545520"/><span class="after_phone">(以后直接使用该手机号登录)</span>
+          </li>
+          <li class="error-tips">
+            <!-- <span class="err-arr"></span> -->
+            <!-- <em></em> -->
+          </li>
+        </ul>
+        <ul class="">
+          <li class="">验证码：</li>
+          <li class="li_input ver_input">
+            <input type="tel" rel="verifycode" class="input-t-style" maxlength="6" placeholder="" />
+          </li>
+          <li class="dao_time" send-url="http://www.baidu.com" send-type="4">获取验证码</li>
+          <li class="error-tips">
+            <!-- <span class="err-arr"></span> -->
+            <!-- <em></em> -->
+          </li>
+        </ul>
+        <div class="submit-btn">
+          <input type="submit" class="input-submit" value="下一步" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- 尾部 -->
+<div class="footer bot">
+  <div class="widthMain">
+    <p class="link-ft">
+      Copyright©北京大生知行科技有限公司<em>|</em>
+      <a href="/page/privacy/" target="_blank" title="隐私声明">隐私声明</a><em>|</em>
+      <a href="/page/terms/" target="_blank" title="用户协议">用户协议</a><em>|</em>
+      京ICP证110696号 京ICP备11031999号
+    </p>
+  </div>  
+</div>
+</body>
+<% include ../common/bottom.ejs %>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="app下载专页">
+    <meta name="keywords" content="app下载专页">
+    <title>欢迎下载51Talk App</title>
+    <link rel="stylesheet" type="text/css" href="/css/html/ac_dialog/ac_dialog.css">
+</head>
+<body data-init="acFollow">
+    <div class="ac-dialog-wrap ac-follow-wrap">
+        <div class="ac-dialog-content">
+            <div id="player"></div>
+            <div id="content" class="ac-follow-content">
+                <div class="timmer-wrap">倒计时：<span>60</span>秒</div>
+                <h6>跟老师一起读以下英语句子</h6>
+                <div class="follow-wrap" id="aiPanel">
+                    <img src="/images/html/ac_dialog/ac-follow.jpg" class="follow-img" />
+                    <!-- 按钮 -->
+                    <ul class="follow-btns">
+                        <li class="pr-wrap">
+                            <span class="play">
+                                <img src="/images/html/ac_dialog/playOff.jpg" class="playOff" />
+                                <img src="/images/html/ac_dialog/playOn.gif" class="playOn" />
+                            </span>
+                            <span class="record">
+                                <img src="/images/html/ac_dialog/recordOff.jpg" class="recordOff" />
+                                <img src="/images/html/ac_dialog/recordOn.gif" class="recordOn" />
+                            </span>
+                            <div class="rr-wrap">
+                                <p>再读一遍<i class="arr-o"><i class="arr-i"></i></i></p>
+                            </div>
+                            <span class="replay"></span>
+                        </li>
+                        <li class="fl-wrap">
+                            <span class="replay-c">
+                                <img src="/images/html/ac_dialog/replay.jpg" />
+                            </span>
+                            <div class="rr-wrap">
+                                <p>听我读<i class="arr-o"><i class="arr-i"></i></i></p>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- 评论 -->
+                    <ul class="follow-comments">
+                        <li class="commenting">
+                            <p><img src="/images/html/ac_dialog/commenting.png" />正在评分中...</p>
+                        </li>
+                        <li class="commentg">
+                            <img src="/images/html/ac_dialog/commentg.png" />
+                        </li>
+                        <li class="commentb">
+                            <img src="/images/html/ac_dialog/commentb.png" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="ac-dialog-bottom">
+            <div class="ac-follow-tip">
+                <p><img src="/images/html/ac_dialog/follow-tips.png" height="14" />首次使用，flash必须完成以下设置：先选<em>"记住"</em>,再<em>"允许"</em><i class="arr-o"><i class="arr-i"></i></i></p>
+            </div>
+            <div class="ac-follow-mask"></div>
+            <div id="aiMediaDialogOverlay" class="aiMediaDialogOverlay"> </div>
+            <div id="aiMediaDialog" class="aiMediaDialog">
+                <div class="dialogTitle">
+                    设置面板
+                    <button class="dialogCloseButton">
+                        X
+                    </button>
+                </div>
+
+                <div class="dialogFlashError">
+                    <p class="flashVersion hidden">
+                        您电脑的Flash版本过低，请点击此链接升级。 <br/>
+                        <a href="http://get.adobe.com/flashplayer/" target="_blank">点击下载最新Flash版本</a>
+                    </p>
+                    <p class="flashPlugin hidden">
+                        您的电脑没有安装或者禁用Flash插件，请确认。<br/>
+                        <a href="http://get.adobe.com/flashplayer/" target="_blank">点击下载最新Flash版本</a>
+                    </p>
+                </div>
+
+                <div class="dialogBody">
+                    <div id="recorder">   </div>
+                </div>
+
+                <div class="dialogInfo">
+                    <h5>状态信息</h5>
+                    <ul>
+                        <li class="loadFlashPlayer hidden">
+                            <span class="info">正在下载Flash播放器...</span>
+                        </li>
+                        <li class="loadFlashRecorder hidden">
+                            <span class="info">正在下载Flash录音机...</span>
+                        </li>
+                        <li class="connectServerInit hidden">
+                            <span class="error">还没有连接录音服务器</span>
+                        </li>
+                        <li class="connectServerStart hidden">
+                            <span class="info">正在连接录音服务器，请稍候...</span>
+                        </li>
+                        <li class="connectServerSuccess hidden">
+                            <span class="success">连接录音服务器成功</span>
+                        </li>
+                        <li class="connectServerError hidden">
+                            <span class="error">连接录音服务器失败，请<a href="javascript:aiPanel.recorder.reconnect();">重试</a></span>
+                        </li>
+                        <li class="micStatusAllow hidden">
+                            <span class="success">Flash可以访问麦克风</span>
+                        </li>
+                        <li class="micStatusDisallow hidden">
+                            <span class="error">Flash不能访问麦克风，请设置</span>
+                        </li>
+                        <li class="micStatusError hidden">
+                            <span class="error">没有找到录音设备，请检查</span>
+                        </li>
+                        <li class="mmscfgError hidden">
+                            <span class="error">Flash被禁止访问麦克风，请手动删除 mms.cfg文件，然后重试</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dialogButton">
+                    <button class="okButton">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<form method="post" name="audioFollow">
+    <input type="hidden" name="b2s_course_id" value="b2s_course_id"/>
+    <input type="hidden" name="q_id" value="q_id"/>
+    <input type="hidden" name="user_id" value="user_id"/>
+    <input type="hidden" name="appoint_id" value="appoint_id"/>
+    <input type="hidden" name="audio_url" value=""/>
+    <input type="hidden" name="score" value="0"/>
+</form>
+</body>
+<script type="text/javascript" src="http://sdk.cloud.chivox.com/chivoxsdk-js/v3.0/load_core.js"></script>
+<!--公共尾部结束-->
+<script src="/js/html/project/ac_dialog/vendor.js"></script>
+</html>
+<script type="text/javascript">
+    var sourceConfig = {
+        audioUrl : "http://sdk.cloud.chivox.com/chivoxsdk-js/v3.0/Examples/static/mp3/en/past.mp3",
+        refText : "past."
+    }
+</script>

@@ -1,0 +1,151 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ */
+.bg-s {
+  background: url(../../../images/html/b2s/bg_03.png?v=e%2FS3QveeE9SKti4HZBBnGg%3D%3D) center 17px #b6dcf8 no-repeat;
+}
+.bg-s .color-s {
+  background-color: #fff!important;
+}
+.bg-s .color-s .pay-success {
+  width: 675px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+.bg-s .color-s .pay-success .pay-tit-box {
+  position: relative;
+  margin-left: 250px;
+  margin-bottom: 22px;
+}
+.bg-s .color-s .pay-success .pay-tit-box .success-i {
+  top: -20px;
+}
+.bg-s .color-s .pay-success .pay-tit-box .pay-tit .success-promt {
+  font-size: 35px;
+  color: #6ad434;
+}
+.bg-s .color-s .pay-success .pay-tit-box .pay-tit .text {
+  font-size: 20px;
+  color: #727272;
+  margin-top: 10px;
+}
+.bg-s .color-s .pay-success .pay-tit-box span {
+  position: absolute;
+  left: -115px;
+  top: -5px;
+  width: 89px;
+  height: 89px;
+  background: url(../../../images/html/b2s/pay_icons.png?v=eHLrStcpO5uEmRIzeFJtBg%3D%3D) 0 0 no-repeat;
+  display: inline-block;
+}
+.bg-s .color-s .pay-success .pay-tit-b {
+  margin-bottom: 50px;
+}
+.bg-s .color-s .pay-success .pay-border {
+  width: 100%;
+  height: 1px;
+  background: url(../../../images/html/b2s/pay_border.png?v=NYvNO8f5aZnVGJQTX2s1eg%3D%3D) no-repeat;
+}
+.bg-s .color-s .pay-success .pay-des {
+  text-align: center;
+  font-size: 16px;
+  color: #fb8301;
+  margin-top: 30px;
+}
+.bg-s .color-s .pay-success .pay-btn {
+  text-align: center;
+  margin-top: 25px;
+}
+.bg-s .color-s .pay-success .pay-btn a {
+  border-radius: 25px;
+  display: inline-block;
+  width: 235px;
+  font-size: 20px;
+  height: 50px;
+  color: #fff;
+  background-color: #ffbe23;
+  line-height: 50px;
+  text-align: center;
+}
+.bg-s .color-s .class-info {
+  margin-top: 20px;
+  width: 760px;
+  height: auto;
+  padding-left: 80px;
+}
+.bg-s .color-s .class-info .class-tit {
+  color: #151515;
+  font-size: 20px;
+}
+.bg-s .color-s .class-info .class-tit i {
+  background: url(../../../images/html/b2s/pay_icons.png?v=eHLrStcpO5uEmRIzeFJtBg%3D%3D) -150px 0 no-repeat;
+  position: relative;
+  width: 3px;
+  height: 20px;
+  display: inline-block;
+  top: 3px;
+}
+.bg-s .color-s .class-info .img-box {
+  margin-top: 30px;
+}
+.bg-s .color-s .class-info .ul-box {
+  margin-top: 14px;
+  height: 45px;
+}
+.bg-s .color-s .class-info .ul-box li {
+  float: left;
+  font-size: 16px;
+  color: #151515;
+  width: 100px;
+  text-align: center;
+}
+.bg-s .color-s .class-info .ul-box .li2 {
+  width: 150px;
+  margin-left: 57px;
+}
+.bg-s .color-s .class-info .ul-box .li3 {
+  margin-left: 75px;
+}
+.bg-s .color-s .class-info .ul-box .li4 {
+  margin-left: 95px;
+}
+.bg-s .color-s .class-info .table-box {
+  width: 100%;
+  margin-top: 20px;
+}
+.bg-s .color-s .class-info .table-box td {
+  height: 55px;
+  width: 230px;
+  text-align: center;
+  line-height: 55px;
+  border: 1px solid #c4e8ff;
+}
+.bg-s .color-s .class-info .table-box thead {
+  color: #000;
+  font-size: 20px;
+  background-color: #eff7fc;
+}
+.bg-s .color-s .class-info .table-box tbody tr td {
+  color: #727272;
+  font-size: 18px;
+}
+.bg-s .color-s .class-info .pay-button {
+  text-align: center;
+  margin-top: 35px;
+}
+.bg-s .color-s .class-info .pay-button a {
+  border-radius: 25px;
+  display: inline-block;
+  width: 325px;
+  font-size: 20px;
+  height: 50px;
+  color: #fff;
+  background-color: #ffbe23;
+  line-height: 50px;
+  text-align: center;
+}
+.bg-s .color-s .info-top {
+  margin-top: 30px;
+}

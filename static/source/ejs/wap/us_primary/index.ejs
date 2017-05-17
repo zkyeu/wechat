@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>美小着陆页</title>
+<meta charset="utf-8">
+<meta name="apple-touch-fullscreen" content="YES">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="pragram" content="no-cache">
+<link rel="stylesheet" type="text/css" href="<%= csslink%>"> 
+<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">
+</head>
+<body>
+    <div class="container" data-init="index">
+        <input type="hidden" id="hideInput" value="0">
+        <header class="header">
+            <img src="<%= imagessrc%>header.jpg" alt="">
+            <div class="desc">
+                <p><strong>北美小学</strong>老师</p>
+                <p>在线<strong>1对1</strong>授课</p>
+                <p>全程<strong>同步美国</strong></p>
+                <p class="lh32">小学课程内容</p>
+            </div>
+        </header>
+        <div class="header">
+            <img src="<%= imagessrc%>demo.jpg" alt="">
+            <div class="title">
+                <h1>适合5-12岁小朋友</h1>
+                <h2>学习的纯正的美国教育</h2>
+            </div>
+        </div>
+        <div class="regist" id="regist">
+            <h1 class="title">免费VIP体验课</h1>
+            <form class="info" id="form" method="post" action="http://www.baidu.com">
+                <input type="tel" name="tel" id="tel" class="tel" placeholder="家长的手机号">
+                <div class="verifyCode" id="verifyCode">
+                    <input type="number" name="code" class="code" placeholder="请输入验证码" id="code">
+                    <a href="javascript:;" class="btn" id="codeBtn">获取验证码</a>
+                </div>
+                <input type="password" name="pwd" id="pwd" class="pwd" placeholder="设置账户密码">
+                <a href="javascript:;" class="subBtn" id="subBtn">立即领取</a>
+                <p class="note">＊您的个人信息将完全保密,试听课不收取任何费用,请放心体验</p>
+            </form>
+        </div>
+        <div class="classIntro">
+            <div class="title">
+                <h1>51Talk 美国小学</h1>
+                <h3>家长最想要的，小朋友最需要的优质教育</h3>
+            </div>
+            <ul class="list">
+                <li class="clearfix">
+                    <strong>师 资</strong>
+                    <div class="desc">
+                        <p><span>100%</span>具有专业的国际少儿英语教学经验；</p>
+                        <p><span>100%</span>持有TESOL/TEFL等专业英语教学资质</p>
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <strong>教 材</strong>
+                    <div class="desc">
+                        <p>依照美国共同州核心课标<span>CCSS</span>，以培养学生</p>
+                        <p>综合语言应用能力和21世纪核心能力为总目标</p>
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <strong>课 程</strong>
+                    <div class="desc">
+                        <p>趣味高效的定制化课程</p>
+                        <p>随时随地，在家上课</p>
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <strong class="vip">VIP 体 验</strong>
+                    <div class="desc">
+                        <p><span>1+1 服务：</span> 北美小学老师1对1授课；中文老</p>
+                        <p>师全程课前，课后辅导</p>
+                        <p><span>特享资源：</span> 数百部少儿英语视频免费看；海</p>
+                        <p>量经典英语绘本</p>
+                    </div>
+                </li>
+            </ul>
+            <a href="#regist" class="exp">立即体验</a>
+        </div>
+        <div class="familyTalk">
+            <h1 class="title">家长心声</h1>
+            <ul class="list clearfix">
+                <li>
+                    <img src="<%= imagessrc%>pic1.jpg" alt="">
+                    <p class="desc">  每课25分钟，每周三四次，自从在51Talk上课频繁输出后，变化很大，在线一对一，从语无伦次到畅所欲言。</p>
+                </li>
+                <li class="noMargin">
+                    <img src="<%= imagessrc%>pic2.jpg" alt="">
+                    <p class="desc">  51Talk北美外教效果不错！终于不说东北味英语了，老师都很幽默负责！软件设计也很棒，每天都能练口语！</p>
+                </li>
+                <li>
+                    <img src="<%= imagessrc%>pic3.jpg" alt="">
+                    <p class="desc">51Talk在线美教，随时可以预约上课，多听，多说，我们可以2个人同时上课，一份付出，双份收获。</p>
+                </li>
+            </ul>
+            <a href="#regist" class="exp">立即体验</a>
+        </div>
+        <div class="starAd">
+            <img src="<%= imagessrc%>stock.png" class="title">
+            <ul class="list clearfix" id="starList">
+                <li>
+                    <img src="<%= imagessrc%>person2.jpg" class="two">
+                </li>
+                <li>
+                    <img src="<%= imagessrc%>person1.jpg" class="one">
+                </li>
+                <li>
+                    <img src="<%= imagessrc%>person2.jpg" class="two">
+                </li>
+            </ul>
+            <div class="dots" id="dots">
+                <a href="javascript:;" class="active"></a>
+                <a href="javascript:;"></a>
+            </div>
+        </div>     
+    </div>
+   <script src="<%= jssrc%>" id="seajsnode"></script> 
+</body>
+</html>

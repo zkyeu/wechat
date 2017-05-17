@@ -1,0 +1,216 @@
+<% include ../common/top.ejs %>
+<body class="ac-tem-choice ac-tem-stu ac-tem-read ac-stu-read-demo ac-tea-read-demo"  data-init="" swfHref="" audioPath="" page-tag="read,stu,demo">
+    <input type="hidden" name="cookieName" >
+    <div class="ac-tem" data-init="acstuReadTips">
+        <div class="ac-tem-tit">
+            <span class="ac-tem-tit-bg"></span>
+            <div class="ac-tem-tit-in ac-tem-wrap clearfix">
+                <a href="javascript:void(0);" class="ac-close ac-pair-spirts fr">Go back to class</a>
+            </div>
+        </div>
+        <div class="ac-tem-con ac-tem-wrap">
+            <div class="ac-tem-info">
+                <ul class="clearfix">
+                    <li class="ac-timmer" left-time="30">
+                        <span>00:30</span>
+                    </li>
+                    <!-- <li class="ac-beans">
+                        <span>+999</span>
+                    </li> -->
+                </ul>
+            </div>
+            <div class="ac-tem-content">
+                <!-- 排名 -->
+                <div class="ac-tem-ranking">
+                    <div class="ac-tem-ranking-bg"></div>
+                    <p>佩戴耳机读音更清楚，评分更高哦！</p>
+                </div>
+                <!-- 答题区域 -->
+                <div class="choice-wrap">
+                    <div class="choice-content">
+                        <div class="read-content clearfix">
+                            <div class="read-content-l fl">
+                                <span class="read-content-cover"></span>
+                                <div class="read-content-img">
+                                    <img src="<%= imagessrc%>demo_read.jpg" />
+                                </div>
+                                <div class="comment-result">
+                                    <span class="success"></span>
+                                    <span class="fail"></span>
+                                </div>
+                            </div>
+                            <div id="player"></div>
+                            <div class="stu-read-content-r fl" id="aiPanel">
+                                <ul class="ai-ul">
+                                    <li class="play">
+                                        <i></i>
+                                    </li>
+                                    <li class="record">
+                                        <i></i>
+                                    </li>
+                                    <li class="replay">
+                                        <i></i>
+                                    </li>
+                                </ul>
+                                <ul class="ai-tip">
+                                    <li>
+                                        <p></p>
+                                    </li>
+                                    <li class="li-record">
+                                        <p></p>
+                                        <div class="tip-timmer"><span>3</span></div>
+                                    </li>
+                                    <li class="li-replay">
+                                        <p></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ac-tem-send">
+                    </div>
+                    <div class="ac-read-setting">
+                        <div class="ac-follow-tip"></div>
+                        <div class="ac-follow-mask"></div>
+                        <div id="aiMediaDialogOverlay" class="aiMediaDialogOverlay"> </div>
+                        <div id="aiMediaDialog" class="aiMediaDialog">
+                            <div class="dialogTitle">
+                                设置面板
+                                <button class="dialogCloseButton">
+                                    X
+                                </button>
+                            </div>
+
+                            <div class="dialogFlashError">
+                                <p class="flashVersion hidden">
+                                    您电脑的Flash版本过低，请点击此链接升级。 <br/>
+                                    <a href="http://get.adobe.com/flashplayer/" target="_blank">点击下载最新Flash版本</a>
+                                </p>
+                                <p class="flashPlugin hidden">
+                                    您的电脑没有安装或者禁用Flash插件，请确认。<br/>
+                                    <a href="http://get.adobe.com/flashplayer/" target="_blank">点击下载最新Flash版本</a>
+                                </p>
+                            </div>
+
+                            <div class="dialogBody">
+                                <div id="recorder">   </div>
+                            </div>
+
+                            <div class="dialogInfo">
+                                <h5>状态信息</h5>
+                                <ul>
+                                    <li class="loadFlashPlayer hidden">
+                                        <span class="info">正在下载Flash播放器...</span>
+                                    </li>
+                                    <li class="loadFlashRecorder hidden">
+                                        <span class="info">正在下载Flash录音机...</span>
+                                    </li>
+                                    <li class="connectServerInit hidden">
+                                        <span class="error">还没有连接录音服务器</span>
+                                    </li>
+                                    <li class="connectServerStart hidden">
+                                        <span class="info">正在连接录音服务器，请稍候...</span>
+                                    </li>
+                                    <li class="connectServerSuccess hidden">
+                                        <span class="success">连接录音服务器成功</span>
+                                    </li>
+                                    <li class="connectServerError hidden">
+                                        <span class="error">连接录音服务器失败，请<a href="javascript:aiPanel.recorder.reconnect();">重试</a></span>
+                                    </li>
+                                    <li class="micStatusAllow hidden">
+                                        <span class="success">Flash可以访问麦克风</span>
+                                    </li>
+                                    <li class="micStatusDisallow hidden">
+                                        <span class="error">Flash不能访问麦克风，请设置</span>
+                                    </li>
+                                    <li class="micStatusError hidden">
+                                        <span class="error">没有找到录音设备，请检查</span>
+                                    </li>
+                                    <li class="mmscfgError hidden">
+                                        <span class="error">Flash被禁止访问麦克风，请手动删除 mms.cfg文件，然后重试</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="dialogButton">
+                                <button class="okButton">确定</button>
+                            </div>
+                        </div>
+                    </div>
+                    <i class="choice-grass"></i>
+                </div>
+            </div>
+            <div class="ac-tem-tips">
+                <div class="ac-tem-tips-inner">
+                    <ul class="clearfix">
+                        <li>Speak slower, be encouraging and patientpatientpatient.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="choice-dialog"></div>
+<form method="post" name="audioFollow">
+    <input type="hidden" name="b2s_course_id" value="b2s_course_id"/>
+    <input type="hidden" name="q_id" value="q_id"/>
+    <input type="hidden" name="user_id" value="user_id"/>
+    <input type="hidden" name="appoint_id" value="appoint_id"/>
+    <input type="hidden" name="audio_url" value=""/>
+    <input type="hidden" name="score" value=""/>
+</form>
+<!-- 插入音频 -->
+
+
+<div class="tips_confirm" read-end-href = "http://www.baidu.com"></div>
+<!-- 学生 -->
+<!-- <div class="tips_context">
+    <div class="lisen" data-audio="<%= imagessrc%>read_tips.mp3">
+        <p>仔细听读音 看清内容</p>
+    </div>
+    <div class="load">
+        <p>听到“<span>叮</span>”一声后开始跟读</p>
+    </div>
+    <div class="time">
+        <p class="time1" data-audio="<%= imagessrc%>ac-ding.mp3"></p>
+        <p class="time2" data-audio="<%= imagessrc%>read_tips_2.mp3">3</p>
+    </div>
+    <div class="read" data-audio="<%= imagessrc%>read_tips_2.mp3">
+        <p>听一下自己的配音，是不是很棒呀！</p>
+    </div>
+    <div class="excellent">
+        <p>跟读评分，请反复尝试，拿到“<span>Excellent</span>”！</p>
+    </div>
+    <div class="tips_btn">
+        <span class="notip">不再提示</span>
+        <a href="http://www.baidu.com" class="skip">进入做题</a>
+        <a href="http://www.baidu.com" class="tea-back">back</a>
+    </div>
+</div> -->
+
+<!-- 老师 -->
+<div class="tips_context">
+    <div class="lisen" data-audio="<%= imagessrc%>read_tips.mp3">
+        <p>Look at the words in the picture. Listen carefully.</p>
+    </div>
+    <div class="load">
+        <p>After the <span>"ding"</span> sound, please start recording.</p>
+    </div>
+    <div class="time">
+        <p class="time1" data-audio="<%= imagessrc%>ac-ding.mp3"></p>
+        <p class="time2" data-audio="<%= imagessrc%>read_tips_2.mp3">3</p>
+    </div>
+    <div class="read" data-audio="<%= imagessrc%>read_tips_2.mp3">
+        <p>Listen to your own pronunciation. Good, isn't it?</p>
+    </div>
+    <div class="excellent">
+        <p>Excellent! Keep trying until you get "<span>Excellent</span>"!</p>
+    </div>
+    <div class="tips_btn">
+        <span class="notip">不再提示</span>
+        <a href="http://www.baidu.com" class="skip">进入做题</a>
+        <a href="/templates/html/ac_dialog/ac_tea_read_send.html" class="tea-back">back</a>
+    </div>
+</div>
+
+</body>
+<% include ../common/bottom.ejs %>

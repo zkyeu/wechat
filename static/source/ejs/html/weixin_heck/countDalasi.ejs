@@ -1,0 +1,41 @@
+<% include ../common/top_b2s.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%=csslinkb2s%>countChat.css">
+</head>
+<body data-init="countDalasi">
+<body>
+<div class="count-title">达拉斯统计记录</div>
+<div class="show-count-option pad20px clearfix">
+    <div class="chart-btn clearfix">
+        <div class="search-btn cut-sel"><a href="javascript:;">本日</a></div>
+        <div class="search-btn"><a href="javascript:;">本周</a></div>
+        <div class="search-btn"><a href="javascript:;">本月</a></div>
+    </div>
+</div>
+<div class="show-count-option pad20px">
+    <div class="table-list clearfix">
+        <div>
+            <div class="clearfix">
+                <table class="show-detail show-detail-user" border="1" cellspacing="0" cellpadding="0">
+                    <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>黑鸟账号</th>
+                        <th>作业批改数</th>
+                        <th>图片数</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="manage">
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<% include ../common/bottom.ejs %>

@@ -1,0 +1,57 @@
+<% include ../common/top_b2s.ejs %>
+	<link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>b2s_index.css">
+</head>
+<body id="container" data-init="b2sActiveStu">
+<% include b2s_common/header.ejs %>
+<div class="b2s-active-stu">
+	<div class="b2s-active-stu-in b2s-layout clear-fix">
+		<div class="b2s-form">
+			<div class="b2s-form-in">
+				<div class="b2s-form-head">
+					<ul class="b2s-form-head-swtich clear_f">
+						<li class="cur">激活学生账户</li>
+					</ul>
+					<p class="b2s-form-head-line">
+						<span></span>
+					</p>
+				</div>
+				<div class="b2s-form-con">
+					<div class="b2s-form-tab">
+						<ul class="clear-fix">
+							<li>
+								<form autocomplete="off" rel="activeStu">
+									<dl class="clear-fix">
+										<dt>
+											<i class="b2s-form-icons"></i>
+										</dt>
+										<dd>
+											<input type="text" class="b2s-form-input" placeholder="请输入学生姓名" rel="cnname" />
+											<em class="b2s-form-error"></em>
+										</dd>
+									</dl>
+									<dl class="clear-fix">
+										<dt>
+											<i class="b2s-form-icons b2s-form-psw"></i>
+										</dt>
+										<dd>
+											<input type="text" class="b2s-form-input" placeholder="请输入邀请码" rel="activeorphone" />
+											<em class="b2s-form-error"></em>
+										</dd>
+									</dl>
+
+									<div class="b2s-form-submit">
+										<input type="submit" value="激活学生账户" />
+									</div>
+								</form>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</div>		
+	</div>
+</div>
+<% include b2s_common/footer.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

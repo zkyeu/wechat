@@ -1,0 +1,41 @@
+<% include ../common/top.ejs %>
+<body  data-init="agentTimetable">
+	<div class="agentTimetable1">
+		<div class="agentTimetable-title">
+			<a class="day-before" href="javascript:void(0);">前一天</a>
+			<div class="day-now">
+				<label for="timeNow">当日课<span>2016-06-01</span></label>
+				<input id="timeNow" type="date" value="2016-06-01"/>
+			</div>
+			<a class="day-after" href="javascript:void(0);">后一天</a>
+		</div>
+		<ul class="agentTimetable-time">
+			<li class="select"><span>19:00</span><span>~</span><span>19:30</span></li>
+			<li><span>19:30</span><span>~</span><span>20:00</span></li>
+			<li><span>20:00</span><span>~</span><span>20:30</span></li>
+			<li><span>20:30</span><span>~</span><span>21:00</span></li>
+			<li><span>19:30</span><span>~</span><span>20:00</span></li>
+			<li><span>20:00</span><span>~</span><span>20:30</span></li>
+			<li><span>19:30</span><span>~</span><span>20:00</span></li>
+			<li><span>20:00</span><span>~</span><span>20:30</span></li>
+		</ul>
+		<ul class="agentTimetable-items">
+			<li>
+				<img src="<%= imagessrc%>agentTimetable-01.jpg" alt="">
+				<span></span>
+				<p>共15节，25人<span>入门课</span></p>
+			</li>
+			<li>
+				<img src="<%= imagessrc%>agentTimetable-02.jpg" alt="">
+				<p>共15节<span>家长会</span></p>
+			</li>
+			<li>
+				<img src="<%= imagessrc%>agentTimetable-03.jpg" alt="">
+				<p>共15节，25人<span>精品课</span></p>
+			</li>
+		</ul>
+	</div>
+
+
+</body>
+<% include ../common/bottom.ejs %>

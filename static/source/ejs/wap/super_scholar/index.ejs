@@ -1,0 +1,159 @@
+<% include ../common/top.ejs %>
+<body>
+	<header class="g-hd" data-init="index" id="container">
+		<a href="javascript:;" name="m-top"></a>
+		<img src="<%= imagessrc%>banner.jpg" alt="" class="u-banner">
+	</header>
+	<section class="g-ct">
+		<div class="m-reg">
+			<form action="/landing/togetherWork/" method="post">
+				<input type="hidden" name="action" value="reg"/>
+				<input type="hidden" name="uid" value="xxx"/>
+				<input type="hidden" name="timstamp" value="xxxx"/>
+				<input type="hidden" name="random" value="xxx"/>
+				<input type="hidden" name="token" value="xxxx"/>
+				<div class="group">
+					<input class="u-ipt" type="text" name="mobile" id="mobile" placeholder="请输入您的手机号">
+					<p class="u-err">用户名格式错误</p>
+				</div>
+				<div class="group group2" style="height: 4.5rem;">
+					<div class="m-ipts" >
+						<input class="u-ipt1" id="authCode" name="code" type="text" placeholder="请输入图形验证码" style="height:3rem;">
+					</div>
+					<a class="getCode1" href="javascript:;">
+						<img title="单击更换验证码" alt="单击更换验证码"
+							 onclick="this.src='http://www.51talk.com/passport/authCode'+'?a'+'='+new Date().getTime()"
+							 src="http://www.51talk.com/passport/authCode" id="verifycode" style="width: 7rem;    height: 3rem;"
+							 style="border: 1px solid #d0d0d0;float:left;cursor: pointer;">
+					</a>
+				</div>
+				<div class="group group2">
+					<div class="m-ipts">
+						<input class="u-ipt" name="code" type="text" placeholder="">
+						<p class="u-err">验证码错误</p>
+					</div>
+					<!--<a class="getCode" href="javascript:;">获取短信验证码</a>-->
+					<a class="getCode1" id="getCodeNew" href="javascript:;">获取短信验证码</a>
+				</div>
+				<div class="group">
+					<input class="u-ipt" type="text" name="password" placeholder="请设置您的密码">
+					<p class="u-err">密码错误</p>
+				</div>
+				<a class="u-btn-sb" href="javascript:;">立即激活</a>
+				<div class="reg_txt">
+					<span>若已是51Talk注册用户，请</span><a href="javascript:;" class="login_now">立即登录</a>
+				</div>
+			</form>
+		</div>
+		<div class="m-log hide">
+			<form action="/landing/togetherWork/" method="post">
+				<input type="hidden" name="action" value="login"/>
+				<input type="hidden" name="uid" value="xxx"/>
+				<input type="hidden" name="timstamp" value="xxxx"/>
+				<input type="hidden" name="random" value="xxx"/>
+				<input type="hidden" name="token" value="xxxx"/>
+				<div class="group">
+					<input class="u-ipt" type="text" name="user_name" placeholder="请输入您的邮箱/手机号">
+					<p class="u-err">用户名格式错误</p>
+				</div>
+				<div class="group">
+					<input class="u-ipt" type="password" name="password" placeholder="请设置您的密码">
+					<p class="u-err">用户名格式错误</p>
+				</div>
+				<a class="u-btn-sb" href="javascript:;">立即激活</a>
+			</form>
+		</div>
+		<div class="m-success hide">
+			<h2>恭喜您成功领取</h2>
+			<p>专属外教寒假班，</p>
+			<p>请您尽快登录www.51talk.com</p>
+			<p>进行预约、上课。</p>
+		</div>
+		<div class="m-step-box">
+			<h2>寒假班上课流程</h2>
+			<h3>THE PROSCESS FOR COURSE</h3>
+			<ul class="m-steps">
+				<li>
+					<div class="u-circle">1</div>
+					<p>注册并登录</p>
+					<p>51Talk官网</p>
+				</li>
+				<li>
+					<div class="u-circle">2</div>
+					<p>预约寒假班</p>
+					<p>（选择年级和外教）</p>
+				</li>
+				<li>
+					<div class="u-circle">3</div>
+					<p>准备好设备</p>
+					<p>上课啦！</p>
+				</li>
+			</ul>
+		</div>
+		<div class="m-theme-box">
+			<h2>五大主题精彩纷呈</h2>
+			<h3>FIVE WONDERFUL COURSES</h3>
+			<ul class="m-themes">
+				<li>
+					<img src="<%= imagessrc%>theme_1.jpg" alt="">
+					<div class="m-txt">
+						<h4>Great winter Break</h4>
+						<p>在寒假中，小朋友们是否会有各种各样的活动呢？ 让Timmy会带领大家一起度过一个有趣的寒假！</p>
+					</div>
+				</li>
+				<li>
+					<img src="<%= imagessrc%>theme_2.jpg" alt="">
+					<div class="m-txt">
+						<h4>Tips for Break</h4>
+						<p>小伙伴们，你们知道什么样的小朋友最让人喜欢吗？</p>
+					</div>
+				</li>
+				<li>
+					<img src="<%= imagessrc%>theme_3.jpg" alt="">
+					<div class="m-txt">
+						<h4>About Spring Festival</h4>
+						<p>过年喽！放烟花，吃美食，访亲朋，你们开心吗？</p>
+					</div>
+				</li>
+				<li>
+					<img src="<%= imagessrc%>theme_4.jpg" alt="">
+					<div class="m-txt">
+						<h4>Visiting a Friends/Family Members</h4>
+						<p>放假啦，你最想去拜访谁呢？</p>
+					</div>
+				</li>
+				<li>
+					<img src="<%= imagessrc%>theme_5.jpg" alt="">
+					<div class="m-txt">
+						<h4>Back to School</h4>
+						<p>愉快的假期就要结束了，新学期大家有什么计划呢？</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="m-learn-box">
+			<h2>合理利用寒假时间，真正做到趣味学习</h2>
+			<ul class="m-learn">
+				<li class="first">
+					<img src="<%= imagessrc%>learn_1.png" alt="">
+					<p>全天10个小时</p>
+					<p>随时预约上课</p>
+				</li>
+				<li>
+					<img src="<%= imagessrc%>learn_2.png" alt="">
+					<p>4000多名外</p>
+					<p>教任意你选</p>
+				</li>
+			</ul>
+			<a href="#m-top" class="u-btn-act">激活专属外教寒假班</a>
+		</div>
+		<div class="m-lina-box">
+			<img src="<%= imagessrc%>lina.jpg" alt="">
+		</div>
+	</section>
+	<footer class="g-ft">
+		<a href="#m-top" class="u-btn-enjoy">马上和宝贝来体验</a>
+		<p>Copyright©北京大生知行科技有限公司</p>
+	</footer>
+</body>
+<% include ../common/bottom.ejs %>

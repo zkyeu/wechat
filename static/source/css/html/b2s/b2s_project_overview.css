@@ -1,0 +1,477 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ */
+.clear-fix:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  clear: both;
+}
+.clear_f {
+  zoom: 1;
+}
+.b2s_project_top {
+  background: #2b98e2;
+  height: 500px;
+}
+.b2s_project_top .b2s_project_top_center {
+  height: 500px;
+  width: 1000px;
+  margin: 0 auto;
+  background: url(../../../images/html/b2s/b2s_project_top.png?v=5xAbCepXBkvz8NneLlltDg%3D%3D) no-repeat center;
+}
+.b2s_project_book {
+  width: 100%;
+  height: 708px;
+  margin: 0 auto;
+  background: url(../../../images/html/b2s/b2s_p_book.png?v=2bazdYIM%2Fv%2BNHhpQLJ4vkQ%3D%3D) no-repeat;
+}
+.b2s_project_book .b2s_project_book_center {
+  width: 1000px;
+  margin: 0 auto;
+}
+.b2s_project_book .b2s_project_book_center .book_left {
+  float: left;
+  padding: 112px 42px 0 88px;
+}
+.b2s_project_book .b2s_project_book_center .book_right {
+  float: left;
+  padding-top: 40px;
+}
+.b2s_project_book .b2s_project_book_center .book_right .book_right_title {
+  padding-top: 30px;
+  font-size: 30px;
+  color: #1e1e1e;
+}
+.b2s_project_book .b2s_project_book_center .book_right .book_right_title span {
+  font-size: 16px;
+  padding-left: 25px;
+}
+.b2s_project_book .b2s_project_book_center .book_right .book_right_text {
+  font-size: 16px;
+  padding-top: 8px;
+}
+.b2s_project_book .b2s_project_book_center .book_right .last_text {
+  font-size: 16px;
+  padding-left: 141px;
+}
+.b2s_project_map {
+  background: #2b98e2;
+}
+.b2s_project_map .b2s_project_map_center {
+  width: 1000px;
+  margin: 0 auto;
+  height: 770px;
+  background: url(../../../images/html/b2s/map.png?v=u7kOmqNl6sUDNIvnVXWI0g%3D%3D) no-repeat center;
+  position: relative;
+}
+.b2s_project_map .b2s_project_map_center p {
+  position: absolute;
+  width: 30px;
+  height: 40px;
+  overflow: hidden;
+  text-align: center;
+  visibility: hidden;
+}
+.b2s_project_map .b2s_project_map_center p img {
+  width: 16px;
+  height: 22px;
+  margin-top: 8px;
+  vertical-align: middle;
+}
+.b2s_project_map .b2s_project_map_center .map_1 {
+  left: 164px;
+  top: 275px;
+}
+.b2s_project_map .b2s_project_map_center .map_2 {
+  left: 61px;
+  top: 381px;
+}
+.b2s_project_map .b2s_project_map_center .map_3 {
+  left: 154px;
+  top: 443px;
+}
+.b2s_project_map .b2s_project_map_center .map_4 {
+  left: 237px;
+  top: 435px;
+}
+.b2s_project_map .b2s_project_map_center .map_5 {
+  left: 300px;
+  top: 367px;
+}
+.b2s_project_map .b2s_project_map_center .map_6 {
+  left: 358px;
+  top: 347px;
+}
+.b2s_project_map .b2s_project_map_center .map_7 {
+  left: 327px;
+  top: 372px;
+}
+.b2s_project_map .b2s_project_map_center .map_8 {
+  left: 389px;
+  top: 393px;
+}
+.b2s_project_map .b2s_project_map_center .map_9 {
+  left: 332px;
+  top: 438px;
+}
+.b2s_project_map .b2s_project_map_center .map_10 {
+  left: 550px;
+  top: 487px;
+}
+.b2s_project_map .b2s_project_map_center .map_11 {
+  left: 366px;
+  top: 451px;
+}
+.b2s_project_map .b2s_project_map_center .map_12 {
+  left: 485px;
+  top: 457px;
+}
+.b2s_project_map .b2s_project_map_center .map_13 {
+  left: 369px;
+  top: 496px;
+}
+.b2s_project_map .b2s_project_map_center .map_14 {
+  left: 308px;
+  top: 519px;
+}
+.b2s_project_map .b2s_project_map_center .map_15 {
+  left: 396px;
+  top: 547px;
+}
+.b2s_project_map .b2s_project_map_center .map_16 {
+  left: 561px;
+  top: 241px;
+}
+.b2s_project_map .b2s_project_map_center .map_17 {
+  left: 548px;
+  top: 271px;
+}
+.b2s_project_map .b2s_project_map_center .map_18 {
+  left: 522px;
+  top: 295px;
+}
+.b2s_project_map .b2s_project_map_center .map_19 {
+  left: 473px;
+  top: 325px;
+}
+.b2s_project_map .b2s_project_map_center .map_20 {
+  left: 450px;
+  top: 346px;
+}
+.b2s_project_map .b2s_project_map_center .map_21 {
+  left: 488px;
+  top: 361px;
+}
+.b2s_project_map .b2s_project_map_center .map_22 {
+  left: 451px;
+  top: 387px;
+}
+.b2s_project_map .b2s_project_map_center .map_23 {
+  left: 533px;
+  top: 406px;
+}
+.b2s_project_map .b2s_project_map_center .map_24 {
+  left: 502px;
+  top: 416px;
+}
+.b2s_project_map .b2s_project_map_center .map_25 {
+  left: 552px;
+  top: 426px;
+}
+.b2s_project_map .b2s_project_map_center .map_26 {
+  left: 469px;
+  top: 435px;
+}
+.b2s_project_map .b2s_project_map_center .map_27 {
+  left: 537px;
+  top: 448px;
+}
+.b2s_project_map .b2s_project_map_center .map_28 {
+  left: 458px;
+  top: 465px;
+}
+.b2s_project_map .b2s_project_map_center .map_29 {
+  left: 249px;
+  top: 490px;
+}
+.b2s_project_map .b2s_project_map_center .map_30 {
+  left: 472px;
+  top: 540px;
+}
+.b2s_project_map .b2s_project_map_center .map_title {
+  margin: 0 auto;
+  font-size: 46px;
+  text-align: center;
+  color: #fff;
+  padding-top: 65px;
+}
+.b2s_project_map .animate_map p {
+  visibility: visible;
+}
+.b2s_project_map .animate_map .animation {
+  -webkit-animation-name: skyset;
+          animation-name: skyset;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.b2s_project_map .animate_map .animation_delay_1 {
+  -webkit-animation-delay: 0.04s;
+          animation-delay: 0.04s;
+}
+.b2s_project_map .animate_map .animation_delay_2 {
+  -webkit-animation-delay: 0.08s;
+          animation-delay: 0.08s;
+}
+.b2s_project_map .animate_map .animation_delay_3 {
+  -webkit-animation-delay: 0.24s;
+          animation-delay: 0.24s;
+}
+.b2s_project_map .animate_map .animation_delay_4 {
+  -webkit-animation-delay: 0.32s;
+          animation-delay: 0.32s;
+}
+.b2s_project_map .animate_map .animation_delay_5 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.b2s_project_map .animate_map .animation_delay_6 {
+  -webkit-animation-delay: 0.48s;
+          animation-delay: 0.48s;
+}
+.b2s_project_map .animate_map .animation_delay_7 {
+  -webkit-animation-delay: 0.56s;
+          animation-delay: 0.56s;
+}
+.b2s_project_map .animate_map .animation_delay_8 {
+  -webkit-animation-delay: 0.64s;
+          animation-delay: 0.64s;
+}
+.b2s_project_map .animate_map .animation_delay_9 {
+  -webkit-animation-delay: 0.72s;
+          animation-delay: 0.72s;
+}
+.b2s_project_map .animate_map .animation_delay_10 {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+.b2s_project_map .animate_map .animation_delay_11 {
+  -webkit-animation-delay: 0.88s;
+          animation-delay: 0.88s;
+}
+.b2s_project_map .animate_map .animation_delay_12 {
+  -webkit-animation-delay: 0.96s;
+          animation-delay: 0.96s;
+}
+.b2s_project_map .animate_map .animation_delay_13 {
+  -webkit-animation-delay: 1.04s;
+          animation-delay: 1.04s;
+}
+.b2s_project_map .animate_map .animation_delay_14 {
+  -webkit-animation-delay: 1.12s;
+          animation-delay: 1.12s;
+}
+.b2s_project_map .animate_map .animation_delay_15 {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+.b2s_project_map .animate_map .animation_delay_16 {
+  -webkit-animation-delay: 1.28s;
+          animation-delay: 1.28s;
+}
+.b2s_project_map .animate_map .animation_delay_17 {
+  -webkit-animation-delay: 1.36s;
+          animation-delay: 1.36s;
+}
+.b2s_project_map .animate_map .animation_delay_18 {
+  -webkit-animation-delay: 1.44s;
+          animation-delay: 1.44s;
+}
+.b2s_project_map .animate_map .animation_delay_19 {
+  -webkit-animation-delay: 1.52s;
+          animation-delay: 1.52s;
+}
+.b2s_project_map .animate_map .animation_delay_20 {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+.b2s_project_map .animate_map .animation_delay_21 {
+  -webkit-animation-delay: 1.68s;
+          animation-delay: 1.68s;
+}
+.b2s_project_map .animate_map .animation_delay_22 {
+  -webkit-animation-delay: 1.76s;
+          animation-delay: 1.76s;
+}
+.b2s_project_map .animate_map .animation_delay_23 {
+  -webkit-animation-delay: 1.84s;
+          animation-delay: 1.84s;
+}
+.b2s_project_map .animate_map .animation_delay_24 {
+  -webkit-animation-delay: 1.92s;
+          animation-delay: 1.92s;
+}
+.b2s_project_map .animate_map .animation_delay_25 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.b2s_project_map .animate_map .animation_delay_26 {
+  -webkit-animation-delay: 2.08s;
+          animation-delay: 2.08s;
+}
+.b2s_project_map .animate_map .animation_delay_27 {
+  -webkit-animation-delay: 2.16s;
+          animation-delay: 2.16s;
+}
+.b2s_project_map .animate_map .animation_delay_28 {
+  -webkit-animation-delay: 2.24s;
+          animation-delay: 2.24s;
+}
+.b2s_project_map .animate_map .animation_delay_29 {
+  -webkit-animation-delay: 2.32s;
+          animation-delay: 2.32s;
+}
+@-webkit-keyframes skyset {
+  0% {
+    margin-top: 50px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  60% {
+    margin-top: 8px;
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+  }
+  75% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  85% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes skyset {
+  0% {
+    margin-top: 50px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  60% {
+    margin-top: 8px;
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+  }
+  75% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  85% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.b2s_project_timer {
+  width: 1000px;
+  margin: 0 auto;
+  height: 520px;
+}
+.b2s_project_timer .timer_title {
+  padding-top: 65px;
+  margin: 0 auto;
+  text-align: center;
+  color: #323232;
+  font-size: 46px;
+}
+.b2s_project_timer ul li {
+  float: left;
+  text-align: center;
+  font-size: 20px;
+}
+.b2s_project_timer ul .text_spe {
+  font-size: 24px;
+}
+.b2s_project_timer ul .text_next {
+  padding-top: 8px;
+}
+.b2s_project_timer ul .first {
+  width: 216px;
+}
+.b2s_project_timer ul .second {
+  width: 311px;
+}
+.b2s_project_timer ul .thrid {
+  width: 218px;
+}
+.b2s_project_timer ul .four {
+  margin-left: 54px;
+  width: 201px;
+}
+.b2s_project_together {
+  background: #2b98e2;
+}
+.b2s_project_together .b2s_project_together_center {
+  width: 100%;
+  height: 794px;
+  margin: 0 auto;
+  background: url(../../../images/html/b2s/b2s_project_together_center.jpg?v=UgMUV479MsYKYNsXGxo6%2Bg%3D%3D) no-repeat center;
+}
+.b2s_project_chose {
+  width: 100%;
+  height: 380px;
+  background: url(../../../images/html/b2s/b2s_chose_bg.png?v=lZ4KEohiEhJc%2BoCdJdIopQ%3D%3D) no-repeat center;
+}
+.b2s_project_chose .b2s_project_chose_center {
+  width: 1000px;
+  height: 380px;
+  margin: 0 auto;
+}
+.b2s_project_chose .b2s_project_chose_center .chose_left {
+  width: 450px;
+  height: 200px;
+  float: left;
+  margin: 90px 0 0 25px;
+  background: url(../../../images/html/b2s/b2s_in_teacher.png?v=hv0WjoGXx1lysFPfzJZ5sg%3D%3D) no-repeat center;
+  position: relative;
+}
+.b2s_project_chose .b2s_project_chose_center .chose_left a {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: block;
+  width: 240px;
+  height: 45px;
+}
+.b2s_project_chose .b2s_project_chose_center .chose_right {
+  width: 440px;
+  height: 200px;
+  float: left;
+  margin: 90px 0 0 60px;
+  background: url(../../../images/html/b2s/b2s_in_student.png?v=b%2Bbhq40QCq5TN9vLEZ%2BLqg%3D%3D) no-repeat center;
+  position: relative;
+}
+.b2s_project_chose .b2s_project_chose_center .chose_right a {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: block;
+  width: 240px;
+  height: 45px;
+}

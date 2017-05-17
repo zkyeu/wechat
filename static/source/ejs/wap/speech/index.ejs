@@ -1,0 +1,105 @@
+<% include ../common/speech_top.ejs %>
+<body>
+	<section id="container" data-init="speech">
+		<img src="<%= imagessrc%>speechT.jpg"  class="topImg" alt="">
+		<article class="speech_cont">
+			<article class="speech_item">
+				<h3>
+					<span class="tit_l">大赛理念</span>
+					<span class="tit_r">Competition concept</span>
+				</h3>
+				<article class="topImg1"><img src="<%= imagessrc%>speechT1.png" alt=""></article>
+			</article>
+			<article class="speech_item">
+				<h3>
+					<span class="tit_l">奖项设置</span>
+					<span class="tit_r">Award setting</span>
+				</h3>
+				<article class="topImg1 topImg2"><img src="<%= imagessrc%>speechT2.png" alt=""></article>
+			</article>
+			<article class="speech_item" >
+				<h3>
+					<span class="tit_l">大赛报名</span>
+					<span class="tit_r">Competition for registration</span>
+				</h3>
+
+				<div class="tips">
+						<article class="mask_cont">
+							<img src="<%= imagessrc%>speechTc.png" alt="">
+							<p  class="">已报名成功<br />无需重复报名</p>
+							<p  class="hide">报名成功</p>
+							<p  class="hide">还有<span style="color:red">3</span>秒要跳转到论坛<br/><a style="font-size: 0.8rem;color: #ff0011;text-decoration: underline;" href="http://bbs.51talk.com/forum/detail/5965.html">如果还没有跳转请点击此链接</a></p>
+							<p id="nobody" class="hide">报名已满员</p>
+						</article>
+
+
+				</div>
+
+				<div class="tips hide" id ="tips">
+						<article class="mask_cont">
+							<img src="<%= imagessrc%>speechTc.png" alt="">
+							<p  class="">您已报名<br /><em style="color:red">22333</em><br/>无需重复报名</p>
+						</article>
+				</div>
+				<ul class="OneS_logIn">
+			      	<li>
+			        	<input type="tel" id="mobile" name="mobile" placeholder="请输入您的手机号" autocomplete="off">
+			     	</li>
+			      	<li>
+			        	<input type="password" id="password" name="password" placeholder="请设置您的密码">        
+			      	</li>
+			      	<li id="vcode" class="clearfix" style="">
+			        	<input type="text" id="code" style="padding-right:0;" name="code"  placeholder="请输入您的验证码"  /><span id="vtip"><a href='javascript:void(0)'>获取短信验证码</a></span>     
+			      	</li>
+			      	<li>
+			      		<input type="hidden" id="group" />
+			        	<input readonly="readonly" id="group0" type="input" placeholder="选择组别" >
+			        	<div class="speech_icon down">
+			        		<i></i>
+			        	</div>
+			        	<ul class="speech_list hide">
+			        		<li>小低组（<span>1-3年级学员</span>）</li>
+			        		<li>小高组（<span>4-6年级学员</span>）</li>
+			        		<li>初中组（<span>1-3年级学员</span>）</li>
+			        	</ul>       
+			      	</li>
+			     	<li class="OneS_last">
+			        	<a name="register" href="javascript:void(0)" class="free">立即报名</a>
+			     	</li>
+			    </ul>
+			</article>
+			<article class="speech_item">
+				<h3>
+					<span class="tit_l">报名参与方式</span>
+					<span class="tit_r">Participation way</span>
+				</h3>
+				<img src="<%= imagessrc%>speechB.png" class="topImg" alt="">
+			</article>			
+		</article>
+		<footer>
+			<img src="<%= imagessrc%>speechC.png" class="topImg" alt="">
+		</footer>
+	</section>
+	<article class="speech_mask hide">
+		<article class="mask"></article>
+		<article class="mask_cont">
+			<img src="<%= imagessrc%>speechTc.png" alt="">
+			<p id="haven" class="hide">您已报名<br/><em style="color:red"></em><br/>无需重复报名</p>
+			<p id="success" class="hide">报名成功</p>
+			<p id="skip" class="hide">还有<span style="color:red">3</span>秒要跳转到论坛<br/><a style="font-size: 0.8rem;color: #ff0011;text-decoration: underline;" href="http://bbs.51talk.com/forum/detail/5965.html">如果还没有跳转请点击此链接</a></p>
+			<p id="nobody" class="hide">报名已满员</p>
+			<a class="close" href="javascript:void(0)" id="close"></a>
+		</article>
+	</article>
+</body>
+<% include ../common/bottom.ejs %>
+
+
+
+
+
+
+
+
+
+

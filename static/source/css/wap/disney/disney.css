@@ -1,0 +1,511 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Wed Aug 10 2016 15:59:02 GMT+0800 (中国标准时间)
+ */
+/* css reset */
+html {
+  font-family: Microsoft YaHei, Helvetica Neue, Helvetica, STHeiTi, Arial, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 62.5%;
+}
+body {
+  line-height: 1;
+  color: #333333;
+  background-color: white;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+a {
+  background: transparent;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input:focus {
+  outline: none;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: border-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+optgroup {
+  font-weight: bold;
+}
+em {
+  font-style: normal;
+}
+html,
+button,
+input,
+select,
+textarea {
+  font-family: Microsoft YaHei, Helvetica Neue, Helvetica, STHeiTi, Arial, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+form,
+blockquote {
+  margin: 0;
+}
+ul,
+ol,
+li,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none outside none;
+}
+h1,
+h2,
+h3 {
+  line-height: 2;
+  font-weight: normal;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #cccccc;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #cccccc;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #cccccc;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+img {
+  max-width: 100%;
+}
+.disney {
+  background: #f2f2f2;
+}
+.disney input::-webkit-input-placeholder {
+  text-align: center;
+}
+.disney .topbar {
+  height: 223px;
+  background: url(../../../images/wap/disney/topbar.jpg?v=yzuEw5xcb5xFttPSXwSO1Q%3D%3D) center top no-repeat;
+  background-size: cover;
+}
+.disney .container {
+  padding: 1.5rem 15%;
+}
+.disney .container .tab ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: #ff7200 solid 1px;
+  border-radius: 0.5rem;
+}
+.disney .container .tab li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 1rem 0;
+  font-size: 1.6rem;
+  color: #ff7200;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  text-align: center;
+}
+.disney .container .tab li:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.disney .container .tab .current {
+  background: #ff7200;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(225, 114, 0, 0.85);
+}
+.disney .container .user-box {
+  margin-top: 1.2rem;
+}
+.disney .container .user-box li {
+  margin-bottom: 1.2rem;
+}
+.disney .container .user-box input {
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1.6rem;
+  border: #a5a5a5 solid 1px;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+.disney .container .user-box .btn {
+  display: block;
+  padding: 1.2rem 0;
+  background: #ff7200;
+  color: #fff;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+.disney .course {
+  height: 135px;
+  padding-top: 55px;
+  line-height: 18px;
+  background: #fec91b url(../../../images/wap/disney/part_01.jpg?v=9FE4vSBCZpBeK3zwtV29Qw%3D%3D) center top no-repeat;
+  background-size: cover;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #b43e08;
+}
+.disney .course-trait {
+  height: 150px;
+  padding-top: 60px;
+  line-height: 18px;
+  background: #00d0b3 url(../../../images/wap/disney/part_03.jpg?v=i3RAiZqmG4FHgZKbaXyhMA%3D%3D) center top no-repeat;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+.disney .course-trait .second {
+  margin-bottom: 0.5rem;
+}
+.disney .course-plan {
+  height: 400px;
+  padding-top: 65px;
+  line-height: 18px;
+  background: #ec6941 url(../../../images/wap/disney/part_04.jpg?v=K5vvskMnrFCFmC1cBdlJng%3D%3D) center top repeat-x;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+.disney .course-plan .box {
+  margin-top: 1rem;
+}
+.disney .course-plan .bigger {
+  font-size: 1.6rem;
+}
+.disney .course-plan .btn {
+  display: block;
+  width: 50%;
+  padding: 1rem 0;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.75);
+  background: #fff;
+  color: #ec6941;
+  font-size: 1.6rem;
+}
+.reservation .topbar {
+  height: 223px;
+  background: url(../../../images/wap/disney/topbar.jpg?v=yzuEw5xcb5xFttPSXwSO1Q%3D%3D) center top no-repeat;
+  background-size: cover;
+}
+.reservation .make {
+  height: 285px;
+  padding-top: 15px;
+  line-height: 18px;
+  background: url(../../../images/wap/disney/make_bg.jpg?v=Z73xvzINllUFUnhSkru1%2BQ%3D%3D) center top repeat-x;
+  background-size: cover;
+  color: #777;
+  text-align: center;
+}
+.reservation .make .qq-group {
+  position: relative;
+  width: 43%;
+  padding-left: 18%;
+  margin: 0.5rem auto 0;
+  color: #ff7200;
+  text-align: left;
+  white-space: nowrap;
+}
+.reservation .make .qq-group label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+}
+.reservation .make .qq-group em {
+  display: block;
+}
+.reservation .make .btn {
+  display: block;
+  width: 50%;
+  padding: 1rem 0;
+  margin: 1rem auto;
+  background: #ff7200;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 5px rgba(255, 114, 0, 0.75);
+  font-size: 1.6rem;
+  color: #fff;
+}
+.reservation .course-plan {
+  height: 510px;
+  padding-top: 65px;
+  line-height: 18px;
+  background: #feca21 url(../../../images/wap/disney/plan_bg.jpg?v=fkanr9t35Nr4ZwGXz5ifkw%3D%3D) center top repeat-x;
+  background-size: cover;
+  color: #b43e08;
+  text-align: center;
+}
+.reservation .course-plan .box {
+  margin-top: 1rem;
+}
+.reservation .course-plan .qq-group {
+  position: relative;
+  width: 62%;
+  margin: 1rem auto 0;
+  padding-left: 22%;
+  white-space: nowrap;
+}
+.reservation .course-plan .qq-group label {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.reservation .course-plan .qq-group em {
+  display: block;
+}
+.reservation .course-plan .bigger {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.reservation .course-plan .btn {
+  display: block;
+  width: 50%;
+  padding: 1rem 0;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 5px rgba(255, 236, 175, 0.75);
+  background: #ffecaf;
+  color: #b43e08;
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 375px) {
+  .disney {
+    font-size: 1.4rem;
+  }
+  .disney .topbar {
+    height: 286px;
+  }
+  .disney .course {
+    height: 150px;
+    padding-top: 70px;
+  }
+  .disney .course-trait {
+    height: 178px;
+    padding-top: 80px;
+  }
+  .disney .course-plan {
+    height: 480px;
+    padding-top: 80px;
+    line-height: 22px;
+  }
+  .reservation {
+    font-size: 1.3rem;
+  }
+  .reservation .topbar {
+    height: 286px;
+  }
+  .reservation .make {
+    height: 300px;
+    padding-top: 15px;
+    line-height: 20px;
+  }
+  .reservation .make .qq-group {
+    width: 42%;
+    padding-left: 16%;
+  }
+  .reservation .course-plan {
+    height: 555px;
+    padding-top: 70px;
+    line-height: 22px;
+  }
+  .reservation .course-plan .qq-group {
+    width: 50%;
+    padding-left: 20%;
+  }
+}
+@media screen and (min-width: 414px) {
+  .reservation {
+    font-size: 1.4rem;
+  }
+  .reservation .make {
+    height: 300px;
+    padding-top: 45px;
+    line-height: 20px;
+  }
+  .reservation .make .qq-group {
+    width: 35%;
+    padding-left: 15%;
+  }
+  .reservation .course-plan {
+    height: 565px;
+    padding-top: 80px;
+    line-height: 22px;
+  }
+  .reservation .course-plan .qq-group {
+    width: 48%;
+    padding-left: 17%;
+  }
+}

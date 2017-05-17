@@ -1,0 +1,1 @@
+define("countChat",["layui"],function(a,n,i){a("layui"),layui.use("laydate",function(){var a=layui.laydate,n={min:a.now(),max:"2099-06-16 23:59:59",istoday:!1,choose:function(a){i.min=a,i.start=a}},i={min:a.now(),max:"2099-06-16 23:59:59",istoday:!1,choose:function(a){n.max=a}}})});

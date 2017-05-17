@@ -1,0 +1,13 @@
+<% include ../common/reg_top.ejs %>
+<body style="background:#edaf00;">
+	<% include ../common/reg_header.ejs %>
+	<section class="login" data-init="reg" id="container">
+		<form action="doRegister" method="post" id="regForm">
+		    <p><input type="text" placeholder="请输入手机号码" name='user_name' class="pho"></p>
+		    <p><input type="password" placeholder="请输入密码" name='password' class="password"></p>
+		    <aside><a href="#" class="btn" name="reg">注&nbsp;册</a></aside>
+		</form>
+	</section>
+	<% include ../common/reg_footer.ejs %>
+</body>
+<% include ../common/reg_bottom.ejs %>

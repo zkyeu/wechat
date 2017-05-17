@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="app下载专页">
+    <meta name="keywords" content="app下载专页">
+    <title>欢迎下载51Talk App</title>
+    <link rel="stylesheet" type="text/css" href="/css/html/Tmall_Code/Tmall_Code.css">
+</head>
+<body>
+   <div class="tmall" data-init="tmall">
+      <div class="t_header"></div>
+      <h2>只需<span>3</span>步，开启你的英语奇幻之旅</h2>
+      <div class="t_steps"></div>
+      <div class="t_main">
+          <img class="t_bg" src="/images/html/Tmall_Code/t_boy.png" alt="">
+          <!-- 输入验证码 -->
+          <form  id="regformcode" style="display:none">
+              <div class="t_inputCode">
+                  <div class="t_top">输入课程码</div>
+                  <div class="t_group t_group_cl">
+                      <div class="t_group_le">
+                          <i></i>
+                      </div>
+                      <div class="t_group_ri">
+                        <input type="text" placeholder="课程码" class="t_input" name="course_code"  />
+                        <p class="t_tip tip_courseCode"> </p>
+                      </div>
+                  </div>
+                  <div class="t_group t_group_ph">
+                      <div class="t_group_le">
+                          <i></i>
+                      </div>
+                      <div class="t_group_ri">
+                        <input type="text" placeholder="验证码" class="t_input" name="captcha"  />
+                        <span id="yzCode">abcd</span>
+                        <p class="t_tip t_tip4 tip_yzCode" >验证码错误！</p>
+                      </div>
+                  </div>
+                  <div class="t_getCode">
+                    <a href="#1" class="hashbtn"><a href="javascript:;" class="t_getCourseCode" >激活课程码</a></a>
+                  </div>
+              </div>
+          </form>
+          <!-- 注册登录all -->
+            <div class="t_login" style="display: " id="regformlogin">
+              <div class="t_switch ">
+                  <a class="btn_register t_switchActive" href="javscript:;">注册</a>
+                  <a class="btn_login" href="javscript:;">登录</a>
+              </div>
+              <!-- 注册部分 -->
+              <div class="t_part" style="display: " id="registerPart">
+               <form>
+                  <div class="t_group t_ph">
+                      <div class="t_group_le">手&nbsp;机&nbsp;号</div>
+                      <div class="t_group_ri">
+                        <input type="text" class="t_input" name="mobile" placeholder="手机号" />
+                        <p class="t_tip t_tip2 tip_phone">您输入的手机号有误！</p>
+                      </div>
+                  </div>
+                  <div class="t_group">
+                      <div class="t_group_le">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</div>
+                      <div class="t_group_ri">
+                        <input type="password" class="t_input" name="pwd" placeholder="密码" />
+                         <p class="t_tip t_tip2 tip_pwd">密码不能为空！</p>
+                      </div>
+                  </div>
+                   <div class="t_group t_phCode">
+                      <div class="t_group_le">验&nbsp;证&nbsp;码</div>
+                      <div class="t_group_ri">
+                        <input type="text" class="t_input" placeholder="请填写短信验证码" name="mobileCode" />
+                        <p class="t_tip t_tip3 tip_verifiCode">验证码错误！</p>
+                        <span id="getCode">获取验证码</span>
+                      </div>
+                  </div>
+                   <div class="t_getCode t_login" >
+                      <a href="#2" class="hashbtn"><a href="javascript:;" class="t_loginT">注册</a></a>
+                  </div>
+                </form>
+              </div>
+              <!-- 注册部分结束 -->
+              <!-- 登录部分 -->
+              <div class="t_part" style="display:none " id="loginPart">
+                <form action=""  id="LoginForm">
+                  <div class="t_group" style="padding-top:60px;height:92px;">
+                      <div class="t_group_le">账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号</div>
+                      <div class="t_group_ri">
+                        <input type="text" class="t_input" placeholder="手机号/邮箱" name="user_name" id="username" />
+                        <p class="t_tip t_tip2 tip_username" >账号错误！</p>
+                      </div>
+                  </div>
+                   <div class="t_group" style="height:118px;">
+                      <div class="t_group_le">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</div>
+                      <div class="t_group_ri">
+                        <input type="text" class="t_input" placeholder="密码" name="password2" id="password2" />
+                        <p class="t_tip t_tip2 tip_password" >密码错误！</p>
+                      </div>
+                  </div>
+                   <div class="t_getCode t_login" >
+                      <a href="#3" class="hashbtn"><a href="javascript:;" class="t_loginL">登录</a></a>
+                  </div>
+                </form>
+              </div>
+              <!-- 登录部分结束 -->
+              <a href="javascript:;" class="backToFirst">返回上一步</a>
+            </div>
+         
+        <!-- 注册登录all end -->
+        <!-- 开始上课 -->
+        <div class="t_starClass" style="display: none" id="t_starClass">
+            <img class="t_ok" src="/images/html/Tmall_Code/t_ok.png" alt="">
+            <p>感谢您完成课程激活！</p>
+            <p>您现在可以约课了。</p>
+            <div class="t_getCode" >
+                <a href="http://www.baidu.com">前往会员中心</a>
+            </div>
+        </div>
+        <!-- 开始上课 end-->
+      </div>
+   </div>
+  
+</body>
+<!--公共尾部结束-->
+<script src="/js/html/project/Tmall_Code/vendor.js"></script>
+</html>

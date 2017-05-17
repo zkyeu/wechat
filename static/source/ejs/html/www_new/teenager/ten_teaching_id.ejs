@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>英语学习，口语学习首选的英语学习网站，51talk无忧英语，外教一对一，在线学英语！</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="{<info.keywords>}"/>
+    <meta name="description" content="51tailk无忧英语专业提供网络英语外教一对一培训教学,专注于真人英语外教一对一培训,让您足不出户,网上平价学英语.英语外教一对一培训服务热线4000-51-51-51"/>
+    <link rel="stylesheet" type="text/css" href="<%= cssPath %>common/commons.css">
+    <link rel="stylesheet" type="text/css" href="<%= cssPath %>teenager/w_ten_teaching.css">
+</head>
+<body>
+<!-- 公共区域 -->
+<%- include("../common/w_nav.ejs",{
+  wrapClass:"teenager-nav-list",
+  navList:[
+    {
+      className:"crt",
+      text:"51Talk美国小学",
+      url:"http://junior.51talk.com/"
+    },
+    {
+      className:"",
+      text:"学习理念",
+      url:"http://junior.51talk.com/index/feature"
+    },
+    {
+      className:"",
+      text:"青少课程",
+      url:"http://junior.51talk.com/index/system"
+    },
+    {
+      className:"",
+      text:"外教师资",
+      url:"http://junior.51talk.com/index/teachers"
+    },
+    {
+      className:"",
+      text:"上课流程",
+      url:"http://junior.51talk.com/index/guide"
+    }
+  ],
+  isIndex:false, //判断是否为首页
+  isNorth:false //判断是否为美小
+
+  }) %>
+    <% include ../common/w_banner.ejs %>
+<!-- /公共区域 -->
+<!-- 青少年-教学理念 -->
+<div class="ten_teaching" data-init="teenager/index" id="container">
+  <div class="centerMth ten-int">
+    <img data-src="<%=imagessrc%>teenager/ten_tea_lt01.jpg" width="613" height="409" src="<%=imagessrc%>common/deafult.png">
+    <div class="tea-rt">
+      <img data-src="<%=imagessrc%>teenager/ten_tea_tit01.png" width="495" height="39" src="<%=imagessrc%>common/deafult.png">
+      <p>在孩子语言学习的关键期，来自英语为官方语言国家的全英文外教1对1，将100%沉浸式的学习环境送到您家中。足不出户让孩子从小养成用英文自信表达，这是您现在可以做到的。</p>
+    </div>
+  </div>
+  <div class="teaching-open">
+    <div class="centerMth">
+      <div class="tea-open">
+        <img data-src="<%=imagessrc%>teenager/ten_tea_tit02.png" width="476" height="98" src="<%=imagessrc%>common/deafult.png">
+        <p>100%的1对1教学让孩子有充分的Output机会，通过频繁的语言输出训练，孩子会感受到英语沟通的畅快。让学习英语成为乐趣而不再是负担。</p> 
+      </div>
+      <div class="tea-rt-img">
+        <img class="tea-img" data-src="<%=imagessrc%>teenager/ten_tea_lt02.png" width="416" height="410" src="<%=imagessrc%>common/deafult.png">
+      </div>
+    </div>
+  </div>
+  <div class="teaching-gp openClass">
+    <div class="centerMth ten-int">
+      <img class="ten-int-src" class="tea-img" data-src="<%=imagessrc%>teenager/tea_tea_lt03.jpg" width="656" height="448" src="<%=imagessrc%>common/deafult.png">
+      <div class="tea-rt">
+        <img class="tea-img" data-src="<%=imagessrc%>teenager/ten_tea_tit03.png" width="598" height="43" src="<%=imagessrc%>common/deafult.png">
+        <p>记忆曲线显示，24小时是有效记忆养成期，51Talk一节课的科学设置为25分钟，短时高频，让孩子们高效上好每一节课。容易坚持，效果当然更明显！</p>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="teaching-ext"> 
+    <div class="centerMth">
+      <img src="<%= imagessrc%>ten_tea_tit04.png" alt="">
+      <p>以孩子为中心，外教老师以“指导+鼓励”的方式，<br>从“拓展(Extend)”到“交流(Exchange)”逐步引导孩子形成语言习惯，深入思考灵活表达。
+      </p>
+      <img src="<%= imagessrc%>ten_tea_bom.png" alt="">
+    </div>  
+  </div> -->
+</div>
+<!-- 青少年-教学理念结束 -->
+<!-- 尾部 -->
+<!-- right side bar -->
+<% include ../common/w_side_bar.ejs %>
+<!-- /right side bar-->
+  <% include ../common/w_footer_home.ejs %>
+</body>
+<script src="<%= jsPath%>common/jquery.min.js"></script>
+<script src="<%= jsPath%>vendor.js" id="seajsnode"></script>
+</html>

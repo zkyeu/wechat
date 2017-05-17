@@ -1,0 +1,861 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: 
+ * update: Mon Dec 19 2016 10:51:14 GMT+0800 (中国标准时间)
+ */
+/*
+* 默认样式
+* @file：   base.less
+* @author:  zhuning@51talk.com）
+* @update:  2015-10-29
+* @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+*/
+html {
+  font-size: 62.5%;
+  -webkit-user-select: none;
+}
+@media only screen and (min-width: 481px) {
+  html {
+    font-size: 94%;
+  }
+}
+@media only screen and (min-width: 561px) {
+  html {
+    font-size: 109%;
+  }
+}
+@media only screen and (min-width: 641px) {
+  html {
+    font-size: 125%;
+  }
+}
+body {
+  padding: 0;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 640px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+}
+input,
+button,
+select,
+textarea,
+dl,
+dd,
+dt {
+  font-family: "Microsoft YaHei";
+  outline: none;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 0;
+  padding: 0px;
+  margin: 0px;
+}
+ul,
+li {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  vertical-align: middle;
+}
+b {
+  font-weight: normal;
+}
+::-moz-selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+strong {
+  font-weight: normal;
+}
+.bargain {
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+  background: #ffd301;
+  padding-bottom: 2rem;
+  font-family: "微软雅黑";
+  overflow-x: hidden;
+  position: relative;
+}
+.bargain img {
+  display: block;
+  border: none;
+}
+.bargain .widthImg {
+  width: 100%;
+}
+.bargain section {
+  position: relative;
+}
+.bargain section .b_txt {
+  width: 100%;
+  padding: 0 2.0rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 5.5rem auto 1.5rem;
+}
+.bargain section .b_txt .b_txtIn {
+  height: 2.3rem;
+  background: #fde500;
+  width: 100%;
+  border-radius: 2.3rem;
+  border: 1px solid #823c47;
+  padding: 0 1.2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  color: #823c47;
+  font-size: 1.3rem;
+}
+.bargain section .b_txt .b_txtIn span {
+  display: inline-block;
+  height: 100%;
+  line-height: 2.3rem;
+  float: left;
+}
+.bargain section .b_txt .b_txtIn span i {
+  color: #ff0000;
+}
+.bargain section .b_txt .b_txtIn em {
+  display: inline-block;
+  width: 4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 100%;
+  line-height: 2.3rem;
+  float: left;
+}
+.bargain section .b_head {
+  height: 6.8rem;
+  width: 6.8rem;
+  position: absolute;
+  bottom: 4.3rem;
+  left: 50%;
+  margin-left: -3.4rem;
+  background: url(../../../images/wap/bargain/b_headborder.png?v=tKBN%2F3lRFZFwqRqYs5VCLw%3D%3D) center no-repeat;
+  background-size: 100%;
+  display: -ms-flexbox;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  display: -moz-box;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  display: flexbox;
+  flex-pack: center;
+  flex-align: center;
+}
+.bargain section .b_head span {
+  display: block;
+  height: 5.8rem;
+  width: 5.8rem;
+  background: red;
+  border-radius: 5.8rem;
+}
+.bargain section .b_head span img {
+  display: block;
+  height: 5.8rem;
+  width: 5.8rem;
+  border-radius: 5.8rem;
+}
+.bargain section .gameRule {
+  position: absolute;
+  height: 7.5rem;
+  width: 7.5rem;
+  border-radius: 50%;
+  bottom: 25%;
+  right: 1rem;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bargain .b_main {
+  padding: 1.6rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.bargain .b_main .b_mainIn {
+  padding: 1.6rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #fce601;
+  border-radius: 4px;
+}
+.bargain .b_main .b_mainIn .progress {
+  width: 100%;
+}
+.bargain .b_main .b_mainIn .progress div {
+  padding-right: 2.3rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+.bargain .b_main .b_mainIn .progress div .b_bg {
+  display: block;
+  height: 1.5rem;
+  width: 100%;
+  border-radius: 1.5rem;
+  background: url(../../../images/wap/bargain/b_pbg.png?v=SVRaADJQvZYoa7wqOeynJQ%3D%3D) left center repeat-x;
+  position: relative;
+}
+.bargain .b_main .b_mainIn .progress div .b_bg .b_bgIn {
+  display: block;
+  height: 1.1rem;
+  width: 100%;
+  border-radius: 1.5rem;
+  position: absolute;
+  top: 0.2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 0.2rem;
+}
+.bargain .b_main .b_mainIn .progress div .b_bg .b_goal {
+  display: block;
+  height: 1.1rem;
+  width: 0;
+  border-radius: 1.5rem;
+  background: #9ada2d;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.bargain .b_main .b_mainIn .progress div i {
+  position: absolute;
+  display: block;
+  height: 2.15rem;
+  width: 1.9rem;
+  background: url(../../../images/wap/bargain/b_flag.png?v=iItCCYHdCOKliLxXq3FeiQ%3D%3D) center no-repeat;
+  background-size: 100%;
+  right: 0;
+  top: -3px;
+}
+.bargain .b_main .b_mainIn .b_btnPrice {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 1.2rem;
+  margin-bottom: 2.3rem;
+  display: -ms-flexbox;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  display: -moz-box;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  display: flexbox;
+  flex-pack: center;
+  flex-align: center;
+}
+.bargain .b_main .b_mainIn .b_btnPrice div {
+  color: #fff;
+  font-size: 1.2rem;
+  float: left;
+  height: 3.1rem;
+  line-height: 3.1rem;
+  width: 30%;
+  text-align: center;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  position: relative;
+}
+.bargain .b_main .b_mainIn .b_btnPrice div span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.bargain .b_main .b_mainIn .b_btnPrice .s1 {
+  background: url(../../../images/wap/bargain/b_btnPrice3.png?v=QnocSutqkpqNE9zwDKfqNg%3D%3D) center no-repeat;
+  background-size: 100% 100%;
+}
+.bargain .b_main .b_mainIn .b_btnPrice .s1 i {
+  text-decoration: line-through;
+}
+.bargain .b_main .b_mainIn .b_btnPrice .s2 {
+  background: url(../../../images/wap/bargain/b_btnPrice3.png?v=QnocSutqkpqNE9zwDKfqNg%3D%3D) center no-repeat;
+  background-size: 100% 100%;
+}
+.bargain .b_main .b_mainIn .b_btnPrice .s3 {
+  background: url(../../../images/wap/bargain/b_btnPrice3.png?v=QnocSutqkpqNE9zwDKfqNg%3D%3D) center no-repeat;
+  background-size: 100% 100%;
+  float: right;
+}
+.bargain .b_main .b_mainIn .b_bird {
+  display: -ms-flexbox;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  display: -moz-box;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  display: flexbox;
+  flex-pack: center;
+  flex-align: center;
+}
+.bargain .b_main .b_mainIn .b_bird img {
+  width: 8rem;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+.bargain .b_main .b_mainIn .b_bird .b_time {
+  padding: 1rem 1rem;
+  border: 1px solid #f7dd04;
+  border-radius: 4px;
+  background: #fee300;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+.bargain .b_main .b_mainIn .b_bird .b_time h3 {
+  font-size: 1.4rem;
+  margin: 0;
+  color: #653000;
+}
+.bargain .b_main .b_mainIn .b_bird .b_time h3 i {
+  display: inline-block;
+  height: 1.4rem;
+  width: 1.4rem;
+  background: url(../../../images/wap/bargain/b_clock.png?v=UvDfZYVEmsQCqZJTLV4d%2BA%3D%3D) center no-repeat;
+  background-size: 100%;
+}
+.bargain .b_main .b_mainIn .b_bird .b_time p {
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
+}
+.bargain .b_main .b_mainIn .b_bird .b_time p span {
+  padding: 0.4rem 0.2rem;
+  background: #2d2928;
+  color: #fff;
+  border-radius: 3px;
+}
+.bargain .b_main .b_mainIn .b_bird .b_time .num {
+  display: block;
+  margin: 0 auto;
+  font-size: 1.3rem;
+  padding: 0.5rem 1.2rem;
+  background: #fcc913;
+  border-radius: 4px;
+  color: #653000;
+  text-align: center;
+}
+.bargain .b_main .b_mainIn .b_bird .b_time .num i {
+  color: #ff0000;
+}
+.bargain .b_main .b_mainIn .b-bargin {
+  overflow: hidden;
+  margin-top: 1.5rem;
+  position: relative;
+}
+.bargain .b_main .b_mainIn .b-bargin div {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  width: 50%;
+}
+.bargain .b_main .b_mainIn .b-bargin .continue {
+  left: 0;
+}
+.bargain .b_main .b_mainIn .b-bargin .pause {
+  right: 0;
+}
+.bargain .b_main .b_mainIn .activity {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #fff300;
+  border-radius: 10px;
+}
+.bargain .b_main .b_mainIn .activity p {
+  font-size: 1.2rem;
+  line-height: 2.3rem;
+  color: #653000;
+}
+.bargain .b_main .b_mainIn .activity p span {
+  color: #bb7231;
+}
+.bargain .b_main .b_mainIn .table {
+  width: 100%;
+  margin-top: 1.25rem;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.bargain .b_main .b_mainIn .table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+.bargain .b_main .b_mainIn .table table tr th,
+.bargain .b_main .b_mainIn .table table tr td {
+  height: 3.9rem;
+  border: 1px solid #f71807;
+  text-align: center;
+  font-size: 1.1rem;
+}
+.bargain .b_main .b_mainIn .table table tr th {
+  background: #eb6100;
+  color: #fff;
+  font-size: 1.3rem;
+}
+.bargain .b_main .b_title {
+  margin: 1.3rem auto 2rem;
+}
+.bargain .b_main .b_row {
+  margin-top: 2rem;
+  overflow: hidden;
+  background: #fff url(../../../images/wap/bargain/b_yellowborder.png?v=FuXbH2M6aZWUfHOJRWWBGQ%3D%3D) center top repeat-x;
+  padding: 0 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  padding-top: 2rem;
+  border-radius: 4px;
+}
+.bargain .b_main .b_row .title {
+  margin: 1rem auto;
+}
+.bargain .b_main .b_row .list {
+  width: 100%;
+  display: -ms-flexbox;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  display: -moz-box;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  display: flexbox;
+  flex-pack: center;
+  flex-align: center;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.bargain .b_main .b_row .list .b_listHead {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 1rem;
+  border: 1px solid #ccc;
+}
+.bargain .b_main .b_row .list .b_listHead img {
+  height: 3.5rem;
+  width: 3.5rem;
+}
+.bargain .b_main .b_row .list .b_listTxt {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+.bargain .b_main .b_row .list .b_listTxt span {
+  color: #eb6100;
+}
+.bargain .b_main .b_row .last {
+  margin-bottom: 1rem;
+}
+.bargain .b_main .b_row .last .b_listTxt {
+  border: none;
+}
+.bargain .b_main .b_row .nothing {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+.bargain .b_main .b_row .listsOver {
+  overflow-y: scroll;
+}
+.bargain .b_share,
+.bargain .bmask,
+.bargain .barginHelp_mask {
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  z-index: 999;
+}
+.bargain .b_share img,
+.bargain .bmask img,
+.bargain .barginHelp_mask img {
+  width: 21.3rem;
+  height: 27.8rem;
+  background: url(../../../images/wap/bargain/b_share.png?v=1D2CkrNk9Mk9okeXRKhA7A%3D%3D) top right no-repeat;
+  background-size: 21.3rem 27.8rem;
+  position: fixed;
+  right: 5rem;
+  top: 10px;
+}
+.bargain .bform {
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+  position: fixed;
+  z-index: 199999;
+  top: 15%;
+  left: 0;
+  right: 0;
+  padding: 0 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.bargain .bform .formIn {
+  padding-bottom: 1.5rem;
+  position: relative;
+}
+.bargain .bform .formIn .top {
+  width: 100%;
+  height: 5rem;
+  background: #04b3ff;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  overflow: hidden;
+}
+.bargain .bform .formIn .top li {
+  height: 100%;
+  width: 100%;
+  line-height: 5rem;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #fff;
+  background: #04b3ff;
+}
+.bargain .bform .formIn .top .active {
+  background: #04b3ff;
+  color: #fff;
+}
+.bargain .bform .formIn .tip {
+  padding: 0 1.6rem 0;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  line-height: 2.2rem;
+  font-size: 1.2rem;
+  background: #04b3ff;
+  text-align: center;
+}
+.bargain .bform .formIn .formPart {
+  width: 100%;
+  padding: 0.8rem 2rem 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #04b3ff;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.bargain .bform .formIn .formPart li {
+  height: 6.5rem;
+  position: relative;
+}
+.bargain .bform .formIn .formPart li .info {
+  height: 4.9rem;
+  width: 100%;
+  border-radius: 4.9rem;
+  border: 1px solid #6dd0fb;
+  font-size: 1.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.bargain .bform .formIn .formPart li input {
+  padding: 0 1rem 0 5.5rem;
+}
+.bargain .bform .formIn .formPart li a {
+  display: inline-block;
+  background: #55cd42;
+  color: #fff;
+  line-height: 4.9rem;
+  padding: 0;
+  text-align: center;
+  font-size: 1.8rem;
+}
+.bargain .bform .formIn .formPart li i {
+  display: block;
+  position: absolute;
+  top: 1.3rem;
+  left: 2.9rem;
+  height: 2.3rem;
+  width: 1.5rem;
+  background: url(../../../images/wap/bargain/b_phone.png?v=OvPdU%2BXEB3l1P5QHu7dDKQ%3D%3D) center no-repeat;
+  background-size: 1.5rem 2.3rem;
+}
+.bargain .bform .formIn .formPart li:nth-child(2) i {
+  width: 1.7rem;
+  height: 2.3rem;
+  background: url(../../../images/wap/bargain/psw.png?v=wEmSidhgG1bsI5nkR%2FTsVw%3D%3D) center no-repeat;
+  background-size: 1.7rem 2.3rem;
+}
+.bargain .bform .formIn .formPart li:nth-child(3) .login {
+  background: #55cd42;
+}
+.bargain .bform .formIn .b_close {
+  display: block;
+  position: absolute;
+  height: 2.5rem;
+  width: 2.5rem;
+  background: url(../../../images/wap/bargain/close.png?v=zol%2BApc75LYGiX%2F3wZUEFw%3D%3D) center no-repeat;
+  background-size: 2.5rem 2.5rem;
+  top: -1.25rem;
+  right: -1.25rem;
+}
+.bargain .barginHelp {
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+  position: fixed;
+  top: 15%;
+  right: 0;
+  left: 0;
+  padding: 0 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 199999;
+}
+.bargain .barginHelp .alertBird {
+  width: 12rem;
+  height: 18rem;
+  margin: 0 auto;
+  position: relative;
+}
+.bargain .barginHelp .barginHelpAlert {
+  margin-top: -5rem;
+  position: relative;
+}
+.bargain .barginHelp .barginHelpAlert .b_close {
+  display: block;
+  position: absolute;
+  height: 2.5rem;
+  width: 2.5rem;
+  background: url(../../../images/wap/bargain/close.png?v=zol%2BApc75LYGiX%2F3wZUEFw%3D%3D) center no-repeat;
+  background-size: 2.5rem 2.5rem;
+  top: -1.25rem;
+  right: -1.25rem;
+}
+.bargain .barginHelp .barginHelpIn {
+  width: 100%;
+  background: #04b3ff;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  overflow: hidden;
+  padding: 0 1.0rem 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.bargain .barginHelp .barginHelpIn h3 {
+  color: #fffc02;
+  font-size: 1.5rem;
+}
+.bargain .barginHelp .barginHelpIn h3 em {
+  display: inline-block;
+  width: 4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}
+.bargain .barginHelp .barginHelpIn h3 span {
+  display: inline-block;
+  overflow: hidden;
+}
+.bargain .barginHelp .barginHelpIn p {
+  font-size: 1.3rem;
+  color: #fff;
+  line-height: 2.5rem;
+}
+.bargain .barginHelp .footer {
+  width: 100%;
+}
+.bargain .barginHelp .footer .footIn {
+  padding: 1.3rem 2.2rem 2rem;
+  background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: relative;
+}
+.bargain .barginHelp .footer .footIn div {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  width: 50%;
+}
+.bargain .barginHelp .footer .footIn .apply {
+  left: 0;
+}
+.bargain .barginHelp .footer .footIn .getFree {
+  right: 0;
+}
+.bargain .barginOver {
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+  position: fixed;
+  top: 15%;
+  right: 0;
+  left: 0;
+  padding: 0 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 199999;
+}
+.bargain .barginOver .gameover {
+  position: relative;
+  width: 14.7rem;
+  height: 21.8rem;
+  margin-bottom: -10rem;
+}
+.bargain .barginOver .barginOverIn {
+  position: relative;
+  height: 9.4rem;
+  width: 100%;
+  background: url(../../../images/wap/bargain/gameover.png?v=mgTrkD0%2F9eLnvD1y3ic4fA%3D%3D) center no-repeat;
+  background-size: 100%;
+  text-align: center;
+  padding-top: 7rem;
+}
+.bargain .barginOver .barginOverIn img {
+  height: 4.5rem;
+  width: 4.5rem;
+  position: absolute;
+  top: 3.3rem;
+  left: 50%;
+  margin-left: -2.25rem;
+}
+.bargain .barginOver .barginOverIn h3 {
+  font-size: 1.6rem;
+  color: #fff;
+  margin-bottom: 0.8rem;
+}
+.bargain .barginOver .barginOverIn p {
+  font-size: 1.3rem;
+  color: #ffe538;
+}
+.bargain .barginOver .barginOverIn .b_close {
+  display: block;
+  position: absolute;
+  height: 2.5rem;
+  width: 2.5rem;
+  background: url(../../../images/wap/bargain/close.png?v=zol%2BApc75LYGiX%2F3wZUEFw%3D%3D) center no-repeat;
+  background-size: 2.5rem 2.5rem;
+  top: -1.25rem;
+  right: -1.25rem;
+}
+.bargain .barginDetail {
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+  position: fixed;
+  bottom: 15%;
+  right: 0;
+  left: 0;
+  padding: 0 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 199999;
+}
+.bargain .barginDetail .barginDetail-bird {
+  position: relative;
+  width: 13rem;
+  height: 20.2rem;
+  margin: 0 auto -5rem;
+}
+.bargain .barginDetail .barginDetailIn {
+  width: 100%;
+  background: #fff;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: relative;
+}
+.bargain .barginDetail .barginDetailIn .top {
+  height: 5rem;
+  font-size: 1.5rem;
+  color: #303030;
+}
+.bargain .barginDetail .barginDetailIn .top span {
+  display: inline-block;
+  height: 4.8rem;
+  border-bottom: 5px solid #ffb801;
+  line-height: 4.8rem;
+  padding: 0 1.5rem;
+}
+.bargain .barginDetail .barginDetailIn .footer {
+  padding: 1.5rem 1rem;
+  background: #0cb3f7;
+  color: #fff;
+  line-height: 2.5rem;
+  font-size: 1.3rem;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.bargain .barginDetail .barginDetailIn .footer span {
+  color: #fff000;
+}
+.bargain .barginDetail .barginDetailIn .b_close {
+  display: block;
+  position: absolute;
+  height: 2.5rem;
+  width: 2.5rem;
+  background: url(../../../images/wap/bargain/close.png?v=zol%2BApc75LYGiX%2F3wZUEFw%3D%3D) center no-repeat;
+  background-size: 2.5rem 2.5rem;
+  top: -1rem;
+  right: -1rem;
+}
+@media screen and (max-width: 321px) {
+  .bargain section .b_txt {
+    padding: 0 1.5rem;
+  }
+  .bargain section .b_txt .b_txtIn {
+    font-size: 1.2rem;
+  }
+  .bargain .b_main .b_mainIn .b_btnPrice div {
+    font-size: 1.1rem;
+  }
+}

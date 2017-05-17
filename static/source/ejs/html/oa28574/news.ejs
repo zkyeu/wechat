@@ -1,0 +1,155 @@
+<% include ../common/top.ejs %>
+<body>
+<!-- public top -->
+<% include top.ejs %>
+<!-- 主体 -->
+<div class="ask news" id="container" data-init="subject">
+  <!-- left -->
+  <div class="s-lt">
+    <ul>
+      <li class="cor">系统消息<i class="nw-num">16</i></li>
+      <li>论坛消息<i class="nw-num">5</i></li>
+      <li>公告消息<i class="nw-num">128</i></li>
+    </ul>
+  </div>
+  <!-- right -->
+  <div class="mess s-rt">
+    <div class="sr-list">
+      <div class="new-nav">
+        <h3>系统消息</h3>
+        <div class="n-cls">
+          <input type="checkbox" class="nCheck" checked="checked">
+          关闭消息提醒
+        </div>
+        <div class="bom">
+          <a href="javascript:;" class="allDel">全部删除</a>
+          <a href="javascript:;" class="read">全部标为已读</a>
+          <span class="n-rt">
+            共 100 条消息，其中<a href="javascript:">5</a>条未读
+          </span>
+        </div>
+      </div>
+      <ul>
+        <li>
+          <span class="s-img"></span>
+          <div class="n-rt">
+            <span class="n-top">
+              2016-08-25 16:19 <a href="javascript:;" class="del hide">删除</a>
+            </span>
+            <span class="n-bom">
+              <i class="n-icon"></i>
+              关于公司行政服务调查问卷01。
+              <a href="javascript:;" class="see">查看详情</a>
+            </span>
+          </div>
+        </li>
+        <li>
+          <span class="s-img"></span>
+          <div class="n-rt">
+            <span class="n-top">
+              2016-08-25 16:19 <a href="javascript:;" class="del hide">删除</a>
+            </span>
+            <span class="n-bom">
+              <i class="n-icon"></i>
+              关于公司行政服务调查问卷02。
+              <a href="javascript:;" class="see">查看详情</a>
+            </span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="sr-list hide">
+      <div class="new-nav">
+        <h3>论坛消息</h3>
+        <div class="bom">
+          <a href="javascript:;" class="allDel">全部删除</a>
+          <a href="javascript:;" class="read">全部标为已读</a>
+          <span class="n-rt">
+            共 100 条消息，其中<a href="javascript:">5</a>条未读
+          </span>
+        </div>
+      </div>
+      <ul>
+        <li>
+          <span class="s-img"></span>
+          <div class="n-rt">
+            <span class="n-top">
+              2016-08-25 16:19 <a href="javascript:;" class="del">删除</a>
+            </span>
+            <span class="n-bom">
+              <i class="n-icon"></i>
+              关于公司行政服务调查问卷。
+              <a href="javascript:;" class="see">查看详情</a>
+            </span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="sr-list hide">
+      <div class="new-nav">
+        <h3>公告消息</h3>
+        <div class="bom">
+          <a href="javascript:;" class="allDel">全部删除</a>
+          <a href="javascript:;" class="read">全部标为已读</a>
+          <span class="n-rt">
+            共 100 条消息，其中<a href="javascript:">5</a>条未读
+          </span>
+        </div>
+      </div>
+      <ul>
+        <li>
+          <span class="s-img"></span>
+          <div class="n-rt">
+            <span class="n-top">
+              2016-08-25 16:19 <a href="javascript:;" class="del">删除</a>
+            </span>
+            <span class="n-bom">
+              <i class="n-icon"></i>
+              关于公司行政服务调查问卷。
+              <a href="javascript:;" class="see">查看详情</a>
+            </span>
+          </div>
+        </li>
+        <li class="sr-hor">
+          <span class="s-img"></span>
+          <div class="n-rt">
+            <span class="n-top">
+              2016-08-25 16:19 <a href="javascript:;" class="del hide">删除</a>
+            </span>
+            <span class="n-bom">
+              <i class="n-icon"></i>
+              关于公司行政服务调查问卷。
+              <a href="javascript:;" class="see">查看详情</a>
+            </span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="m-page">
+      <div class="f-page">
+        <div class="f-jump-page">
+        </div>
+        <div class="f-jump-num">
+          <span>跳转至：</span>
+          <input type="text" name="page_num" class="page_num"/>
+          <a class="go_page" href="javascript:;">确定</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 弹出层 -->
+<div class="n-layer hide">
+  <h3>温馨提示</h3>
+  <div class="text">
+    <img src="<%= imagessrc%>/new_land.png">
+    您是否确定删除此内容？
+  </div>
+  <a href="javascript:;" class="yes">是</a>
+  <a href="javascript:;" class="no">否</a>
+</div>
+<!-- /弹出层 -->
+<!-- public bottom -->
+<% include bottom.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

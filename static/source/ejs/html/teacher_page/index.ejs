@@ -1,0 +1,81 @@
+<% include ../common/top.ejs %>
+<body>
+ <div class="g-hd" id="container" data-init="teacher_page">
+  <div class="m-head">
+    <div class="g-in f-cb">
+      <h1 class="logo"><a href="/">无忧英语</a></h1>
+      <div class="home"><a href="/">官网首页</a></div>
+    </div>
+  </div>
+</div>
+<!-- /g-hd -->
+<div class="g-bd">
+  <div class="m-achieve">
+    <p class="desc">"我刚刚在51Talk又完美的完成了一节外教课<span class="name">【 这位是布朗先生</span><span class="name">】</span>，每天在线跟外教练习口语，提高非常快！我很开心！"</p>
+  </div>
+  <div class="history">
+    <ul>
+      <li class="ft-li">已完成<span><b>212</b>节</span></li>
+      <li>累计说英语<span><b>60</b>天</span></li>
+      <li>对话过<span><b>28</b>位外教</span></li>
+    </ul>
+  </div>
+   <!-- 注册 -->
+  <div class="m-main">
+    <div class="m-reg">
+      <form action="www.baidu.com" id="RegForm">
+        <h3 class="tit"><span>立即领取</span>免费课程</h3>
+        <ul class="m-ipts">
+          <li>
+            <dl>
+              <dt class="icon1"></dt>
+              <dd><input class="jsCheck" type="text" name="user_name" placeholder="请输入您的邮箱"></dd>
+            </dl>
+            <div class="u-err">上发送到发送到</div>
+          </li>
+          <li>
+            <dl>
+              <dt class="icon3"></dt>
+              <dd><input class="jsCheck" type="text" name="mobile" placeholder="请输入您的手机号"></dd>
+            </dl>
+            <div class="u-err"></div>
+          </li>
+          <li>
+            <dl>
+              <dt class="icon2"></dt>
+              <dd><input class="jsCheck" type="password" name="password" placeholder="请填写您的密码"></dd>
+            </dl>
+            <div class="u-err"></div>
+          </li>
+        </ul>
+        <input type="button" class="u-reg-btn jsSubmit" value="免费领取体验课">
+      </form>
+    </div>
+  </div>
+  <div class="m-teach">
+    <div class="tit">我喜欢的老师推荐你！</div>
+    <div class="user">
+          <img class="avatar" src="http://www.51talk.com/upload/pic/2015/03/02/20150302162519.jpg" width="68" height="68" alt="Rosecharm">
+      <div class="intro">
+        <div class="name">Rosecharm</div>
+        <div class="score"><span class="icon-star star-5s"></span><span class="title">评分 97.9</span></div>
+        <p class="suitable">
+    英语教育经验：1年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    适合学员水平：
+    中级以上水平
+            </p>
+      </div>
+    </div>
+    <div class="player">
+      <object style="float:left;padding-top:1px;margin-right:10px;" type="application/x-shockwave-flash" id="audio0" data="<%= imagessrc%>swf/introplayerNew.swf" width="90" height="20" play="true">
+      <param name="movie" value="<%= imagessrc%>swf/introplayerNew.swf">
+      <param name="FlashVars" value='file=http://www.51talk.com/upload/audio/2015/02/02/20150202151236.mp3&id=audio0'>
+      <param name="wmode" value="transparent">
+    </object>
+    听听外教英文自我介绍</div>
+    <p class="desc"> 你好！我是51talk的 Rosecharm老师。我热爱教学因为我喜欢分享我对学习的激情并向学员传授知识。业余时间，我喜欢看科幻和喜剧电影。我喜欢听RnB音乐和读书。我是一个非常平易近人的老师。我喜欢鼓励学生变得更加自信，我希望学生可以问他们不懂的问题并一直保持求知若渴的状态。在我的课堂上，你会觉得有趣、互动性高且知识量丰富。期待在课堂上见到你！   &nbsp;&nbsp;</p>
+  </div>
+</div>
+</body>
+<img style="display:none;" src="http://beacon.51talk.com/a.gif?v=b0e64af2708cf7fdd02aaef53603b710&site=2&type=1&uuid=ac0c09c754b9443117f9dbadcb2bb88a&uid=U8437224117"  border="0" alt=""/>
+<% include ../common/bottom.ejs %>

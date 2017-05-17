@@ -1,0 +1,183 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: 
+ */
+.ac-pay-result {
+  font-size: 14px;
+  width: 870px;
+  height: 550px;
+  background-color: #f2f2f2;
+  border-radius: 7px;
+  padding-top: 50px;
+  position: relative;
+}
+.ac-pay-result1 {
+  background: #fff;
+}
+.ac-pay-result1 .ac-pay-result {
+  padding-top: 170px;
+}
+.close-btn {
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 18px;
+  right: 20px;
+  background: url(../../../images/html/ac_class_list/ac_icons.png?v=QiyxOicWr3hSLgXwwNraPw%3D%3D) -350px 0 no-repeat;
+}
+.pay-result-main {
+  width: 690px;
+  height: auto;
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 70px 70px 20px;
+}
+.pay-result-main .success-des {
+  border-bottom: 1px solid #dfdfdf;
+  padding-left: 135px;
+}
+.pay-result-main .success-des i {
+  width: 60px;
+  height: 60px;
+  display: block;
+  position: relative;
+  top: -67px;
+  left: -80px;
+  background: url(../../../images/html/ac_class_list/ac_icons.png?v=QiyxOicWr3hSLgXwwNraPw%3D%3D) -200px 0 no-repeat;
+}
+.pay-result-main .success-des .sucess-tit {
+  font-size: 28px;
+  color: #000;
+}
+.pay-result-main .success-des .sucess-info {
+  color: #012345;
+}
+.pay-result-main .success-des .sucess-info span {
+  color: #ff4200;
+  font-size: 16px;
+}
+.pay-result-main .pay-success {
+  width: 675px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+.pay-result-main .pay-success .pay-tit-box {
+  position: relative;
+  margin-left: 250px;
+  margin-bottom: 22px;
+}
+.pay-result-main .pay-success .pay-tit-box .success-i {
+  top: -20px;
+}
+.pay-result-main .pay-success .pay-tit-box .pay-tit .success-promt {
+  font-size: 35px;
+  color: #6ad434;
+}
+.pay-result-main .pay-success .pay-tit-box .pay-tit .text {
+  font-size: 20px;
+  color: #727272;
+  margin-top: 10px;
+}
+.pay-result-main .pay-success .pay-tit-box span {
+  position: absolute;
+  left: -90px;
+  top: 10px;
+  width: 60px;
+  height: 60px;
+  background: url(../../../images/html/ac_class_list/ac_icons.png?v=QiyxOicWr3hSLgXwwNraPw%3D%3D) -200px 0 no-repeat;
+  display: inline-block;
+}
+.pay-result-main .pay-success .pay-tit-b {
+  margin-bottom: 50px;
+}
+.pay-result-main .pay-success .pay-border {
+  width: 100%;
+  height: 1px;
+  background: url(../../../images/html/ac_class_list/pay_border.png?v=NYvNO8f5aZnVGJQTX2s1eg%3D%3D) no-repeat;
+}
+.pay-result-main .pay-success .pay-des {
+  text-align: center;
+  font-size: 16px;
+  color: #fb8301;
+  margin-top: 30px;
+}
+.pay-result-main .pay-success .pay-btn {
+  text-align: center;
+  margin-top: 20px;
+}
+.pay-result-main .pay-success .pay-btn a {
+  display: inline-block;
+  width: 215px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #ff8200;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 18px;
+}
+.pay-result-main .success-des1 {
+  border-bottom: 0;
+}
+.pay-result-main .class-des {
+  margin-top: 24px;
+}
+.pay-result-main .class-des .class-des-tit {
+  font-size: 18px;
+  color: #000;
+}
+.pay-result-main .class-des ul {
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-bottom: 18px;
+}
+.pay-result-main .class-des ul li {
+  float: left;
+  color: #012345;
+}
+.pay-result-main .class-des ul li span {
+  display: block;
+  color: #fff;
+  width: 60px;
+  height: 25px;
+  background-color: #c0cedb;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 15px;
+}
+.pay-result-main .class-des ul li div {
+  margin-top: 5px;
+}
+.pay-result-main .class-des ul .li2 {
+  margin-left: 50px;
+}
+.pay-result-main .class-des ul .li3 {
+  margin-left: 68px;
+}
+.pay-result-main .class-des ul .li4 {
+  margin-left: 138px;
+}
+.pay-result-main .result2 ul .li2 {
+  margin-left: 105px;
+}
+.pay-result-main .result2 ul .li3 {
+  margin-left: 105px;
+}
+.pay-result-main1 {
+  padding-top: 170px;
+}
+.class-btn {
+  text-align: center;
+  margin-top: 20px;
+}
+.class-btn a {
+  display: inline-block;
+  width: 215px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #ff8200;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 18px;
+}

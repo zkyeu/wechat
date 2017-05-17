@@ -1,0 +1,111 @@
+<% include ../common/top.ejs %>
+<body class="tea-class-schedule-wrap-bg">
+	<div class="tab-box homepage-box">
+		<div class="homepage-in"><a href="#"></a></div>
+		<ul>
+			<li class="cur">
+				<a href="">即将开课</a>
+			</li>
+			<li>
+				<a href="">往期课程</a>
+			</li>
+		</ul>
+	</div>
+	<div class="tea-class-schedule-wrap">
+		<ul class="teaClassSchedule-tab">
+			<li><a href="#one">一年级</a></li>
+			<li><a href="#two">二年级</a></li>
+			<li class="select"><a href="javascript:void(0);">三年级</a></li>
+		</ul>
+		<ul class="teaClassSchedule-tab">
+			<li><a href="javascript:void(0);">四年级</a></li>
+			<li><a href="javascript:void(0);">五年级</a></li>
+			<li><a href="javascript:void(0);">六年级</a></li>
+		</ul>
+		<h5 class="choose_class"><span>选修课</span></h5>
+		<div class="teaClassSchedule-items teaClassSchedule-proceed">
+			<ul class="teaClassSchedule-item">
+				<li>
+					<div class="item-top">
+						<img src="<%= imagessrc%>tea-class-schedule-01.jpg" alt="">
+						<span class="icon-proceed"></span>
+						<span class="icon-vip"></span>
+						<p>第一课 你叫什么 Lesson 1 What is your name</p>
+					</div>
+					<div class="item_center_all">2016/10/12 20:30-21:00<span>课程编号：9999</span></div>
+					<div class="item-bottom-proceed">
+						<a class="download-textbook" href="javascript:void(0);">&nbsp;&nbsp;&nbsp;下载教材</a>
+					</div>
+				</li>
+				<li>
+					<div class="item-top">
+						<img src="<%= imagessrc%>tea-class-schedule-02.jpg" alt="">
+						<span class="icon-proceed"></span>
+						<span class="icon-vip"></span>
+						<p>第二课 你叫什么 Lesson 1 What is your name</p>
+					</div>
+					<div class="item-bottom-proceed">
+						<a class="no-textbook" href="javascript:void(0);">教材未上传</a>
+					</div>
+				</li>
+				<li>
+					<a name="two" id="two"></a>
+					<div class="item-top">
+						<img src="<%= imagessrc%>tea-class-schedule-03.jpg" alt="">
+						<span class="icon-proceed"></span>
+						<p>第二课 你叫什么 Lesson 1 What is your name</p>
+					</div>
+					<div class="item-bottom-proceed">
+						<a class="download-textbook" href="javascript:void(0);">&nbsp;&nbsp;&nbsp;下载教材</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="teaClassSchedule-items teaClassSchedule-finish">
+			<ul class="teaClassSchedule-item">
+				<li>
+					<div class="item-top">
+						<img src="<%= imagessrc%>tea-class-schedule-01.jpg" alt="">
+						<span class="icon-finish"></span>
+						<span class="icon-vip"></span>
+						<p>第一课 你叫什么 Lesson 1 What is your name</p>
+					</div>
+					<ul class="item-bottom-finish">
+						<li><a href="javascript:void(0);">查看上课班级</a></li>
+						<li><a href="javascript:void(0);">&nbsp;&nbsp;&nbsp;下载教材</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="item-top">
+						<img src="<%= imagessrc%>tea-class-schedule-02.jpg" alt="">
+						<span class="icon-finish"></span>
+						<span class="icon-vip"></span>
+						<p>第二课 你叫什么 Lesson 1 What is your name</p>
+					</div>
+					<ul class="item-bottom-finish">
+						<li><a href="javascript:void(0);">查看上课班级</a></li>
+						<li><a  class="no-textbook" href="javascript:void(0);">教材未上传</a></li>
+					</ul>
+				</li>
+				<li>
+					<a name="one" id="one"></a>
+					<div class="item-top">
+						<img src="<%= imagessrc%>tea-class-schedule-03.jpg" alt="">
+						<span class="icon-finish"></span>
+						<p>第二课 你叫什么 Lesson 1 What is your name</p>
+					</div>
+					<ul class="item-bottom-finish">
+						<li><a href="javascript:void(0);">查看上课班级</a></li>
+						<li><a href="javascript:void(0);">&nbsp;&nbsp;&nbsp;下载教材</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="teaClassSchedule-empty">
+			<img src="<%= imagessrc%>tea-class-schedule-04.png" alt="">
+			<p>您的精品辅导课为空<br>请先&nbsp;&nbsp;<a href="javascript:void(0);">创建班级</a></p>
+		</div>
+	</div>
+	
+</body>
+<% include ../common/bottom.ejs %>

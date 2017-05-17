@@ -1,0 +1,123 @@
+<% include ../common/top_b2s.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>ac_popup_t.css">
+</head>
+<body data-init="acPopup_t1">
+    <div class="ac-box" id="acBox">
+        <div class="banner-box">
+            <img src="<%= imagessrc%>ac3_banner.png"/>
+            <span id="closeBtn" class="close-btn"></span>
+        </div>
+        <div class="ac-main clearfix">
+            <div class="ac-main-l">
+                <p class="ac-class-tit">
+                    本期招生课程：
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                        <td>课程套餐</td>
+                        <td>课程次数</td>
+                        <td>本期优惠价</td>
+                    </tr>
+                    </thead>
+                    <tbody id="tableId">
+                        <!-- <tr>
+                            <td class="chose-i"><span class="current" data-price="598" discount-price="100" package-id="1" isVip="1"></span>
+                                <div class="vip-s"><i>VIP</i>新生特惠包</div></td>
+                            <td><p>外教1对1课6节</p><p>中教辅导课2节</p></td>
+                            <td class="price-td">
+                                <div class="p-price">198元</div>
+                                <div class="o-price">原价398元</div>
+                            </td>
+                        </tr> -->
+                        <tr>
+                            <td class="chose-i"><span class="current" data-price="1098" discount-price="200" package-id="2"></span>1个月课程包</td>
+                            <td><p>外教1对1课12节</p><p>中教辅导课4节</p></td>
+                            <td class="price-td">
+                                <div class="p-price" >598元</div>
+                                <div class="o-price">原价890元</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="chose-i"><span data-price="1598" discount-price="300" package-id="3" zs="1"></span>3个月课程包</td>
+                            <td><p>外教1对1课36节</p><p>中教辅导课12节</p></td>
+                            <td class="price-td">
+                                <div class="p-price" >598元</div>
+                                <div class="o-price">原价890元</div>
+                            </td>
+                        </tr>
+                       
+                    </tbody>
+                    
+                </table>
+            </div>
+            <div class="ac-main-r">
+                <div class="pay-money top-s pay-money-chosen" id="vipId">
+                    <div>
+                        金额：<span class="money-value" id="moneyValueVip">598元</span>
+                    </div>
+                    <div>
+                        <i></i><em>非VIP学员需同时购买外教精品课：</em><span id="boutiqueClass" data-price="298">+298元</span>
+                    </div>
+                
+                </div>
+                <div class="n-vip-box" id="nVipBox">
+                    <!-- <div class="pay-money top-st pay-money-vip">
+                        <div>
+                            金额：<span class="money-value" id="moneyValue"></span>
+                        </div>
+                        <div>
+                            <i></i>您已购买VIP精品课，立即优惠：<span id="preferentialId"></span>
+                        </div>
+                    </div> -->
+                    <div class="pay-money top-s pay-money-chosen">
+                        <div>
+                            金额：<span class="money-value" id="moneyValue"></span>
+                        </div>
+                        <div>
+                            <i id="optionId" class="option-i"></i><em>同时购买外教VIP精品课32节：</em> <em class="em-1">赠送精品课32节<span>+0元</span> </em><span class="color-s" id="boutiqueClass" data-price="298">+298元</span>
+                        </div>
+                        <div class="preferential" >
+                            立即优惠：<span class="color-s" id="preferentialId"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="pay-money-text">
+                    应付金额：
+                    <span id="payValueId"></span>
+                </div>
+                <div class="pay-btn"><a href="javascript:;">立即支付</a></div>
+            </div>
+        </div>
+        <div class="ac-introduction">
+            <div class="intr-img">
+                <img src="<%= imagessrc%>ac3_l.png"/>
+            </div>
+            <ul class="clearfix">
+                <li class="li-f">
+                    <p>专属外教1对1</p>
+                    <p>提升口语能力</p>
+                </li>
+                <li>
+                    <p>中教全程辅导</p>
+                    <p>专注答疑解惑</p>
+                </li>
+                <li>
+                    <p>诊断测评</p>
+                    <p>制定学习规划</p>
+                </li>
+                <li>
+                    <p>专用教材</p>
+                    <p>提升英语成绩</p>
+                </li>
+            </ul>
+        <div>
+    </div>
+    <input id="priceId" type="hidden" value="598"/>
+    <input id="discountPrice" type="hidden" value="10"/>
+    <input type="hidden" id="packageId" value="1"/>
+    <input id="buyB2s" type="hidden" name="buy_b2s" value="1">
+    <input type="text" id="vipUser" value="0"/>
+    <input type="text" id="vipPackage" value="0"/>
+</body>
+<% include ../common/uc_bottom.ejs %>

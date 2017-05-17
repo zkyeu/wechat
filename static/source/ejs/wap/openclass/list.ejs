@@ -1,0 +1,67 @@
+<% include ../common/top.ejs %>
+<body>
+<section class="cls-list" id="container" data-init="openclass" data-server-time="2017/02/22 20:10:00">
+  <nav class="list-nav" data-url="ur.com" id="list-nav">
+    <ul>
+      <li class="newList on" id="newData" data-code="new"><a href="javascript:;">最新</a></li>
+      <li class="newList" id="hostData" data-code="hot"><a href="javascript:;">热门</a></li>
+      <li class="newList nav-icon" id="listData" data-code="list">
+        <a href="javascript:;">分类</a>
+        <ul class="more-list hide">
+          <li data-id="3">综合能力</li>
+          <li data-id="4">商务职场</li>
+          <li data-id="5">托福考试</li>
+          <li data-id="6">雅思考试</li>
+          <li data-id="7">考研英语</li>
+          <li data-id="8">四六级</li>
+          <li data-id="9">中高考</li>
+          <li data-id="10">青少英语</li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <section class="list-detail">
+    <section class="detail-content">
+      <a href="javascript:">
+        <dl>
+          <dt><img src="<%= imagessrc%>cls_empty.jpg" class="defaultImg"></dt>
+          <dd class="d-list">2016SPBCN拼字大赛赛前培训 [初中1-3年级]2016SPBCN拼字大赛赛前培训 [初中1-3年级]2016SPBCN拼字大赛赛前培训 [初中1-3年级]</dd>
+          <dd>
+            <span class="tit">活动</span>
+            <span class="tit">词汇</span>
+          </dd>
+          <dd><span class="num-t">115人已预约</span></dd>
+        </dl>
+        <section class="see">
+          <section class="see-lt">
+            <img src="<%= imagessrc%>default01.png" class="lt-img"><span class="tit">Cassie</span>
+          </section>
+          <!-- 正在上课 -->
+          <section class="see-lt see-rt">
+            <span class="class just">
+              <i class="timeId" data-end-time="2017/01/23 20:55:00"></i>
+            </span>
+            <span class="see-btn">查看</span>
+          </section>
+          <!-- 正在上课 -->
+        </section>
+      </a>
+    </section>
+  </section>
+  <!-- 课程为空展示 -->
+  <section class="list-empty hide">
+    <p>没找到课程啊~</p>
+    <img src="<%= imagessrc%>cls_empty.jpg"> 
+  </section>
+  <!-- /课程为空展示 -->
+</section>
+<!--微信分享用到的参数-->
+  <input type="hidden" value="{$wxJsApiConfig.courseTitle}" id="courseTitle">
+  <input type="hidden" value="{$wxJsApiConfig.appId}" id="appIdHid">
+  <input type="hidden" value="{$wxJsApiConfig.nonceStr}" id="nonceStrHid">
+  <input type="hidden" value="{$wxJsApiConfig.timestamp}" id="timestampHid">
+  <input type="hidden" value="{$wxJsApiConfig.signature}" id="signatureHid">
+<!--/微信分享用到的参数-->
+</body>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<% include ../common/bottom.ejs %>

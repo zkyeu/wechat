@@ -1,0 +1,66 @@
+<% include ../common/class_top.ejs %>
+<body>
+<div class="pic-bg" style="background-image:url(<%= imagessrc%>/1.jpg)"></div>
+<div class="wt-main" id="container" data-init="stepPin">
+    <div class="nav-tab">
+        <div class="list f-cb">
+            <ul>
+                <li class="must on">必学词汇</li>
+                <li class="talk">对话练习</li>
+                <li class="words">单词本</li>
+                <li class="grammar">语法</li>
+            </ul>
+        </div>
+    </div>
+    <div class="sub-class">
+        <div class="box">
+            <div class="box-main">
+              <div class="f-cb puzzle">
+                    <div id="j_pic_list" class="pic-box hide">
+                        <ul class="list">
+                            <li class="pic">
+                                <img data-color="1" draggable="true" src="<%= imagessrc%>/d1_01.jpg" />
+                            </li>
+                            <li class="pic">
+                                <img data-color="2" draggable="true" src="<%= imagessrc%>/d1_01.jpg" />
+                            </li>
+                            <li class="pic">
+                                <img data-color="3" draggable="true" src="<%= imagessrc%>/d1_01.jpg" />
+                            </li>
+                            <li class="pic">
+                                <img data-color="4" draggable="true" src="<%= imagessrc%>/d1_01.jpg" />
+                            </li>
+                            <li class="pic">
+                                <img data-color="5" draggable="true" src="<%= imagessrc%>/d1_01.jpg" />
+                            </li>
+                            <li class="pic">
+                                <img data-color="6" draggable="true" src="<%= imagessrc%>/d1_01.jpg" />
+                            </li>
+                            <li class="pic">
+                                <img data-color="7" draggable="true" src="<%= imagessrc%>/d1_01.jpg" />
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="j_result_box" class="result-box r-success">
+                        <ul class="list">
+                            <li class="r-item" data-color="1"></li>
+                            <li class="r-item" data-color="2"></li>
+                            <li class="r-item" data-color="3"></li>
+                        </ul>
+                        <p class="ft16 word-txt">
+                            One cat <span class="tag">together</span> are eating One cat are eating
+                        </p>
+                        <span class="audio-btn"></span>
+                    </div>
+              </div>
+            </div>
+            <div class="pagenation">
+                <a href="#" class="btn prev-btn"></a>
+                <a href="#" class="btn next-btn"></a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+</body>
+<% include ../common/class_bottom.ejs %>

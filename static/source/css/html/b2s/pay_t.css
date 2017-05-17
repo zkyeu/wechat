@@ -1,0 +1,251 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: 
+ */
+.bg-s {
+  background: url(../../../images/html/b2s/bg_03.png?v=e%2FS3QveeE9SKti4HZBBnGg%3D%3D) center 17px #b6dcf8 no-repeat;
+}
+.bg-s .color-s {
+  background-color: #fff!important;
+}
+.bg-s .color-s .top-value {
+  padding: 30px;
+}
+.bg-s .color-s .class-pay {
+  width: 760px;
+  margin: 0 auto;
+}
+.bg-s .color-s .banner-box {
+  position: relative;
+  width: 780px;
+  height: 140px;
+  color: #fff;
+  background: url(../../../images/html/b2s/banner_05.jpg?v=lfJAudxX%2FmcumpG2%2BysJEA%3D%3D) no-repeat;
+}
+.bg-s .color-s .banner-box .text-l {
+  text-align: right;
+  position: absolute;
+  top: 17px;
+  left: 180px;
+}
+.bg-s .color-s .banner-box .text-l .banner-tit {
+  font-size: 30px;
+}
+.bg-s .color-s .banner-box .text-l .banner-tit span {
+  font-size: 22px;
+}
+.bg-s .color-s .banner-box .text-l .banner-des {
+  font-size: 18px;
+  margin-top: 3px;
+}
+.bg-s .color-s .banner-box .text-l .banner-info {
+  font-size: 16px;
+  margin-top: 5px;
+}
+.bg-s .color-s .banner-box .text-r {
+  position: absolute;
+  text-align: right;
+  right: 25px;
+  top: 20px;
+}
+.bg-s .color-s .banner-box .text-r .b-o-price {
+  font-size: 19px;
+}
+.bg-s .color-s .banner-box .text-r .b-o-price span {
+  font-size: 32px;
+}
+.bg-s .color-s .banner-box .text-r .b-n-price {
+  font-size: 16px;
+  text-decoration: line-through;
+}
+.bg-s .color-s .banner-box .text-r .b-pay-btn {
+  width: 180px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #ff5686;
+  text-align: center;
+  line-height: 40px;
+  display: inline-block;
+  color: #fff;
+  font-size: 20px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.bg-s .color-s .class-table-box {
+  width: 100%;
+  margin-top: 30px;
+}
+.bg-s .color-s .class-table-box td {
+  border: 1px solid #c4e8ff;
+  text-align: center;
+  vertical-align: middle;
+  height: 55px;
+}
+.bg-s .color-s .class-table-box thead {
+  background-color: #eff7fc;
+}
+.bg-s .color-s .class-table-box thead td {
+  color: #000;
+  font-size: 20px;
+}
+.bg-s .color-s .class-table-box tbody {
+  color: #727272;
+  font-size: 18px;
+}
+.bg-s .color-s .class-table-box tbody p {
+  font-size: 16px;
+}
+.bg-s .color-s .class-table-box tbody .f-tr {
+  text-align: left;
+  padding-left: 30px;
+}
+.bg-s .color-s .class-table-box tbody .vip-s {
+  color: #bf9506;
+  display: inline-block;
+}
+.bg-s .color-s .class-table-box tbody .vip-s i {
+  background-color: #fff000;
+  margin-right: 5px;
+  display: inline-block;
+  line-height: 14px;
+  height: 14px;
+}
+.bg-s .color-s .class-table-box tbody .price-td {
+  color: #f18131;
+}
+.bg-s .color-s .class-table-box tbody .o-price {
+  color: #727272;
+  font-size: 16px;
+  text-decoration: line-through;
+}
+.bg-s .color-s .class-table-box tbody .option-i {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background: url(../../../images/html/b2s/pay_icons.png?v=Cc99XTXB4%2B3azW139kdSYA%3D%3D) -250px 0 no-repeat;
+  position: relative;
+  top: 3px;
+  left: -8px;
+}
+.bg-s .color-s .class-table-box tbody .current {
+  background-position: -200px 0;
+}
+.bg-s .color-s .value-box {
+  display: none;
+}
+.bg-s .color-s .money-v {
+  text-align: right;
+  font-size: 20px;
+  color: #0a0a0a;
+  border-bottom: 1px dotted #e5e5e5;
+  padding-bottom: 20px;
+  margin-top: 20px;
+}
+.bg-s .color-s .money-v span {
+  color: #fb8301;
+}
+.bg-s .color-s .n-vip-box {
+  display: none;
+}
+.bg-s .color-s .preferential-box {
+  margin-top: 20px;
+  border-bottom: 1px dotted #e5e5e5;
+  padding-bottom: 25px;
+}
+.bg-s .color-s .preferential-box.preferential-box-vip .pre-text-box .pre-text {
+  margin-left: 0;
+}
+.bg-s .color-s .preferential-box.preferential-box-vip .pre-text-box .pre-text span {
+  display: none;
+}
+.bg-s .color-s .preferential-box.preferential-box-chosen .pre-text-box .pre-value {
+  color: #727272;
+}
+.bg-s .color-s .preferential-box.preferential-box-t #optionId {
+  visibility: hidden;
+}
+.bg-s .color-s .preferential-box.preferential-box-t .top-v {
+  display: none;
+}
+.bg-s .color-s .preferential-box.preferential-box-t .pre-text-box .pre-value span {
+  display: inline;
+}
+.bg-s .color-s .preferential-box.preferential-box-t .pre-text-box .pre-value span.pre-value-span {
+  display: none;
+}
+.bg-s .color-s .preferential-box.preferential-box-t .pre-text-box .pre-text em {
+  display: none;
+}
+.bg-s .color-s .preferential-box.preferential-box-t .pre-text-box .pre-text .em-1 {
+  display: inline;
+}
+.bg-s .color-s .preferential-box .pre-text-box {
+  position: relative;
+}
+.bg-s .color-s .preferential-box .pre-text-box .pre-text {
+  font-size: 16px;
+  color: #0a0a0a;
+  position: relative;
+  margin-left: 30px;
+}
+.bg-s .color-s .preferential-box .pre-text-box .pre-text .em-1 {
+  display: none;
+}
+.bg-s .color-s .preferential-box .pre-text-box .pre-text span {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 1px;
+  left: -30px;
+  display: inline-block;
+  background: url(../../../images/html/b2s/pay_icons.png?v=Cc99XTXB4%2B3azW139kdSYA%3D%3D) -300px 0 no-repeat;
+}
+.bg-s .color-s .preferential-box .pre-text-box .pre-text .n-chose {
+  background-position: -350px 0;
+}
+.bg-s .color-s .preferential-box .pre-text-box .pre-value {
+  position: absolute;
+  right: 0;
+  font-size: 16px;
+  color: #fb8301;
+  top: 0;
+}
+.bg-s .color-s .preferential-box .pre-text-box .pre-value span {
+  display: none;
+}
+.bg-s .color-s .preferential-box .pre-text-box .pre-value span.pre-value-span {
+  display: inline;
+}
+.bg-s .color-s .preferential-box .pre-text-box .value-span {
+  color: #fb8301;
+}
+.bg-s .color-s .preferential-box .top-v {
+  margin-top: 7px;
+}
+.bg-s .color-s .pay-money {
+  text-align: right;
+  margin-top: 20px;
+  color: #0a0a0a;
+  font-size: 16px;
+}
+.bg-s .color-s .pay-money span {
+  color: #fb8301;
+  font-size: 25px;
+}
+.bg-s .color-s .pay-btn {
+  display: none;
+  text-align: right;
+  margin-top: 20px;
+}
+.bg-s .color-s .pay-btn a {
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 25px;
+  color: #fff;
+  width: 190px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #ffbe23;
+}

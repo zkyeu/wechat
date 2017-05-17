@@ -1,0 +1,100 @@
+<% include ../common/top.ejs %>
+<body>
+<div id="container" data-init="teenagers">
+  <div class="head">
+    <div class="widthMain">
+      <div class="nav">
+        <img src="<%= imagessrc%>pg.png" class="lt">
+        <img src="<%= imagessrc%>p_logo_rt.png" class="rt">
+      </div>
+      <div class="baner">
+        <img src="<%= imagessrc%>p_img.jpg" class="ban-img">
+        <div class="bar-rt" >
+          <img src="<%= imagessrc%>p_tit01.png" class="rt-tit">
+          <form action="name" id="t-regForm">
+            <div class="rt-input01">
+              <div class="rt-input">
+                <input type="email" name="email" placeholder="请输入您的邮箱" class="pow-safari pow_email pow-input jsCheck">
+                <input type="tel" name="mobile" placeholder="请输入您的手机号" class="pow-safari pow_phone pow-input jsCheck">
+                <input type="password" name="password" placeholder="请设置您的密码" class="pow-safari pow_pw pow-input jsCheck">
+                <a href="javascriopt:;" type="group" name="group" class="pow_group pow-input jsCheck">选择年级组</a>
+                <img class="pg_arrow" src="<%= imagessrc%>pg_down.png" alt="">
+                <div class="list_group" style="display:none">
+                  <a href="javascript:;" class="pow-input middleStu">中学</a>
+                  <a href="javascript:;" class="pow-input collegeStu">大学</a>
+                </div>
+                <a href="javascript:;" class="pow_btn ctr-btn jsSubmit">立即抢课</a>
+               <!--  <p>若已是会员，请<a href="javascript:;">登录</a></p> -->
+              </div>
+            </div>
+          </form> 
+        </div>   
+      </div>
+    </div>
+  </div>
+  <!-- 文字内容 -->
+  <div class="ten-word">
+    <div class="widthMain">
+      <p>亲爱的同学们：</p>
+      <span>大家好！为了全面提升您的英语水平，提升对话世界的能力，批改网携手51Talk无忧英语，为同学们提供了3次在线外教一对一课程，确认批改网的手机号码即可领取，随时随地预约体验，外教课程还可以帮助同学们更好地完成本次寒假作业。小伙伴们，还等什么，赶快领取课程体验吧！</span>
+    </div>
+  </div>
+  <div class="time-img">
+    <div class="widthMain">
+      <img src="<%= imagessrc%>q_titie_bj.png" class="tit">
+    </div>
+  </div>
+  <div class="langer">
+    <div class="widthMain">
+      <p>语言环境和口语学习同步进行</p>
+      <img src="<%= imagessrc%>tit03.png">
+      <img src="<%= imagessrc%>p_img02.png" class="rt-img">
+    </div>
+  </div>
+  <!-- 学员心声 -->
+  <div class="m_evaluation">
+    <div class="widthMain">
+      <h1 class="m_courseT"><img src="<%= imagessrc%>q_tit_06.png" alt=""></h1>
+      <div class="m_courseL s_cb"></div>
+      <div class="m_student">
+        <div class="m_studentI f_p1">
+          <p class="m_studentE">我从小就学英语，但主要是应试类的。现在，听力在考试中占得比重高了，我想跟着外教练口语和听力。我选了次卡套餐。每次课25分钟，手机和iPad都能上课，特别方便。外教都很有经验，而且很nice，所以我上课也比较轻松。现在看美剧基本都差不多能听懂了，听力考试什么的，应该都没什么问题。</p>
+          <dl class="s_dl7">
+            <dt><img src="<%= imagessrc%>pr_img01.png" alt=""></dt>
+            <dd><span>Tiger</span><br/> </dd>
+          </dl>
+        </div>
+        <div class="m_studentI f_p2">
+          <p class="m_studentE m_s1">有一次跑步之后在回家的路上，我突然想到要是有一种学习方式，就是和老师电话或者语音来学习，可以灵活安排时间，又可以提高英文口语，带着这样的想法去网上找，果然找到了51Talk，竟然有一种心想事成的感觉。</p>
+          <dl class="s_dl7 s_dl8">
+            <dt><img src="<%= imagessrc%>pr_img02.png" alt=""></dt>
+            <dd><span>Gary</span><br/></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 星光璀璨 -->
+  <div class="m_star">
+    <div class="widthMain">
+      <h1 class="m_courseT"><img src="<%= imagessrc%>q_tit_07.png" alt=""></h1>
+      
+      <div class="star_lina"><img src="<%= imagessrc%>star_lina.png" alt=""></div>
+      <div class="star_lina_r"><img src="<%= imagessrc%>star_lina_r.jpg" alt=""></div>
+    </div>
+  </div>
+   
+  <!-- 尾部注册 -->
+  <div class="g_bottom">
+    <div class="widthMain">
+      <p class="piped">Copyrigh&copy;北京大生知行科技有限公司<i>|</i>
+      <a href="#" target="_blank">隐私声明</a><i>|</i>
+      <a href="#" target="_blank">用户协议</a><i>|</i>
+      京ICP证110696号&nbsp;京ICP备11031999号
+      <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253020514'%3E%3C/span%3E%3Cscript _src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1253020514%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+      </p>
+    </div>
+  </div>
+</div>
+</body>
+<% include ../common/bottom.ejs %>

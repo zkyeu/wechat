@@ -1,0 +1,1 @@
+define("tongjixiaolv",["echarts.min","layui"],function(i,t,a){i("echarts.min"),i("layui");var e=$(".by-time span");e.on("click",function(){$(this).addClass("cut-sel").siblings().removeClass("cut-sel"),$("#getTimeType").val($(this).attr("data-time"))})});

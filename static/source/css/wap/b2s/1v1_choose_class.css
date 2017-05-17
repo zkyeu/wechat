@@ -1,0 +1,317 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: 
+ */
+#fontSizeLoding {
+  width: 100%;
+  min-height: 100%;
+  max-width: 640px;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+#fontSizeLoding img {
+  width: 30px;
+  height: 30px;
+  margin-left: -15px;
+  margin-top: -15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.choose_class .top_message {
+  padding-top: 0.44rem;
+}
+.choose_class .top_message img {
+  width: 100%;
+}
+.choose_class .top_message .class_mes {
+  overflow: hidden;
+  width: 5.9rem;
+  height: 1.0rem;
+  background: #fbfbfb;
+  margin: 0 auto;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+.choose_class .top_message .class_mes p {
+  float: left;
+  padding-top: 0.31rem;
+  font-size: 0.25rem;
+}
+.choose_class .top_message .class_mes p span {
+  color: #ec615c;
+}
+.choose_class .top_message .class_mes .mes_tit_1 {
+  width: 2.5rem;
+}
+.choose_class .top_message .class_mes .mes_tit_3 {
+  width: 100%;
+  text-align: center;
+}
+.choose_class .to_class_content .class_step_after {
+  padding: 0.15rem 0.2rem 0 0.3rem;
+}
+.choose_class .to_class_content .class_step_after .right_step_1 {
+  height: 2.6rem;
+  padding: 0.63rem 0 0 0.74rem;
+  margin: 0 auto;
+  background: url(../../../images/wap/b2s/choose-class-2.png?v=vUdl25%2BHv0MzEjCzQ%2BLc5w%3D%3D) no-repeat left top;
+  background-size: 2.92rem 3.5rem;
+}
+.choose_class .to_class_content .class_step_after .right_step_1 .text_intro {
+  font-size: 0.28rem;
+  color: #3f5069;
+}
+.choose_class .to_class_content .class_step_after .right_step_1 .text_top {
+  padding-top: 0.2rem;
+}
+.choose_class .to_class_content .class_step_after .right_step_1 .text_intro_time {
+  color: #ff505b;
+  font-size: 0.26rem;
+}
+.choose_class .to_class_content .class_step_after .right_step_2 {
+  height: 3.9rem;
+  padding: 0.7rem 0 0 0.7rem;
+  margin: 0 auto;
+  background: url(../../../images/wap/b2s/choose-class-3.png?v=7lsyI8WDllHmBXho0fdv6w%3D%3D) no-repeat left top;
+  background-size: 2.25rem 4.53rem;
+}
+.choose_class .to_class_content .class_step_after .right_step_2 .text_intro {
+  font-size: 0.28rem;
+  color: #3f5069;
+}
+.choose_class .to_class_content .class_step_after .right_step_2 .text_intro_time {
+  color: #ff505b;
+}
+.choose_class .to_class_content .class_step_after .right_step_2 .code_box {
+  width: 1.8rem;
+  height: 1.8rem;
+  padding: 0.1rem;
+  border: 1px solid #ecc149;
+  margin: 0.4rem 0 0.1rem 1.3rem;
+}
+.choose_class .to_class_content .class_step_after .right_step_2 .code_box img {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+.choose_class .to_class_content .class_step_after .right_step_2 .intro_last_code {
+  padding-right: 0.6rem;
+  color: #ecc149;
+  text-align: center;
+}
+.choose_class .to_class_content .class_step_after .right_step_3 {
+  height: 1rem;
+  padding: 0.63rem 0 0 0.74rem;
+  margin: 0 auto;
+  background: url(../../../images/wap/b2s/choose-class-4.png?v=rFSD%2BdGzOLJS2juOoXhciA%3D%3D) no-repeat left top;
+  background-size: 1.95rem 0.64rem;
+}
+.choose_class .to_class_content .class_step_after .right_step_3 .text_intro {
+  font-size: 0.28rem;
+  color: #3f5069;
+}
+.choose_class .to_class_content .class_step_after .right_step_3 .text_intro_time {
+  color: #ff505b;
+}
+.choose_class .to_class_content .class_step_after .choose_class_btn {
+  width: 5rem;
+  height: 0.8rem;
+  display: block;
+  margin: 0.5rem auto 0.5rem;
+  border-radius: 99px;
+  text-align: center;
+  line-height: 0.8rem;
+  background: #ff6062;
+  font-size: 0.32rem;
+  color: #fff;
+}
+.choose_class .to_class_content .class_step_before {
+  padding: 0.15rem 0.2rem 0 0.3rem;
+}
+.choose_class .to_class_content .class_step_before .right_step_1 {
+  height: 2.57rem;
+  padding: 0.63rem 0 0 0.74rem;
+  margin: 0 auto;
+  background: url(../../../images/wap/b2s/choose-class-5.png?v=uptaZYnziFjM7wSc7f8Gqg%3D%3D) no-repeat left top;
+  background-size: 2.88rem 3.14rem;
+}
+.choose_class .to_class_content .class_step_before .right_step_1 .text_intro {
+  font-size: 0.28rem;
+  color: #3f5069;
+}
+.choose_class .to_class_content .class_step_before .right_step_1 .text_intro_time {
+  color: #ff505b;
+}
+.choose_class .to_class_content .class_step_before .right_step_1 .choose_class_one {
+  width: 4.3rem;
+  height: 0.8rem;
+  display: block;
+  margin: 0.5rem 0 0.5rem 0.3rem;
+  border-radius: 99px;
+  text-align: center;
+  line-height: 0.8rem;
+  background: #ff6062;
+  font-size: 0.32rem;
+  color: #fff;
+}
+.choose_class .to_class_content .class_step_before .right_step_2 {
+  height: 1.1rem;
+  padding: 0.7rem 0 0 0.7rem;
+  margin: 0 auto;
+  background: url(../../../images/wap/b2s/choose-class-6.png?v=o2c2NtVOeIHcaPaeUxthdQ%3D%3D) no-repeat left top;
+  background-size: 2.25rem 1.73rem;
+}
+.choose_class .to_class_content .class_step_before .right_step_2 .text_intro {
+  font-size: 0.28rem;
+  color: #3f5069;
+}
+.choose_class .to_class_content .class_step_before .right_step_3 {
+  height: 1rem;
+  padding: 0.63rem 0 0 0.74rem;
+  margin: 0 auto;
+  background: url(../../../images/wap/b2s/choose-class-7.png?v=KcEn4BVULDg%2FzVkeNdy2UQ%3D%3D) no-repeat left top;
+  background-size: 1.92rem 0.64rem;
+}
+.choose_class .to_class_content .class_step_before .right_step_3 .text_intro {
+  font-size: 0.28rem;
+  color: #3f5069;
+}
+.choose_class .to_class_content .class_step_before .right_step_3 .text_intro_time {
+  color: #ff505b;
+}
+.choose_class .to_class_content .class_step_before .choose_class_btn {
+  width: 5rem;
+  height: 0.8rem;
+  display: block;
+  margin: 0.5rem auto 0.5rem;
+  border-radius: 99px;
+  text-align: center;
+  line-height: 0.8rem;
+  background: #ff6062;
+  font-size: 0.32rem;
+  color: #fff;
+}
+.choose_class .to_class_content .load_app {
+  width: 5.40rem;
+  height: 0.9rem;
+  margin: 0.5rem auto 0.6rem;
+  position: relative;
+}
+.choose_class .to_class_content .load_app a {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.choose_class .to_class_content .load_app p {
+  width: 5.40rem;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  border-radius: 999px;
+  background: #ff5456;
+  text-align: center;
+  color: #fff;
+  font-size: 0.3rem;
+}
+.choose_class .about_class {
+  width: 6rem;
+  padding: 0 .2rem;
+  padding-bottom: 2.4rem;
+  background: url(../../../images/wap/b2s/process-class-1.png?v=i0%2FZwPHLj6ieo0tg18%2F5ew%3D%3D) no-repeat left bottom;
+  background-size: 6.4rem 2.95rem;
+  background-color: #ecf8ff;
+}
+.choose_class .about_class .tips_text {
+  font-size: 0.2rem;
+  color: #8696ad;
+  padding: 0.6rem;
+}
+.choose_class .about_class .tips_text p {
+  line-height: 0.5rem;
+}
+.choose_class .about_class .about_text_1 {
+  color: #43c4ff;
+  font-weight: 900;
+  font-size: 0.32rem;
+  padding-top: 0.65rem;
+  text-align: center;
+}
+.choose_class .about_class .text_title {
+  font-size: 0.28rem;
+  color: #43c4ff;
+  padding: 0.4rem 0 0 0.45rem;
+  font-weight: 900;
+}
+.choose_class .about_class .text_mes_show {
+  padding-top: 0.2rem;
+  padding-left: 0.48rem;
+  color: #4e5c6f;
+  position: relative;
+  line-height: 0.5rem;
+}
+.choose_class .about_class .text_mes_show:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: url(../../../images/wap/b2s/process-class-3.png?v=Rt4ORR5IY4WgjjUhmFcFKw%3D%3D) no-repeat;
+  background-size: 0.23rem 0.24rem;
+  width: 0.23rem;
+  height: 0.24rem;
+  left: 0;
+  top: 0.35rem;
+}
+.choose_class .about_class .text_mes_show a {
+  color: #43c4ff;
+}
+.choose_class .about_class .code_box {
+  width: 1.8rem;
+  height: 1.8rem;
+  padding: 0.1rem;
+  border: 1px solid #70c6f9;
+  margin: 0.4rem auto 0.1rem;
+}
+.choose_class .about_class .code_box img {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+.choose_class .about_class .intro_last_code {
+  text-align: center;
+  color: #8996ab;
+}
+.choose_class .load_chose_class_null {
+  width: 5.40rem;
+  height: 1.3rem;
+}
+.choose_class .load_chose_class {
+  width: 100%;
+  height: 0.9rem;
+  padding: 0.2rem 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: #4998e0;
+}
+.choose_class .load_chose_class a {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.choose_class .load_chose_class p {
+  width: 5.40rem;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  border-radius: 999px;
+  background: #ff5456;
+  text-align: center;
+  color: #fff;
+  font-size: 0.3rem;
+  margin: 0 auto ;
+}

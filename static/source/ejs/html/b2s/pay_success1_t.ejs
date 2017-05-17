@@ -1,0 +1,108 @@
+<% include ../common/top.ejs %>
+<link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>pay_success_t.css">
+<body id="container" data-init="index">
+<!-- 公共头 -->
+<% include ../common/b2s/b2s_header.ejs %>
+<div class="dialog">
+  <div class="content">
+    <div class="tips">
+      <h4>创建班级</h4>
+      <a class="close" href="javascript:;"></a>
+    </div>
+    <div class="info"></div>
+    <div class="submit">
+        <a href="javascript:;">立即创建</a>
+    </div>
+  </div>
+</div>
+<!-- 中间内容 -->
+<div class="mycls bg-s">
+  <div class="widthMain">
+    <!-- banner -->
+    <% include ../common/b2s/b2s_banner.ejs %>
+    <div class="central">
+      <i class="cls-icon"></i>
+      <!-- <div class="stu_tit">
+        <dl>
+          <dt><img src="<%= imagessrc%>stu.jpg" alt=""></dt>
+          <dd class="intro_one"><span>流川枫</span> 同学</dd>
+          <dd>班级：三年二班</dd>
+          <dd>老师：林徽因</dd>
+        </dl>
+        <p class="stu_number">学生邀请码：123456</p>
+      </div> -->
+    <!-- 侧栏 -->
+    <!--<% include ../common/b2s/b2s_sidebar.ejs %> -->
+      <div class="cls-main color-s cls-main-no-left">
+        <!-- 我的班级 -->
+        <div class="cls-tab rct rct-no-left">
+          <div class="pay-success">
+            <div class="pay-tit-box pay-tit-b">
+              <span class="success-i"></span>
+              <div class="pay-tit">
+                <div class="success-promt">恭喜您！支付成功！</div>
+              </div>
+            </div>
+            <div class="pay-border"></div>
+            
+            
+          </div>
+          <div class="class-info">
+            <div class="class-tit">
+              <i></i>
+              您的上课信息如下，请按时登录AC上课软件出席
+            </div>
+            <table class="table-box">
+              <thead>
+                <tr>
+                  <td>课程</td>
+                  <td>课程学习有效期</td>
+                  <td>时间</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1个月课程包</td>
+                  <td><p>外教1对1课12课次</p>
+<p>中教辅导课4课次</p></td>
+                  <td>30天</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="class-info info-top">
+            
+            <div class="class-tit">
+              <i></i>
+              立即选择中教铺导班，开启孩子的英文学习之旅
+            </div>
+            <div class="code-box">
+              <img src="<%= imagessrc%>1v3_intro.jpg">
+            </div>
+            <div class="code-text">手机扫码选择“1对1外教全程托管班”<div>
+            <!--
+            <div class="img-box"><img src="<%= imagessrc%>pay_01.png"/></div>
+            <ul class="ul-box clearfix">
+              <li>预约体验测评课上课时间</li>
+              <li class="li2">选电脑AC为上课工具</li>
+              <li class="li3">按时上课</li>
+              <li class="li4">查看报告</li>
+            </ul>
+            <div class="pay-button">
+              <a href="javascript:;">立即预约级别测评课</a>
+            </div> -->
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>
+<!--公共弹层-->
+<div class="layer hide" id="layerTip">
+  <p>温馨提示<i class="tenIcon ly-icon"></i></p>
+  <div class="ly-tit">该课程是通过AC客户端上课，请<a href="javascript:;">点击下载</a>安装。如已经安装,请以学生身份注册账户，登录AC上课。</div>  
+</div>
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

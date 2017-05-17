@@ -1,0 +1,151 @@
+<!-- 图片轮播 -->
+<div class="play">
+  <ul class="pic">
+    <li class="first" data-vedio="http://media.51talk.com/upload/media/lina.flv" data-width="780" data-height="">
+      <img src="<%= imagessrc%>/car_img01.jpg" alt="" class="p-img" width="1920" height="520">
+    </li>
+    <li data-vedio="http://media.51talk.com/upload/media/h_shipin.mp4" data-width="" data-height="">
+      <img src="http://www.51talk.com/upload/ad/2015101319503682719.png" alt="" class="p-img" width="1920" height="520">
+    </li>
+    <li data-vedio="http://media.51talk.com/upload/media/h_student.mp4" data-width="" data-height="">
+      <img src="http://static.51talk.com/images/web_new/home/banner/index.jpg?v=2" alt="" class="p-img" width="1920" height="520">
+    </li>
+    <li data-vedio="http://media.51talk.com/upload/media/h_study_2.flv" data-width="" data-height="">
+      <img src="http://static.51talk.com/images/web_new/home/banner/student1.jpg?v=2" alt="" class="p-img" width="1920" height="520">
+    </li>
+  </ul>
+  <ul class="switch">
+    <li class="crt"></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul> 
+  <!-- 切换 -->
+  <div class="sign-cha">
+    <div class="centerMth">
+      <!-- 左右切换 -->
+      <div class="change">
+        <a href="javascript:;" class="lt"><i></i></a>
+        <a href="javascript:;" class="rt"><i></i></a>
+      </div>
+      <!-- 视频播放 -->
+      <div class="video_play" data-vedioSrc="http://media.51talk.com/upload/media/lina.flv" data-width="780" data-height="">
+        <a href="javascript:;" class="video"><i></i></a>
+      </div>
+      <!-- 注册 -->
+      <div class="m-main">
+        <div class="m-reg">
+          <form action="">
+            <ul class="m-tab clearfix">
+              <li class="crt">注册</li>
+              <li>登录</li>
+            </ul>
+            <ul class="m-ipts">
+              <li>
+                <dl>
+                  <dt class="icon3"></dt>
+                  <dd><input class="jsCheck" type="text" name="mobile" placeholder="填写手机号获取免费上课提醒" autocomplete="removemobile"></dd>
+                </dl>
+                <div class="u-err"></div>
+              </li>
+              <li>
+                <dl>
+                  <dt class="icon2"></dt>
+                  <dd><input class="jsCheck" type="password" name="password" placeholder="填写密码" autocomplete="removepassword"></dd>
+                </dl>
+                <div class="u-err"></div>
+              </li>
+              <li>
+                <dl>
+                  <dt class="icon-user"></dt>
+                  <dd><input class="jsEmpty jsCheck" type="text" name="user_name" placeholder="填写邮箱" autocomplete="removeemail"></dd>
+                </dl>
+                <div class="u-err">上发送到发送到</div>
+              </li>
+              <li class="m-referral">
+                <p class="referral-code">若您有推荐人/推荐码，请点这里</p>
+                <dl>
+                  <dt class="icon4"></dt>
+                  <dd><input  type="text" name="recommen_mobile" placeholder="推荐人手机号/推荐码/没有不填"></dd>
+                </dl>
+                <div class="u-err"></div>
+              </li>
+            </ul>
+            <input type="button" class="u-reg-btn jsSubmit" value="免费领取体验课">
+            <p class="u-txt">已有超过 <em>5,000,000</em> 名学习者选择51talk</p>
+          </form>
+        </div>
+        <div class="m-log">
+          <form action="">
+            <ul class="m-tab clearfix">
+              <li>注册</li>
+              <li class="crt">登录</li>
+            </ul>
+            <ul class="m-ipts">
+              <li>
+                <dl>
+                  <dt class="icon1"></dt>
+                  <dd><input class="jsCheck" type="text" name="user_name" placeholder="已验证手机/邮箱"></dd>
+                </dl>
+                <div class="u-err">发生的方式发送到</div>
+              </li>
+              <li>
+                <dl>
+                  <dt class="icon2"></dt>
+                  <dd><input class="jsCheck" type="text" name="password" placeholder="请输入您的密码"></dd>
+                </dl>
+                <div class="u-err"></div>
+              </li>
+            </ul>
+            <div class="m-safe clearfix">
+                    <span class="u-auto">
+                        <input id="autoLogin" name="autoLogin" type="checkbox" >
+                        <label for="autoLogin">下次自动登录</label>
+                    </span>
+                    <span class="u-forget">
+                        <a href="javascript:;">忘记密码?</a>
+                    </span>
+                </div>
+            <input type="button" class="u-log-btn jsSubmit" value="免费领取体验课">
+            <dl class="m-other">
+              <dt>可以用以下方式登录</dt>
+              <dd class="icon-sina"><a href="javascript:;"></a></dd>
+              <dd class="icon-qq"><a href="javascript:;"></a></dd>
+            </dl>
+          </form>
+        </div>
+      </div>
+      <div class="m-online hide">
+        <h2 class="u-hd">
+          Hi,song:
+        </h2>
+        <div class="m-group">
+          <p class="u-txt">您已完成 <em class="f-clo">200</em> 节课</p>
+          <p class="u-txt">累计说英语 <em class="f-clo">100</em> 小时</p>
+          <a href="javascript:;" class="u-btn">预约课程</a>
+        </div>
+        <div class="m-group">
+          <p class="u-txt">剩余次卡： <em class="f-clo">8</em> 次  <em class="f-clo">请购买次卡套餐</em></p>
+          <p class="u-txt">剩余包月： <em class="f-clo">0</em> 天  <em class="f-clo">请购买次卡套餐</em></p>
+          <a href="javascript:;" class="u-btn">购买课程</a>
+        </div>
+        <div class="u-ft">
+          <a href="javascript:;" class="u-btn-2">进入我的会员中心</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="notice-mast-box">
+  <div class="m-notice">
+    <h3 class="notice-tit">系统通知</h3>
+    <div class="notice-inner">
+      <p>该手机号码已存在，请直接登录，或使用其他号码注册。</p>
+      <ul class="notice-sub">
+        <li class="sub-left">换个号码注册</li>
+        <li>登录</li>
+      </ul>
+    </div>
+  </div>
+  <div class="notice-mask"></div>
+</div>

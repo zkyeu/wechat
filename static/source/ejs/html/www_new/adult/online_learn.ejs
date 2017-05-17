@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>英语学习，口语学习首选的英语学习网站，51talk无忧英语，外教一对一，在线学英语！</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="keywords" content="{<info.keywords>}" />
+	<meta name="description" content="51tailk无忧英语专业提供网络英语外教一对一培训教学,专注于真人英语外教一对一培训,让您足不出户,网上平价学英语.英语外教一对一培训服务热线4000-51-51-51"/>
+	<link rel="stylesheet" type="text/css" href="<%= cssPath %>common/commons.css">
+  <link rel="stylesheet" type="text/css" href="<%= cssPath %>adult/w_online_learn.css">
+	<!--[if IE 6]><script src="../js/lib/DD_belatedPNG_0.0.8a.min.js"></script><![endif]-->
+</head>
+<body>
+<!-- 公共区域 -->
+<%- include("../common/w_nav.ejs",{
+  wrapClass:"adult-nav-list",
+  navList:[
+    {
+      className:"crt",
+      text:"51Talk成人英语",
+      url:"http://adult.51talk.com/"
+    },
+    {
+      className:"",
+      text:"学习理念",
+      url:"http://www.51talk.com/index/feature"
+    },
+    {
+      className:"",
+      text:"课程体系",
+      url:"http://www.51talk.com/index/system"
+    },
+    {
+      className:"",
+      text:"外教师资",
+      url:"http://www.51talk.com/index/teachers"
+    },
+    {
+      className:"",
+      text:"学习体系",
+      url:"http://www.51talk.com/index/guide"
+    },
+    {
+      className:"",
+      text:"名师课堂",
+      url:"http://www.51talk.com/index/multiClass"
+    }
+  ],
+  isIndex:false, //判断是否为首页
+  isNorth:false //判断是否为美小
+
+  }) %>
+  <div>
+    <% include ../common/w_banner.ejs %>
+  </div>
+<!-- /公共区域 -->
+<!-- 学习概念 -->
+<div class="concept" data-init="adult/index" id="container">
+	<div class="c_topYears m-online-title">
+		<img data-src="<%=imagessrc%>adult/online_learn_imgtitle.png" width="796" height="98" src="<%=imagessrc%>common/deafult.png" class="online-topTitle">
+		<div class="m-online-imgs">
+        <a href="javascript:;" class="online-learn"><img data-src="<%=imagessrc%>adult/online_learn.jpg" width="507" height="311" src="<%=imagessrc%>common/deafult.png"></a>
+        <a href="javascript:;" class="online_pratice"><img data-src="<%=imagessrc%>adult/online_pratice.jpg" width="491" height="344" src="<%=imagessrc%>common/deafult.png"></a>
+        <a href="javascript:;" class="online-enhance"><img data-src="<%=imagessrc%>adult/online_enhance.jpg" width="495" height="346" src="<%=imagessrc%>common/deafult.png"></a>
+        <a href="javascript:;"class="online-test"><img data-src="<%=imagessrc%>adult/online_test.jpg" width="499" height="333" src="<%=imagessrc%>common/deafult.png"></a>
+    </div>
+	</div>
+	<div class="c_howTLearn m-online-box">
+		<div class="m-online-desc">
+				<div class="online-sys">                           
+						<img data-src="<%=imagessrc%>adult/online_syestem_learn.png" width="1000" height="162" src="<%=imagessrc%>common/deafult.png" class="online-sys-img"> 
+						<ul class="clearfix">
+							<li>
+									<img data-src="<%=imagessrc%>adult/online_sys1.jpg" width="320" height="213" src="<%=imagessrc%>common/deafult.png">
+									<p>专业外教1对1教学，纯英语环境、强互动 教学，无论自我提升、上班充电、出国留 学，都能满足您的需求。</p>
+							</li>
+							<li>
+									<img data-src="<%=imagessrc%>adult/online_sys2.jpg" width="320" height="213" src="<%=imagessrc%>common/deafult.png">
+									<p>面向零基础学员的起步课程，中教老师使 用中英双语，引领零基础学员走向外教 1对1。</p>
+							</li>
+							<li class="last">
+									<img data-src="<%=imagessrc%>adult/online_sys3.jpg" width="320" height="213" src="<%=imagessrc%>common/deafult.png">
+									<p>精彩纷呈的话题，50分钟的小班讨论形式， 分聆听与表达、参与并分享，把学到英语 一起用起来！</p>
+							</li>
+						</ul>
+				</div>
+				<div class="online-weLearn">
+						<img data-src="<%=imagessrc%>adult/online_secondTitle.png" width="515" height="38" src="<%=imagessrc%>common/deafult.png">
+				</div>
+				<div class="online-secondTitle">
+						<img data-src="<%=imagessrc%>adult/online_goes.jpg" width="742" height="119" src="<%=imagessrc%>common/deafult.png">
+						<a href="#" class="hrefLeft"></a>
+						<a href="#" class="hrefRight"></a>
+				</div>
+				<div class="online-freq-prac">
+						<img data-src="<%=imagessrc%>adult/online_freq_prac.png" width="1000" height="162" src="<%=imagessrc%>common/deafult.png">
+						<h3 class="u-freq-myTitle">我们提供包括人机交互在内的多种练习形式，帮您在碎片时间强化学习效果。</h3>
+						<ul class="online-freq-list clearfix">
+								<li class="u-freq-left">
+										<img data-src="<%=imagessrc%>adult/online_freq_left.jpg" width="478" height="250" src="<%=imagessrc%>common/deafult.png" class="left-img">
+										<ul class="u-freq-desc1 clearfix">
+												<li class="u-freq-Box">
+														<h4>课前预习</h4>
+														<p>课前提供对词汇（含短语）和例句的听读预习和语法讲解，经典英语还可跟读课中对话、矫正发音，做好上课的准备。</p>
+												</li>
+												<li class="u-freq-Box no-pl">
+														<h4>课后复习</h4>
+														<p>课后小测帮助您巩固上课所学内容，时时监控学习效果。</p>
+												</li>
+										</ul>
+										<a href="" class="u-href-desc">
+												<img data-src="<%=imagessrc%>adult/online_freq_enhance.png" width="235" height="23" src="<%=imagessrc%>common/deafult.png">
+												<p>课前预习、1对1外教课和课后复习，<br/> 有效形成学习链条，帮助您提升学习能力、养成学习习惯， 
+												<br/>最终得到满意的学习效果</p>
+										</a>
+								</li>
+								<li class="u-freq-right">
+										<img data-src="<%=imagessrc%>adult/online_freq_right.jpg" width="475" height="250" src="<%=imagessrc%>common/deafult.png" class="right-img">
+										<ul class="u-freq-desc2 clearfix">
+												<li class="u-freq-Box">
+														<h4>Watch</h4>
+														<p>原汁原味的英语短篇增加可理解输入， 大量输入才是高质量输出的前提和保障。</p>
+												</li>
+												<li class="u-freq-Box no-pl">
+														<h4>Learn</h4>
+														<p>在看和听中自然习得新表达、新用法，有效扩大词汇储备。</p>
+												</li>
+												<li class="u-freq-Box no-br">
+														<h4>Speak</h4>
+														<p>独特的互动语音评价技术，辅助您通过模仿提升发音和流利度。</p>
+												</li>
+										</ul>
+										<a href="" class="u-href-desc">
+												<img data-src="<%=imagessrc%>adult/online_freq_score.png" width="300" height="23" src="<%=imagessrc%>common/deafult.png">
+												<p>超强互动的英语学习工具</p>
+										</a>
+								</li>
+						</ul>
+				</div>
+				<div class="online-test">
+						<img data-src="<%=imagessrc%>adult/online_test.png" width="1000" height="162" src="<%=imagessrc%>common/deafult.png">
+						<h3 class="u-freq-myTitle">在51Talk每个level阶段都有针对性级别测试；通过不同阶段的级别测试将获得等级证书</h3>
+						<img data-src="<%=imagessrc%>adult/online_test_img.jpg" width="961" height="306" src="<%=imagessrc%>common/deafult.png" class="u-test-img">
+				</div>
+				<div class="online-help openClass">
+						<img data-src="<%=imagessrc%>adult/online_help.png" width="1000" height="162" src="<%=imagessrc%>common/deafult.png">
+						<h3 class="u-freq-myTitle">辅导老师提供各种辅导和辅助课，帮您加倍提升学习效果。</h3>
+						<ul class="online-help-list clearfix">
+							<li>
+									<img data-src="<%=imagessrc%>adult/online_help_learnWay.jpg" width="475" height="220" src="<%=imagessrc%>common/deafult.png">
+									<p>学习英语不是一个人的孤独奋斗，您在51Talk的学习历程将由Personal Tutor陪伴，全程支持、鼓励与指导，给您提供有效的学习方法，帮您避开重大的学习误区,让英语学习事半功倍</p>
+							</li>
+							<li>
+									<img data-src="<%=imagessrc%>adult/online_help_openclass.jpg" width="475" height="220" src="<%=imagessrc%>common/deafult.png">
+									<p>门类丰富、品种齐全的多种免费中外教实时网络课程，使用手机即可随时随地登录上课，周一至周日全覆盖，根本停不下来！</p>
+							</li>
+						</ul>
+				</div>
+
+		</div>
+	</div>
+</div>
+<div>
+		<ul class="online-learn-download">
+				<li>
+						<img data-src="<%=imagessrc%>adult/online_down_regist.jpg" width="310" height="139" src="<%=imagessrc%>common/deafult.png">
+						<h3>现在注册<br/>体验在线学习课程</h3>
+						<a href="">立即注册</a>
+				</li>
+				<li>
+						<img data-src="<%=imagessrc%>adult/online_down_com.jpg" width="309" height="139" src="<%=imagessrc%>common/deafult.png">
+						<h3>下载51Talk电脑上课平台<br/>免费学习公开课</h3>
+						<a href="">立即下载</a>
+				</li>
+				<li class="last">
+						<img data-src="<%=imagessrc%>adult/online_down_phone.jpg" width="309" height="139" src="<%=imagessrc%>common/deafult.png">
+						<h3>下载51Talk手机客户端<br/>约课上课全搞定</h3>
+						<a href="">立即下载</a>
+				</li>
+		</ul>
+</div>
+<!-- 尾部 -->
+<!-- right side bar -->
+<% include ../common/w_side_bar.ejs %>
+<!-- /right side bar-->
+<% include ../common/w_footer_home.ejs %>
+</body>
+<script src="<%= jsPath%>common/jquery.min.js"></script>
+<script src="<%= jsPath%>vendor.js" id="seajsnode"></script>
+</html>

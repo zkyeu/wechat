@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+	<meta content="yes" name="apple-mobile-web-app-capable" /> 
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+	<meta content="telephone=no" name="format-detection" /> 
+	<title>预约完成</title>
+	<link rel="stylesheet" type="text/css" href="/css/wap/reg_2015708/reg_2015708.css">		
+</head>
+<body>
+  <header>
+    <img src="/images/wap/reg_2015708/logo.png">
+    <a class="rt"></a>
+</header> 
+  <section class="amr-rec" data-init="reg" id="container" data-debug="1" data-url="xxx">
+      <p class="tit">每日名额有限，每节25分钟。测评课后您将获得专业的英语能力测评报告，了解自己的真实英语水平。<span>马上预约↓↓</span></p>
+      <p class="ts">＊手机验证码已发送到您的手机</p>
+      <!-- 验证 -->
+      <div class="t-form">
+        <div class="f-list fst-list">
+          <input name="mobile" type="text" class="mobile" placeholder="请输入手机号码">
+        </div>
+        <div class="f-list">
+          <span class="f-t fst-list">
+            <input name="code" type="text" placeholder="请输入验证码" id="checked_imgcode" class="cd_code"></span>
+          <span class="f-t">
+            <img style="margin-left:10px; border: 1px solid #d0d0d0;float:left;cursor: pointer;" id="verifycode" src="http://www.51talk.com/user/verify.php" height="35" width="80" onclick="this.src='http://www.51talk.com/user/verify.php'+'?a'+'='+new Date().getTime()" alt="单击更换验证码" title="单击更换验证码">
+            <a href="javascrpit:;" class="rtChange">点击换一张</a>
+          </span>
+        </div>
+        <div class="f-list">
+          <span class="f-t fst-list">
+            <input name="checked_code" type="text" placeholder="请输入验证码" id="checked_code" class="cd_code nouse">
+          </span>
+          <span class="f-t">
+            <em class="y-code" id="getCode">获取验证码</em>
+          </span>
+        </div>
+      </div>
+      <!-- /验证 -->
+      <div class="t-data">
+        <p class="t-s">请选择上课日期</p>
+        <ul class="da-list">
+          
+            
+              <li class="full" data-name="xx" data-val="1" data-time="tmData"><a><span class="tm">今天</span><span class="dta">已满</span></a></li>
+            
+          
+            
+              <li class="d-list" data-name="xx" data-val="2"  data-time="tmData"><a ><span class="tm">明天</span><span class="dta">周二</span></a></li>
+            
+          
+            
+              <li class="d-list" data-name="xx" data-val="2"  data-time="tmData"><a ><span class="tm">明天</span><span class="dta">周二</span></a></li>
+            
+          
+            
+              <li class="d-list" data-name="xx" data-val="2"  data-time="tmData"><a ><span class="tm">明天</span><span class="dta">周二</span></a></li>
+            
+          
+            
+              <li class="d-list" data-name="xx" data-val="2"  data-time="tmData"><a ><span class="tm">明天</span><span class="dta">周二</span></a></li>
+            
+          
+        </ul> 
+      </div>
+      <!-- 已满：dataType:"0", 可选：dataType:"1",-->
+      <div class="t-time">
+        <p class="t-s">请选择上课时间</p>
+        <ul class="da-list">
+          <li class="full" dataType="0"><a href="javascript:;"><span class="tm">14:00</span><span class="dta">已满</span></a></li>
+          <li class="d-list" dataType="1"><a href="javascript:;"><span class="tm">14:30</span><span class="dta">可选</span></a></li>
+          <li class="d-list"><a href="javascript:;"><span class="tm">15:00</span><span class="dta">可选</span></a></li>
+          <li class="d-list"><a href="javascript:;"><span class="tm">15:30</span><span class="dta">可选</span></a></li>
+          <li class="d-list"><a href="javascript:;"><span class="tm">16:00</span><span class="dta">可选</span></a></li>
+          <li class="d-list"><a href="javascript:;"><span class="tm">16:30</span><span class="dta">可选</span></a></li>
+          <li class="d-list"><a href="javascript:;"><span class="tm">17:00</span><span class="dta">可选</span></a></li>
+          <li class="d-list"><a href="javascript:;"><span class="tm">17:30</span><span class="dta">可选</span></a></li>
+        </ul>
+        <!-- 预约已满 -->
+        <div class="da-full hide">
+          <img src="/images/wap/reg_2015708/am_img.png">
+          <p class="f-s">体验课已约满，请联系客服咨询！</p>  
+        </div>  
+      </div>
+      <!-- 按钮 -->
+    <form action="#" id="amrForm">
+      <input type="hidden" name="xx">
+      <input id="second" type="hidden" name="zzz">
+      <div class="am-btn"><a href="javascript:;">免费领取北美老师体验课</a></div>
+    </form>
+  </section>
+  <footer>
+    <aside class="second">
+        <p><span>客服热线：</span>4000-51-51-51</p>
+    </aside>
+</footer>
+</body>
+<!--公共尾部结束-->
+<script src="/js/wap/project/reg_2015708/vendor.js" id="seajsnode"></script>
+</html>

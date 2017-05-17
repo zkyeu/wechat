@@ -1,0 +1,73 @@
+<% include ../common/top.ejs %>
+<body>
+<input type="hidden" id="container" data-init=""/>
+<!-- 公共头 -->
+<% include ../common/b2s/b2s_header.ejs %>
+<!-- 中间内容 -->
+<div class="mycls">
+  <div class="widthMain">
+    <!-- banner -->
+    <% include ../common/b2s/b2s_banner.ejs %>
+    <div class="central">
+      <i class="cls-icon"></i>
+      <div class="stu_tit">
+        <dl>
+          <dt><img src="<%= imagessrc%>stu.jpg" alt=""></dt>
+          <dd class="intro_one"><span>流川枫</span> 同学</dd>
+          <dd>班级：三年二班</dd>
+          <dd>老师：林徽因</dd>
+        </dl>
+        <p class="stu_number">学生邀请码：123456</p>
+      </div>
+      <%include ../common/b2s/b2s_sidebar%>
+      <div class="cls-main">
+        <!-- 近期公开课 -->
+        <div class="cls-tab cls-list">
+          <div class="stu-cls stu-taste">
+            <div class="introduce_cont">
+              <img src="<%= imagessrc%>intro.jpg" alt="">
+              <div class="intro_right">
+                <div class="intro_right_text1">
+                  <p class="text_fudao">外教同步辅导课</p>
+                  <p class="text_intr">练就地道听说、建立英文思维、提升考试成绩</p>
+                </div>
+                <div class="intro_right_text2">
+                  <p class="be_p">原价：￥500/年</p>
+                  <p >优惠价：<span>￥300</span>/年</p>
+                  <a href="javascript:;">立即购买</a>
+                </div>
+              </div>
+            </div>
+            <div class="set_meal">
+    
+              <div class="pay_tit">
+                <p class="pay_text">课程简介</p>
+              </div>  
+                <p class="pay_text_or">《外教同步辅导课》是51talk无忧英语获得教育部中国教育学会科研规划重点课题，为中小学生们量身打造的全外教听说课程。课程由统一接受专业TKT教学培训的外教老师授课，教学经验丰富并熟悉中国学员学习习惯和思维方式，以最先进的 CLIL教学法倾力教授，同时采用TPR，PPP, communicative teaching等教学法。主题与小学课程内容紧密衔接，话题内容丰富新颖，贴近生活。</p>
+            </div>
+              <div class="set_meal">
+    
+              <div class="pay_tit">
+                <p class="pay_text">课程特色</p>
+              </div>  
+              <ul>
+                <li class="setTime">外教小班授课——打造纯正英文环境</li>
+                <li>课标主题同步——课堂内容学以致用</li>
+                <li>轻松学习无忧——同班同学互学互助</li>
+                <li>多元学科渗透——融入丰富语料内容</li>
+                <li>学习策略指导——优秀学习习惯养成</li>
+                <li>紧密结合考试——完美解决应试难题</li>
+                <li>定期科学测试——给以综合成长评定</li>
+                <li>提前规划未来——奠定未来出国之路</li>
+              </ul>
+            </div>
+          </div>    
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

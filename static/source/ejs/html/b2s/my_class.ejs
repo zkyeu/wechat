@@ -1,0 +1,197 @@
+<% include ../common/top.ejs %>
+<body id="container" data-init="index">
+<!-- 公共头 -->
+<% include ../common/b2s/b2s_header.ejs %>
+<div class="dialog">
+  <div class="content">
+    <div class="tips">
+      <h4>创建班级</h4>
+      <a class="close" href="javascript:;"></a>
+    </div>
+    <div class="info"></div>
+    <div class="submit">
+        <a href="javascript:;">立即创建</a>
+    </div>
+  </div>
+</div>
+<!-- 中间内容 -->
+<div class="mycls">
+  <div class="widthMain">
+    <!-- banner -->
+    <% include ../common/b2s/b2s_banner.ejs %>
+    <div class="central">
+      <i class="cls-icon"></i>
+      <div class="stu_tit">
+        <dl>
+          <dt><img src="<%= imagessrc%>stu.jpg" alt=""></dt>
+          <dd class="intro_one"><span>流川枫</span> 同学</dd>
+          <dd>班级：三年二班</dd>
+          <dd>老师：林徽因</dd>
+        </dl>
+        <p class="stu_number">学生邀请码：123456</p>
+      </div>
+    <!-- 侧栏 -->
+    <% include ../common/b2s/b2s_sidebar.ejs %>
+      <div class="cls-main">
+        <!-- 我的班级 -->
+        <div class="cls-tab rct" id="c-rct-nav">
+          <div class="rct-tit">
+            <p class="color_cl"><i class="tenIcon lt-icon"></i>初三五班<i class="tenIcon rt-icon"></i></p>
+            <span class="color_cm">班主任：李依依</span>
+            <span class="color_cm">学生：46人</span>
+          </div>
+          <div class="rct-nav">
+            <ul>
+              <li>学生信息</li>
+              <li class="on">近期公开课</li>
+              <li>过期公开课</li>
+            </ul>
+          </div>
+          <div class="rct-blank rct-contents"><i></i><span>还没有过期的公开课哦！</span></div>
+          <div class="rct-blank rct-contents"><i></i><span>近期没有需要上的公开课哦</span></div>
+          <!--学生信息-->
+          <div class="rct-form stu-info rct-contents" style="display:none">
+            <table class="stu-tab">
+              <thead>
+                <tr>
+                  <td>学生姓名</td>
+                  <td>上课次数</td>
+                  <td>缺席次数</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>埃莫泊</td>
+                  <td>6次</td>
+                  <td>0次</td>
+                </tr>
+                <tr>
+                  <td>埃莫泊</td>
+                  <td>6次</td>
+                  <td>0次</td>
+                </tr>
+                <tr>
+                  <td>埃莫泊</td>
+                  <td>6次</td>
+                  <td>0次</td>
+                </tr>
+                <tr>
+                  <td>埃莫泊</td>
+                  <td>6次</td>
+                  <td>0次</td>
+                </tr>
+                <tr>
+                  <td>埃莫泊</td>
+                  <td>6次</td>
+                  <td>0次</td>
+                </tr>
+                <tr>
+                  <td>埃莫泊</td>
+                  <td>6次</td>
+                  <td>0次</td>
+                </tr>
+                <tr>
+                  <td>埃莫泊</td>
+                  <td>6次</td>
+                  <td>0次</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 近期公开课 -->
+          <div class="rct-form rct-text rct-contents"  style="display:block">
+            <dl>
+              <dt><img src="<%= imagessrc%>1.jpg" alt=""></dt>
+              <dd><span class="tit">亲子阅读树《Lost ans Found》失而复得（下）</span></dd>
+              <dd><span class="word">和孩子亲密的时光，只有那么几年。如何让这样的时光变得更有意义更让孩子终身难忘？最好的方式，大概就是和他/她一起读书了！因为小时候......</span></dd>
+              <dd>
+                <div class="lt">
+                  <span class="load"><a href="javascript:;"></a></span>
+                  <span class="time">2015/12/15<em>19:00</em></span>
+                </div>
+                <div class="rt">
+                  <a href="javascript:;" class="go-cls wait">等待开始</a>
+                  <a href="javascript:;" class="go-cls wait">即将开始</a>
+                </div>
+              </dd>
+            </dl> 
+            <dl>
+              <dt><img src="<%= imagessrc%>2.jpg" alt=""></dt>
+              <dd><span class="tit">亲子阅读树《Lost ans Found》失而复得（下）</span></dd>
+              <dd><span class="word">和孩子亲密的时光，只有那么几年。如和孩子亲密的时光，只有那么几年。如</span></dd>
+              <dd>
+                <div class="lt">
+                  <span class="load"><a href="javascript:;"></a></span>
+                  <span class="time">2015/12/15<em>19:00</em></span>
+                </div>
+                <div class="rt">
+                  <a href="javascript:" class="go-cls gos">去上课</a>
+                </div>
+              </dd>
+            </dl>
+            <dl>
+              <dt><img src="<%= imagessrc%>1.jpg" alt=""></dt>
+              <dd><span class="tit">亲子阅读树《Lost ans Found》失而复得（下）</span></dd>
+              <dd><span class="word">和孩子亲密的时光，只有那么几年。如何让这样的时光变得更有意义更让孩子终身难忘？最好的方式，大概就是和他/她一起读书了！因为小时候......</span></dd>
+              <dd>
+                <div class="lt">
+                  <span class="load"><a href="javascript:;"></a></span>
+                  <span class="time">2015/12/15<em>19:00</em></span>
+                </div>
+                <div class="rt">
+                  <a href="javascript:;" class="go-cls wait">等待开始</a>
+                  <a href="javascript:;" class="go-cls wait">即将开始</a>
+                </div>
+              </dd>
+            </dl>  
+          </div>
+          <!-- 过期公开课 -->
+          <div class="rct-form rct-text rct-contents" style="display:none">
+            <dl>
+              <dt><img src="<%= imagessrc%>1.jpg" alt=""></dt>
+              <dd><span class="tit">亲子阅读树《Lost ans Found》失而复得（下）</span></dd>
+              <dd><span class="word">和孩子亲密的时光，只有那么几年。如何让这样的时光变得更有意义更让孩子终身难忘？最好的方式，大概就是和他/她一起读书了！因为小时候......</span></dd>
+              <dd>
+                <div class="lt">
+                  <span class="load"><a href="javascript:;"></a></span>
+                  <span class="time">2015/12/15<em>19:00</em></span>
+                </div>
+              </dd>
+            </dl> 
+            <dl>
+              <dt><img src="<%= imagessrc%>2.jpg" alt=""></dt>
+              <dd><span class="tit">亲子阅读树《Lost ans Found》失而复得（下）</span></dd>
+              <dd><span class="word">和孩子亲密的时光，只有那么几年。如和孩子亲密的时光，只有那么几年。如</span></dd>
+              <dd>
+                <div class="lt">
+                  <span class="load"><a href="javascript:;"></a></span>
+                  <span class="time">2015/12/15<em>19:00</em></span>
+                </div>
+              </dd>
+            </dl>
+            <dl>
+              <dt><img src="<%= imagessrc%>1.jpg" alt=""></dt>
+              <dd><span class="tit">亲子阅读树《Lost ans Found》失而复得（下）</span></dd>
+              <dd><span class="word">和孩子亲密的时光，只有那么几年。如何让这样的时光变得更有意义更让孩子终身难忘？最好的方式，大概就是和他/她一起读书了！因为小时候......</span></dd>
+              <dd>
+                <div class="lt">
+                  <span class="load"><a href="javascript:;"></a></span>
+                  <span class="time">2015/12/15<em>19:00</em></span>
+                </div>
+              </dd>
+            </dl>  
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>
+<!--公共弹层-->
+<div class="layer hide" id="layerTip">
+  <p>温馨提示<i class="tenIcon ly-icon"></i></p>
+  <div class="ly-tit">该课程是通过AC客户端上课，请<a href="javascript:;">点击下载</a>安装。如已经安装,请以学生身份注册账户，登录AC上课。</div>  
+</div>
+<!-- 公共尾部 -->
+<% include ../common/b2s/b2s_footer.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

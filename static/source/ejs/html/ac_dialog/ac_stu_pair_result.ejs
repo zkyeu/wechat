@@ -1,0 +1,76 @@
+<% include ../common/top.ejs %>
+<body class="ac-tem-pair ac-tem-stu" data-init="acPair" swfHref="" audioPath="" page-tag="pair,stu,result">
+	<div class="ac-tem">
+		<!-- <div class="ac-tem-tit">
+			<span class="ac-tem-tit-bg"></span>
+			<div class="ac-tem-tit-in ac-tem-wrap clearfix">
+				<a href="javascript:void(0);" class="ac-close ac-pair-spirts fr">Go back to class</a>
+			</div>
+		</div> -->
+	    <div class="ac-tem-con ac-tem-wrap">
+	    	<div class="ac-tem-info">
+				<ul class="clearfix">
+	            	<li class="ac-timmer">
+	            		<span>00:00</span>
+	            	</li>
+	            	<!-- <li class="ac-beans">
+                        <span>+999</span>
+                    </li> -->
+	            </ul>
+	    	</div>
+	        <div class="ac-tem-content"></div>
+	    </div>
+	</div>
+<div class="ac-stu-mask"></div>
+<div class="ac-stu-results" complete-audio-url="<%= imagessrc%>ac-complete.mp3">
+    <img src="<%= imagessrc%>p_level0.png" />
+    <div class="results-t">点击次数<span>0</span></div>
+</div>
+
+<!-- <div class="ac-stu-results">
+    <img src="<%= imagessrc%>p_level1.png" />
+    <div class="results-t">点击次数<span>0</span></div>
+</div> -->
+
+<!-- <div class="ac-stu-results">
+    <img src="<%= imagessrc%>p_level2.png" />
+    <div class="results-t">点击次数<span>1</span></div>
+</div> -->
+
+<!-- <div class="ac-stu-results">
+    <img src="<%= imagessrc%>p_level3.png" />
+    <div class="results-t">点击次数<span>2</span></div>
+</div> -->
+
+<script type="text/javascript">
+var dataJson = {
+    // type play 玩游戏 show 展示
+    type : "show",
+    // workTime 玩游戏的时间
+    workTime : 60000,
+    // closeTime 答案展示时间
+    closeTime : 3000,
+    // bufferTime 本道题老师端buffer时间 老师端看报告才用到
+    bufferTime : 8000,
+    // 数据
+    dataArr : [
+        // 图片地址 | 配对id | 对错状态 0 错误 1 正确 9 无状态
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|1|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|1|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|2|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|2|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|3|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|3|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|4|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|4|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|5|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|5|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|6|9',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|6|9'
+    ],
+    // 各种环境图片前缀
+    imgPath : ""
+};
+</script>
+</body>
+<% include ../common/bottom.ejs %>

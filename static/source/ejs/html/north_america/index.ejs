@@ -1,0 +1,265 @@
+<!-- meta -->
+<% include inc/meta.ejs %>
+<!-- meta end -->
+<body>
+	<!-- header -->
+	<% include inc/header.ejs %>
+	<!-- header end -->
+	<!-- nav -->
+	<% include inc/nav.ejs %>
+	<!-- nav end -->
+	<!-- container -->
+	<div class="container" data-init="north_america">
+		<div class="banner">
+			<div class="wrap">
+				<div class="login-layer">
+					<div class="from-lst" style="display:none">
+						<div class="register-from-lst" style="z-index:9;">
+							<div class="tab">
+								<ul class="clearfix">
+									<li class="current">注册</li>
+									<li>登录</li>
+								</ul>
+							</div>
+							<div class="common-box">
+								<ul class="clearfix">
+									<li class="tel-box">
+										<i class="icon"></i>
+										<input type="text" class="tel" placeholder="填写手机号获取免费上课提醒">
+										<div class="error"></div>
+									</li>
+									<li class="password-box">
+										<i class="icon"></i>
+										<input type="password" class="password" placeholder="填写密码">
+										<div class="error"></div>
+									</li>
+									<li class="email-box">
+										<i class="icon"></i>
+										<input type="text" class="email" placeholder="请填写邮箱">
+										<div class="error"></div>
+									</li>
+									<li class="recommend-box">
+										<i class="icon"></i>
+										<input type="text" class="recommend" placeholder="推荐人手机号/推荐码/没有不填">
+									</li>
+								</ul>
+								<div class="tips">若您有推荐人／推荐码，请点这里</div>
+								<div class="btn">免费领取体验课</div>
+								<div class="tips">已有超过 <em>5,000,000</em>名学习者选择51talk</div>
+							</div>
+						</div>
+						<div class="login-from-lst" style="z-index:8;">
+							<div class="tab">
+								<ul class="clearfix">
+									<li>注册</li>
+									<li class="current">登录</li>
+								</ul>
+							</div>
+							<div class="common-box">
+								<ul class="clearfix">
+									<li class="tel-box">
+										<i class="icon"></i>
+										<input type="text" class="tel" placeholder="已验证手机/邮箱">
+										<div class="error"></div>
+									</li>
+									<li class="password-box">
+										<i class="icon"></i>
+										<input type="password" class="password" placeholder="请输入您的密码">
+										<div class="error"></div>
+									</li>
+								</ul>
+								<div class="auto-login clearfix">
+									<div class="auto"><input type="checkbox" checked="" name="auto" id="auto"><label for="auto">下次自动登录</label></div>
+									<a class="forget-pas" href="javascript:;">忘记密码？</a>
+								</div>
+								<div class="btn">登录</div>
+								<div class="other-login">
+									<p>可以用以下方式登录</p>
+									<p><a class="weibo" href="javascript:;"></a><a class="qq" href="javascript:;"></a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 登录成功后 -->
+					<div class="login-success">
+						<h1 class="name">Hi,Lee</h1>
+						<div class="subscribe">
+							<p>您已完成<em class="count">10</em>节课</p>
+							<p>累计说英语<em class="count">10</em>小时</p>
+							<a href="javascript:;" class="btn">预约课程</a>
+						</div>
+						<div class="buy">
+							<p>剩余次卡：<em class="count">0</em>次<a href="" class="buylink">请购买次卡套餐</a></p>
+							<p>剩余包月：<em class="count">0</em>天<a href="" class="buylink">请购买包月套餐</a></p>
+							<a href="javascript:;" class="btn">购买课程</a>
+						</div>
+						<div class="member">
+							<a class="goto" href="javascript:;">进入我的会员中心</a>
+						</div>
+					</div>
+					<!-- 登录成功后显示end -->
+				</div>
+			</div>
+		</div>
+		<div class="slider common-style">
+			<h1 class="title">51Talk 美国小学</h1>
+			<div class="wrap clearfix">
+				<div class="arr-left"></div>
+				<div class="slider">
+					<div class="slider-wrap">
+						<div class="slider-box"><img src="<%=imagessrc%>slider_02.jpg">
+							<h2>原汁原味美国小学课程</h2></div>
+						<div class="slider-box" style="display:none"><img src="<%=imagessrc%>slider_01.jpg">
+							<h2>1对1北美外教</h2></div>
+						<div class="slider-box" style="display:none"><img src="<%=imagessrc%>slider_03.jpg">
+							<h2>随时随地上课</h2></div>
+						<div class="point">
+							<a href="javascript:;" class="current"></a>
+							<a href="javascript:;"></a>
+							<a href="javascript:;"></a>
+						</div>
+					</div>
+				</div>
+				<div class="arr-right"></div>
+			</div>
+		</div>
+		<div class="advantage common-style">
+			<div class="wrap">
+				<h1 class="title">父母信赖的青少英语品牌</h1>
+				<div class="subtitle">
+					<h2 class="add">美国纽交所上市公司</h2>
+					<h2>国内最大在线青少英语培训品牌</h2>
+				</div>
+				<div class="adv-banner">
+					<img src="<%=imagessrc%>advantage_banner.jpg">
+				</div>
+				<h3><img src="<%=imagessrc%>adv_title.png"></h3>
+				<div class="adv-lst clearfix">
+					<dl>
+						<dt><img src="<%=imagessrc%>adv_01.jpg"></dt>
+						<dd>
+							<h4>严选优质北美师资</h4>
+							<p>全部来自美国和加拿大母语外教</p>
+							<p>100%持有教学资格证书及多年外语教学实践经验</p>
+							<p>100%青少教学经验</p>
+						</dd>
+					</dl>
+					<dl>
+						<dt><img src="<%=imagessrc%>adv_02.jpg"></dt>
+						<dd>
+							<h4>引进美国原版课程</h4>
+							<p>同步美国小学课程</p>
+							<p>独家引进全球最权威的Reading A-Z分级阅读资源</p>
+						</dd>
+					</dl>
+					<dl>
+						<dt><img src="<%=imagessrc%>adv_03.jpg"></dt>
+						<dd>
+							<h4>在线个性化高效学习系统</h4>
+							<p>独创EFL闭环学习系统，学、练、测</p>
+							<p>三维学习，确保孩子的学习效果</p>
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div class="specialty common-style">
+			<div class="wrap">
+				<h1 class="title">5对1的金牌VIP学习服务支持</h1>
+				<div class="spe-lst clearfix">
+					<dl>
+						<dt><img src="<%=imagessrc%>spe_01.jpg"></dt>
+						<dd>
+							<h4>专属1对1外教</h4>
+							<p>沉浸式个性化学习</p>
+						</dd>
+					</dl>
+					<dl>
+						<dt><img src="<%=imagessrc%>spe_02.jpg"></dt>
+						<dd>
+							<h4>贴心助教服务</h4>
+							<p>辅导学习情况</p>
+						</dd>
+					</dl>
+					<dl>
+						<dt><img src="<%=imagessrc%>spe_03.jpg"></dt>
+						<dd>
+							<h4>权威学术课程</h4>
+							<p>国际学术专家</p>
+							<p>研发课程教材</p>
+						</dd>
+					</dl>
+					<dl>
+						<dt><img src="<%=imagessrc%>spe_04.jpg"></dt>
+						<dd>
+							<h4>最优产品体验</h4>
+							<p>产品专家</p>
+							<p>确保在线学习体验</p>
+						</dd>
+					</dl>
+					<dl>
+						<dt><img src="<%=imagessrc%>spe_05.jpg"></dt>
+						<dd>
+							<h4>专业儿童教育团队</h4>
+							<p>权威儿童专家</p>
+							<p>分享学习方法</p>
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div class="valid common-style">
+			<h1 class="title">帮孩子有效达成学习目标</h1>
+			<div class="wrap">
+				<img src="<%=imagessrc%>valid.jpg">
+			</div>
+		</div>
+		<div class="power common-style">
+			<div class="wrap">
+				<h1 class="title">我们的力量</h1>
+				<div class="power-lst">
+					<ul class="clearfix">
+						<li>
+							<h3 class="teachers">1000 <em>+</em></h3>
+							<p>北美金牌教师</p>
+						</li>
+						<li>
+							<h3 class="student">18000 <em>+</em></h3>
+							<p>注册学员</p>
+						</li>
+						<li>
+							<h3 class="country">100 <em>%</em></h3>
+							<p>美国、加拿大国籍教师</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="media common-style">
+			<h1 class="title">媒体报道</h1>
+			<div class="wrap">
+				<img src="<%=imagessrc%>/media.jpg">
+			</div>
+		</div>
+	</div>
+	<!-- container end -->
+	<!-- 注册时，手机号码重复提示 -->
+	<div class="notice-mast-box">
+	  <div class="m-notice">
+	    <h3 class="notice-tit">系统通知</h3>
+	    <div class="notice-inner">
+	      <p>该手机号码已存在，请直接登录，或使用其他号码注册。</p>
+	      <ul class="notice-sub">
+	        <li class="sub-left">换个号码注册</li>
+	        <li class="sub-right">登录</li>
+	      </ul>
+	    </div>
+	  </div>
+	  <div class="notice-mask"></div>
+	</div>
+	<!-- register tips end -->
+	<!-- footer -->
+	<% include inc/footer.ejs %>
+	<!-- footer end -->
+</body>
+</html>

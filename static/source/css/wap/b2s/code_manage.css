@@ -1,0 +1,333 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ */
+/*
+* 默认样式
+* @file：   base.less
+* @author:  zhuning@51talk.com）
+* @update:  2015-10-29
+* @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+*/
+html {
+  font-size: 62.5%;
+  -webkit-user-select: none;
+}
+@media only screen and (min-width: 481px) {
+  html {
+    font-size: 94%;
+  }
+}
+@media only screen and (min-width: 561px) {
+  html {
+    font-size: 109%;
+  }
+}
+@media only screen and (min-width: 641px) {
+  html {
+    font-size: 125%;
+  }
+}
+body {
+  padding: 0;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 640px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+}
+input,
+button,
+select,
+textarea,
+dl,
+dd,
+dt {
+  font-family: "Microsoft YaHei";
+  outline: none;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 0;
+  padding: 0px;
+  margin: 0px;
+}
+ul,
+li {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  vertical-align: middle;
+}
+b {
+  font-weight: normal;
+}
+::-moz-selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+strong {
+  font-weight: normal;
+}
+html {
+  height: 100%;
+  background-color: #fff;
+}
+body {
+  font: 14px/1.5 "Microsoft YaHei";
+  color: #646464;
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.cfix:after {
+  content: ".";
+  font-size: 0;
+  line-height: 0;
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both;
+}
+.cfix {
+  *zoom: 1;
+}
+.center-left-fn {
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+.center-top-fn {
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+.center-fn {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+.bg-fff {
+  background-color: #fff;
+}
+.bg-f5 {
+  background-color: #f5f5f5;
+}
+.bg-f6 {
+  background-color: #f6f6f6;
+}
+.disselect-fn {
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+}
+.tc {
+  text-align: justify;
+  text-justify: inter-ideograph;
+  -webkit-text-align-last: justify;
+  /*chrome 20+*/
+}
+.plr10 {
+  padding: 0 10px;
+}
+body .pb100 {
+  padding-bottom: 100px;
+}
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+select {
+  -webkit-appearance: none;
+}
+.code_manage_body {
+  background-color: #f5f5f5;
+}
+.code_manage_body .search-box {
+  height: 38px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #dcdcdc;
+  padding-top: 7px;
+}
+.code_manage_body .search-box .search-b {
+  background-color: #fff;
+  border-radius: 15px;
+  height: 28px;
+  font-size: 16px;
+  padding-left: 15px;
+}
+.code_manage_body .search-box .search-b span {
+  display: inline-block;
+  width: 17px;
+  height: 16px;
+  background: url(../../../images/wap/b2s/d_icons.png?v=TsDppuaHbT5rfPxmU1E1cw%3D%3D) -180px 0 no-repeat;
+  background-size: 200px 17px;
+  position: relative;
+  top: 5px;
+}
+.code_manage_body .search-box .search-b input {
+  color: #c8c8c8;
+  width: 80%;
+}
+.code_manage_body h2 {
+  width: 100%;
+  height: 30px;
+  line-height: 32px;
+  color: #646464;
+  font-size: 16px;
+  padding-left: 13px;
+  padding-right: 10px;
+}
+.code_manage_body .tody-icon,
+.code_manage_body .history-icon {
+  display: inline-block;
+  width: 16px;
+  height: 17px;
+  background: url(../../../images/wap/b2s/d_icons.png?v=TsDppuaHbT5rfPxmU1E1cw%3D%3D) 0 0 no-repeat;
+  background-size: 200px 17px;
+  position: relative;
+  top: 1px;
+  margin-right: 10px;
+}
+.code_manage_body .tody-icon {
+  background-position: 0 0;
+}
+.code_manage_body .history-icon {
+  background-position: -50px 0;
+}
+.code_manage_body .list-ul {
+  background-color: #fff;
+  width: 100%;
+}
+.code_manage_body .list-ul li {
+  border-bottom: 1px solid #dcdcdc;
+  height: 60px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+}
+.code_manage_body .list-ul li a {
+  display: block;
+}
+.code_manage_body .list-ul li .li-icon {
+  display: inline-block;
+  position: relative;
+  width: 17px;
+  height: 17px;
+  float: left;
+  margin-top: 20px;
+  background: url(../../../images/wap/b2s/d_icons.png?v=TsDppuaHbT5rfPxmU1E1cw%3D%3D) -100px 0 no-repeat;
+  background-size: 200px 17px;
+}
+.code_manage_body .list-ul li .li-text {
+  float: left;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.code_manage_body .list-ul li .li-text p {
+  color: #323232;
+  font-size: 18px;
+  width: 225px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.code_manage_body .list-ul li .li-text div {
+  color: #646464;
+  font-size: 14px;
+}
+.code_manage_body .list-ul li .time-box {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  font-size: 14px;
+  color: #969696;
+}
+.code_manage_body .list-ul li .time-box span {
+  margin-left: 7px;
+  display: inline-block;
+  width: 7px;
+  height: 12px;
+  background: url(../../../images/wap/b2s/d_icons.png?v=TsDppuaHbT5rfPxmU1E1cw%3D%3D) -150px 0 no-repeat;
+  background-size: 200px 17px;
+}
+.code_manage_body .dialog-wrap {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+.code_manage_body .dialog-wrap .dialog-con {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  width: 245px;
+  height: 150px;
+  background: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+  text-align: center;
+}
+.code_manage_body .dialog-wrap .dialog-con .dialog-tit {
+  height: 50px;
+  padding-top: 56px;
+  background: #ffa600 url(../../../images/wap/b2s/class-QRCode-01.png?v=A2fkQVaV0nLPkSJWe8xA%2Fg%3D%3D) no-repeat center 16px;
+  background-size: 25px 28px;
+  font-size: 16px;
+  color: #fff;
+}
+.code_manage_body .dialog-wrap .dialog-con .dialog-btn {
+  height: 44px;
+  line-height: 44px;
+  font-size: 16px;
+  color: #ff7800;
+}

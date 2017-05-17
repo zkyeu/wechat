@@ -1,0 +1,51 @@
+<% include ../common/top_b2s_n.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>class_management5.css">
+</head>
+<body data-init="" class="class_management5">
+    <P class="cfix class_title">
+        一年级9班(共<i>78</i>人，<i>23</i>人已激活)
+    </P>
+    <table>
+        <tr>
+            <td>姓名</td>
+            <td>老师奖励<span></span></td>
+            <td>学习课程</td>
+        </tr>
+        <tr>
+            <td>李梦尧</td>
+            <td>24</td>
+            <td>精品外教课</td>
+        </tr>
+        <tr>
+            <td>李梦尧</td>
+            <td>24</td>
+            <td>精品外教课</td>
+        </tr>
+         <tr>
+            <td>李梦尧</td>
+            <td>24</td>
+            <td>精品外教课<br/>
+                精品外教课
+            </td>
+        </tr>
+    </table>
+    <P class="no_live_title">姓名</P>
+    <P class="no_live">lmy</P>
+    <div class="tea-btn-wrap2">
+        <div class="tea-btn-in">
+            <a href="javascript:void(0);" class="tea-btn" >邀请加入班级</a>
+        </div>
+    </div>
+<!-- loading -->
+<div id="fontSizeLoding">
+    <img src="<%= imagessrc%>eff_loading.gif">
+</div>
+<script type="text/javascript">
+window.onload = function(){
+    document.documentElement.style.fontSize = document.body.clientWidth / 7.5 + "px";
+    document.getElementById("fontSizeLoding").style.display = "none";
+}
+</script>
+</body>
+<!--公共尾部结束-->
+<% include ../common/bottom.ejs %>

@@ -1,0 +1,1 @@
+define("editImg",["editImgFn"],function(e,t,i){var n=e("editImgFn");window.editImgFn=n,t.initNew=function(e){var t={tools:["pencil","text","rotate","rubberNew","draft","seal","rect","cut","save"]},i=$.extend({},t,e);n.init(i)}});

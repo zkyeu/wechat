@@ -1,0 +1,29 @@
+<% include ../common/top.ejs %>
+<body>
+   <% include com/header.ejs %>
+   <article class="t_register" data-init="tmall">
+     <h3>注册</h3>
+     <form>
+        <div class="t_group">
+          <input type="text" name="mobile" class="t_phone" placeholder="手机号" />
+          <p class="t_tip tip_phone" ><i class="i1"></i>您的手机号已注册！</p>
+        </div>
+        <div class="t_group">
+          <input type="password" name="pwd" class="courseCode" placeholder="密码" />
+          <p class="t_tip tip_pwd" ><i class="i2"></i>密码不能为空！</p>
+        </div>
+        <div class="t_group">
+          <input type="text" name="mobileCode" class="courseCode" placeholder="请输入短信验证码" />
+          <a href="javascript:;"  class="imgCode getCode" id="getCode">获取验证码</a>
+          <p class="t_tip tip_verifiCode" ><i class="i3"></i>您输入的验证码有误！</p>
+        </div>
+        <div class="t_group">
+          <a href="javascript:;" class="subCode t_loginT" data-href="http:\\www.baidu.com">注册</a>
+          <a href="javascript:;" class="t_home" data-href="http:\\www.baidu.com"></a>
+        </div>
+        <p class="t_login" style="text-align:center;display:block;height:1.5rem;"><a class="jumpTologin" href="javscript:;" style="border-bottom:1px solid #666;font-size:1.25rem;">已注册的用户，点此登录</a></p>
+     </form>
+   </article>
+   <% include com/f_bg.ejs %>
+</body>
+<% include ../common/bottom.ejs %>

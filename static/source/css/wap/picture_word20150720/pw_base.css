@@ -1,0 +1,119 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Mon Aug 24 2015 09:54:37 GMT+0800 (中国标准时间)
+ */
+/*
+* 图片学词
+* @file：   pw.less
+* @author:  xiaosong zhangtian（xiaosong@51talk.cn zhangtian@51talk.cn）
+* @update:  2015-07-21
+* @note:    图片学词
+*/
+/*图片学词*/
+html {
+  font-size: 62.5%;
+}
+@media only screen and (min-width: 481px) {
+  html {
+    font-size: 94%;
+  }
+}
+@media only screen and (min-width: 561px) {
+  html {
+    font-size: 109%;
+  }
+}
+@media only screen and (min-width: 641px) {
+  html {
+    font-size: 125%;
+  }
+}
+/*variable*/
+/*custom*/
+body {
+  font-size: 1.4rem;
+  font-family: "Microsoft YaHei";
+  color: #000000;
+  padding: 0px;
+  margin: 0px;
+  background: #ffffff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+  padding: 0px;
+  margin: 0px;
+}
+input,
+button,
+select,
+textarea,
+dl,
+dd,
+dt {
+  font-family: "Microsoft YaHei";
+  outline: none;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 0;
+  padding: 0px;
+  margin: 0px;
+}
+ul,
+li {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #000000;
+  text-decoration: none;
+}
+a:hover {
+  color: #ff8200;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  vertical-align: middle;
+}
+b {
+  font-weight: normal;
+}
+::-moz-selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+strong {
+  font-weight: normal;
+}
+.pr {
+  position: relative;
+}
+.pa {
+  position: absolute;
+}
+.ft16 {
+  font-size: 1.6rem;
+}

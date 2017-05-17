@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>double12Apps</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">
+    <link rel="stylesheet" type="text/css" href="../../../css/wap/christmas_lottery/register.css">
+</head>
+<body>
+<div class="container_register" id="container"  data-init="register">
+    <div class="logo"><img src="<%= imagessrc%>double12AppLogo.jpg"></div>
+    <div class="register_form">
+        <ul>
+            <li>
+                <div class="rowMobile border5px">
+                    <input id="regMobile" type="text" placeholder="请输入手机号" maxlength="11">
+                    <span class="times" id="resetMobile">&times;</span>
+                </div>
+            </li>
+            <li>
+                <div id="captchImg"></div>
+                <div class="rowSms border5px fr">
+                    <input type="text" id="captch" maxlength="4" placeholder="请输图片验证码" >
+                </div>
+            </li>
+            <li>
+                <div class="rowSms border5px fl pr"><input id="regSms" type="text" placeholder="请输入验证码" maxlength="6"><span class="times" id="resetSms">&times;</span></div>
+                <div class="sms_btn fr"><button id="smsBtn" class="border5px" disabled>获取验证码</button></div>
+            </li>
+            <li><div id="double12App_registerBtn" class="border5px">立即抢购</div></li>
+        </ul>
+    </div>
+    <div class="reg_tips">点击“立即抢购”，即代表您同意<a href="javascript:;">《51Talk用户服务协议》</a></div>
+</div>
+<div class="showtips_layer">
+    <div class="showtips">
+        <span></span>
+        <em id="closeLayer">&times;</em>
+    </div>
+</div>
+<script src="<%= jssrc%>" id="seajsnode"></script>
+</body>
+</html>

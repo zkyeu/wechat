@@ -1,0 +1,50 @@
+<% include ../common/top.ejs %>
+<body data-init="acgamePair">
+    <div class="ac-dialog-wrap">
+        <div class="ac-dialog-content game-pair">
+            <div class="game-result">
+                <div class="game-result-con">
+                    <h4 class="level1">棒极了！</h4>
+                    <!-- <h4 class="level2">非常好！</h4> -->
+                    <!-- <h4 class="level3">要努力喽！</h4> -->
+                    <p>点击26次</p>
+                </div>
+            </div>
+            <div class="game-content game-content-result">
+            </div>
+        </div>
+        <div class="ac-dialog-bottom">
+        </div>
+    </div>
+<script type="text/javascript">
+var dataJson = {
+    // type play 玩游戏 show 展示
+    type : "show",
+    // workTime 玩游戏的时间
+    workTime : 60000,
+    // closeTime 答案展示时间
+    closeTime : 10000,
+    // bufferTime 本道题老师端buffer时间 老师端看报告才用到
+    bufferTime : 8000,
+    // 数据
+    dataArr : [
+        // 图片地址 | 配对id | 对错状态 0 错误 1 正确 9 无状态
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|1|0',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|1|0',
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|2|0',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|2|0',
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|3|0',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|3|0',
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|4|0',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|4|0',
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|5|0',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|5|0',
+        '/images/html/ac_dialog/ac_game_pair_back_answer1.png|6|0',
+        '/images/html/ac_dialog/ac_game_pair_back_answer2.png|6|0'
+    ],
+    // 各种环境图片前缀
+    imgPath : ""
+};
+</script>
+</body>
+<% include ../common/bottom.ejs %>

@@ -1,0 +1,32 @@
+<% include ../common/user_center/up_top.ejs %>
+<body data-init="my_schedule">
+<!-- author:zhangtian pms:21574  timestamp:2016/4/19-->
+<div class="my-s-mask"></div>
+<!-- 用户中心首页头部  -->
+<% include ../common/user_center/up_g_h.ejs %>
+<% include ../common/user_center/up_g_b.ejs %>
+<div class="g-in f-cb">
+	<% include ../common/user_center/up_s_bar.ejs %>
+	<div class="g-center">
+		<div class="my-s-c">
+			<img src="<%= componentsImages['my_schedule']%>my_t.jpg" alt="">
+		    <div class="my-h">
+		        <ul class="my-h-l jsTab">
+		            <li class="my-r-b" style="margin-left:0px">全部</li>
+		            <li class="my-r-b">已完成</li>
+		            <li class="my-active">未开始</li>
+		            <li class="my-r-b">缺席</li>
+		        </ul>
+		        <a href="javascript:;" class="my-h-r" id="my-h-r">评价及回放规则</a>
+		    </div>
+		    <% include ../../../components/html/my_schedule/ejs/modules/m_cont.ejs %>
+		</div>
+	</div>
+</div>
+<% include ../../../components/html/my_schedule/ejs/modules/m_s_tips.ejs %>
+<% include ../../../components/html/my_schedule/ejs/modules/m_s_record.ejs %>
+<% include ../../../components/html/my_schedule/ejs/modules/m_s_evaluate.ejs %>
+<% include ../common/user_center/up_g_f.ejs %>
+
+</body>
+<% include ../common/user_center/up_bottom.ejs %>

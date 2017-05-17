@@ -1,0 +1,35 @@
+<% include ../common/top.ejs %>
+<body data-init="app_assignment_record">
+<!-- <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>"> -->
+<div class="assignment-wrap">
+	<div class="assignment-wrap-top"></div>
+	<div class="assignment-bg"></div>
+	<div class="assignment-con">
+		<dl class="assignment-tit">
+			<dt>点击录音，阅读以下短文</dt>
+			<dd>Click on the recording, read the following passage</dd>
+		</dl>
+		<div class="assignment-item3">
+			<p class="assignment-item3-text"><span class="yes">Today the weather is very</span> good, my <span class="yes">friends and I went</span> to climb <span class="yes">the mountain, we also brought a lot of</span> <span class="no">delicious, everyone</span> is <span class="yes">very happy to play.</span></p>
+			<div class="assignment-item3-audio">
+				<div class="audio-btn control audioPlay">
+					<audio id="audio-01" src="http://records.cloud.chivox.com/574520abb7749b8a6d2c8294.mp3" preload="auto"></audio>
+				</div>
+			</div>
+		</div>
+		<div class="assignment-result">
+			<div class="assignment-result1">
+				<img src="<%= imagessrc%>app-assignment-2.png" />
+			</div>
+			<div class="assignment-result2">
+				<img src="<%= imagessrc%>app-assignment-3.png" />
+			</div>
+		</div>
+	</div>
+	<div class="assignment-bottom">
+		13489031345 <a href="#">点击退出</a>
+	</div>
+	<div class="assignment-wrap-bottom"></div>
+</div>
+</body>
+<% include ../common/bottom.ejs %>

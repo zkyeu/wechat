@@ -1,0 +1,62 @@
+<!-- 导航 -->
+<!-- 导航
+  ***********   外层包裹控制二级导航及其hover颜色 wrapClass ***********
+  首页：wrap-nav-index  
+  美小：north-nav-list
+  青少：teenager-nav-list
+  成人：adult-nav-list 
+  公开课：openclass-nav-list 
+
+  {
+  wrapClass:"",
+  navList:[{
+    className:"",
+    text:"",
+    url:""
+  }],
+  isIndex:true, //判断是否为首页
+  isNorth:false //判断是否为美小
+  }
+-->
+
+<div class="wrap-nav <%=wrapClass%>">
+    <% include ../common/w_header.ejs %>
+    <div class="wrap-box">
+
+        <%if(!isIndex){%><div class="wrap-box-list"><%}%>
+                <div class="w_acload">
+                    <a href="/ac/51TalkAC.php" target="_blank"><img src="http://static.51talk.com/static/images/html/www_new/common/AC.png"  alt=""></a>
+                </div>
+                <a href="/" class="logo">
+                    <i></i>
+                    <%if(!isNorth){%>
+                        <b><span>美国纽交所上市公司（股票代码：COE）</span>全球信赖的在线英语领导品牌</b>
+                    <%}else{%>
+                         <b><img src="http://static.51talk.com/static/images/html/www_new/north_america/america_logo.png"  alt=""></b>
+                     <%}%>
+                </a>
+                <div class="nav index right">
+                  <ul class="menu">
+                        <li ><a href="http://www.baidu.com">首&nbsp;页</a></li>
+                        <li><a href="javascript:;">美国小学</a></li>
+                        <li class="current"><a href="javascript:;">青少英语</a></li>
+                        <li><a href="javascript:;">成人英语</a></li>
+                        <li><a href="javascript:;">公开课</a></li>
+                  </ul>
+                  <!-- <span class="underline"></span> -->
+                </div>
+        <%if(!isIndex){%></div><%}%>     
+    </div>
+    <%if(!isIndex && navList.length>0){%>
+        <div class="nav-list">
+            <div class="list-ct">
+              <ul>
+                    <%for(var i=0;i<navList.length;i++){%>
+                        <li class="<%=navList[i].className%>"><a href="<%=navList[i].url%>"><%=navList[i].text%></a></li>
+                    <%}%>
+              </ul>
+            </div>
+        </div>
+    <%}%>
+</div>
+

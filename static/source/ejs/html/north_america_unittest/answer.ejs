@@ -1,0 +1,144 @@
+<!-- meta -->
+<% include common/header.ejs %>
+<!-- meta end -->
+<body>
+	<input type="hidden" id="container" data-init="answer"/>
+	<div class="answer-top">
+		<div class="answer-top-c">
+			<a class="quit-btn"></a>
+			<span class="unit-tit">Unit 01</span>
+		</div>
+	</div>
+	<div class="question-box">
+		<div class="question">
+			<div class="role-box">
+				<!--默认状态-->
+				<div class="role hide" id="processId">
+					<div class="animal"></div>
+					<div class="griffin-box">
+						<div class="griffin">
+							<div class="eye eye-l"></div>
+							<div class="eye eye-r"></div>
+						</div>
+					</div> 
+				</div>
+				<!--默认状态-->
+				<!--答对状态-->
+				<div class="role hide" id="rightId">
+					<div class="animal"></div>
+					<div class="griffin-box">
+						<div class="griffin griffin-z" id="griffinId"></div>
+						<div class="griffin-star hide" id="griffinStarId"></div>
+						<div class="right-icon hide"></div>
+					</div>
+					<div class="hammer hammer-r" id="hammerId"></div>
+				</div>
+				<!--答对状态-->
+				<!--答错状态-->
+				<div class="role show" id="failId">
+					<div class="animal" id="lionId"></div>
+					<div class="griffin-box">
+						<div class="griffin griffin-z" id="griffinIdFail"></div>
+						<div class="right-icon error-icon hide"></div>
+					</div>
+					<div class="hammer hammer-e" id="hammerErrorId"></div>
+				</div>
+				<!--答错状态-->
+				<!--答对分数状态-->
+				<div class="score-box">
+					<div class="score-value s-value" id="scoreValue">16</div>
+					<div class="score-m" id="scoreMove"></div>
+				</div>
+				<!--答对分数状态-->
+				
+			</div>
+			<div class="question-c">
+				<div class="question-tit">
+					<p class="text" id="queTitId"><p>
+					<span class="question-n">
+						<span id="curQueId"></span>/<span id="allQueId"></span>
+					</span>
+				</div>
+				<div class="que-content">
+					<div class="que-tit" id="queTit">
+					</div>
+					
+					<div class="answer-box">
+						<div class="table-box" >
+							<table style="width:100%; border-collapse: separate;" class="table">
+								<tr id="answerContent">
+									
+								</tr>
+							</table>
+						</div>
+						<div class="sure-btn-box" id="btnBox">
+							<a href="javascript:;" class="a-sure-btn dis-sure-btn" id="sureBtn"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="questionPlay"></div>
+	<div id="animationPlay"></div>
+	<div id="autoPlay"></div>
+	<div id="clickPlay"></div>
+
+
+
+	<div class="complet-content hide" id="completBox">
+    <div class="mask"></div>
+    <div class="complet-box" >
+            <div class="hide" id="completId">
+                <div class="light"></div>
+                <div class="complet-show" id="completShow">
+                    <div id="starId">
+                    <!-- <div class="star star1">
+                        <div class="b-star"></div>
+                        <div class="l-star"></div>
+                    </div>
+                    <div class="star star2">
+                        <div class="b-star"></div>
+                        <div class="l-star"></div>
+                    </div>
+                    <div class="star star3">
+                        <div class="b-star"></div>
+                        <div class="l-star"></div>
+                    </div> -->
+                    </div>
+                    <div id="jigsawId">
+                        <!--已有拼图-->
+                        <!-- <div class="jigsaw jigsaw-e1">
+                            <span class="exist"></span>
+                        </div>
+                        <div class="jigsaw jigsaw-e2">
+                            <span class="exist"></span>
+                        </div>
+                        <div class="jigsaw-hide jigsaw-p3 jigsaw jigsaw3"></div> -->
+                        <!--已有拼图-->
+                        <!--没有拼图-->
+                       <!--  <div class="jigsaw-hide jigsaw-p1 jigsaw jigsaw1"></div>
+                        <div class="jigsaw-hide jigsaw-p2 jigsaw jigsaw2"></div>
+                        <div class="jigsaw-hide jigsaw-p3 jigsaw jigsaw3"></div> -->
+                        <!--没有拼图-->
+                    </div>
+                    <a class="sure-btn" href="javascript:;"></a>
+                </div>
+                <div class="cd"></div>
+            </div>
+            <div class="hide" id="resultFailId">
+                <div class="complet-show fail-p" id="failShow">
+                    <div class="line"></div>
+                    <a class="sure-btn" href="javascript:;"></a>
+                </div>
+            </div>
+
+    </div>
+</div>
+	<div id="playerSuccess"></div>
+	<div id="playerFail"></div>
+	<script src="../../../js/html/common/pind.js?v=1"></script>
+	<% include common/footer.ejs %>
+</body>
+</html>

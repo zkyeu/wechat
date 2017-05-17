@@ -1,0 +1,32 @@
+<% include ../common/top_b2s_n.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>test_video.css">
+</head>
+<body data-init="test_video">
+<div class="test-wrap">
+	<video class="js_video" controls src="http://video.51talk.com/b2s/pc/image/2016/12/20/162a48d23427da8da0cb377b7e6d418b5858dc50cc90a.mp4"></video>
+	<audio class="js_audio" controls src="http://duoshuo.51talk.com/storage/forum/comment/20161208/213afc5b55f5d5042ad953a7de83d9aa.aac"></audio>
+	<div class="btn-play js_btn_play">开始</div>
+	<div class="btn-pause js_btn_pause">暂停</div>
+</div>
+
+<div class="dialog disnone js_dialog">
+	<div class="dialog-close">
+		<video class="js_video" controls preload="auto" webkit-playsinline playsinline src="" ></video>
+	</div>
+	<!-- <video class="js_video" controls preload="auto" src="" ></video> -->
+</div>
+	<!-- <video class="js_video" controls preload="auto" autoplay="" src="/images/wap/b2s/1111.mp4" ></video> -->
+
+<!-- loading -->
+<div id="fontSizeLoding">
+    <img src="<%= imagessrc%>eff_loading.gif">
+</div>
+<script type="text/javascript">
+window.onload = function(){
+    document.documentElement.style.fontSize = document.body.clientWidth / 7.5 + "px";
+    document.getElementById("fontSizeLoding").style.display = "none";
+}
+</script>
+</body>
+<!--公共尾部结束-->
+<% include ../common/bottom.ejs %>

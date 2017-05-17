@@ -1,0 +1,414 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: zningpc@gmail.com
+ * update: Tue Jun 14 2016 11:38:02 GMT+0800 (中国标准时间)
+ */
+/*
+* 默认样式
+* @file：   base.less
+* @author:  zhuning@51talk.com）
+* @update:  2015-10-29
+* @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+*/
+html {
+  font-size: 62.5%;
+  -webkit-user-select: none;
+}
+@media only screen and (min-width: 481px) {
+  html {
+    font-size: 94%;
+  }
+}
+@media only screen and (min-width: 561px) {
+  html {
+    font-size: 109%;
+  }
+}
+@media only screen and (min-width: 641px) {
+  html {
+    font-size: 125%;
+  }
+}
+body {
+  padding: 0;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 640px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+}
+input,
+button,
+select,
+textarea,
+dl,
+dd,
+dt {
+  font-family: "Microsoft YaHei";
+  outline: none;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 0;
+  padding: 0px;
+  margin: 0px;
+}
+ul,
+li {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  vertical-align: middle;
+}
+b {
+  font-weight: normal;
+}
+::-moz-selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background-color: #ff8200;
+  color: white;
+  text-shadow: none;
+}
+strong {
+  font-weight: normal;
+}
+body {
+  font-family: "Microsoft YaHei";
+}
+input {
+  -webkit-appearance: none;
+}
+i {
+  display: inline-block;
+  margin-right: 0.2rem;
+}
+header {
+  height: 3.85rem;
+  width: 100%;
+  background: #ffd800 url(../../../images/wap/Tmall_Code/t_logo.png?v=j0MywwVDr1jcdcTRqvGPPA%3D%3D) no-repeat center;
+  background-size: 14.9rem 1.9rem;
+  border-bottom: 3px solid #cfbc50;
+}
+section {
+  width: 100%;
+  margin-top: 2.2rem;
+}
+section img {
+  display: block;
+  width: 20.5rem;
+  margin: 0 auto;
+}
+.t_inputCode {
+  width: 100%;
+}
+.t_inputCode h2 {
+  text-align: center;
+  color: #231815;
+  font-size: 2rem;
+  margin: 2rem 0 0;
+}
+.t_inputCode h2 span {
+  font-size: 3.5rem;
+  position: relative;
+  top: 0.4rem;
+}
+.t_inputCode h3 {
+  text-align: center;
+  color: #ffc900;
+  font-size: 1.8rem;
+  margin: 2rem 0 1.5rem;
+}
+.t_inputCode .t_group {
+  width: 76%;
+  height: 3.86rem;
+  margin: 0 12% 3.6rem;
+  text-align: center;
+}
+.t_inputCode .t_group input {
+  width: 100%;
+  height: 3.8rem;
+  border: 0.3rem solid #f4e19b;
+  text-align: center;
+  font-size: 1.6rem;
+}
+.t_inputCode .t_group .subCode {
+  display: inline-block;
+  width: 100%;
+  height: 3.8rem;
+  line-height: 3.8rem;
+  border: 0.3rem solid #f4e19b;
+  background: #ffc900;
+  color: #fff;
+  font-size: 1.6rem;
+}
+.t_inputCode .t_group p {
+  color: #f00;
+  font-size: 1.1rem;
+  width: 100%;
+  height: 1.7rem;
+  line-height: 1.7rem;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  margin-top: 0.4rem;
+  overflow: hidden;
+}
+.t_inputCode .t_group p i {
+  height: 1.1rem;
+  width: 1.1rem;
+  background: url(../../../images/wap/Tmall_Code/t_error.png?v=VoEBOukC1%2B6%2FwZAdMpDiqw%3D%3D) no-repeat center;
+  background-size: 1.1rem 1.1rem;
+  margin-top: 0.3rem;
+  vertical-align: top;
+}
+.t_inputCode .t_group .t_tip {
+  display: none;
+}
+.t_inputCode .t_group:nth-child(2) {
+  margin: 0 auto 3.6rem;
+  text-align: center;
+}
+.t_inputCode .t_group:nth-child(2) input {
+  width: 64%;
+}
+.t_inputCode .t_group:nth-child(2) .courseCode {
+  float: left;
+}
+.t_inputCode .t_group:nth-child(2) .imgCode {
+  display: inline-block;
+  width: 29%;
+  height: 4.4rem;
+  border: 0.3rem solid #f4e19b;
+  text-align: center;
+  background: #ffc900;
+  color: #fff;
+  font-size: 1.25rem;
+  float: right;
+  margin-right: -0.5rem;
+}
+.t_inputCode .t_group:nth-child(2) p {
+  width: 64%;
+  float: left;
+}
+.t_inputCode .t_group:nth-child(2) p i {
+  left: 2.6rem;
+}
+.t_login {
+  width: 100%;
+}
+.t_login h3 {
+  text-align: center;
+  color: #ffc900;
+  font-size: 1.8rem;
+  margin: 2rem 0 1.5rem;
+}
+.t_login .t_group {
+  width: 76%;
+  height: 3.8rem;
+  margin: 0 12% 3.6rem;
+  text-align: center;
+}
+.t_login .t_group input {
+  width: 100%;
+  height: 3.8rem;
+  line-height: 3.8rem;
+  border: 0.3rem solid #f4e19b;
+  text-align: center;
+  font-size: 1.6rem;
+}
+.t_login .t_group .subCode {
+  display: inline-block;
+  width: 100%;
+  height: 3.8rem;
+  line-height: 3.8rem;
+  border: 0.3rem solid #f4e19b;
+  background: #ffc900;
+  color: #fff;
+  font-size: 1.6rem;
+}
+.t_login .t_group p {
+  color: #f00;
+  font-size: 1.1rem;
+  width: 100%;
+  height: 1.7rem;
+  display: block;
+  text-align: center;
+  position: relative;
+  margin-top: 0.4rem;
+  margin-bottom: 1rem;
+}
+.t_login .t_group p i {
+  height: 1.1rem;
+  width: 1.1rem;
+  display: inline-block;
+  background: url(../../../images/wap/Tmall_Code/t_error.png?v=VoEBOukC1%2B6%2FwZAdMpDiqw%3D%3D) no-repeat center;
+  background-size: 1.1rem 1.1rem;
+}
+.t_login .t_group .t_tip {
+  display: none;
+}
+.t_login .t_group .pActive {
+  background: #f00;
+  color: #fff;
+  margin-top: 0;
+}
+.t_login .t_group:nth-child(3) {
+  margin-top: 0.5rem;
+}
+.t_register {
+  width: 100%;
+}
+.t_register h2 {
+  text-align: center;
+  color: #231815;
+  font-size: 2rem;
+  margin: 2rem 0 0;
+}
+.t_register h2 span {
+  font-size: 3.5rem;
+  position: relative;
+  top: 0.4rem;
+}
+.t_register h3 {
+  text-align: center;
+  color: #ffc900;
+  font-size: 1.8rem;
+  margin: 2rem 0 1.5rem;
+}
+.t_register .t_group {
+  width: 76%;
+  height: 3.8rem;
+  margin: 0 12% 3.6rem;
+  text-align: center;
+}
+.t_register .t_group input {
+  width: 100%;
+  height: 3.8rem;
+  line-height: 3.8rem;
+  border: 0.3rem solid #f4e19b;
+  text-align: center;
+  font-size: 1.6rem;
+}
+.t_register .t_group .subCode {
+  display: block;
+  width: 100%;
+  height: 3.8rem;
+  line-height: 3.8rem;
+  border: 0.3rem solid #f4e19b;
+  background: #ffc900;
+  color: #fff;
+  font-size: 1.6rem;
+}
+.t_register .t_group p {
+  color: #f00;
+  font-size: 1.1rem;
+  width: 100%;
+  height: 1.7rem;
+  display: block;
+  text-align: center;
+  position: relative;
+  margin-top: 0.4rem;
+}
+.t_register .t_group p i {
+  height: 1.1rem;
+  width: 1.1rem;
+  display: inline-block;
+  background: url(../../../images/wap/Tmall_Code/t_error.png?v=VoEBOukC1%2B6%2FwZAdMpDiqw%3D%3D) no-repeat center;
+  background-size: 1.1rem 1.1rem;
+}
+.t_register .t_group p .i2 {
+  left: 5.6rem;
+}
+.t_register .t_group .t_tip {
+  display: none;
+}
+.t_register .t_group:nth-child(3) {
+  margin: 0 auto 3.6rem;
+  text-align: left;
+}
+.t_register .t_group:nth-child(3) .courseCode {
+  width: 64%;
+  float: left;
+}
+.t_register .t_group:nth-child(3) .imgCode {
+  width: 29%;
+  display: inline-block;
+  height: 3.8rem;
+  line-height: 3.8rem;
+  float: right;
+  border: 0.3rem solid #f4e19b;
+  text-align: center;
+  background: #ffe999;
+  color: #ebb900;
+  font-size: 1.25rem;
+  margin-right: -0.5rem;
+}
+.t_register .t_group:nth-child(3) p {
+  width: 64%;
+  clear: both;
+  padding-top: 0.4rem;
+}
+.t_register .t_group:nth-child(4) {
+  margin-top: 0.5rem;
+  margin-bottom: 1.6rem;
+}
+.t_starClass {
+  width: 100%;
+}
+.t_starClass h3 {
+  text-align: center;
+  color: #ffc900;
+  font-size: 1.8rem;
+  margin: 2rem 0 1.5rem;
+}
+.t_starClass .t_ok {
+  display: block;
+  margin: 0 auto;
+  width: 3rem;
+  margin-bottom: 1.5rem;
+}
+.t_starClass p {
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 2.1rem;
+}
+.t_starClass .t_reservClass {
+  display: block;
+  height: 2.6rem;
+  width: 21.5rem;
+  background: #ffc900;
+  line-height: 2.6rem;
+  text-align: center;
+  color: #fff;
+  border: 0.3rem;
+  margin: 3.5rem auto 0;
+  font-size: 1.25rem;
+  border: 0.3rem solid #f4e19b;
+}

@@ -1,0 +1,123 @@
+// 图片path
+@imgMpath: "../../../images/html/weixin_heck/";
+html,body{
+    background: #ccc;
+    height: 100%;
+    width: 100%;
+}
+.heck_top{
+    height: 80px;
+    background: #ffdb69;
+    border-bottom: 1px solid #dc9855;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 70px;
+    background: #303030;
+}
+.statistics_center{
+    background: #fff;
+    width: 960px;
+    padding: 10px 20px;
+    height: calc(~"100% - 20px");
+    //height: 100%;
+    margin: 0 auto;
+    h2{
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+       // background: #f5f5f5;
+    }
+    ul{
+        li{
+            float: left;
+            padding: 0 10px;
+            //border:1px solid #ccc;
+            color:#fff;
+            border-radius: 4px;
+            height: 30px;
+            line-height: 30px;
+            background: #ff7e00;
+            margin-right: 20px;
+            //cursor: pointer;
+            position: relative;
+            a{
+                position: absolute;
+                left: 0;
+                top:0;
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            &:first-child{
+                color:black;
+                border-radius: 0;
+                border:0;
+                background: #fff;
+                font-size: 16px;
+            }
+        }
+
+    }
+    .content_table{
+        height: calc(~"100% - 150px");
+        overflow-y: scroll;
+        overflow-x:hidden;
+        margin-top: 30px;
+        //position: relative;
+        table{
+            width: 100%;
+            border-radius: 4px;
+            
+            tr{
+                &:first-child{
+                    background: #f5d79e;
+                }
+            }
+            th{
+                line-height: 26px;
+            }
+            td{
+                border: 1px solid #dcdcdc;
+                word-break:break-all;
+                //height: 26px;
+                line-height: 26px;
+                text-align: center;
+                width: 33.3%;
+                padding:0 5px;
+            }
+        }
+    }
+    .content_more{
+        height: calc(~"100% - 150px");
+        overflow-y: scroll;
+        overflow-x: hidden;
+        margin-top: 30px;
+        width: 100%;
+        //position: relative;
+        table{
+            width: 100%;
+            border-radius: 4px;
+            
+            tr{
+                &:first-child{
+                    background: #f5d79e;
+                }
+            }
+            td{
+                border: 1px solid #dcdcdc;
+                padding:0 10px;
+                text-align: center;
+                line-height: 26px;
+                word-break:break-all;
+            }
+            .f-th{
+                width: 60%;
+            }
+        }
+    }
+}

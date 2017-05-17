@@ -1,0 +1,36 @@
+<% include ../common/class_top.ejs %>
+<body>
+<div class="pic-bg" style="background-image:url(<%= imagessrc%>/1.jpg)"></div>
+<div class="wt-main" id="container" data-init="class">
+    <div class="nav-tab">
+        <div class="list f-cb">
+            <ul>
+                <li class="must on">必学词汇 20%</li>
+                <li class="talk">对话练习 0%</li>
+                <li class="words">单词本</li>
+                <li class="grammar">语法</li>
+            </ul>
+        </div>
+    </div>
+    <div class="sub-class">
+        <div class="box n-game-box">
+            <div class="box-main">
+                <div class="zoomIn animated tc n-game-result">
+                    <div class="cup">
+                        <img class="pic" src="<%= imagessrc%>/j1.png" />
+                    </div>
+                    <div class="analysis">
+                        <p class="text">完成！你是最棒的！爱你 ε9(๑> ₃ <)6з</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pagenation">
+                <a href="#" class="btn preview-btn"></a>
+                <a href="#" class="btn again-btn"></a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+</body>
+<% include ../common/class_bottom.ejs %>
