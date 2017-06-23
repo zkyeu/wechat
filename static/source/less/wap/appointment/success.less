@@ -1,0 +1,138 @@
+@imgPath: "../../../images/wap/appointment/";
+.success-style() {
+	margin:2rem 2.1rem 0;
+	padding-bottom:2rem;
+	box-sizing:border-box;
+	text-align:center;
+	border-bottom:#c7c7c7 dashed 1px;
+	dd {
+		margin-top:1.2rem;
+		line-height:1.5;
+	}
+	h1 {
+		color:#333;
+		font-size:1.8rem;
+	}
+	p {
+		margin-top:1rem;
+		font-size:1.2rem;
+		color:#666;
+	}
+	img {
+		max-width:50%;
+	}
+}
+.title-style() {
+	font-size:1.6rem;
+	color:#54a8fc;
+	text-align:center;
+	&::before, &::after {
+		display:inline-block;
+		height:1px;
+		margin-right:0.5rem;
+		background:#54a8fc;
+		content:'';
+	}
+	&::after {
+		margin:0 0 0 0.5rem;
+	}
+}
+.success {
+	&-header {
+		height:87px;
+		line-height:87px;
+		background:url('@{imgPath}success_topbar.png') no-repeat;
+		background-size:100% 100%;
+		&__wrap {
+			display:flex;
+			align-items:center;
+			justify-content:center;
+			font-size:2rem;
+			color:#fff;
+			&::before {
+				display:inline-block;
+				width:49px;
+				height:40px;
+				background:url('@{imgPath}success_icon.png') no-repeat;
+				background-size:cover;
+				vertical-align:middle;
+				content:'';
+			}
+		}
+	}
+	&-exclusive {
+		.success-style;
+	}
+	&-before {
+		.success-style;
+		border-bottom:none;
+	}
+	&-guide {
+		padding-top:2.2rem;
+		background:url('@{imgPath}bg.jpg') repeat-x;
+		background-size:100% 10px;
+		&__title {
+			.title-style;
+		}
+		&__video {
+			margin:1.5rem 1.8rem 0;
+			padding:1.5rem 0 1rem;
+			border-top:#b1d6fd solid 1px;
+		}
+		&__tips {
+			font-size:1.2rem;
+			color:#828282;
+			text-align:center;
+		}
+	}
+	&-important {
+		margin-top:1.5rem;
+		padding-top:2.2rem;
+		background:url('@{imgPath}bg.jpg') repeat-x;
+		background-size:100% 10px;
+		&__title {
+			.title-style;
+			margin-bottom:1.5rem;
+		}
+		dl {
+			display:flex;
+			padding:1.8rem 0;
+			margin:0 1.8rem;
+			align-items:center;
+			border-top:#b1d6fd solid 1px;
+		}
+		dt {
+			flex:1.5;
+			margin-right:2rem;
+		}
+		dd {
+			flex:3;
+			h2 {
+				margin-bottom:0.5rem;
+				font-size:1.4rem;
+				color:#333;
+			}
+			p {
+				line-height:1.5;
+				font-size:1.2rem;
+				color:#666;
+			}
+		}
+	}
+	&-scan {
+		padding:2.8rem 0;
+		background:#eef9ff;
+		border-top:#d5e7fc solid 1px;
+		text-align:center;
+		img {
+			max-width:50%;
+		}
+		dd {
+			margin-top:2rem;
+		}
+		p {
+			font-size:1.3rem;
+			color:#333;
+		}
+	}
+}

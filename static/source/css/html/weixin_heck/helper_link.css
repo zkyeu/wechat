@@ -1,0 +1,12 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: 
+ */
+.helper-link table {
+  border-collapse: collapse;
+}
+.helper-link table tr td {
+  border: 1px solid #ccc;
+  padding: 30px;
+}

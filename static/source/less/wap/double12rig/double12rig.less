@@ -1,0 +1,243 @@
+@charset "utf-8";
+@import "../common/base.less";
+@imgPath: '../../../images/wap/double12rig/';
+
+html{height: 100%;}
+body { position: relative; font-family:"微软雅黑"; max-width: 640px; min-width: 320px; margin: 0 auto; }
+.clearfix:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+h3{
+    margin: 0;
+}
+.container{
+    .banner{
+        width: 100%;
+        height: 27.4rem;
+        background: url('@{imgPath}banner.jpg') 0 0 no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+    }
+    .content{
+        background-color: #ffcd01;
+        padding-bottom: 1.1rem;
+        .formBox{
+            width: 92.18%;
+            height: 19rem;
+            background-color: #ffea00;
+            margin: 0 auto 1.6rem;
+            position: relative;
+            border-radius: 0.5rem;
+            .title{
+                width: 27.35rem;
+                height: 5.15rem;
+                background: url('@{imgPath}title.png') 0 0 no-repeat;
+                background-size: 100% 100%;
+                position: absolute;
+                left: 50%;
+                margin-left: -13.67rem;
+                top:-2.1rem;
+            }
+            .subBtn{
+                width: 19.85rem;
+                height: 4.65rem;
+                background: url('@{imgPath}btnBg.png') 0 0 no-repeat;
+                background-size: 100% 100%;
+                position: absolute;
+                left: 50%;
+                margin-left: -9.925rem;
+                bottom:-6.25rem;
+                font-size: 1.8rem;
+                line-height: 4.65rem;
+                color: #f94159;
+                text-align: center;
+            }
+            .list{
+                padding-top: 3.8rem;
+                width: 27rem;
+                margin: 0 auto;
+                li{
+                    height: 3.5rem;
+                    width: 27rem;
+                    margin-bottom: 1.5rem;
+                    .txt {
+                        outline: none;
+                        -webkit-appearance: none;
+                        -webkit-tap-highlight-color: rgba(0,0,0,0);
+                        background-color: #fff;
+                        height: 100%;
+                        width: 24rem;
+                        border: none;
+                        font-size: 1.5rem;
+                        border-radius: 0.5rem;
+                        padding: 0 1.5rem;
+                        text-align: left;
+                    }
+                    .tel_code {
+                        width: 12rem;
+                        float: left;
+                    }
+                    .tel_btn {
+                        display: inline-block;
+                        height: 3.5rem;
+                        line-height: 3.5rem;
+                        width: 11rem;
+                        color: #c82401;
+                        background: #faac00;
+                        border-radius: 0.5rem;
+                        font-size: 1.5rem;
+                        color: #fff;
+                        text-align: center;
+                        float: right;
+                        background: url('@{imgPath}codeBtn.png') no-repeat;
+                        background-size: cover;
+                        &.sending {
+                          background: #e5e5e5;
+                          color: #aaaaaa;
+                        }
+                    }
+              }
+            }
+        }
+        .promotion{
+            width: 24.25rem;
+            height: 3.6rem;
+            margin: 8.3rem auto 2.2rem;  
+            display: block;
+        }
+        .oldUser{
+            width: 26.0rem;
+            height: 3.4rem;
+            margin: 0 auto;  
+            display: block;
+        }
+        .classList{
+            padding-top: 1.4rem;
+            padding-bottom: 0.5rem;
+            background-color: #ffcd01;
+            li{
+                float: left;
+                margin-left: 4.68%;
+                margin-bottom: 1.5rem;
+                width: 42.97%;
+                text-align: center;
+                background-color: #fff;
+                img{
+                    width: 100%;
+                    /* height: 9.5rem; */
+                    display: block;
+                    border: none;
+                } 
+                .title{
+                    font-size: 1.4rem;
+                    line-height: 3.2rem;
+                    color: #333333;
+                    margin: 0;
+                }
+                .desc{
+                    line-height: 1.5rem;
+                    margin-bottom: 1rem;
+                    span{
+                        font-size: 1.5rem;
+                        color: #ff2728;
+                        margin-right: 0.5rem;
+                        vertical-align: middle; 
+                        display: inline-block;
+                    }
+                    i{
+                       font-size: 1.2rem;
+                       color: #b1b1b1;
+                       text-decoration: line-through;
+                       vertical-align: middle; 
+                    }
+                }
+            }
+        }
+    }
+    .footer{
+        width: 100%;
+        height: 6.4rem;
+        line-height: 6.4rem;
+        text-align: center;
+        font-size: 0.8rem;
+        background-color: #f94159;
+        color: #fff;
+    }
+}
+.tipBox{
+    width: 27.4rem;
+    height: 33.5rem;
+    position: fixed;
+    left: 50%;
+    margin-left: -13.7rem; 
+    top: 50%;
+    margin-top: -16.75rem; 
+    background-color: #fff;
+    border-radius: 0.5rem;
+    display: none;
+    z-index: 1000;
+    background: url('@{imgPath}tipBg.png') 0 0 no-repeat;
+    background-size: 100% 100%;
+    .content{
+        position: absolute;
+        top:50%;
+        text-align: center;
+        width: 100%;
+        color: #f94159;
+        line-height: 2.4rem;
+        h3{
+            font-size: 1.8rem;
+        }
+        p{
+            font-size: 1.5rem;
+        }
+        .btn{
+            width: 21.0rem;
+            height: 3.5rem;
+            line-height: 3.5rem;
+            background-color: #f94159;
+            font-size: 1.6rem;
+            color: #fff;
+            display: inline-block;
+            border-radius: 0.4rem;
+            margin-top: 3.2rem;
+        }
+    }
+
+}
+.mask{
+    background:rgba(0,0,0,0.7);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

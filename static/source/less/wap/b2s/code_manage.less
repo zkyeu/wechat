@@ -1,0 +1,155 @@
+// 图片path
+@imgPath: '../../../images/wap/b2s/';
+
+@charset "utf-8";
+@import "../common/base.less";
+@import "modules/public.less";
+
+.code_manage_body{
+    background-color: #f5f5f5;
+    .search-box{
+        height:38px;
+        padding-left:10px;
+        padding-right:10px;
+        background-color:#dcdcdc;
+        padding-top:7px;
+        .search-b{
+            span{
+                display: inline-block;
+                width:17px;
+                height: 16px;
+                background: url("@{imgPath}d_icons.png") -180px 0 no-repeat;
+                background-size: 200px 17px;
+                position: relative;
+                top: 5px;
+            }
+            input{
+                color: #c8c8c8;
+                width: 80%;
+            }
+            background-color: #fff;
+            border-radius: 15px;
+            height: 28px;
+            font-size: 16px;
+            padding-left:15px;
+        } 
+    }
+    h2{
+        width:100%;
+        height:30px;
+        line-height: 32px;
+        color:#646464;
+        font-size: 16px;
+        padding-left: 13px;
+        padding-right: 10px;
+    }
+    .tody-icon, .history-icon{
+        display: inline-block;
+        width: 16px;
+        height:17px;
+        background: url("@{imgPath}d_icons.png") 0 0 no-repeat;
+        background-size: 200px 17px;
+        position: relative;
+        top: 1px;
+        margin-right: 10px;
+    }
+    .tody-icon{
+        background-position: 0 0;
+    }
+    .history-icon{
+        background-position: -50px 0;
+    }
+    .list-ul{
+        background-color: #fff;
+        width:100%;
+        li{
+            border-bottom:1px solid #dcdcdc;
+            height: 60px;
+            padding-left:10px;
+            padding-right:10px;
+            position: relative;
+            a{
+                display: block;
+            }
+            .li-icon{
+                display: inline-block;
+                position: relative;
+                width:17px;
+                height:17px;
+                float:left;
+                margin-top: 20px;
+                background: url("@{imgPath}d_icons.png") -100px 0 no-repeat;
+                background-size: 200px 17px;
+            }
+            .li-text{
+                float:left;
+                margin-left: 10px;
+                margin-top: 5px;
+                p{
+                    color:#323232;
+                    font-size: 18px;
+                    width: 225px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                div{
+                    color:#646464;
+                    font-size:14px; 
+                }
+            }
+            .time-box{
+                position: absolute;
+                right:10px;
+                top:20px;
+                font-size: 14px;
+                color:#969696;
+                span{
+                    margin-left:7px;
+                    display: inline-block;
+                    width: 7px;
+                    height:12px;
+                    background: url("@{imgPath}d_icons.png") -150px 0 no-repeat;
+                    background-size: 200px 17px;
+                }
+            }
+
+        }
+    }
+    .dialog-wrap{
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        .dialog-con{
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            width: 245px;
+            height: 150px;
+            background: #ffffff;
+            border-radius: 6px;
+            overflow: hidden;
+            text-align: center;
+            .dialog-tit{
+                height: 50px;
+                padding-top: 56px;
+                background: #ffa600 url("@{imgPath}class-QRCode-01.png") no-repeat center 16px;
+                background-size: 25px 28px;
+                font-size: 16px;
+                color: #fff;
+            }
+            .dialog-btn{
+                height: 44px;
+                line-height: 44px;
+                font-size: 16px;
+                color: #ff7800;
+            }
+        }
+    }
+}

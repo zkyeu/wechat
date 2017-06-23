@@ -1,0 +1,251 @@
+@charset "utf-8";
+@import "../common/base.less";
+@imgPath: "../../../images/wap/test_report_FT/";
+body,html{overflow-x:hidden;}
+.tr_report{ 
+    min-width: 320px;
+    max-width: 640px;
+    margin:0 auto;
+    font-family:@fontFamily;
+    .header{
+            height:4rem;
+            width: 100%;
+            background: url("@{imgPath}ft_logo.png") no-repeat 1rem center;
+            background-size:19.85rem 2.1rem;
+            line-height: 4rem;
+            padding:0 1.5rem;
+            box-sizing: border-box;
+            a{
+                float: right;
+                color:#ff8200;
+                font-size:1.2rem;
+
+            }
+    }
+    .ft_banner{
+        position: relative;
+        img{
+            width: 100%;
+        }
+        p{
+            position: absolute;
+            top:20%;
+            left:25%;
+            font-size: 2.5rem;
+            color:#813d19;
+            font-weight:900;
+            line-height: 3rem;
+            span{
+                font-weight:normal;
+            }
+        }
+    }
+    .ft_level{
+        width: 100%;
+        padding:8.5rem 0 1.5rem;
+        .level{
+            display: block;
+            width: 25.5rem;
+            margin:0 auto;
+        }
+        .ft_levelIn{
+            width: 25.5rem;
+            margin:0 auto;
+            position: relative;
+        }
+        .ft_now{
+            position: absolute;
+            color:#00c1bb;
+            text-align: center;
+            h4{
+                margin:0;
+                font-size:0.9rem;
+                white-space: nowrap;
+            }
+            p{
+                font-size: 1.2rem;
+                margin-bottom:0.6rem;
+            }
+            i{
+                display: inline-block;
+                width: 0.9rem;
+                height:1rem;
+                background: url("@{imgPath}ft_now.png") no-repeat center;
+                background-size: 100%;
+            }
+        }
+        .ft_level1{
+            top:2.5rem;
+            left:-0.6rem;
+        }
+         .ft_level2{
+            top:1.0rem;
+            left:4.0rem;
+        }
+        .ft_level3{
+            top:-0.6rem;
+            left:8.5rem;
+        }
+        .ft_level4{
+            top:-2.0rem;
+            left:13.0rem;
+        }
+        .ft_level5{
+            top:-3.5rem;
+            left:17.5rem;
+        }
+        .ft_level6{
+            top:-5.2rem;
+            left:22.2rem;
+        }
+        .ft_goal{
+            position: absolute;
+            // top:4rem;
+            // left:13.5rem;
+            color:#f00000;
+            text-align: center;
+            h4{
+                margin:0;
+                fonty-size:0.9rem;
+                white-space: nowrap;
+            }
+            p{
+                font-size: 1.2rem;
+                margin-bottom:0.6rem;
+            }
+            i{
+                display: inline-block;
+                width: 3.3rem;
+                height:4.4rem;
+                background: url("@{imgPath}ft_goal.png") no-repeat center;
+                background-size: 100%;
+            }
+        }
+        .ft_goal1{
+            top:-0.5rem;
+            left:1.0rem;
+        }
+        .ft_goal2{
+            top:-2.3rem;
+            left:5.5rem;
+        }
+        .ft_goal3{
+            top:-3.8rem;
+            left:10rem;
+        }
+        .ft_goal4{
+            top:-5.3rem;
+            left:14.5rem;
+        }
+        .ft_goal5{
+            top:-6.8rem;
+            left:19rem;
+        }
+        .ft_goal6{
+            top:-8.0rem;
+            left:23.5rem;
+        }
+      
+    }
+    /* 青少 */
+    .ft_level_junior{
+        .level{
+            width: 17.8rem;
+        }
+        .ft_levelIn{
+            width: 17.8rem;
+        }
+        .ft_level_junior1{
+            top:0rem;
+            left:-0.4rem;
+        }
+        .ft_level_junior2{
+            top:-1.8rem;
+            left:4.4rem;
+        }
+        .ft_level_junior3{
+            top:-3.3rem;
+            left:9.2rem;
+        }
+        .ft_level_junior4{
+            top:-4.8rem;
+            left:14rem;
+        }
+        .ft_goal_junior1{
+            top:-3.5rem;
+            left:1.0rem;
+        }
+        .ft_goal_junior2{
+            top:-5.2rem;
+            left:6.0rem;
+        }
+        .ft_goal_junior3{
+            top:-6.6rem;
+            left:10.6rem;
+        }
+        .ft_goal_junior4{
+            top:-8.2rem;
+            left:15.6rem;
+        }
+    }
+    .ft_model{
+        padding:0 1rem;
+        margin-top:2rem;
+        .title{
+            height:3.5rem;
+            line-height: 3.5rem;
+            border-left:0.2rem solid #ff8200;
+            background:#efefef;
+            width:100%;
+            text-indent:1.5rem;
+            font-size: 1.5rem;
+            span{
+                font-size: 1.2rem;
+            }
+        }
+        .ft_model_one{
+            line-height: 1.8rem;
+            font-size: 1.1rem;
+            margin-top:1rem;
+            text-align: justify;
+        }
+    }
+    .footer{
+        background: #323232;
+        padding:1rem 1.5rem 1.5rem;
+        height:18rem;
+        text-align: center;
+        width: 100%;
+        box-sizing:border-box;
+        margin-top:2rem;
+        h3{
+            color:#fff;
+            font-size: 1.8rem;
+            margin:0;
+            span{
+                color:#ffcd00;
+            }
+        }
+        input,.subBtn{
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            height:3.4rem;
+            border-radius: 0.3rem;
+            margin-top: 1rem;
+            padding:0 1.8rem;
+            font-size: 1.2rem;
+        }
+        .subBtn{
+            font-size: 1.5rem;
+            line-height:3.4rem;
+            background: #ff3434;
+            color:#fff;
+            -webkit-appearance:none;
+        }
+    }
+    .footerCopy{
+        position:fixed;bottom:0;min-width:320px;max-width:640px;
+    }
+}
+ 

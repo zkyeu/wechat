@@ -1,0 +1,567 @@
+/*初始化样式*/
+html{font-size:62.5%;}
+body{ color:#515050;font-family:'Microsoft YaHei',STXihei,MingLiu; background: #ebebeb; width: 100%;}
+cite,i,s,b{ font-style:normal;font-weight:normal;}
+body,ul,li,p,dl,dt,dd,ol,h1,h2,h3,h4,h5,h6{ margin:0px; padding: 0px;}
+h1,h2,h3,h4{  font-weight: normal;}
+li{ list-style: none;}
+img{border:0px;}
+a,a:link,a:visited{ text-decoration: none;}
+input{font-family:'Microsoft YaHei',STXihei,MingLiu;outline: none;border: none;margin:0;padding: 0;}
+
+@media only screen and (min-width: 481px){
+    html {
+        font-size: 94%!important;
+    }
+}
+@media only screen and (min-width: 561px){
+    html {
+        font-size: 109%!important;
+    }
+}
+@media only screen and (min-width: 641px){
+    html {
+        font-size: 125%!important;
+    }
+}
+
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden} 
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;} 
+
+@imgPath: "../../../images/wap/pupil20150915";
+@green:#70bc4f;
+@Bgreen:#1f5967;
+@white:#fff;
+.position(r){
+    position: relative;
+}
+.position(a){
+    position:absolute;
+}
+.borderbot{
+    border-bottom: 1px #dadada solid;
+}
+
+.mb2{
+    margin-bottom: 2.1rem;
+
+}
+
+
+.teengers{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-width: 320px;
+    max-width: 640px;
+    margin:0 auto;
+}
+
+
+//第一屏
+.oneSt{
+    width: 100%;
+    font-size: 0;
+    display:block;
+}
+.ones{
+    background-color: #f2f2f2;
+    padding-top:1.5rem;
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+.ones_logIn{
+    display: block;
+    margin:0 3rem;
+    li{
+        width: 100%;
+        margin-bottom: 1rem;
+        text-align: center;
+        .free{
+            margin:0;
+        }
+    }
+    input{
+        width: 100%;
+        padding:0.8rem 0rem;
+        text-align: center;
+        display: block;
+        font-size: 1.6rem;
+        color: #7a7a7a;
+        border-radius: 3px;
+        border:1px solid #ccc;
+        text-align: center;
+        margin:0 -1px;
+
+    }
+    .free{
+        background-color: #ff7200;
+        width: 100%;
+        padding:0.8rem 0rem;
+        font-size: 1.6rem;
+        color: #fff;
+        border-radius: 3px;
+    }
+}
+
+
+//第二屏
+.tws{
+    width:100%;
+    height:43.5rem ;
+    background-color:@white;
+    padding-top: 1.6rem;
+    padding-bottom: 0.5rem;
+    overflow: hidden;
+    position: relative;
+    .tws_title{
+        font-size: 1.6rem;
+        font-weight: bold;
+        height: 2.9rem;
+        text-align: center;
+        color:#3e3e3e;
+    }
+    .tws_list{
+        width: 100%;
+        li{
+            width: 100%;
+            height: 9rem;
+            margin-bottom: 1.3rem;
+            display: -webkit-box;
+            -webkit-box-align:center;
+            -webkit-box-pack:center;
+            display: -ms-flexbox;
+            -ms-flex-align:center;
+            -ms-flex-pack:center;
+
+            display: -moz-box;
+            -moz-box-pack: center; 
+            -moz-box-align: center;
+
+            display: flexbox;
+            flex-pack:center;
+            flex-align:center;
+        }
+        img{
+            width:9rem;
+            height:9rem;
+        }
+        .list_tit{
+            width:12rem;
+            line-height: 1.5rem;
+            font-size: 1.4rem;
+            text-align: center;
+            margin-left: 1.6rem;
+
+        }
+    }
+}
+
+//第三屏
+.trs_titT{
+    font-size: 1.6rem;
+    font-weight: bold;
+    height: 2rem;
+    text-align: center;
+}
+.trs_titB{
+    font-size: 0.9rem;
+    color: #0fabaf;
+    height: 1.4rem;
+    line-height: 1.4rem;
+    display: -webkit-box;
+    -webkit-box-flex:1;
+    -webkit-box-pack:center;
+    display: -ms-flexbox;
+    -ms-flex-align:center;
+    -ms-flex-pack:center;
+
+    display: -moz-box;
+    /*-moz-box-flex:1;*/
+    -moz-box-pack: center; 
+    -moz-box-align: center;
+
+    display: flexbox;
+    flex-pack:center;
+    flex-align:center;
+}
+.trs_text{
+    line-height: 1.8rem;
+    color: @white;
+}
+
+
+//第四屏
+.fos{
+    background-color: #00c3c9;
+    
+    padding-top: 2.2rem;
+    padding-bottom: 2.1rem;
+    /*text-align: center;*/
+    .trs_titT{
+        height: 2rem;
+        color: #1f5967;
+        span{
+            color: @white;
+        }
+        
+    }
+    .trs_titB{
+        width: 100%;
+        font-size:0.8rem;
+        text-align: center;
+    }
+    .fos_text{
+
+        text-align: center;
+        margin-top: .7rem;
+        color:@white;
+        img{
+            width: 23.4rem;
+        }
+        p{
+            height: 3.6rem;
+            line-height: 1.8rem;
+            font-size: 1.2rem;
+            margin-top: 1.1rem;
+        }
+        a{
+            padding: 1rem 0rem;
+            color:@white;
+            border:2px solid @white;
+            border-radius: 5px; 
+            display: block;
+            margin:1.5rem 8rem 0 8rem;
+            font-size: 1.5rem;
+        }
+    }
+    
+    
+}
+
+
+
+
+
+.open{
+    background-color: #1f5967;
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem;
+    text-align: center;
+    .trs_titT{
+        color: #27e0e6;
+        span{
+            font-weight: normal;
+            margin-left: 1.1rem;
+        }
+        i{
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: #27e0e6;
+            border-radius: 50%;
+            margin:0 0.4rem;
+            vertical-align: middle;
+        }
+    }
+    .trs_titB{
+        font-size: 0.6rem;
+    }
+    .fos_text{
+        width:100%;
+        display: -webkit-box;
+        -webkit-box-pack:center;
+        -webkit-box-align:center;
+
+        display: -ms-flexbox;
+        -ms-flex-align:center;
+        -ms-flex-pack:center;
+
+        display: -moz-box;
+        -moz-box-pack: center; 
+        -moz-box-align: center;
+
+        display: flexbox;
+        flex-pack:center;
+        flex-align:center;
+
+    }
+    .trs_text{
+        position: relative;
+        width: 21.1rem;
+        margin-top: .7rem;
+        .fos_pl,.fos_pr{
+            width:2.2rem;
+            height:0.85rem;
+            background: url("@{imgPath}/d.png") left top no-repeat;
+            background-size:50%;
+            position: absolute;
+        }
+        .fos_pl{
+            left: -2.5rem;
+            top: 0;
+        }
+        .fos_pr{
+            right: -2rem;
+            bottom: 0;
+        }
+    }
+}
+
+
+
+//第五屏
+.sis{
+    background-color: #f5b120;
+    padding-top: 1.5rem;
+    /*padding-bottom: 5.2rem;*/
+    position: relative;
+    color: @white;
+    .trs_titB{
+        color:@white;
+        width: 100%;
+        font-size:0.6rem;
+        text-align: center;
+    }
+    .sis_list{
+        padding-bottom: 2.1rem;
+        margin-top: .7rem;
+    }
+    li{
+        text-align: center;
+
+    }
+    .sis_text{
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    .sis_dl{
+        display: -webkit-box;
+        -webkit-box-flex:1;
+        -webkit-box-pack:center;
+        -webkit-box-align:center;
+        display: -ms-flexbox;
+        -ms-flex-align:center;
+        -ms-flex-pack:center;
+
+        display: -moz-box;
+        -moz-box-flex:1;
+        -moz-box-pack: center; 
+        -moz-box-align: center;
+
+        display: flexbox;
+        flex-pack:center;
+        flex-align:center;
+        .sis_l,.sis_r{
+            display: -webkit-box;
+        }
+        .sis_r{
+            font-size: 1.6rem;
+            margin-left: 2rem;
+        }
+        .sis_l{
+            width:9.4rem;
+            height: 9rem;
+            position: relative;
+            background:url("@{imgPath}/pupil_bg.png") left top no-repeat;
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+        }
+        img{
+            width:7.6rem;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top:50%;
+            margin-left:-3.9rem; 
+            margin-top: -3.8rem;
+        }
+    }
+    .sis_fb{
+        width: 100%;
+        display: -webkit-box;
+        -webkit-box-flex:1;
+        -webkit-box-pack:center;
+        -webkit-box-align:center;
+        display: -ms-flexbox;
+        -ms-flex-align:center;
+        -ms-flex-pack:center;
+
+        display: -moz-box;
+        -moz-box-pack: center; 
+        -moz-box-align: center;
+
+        display: flexbox;
+        flex-pack:center;
+        flex-align:center;
+        img{
+            width:11rem;
+        }
+    }
+    .sis_now{
+        display: -webkit-box;
+        -webkit-box-pack:center;
+        -webkit-box-align:center;
+        display: -ms-flexbox;
+        -ms-flex-align:center;
+        -ms-flex-pack:center;
+
+        display: -moz-box;
+        -moz-box-pack: center; 
+        -moz-box-align: center;
+
+        display: flexbox;
+        flex-pack:center;
+        flex-align:center;
+
+
+        
+        padding:1rem 2.25rem;
+        border:2px solid @white;
+        border-radius: 0.4rem;
+        color: @white;
+        font-size: 1.6rem;
+    }
+}
+//底部
+.bottomImg{
+    width:100%;
+    display: block;
+}
+footer{
+    background-color: #6d6869;
+    color:#fff;
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    width: 100%;
+    
+    p{
+        height: 1.8rem;
+        text-align: center;
+        margin-top: 1.9rem;
+    }
+}
+
+.free{
+    color: #2e2d2d;
+    padding:1rem 0rem;
+    display: block;
+    margin:0 5rem;
+    font-size: 1.6rem;
+    background-color: #ffcc00;
+    border-radius: 5px;
+}
+
+
+.freeT{
+    font-size: 2rem;
+    width: 18.2rem;
+    position: absolute;
+    left:50%;
+    bottom: 10.9rem;
+    margin-left: -11.1rem;
+    text-align: center;
+    box-shadow:10px 10px 28px #444 ;
+}
+
+@media screen and (min-width: 375px) {
+    .top{
+        .OneS_logIn{
+            input{
+                width: 20rem;
+            }
+        
+           a{
+             width: 20rem;
+          
+           }        
+        }  
+    } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

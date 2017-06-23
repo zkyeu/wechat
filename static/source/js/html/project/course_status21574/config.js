@@ -1,0 +1,22 @@
+/**
+ * 配置路由
+ * @file：   config.js
+ * @author:  vincent(zhuning@51talk.com)
+ * @update:  2015-07-14
+ * @note: base
+ */
+(function(){ 
+    var aPage=$("[data-init]");
+    var arr=[];
+    aPage.each(function() {
+        arr.push($(this).attr("data-init"));
+    });
+    seajs.config({
+        alias: {
+            "course_status21574": "/js/html/project/course_status21574/course_status21574.js",
+            "course": "/components/html/course_status21574/js/modules/course.js",
+            "pagination": "/components/lib/pagination/pagination.js"
+        }
+    });
+    seajs.use(arr);
+})();

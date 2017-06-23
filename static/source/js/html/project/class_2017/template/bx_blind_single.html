@@ -1,0 +1,21 @@
+<div class="box">
+    <div class="box-main">
+        <div class="f-cb wordchoose choose-one">
+            <ul>
+                <li id="j_target" class="item word-pic" data-cix="<%= data.cix%>">
+                    <img class="pic" src="<%= domain + data.target.img%>"/>
+                    <span id="j_audio_1" class="audio-btn" media-audio="<%= domain + data.target.record%>"></span>
+                    <div class="bom">
+                        <p class="word-txt">
+                            <%= word%>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="pagenation">
+        <a id="j_page_prev" href="javascript:;" class="btn prev-btn"></a>
+        <a id="j_page_guess" href="javascript:;" class="btn guessed-btn disabled"></a>
+    </div>
+</div>

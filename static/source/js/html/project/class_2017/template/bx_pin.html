@@ -1,0 +1,43 @@
+<div class="box" unselectable="on" id="j_pin" >
+    <div class="box-main">
+        <div class="f-cb puzzle" unselectable="on">
+            <!--
+            <div id="j_pic_list" class="pic-box hide">
+            -->
+            <div id="j_pic_list" class="pic-box" unselectable="on">
+                <ul class="list leftList"  unselectable="on">
+                    <% for (var i=0; i<data.option.length; i++) {%>
+                    <li unselectable="on" class="pic">
+                        <div class="dragTarget move" data-color="<%=data.option[i].order%>" style="background:url(<%= domain + data.option[i].img%>);background-size: 94px 288px;" draggable="true"></div>
+                    </li>
+                    <%}%>
+                </ul>
+            </div>
+
+            <!--
+            <div id="j_result_box" class="result-box r-success">
+            -->
+            <div unselectable="on" draggable="false" id="j_result_box" class="result-box" media-yes="<%= staticPath%>/images/html/class_2017/audio/goodjob.mp3" media-no="<%= staticPath%>/images/html/class_2017/audio/no.mp3" data-flag="0">
+                <ul class="list" draggable="false" unselectable="on">
+                    <li unselectable="on" draggable="false" class="pic" data-color="1"></li>
+                    <li unselectable="on" draggable="false" class="pic" data-color="2"></li>
+                    <li unselectable="on" draggable="false" class="pic" data-color="3"></li>
+                </ul>
+                <div class="jigsaw hide">
+                    <img src="<%= domain + data.jigsaw%>" />
+                </div>
+                <p class="ft16 word-txt hide"><%=targetTitle%></p>
+                <span id="j_audio_word" class="audio-btn" media-audio="<%= domain + data.target.record%>"></span>
+            </div>
+        </div>
+    </div>
+    <div unselectable="on" class="pagenation" draggable="false">
+    <span id="j_page_prev" unselectable="on" class="btn prev-btn"></span><span id="j_page_next" unselectable="on" class="btn next-btn"></span>
+    </div>
+</div>
+
+<!-- 成功 -->
+<div id="j_tip_zan" unselectable="on" class="bx-tip bx-tip-zan animated zoomIn hide"></div>
+<div id="j_tip_wrong" unselectable="on" class="bx-tip bx-tip-wrong animated zoomIn hide"></div>
+<!-- 拖动提示 -->
+<div id="j_tip_drag" unselectable="on" class="bx-tip bx-tip-drag animated slideOutRight hide"></div>

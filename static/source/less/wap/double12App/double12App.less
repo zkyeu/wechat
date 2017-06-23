@@ -1,0 +1,182 @@
+@charset "utf-8";
+@import "../common/base.less";
+.container_register{
+  @height: 4.4rem;
+  @he2d5:2.5rem;
+  @rem1d5:1.5rem;
+  @rgba0:rgba(255,255,255,0);
+  .clearfix{}
+  .clearfix:after{content: ""; display: block; height: 0; overflow: hidden; clear: both}
+  .logo{
+    display: block;
+    width:18.4rem;
+    height: auto;
+    overflow: hidden;
+    margin:20vh auto;
+    img{width: 18.4rem;}
+  }
+  .fl{
+    float: left;
+  }
+  .fr{
+    float: right;
+  }
+  .pr{
+    position: relative;
+  }
+  .register_form{
+    display: block;
+    width: 25.3rem;
+    height: 21rem;
+    margin: 0 auto;
+    input{
+      font-size:1.8rem;
+      padding-left:1rem;
+      line-height:@he2d5;
+      -webkit-tap-highlight-color: @rgba0;
+    }
+    input::-webkit-input-placeholder{
+      color:#ccc;
+      font-size:@rem1d5;
+    }
+    .border5px{
+      border-radius: 0.5rem;
+      border:#ccc solid 1px;
+    }
+    ul{
+      list-style: none;
+    }
+    ul li{
+      position: relative;
+      display: block;
+      height:@height;
+      line-height:@height;
+      margin-bottom: 1rem;
+    }
+    .rowMobile{
+      position: relative;
+      background: #fff;
+      input{
+        height:@he2d5;
+        width:23rem;
+      }
+    }
+    .rowSms{
+      width:12.6rem;
+      input{
+        height:@he2d5;
+        width:11.5rem;
+      }
+    }
+    #captchImg{
+      float:left;
+      display: block;
+      width:10rem;
+      height: 4.4rem;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    #captchImg img{
+      width:10rem;
+      height:3rem;
+    }
+    .sms_btn{
+      button {
+        position: absolute;
+        right: 0;
+        width: 10.6rem;
+        height:@height;
+        font-size:@rem1d5;
+        background: none;
+        color: #ccc;
+        -webkit-tap-highlight-color: @rgba0;
+      }
+    }
+    .times{
+      display: none;
+      position: absolute;
+      top:1.5rem; right: 1rem;
+      width: @rem1d5;
+      height:@rem1d5;
+      background-color: #ccc;
+      border-radius:50%;
+      line-height:@rem1d5;
+      text-align: center;
+      color: #fff;
+      -webkit-tap-highlight-color: @rgba0;
+    }
+    #double12App_registerBtn{
+      border-radius: 0.5rem;
+      border:#ccc solid 1px;
+      height: 4.4rem;
+      width:100%;
+      line-height:@height;
+      font-size:1.8rem;
+      color: #fff;
+      text-align: center;
+      cursor: pointer;
+      background: #ddd;
+      -webkit-tap-highlight-color: @rgba0;
+    }
+  }
+  .reg_tips{
+    width: 100%;
+    text-align: center;
+    margin-top: 1.8rem;
+    font-size:1rem;
+    color:#666;
+    a{
+      color: #333;
+      text-decoration: underline;
+      -webkit-tap-highlight-color: @rgba0;
+    }
+  }
+
+
+}
+.showtips_layer{
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,.6);
+  z-index: 99;
+  top:0;
+  left: 0;
+  .showtips{
+    display: block;
+    width: 60vw;
+    height:4.4rem;
+    line-height: 4.4rem;
+    font-size: 1.5rem;
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left:0;
+    margin: auto;
+    text-align: center;
+    background: #ddd;
+    border-radius: .5rem;
+    z-index: 999;
+    span{
+      display: block;
+      width: 100%;
+      height: 4.4rem;
+      overflow: hidden;
+    }
+    em{
+      position: relative;
+      display: block;
+      width: 2rem;
+      height: 2rem;
+      line-height: 2rem;
+      top:-5rem;
+      left:57vw;
+      border-radius: 50%;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}

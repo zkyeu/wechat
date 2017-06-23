@@ -1,0 +1,185 @@
+<% include ../common/top_b2s.ejs %>
+    <link rel="stylesheet" href="<%=csslinkb2s%>helperIframe.css">
+    <link rel="stylesheet" href="<%=csslinkb2s%>layui.css">
+</head>
+<!--<body data-init="helperIframe">-->
+<body data-init="helperLink">
+
+<div class="tiyan-block w90_ helper-link">
+    <div class="tab-list">
+        <ul>
+            <li class="cut">免费体验 （<span id="stuNum"></span>）</li>
+            <!--<li>需要follow的 （15）</li>-->
+        </ul>
+    </div>
+    <div class="table-block">
+        <table class="table-control">
+            <thead>
+
+            </thead>
+            <tbody>
+                <!--<tr>-->
+                    <!--<td class="col-1">-->
+                        <!--<p>2017-04-21 19:00-19:30</p>-->
+                        <!--<p>上课中</p>-->
+                        <!--<p>-->
+                            <!--<span class="helper-board">白板</span>-->
+                        <!--</p>-->
+                    <!--</td>-->
+                    <!--<td class="col-2">-->
+                        <!--<p>未开始或未结束</p>-->
+                    <!--</td>-->
+                    <!--<td class="col-3">-->
+                        <!--<p>-->
+                            <!--<span class="helper-student">Student(34188468)</span>-->
+                        <!--</p>-->
+                        <!--<p>成人</p>-->
+                        <!--<p>tmk代约</p>-->
+                        <!--<p>推荐用户</p>-->
+                        <!--<p>A类渠道用户</p>-->
+                    <!--</td>-->
+                    <!--&lt;!&ndash;<td class="col-4">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<p>小学生</p>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<p>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<span class="helper-group-edit">修改</span>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</p>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</td>&ndash;&gt;-->
+                    <!--<td class="col-5">-->
+                        <!--<p>美国小学American Academy猴子的一天2 Monkey’s Day2</p>-->
+                    <!--</td>-->
+                    <!--<td class="col-6">-->
+                        <!--<p>13819281828</p>-->
+                        <!--<p>-->
+                            <!--<span class="helper-regeist">注册数（10）</span>-->
+                        <!--</p>-->
+                    <!--</td>-->
+                    <!--<td class="col-7">-->
+                        <!--<p>女（宝贝年级）6岁（宝贝英文名或姓名）侯同学（上课时间）明晚8点半（向爸爸、妈妈推荐AC上课设备）台式机AC。。。</p>-->
+                    <!--</td>-->
+                    <!--&lt;!&ndash;<td class="col-8">2017-04-21</td>&ndash;&gt;-->
+                    <!--<td class="col-9">-->
+                        <!--<p>-->
+                            <!--<span class="helper-edit">修改备注</span>-->
+                        <!--</p>-->
+                        <!--<p>-->
+                            <!--<span class="helper-call">打电话</span>-->
+                        <!--</p>-->
+                        <!--<p>-->
+                            <!--<span class="helper-add">加微信</span>-->
+                        <!--</p>-->
+                        <!--<p>-->
+                            <!--<span class="helper-sms">发短信</span>-->
+                        <!--</p>-->
+
+                    <!--</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td class="col-1">-->
+                        <!--<p>2017-04-21 19:00-19:30</p>-->
+                        <!--<p>上课中</p>-->
+                        <!--<p>-->
+                            <!--<span class="helper-board">白板</span>-->
+                        <!--</p>-->
+                    <!--</td>-->
+                    <!--<td class="col-2">-->
+                        <!--<p>未开始或未结束</p>-->
+                    <!--</td>-->
+                    <!--<td class="col-3">-->
+                        <!--<p>-->
+                            <!--<span class="helper-student">Student(34188468)</span>-->
+                        <!--</p>-->
+                        <!--<p>成人</p>-->
+                        <!--<p>tmk代约</p>-->
+                        <!--<p>推荐用户</p>-->
+                        <!--<p>A类渠道用户</p>-->
+                    <!--</td>-->
+                    <!--&lt;!&ndash;<td class="col-4">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<p>小学生</p>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<p>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="helper-group-edit">修改</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</p>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</td>&ndash;&gt;-->
+                    <!--<td class="col-5">-->
+                        <!--<p>美国小学American Academy猴子的一天2 Monkey’s Day2</p>-->
+                    <!--</td>-->
+                    <!--<td class="col-6">-->
+                        <!--<p>13819281828</p>-->
+                        <!--<p>-->
+                            <!--<span class="helper-regeist">注册数（10）</span>-->
+                        <!--</p>-->
+                    <!--</td>-->
+                    <!--<td class="col-7">-->
+                        <!--<p>女（宝贝年级）6岁（宝贝英文名或姓名）侯同学（上课时间）明晚8点半（向爸爸、妈妈推荐AC上课设备）台式机AC。。。</p>-->
+                    <!--</td>-->
+                    <!--&lt;!&ndash;<td class="col-8">2017-04-21</td>&ndash;&gt;-->
+                    <!--<td class="col-9">-->
+                        <!--<p>-->
+                            <!--<span class="helper-edit">修改备注</span>-->
+                        <!--</p>-->
+                        <!--<p>-->
+                            <!--<span class="helper-call">打电话</span>-->
+                        <!--</p>-->
+                        <!--<p>-->
+                            <!--<span class="helper-add">加微信</span>-->
+                        <!--</p>-->
+                        <!--<p>-->
+                            <!--<span class="helper-sms">发短信</span>-->
+                        <!--</p>-->
+                    <!--</td>-->
+                <!--</tr>-->
+            </tbody>
+        </table>
+        <h5 class="table-nodata dn">暂无数据！</h5>
+    </div>
+</div>
+<div class="sms dn">
+    <div class="flex-mask">
+        <div class="sms-layer">
+            <i></i>
+            <textarea id="smsCon" placeholder="例：您好，我是51talk的课程老师winfred，我带您做一下课前准备，请您加一下我的微信：51Talkwinfred"></textarea>
+            <div class="btn-send">
+                <span class="send">发送</span>
+                <span class="close">取消</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="add-remark dn">
+    <div class="flex-mask">
+        <div class="helper-edit-layer">
+            <div class="close-layer-btn-right">
+                <em></em>
+            </div>
+            <div class="add-remind">
+                <dt>备注：</dt>
+                <dd>
+                    <textarea></textarea>
+                </dd>
+                <div class="set-time">
+                    <i class="sel-time"></i>
+                    Follow日期：
+                    <!--<span class="cut-year"></span>-->
+                    <!--年-->
+                    <!--<select class="cut-month">-->
+
+                    <!--</select>-->
+                    <!--月-->
+                    <!--<select class="cut-dayth">-->
+
+                    <!--</select>-->
+                    <!--日-->
+                    <input type="text" class="follow-time" onclick="layui.laydate({elem: this})" id="studyEndTime">
+                </div>
+            </div>
+            <div class="helper-add-btn">
+                <span class="btn-global default" id="addRemark">添加</span>
+                <span class="btn-global greey" id="concel">取消</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<% include ../common/bottom.ejs %>

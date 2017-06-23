@@ -1,0 +1,457 @@
+@imgUrl:"../../../images/html/group_class/";
+@orange:#ff6d02;
+.third-grade{
+		position:relative;
+		height:590px;
+		margin-top:10px;
+		.common-bg{
+			position:absolute;
+			width:870px;
+			height:540px;
+			padding:60px 0 0 130px;
+			h2{
+				font-size:24px;
+				color:@orange;
+				font-weight:bold;
+				width: 795px;
+			}
+			h3{
+				font-size: 20px;
+				color: #666;
+				font-weight: bold;
+			}
+		}
+		.m20{
+			margin: 20px 0;
+		}
+		.m10{
+			margin: 10px 0;
+		}
+		.t20{
+			margin-top: 20px;
+		}
+		.includeAudio{
+			height: 125px;
+			dt{
+				float:left;
+				margin:40px 5px 0 0;
+				font-size:24px;
+				color:#666;
+				font-weight:bold;
+			}
+			dd{
+				display: inline-block;
+				float: left;
+				height: 125px;
+			}
+			.play-btn{
+				width: 100px;
+				cursor: pointer;
+				background: url('@{imgUrl}play-normal.png') 0  no-repeat;
+			}
+			.play-btn:hover{
+				background-position: 0 20px;
+			}
+			.playing{
+				background: url('@{imgUrl}playing.gif') 0  no-repeat;
+			}
+			.audio-img{
+				width: 143px;
+				height: 120px;
+				border: #dec125 solid 2px;
+				background:url('@{imgUrl}third_grade.png') 0 0 no-repeat;
+			}
+		}
+		.single-question{
+			ul{
+				margin:30px 0 0 20px;
+			}
+			li{
+				float:left;
+				position:relative;
+				width:140px;
+				height:120px;
+				margin-right:22px;
+				border:#dec125 solid 2px;
+				cursor: pointer;
+				background:url('@{imgUrl}third_grade.png') 0 0 no-repeat;
+				&::after{
+					position:absolute;
+					left:-15px;
+					top:-12px;
+					display:inline-block;
+					width:30px;
+					height:30px;
+					line-height:30px;
+					background:#dec125;
+					color:#fff;
+					font-size:18px;
+					border-radius:50%;
+					text-align:center;
+				}
+				&::before{
+					position:absolute;
+					display:inline-block;
+					width: 148px;
+					height: 40px;
+					line-height: 40px;
+					text-align: center;
+					font-size: 20px;
+					font-weight: bold;
+					color: #666;
+					bottom: -42px;
+				}
+			
+			}
+			li:hover{
+				top:-3px;
+			}
+			.current{
+				border:#ea7118 solid 2px;
+				&::after{
+					top:-15px;
+					background:#ea7118;
+				}
+
+			}
+		}
+		.single-question2{
+			ul{
+				margin:25px 0 0 5px;
+				li{
+					position: relative;
+					margin-bottom: 10px;
+					width: 760px;
+					height: 45px;
+					line-height: 45px;
+					padding-left: 20px;
+					border-radius: 5px;
+					border: #dbbc09 solid 2px;
+					color: #dbbc09;
+					cursor: pointer;
+					font-weight: bold;
+					font-size: 20px;
+					&:hover{
+						color: #ea7118;
+					}
+				}
+				li.current{
+					border: #ea7118 solid 2px;
+					background:#ea7118;
+					color:#fff;
+					&:hover{
+						color:#fff;
+					}
+				}
+
+			}
+
+		}
+		.first-question{
+			li:nth-child(1){
+				background-position: 0 0;
+				&::after{
+					content:'A';
+				}
+				&::before{
+					content:'eye';
+				}
+			}
+			li:nth-child(2){
+				background-position:-483px -273px;
+				&::after{
+					content:'B';
+				}
+				&::before{
+					content:'leg';
+				}
+			}
+			li:nth-child(3){
+				background-position: -645px -273px;
+				&::after{
+					content:'C';
+				}
+				&::before{
+					content:'arm';
+				}
+			}
+			li:nth-child(4){
+				background-position:-321px -273px;
+				&::after{
+					content:'D';
+				}
+				&::before{
+					content:'ear';
+				}
+			}
+		}
+		.second-question{
+			li:nth-child(1){
+				background-position: -162px -273px;
+				&::after{
+					content:'A';
+				}
+				&::before{
+					content:'pear';
+				}
+			}
+			li:nth-child(2){
+				background-position:0px -273px;
+				&::after{
+					content:'B';
+				}
+				&::before{
+					content:'watermelon';
+				}
+			}
+			li:nth-child(3){
+				background-position: -798px -273px;
+				&::after{
+					content:'C';
+				}
+				&::before{
+					content:'banana ';
+				}
+			}
+			li:nth-child(4){
+				background-position:0 -410px;
+				&::after{
+					content:'D';
+				}
+				&::before{
+					content:'orange';
+				}
+			}
+		}
+		.third-question{
+			li:nth-child(1){
+				background-position: -798px -138px;
+				&::after{
+					content:'A';
+				}
+				&::before{
+					content:'farmer';
+				}
+			}
+			li:nth-child(2){
+				background-position:-645 -138px;
+				&::after{
+					content:'B';
+				}
+				&::before{
+					content:'teacher';
+				}
+			}
+			li:nth-child(3){
+				background-position:-483px -138px;
+				&::after{
+					content:'C';
+				}
+				&::before{
+					content:'doctor';
+				}
+			}
+			li:nth-child(4){
+				background-position:-321px -138px;
+				&::after{
+					content:'D';
+				}
+				&::before{
+					content:'policeman';
+				}
+			}
+		}
+		.seventh-question{
+			.question-wrap{
+				display:flex;
+				li{
+					margin-top:10px;
+					height:60px;
+					
+					background:#fff;
+					text-align:center;
+				}
+				.move{
+					background:url('@{imgUrl}third_grade.png') 0 0 no-repeat; 
+					transition:all 0.5s ease;
+					height: 60px;
+					width: 290px;
+				}
+				.hamburger{
+					background-position: -483px -413px;
+				}
+				.french{
+					background-position: -162px -410px;
+				}
+				.hotdog{
+					background-position:-483px -500px;
+				}
+				.juice{
+					background-position:-162px -500px;
+				}
+				
+			}
+			.ask-wrap{
+				width:185px;
+				margin-right:10px;
+				float: left;
+				li{
+					width:185px;
+					font-size: 20px;
+					font-weight: bold;
+					color: #666666;
+					height: 64px;
+					line-height: 64px;	
+					background: none;
+					text-align: left;				
+				}
+				
+			}
+			.answer-wrap{
+				float: left;
+				margin-right: 10px;
+				.current{
+					border-color:#dec125;
+					border-style:solid;
+				}
+				li{
+					border:#dec125 dashed 2px;
+					width: 290px;
+				}
+			}
+			.option-wrap{
+				li{
+					width: 290px;
+					border:#dec125 solid 2px;
+				}
+			}
+
+		}
+		.eighth-question{
+
+			.question-wrap{
+				display:flex;
+				li{
+					background:#fff;
+					text-align:left;
+					margin-top: 45px;
+					height: 50px;
+					&:hover{
+						border-color: #efa500;
+					}
+				}
+				.move{
+					transition:all 0.5s ease;
+					color: #dec125;
+					font-size: 20px;
+					line-height: 50px;
+					font-weight: bold;
+					background:#fff;
+					padding-left: 12px;
+				}
+			}
+			.answer-wrap{
+				float: left;
+				margin-right: 68px;
+				margin-left: 10px;
+				.current{
+					border-color:#dec125;
+					border-style:solid;
+				}
+				li{
+					border:#dec125 dashed 2px;
+					width: 350px;
+					position: relative;
+					&:before{
+						position: absolute;
+						top: -38px;
+						display: block;
+						line-height: 35px;
+						font-size: 20px;
+						font-weight: bold;
+						color: #666;
+					}
+				}
+				li:nth-child(1){
+					&:before{
+						content: "What’s your name?";
+					}
+				}
+				li:nth-child(2){
+					&:before{
+						content: "Nice to meet you! ";
+					}
+				}
+				li:nth-child(3){
+					&:before{
+						content: "Can I have a peach? ";
+					}
+				}
+				li:nth-child(4){
+					&:before{
+						content: "Good morning Mum!";
+					}
+				}
+			}
+			.option-wrap{
+				li{
+					width: 350px;
+					border:#dec125 solid 2px;
+				}
+			}
+		}
+		.ninth-question{
+			li:nth-child(1){
+				background-position:-321px 0;
+				&::after{
+					content:'A';
+				}
+				&::before{
+					content:'Christmas tree';
+				}
+			}
+			li:nth-child(2){
+				background-position:-162px -138px;
+				&::after{
+					content:'B';
+				}
+				&::before{
+					content:'Easter eggs';
+				}
+			}
+			li:nth-child(3){
+				background-position:0 -138px;
+				&::after{
+					content:'C';
+				}
+				&::before{
+					content:'flowers';
+				}
+			}
+			li:nth-child(4){
+				background-position:-162px 0;
+				&::after{
+					content:'D';
+				}
+				&::before{
+					content:'pumpkins';
+				}
+			}
+		}
+		.tenth-question{
+			.includeAudio .audio-img{
+				background-position: -798px 0;
+			}
+		}
+		.eleventh-question{
+			.includeAudio .audio-img{
+				background-position: -645px 0;
+			}
+		}
+		.twelfth-question{
+			.includeAudio .audio-img{
+				background-position: -483px 0;
+			}
+		}
+
+}

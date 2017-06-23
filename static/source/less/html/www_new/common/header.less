@@ -1,0 +1,559 @@
+@orange:#ffa900;
+@maxWidth:1200px;
+@imgPath: "../../../../images/html/www_new/";
+.wrap-header{
+	height: 30px;
+	width: 100%;
+	background: #f5f5f5;
+	border-bottom: #e4e4e4 solid 1px;
+
+	.header{
+		width: @maxWidth;
+		margin: 0 auto;
+		line-height: 16px;
+		font-size: 12px;
+		padding: 7px 0;
+		color: #999;
+		.orange{color: @orange}  
+		.left{
+
+		}
+		.right{
+			.weibo, .weixin {
+			    position: absolute;
+			    z-index: 9999;
+			    right: -27px;
+			    top: 16px;
+			    display: none;
+			    -webkit-transform: rotateY(0deg);
+			    transform: rotateY(0deg);
+			    display: none;
+          a{display:block;}
+			}
+			.weibo{
+				right: 52px;
+			    top: 16px;
+			    background: url("http://static.51talk.com/static/images/html/www_new/common/icon.png") no-repeat;
+			    display: inline-block;
+			    width: 90px;
+			    height: 55px;
+			    line-height: 55px;
+			    display: none;
+			    text-align: center;
+			    font-size: 14px;
+			    color: #ff9600;
+			    background-position: -1px -304px;
+          a{width: 90px; height: 55px;}
+			}
+			ul{
+				margin-right: -16px;
+			}
+			 li{
+				position: relative;
+				border-left: #e4e4e4 solid 1px;
+				height: 16px;
+				display: inline-block;
+				float: left;
+				padding: 0 16px;
+				a{
+					color: #999;
+					&:hover{
+					color: @orange;
+					}
+				}
+				.reg{
+					color: @orange;
+					text-decoration: underline;
+				}
+				span{
+					cursor: pointer;
+					&:hover{
+						color: @orange;
+
+					}
+				}
+				@-webkit-keyframes fadeIn {
+				  from {
+				    opacity: 0;
+				  }
+
+				  to {
+				    opacity: 1;
+				  }
+				}
+				.g-weibo:hover{
+					.weibo{
+						display: block;
+						-webkit-animation: fadeIn 1s;
+					}
+				}
+				
+
+				.g-wx:hover{
+					.weixin{
+						display: block;
+						-webkit-animation: fadeIn 1s;
+					}
+				}
+
+			}
+			.no-l-b{
+				border-left: none;
+			}
+		}	
+	}
+}
+.wrap-fadeOutUp{
+	vertical-align: middle;
+	-webkit-animation-fill-mode: backwards;
+	animation-fill-mode: backwards;
+	-webkit-animation-name:fadeOutUp;
+	-webkit-animation-duration:2s;    //动画持续时间
+    animation-name:fadeOutUp;
+    animation-duration:2s;
+}
+.wrap-nav{
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    .wrap-box-list{
+      padding: 25px 0;
+      width: @maxWidth;
+      margin: 0 auto;
+      overflow: hidden;  
+    }
+	.logo {
+		i{
+			display: inline-block;
+			width: 149px;
+			height: 50px;
+			background: url("http://static.51talk.com/static/images/html/www_new/common/log.png");
+			float: left;
+		}
+		b{
+			float: left;
+		    height: 47px;
+		    line-height: 1;
+		    border-left: 1px #7f6100 solid;
+		    margin-left:11px;
+		    padding-left: 13px;
+		    padding-top: 3px;
+		    color: #1e1e1e;
+		    font-size: 18px;
+		    span {
+			    display: block;
+			    margin: 0 0 9px 0;
+			}
+		}
+	}
+  .logo_usa{
+    i{
+      width: 222px;
+      height: 50px;
+      background: url("http://static.51talk.com/static/images/html/www_new/common/log_usa.png");
+    }
+  }
+	.nav{
+		position: relative;
+		.underline{
+			position: absolute;
+			bottom: -27px;
+			width: 80px;
+			height: 6px;
+			border-radius: 3px;
+			background: #fff;
+		}
+	}
+	.menu{
+		margin-right:40px;
+		position: relative;
+		li{
+			display: inline-block;
+			float: left;
+			font-size: 20px;
+			line-height: 22px;
+			position: relative;
+			padding: 14px 26px;
+			color: #333;
+      a{color: #333;}
+		}
+		.back {
+			position: absolute;
+			padding: 0;
+			bottom: -58px;
+			width: 80px;
+			height: 6px;
+			border-radius: 3px;
+			background: #fff;
+		}
+		.yello {
+			background: #ffa900;
+		}
+		.blue{
+			background: #004ea2;
+		}
+		.green{
+			background: #2ab600;
+		}
+	}
+	.index li.current a{
+		color: #ffa900;
+	}
+  // banner
+  .nav-list{
+    z-index: 10;
+    width: 100%;
+    .list-ct{
+      width: 1200px;
+      margin:0px auto;
+      text-align: center;
+      font-size: 16px;
+      ul{
+        height: 46px;
+        li{
+          float: left;
+          width: 200px;
+          a{
+            display: block;
+            height: 46px;
+            line-height: 46px;
+            color:#fff;  
+          }
+        }
+      }
+    }
+  }
+}
+.wrap-nav-index{
+	height: 131px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: rgba(0,0,0,0.2);
+  border-bottom-color:#ffffff\9;
+  *border-bottom-color:#fff;
+  .wrap-box{
+    width: 1200px;
+    margin:0px auto;
+    padding:25px 0;
+  }
+  .index li.current a{
+    color: #333;
+  }
+}
+.w_acload{
+	position: absolute;
+    top: 31px;
+    right: 0;
+    width: 130px;
+    height: 105px;
+    z-index: 999;
+}
+#u-gotop{
+	position: fixed;
+    right: 50px;
+    bottom: 50px;
+    _position: absolute;
+    //_top: expression(eval(document.documentElement.clientHeight-100+document.documentElement.scrollTop));
+    display: none;
+    text-indent: -99999px;
+    z-index: 9999;
+    a{
+    	    display: block;
+    width: 28px;
+    height: 73px;
+    background: url("http://static.51talk.com/static/images/html/www_new/common/gotoTop.png") no-repeat;
+    }
+}
+/*list banner*/
+.north-nav-list{
+  .wrap-box{
+    background-color: #fff;
+  }
+  .index li.current a{
+    color: #004ea2;
+  }
+  .index li a:hover{
+    color: #004ea2;
+  }
+  .nav-list{
+    background: #025ec1;
+    .list-ct ul{
+      li{
+        a:hover{
+          background: #2876ca;
+        }
+      }
+      .crt a{background: #00438a;}
+    }
+  } 
+  .wrap-box-list .menu .back{
+    background: #004ea2;
+  }
+}
+.adult-nav-list{
+  .wrap-box{
+    background-color: #fff;
+  }
+  .index li.current a{
+    color: #ffa900;
+  }
+  .index li a:hover{
+    color: #ffa900;
+  }
+  .wrap-box-list .menu .back{
+    background: #ffa900;
+  }
+  .nav-list{
+    background: #ffa200;
+    .list-ct ul{
+      li{
+        a:hover{
+          background: #ffb026;
+        }
+      }
+      .crt a{background: #e67d00;}
+    }
+  }
+}
+.teenager-nav-list{
+  .wrap-box{
+    background-color: #fff;
+  }
+  .index li.current a{
+    color: #ff722c;
+  }
+  .index li a:hover{
+    color: #ff722c;
+  }
+  .wrap-box-list .menu .back{
+    background: #ff722c;
+  }
+  .nav-list{
+    background: #ff722c;
+    .list-ct ul{
+      li{
+        a:hover{
+          background: #ff874b;
+        }
+      }
+      .crt a{background: #fb5401;}
+    }
+  }
+}
+// right side bar
+.rt-side-bar{
+  position: fixed;
+  top: 185px;
+  right: 60px;
+  cursor: pointer;
+  z-index: 10;
+  .bar-list{
+    position: relative;
+    width: 32px;
+    li{
+      position: relative;
+      width: 32px;
+      height: 100px;
+      margin-bottom: 2px;
+      span{
+        float: left;
+        width: 32px;
+        height: 100px;
+        background: url("http://static.51talk.com/static/images/html/www_new/common/rt_banner_icon.png") no-repeat;
+      }
+    }
+    .online{
+      .b-up{
+        background-position: 0 0;
+      }  
+    }
+    .w-wx{
+      .b-up{
+        background-position: -32px 0;
+      }  
+    }
+    .mobile{
+      height: 114px;
+      .b-up{
+        height: 114px;
+        background-position: -64px 0;
+      }  
+    }
+
+  }
+  // 首页右侧新增ipad入口  张天 pms：41381   以下
+  .ipad{
+    position: relative;
+    width: 32px;
+    height: 96px;
+    .b-up{
+      float: left;
+      width: 32px;
+      height: 96px;
+      background: url("@{imgPath}common/ipad.png") 0 0 no-repeat;
+    }
+  }
+  // 首页右侧新增ipad入口  张天 pms：41381   以上
+
+
+  .b-hover{
+    position: absolute;
+    top:0;
+    right: 30px;
+    width: 139px;
+    height: 142px;
+    background: url("@{imgPath}common/rt_banner_icon.png") no-repeat;
+    background-position: -96px 0;
+    display: none;
+    z-index: 20;
+  }  
+  .b-hover02{
+    background-position: -235px 0;
+  }
+  .b-hover03{
+    background-position: -373px 0;
+  }
+  .b-hover-moveIn{
+    -webkit-animation:moveIn 0.5s;
+      animation:moveIn 0.5s;
+        -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  }
+  .b-hover-moveDown{
+    -webkit-animation:moveDown 0.8s 0.1s;
+      animation:moveDown 0.8s 0.1s;
+        -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  }
+  .u-b-ntkf,.link-hover{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 139px;
+    height: 142px;
+    background: transparent;
+    z-index: 30;
+    display: none;
+  }
+  .link-hover{
+    top:204px;
+  }
+}
+@keyframes moveIn{
+  0%,50%{
+    opacity: 0;
+      -webkit-transform: scale3d(0, 0, 0);
+        transform: scale3d(0, 0, 0);
+          -webkit-transform-origin:170px 50px;
+            transform-origin:170px 50px;
+  }
+  100% {
+    opacity: 1;
+      -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+          -webkit-transform-origin:0;
+            transform-origin:0;
+  }
+}
+@keyframes moveDown{
+  0%,50%{
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+        -webkit-transform-origin:0;
+          transform-origin:0;
+  }
+  100% {
+    opacity: 0;
+      -webkit-transform: scale3d(0, 0, 0);
+        transform: scale3d(0, 0, 0);
+          -webkit-transform-origin:170px 50px;
+            transform-origin:170px 50px;
+  }
+}
+
+
+
+//提示框
+.notice-mast-box{
+  width:100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top:0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  display: none;
+  z-index: 1040;
+}
+.m-notice{
+  position: absolute;
+  left: 50%;
+  top:276px;
+  margin-left: -231.5px;
+  z-index: 6;
+  width: 399px;
+  border-radius: 5px;
+  font-size: 16px;
+  .notice-tit{
+    height: 54px;
+    line-height: 54px;
+    padding:0 30px;
+    filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#CC000000', endColorstr='#CC000000');
+    background-color:rgba(0,0,0,0.8);
+    color: #fff;
+    border-radius: 5px 5px 0 0;
+  }
+  .notice-inner{
+    padding:22px 45px 30px;
+    border:1px solid #7f7f7f;
+    border-top:none;
+    border-radius: 0 0 5px 5px;
+    background-color: #fff;
+    position: relative;
+    z-index: 7;
+    p{
+      line-height: 30px;
+      margin-bottom: 22px;
+    }
+    .notice-sub{
+      height: 40px;
+      li{
+        float: left;
+        width: 134px;
+        height: 38px;
+        line-height: 38px;
+        text-align: center;
+        border:1px solid #ff3434;
+        background-color: #ff3434;
+        color: #fff;
+        border-radius: 3px;
+        cursor:pointer;
+        &.sub-left{
+          margin-right: 35px;
+          background-color: #fff;
+          color: #ff3434;
+        }
+      }
+    }
+  }
+  .notice-bg{
+    width: 100%;
+    height: 30px;
+    filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#33000000', endColorstr='#33000000');
+    background-color:rgba(0,0,0,0.2);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    z-index: 5;
+    border-radius: 0 0 5px 5px;
+  }
+}
+.wrap-nav .nav-list.ad-list .list-ct ul li{
+  width: 240px;
+}
+
+
+

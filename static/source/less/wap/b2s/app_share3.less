@@ -1,0 +1,385 @@
+// 图片path
+@imgPath: '../../../images/wap/b2s/';
+//background: url("@{imgPath}start_bg.png") no-repeat;
+body {
+    font-family: Arial, "Microsoft YaHei";
+}
+input, button, select, textarea, dl, dd, dt{
+    font-family: Arial, "Microsoft YaHei";
+}
+:-webkit-full-screen video {
+width: 100%;
+height: 100%;
+}
+:-moz-full-screen video{
+width: 100%;
+height: 100%;
+}
+.disnone{
+	display: none;
+}
+#fontSizeLoding{
+    width: 100%;
+    min-height: 100%;
+    max-width: 640px;
+    background-color: rgba(255, 255, 255, 1);
+    position: fixed;
+    top:0; 
+    z-index: 999;
+    img{
+        width: 30px;
+        height: 30px;
+        margin-left: -15px;
+        margin-top: -15px;
+        position: absolute;
+        top:50%;
+        left:50%;
+
+    }
+}
+
+.share-wrap{
+    min-height: 100%;
+    background: #fff;
+    .share-intro{
+    	// padding:0 0.3rem;
+    	background: #fff;
+	    .intro-video{
+	    	margin-bottom: 0.4rem;
+	    	position: relative;
+	    	&>img{
+	    		max-width: 100%;
+	    		width: 100%;
+	    	}
+	    	&.marginBottom{
+	    		margin-bottom: 0;
+	    	}
+	    	.video-play{
+	    		width: 1.5rem;
+	    		height: 1.5rem;
+	    		background:rgba(97, 203, 237, 0.8);
+	    		border-radius: 50%;
+	    		position: absolute;
+	    		top: 50%;
+	    		left: 50%;
+	    		transform:translateX(-50%) translateY(-50%);
+	    		&:before{
+	    			content: "";
+	    			width: 0.54rem;
+	    			height: 0.62rem;
+	    			background: url("@{imgPath}app_share-08.png") no-repeat;
+	    			background-size: 100% 100%;
+	    			position: absolute;
+		    		top: 0.44rem;
+		    		left: 0.55rem;
+		    		// transform:translateX(-50%) translateY(-50%);
+	    		}
+	    	}
+	    	.video-load{
+	    		width: 0.8rem;
+	    		height: 0.8rem;
+	    		background:url("@{imgPath}eff_loading.gif") no-repeat;
+	    		background-size: 100% 100%;
+	    		position: absolute;
+	    		top: 50%;
+	    		left: 50%;
+	    		transform:translateX(-50%) translateY(-50%);
+	    	}
+	    }
+	    .intro-user{
+	    	margin:0 0.3rem;
+	    	padding: 0 0 0.4rem 1.04rem;
+	    	.item-tit{
+	    		position: relative;
+	    		.item-tit-icon{
+	    			width: 0.8rem;
+	    			height: 0.8rem;
+	    			border-radius: 50%;
+	    			overflow: hidden;
+	    			position: absolute;
+	    			left: -1rem;
+	    			top: 50%;
+	    			transform:translateY(-50%);
+	    			&>img{
+	    				width: 100%;
+	    				height: 100%;
+	    			}
+	    		}
+	    		.item-tit-name{
+	    			line-height: 0.48rem;
+	    			font-size: 0.36rem;
+	    			color: #333333;
+	    		}
+	    		.item-tit-message{
+	    			line-height: 0.4rem;
+	    			font-size: 0.26rem;
+	    			color: #c9c9c9;
+	    			
+	    		}
+	    		.like-icon{
+	    			display: inline-block;
+	    			height: 0.52rem;
+	    			padding-left: 0.6rem;
+	    			padding-right: 0.2rem;
+	    			line-height: 0.52rem;
+	    			border: 1px solid #c9c9c9;
+	    			border-radius: 999px;
+	    			font-size: 0.26rem;
+	    			color: #c9c9c9;
+	    			position: absolute;
+	    			right: 0;
+	    			top: 50%;
+	    			transform:translateY(-50%);
+	    			&:before{
+	    				content: "";
+	    				width: 2.82rem;
+	    				height: 0.6rem;
+	    				background: url("@{imgPath}app_share-17.png") no-repeat;
+			    		background-size: 100%;
+	    				position: absolute;
+	    				left: -2.82rem;
+	    				top: 50%;
+	    				transform:translateY(-70%);
+	    			}
+	    			&:after{
+	    				content: "";
+	    				width: 0.36rem;
+	    				height: 0.35rem;
+	    				background: url("@{imgPath}app_share-15.gif") no-repeat;
+			    		background-size: 100%;
+	    				position: absolute;
+	    				left: 0.16rem;
+	    				top: 50%;
+	    				transform:translateY(-50%);
+	    			}
+	    			&.on{
+	    				color: #aedeff;
+	    				&:after{
+		    				content: "";
+		    				width: 0.36rem;
+		    				height: 0.35rem;
+		    				background: url("@{imgPath}app_share-16.png") no-repeat;
+							background-size: 100%;
+		    				position: absolute;
+		    				left: 0.16rem;
+		    				top: 50%;
+		    				transform:translateY(-50%);
+		    			}
+	    			}
+	    		}
+	    	}
+	    }
+    }
+    .share-hot{
+    	border-top: 0.2rem solid #f2f2f2;
+    	padding:0 0.3rem;
+    	background: #fff;
+    	.share-hot-tit{
+    		line-height: 0.9rem;
+    		font-size: 0.32rem;
+    		color: #999;
+    	}
+    	.share-hot-items{
+	    	&>li{
+	    		padding: 0.3rem 0 0.3rem 1.04rem;
+	    		border-top: 1px solid #ebebeb;
+	    		border-bottom: 1px solid transparent;
+	    		&:last-child{
+	    			border-bottom: 1px solid #ebebeb;
+	    		}
+	    		.item-tit{
+	    			position: relative;
+	    			.item-tit-icon{
+	    				width: 0.8rem;
+	    				height: 0.8rem;
+	    				border-radius: 50%;
+	    				overflow: hidden;
+	    				position: absolute;
+	    				left: -1rem;
+	    				top: 0;
+	    				&>img{
+	    					width: 100%;
+	    					height: 100%;
+	    				}
+	    			}
+	    			.item-tit-name{
+	    				line-height: 0.48rem;
+	    				font-size: 0.28rem;
+	    				color: #999999;
+	    			}
+	    			.item-tit-message{
+	    				line-height: 0.4rem;
+	    				font-size: 0.32rem;
+	    				color: #333333;
+	    				word-break: break-word;
+	    			}
+	    		}
+	    	}
+	    }
+	    .share-hot-btn{
+	    	&>a{
+	    		display: block;
+	    		width: 6.46rem;
+		    	height: 0.88rem;
+		    	line-height: 0.88rem;
+		    	margin: 0.6rem auto;
+		    	border: 1px solid #1db2fb;
+		    	border-radius: 999px;
+		    	text-align: center;
+		    	font-size: 0.32rem;
+		    	color: #3fa9f7;
+	    	}
+	    }
+	    .share-hot-no{
+		    height: 3rem;
+		    line-height: 3rem;
+		    border-top: 1px solid #ebebeb;
+		    text-align: center;
+		    font-size: 0.32rem;
+		    color: #999999;
+	    }
+    }
+    .share-trophy{
+    	position: relative;
+    	&>img{
+    		width: 100%;
+    	}
+    	.font1{
+    		width: 100%;
+    		height: 0.6rem;
+    		line-height: 0.6rem;
+    		position: absolute;
+    		top: 2.38rem;
+    		text-align: center;
+    		font-weight: bolder;
+    		font-size: 0.6rem;
+    		color: #fff;
+    	}
+    }
+    .share-other{
+    	padding: 0.55rem 0;
+    	background: #9fd4fb;
+    	.share-other-tit{
+    		text-align: center;
+    		&>span{
+    			line-height: 0.32rem;
+				margin: 0 0.25rem;
+				font-size: 0.32rem;
+				color: #fff;
+				position: relative;
+				&:before{
+					content: "";
+					width: 0.23rem;
+					height: 0.21rem;
+					background: url("@{imgPath}app_share-20.png") no-repeat;
+					background-size: 100%;
+					position: absolute;
+					left: -0.35rem;
+					top: 50%;
+					transform:translateY(-50%);
+				}
+				&:first-child{
+					&:before{
+						display: none;
+					}
+				}
+    		}
+    	}
+    	.share-other-QRCode{
+    		width: 2.68rem;
+    		height: 2.68rem;
+    		margin: 0.4rem auto 0.3rem auto;
+    		border: 0.21rem solid #fff;
+    		background: #fff;
+    		&>img{
+    			width: 100%;
+    			height: 100%;
+    		}
+    	}
+    	.share-other-text{
+    		line-height: 0.42rem;
+    		text-align: center;
+    		font-size: 0.3rem;
+    		color: #fff;
+    	}
+    }
+    .share-btn{
+    	height: 1.06rem;
+    	background: #3fa9f7;
+    	.share-btn-in{
+    		position: fixed;
+    		bottom: 0;
+    		width: 100%;
+    		max-width: 640px;
+    		height: 1.06rem;
+    		background: #3fa9f7;
+    		.share-btn-l{
+    			padding-left: 1.16rem;
+    			padding-top: 0.23rem;
+    			position: relative;
+    			&>img{
+    				width: 0.73rem;
+    				height: 0.73rem;
+    				position: absolute;
+    				left: 0.24rem;
+    				top: 0.2rem;
+    			}
+    			&>h3{
+					line-height: 0.32rem;
+					font-size: 0.32rem;
+					color: #fff;
+    			}
+    			&>p{
+    				margin-top: 0.1rem;
+					line-height: 0.24rem;
+					font-size: 0.24rem;
+					color: #d9eefd;
+    			}
+    		}
+    		.share-btn-r{
+    			padding-right: 0.26rem;
+    			padding-top: 0.22rem;
+				&>a{
+					width: 1.58rem;
+					height: 0.58rem;
+					line-height: 0.58rem;
+					display: block;
+					text-align: center;
+					font-size: 0.32rem;
+					color: #fff;
+					border: 1px solid #fff;
+					border-radius: 999px;
+				}
+    		}
+    	}
+    }
+}
+.dialog{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background:rgba(0, 0, 0, 0.9);
+	.dialog-close{
+		display: inline-block;
+		// width: 100%;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translateY(-50%) translateX(-50%);
+		&:before{
+			content: "";
+			width: 0.64rem;
+			height: 0.64rem;
+			background: url("@{imgPath}app_share-18.png") no-repeat;
+			background-size: 100%;
+			position: absolute;
+			left: 0.1rem;
+			top: -1rem;
+		} 
+	}
+	video{
+		// width: 100%;
+	}
+}

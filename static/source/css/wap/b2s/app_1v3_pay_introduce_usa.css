@@ -1317,10 +1317,7 @@ button.swiper-pagination-bullet {
   padding: 0.3rem 0.2rem 0.3rem 0.2rem;
 }
 .pay_introduce_1v1 .choose_class_one li {
-  margin-bottom: 0.2rem;
-}
-.pay_introduce_1v1 .choose_class_one li:last-child {
-  margin-bottom: 0;
+  margin: 0.2rem 0;
 }
 .pay_introduce_1v1 .choose_class_one .left_content {
   float: left;
@@ -1381,7 +1378,6 @@ button.swiper-pagination-bullet {
 }
 .pay_introduce_1v1 .intro_tab_new .swiper-container {
   width: 100%;
-  height: 100%;
 }
 .pay_introduce_1v1 .intro_tab_new .swiper-container.paddingTop {
   padding-top: 0.5rem;
@@ -1410,9 +1406,6 @@ button.swiper-pagination-bullet {
   line-height: 0.48rem;
   font-size: 0.34rem;
   color: #313131;
-}
-.pay_introduce_1v1 .intro_tab_new .swiper-container .swiper-pagination {
-  bottom: 1.9rem;
 }
 .pay_introduce_1v1 .intro_tab_new .swiper-container .swiper-pagination .swiper-pagination-bullet {
   width: 0.18rem;
@@ -1691,9 +1684,9 @@ button.swiper-pagination-bullet {
   text-decoration: line-through;
   color: #cdcdcd;
 }
-.pay_introduce_1v1 .start_buy .left_content p:last-child {
-  font-size: 0.26rem;
-  color: #3c3c3c;
+.pay_introduce_1v1 .start_buy .left_content .pac_mes {
+  color: #ff9c00;
+  font-size: 0.24rem;
 }
 .pay_introduce_1v1 .start_buy .left_content .new_stu:first-child {
   background: url(../../../images/wap/b2s/1V3-vip.png?v=T1s9gG07lomUvemdTBo7Kg%3D%3D) no-repeat;
@@ -1732,7 +1725,6 @@ button.swiper-pagination-bullet {
 }
 .pay_introduce_1v1 .cannot_buy .left_content {
   float: left;
-  width: calc(100% - 2.61rem);
   box-sizing: border-box;
   padding: 0.3rem 0 0.2rem 0.18rem;
 }
@@ -1753,9 +1745,9 @@ button.swiper-pagination-bullet {
   text-decoration: line-through;
   color: #cdcdcd;
 }
-.pay_introduce_1v1 .cannot_buy .left_content p:last-child {
-  font-size: 0.26rem;
-  color: #3c3c3c;
+.pay_introduce_1v1 .cannot_buy .left_content .pac_mes {
+  color: #ff9c00;
+  font-size: 0.24rem;
 }
 .pay_introduce_1v1 .cannot_buy .left_content .new_stu:first-child {
   background: url(../../../images/wap/b2s/1V3-vip.png?v=T1s9gG07lomUvemdTBo7Kg%3D%3D) no-repeat;
@@ -1780,6 +1772,9 @@ button.swiper-pagination-bullet {
 }
 .pay_introduce_1v1 .choose_class_one {
   padding: 0;
+}
+.pay_introduce_1v1 .choose_class_one .has_time {
+  margin: 0;
 }
 .pay_introduce_1v1 .choose_class_one .has_time .left_content {
   float: left;

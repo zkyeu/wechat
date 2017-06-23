@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+@import "../common/base.less";
+
+@imgPath: "../../../images/wap/binding_qq/";
+
+.red_search{
+	overflow: hidden;
+}
+body{position: relative;height: 100%;}
+h3{margin:0;padding: 0;}
+img{
+	vertical-align: top;
+	width: 100%;
+}
+a,h3,p{
+	font-family: @fontFamily;
+}
+
+
+.top{
+	padding-top: 6rem;
+	padding-bottom: 4rem;
+	text-align: center;
+	img{
+		width: 35%;
+	}
+}
+ul{
+	line-height: 4.5rem;
+	padding:0 2rem;
+	margin-bottom: 2rem;
+	li{
+		border-bottom: 1px solid #e5e5e5;
+		img{
+			margin-top: 1.5rem;
+			width: 1.2rem;
+			margin-right: 1.3rem;
+		}
+	}
+	input{
+		font-size: 1.4rem;
+		height: 4.5rem;
+		/*line-height: 4.5rem;*/
+		width: 90%;
+
+	}
+
+}
+.error{
+	height: 3.1rem;
+	text-align: center;
+	color: #ff5555;
+	font-size: 1.2rem;
+}
+.logIn_go{
+	padding:0 2rem;
+	text-align: center;
+	.login{
+		width: 100%;
+		display: block;
+		background-color: #fac000;
+		height: 3.4rem;
+		line-height: 3.4rem;
+		text-align: center;
+		font-size: 1.7rem;
+		color: #5f4900;
+		border-radius: 10px;
+		margin-bottom: 0.6rem;
+	}
+	.register{
+		font-size: 1.5rem;
+		color: #888;
+	}
+}
+.member{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	height: 6rem;
+	line-height: 6rem;
+	margin-top: -3rem;
+	p{
+		margin:0 3.5rem;
+		background-color: rgba(0,0,0,0.7);
+		border-radius: 10px;
+		text-align: center;
+		font-size: 1.5rem;
+		color: #fff;
+	}
+}
+
+.sucess{
+	p{
+		margin:0 6rem;
+		img{
+			width: 3rem;
+			margin-top: 1.5rem;
+			margin-right: 1.5rem;
+		}
+	}
+}
+
+
+.hide{
+	display: none;
+}
+
+
+@media screen and (max-width: 320px) {
+	.top{
+		padding-top: 0.5rem;
+	}
+}
+
+
+
+
+

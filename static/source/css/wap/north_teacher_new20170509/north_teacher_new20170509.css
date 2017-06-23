@@ -298,13 +298,13 @@ header {
 }
 header .subBtn {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 82%;
+  left: 74%;
   margin-top: -1.25rem;
   margin-left: -6rem;
-  width: 12.0rem;
-  height: 2.6rem;
-  background: #07b0ef;
+  width: 9.0rem;
+  height: 2.4rem;
+  background: #cfb31d;
   line-height: 2.5rem;
   text-align: center;
   border-radius: 0.625rem;
@@ -314,8 +314,10 @@ header .subBtn a {
   height: 100%;
   width: 100%;
   color: #fff;
-  font-size: 1.5rem;
-  font-weight: 900;
+  font-size: 1.2rem;
+  font-weight: 300;
+  position: relative;
+  bottom: 0.22rem;
 }
 .former {
   position: relative;

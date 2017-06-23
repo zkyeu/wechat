@@ -1,0 +1,247 @@
+@import "../common/footer.less";
+@imgPath: "../../../../images/html/www_new/";
+@yellowC:#ffa900;
+@docWidth: 1200px;
+@white: #fff;
+.p-center{
+	width: @docWidth;
+	margin:0 auto;
+	position: relative;
+}
+.adult-page{
+
+	.part{
+		padding-top: 77px;
+		padding-bottom: 83px;
+		background-color: #fff;
+	}
+	.p-tit{
+		height: 63px;
+		line-height: 1;
+		font-size: 38px;
+		color: #333;
+		text-align: center;
+	}
+	.p-text{
+		line-height: 31px;
+		font-size: 20px;
+		color: #999;
+		text-align: center;
+		margin-bottom: 69px;
+	}
+	.p-yellow{
+		color:@yellowC; 
+	}
+	.over-hide{
+		width: 100%;
+		overflow: hidden;
+	}
+	.p-t-list{
+		padding-left: 35px;
+		height: 374px;
+		margin-right: -100px;
+		&.list_move{
+			li{
+				&:first-child{
+				    animation:move_list linear 0.5s 0.2s;
+			        animation-fill-mode: forwards;
+				}
+			    &:nth-child(2){
+				    animation:move_list linear 0.5s 0.4s;
+			        animation-fill-mode: forwards;
+				}
+			    &:nth-child(3){
+				    animation:move_list linear 0.5s 0.6s;
+			        animation-fill-mode: forwards;
+				}
+				&:last-child{
+				    animation:move_list linear 0.5s 0.8s;
+			        animation-fill-mode: forwards;
+				}
+			}
+		}
+		li{
+			width: 236px;
+			text-align: center;
+			margin-right: 60px;
+			float: left;
+			position: relative;
+			top:0;
+			opacity: 0;
+			*opacity: 1;
+			img{
+				margin-bottom: 32px;
+			}
+		}
+		.p-l-tit{
+			height: 35px;
+			line-height: 1;
+			color: @yellowC;
+			font-size: 22px;
+		}
+		.p-l-describe{
+			height: 29px;
+			line-height: 1;
+			color: #999;
+			font-size: 14px;
+		}
+		.p-l-text{
+			line-height: 22px;
+			color: #333;
+			font-size: 14px;
+		}
+	}
+	.p2-cont{
+		width: 355px;
+		padding-top: 3px;
+		.p2-tit{
+			height: 57px;
+			font-size: 30px;
+			color:@yellowC;;
+		}
+		.p2-text{
+			line-height: 31px;
+			color: #999;
+			font-size: 20px;
+		}
+	}
+	.p-level{
+		margin-top: -133px;
+	}
+	.pt-107{
+		padding-top: 107px;
+		padding-bottom: 103px;
+	}
+	.part3{
+		position: relative;
+		height: 414px;
+		color:@white;
+		text-align: center;
+		background: url("@{imgPath}adult/bg5.jpg") center no-repeat #feb830;
+		background-attachment: fixed;
+	    -webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    background-size: cover;
+	    -webkit-transform: translate3D(0,0,0);
+	    -moz-transform: translate3D(0,0,0);
+	    -o-transform: translate3D(0,0,0);
+	    -ms-transform: translate3D(0,0,0);
+	    transform: translate3D(0,0,0);
+		.p3-tit{
+			padding-top: 77px;
+			font-size:38px;
+			height: 65px;
+			line-height: 1;
+
+		}
+		.p3-text{
+			line-height: 29px;
+			font-size: 20px;
+			margin-bottom: 50px;
+		}
+		.p3-register{
+			height: 66px;
+			a{
+				width: 350px;
+				height: 66px;
+				text-align: center;
+				line-height: 66px;
+				display: inline-block;
+				background-color:@white;
+				font-size: 30px;
+				color: #ff8a00;
+				font-weight: bold;
+				border-radius: 10px;
+				box-shadow: 0px 10px 20px #f49b14;
+			}
+		}
+	}
+	.part4{
+		padding-top: 124px;
+		padding-bottom: 114px;
+		.p-t-list{
+			padding-left:3px;
+			height: 385px;
+		}
+		li{
+			width: 314px;
+			margin-right: 116px;
+			img{
+				margin-bottom: 40px;
+			}
+			&:last-child{
+				margin-right:0;
+			}
+		}
+		.p-l-tit{
+			color: #333;
+			font-size: 28px;
+			height: 42px;
+		}
+		.p-l-describe{
+			font-size: 16px;
+		}
+		.p-l-text{
+			font-size: 16px;
+			line-height: 28px;
+		}
+	}
+	.p-line{
+		position: relative;
+		img{
+			position: absolute;
+			left: 50%;
+			top:50%;
+			margin-left: -26px;
+			margin-top: -26px;
+			opacity:0;
+		}
+		.line{
+			height: 0;
+			border-top:1px solid #e4e4e4;
+			width: 100%;
+			opacity: 0;
+			z-index: -1;
+			position: relative;
+		}
+		&.move_line{
+			img{
+				animation:move_line linear 1s;
+				animation-fill-mode: forwards;
+			}
+			.line{
+				animation:move_line linear 1s 1s;
+				animation-fill-mode: forwards;
+			}
+		}
+	}
+}
+
+@keyframes move_list{
+  0%{
+    top:120px;
+    opacity: 0;
+  }
+  100%{
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes move_line {
+  0% {
+    transform: scale3d(0, 0, 0);
+    opacity: 0;
+  }
+  100%{
+  	opacity: 1;
+  }
+}
+@keyframes move_border {
+  0% {
+    width: 0;
+    ransform-origin: right 50% 0px;
+  }
+  100%{
+  	width: 100%;
+  }
+}

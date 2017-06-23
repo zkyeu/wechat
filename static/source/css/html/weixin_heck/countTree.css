@@ -1,0 +1,313 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: 
+ */
+/**
+ * 默认样式
+ * @author:  liliang（liliang05@51talk.com）
+ * @update:  2017年 6月16日 星期五 15时30分49秒 CST
+ * @note:    黑鸟项目-SSCC群发到个人统计[采用flex布局]
+ */
+html,
+body {
+  width: 100%;
+  background: #f1f1f1;
+}
+[v-cloak] {
+  display: none !important;
+}
+.dn {
+  display: none;
+}
+.w100_ {
+  width: 99%;
+}
+.h100_ {
+  height: 100vh;
+}
+.board {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100vw;
+  height: 100vh;
+}
+.board .col-left {
+  width: 200px;
+  height: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+.board .col-center {
+  width: 340px;
+  height: 100%;
+  overflow: hidden;
+  background: #fff;
+  margin: 0 5px;
+}
+.board .col-right {
+  width: calc(100% - 200px - 50px - 340px);
+  height: calc(100% - 40px);
+  overflow: hidden;
+  background-color: #f8f8f8;
+  padding: 20px;
+}
+.groups ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.groups ul li {
+  max-width: 170px;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: #e4e4e4 solid 1px;
+  font-size: 16px;
+  color: #999;
+  padding-left: 30px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.groups ul li:hover {
+  border-left: #fcc800 solid 6px;
+  padding-left: 24px;
+}
+.groups ul li.cut {
+  border-left: #fcc800 solid 6px;
+  padding-left: 24px;
+  background-color: #f8f8f8;
+  color: #333;
+}
+.groupList h4 {
+  height: 50px;
+  line-height: 50px;
+  color: #999;
+  text-align: center;
+}
+.groupList h6 {
+  height: 50px;
+  line-height: 50px;
+  color: #999;
+  text-align: center;
+}
+.groupList ul li {
+  color: #333;
+  border-bottom: #e4e4e4 solid 1px;
+}
+.groupList ul li em {
+  position: absolute;
+  right: 15px;
+  top: 13px;
+  width: 14px;
+  height: 14px;
+  background: url(../../../images/html/weixin_heck/cutsel.png?v=HwTZC3jz5eq6iSvPX%2BKOcA%3D%3D) no-repeat;
+}
+.groupList ul li.cut em {
+  background: url(../../../images/html/weixin_heck/cutsel.png?v=HwTZC3jz5eq6iSvPX%2BKOcA%3D%3D) 0 -30px no-repeat;
+}
+.groupList ul li h5 {
+  font-size: 14px;
+  line-height: 40px;
+  padding-left: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  cursor: pointer;
+}
+.groupList ul li h5 i {
+  width: 8px;
+  height: 8px;
+  border-bottom: #ccc solid 2px;
+  border-right: #ccc solid 2px;
+  margin-top: 15px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.groupList ul li h5 span {
+  padding-left: 10px;
+}
+.groupList ul li h5.cut {
+  background-color: #f8f8f8;
+}
+.groupList ul li h5.cut i {
+  border-left: #ccc solid 2px;
+  border-right: none;
+  margin-top: 12px;
+}
+.groupList ul li .user-list {
+  padding: 10px 20px;
+  display: block;
+}
+.groupList ul li .user-list i {
+  float: left;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  padding: 0 10px;
+  border: #ddd solid 1px;
+  border-radius: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+.groupList ul li .user-list i.cut {
+  background-color: #fcc800;
+  border: #fcc800 solid 1px;
+}
+.groupList ul li .user-list.dn {
+  display: none;
+}
+.groupList ul li .user-list:after {
+  display: block;
+  content: '';
+  height: 0;
+  clear: both;
+  overflow: hidden;
+}
+.detail-top {
+  height: 25px;
+  line-height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+}
+.detail-top .detail-name {
+  font-size: 16px;
+  color: #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.detail-top .search-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.detail-top .search-box span {
+  margin: 0 5px;
+}
+.detail-top .search-box #searchBtn {
+  height: 24px;
+  line-height: 24px;
+  border-radius: 6px;
+  width: 60px;
+  text-align: center;
+  background-color: #fcc800;
+  font-size: 12px;
+  color: #333;
+  cursor: pointer;
+}
+.detail-top .search-box #searchBtn:hover {
+  background: #fdd53c;
+}
+.detail-top .search-box .time-style {
+  width: 110px;
+  height: 22px;
+  line-height: 22px;
+  padding-left: 10px;
+  border-radius: 6px;
+  border: solid 1px #e4e4e4;
+  background: #fff url(../../../images/html/weixin_heck/arrow-down.png?v=6WImhahO1OJvtoiPrzM5QA%3D%3D) 100px center no-repeat;
+  cursor: pointer;
+}
+.detail-list {
+  height: calc(100% - 70px);
+  overflow: hidden;
+}
+.detail-list h5 {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #999;
+  font-size: 16px;
+}
+.detail-list ul {
+  padding-bottom: 20px;
+}
+.detail-list ul li {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border: solid 1px #e4e4e4;
+  border-radius: 10px;
+}
+.detail-list ul li .content {
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+}
+.detail-list ul li .content img {
+  max-height: 150px;
+}
+.detail-list ul li .content dt {
+  width: 90%;
+}
+.detail-list ul li .content dt p {
+  line-height: 20px;
+}
+.detail-list ul li .content dt p:nth-child(1) {
+  font-size: 14px;
+  color: #252525;
+}
+.detail-list ul li .content dt p:nth-child(2) {
+  font-size: 12px;
+  color: #999;
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.detail-list ul li .content dt p.beizhu {
+  font-size: 14px;
+  color: #666;
+  width: 90%;
+}
+.detail-list ul li .content dt a {
+  width: 100%;
+}
+.detail-list ul li .content dd img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}

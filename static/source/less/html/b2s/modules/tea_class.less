@@ -1,0 +1,261 @@
+.tea-class{
+  .rct-text{
+    dl{
+      .work{
+        width:212px;
+        position: relative;
+        span{
+          width:92px;
+          height:92px;
+          display: inline-block;
+          position: absolute;
+          top: -2px;
+          left: -2px;
+          z-index: 10;
+          background: url("@{imgMpath}tea_c_icons.png") -150px 0 no-repeat;
+        }
+      }
+      dd{
+        .text-c{
+          margin-bottom:10px;
+          margin-left: -10px;
+          width: 400px;
+          overflow: hidden; 
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .text-class{
+          padding-top:10px;
+          span{
+            display: inline-block;
+            color:#4be09b;
+          }
+          .class_icon{
+            position: relative;
+            top:4px;
+            margin-right:5px;
+            width:20px;
+            height:20px;
+            background: url("@{imgMpath}tea_c_icons.png") 0 0 no-repeat;
+          }
+        }
+        .pkz{
+          span{
+            color:#52bcff;
+          }
+          .class_icon{
+            background-position: -40px 0;
+          }
+        }
+        span{
+          color:#012345;
+          font-size: 14px;
+        }
+
+        .dd-tit{
+          width:80px;
+          display:inline-block;
+          text-align: right;
+          color:#012345;
+        }
+        
+      }
+      .dd-btn-top1{
+         position: absolute;
+        right: 0;
+        bottom: 5px;
+      }
+      .dd-btn{
+       
+          .down-icon{
+            width:12px;
+            height:15px;
+            padding-left: 15px;
+            background: url("@{imgMpath}down_icon.png") 0 2px no-repeat;
+          }
+          a{
+            width:110px;
+            height:35px;
+            background-color: #ffbe23;
+            text-align: center;
+            line-height: 35px;
+            color:#fff;
+            border-radius: 3px;
+            span{
+              color: #fff;
+            }
+          }
+          .download{
+            color:#fff;
+          }
+        }
+    }
+  }
+  .class-tab{
+    margin-top: 25px;
+    margin-bottom: 20px;
+    
+      a{
+        text-align: center;
+        background-color: #fff;
+        border:1px solid #daeafd;
+        display: inline-block;
+        border-radius: 30px;
+        width:66px;
+        height:30px;
+        line-height: 30px;
+        cursor: pointer;
+        color:#7b92a8;
+
+        &:hover{
+          color:#fff;
+          background-color:#35acff;
+          border-radius: 999px;
+        }
+      }
+      .cur-color{                                                                                                                                                         
+        color:#fff;
+        background-color:#35acff;
+        border-radius: 999px;
+      }
+      /*.cur-class{
+        display: inline-block;
+        border-radius: 999px;
+        background-color:#ffbe23;
+        color:#fff;
+        position: absolute;
+        width:66px; 
+        height:30px;
+        z-index: 0;
+        top:0;
+        left:0;
+      }*/
+    
+  }
+  .course-class{
+    color:#7b92a8;
+    font-size: 13px;
+    text-align: right;
+    a{
+      color:#7b92a8;
+      display: inline-block;
+      padding: 0 12px 0 8px;
+    }
+    .current-class{
+      color:#012345;
+    }
+  }
+  .n-class-box{
+    margin-top:80px;
+    .img-box{
+      margin:0 auto;
+      width:226px;
+      height:174px;
+      background: url("@{imgMpath}img_30.png") no-repeat;
+    }
+    .text-box{
+      margin:50px auto 0;
+      font-size: 18px;
+      color:#666666;
+      width: 170px;
+      a{
+        display:inline-block;
+        width: 72px;
+        height:40px;
+        background-color: #54b1ff;
+        padding-left:25px;
+        padding-right:25px;
+        line-height: 40px;
+        border-radius: 20px;
+        color:#fff;
+        margin-top:10px;
+      }
+      a:hover{
+        color:#fff;
+      }
+    }
+  }
+}
+.class-t{
+  margin-left:-180px;
+}
+.class-table{
+  width:360px;
+  border-radius: 4px;
+  background-color: #fff;
+  //border-radius: 5px;
+  overflow: hidden;
+  thead{
+    background-color: #f7b401;
+    height: 28px;
+    td{
+      line-height: 28px;
+      text-align: center;
+      color:#fff;
+      border: 1px solid #e7e7e7;
+      vertical-align: middle;
+    }
+    .top_border{
+      border-right: 2px solid #e7e7e7;
+      border-left: 2px solid #e7e7e7;
+    }
+  }
+  tbody{
+    td{
+      width: 30%;
+      height:28px;
+      text-align: center;
+      line-height: 28px;
+      border: 1px solid #e7e7e7;
+      vertical-align: middle;
+    }
+  }
+
+}
+.view_student{
+  margin:20px auto;
+  width: 760px;
+  overflow: visible;
+  background-color: #fff;
+
+  td{
+    line-height: 1.6;
+     border: 1px solid #e7e7e7;
+     text-align: center;
+     padding: 8px 0;
+  }
+  thead{
+    background-color: #f7b401;
+    td{
+      
+      
+      color:#fff;
+      
+      vertical-align: middle;
+    }
+  }
+  tbody td{
+      //width:30%;
+      
+      
+      border: 1px solid #e7e7e7;
+      vertical-align: middle;
+      
+  }
+  tbody .stu_name{
+    text-align: left;
+    padding: 8px 20px;
+  }
+}
+.view_s_return{
+  color:#7b92a8;
+  padding-left: 40px;
+}
+.t-close{
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background:url("@{imgMpath}tea_c_icons.png") -86px -5px no-repeat;
+    top: 0;
+    right: -40px;
+}

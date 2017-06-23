@@ -1,0 +1,45 @@
+<h3 class="pic-h3 f-cb"><span class="t2">听声选图</span><span class="t1">实现听力秒懂</span></h3>
+<div style="clear:both"></div>
+        <div class="bom-wr">
+          <div class="sound-pic" id="classOff">
+            <a href="javascript:;" class="icon" media-audio="<%=domain + data.record%>" data-index="9"></a>
+            <ul>
+              <li  data-status="<%=(data.option[0].correct || 0)%>">
+                <a href="javascript:;" class="linkClass">
+                  <div class="<%=data.option[0].correct?'wordhover':''%>" >
+                  <img src="<%=domain +'pre_img_thumb/' + data.option[0].img%>" data-img="<%=domain + data.option[0].img%>" alt="" class="abaImg">
+                </div>
+                  <i class="check"></i>
+                  <span class="correct"></span>
+                </a>
+              </li>
+              <li  data-status="<%=(data.option[1].correct || 0)%>">
+                <a href="javascript:;" class="linkClass">
+                  <div  class="<%=data.option[1].correct?'wordhover':''%>">
+                  <img src="<%=domain +'pre_img_thumb/' + data.option[1].img%>" data-img="<%=domain + data.option[1].img%>" alt="" class="abaImg">
+                </div>
+                  <i class="check"></i>
+                  <span class="correct"></span>
+                </a>
+              </li>
+              <li data-status="<%=(data.option[2].correct || 0)%>">
+                <a href="javascript:;" class="linkClass">
+                 <div class="<%=data.option[2].correct?'wordhover':''%>" > 
+                  <img src="<%=domain +'pre_img_thumb/' + data.option[2].img%>" data-img="<%=domain + data.option[2].img %>" alt="" class="abaImg">
+                </div>
+                  <i class="check"></i>
+                  <span class="correct"></span>
+                </a>
+              </li>
+              <li   data-status="<%=(data.option[3].correct || 0)%>">
+                <a href="javascript:;" class="linkClass">
+                  <div  class="<%=data.option[3].correct?'wordhover':''%>">
+                    <img src="<%=domain +'pre_img_thumb/' + data.option[3].img%>" data-img="<%=domain + data.option[3].img%>" alt="" class="abaImg">
+                  </div>
+                  <i class="check"></i>
+                  <span class="correct"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>

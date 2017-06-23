@@ -1,0 +1,585 @@
+@import "../common/www/base.less";
+@import "../common/www/w_header.less";
+@import "../common/www/w_footer.less";
+@imgUrl:"../../../images/html/summer_landing/";
+@baseColor:#1abc9c;
+@fontColor:#333;
+@bgColor:#efefef;
+@fontStyle:\5FAE\8F6F\96C5\9ED1;
+.btn-style{
+	display:block;
+	width:210px;
+	height:50px;
+	margin-top:50px;
+	line-height:50px;
+	font-size:22px;
+	color:#fff;
+	background:url("@{imgUrl}/title_spirte.png") -188px 0 no-repeat;
+	text-align:center;
+}
+.summer-banner{
+	height:629px;
+	background:url("@{imgUrl}/top-banner.jpg") center center no-repeat;
+	.banner-wrap{
+		position:relative;
+		width:1000px;
+		margin:0 auto;
+	}
+	.sign-btn{
+		display:inline-block;
+		position:absolute;
+		left:315px;
+		top:495px;
+		width:370px;
+		height:85px;
+		background:url("@{imgUrl}/sign-btn.png") center center no-repeat;
+	}
+}
+.summer-tabs{
+	height:75px;
+	padding-top:25px;
+	background:#fff;
+	color:@fontColor;
+	ul{
+		width:1000px;
+		margin:0 auto;
+		li{
+			float:left;
+			width:270px;
+			margin:0 30px;
+			padding-bottom:10px;
+			cursor: default;
+			text-align:center;
+			em{
+				display:block;
+				font-size:18px;
+			}
+			span{
+				font-size:14px;
+			}
+		}
+		.current{
+			color:@baseColor;
+			border-bottom:@baseColor solid 2px;
+			em{
+				font-size:30px;
+			}
+			span{
+				font-size:18px;
+			}
+		}
+	}
+}
+.summer-container{
+	.switch{
+		> div{
+			padding:100px 0;
+		}
+		//课程简介布局三个标签公用
+		.description{
+			.period-lst{
+				margin-top:50px;
+				ul{
+					margin-top:35px;
+				}
+				li{
+					float:left;
+					margin:0 20px;
+				}
+				h3{
+					font-size:36px;
+					color:#999;
+					text-align:center;
+					em{
+						color:@baseColor;
+					}
+					span{
+						font-size:30px;
+					}
+				}
+			}
+			.crowd{
+				margin-top:50px;
+				color:#999;
+				text-align:center;
+				h4{
+					font-size:30px;
+				}
+				p{
+					margin-top:10px;
+					font-size:18px;
+				}
+			}
+			.go-sign{
+				margin:50px auto 0;
+				.btn-style;
+			}
+		}
+		//课程优势布局三个标签公用
+		.advantage{
+			background:#fff;
+			.advantage-wrap{
+				width:1000px;
+				margin:50px auto 0;
+				li{
+					float:left;
+					width:150px;
+					margin:0 50px;
+					text-align:center;
+					h3{
+						margin:30px 0 20px;
+						font-size:24px;
+						color:#1e1e1e;
+					}
+					p{
+						font-size:14px;
+						color:#999;
+						white-space:nowrap;
+					}
+				}
+				.icons{
+					width:150px;
+					height:150px;
+					border-radius:50%;
+					background:@baseColor url("@{imgUrl}/advantage-bg.png") no-repeat;
+				}
+				.wj{
+					background-position:40px 35px;
+				}
+				.gx{
+					background-position:-215px 35px;
+				}
+				.play{
+					background-position:-470px 35px;
+				}
+				.time{
+					background-position:-730px 35px;
+				}
+			}
+		}
+		//教材展示布局三个标签公用
+		.textbook-show{
+			.show-wrap{
+				position:relative;
+				width:666px;
+				height:450px;
+				margin:50px auto 0;
+				padding:0 100px;
+				.arr{
+					position:absolute;
+					top:50%;
+					width:26px;
+					height:49px;
+					margin-top:-25px;
+					background:url("@{imgUrl}/order.png") no-repeat;
+					cursor: pointer;
+				}
+				.arr-left{
+					left:0;
+					background-position:0 0;
+				}
+				.arr-right{
+					right:0;
+					background-position:-40px 0;
+				}
+				.slider-con{
+					overflow-x:hidden;
+					ul{
+						width:400%;
+					}
+					li{
+						float:left;
+					}
+				}
+				.point{
+					margin-top:50px;
+					text-align:center;
+					a{
+						display:inline-block;
+						width:10px;
+						height:10px;
+						margin-right:10px;
+						border-radius:50%;
+						background:#d7d7d7;
+					}
+					.current{
+						background:@baseColor;
+					}
+				}
+			}
+		}
+		//学习计划布局三个标签公用
+		.study-plan{
+			padding-bottom:75px;
+			.plan-table{
+				position:relative;
+				width:396px;
+				height:356px;
+				margin:0 auto;
+				padding:22px;
+				background:@baseColor;
+				border-radius:5px;
+				text-align:center;
+				.icon{
+					position:absolute;
+					left:50%;
+					top:-7%;
+					margin-left:-76px;
+					display:inline-block;
+					width:153px;
+					height:58px;
+					background:url("@{imgUrl}/plan-icon.png") no-repeat;
+				}
+				.plan-table-wrap{
+					width:400px;
+					height:325px;
+					margin:0 auto;
+					padding-top:30px;
+					background:#fff;
+				}
+				h4{
+					font-size:30px;
+					color:@baseColor;
+				}
+				h5{
+					font-size:18px;
+					color:#999;
+					em{
+						color:@baseColor;
+					}
+					span{
+						color:#1e1e1e;
+					}
+				}
+				.table{
+					width:360px;
+					margin:20px auto;
+					td{
+						padding: 10px 0;
+						font-size:18px;
+						vertical-align: middle;
+						border:#e6e6e6 solid 1px;
+						em{
+							color:@baseColor;
+						}
+					}
+					.pad-left-50{
+						padding-left:50px;
+						text-align:left;
+					}
+				}
+				.tips{
+					position:absolute;
+					bottom:40px;
+					width:100%;
+					text-align:center;
+					color:#999;
+				}
+			}
+		}
+	}
+	//小学低年级课程
+	.low-grades{
+		//课程简介
+		.description{
+			width:1000px;
+			margin:0 auto;
+			h2{
+				width:189px;
+				height:44px;
+				margin:0 auto;
+				background:url("@{imgUrl}/title_spirte.png") 0 0 no-repeat;
+			}
+		}
+		//课程优势
+		.advantage{
+			h2{
+				width:192px;
+				height:44px;
+				margin:0 auto;
+				background:url("@{imgUrl}/title_spirte.png") 0 -44px no-repeat;
+			}
+			.advantage-wrap{
+				.time{
+					background:@baseColor url("@{imgUrl}/time-icon.png") center center no-repeat;
+				}
+			}
+		}
+		//教材展示
+		.textbook-show{
+			width:1000px;
+			margin:0 auto;
+			h2{
+				width:192px;
+				height:44px;
+				margin:0 auto;
+				background:url("@{imgUrl}/title_spirte.png") 0 -88px no-repeat;
+			}
+			.go-sign{
+				margin:auto;
+				.btn-style;
+			}
+		}
+		//学习计划
+		.study-plan{
+			height:586px;
+			background:url("@{imgUrl}/plan-bg.jpg") center center no-repeat;
+			h2{
+				width:194px;
+				height:44px;
+				margin:0 auto;
+				background:url("@{imgUrl}/title_spirte.png") 0 -133px no-repeat;
+			}
+			h3{
+				margin:30px 0 85px;
+				font-size:26px;
+				color:#1e1e1e;
+				text-align:center;
+				em{
+					font-size:36px;
+					font-weight:500;
+					color:@baseColor;
+				}
+			}
+		}
+	}
+	//小学高年级课程
+	.senior-grades{
+		//课程简介
+		.description{
+			width:1000px;
+			margin:0 auto;
+			h2{
+				width:189px;
+				height:44px;
+				margin:0 auto;
+				background:url("@{imgUrl}/title_spirte.png") 0 0 no-repeat;
+			}
+		}
+		//课程优势
+		.advantage{
+			background:#fff;
+			h2{
+				width:192px;
+				height:44px;
+				margin:0 auto;
+				background:url("@{imgUrl}/title_spirte.png") 0 -44px no-repeat;
+			}
+		}
+		//教材展示
+		.textbook-show{
+			width:1000px;
+			margin:0 auto;
+			h2{
+				width:192px;
+				height:44px;
+				margin:0 auto;
+				background:url("@{imgUrl}/title_spirte.png") 0 -88px no-repeat;
+			}
+			.go-sign{
+				margin:auto;
+				.btn-style;
+			}
+		}
+		//学习计划
+		.study-plan{
+			background:url("@{imgUrl}/plan-bg.jpg") center center no-repeat;
+			h2{
+				width:194px;
+				height:44px;
+				margin:0 auto;
+				background:url("@{imgUrl}/title_spirte.png") 0 -133px no-repeat;
+			}
+			h3{
+				margin:30px 0 85px;
+				font-size:26px;
+				color:#1e1e1e;
+				text-align:center;
+				em{
+					font-size:36px;
+					font-weight:500;
+					color:@baseColor;
+				}
+			}
+		}
+	}
+	//初高中课程
+	.high-grades{
+		//课程简介
+		.description{
+			width:1000px;
+			margin:0 auto;
+			h2{
+				width:189px;
+				height:44px;
+				margin:0 auto;
+				background:url("@{imgUrl}/title_spirte.png") 0 0 no-repeat;
+			}
+			.high-period{
+				li{
+					margin:0 12px;
+				}
+			}
+		}
+		//课程优势
+		.advantage{
+			background:#fff;
+			h2{
+				width:192px;
+				height:44px;
+				margin:0 auto;
+				background:url("@{imgUrl}/title_spirte.png") 0 -44px no-repeat;
+			}
+			.advantage-wrap{
+				.play{
+					background:@baseColor url("@{imgUrl}/icons.png") center center no-repeat;
+				}
+			}
+		}
+		//教材展示
+		.textbook-show{
+			width:1000px;
+			margin:0 auto;
+			h2{
+				width:192px;
+				height:44px;
+				margin:0 auto;
+				background:url("@{imgUrl}/title_spirte.png") 0 -88px no-repeat;
+			}
+			.go-sign{
+				margin:auto;
+				.btn-style;
+			}
+		}
+		//学习计划
+		.study-plan{
+			background:url("@{imgUrl}/plan-bg.jpg") center center no-repeat;
+			h2{
+				width:194px;
+				height:44px;
+				margin:0 auto;
+				background:url("@{imgUrl}/title_spirte.png") 0 -133px no-repeat;
+			}
+			h3{
+				margin:30px 0 85px;
+				font-size:26px;
+				color:#1e1e1e;
+				text-align:center;
+				em{
+					font-size:36px;
+					font-weight:500;
+					color:@baseColor;
+				}
+			}
+		}
+	}
+}
+.summer-sale{
+	height:720px;
+	background:url("@{imgUrl}/sale.jpg") center center no-repeat;
+	.summer-sale-center{
+		width:1000px;
+		margin:0 auto;
+		padding:100px 0;
+		h2{
+			width:738px;
+			height:45px;
+			margin:0 auto;
+			background:url("@{imgUrl}/title_spirte.png") 0 -178px no-repeat;
+		}
+		.sale-message{
+			margin-top:115px;
+			h3{
+				font-size:42px;
+				font-weight:500;
+				color:@baseColor;
+				em{
+					color:#fe4343;
+				}
+				del{
+					font-size:24px;
+					color:#999;
+				}
+			}
+			h4{
+				margin-left:-14px;
+				font-size:30px;
+				color:@baseColor;
+			}
+			.sale-tips{
+				display:inline-block;
+				margin:40px 0;
+				span{
+					display:block;
+					float:left;
+					width:295px;
+					height:43px;
+					line-height:40px;
+					font-size:18px;
+					border:@baseColor solid 1px;
+					color:@baseColor;
+					text-align:center;
+				}
+				em{
+					display:block;
+					float:left;
+					width:241px;
+					height:45px;
+					line-height:45px;
+					background:url("@{imgUrl}/sale-tips.png") no-repeat;
+					font-weight:500;
+					font-size:30px;
+					color:#fff;
+					text-align:center;
+				}
+			}
+			.sale-instructions{
+				line-height:25px;
+				color:#848484;
+			}
+			.sign-btn{
+				.btn-style
+			}
+		}
+	}
+}
+.summer-show{
+	background:@baseColor;
+	.summer-show-center{
+		width:1000px;
+		margin:0 auto;
+		padding:100px 0;
+		h2{
+			width:449px;
+			height:45px;
+			margin:0 auto;
+			background:url("@{imgUrl}/title_spirte.png") 0 -222px no-repeat;
+		}
+		ul{
+			margin-top:40px;
+			li{
+				float:left;
+				width:185px;
+				margin:0 70px;
+			}
+			.base{
+				color:#fff;
+				text-align:center;
+			}
+			.show-info{
+				height:100px;
+				margin-top:5px;
+				padding:10px;
+				border:dashed #fff 1px;
+				color:#fff;
+				border-radius:8px;
+			}
+		}
+		.sign-btn{
+			.btn-style;
+			margin:50px auto 0;
+			color:@baseColor;
+			background-position:-190px -50px;
+		}
+	}
+}

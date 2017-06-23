@@ -1,0 +1,407 @@
+.home-page{
+  // 推荐
+  .tip{
+    .centerMth;
+    .tip-list{
+      display: inline-block;
+      width: 100%;
+      margin:77px 0 73px 0;
+      li{
+        float: left;
+        width: 25%;
+        text-align: center;
+        img{
+          height: 243px;
+        }
+        h3{
+          .ft16;
+          margin:22px 0;
+        }
+        p{
+          color: @textColorGay;
+          line-height: 22px;
+          padding:0 10px;
+        }
+      }
+    }
+  }
+  
+  //广告图
+  .adt{
+    width: 100%;
+    height: 318px;
+    .lt{
+      float: left;
+      width: 50%;
+      *width:49.9999%;
+      a{
+        display: block;
+        height: 318px;
+        .lt-img{
+          display: inline-block;
+          width: 100%;
+          height: 318px;
+          background: url("@{imgPath}index_class_lt.jpg") no-repeat right #ffbe40;
+        }
+        &:hover{
+          .lt-img{
+           background: url("@{imgPath}index_class_lt.jpg") no-repeat right #ffbe40;
+           .fm-opacity(90);
+          }
+        }
+      }
+    }
+    .rt{
+      float: left;
+      width: 50%;
+      *width:49.9999%;
+      a{
+        display: block;
+        height: 318px;
+        .lt-img{
+          display: inline-block;
+          width: 100%;
+          height: 318px;
+          background: url("@{imgPath}index_class_rt.jpg") no-repeat left #26bedd;
+        }
+        &:hover{
+          .lt-img{
+           background: url("@{imgPath}index_class_rt.jpg") no-repeat left #26bedd;
+           .fm-opacity(90);
+          }
+        }
+      }
+    }
+  }
+  // 推荐51talk
+  .talk{
+    width: 100%;
+    background: @bgColorGay;
+    padding:80px 0;
+    .t-h3{
+      .tac;
+      margin-bottom: 45px;
+    }
+     .talk-list{
+      height: 342px;
+      width: 750px;
+      margin: auto;
+      li{
+        float: left;
+        width: 248px;
+        height: 342px;
+        position: relative;
+        overflow: hidden;
+        transition:width 0.5s;
+        border-left: 1px #999 solid;
+        &.icon-lina{
+          background: url("@{imgPath}lina.jpg") no-repeat; 
+        }
+        &.icon-lj{
+          background: url("@{imgPath}lxp.jpg") no-repeat; 
+        }
+        &.icon-lxp{
+          background: url("@{imgPath}lj.jpg") no-repeat; 
+        }
+        &.hover{
+          width: 500px;
+          .u-mask{
+            .fm-opacity(0);
+          }
+        }
+        .u-mask{
+          position: absolute;
+          transition:all 0.5s;
+          left: 0;top:0;
+          width: 456px;
+          height: 342px;
+          background: #666;
+          .fm-opacity(60);
+        }
+      }
+      .le6-line{
+        border:none;
+      }
+    }
+  }
+  // 在线学习英语
+  .tab-step{
+    background: @bgColor;
+    .t-h3{
+      margin:0;
+    }
+    .tab-p{
+      .tac;
+      .ft18;
+      line-height: 1;
+      color: @textColorGay;
+      margin:15px 0 40px 0;
+      a{
+        color: @textColorGay;
+        &:hover{
+          color:@hoverColor;
+        }  
+      }
+    }
+    .step-list{
+      .centerMth;
+      width: 1002px;
+      height: 232px;
+      background: url("@{imgPath}index_step_tab.png") no-repeat; 
+      li{
+        float: left;
+        padding:20px 0;
+        margin-left: 34px;
+        display: inline-block;
+        .tac;
+        .r-h3{
+          .tal;
+          color: @titleColor;
+          .ft16;
+          margin-left:56px;
+        }
+      }
+      .frist{
+        width: 277px;
+        margin: 0;
+        a{
+          float: left;
+        }
+        .logo{
+          width: 164px;
+          height: 45px;
+          line-height: 45px;
+          background: @borderColor;
+          .ft18;
+          color: @bgColor;
+          border-radius: 5px;
+          margin:50px 0 35px 55px;
+        }
+        .order{
+          .ft16;
+          width: 100%;
+        }
+      }
+      .second{
+        width: 378px;
+        img{
+          margin-top: 33px;
+        }
+        .tab-word{
+          .ft16;
+          li{
+            margin-left: 46px;
+            .clearfix;
+          }
+        }
+      } 
+      .third{
+        width: 276px;
+        .r-h3{
+          margin-right: 30px;
+        }
+        a{
+          float: left;
+          width: 50%;
+          margin: 12px 0 21px 0;
+          img{
+            float: left;
+          }
+        }
+        .computer{
+          img{
+            float: right;
+            margin-right: 15px;
+          }
+        }
+        .iphone{
+          img{
+            margin-left: 15px;
+          }
+        }
+        p{
+          .ft16;
+        }
+      }
+    }
+  }
+  // 51talk学习
+  .student{
+    display: inline-block;
+    .t-h3{
+      margin:0;
+    }
+    .tab-p{
+      .tac;
+      .ft18;
+      color: @textColorGay;
+      margin:15px 0 40px 0;
+      line-height: 1;
+      a{
+        color: @textColorGay;
+        &:hover{
+          color:@hoverColor;
+        }   
+      }
+    }
+    .stu-list{
+      .centerMth;
+      width: 1030px;
+      li{
+        float: left;
+        position: relative;
+        width: 176px;
+        margin:0 15px;
+        height: 285px;
+        min-height: 266px;
+        background: @bgColor;
+        .clearfix;
+        .tac;
+        a:hover{
+          .ul-txt{
+            .fm-opacity(70);
+          }
+        }
+        .ul-txt{
+          height: 255px;
+          padding: 15px;
+          position: absolute;
+          transition:all 0.3s;
+          top: 0;
+          left: 0;
+          background: rgba(0, 0, 0, 1);
+          .fm-opacity(0);
+          color: #fff;
+          overflow: hidden;
+          font-size: 12px;
+          line-height: 20px;
+          .tal;
+          p{
+            width: 100%;
+            margin-bottom: 5px;
+            overflow: hidden;
+            line-height: 22px;
+          }
+        }
+        a{
+          img{
+            width: 170px;
+            height: 170px;
+            margin-top: 3px;
+          }
+          .u-p,.u-span{
+            .tal;
+            line-height: 20px;
+            margin:15px 16px 0 16px;
+          }
+          .u-span{
+            display: block;
+            margin-top: 0;
+          }
+          .u-tit{
+            color: @textColorGay;
+            .ft12;
+          }
+        }
+      }
+    }
+  }
+  // 企业荣誉-媒体报道
+  .honor{
+    padding:80px 0;
+    .tac;
+    .centerMth{
+      position: relative;
+    }
+    .hon-ul{
+      position: absolute;
+      left: 320px;
+      *left: 167px;
+      font-size: 40px;
+      li{
+        float: left;
+        line-height: 1;
+      }
+      .enter{
+        .tar;
+        border-right: 2px #ccc solid;
+        padding-right: 20px;
+        margin:0 20px 0 0;
+        *margin:0 20px 0 150px;
+      }
+      .hon-on{
+        a{
+          color: @hoverColor;
+        }
+      }
+    }
+    .hon-en{
+      padding-top: 43px;
+      *margin-top:43px;
+    }
+    .hon-list{
+      height: 158px;
+      margin-top: 50px;
+      li{
+        float: left;
+        width: 182px;
+        margin:0 9px;
+        .clearfix;
+        .tac;
+        a{
+          display: block;
+          margin-bottom: 10px;
+        }
+        span{
+          width: 190px;
+          color: #6e6e6e;
+          .ft14;
+          line-height: 20px;
+        }
+      }
+    }
+    .hon-li{
+      height: 100px;
+      li{
+        width: 20%;
+        padding:0;
+        margin:0;
+      }
+    }
+    .more{
+      color: #1e1e1e;
+      .ft18;
+      margin-top: 20px;
+    }
+  }
+  // 合作企业
+  .cooper{
+    padding:80px 0;
+    .tac;
+    width: 100%;
+    background: @bgColorGay;
+    .cop-h3{
+      margin-bottom: 50px;
+      color: #1e1e1e;
+      font-size: 40px;
+      .tac;
+    }
+    .cop-ul{
+      display: inline-block;
+      width: 100%;
+      li{
+        float: left;
+        vertical-align: middle;
+        margin:0 22px;
+        .clearfix;
+        a{
+          .f-csd;
+        }
+      }
+    }
+  }
+  
+}
+body{
+  position: relative;
+}

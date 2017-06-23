@@ -1,0 +1,38 @@
+<div class="g-diaglogue">
+    <div class="m-tips">
+       <h3 >提示: 可以选择完整试听全文后，进行单个句子练习，点击“读”进行发音练习后，系统会自动为你打分！</h3>
+    </div>
+    <div style="height:450px;overflow: auto;">
+      <%for (var i=0, len=res.length; i<len; i++) {%>
+        <div class="allDiag">
+            <div class="m-title">
+              <%if(res.length>1){%>
+                <h2>Part<%=(i+1)%></h2>
+              <%}%>  
+                <%if(res[i].remark){%>
+                <h4>(<%=res[i].remark%>)</h4>
+                <%}%>
+                <a class="allPlay" href="javascript:;">完整试听全文</a>
+            </div>
+            <div class="diaglogue">
+                <ol class="f-cb">
+                    <%for (j=0; j<res[i].info.length; j++) {%>
+                      <li>
+                          <div class="text">
+                              <p>
+                                  <em class="<%=(j%2 ==0 ? 'role1': 'role2') %>"><%=res[i].info[j].role%>:</em>
+                                  <em class="content"><%=res[i].info[j].title%></em>
+                              </p>
+                          </div>
+                          <div class="operate">
+                            <span class="listen" media-audio="<%=domain1 + res[i].info[j].record%>" data-index="100<%=i%><%=j%>">听<i></i></span>
+                            <span class="read" data-title="<%=res[i].info[j].title%>">读<i></i></span>
+                            <span class="result"></span>
+                          </div>
+                        </li>
+                      <%}%>
+                </ol>
+              </div>
+            </div>
+    <%}%>
+</div>

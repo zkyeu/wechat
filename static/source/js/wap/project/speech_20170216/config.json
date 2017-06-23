@@ -1,0 +1,8 @@
+{
+	"define":[
+    "js/wap/project/speech_20170216/jquery.min.js",
+		"js/wap/common/ping.js",
+		"js/wap/common/sea.min.js",
+    "js/wap/project/speech_20170216/config.js"
+	]
+}

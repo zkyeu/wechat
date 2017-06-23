@@ -1,0 +1,157 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: 
+ */
+body {
+  font-family: Arial, "Microsoft YaHei";
+}
+input,
+button,
+select,
+textarea,
+dl,
+dd,
+dt {
+  font-family: Arial, "Microsoft YaHei";
+}
+.disnone {
+  display: none;
+}
+#fontSizeLoding {
+  width: 100%;
+  min-height: 100%;
+  max-width: 640px;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+#fontSizeLoding img {
+  width: 30px;
+  height: 30px;
+  margin-left: -15px;
+  margin-top: -15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.invited_speakers2-wrap .speakers-tit {
+  height: 0.32rem;
+  line-height: 0.32rem;
+  margin: 0 0.64rem;
+  text-align: center;
+  position: relative;
+}
+.invited_speakers2-wrap .speakers-tit:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  height: 1px;
+  background: #3fa9f7;
+}
+.invited_speakers2-wrap .speakers-tit .font1 {
+  padding: 0 0.16rem;
+  background: #fff;
+  font-size: 0.32rem;
+  color: #008bf2;
+  display: inline-block;
+  position: relative;
+}
+.invited_speakers2-wrap .speakers-tit .font1:before {
+  content: "";
+  position: absolute;
+  left: 0.08rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 0.04rem;
+  height: 0.04rem;
+  border-radius: 50%;
+  background: #008bf2;
+}
+.invited_speakers2-wrap .speakers-tit .font1:after {
+  content: "";
+  position: absolute;
+  right: 0.08rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 0.04rem;
+  height: 0.04rem;
+  border-radius: 50%;
+  background: #008bf2;
+}
+.invited_speakers2-wrap .speakers-font1 {
+  margin: 0 0.4rem;
+  line-height: 0.4rem;
+  font-size: 0.26rem;
+  color: #333333;
+}
+.invited_speakers2-wrap .speakers-tit2 {
+  margin: 0 0.4rem;
+  padding-left: 0.38rem;
+  line-height: 0.32rem;
+  font-size: 0.32rem;
+  color: #008bf2;
+  position: relative;
+}
+.invited_speakers2-wrap .speakers-tit2:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 0.16rem;
+  height: 0.16rem;
+  border-radius: 50%;
+  background: #3fa9f7;
+}
+.invited_speakers2-wrap .speakers-btn {
+  margin: 0 0.4rem;
+  margin-top: 0.76rem;
+  height: 0.8rem;
+}
+.invited_speakers2-wrap .speakers-btn a {
+  display: block;
+  width: 100%;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  background: #3fa9f7;
+  border-radius: 999px;
+  text-align: center;
+  font-size: 0.32rem;
+  color: #fff;
+}
+.invited_speakers2-wrap .speakers-img img {
+  width: 100%;
+}
+.invited_speakers2-wrap .speakers-img2 {
+  margin: 0 0.4rem;
+}
+.invited_speakers2-wrap .speakers-img2 img {
+  width: 100%;
+}
+.invited_speakers2-wrap .speakers-bottom {
+  height: 0.9rem;
+}
+.invited_speakers2-wrap .marginTop1 {
+  margin-top: 0.8rem;
+}
+.invited_speakers2-wrap .marginTop2 {
+  margin-top: 0.6rem;
+}
+.invited_speakers2-wrap .marginTop3 {
+  margin-top: 0.3rem;
+}
+.invited_speakers2-wrap .marginTop4 {
+  margin-top: 0.52rem;
+}
+.invited_speakers2-wrap .marginTop5 {
+  margin-top: 0.72rem;
+}

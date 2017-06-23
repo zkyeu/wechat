@@ -1,8 +1,8 @@
 /*!
  * http://www.51Talk.com
  * copyright (c) 2015 51Talk
- * author: zningpc@gmail.com
- * update: Wed Nov 30 2016 14:59:27 GMT+0800 (中国标准时间)
+ * author: 
+ * update: Thu Jun 08 2017 12:04:09 GMT+0800 (中国标准时间)
  */
 .fixed-bg {
   background-attachment: fixed;
@@ -78,7 +78,7 @@
 }
 .index-m2 {
   height: 660px;
-  background: url(../../../../images/html/www_new/index/bg1.jpg?v=B%2FlqQ%2FlrGhZLSPsg%2BfWdTg%3D%3D) no-repeat;
+  background: url(../../../../images/html/www_new/index/bg1.jpg?v=bcR%2BdqI6Xj4oA9xgdxgcNQ%3D%3D) no-repeat;
   background-attachment: fixed;
   background-position: 50%;
   background-repeat: no-repeat;
@@ -178,7 +178,7 @@
 .index-m4 {
   height: 670px;
   color: #fff;
-  background: url(../../../../images/html/www_new/index/bg2.jpg?v=QvufOSZTS2uAVitQXLyczQ%3D%3D) no-repeat;
+  background: url(../../../../images/html/www_new/index/bg2.jpg?v=18mKv5FsKDq5T%2F2ty8cGSg%3D%3D) no-repeat;
   background-attachment: fixed;
   background-position: 50%;
   background-repeat: no-repeat;
@@ -227,6 +227,7 @@
   color: #333;
   font-size: 20px;
   height: 33px;
+  margin-left: -3px;
 }
 .study-step .des {
   color: #999;
@@ -386,7 +387,7 @@
   top: 20px;
   width: 42px;
   height: 42px;
-  background: url(../../../../images/html/www_new/common/delete.png?v=JaXOXA3NbdRfZleVKzSa8A%3D%3D) no-repeat;
+  background: url(../../../../images/html/www_new/common/delete.png?v=n4tHHH4aNNmhxhF9JgXwRw%3D%3D) no-repeat;
   cursor: pointer;
 }
 .layer-popup .content ul {
@@ -411,20 +412,20 @@
   height: 450px;
 }
 .layer-popup .content ul li a .america-img {
-  background: url(../../../../images/html/www_new/common/layer_america_01.jpg?v=A7SaMwY7gL8Rt9zU7E9P%2BA%3D%3D) no-repeat;
+  background: url(../../../../images/html/www_new/common/layer_america_01.jpg?v=kaKBsfidtpr1lplJwYYIOQ%3D%3D) no-repeat;
 }
 .layer-popup .content ul li a .adult-img {
-  background: url(../../../../images/html/www_new/common/layer_adult_01.jpg?v=pNnVdQ1M0w%2BMl3QjP%2Bu%2Fqw%3D%3D) no-repeat;
+  background: url(../../../../images/html/www_new/common/layer_adult_01.jpg?v=hzXJ2UxMAvdVf16%2BYUGl3A%3D%3D) no-repeat;
 }
 .layer-popup .content ul li a .teenager-img {
-  background: url(../../../../images/html/www_new/common/layer_ten_01.jpg?v=S6pFmRALveH7epCgO2evrQ%3D%3D) no-repeat;
+  background: url(../../../../images/html/www_new/common/layer_ten_01.jpg?v=Lio4%2FDKsd48a8wzoOJF3SQ%3D%3D) no-repeat;
 }
 .layer-popup .content ul li a:hover .america-img {
-  background: url(../../../../images/html/www_new/common/layer_america_02.jpg?v=28RV3P94OEd%2BRVFs6XlIYw%3D%3D) no-repeat;
+  background: url(../../../../images/html/www_new/common/layer_america_02.jpg?v=A7WxRTpXYcBSFrdlJ%2B1Prg%3D%3D) no-repeat;
 }
 .layer-popup .content ul li a:hover .adult-img {
-  background: url(../../../../images/html/www_new/common/layer_adult_02.jpg?v=wbLpI14m7rGgay6cKRCsvA%3D%3D) no-repeat;
+  background: url(../../../../images/html/www_new/common/layer_adult_02.jpg?v=OAk037ZU5K7wkLptc4C5Pg%3D%3D) no-repeat;
 }
 .layer-popup .content ul li a:hover .teenager-img {
-  background: url(../../../../images/html/www_new/common/layer_ten_02.jpg?v=vTNsWaiAnD9umkYIrrJTPA%3D%3D) no-repeat;
+  background: url(../../../../images/html/www_new/common/layer_ten_02.jpg?v=JQc8XPNrXh2svo3AgtSZRw%3D%3D) no-repeat;
 }

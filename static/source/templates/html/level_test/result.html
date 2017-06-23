@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title></title>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link href="/css/html/level_test/level_test.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <div id="clickMusic"></div>
+    <div id="questionMusic"></div>
+    <div id="bgMusic"></div>
+    <div id="loading-wrap" class="loading-wrap">
+      <canvas width="350" height="500" id="loading_canvas"></canvas>
+    </div>
+    <div class="canvas-wrap"> 
+      <canvas width="210" height="327" id="rabbit_canvas" class="rabbit"></canvas>
+      <canvas width="434" height="390" id="clown_canvas" class="rotateIn clown"></canvas>
+      <canvas width="1920" height="245" id="led_canvas" class="led"></canvas><img src="/images/html/level_test/theme_circus/clown_sprites.png" alt="" style="display:none" class="clown_sprites"/><img src="/images/html/level_test/theme_circus/clown_sprites_success.png" alt="" style="display:none" class="clown_sprites_success"/><img src="/images/html/level_test/theme_circus/clown_sprites_error.png" alt="" style="display:none" class="clown_sprites_error"/><img src="/images/html/level_test/theme_circus/rabbit_sprites.png" alt="" style="display:none" class="rabbit_sprites"/><img src="/images/html/level_test/theme_circus/rabbit_sprites_success.png" alt="" style="display:none" class="rabbit_sprites_success"/><img src="/images/html/level_test/theme_circus/rabbit_sprites_error.png" alt="" style="display:none" class="rabbit_sprites_error"/><img src="/images/html/level_test/theme_circus/led_sprites.png" alt="" style="display:none" class="led_sprites"/><img src="/images/html/level_test/theme_circus/led_none.png" alt="" style="display:none" class="led_none"/><img src="/images/html/level_test/theme_circus/playing.png" alt="" style="display:none" class="playing_audio"/><img src="/images/html/level_test/theme_circus/loading.png" alt="" style="display:none" class="loading_img"/>
+    </div>
+    <div id="container" data-init="circus" class="theme-circus theme-common">
+      <div class="complete-mark"> 
+        <div class="complete-common complete-allright">
+          <p class="answer-right-tips"></p>
+          <p class="answer-error-tips"></p><a href="javascript:;" target="_blank" class="person-center-btn"></a>
+        </div>
+      </div>
+    </div>
+    <script src="../../../js/html/project/level_test/pind.js?v=1"></script>
+    <script src="/js/html/project/level_test/vendor.js" id="seajsnode" type="text/javascript"></script>
+  </body>
+</html>

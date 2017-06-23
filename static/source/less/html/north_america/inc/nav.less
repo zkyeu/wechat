@@ -1,0 +1,45 @@
+.nav{
+	position:relative;
+	height:48px;
+	background:#000;
+	filter:alpha(opacity=80);
+	background:rgba(15,15,15,0.8);
+	z-index:9;
+	.wrap{
+		width:1000px;
+		height:48px;
+		margin:0 auto;
+		ul{
+			height:100%;
+			overflow:hidden;
+		}
+		li{
+			position:relative;
+			float:left;
+			width:155px;
+			height:100%;
+			margin-left:-1px;
+			line-height:48px;
+			box-sizing:border-box;
+			text-align:center;
+			&:before{
+				position:absolute;
+				left:0;
+				top:16px;
+				display:inline-block;
+				width:1px;
+				height:15px;
+				background:#494949;
+				content:'';
+			}
+		}
+		.current{
+			border-bottom:#438bd9 solid 4px;
+		}
+		a{
+			display:block;
+			font-size:16px;
+			color:#fff;
+		}
+	}
+}

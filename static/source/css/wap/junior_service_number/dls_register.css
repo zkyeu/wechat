@@ -43,9 +43,8 @@
   width: 60%;
 }
 .reg-box .receive-box .input-box .code-img img {
-  width: 52px;
-  height: 12px;
-  margin-top: -7px;
+  width: 70px;
+  margin-top: -11px;
 }
 .reg-box .receive-box .input-box .code-box {
   position: absolute;
@@ -57,13 +56,24 @@
   height: 22px;
   width: 72px;
 }
-.reg-box .receive-box .input-box .code-box a {
-  position: relative;
-  top: -3px;
-  font-size: 12px;
-}
 .reg-box .receive-box .input-box .code-box .count-down {
   display: none;
+}
+.reg-box .receive-box .input-box .code-box a {
+  color: #fff;
+  font-size: 12px;
+}
+.reg-box .receive-box .input-box .sendCode {
+  display: inline-block;
+  height: 31px;
+  padding-left: 0;
+  width: 93px;
+  line-height: 31px;
+  text-align: center;
+  top: 0;
+  background: #d7a246;
+  color: #fff;
+  right: 0;
 }
 .reg-box .receive-box .receive-btn {
   width: 100%;
@@ -82,6 +92,9 @@
   text-align: center;
   font-size: 16px;
   margin-top: 45px;
+}
+.reg-box .des-box .info-box {
+  position: relative;
 }
 .reg-box .des-box .img-box {
   text-align: center;
@@ -117,7 +130,7 @@
 .reg-box .des-box .text3 {
   background-color: #f4f6b2;
   position: relative;
-  top: -85px;
+  margin-top: -85px;
   z-index: -2;
   text-align: left;
 }
@@ -166,4 +179,19 @@
   background-color: #333;
   color: #fff;
   cursor: pointer;
+}
+.tel-box {
+  height: 35px;
+  background-color: #fac000;
+  color: #fff;
+  font-size: 14px;
+  line-height: 35px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 640px;
+}
+.tel-box a {
+  color: #fff;
 }

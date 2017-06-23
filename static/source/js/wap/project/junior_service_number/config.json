@@ -1,0 +1,7 @@
+{
+	"define":[
+    "js/wap/common/*.js",
+		"js/wap/common/sea.min.js",
+    "js/wap/project/junior_service_number/config.js"
+	]
+}

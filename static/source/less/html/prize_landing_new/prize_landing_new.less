@@ -1,0 +1,339 @@
+@import "../common/base.less";
+@import "../common/www/w_header.less";
+@import "../common/www/w_footer.less";
+@imgPathImg: "../../../images/html/prize_landing_new/";
+.widthMain{
+  margin:0px auto;
+  width:@docWidth;
+}
+.pri-main{
+  .banner{
+    height: 640px;
+    background: url('@{imgPathImg}pe_bar_new.jpg') center no-repeat;
+    .widthMain{
+      position: relative;
+      .bar-img{
+        position:absolute;
+        top: 10px;
+        left:-48px;
+        z-index: 2;
+        width: 250px;
+        height: 346px;
+      } 
+    }
+    ul{
+      overflow: hidden;
+      padding-top: 330px;
+      li{
+        float: left;
+          width: 200px;
+        a{
+          height: 200px;
+          display:block;
+          background: url('@{imgPathImg}pe_bj01.png')no-repeat;
+        }
+        .nav-img01{
+          background-position: 0;
+          &:hover{
+            height: 227px;
+            background: url('@{imgPathImg}pe_bj02.png')no-repeat;
+          }
+        }
+        .nav-img02{
+          background-position: -200px 0;
+          &:hover{
+            height: 227px;
+            background: url('@{imgPathImg}pe_bj02.png')no-repeat;
+            background-position: -200px 0;
+          }
+        }
+        .nav-img03{
+          background-position: -400px 0;
+          &:hover{
+            height: 227px;
+            background: url('@{imgPathImg}pe_bj02.png')no-repeat;
+            background-position: -400px 0;
+          }
+        }
+        .nav-img04{
+          background-position: -600px 0;
+          &:hover{
+            height: 227px;
+            background: url('@{imgPathImg}pe_bj02.png')no-repeat;
+            background-position: -600px 0;
+          }
+        }
+        .nav-img05{
+          background-position: -800px 0;
+          &:hover{
+            height: 227px;
+            background: url('@{imgPathImg}pe_bj02.png')no-repeat;
+            background-position: -800px 0;
+          }
+        }  
+      }
+    }
+  }
+  .rota{
+    height: 520px;
+    background: url('@{imgPathImg}pe_new_img01.jpg') center no-repeat;
+    .lt{
+      float: left;
+      position: relative;
+      width: 590px;
+      height: 520px;
+      .lt-img{
+        width: 587px;
+        height: 186px;
+        margin-top: 130px;
+      }
+      .name{
+        position: absolute;
+        top:140px;
+        left: 108px;
+        width: 330px;
+        height: 165px;
+        line-height: 33px;
+        font-size: 16px;
+        color: #fff;
+        overflow: hidden;
+        white-space: nowrap;
+        span{
+          margin-right: 5px;
+        }
+        b{
+          margin-left: 5px;
+        }
+        .chick{
+          color: #fffe9d;
+        }
+      }
+      .tit{
+        float: left;
+        width: 450px;
+        font-size: 14xp;
+        color: #cc5600;
+        line-height: 18px;
+        margin-top: 10px;
+        li{
+          span{
+            display: block;
+            margin-left: 7px;
+          }
+        }
+      }
+    }
+    .dial-bg{
+      width: 558px;
+      height: 558px;
+      margin-left: 470px;
+      position: relative;
+      *position: absolute;
+      *margin-left:-120px;
+      background: url('@{imgPathImg}dial_bg.png') no-repeat;
+      .pointer{
+        cursor: pointer;
+        width: 178px;
+        height: 195px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -88px;
+        margin-top: -105px;
+        z-index: 8;
+        background: url('@{imgPathImg}dial_pointer.png') no-repeat; 
+        &::active{
+          background: url('@{imgPathImg}/dial_pointer_c.png') no-repeat; 
+        }
+      }
+      .rotate {
+        width: 446px;
+        height: 446px;
+        position: absolute;
+        left: 56px;
+        top: 56px;
+      }   
+    }  
+  }
+  .pri-list01,.pri-list02,.pri-list03,.pri-list04{
+    height: 520px;
+    overflow: hidden;
+    .widthMain{
+      position: relative; 
+      a{
+        position: absolute;
+        top: 390px;
+        z-index: 2;
+        font-size: 47px;
+        font-weight: bold;
+        width: 330px;
+        height: 90px;
+        line-height: 90px;
+        background-color: #fff;
+        border-radius: 8px;
+        text-align: center;
+      }
+    }
+  }
+  .pri-list01{
+    background: url('@{imgPathImg}pe_new_img02.jpg') center no-repeat;
+    a{
+      color: #236b0d;
+    }
+  }
+  .pri-list02{
+    background: url('@{imgPathImg}pe_new_img03.jpg') center no-repeat;
+    a{
+      color: #b32e2e;
+    }
+  }
+  .pri-list03{
+    height: 516px;
+    background: url('@{imgPathImg}pe_new_img04.jpg') center no-repeat;
+    a{
+      color: #912bb8;
+    }
+  }
+  .pri-list04{
+    height: 531px;
+    background: url('@{imgPathImg}pe_new_img05.jpg') center no-repeat;
+    a{
+      color: #3258c3;
+    }
+  }
+}
+.dialog{
+  position: fixed;
+  _position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#7F000000', endColorstr='#7F000000');
+  background-color:rgba(0,0,0,0.6);
+  display: none;
+  .info{
+    position: relative;
+    width: 542px;
+    height: 581px;
+    left: 50%;
+    top: 50%;
+    margin-top:-300px;
+    margin-left: -271px;
+    background: url('@{imgPathImg}dil_link.png') center no-repeat;
+    .hr,.hr-f{
+      float: left;
+      margin-top: 13px;
+      width: 170px;
+      height: 100px;
+    }
+    .del{
+      float: right;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      margin:140px 85px 0 0;
+    }
+    .tit{
+      text-align: center;
+      color: #5e4000;
+      font-size: 30px;
+      line-height: 45px;
+      float: left;
+      width: 100%;
+      text-align: center;
+      margin: 92px 0 0 0;
+    }  
+  }
+}
+.complt{
+  .info{
+    background: url('@{imgPathImg}dil_dn.png') center no-repeat; 
+    .tit{
+      font-size: 36px;
+      margin: 105px 0 0 0;
+      .ft{
+        font-size: 18px;
+      }
+    } 
+  }
+}
+.prize{
+  .info{
+    width: 845px;
+    height: 550px;
+    maring-top:-275px;
+    margin-left: -422px;
+    background: url('@{imgPathImg}prize.png') center no-repeat; 
+    .del{
+      margin: 145px 234px 0 0;
+    }
+    .tit{
+      margin: 10px 0 0 0;
+      h3{
+        font-size: 18px;
+      }
+      p{
+        margin-top: 15px;
+      }
+      .fot{
+        margin-top: 50px;
+        .nr{
+          display: block;
+          font-size: 18px;
+          color: #fcd209;
+        }
+      }
+    } 
+  }
+}
+// 弹出层
+.sysInfo{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  overflow-x: hidden; 
+  display: none;
+  .dtInfo{
+    position: absolute;
+    width: 234px;
+    top: 50%;
+    left: 50%;
+    margin:-100px 0 0 -117px;
+    .tit{
+      height: 30px;
+      line-height: 30px;
+      background-color: #ff8200;
+      padding:0 12px;
+      color: #fff;
+      border-top-right-radius: 3px;
+      border-top-left-radius: 3px;
+    }
+    .test{
+      text-align: center;
+      padding:20px 0;
+      border: 1px #e4eaee solid;
+      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+      .down{
+        display: block;
+        width: 72px;
+        height: 24px;
+        line-height: 24px;
+        color: #fff;
+        text-align: center;
+        background-color: #ff8200;
+        margin:30px 0 0 80px;
+      }
+    }
+  }
+}

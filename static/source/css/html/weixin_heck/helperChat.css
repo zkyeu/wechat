@@ -11437,6 +11437,7 @@ body {
   background-color: #FFD533;
 }
 .weixin_heck .heck_center .user_message .user_mes_content {
+  visibility: hidden;
   height: calc(100% - 400px);
 }
 .weixin_heck .heck_center .user_message .user_mes_content.group-label-con-height {
@@ -16963,11 +16964,11 @@ body {
   max-height: 40px;
   padding-left: 20px;
   min-height: 25px;
-  background: url(../../../images/html/weixin_heck/kecheng.png?v=YEfeLJTpxSGak7eLudWACg%3D%3D) 0 2px no-repeat;
+  background: url(../../../images/html/weixin_heck/powersel2.png?v=XlnThWoSjOc%2FyRmZ3h%2Boxw%3D%3D) 0 -61px no-repeat;
   cursor: pointer;
 }
 .helper-sel .block-con .con-list ul li.cut-sel {
-  background-position: 0 -23px;
+  background-position: 0 3px;
 }
 .helper-sel .block-con .detail-user {
   border-radius: 10px;

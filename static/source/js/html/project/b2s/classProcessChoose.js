@@ -1,0 +1,10 @@
+define("classProcessChoose",["utility"],function(require,exports,module){
+    $(".show_class").on("click","",function(){
+        $(".choose_class_pop").show();
+        $(".choose_class_pop_box").show();
+    })
+    $(".choose_class_pop_box").on("click","span",function(){
+        $(".choose_class_pop").hide();
+        $(".choose_class_pop_box").hide();
+    })
+});

@@ -1,0 +1,85 @@
+@charset "utf-8";
+@imgPath: "../../../images/wap/brandDay20170426/";
+
+html{ font-size:20px;-webkit-user-select:none;}
+@textColor: #666;
+@hoverColor: #ff8200;
+@white: #fff;
+@fontFamily: "Microsoft YaHei";
+body{padding: 0;margin: 0 auto;min-width: 320px;max-width: 640px;}
+h1,h2,h3,h4,h5,h6,i,em{font-weight:normal;font-style:normal;}
+input,button,select,textarea,dl,dd,dt{font-family:@fontFamily;outline:none;vertical-align:middle;border:0;border-radius:0; padding:0px; margin:0px;}
+ul,li{ padding:0px; margin:0px; list-style-type:none;}
+p{ margin:0; padding:0;}
+a{color:@textColor;text-decoration:none;}
+strong{font-weight:bold;}
+img{vertical-align:middle;}
+b{ font-weight:normal;}
+::selection{background-color:@hoverColor;color:white;text-shadow:none;}
+strong{font-weight:normal;}
+
+img{
+  display: block;
+}
+
+.container{
+    position: relative;
+    .bg{
+        width: 100%;
+    }
+    .info{
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        .myInput{
+        }
+        .getCoupon{
+            border: none;
+            border-radius: 0;
+            display: inline-block;
+            color: transparent;
+            width: 27.4rem;
+            padding-left: 0;
+            background: url("@{imgPath}getCoupon.png") no-repeat;
+            background-size: cover;
+        }
+        .loginBox{
+            position: relative;
+            margin: 1.5rem auto 0;
+            background: url("@{imgPath}login.png") no-repeat;
+            background-size: cover;
+            width: 12.85rem;
+            height: 2.4rem;
+            .loginButton{
+                float: right;
+                width: 4.35rem;
+                height: 2.4rem;
+                display: inline-block;
+            }
+        }
+    }
+    .getCoupon2{
+        position: absolute;
+        left: 50%;
+        margin-left: -13.7rem;
+        bottom: -0.2rem;
+        border: none;
+        border-radius: 0;
+        background: url("@{imgPath}getCoupon.png") no-repeat;
+        background-size: cover;
+    }
+}
+
+
+
+.myInput{
+    border: 1px solid #9bd9fd;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 25.9rem;
+    padding-left: 1.5rem;
+    color: #b4b4b4;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.9rem;
+}

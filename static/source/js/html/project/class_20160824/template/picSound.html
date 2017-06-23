@@ -1,0 +1,21 @@
+<h3 class="pic-h3 f-cb"><span class="t2">听声选图</span><span class="t1">实现听力秒懂</span></h3>
+<div style="clear:both"></div>
+<div class="picSod">
+  <dl>
+    <dt><img src="<%=domain +'pre_img_thumb/' + data.target.img%>" data-img="<%=domain + data.target.img%>" alt="" class="ltImg"></dt>
+    <dd id="picSod">
+      <div class="picLink" data-pic="<%=(data.option[0].correct || 0)%>">
+        <a href="javascript:;" class="picSd" media-audio="<%=domain + data.option[0].record%>" data-index="4"></a>
+        <a href="javascript:;" class="checkPic"></a>
+      </div>
+      <div class="picLink" data-pic="<%=(data.option[1].correct || 0)%>">
+        <a href="javascript:;" class="picSd" media-audio="<%=domain + data.option[1].record%>" data-index="5"></a>
+        <a href="javascript:;" class="checkPic"></a>
+      </div>
+      <div class="picLink" data-pic="<%=(data.option[2].correct || 0)%>">
+        <a href="javascript:;" class="picSd" media-audio="<%=domain + data.option[2].record%>" data-index="6"></a>
+        <a href="javascript:;" class="checkPic"></a>
+      </div>
+    </dd>
+  </dl>
+</div>

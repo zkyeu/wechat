@@ -1,0 +1,10 @@
+{
+	"define":[
+		"js/wap/common/*.js",
+		"!js/wap/common/iscroll.js",
+		"js/wap/project/picture_serve_na/config.js",
+		"!js/wap/mod/swipe.js",
+		"!js/wap/mod/swiper.js",
+		"!js/wap/mod/iosSelect.js"
+	]
+}

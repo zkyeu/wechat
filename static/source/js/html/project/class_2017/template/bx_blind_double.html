@@ -1,0 +1,45 @@
+<div class="box">
+    <div class="box-main">
+        <div class="f-cb wordchoose">
+            <ul>
+                <li id="j_prop" class="item word-pic animated fadeIn">
+                    <img class="pic" src="<%= domain + data.prop.img%>"/>
+                    <span id="j_audio_1" class="audio-btn" media-audio="<%= domain + data.prop.record%>"></span>
+                    <div class="bom">
+                        <p class="word-txt">
+                            <%= propTitle%>
+                        </p>
+                    </div>
+                </li>
+
+                <li id="j_target" class="item word-pic animated fadeIn hide" data-cix="<%= data.cix%>">
+                    <img class="pic" src="<%= domain + data.target.img%>"/>
+                    <span id="j_audio_2" class="audio-btn" media-audio="<%= domain + data.target.record%>"></span>
+                    <div class="bom">
+                        <p class="word-txt">
+                            <%= targetTitle%>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="pagenation">
+        <a id="j_page_prev" href="javascript:;" class="btn prev-btn"></a>
+        <a id="j_page_guess" href="javascript:;" class="btn guessed-btn disabled"></a>
+    </div>
+</div>
+
+<!-- 秘籍 -->
+<%if (tipCheats != 1) {%>
+    <%if (tipCheats == '2') {%>
+    <div id="j_tip_cheats" class="bx-tip-cheats" data-url="http://16171e944862.ih5.cn/idea/TZXe2hJ">
+        <a href="javascript:void(0);" class="close"></a>
+    </div>
+    <%}else{%>
+    <div id="j_tip_cheats" class="animated swing bx-tip-cheats" data-url="http://16171e944862.ih5.cn/idea/TZXe2hJ">
+        <a href="javascript:void(0);" class="close"></a>
+    </div>
+    <%}%>
+<%}%>
+

@@ -142,8 +142,9 @@ body .dateBox .dateList .list li h3 {
   font-size: 16px;
   line-height: 18px;
 }
-body .dateBox .dateList .list li h3 span {
+body .dateBox .dateList .list li h3 i {
   font-size: 13px;
+  font-style: normal;
 }
 body .dateBox .dateList .list li p {
   font-size: 0;
@@ -219,7 +220,7 @@ body .content .classList .item .leftPart .titleBox {
   margin-bottom: 10px;
 }
 body .content .classList .item .leftPart .titleBox .time {
-  width: 144px;
+  width: 154px;
   height: 30px;
   border-radius: 3px;
 }

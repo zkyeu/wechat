@@ -1,0 +1,448 @@
+@charset "utf-8";
+@import "../common/www/base.less";
+@imgPath: "../../../images/html/childrenJob_landing";
+body{font-family: "Microsoft YaHei";}
+ 
+.header{
+  height:728px;
+  background:url('@{imgPath}/cj_banner.jpg') center top no-repeat;
+  width:100%;
+  text-align: center;
+  .header_in{
+    width:980px;
+    min-height:730px;
+    margin:0 auto;
+    position:relative;
+     .cj_logo{
+      position:absolute; 
+      height:66px;
+      width: auto;
+      left:0;
+      top:0;
+    }
+    .cj_tit{
+      position:absolute;
+      height:107px;
+      width:auto;
+      left:50%;
+      margin-left:-293px;
+      top:312px;
+    }
+    .btn-join{
+      position:absolute;
+      left:50%;
+      margin-left:-150px;
+      top:455px;
+      a{
+        display:block;
+        width:300px;
+        height:62px;
+        background: url('@{imgPath}/cj_btn.png') center no-repeat;
+      }
+    }
+  }
+}
+.cj_lina{
+  height:565px;
+  width:100%;
+  background:#eee;
+  .cj_linaIn{
+    width:980px;
+    min-height:565px;
+    margin:0 auto;
+    position:relative;
+    .cj_who{
+      position: absolute;
+      left:50%;
+      margin-left:-352px;
+      top:45px;
+    }
+    .lina{
+      position:absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+.cj_why{
+  height:560px;
+  width:100%;
+  text-align: center;
+  padding-top:60px;
+}
+.cj_what{
+  width:100%;
+  height:410px;
+  background: url('@{imgPath}/cj_whatbg.jpg') center top no-repeat;
+  .cj-whatIn{
+    width: 980px;
+    min-height:410px;
+    margin:0 auto;
+    position: relative;
+    .cj_What{
+      position: absolute;
+      left:50%;
+      margin-left:-188px;
+      top:45px; 
+    }
+    .cj_text{
+      text-align: center;
+      position:absolute;
+      width: 100%;
+      top:134px;
+      p{
+        font-size: 18px;
+        line-height: 50px;
+        background:url('@{imgPath}/cj-icon.png') no-repeat;
+      }
+      .p1{
+        background-position: 220px center;
+      }
+      .p2{
+        background-position: 260px center;
+      }
+       .p3{
+        background-position: 250px center;
+      }
+      .p4{
+        background-position: 25px center;
+      }
+      .p5{
+        background-position: 25px center;
+      }
+
+    }
+  }
+}
+.cj_bot{
+  height:160px;
+  width: 100%;
+  background:url('@{imgPath}/cj_bot.jpg') center top no-repeat;
+  text-align: center;
+  padding-top:530px;
+}
+
+
+
+//表单部分
+.header_form{
+  height:140px;
+  width: 100%;
+  background:#ffd800;
+  .header_formIn{
+    width: 980px;
+    min-height:140px;
+    margin:0 auto;
+    position: relative;
+    .cj_logo{
+      position:absolute;
+      height:66px;
+      width: 198px;
+      top: 34px;
+      left:0;
+    }
+  }
+}
+.main{
+  min-height:100px;
+  width: 980px;
+  margin:0 auto;
+  padding-bottom:100px;
+  .cjf_top{
+    margin:22px 0 20px;
+    height:66px;
+    width: 100%;
+  }
+  .cjf_contain{
+    height:880px;
+    width: 980px;
+    background:#fff;
+    padding:50px 0 0 0;
+    .cjf_txt{
+      color:#898989;
+      font-size:16px;
+      padding:0 70px 0 50px;
+      line-height: 24px;
+      margin-top:28px;
+    }
+   .cjf_label{
+    height:40px;
+    width:100%;
+    font-size:16px;
+    margin-bottom:12px;
+    .cjf_bar{
+      width:330px;
+      height:32px;
+      border:1px solid #ccc;
+      font-size:16px;
+      color:#c2c2c2;
+      padding:0 10px;
+    }
+    .cjf_bar02{
+      width:170px;
+    }
+    .cjf_bar03{
+      width:170px;
+      margin-left:10px;
+    }
+    .cjf_bar04{
+      width:378px;
+    }
+    .cjf_bar05{
+      width:250px;
+    }
+    .cjf_select{
+      // display:inline-block;
+      display:inline;
+      select{
+        width:123px;
+        height:32px;
+        border:1px solid #ccc;
+        font-size:16px;
+      }
+      .spel{
+        margin:0 10px;
+      }
+      .cjf_long{
+        width:400px;
+      }
+    }
+    span{
+      display:inline-block;
+      width: 265px;
+      text-align: right;
+      margin-right:18px;
+      em{
+        color:#f00;
+      }
+    }
+    .cjf_submit{
+      background: red;
+      height:44px;
+      width: 173px;
+      background:url('@{imgPath}/cjf_submit.png') center top no-repeat;
+      margin:16px 0 0 260px;
+    }
+    .cjf_prompt{
+      width: 200px;
+      color:#ff0000;
+      font-size:16px;
+      margin-left:16px;
+      text-align: left;
+    }
+    .cjf_base{
+      margin:50px 0 0 260px;
+    }
+    .cjf_upload{
+      display:inline-block;
+      width:106px;
+      height:32px;
+      cursor: pointer;
+      .u_box{
+        height:32px;
+        width:92px;
+        border:1px solid #ff8200;
+        border-radius: 6px;
+        line-height:30px; 
+        text-align: center; 
+        z-index: 1; 
+        color:#ff8200;
+        font-size:16px;
+        cursor: pointer; 
+        right: 0px; 
+        top: 0px;
+        position:relative;
+        input{
+          position: absolute; 
+          height:32px;
+          width:92px; 
+          line-height: 32px; 
+          font-size: 16px; 
+          opacity: 0; 
+          filter: "alpha(opacity=0)"; 
+          filter: alpha(opacity=0); 
+          -moz-opacity: 0; 
+          left: 0px; 
+          top: 0px; 
+          cursor: pointer; 
+          z-index: 2; 
+          background-color: red;
+          }
+        }
+    }
+   }
+
+  }
+  .cjf_done{
+    width:100%;
+    text-align: center;
+    line-height: 36px;
+    font-size:16px;
+    color:#333333;
+  }
+}
+.centerMth{
+  width:@docWidth;
+  margin:0px auto; 
+}
+.iconImg{
+ background: url("@{imgPath}/icon.png") no-repeat;
+ display: inline-block;
+}
+ //轮播图片
+.play{
+  position: relative;
+  overflow: hidden;
+  .pic{
+    width: 100%;
+    height: 730px;
+    position: relative;
+    .cj_join{
+      height:65px;
+      width: 310px;
+      border-radius: 5px;
+      position: absolute;
+      left: 50%;
+      margin-left: -155px;
+      bottom:85px;
+      z-index: 999;
+      a{
+        display:block;
+        width: 100%;
+        height: 100%;
+        background:url("@{imgPath}/c_join.png") no-repeat;
+      }
+    }
+    li{
+      z-index: 0;
+      display: block;
+      width: 100%;
+      height: 730px;
+      .fm-opacity(0);
+      position: absolute;
+      top: 0;
+      .p-img{
+        .absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -960px;
+      }
+      span{
+        display:block;
+        height:107px;
+        width: 585px;
+        background:url("@{imgPath}/c_tit.png") no-repeat;
+        // background-size:585px auto;
+        position: absolute;
+        left:50%;
+        margin-left:-298px;
+        top:450px;
+      }
+      .c_logo{
+        width: 980px;
+        height:66px;
+        position: absolute;
+        left:50%;
+        margin-left:-490px;
+        top:20px;
+        i{
+          display:block;
+          height:66px;
+          width: 200px;
+          background: url("@{imgPath}/cj_logo.png") no-repeat;
+        }
+      }
+    }
+    li.first{
+      z-index: 1;
+      .fm-opacity(100);
+    }
+  }
+  .switch{
+    .absolute;
+    bottom: 50px;
+    text-align: center;
+    left: 50%;
+    margin-left: -60px;
+    z-index: 3;
+    li{
+      float: left;
+      margin-left: 5px;
+      .iconImg; 
+      width: 20px;
+      height: 20px;
+      background-position: -16px -100px;
+      .f-csp;
+    }
+    .crt{
+      background-position: -16px -70px; 
+    }
+  }
+  // 切换
+.sign-cha{
+    .absolute;
+    top: 238px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    .centerMth{
+      .relative;
+      width: 1100px;
+      .change{
+        .lt{
+          float: left;
+          width: 35px;
+          i{
+            .iconImg;
+            width: 35px;
+            height: 65px;
+            background-position: -110px -230px; 
+          }
+          &:hover{
+            i{
+              background-position: -75px -230px;
+            }
+          }
+        }
+        
+        .rt{
+          float: right;
+          width: 35px;
+          i{
+           .iconImg;
+           width: 35px;
+           height: 65px;
+           background-position: -35px -230px;
+          }
+          &:hover{
+            i{
+              background-position: 0 -230px; 
+            }
+          }
+        }
+      }
+      .video_play{
+        .absolute;
+        top: -10px;
+        left: 50%;
+        margin-left: -45px;
+        .video{
+          i{
+            .iconImg;
+            width: 90px;
+            height: 90px;
+            background-position: -106px -127px;  
+          }
+          &:hover{
+            i{
+              background-position: -4px -126px;   
+            }
+          }
+        }
+      }
+    }
+}
+
+}
+ 
+

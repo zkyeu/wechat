@@ -39,9 +39,6 @@
 .choose_class .about_class {
   width: 6rem;
   padding: 0 .2rem;
-  padding-bottom: 2.4rem;
-  background: url(../../../images/wap/b2s/process-class-1.png?v=i0%2FZwPHLj6ieo0tg18%2F5ew%3D%3D) no-repeat left bottom;
-  background-size: 6.4rem 2.95rem;
   position: relative;
 }
 .choose_class .about_class:before {
@@ -142,4 +139,19 @@
   color: #fff;
   font-size: 0.3rem;
   margin: 0 auto ;
+}
+.choose_class .btn-bottom {
+  height: 0.76rem;
+  padding: 0.42rem;
+  background: #fff;
+}
+.choose_class .btn-bottom a {
+  display: block;
+  height: 0.76rem;
+  line-height: 0.76rem;
+  background: #55cd42;
+  border-radius: 999px;
+  text-align: center;
+  font-size: 0.28rem;
+  color: #fff;
 }

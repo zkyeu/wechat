@@ -1,0 +1,44 @@
+<h3 class="pic-h3 f-cb"><span class="t2">跟读</span><span class="t1">练出漂亮的发音</span></h3>
+<div style="clear:both"></div>
+<div class="repeat"  id="classOn">
+      <div class="scoreLt compare-out">
+            <ul>
+              <li><a id="g1" href="javascript:;" class="icon" media-audio="<%=domain + data.target[0].record%>" data-index="7"></a>
+                    <img src="<%=domain +'pre_img_thumb/' + data.target[0].img%>" data-img="<%=domain + data.target[0].img%>" alt="" class="ltImg">
+              </li>
+              <li><%=data.target[0].spell!=null ? data.target[0].spell.replace(/\[/g, '<span style="background-color:#ffe8d0">').replace(/\]/g, "</span>") : ""%></li>
+            </ul>
+            <div class="compare-box">
+                <h3>内容对比记忆，效果提升1倍</h3>
+                <div class="text">辅助词汇</div>
+                <div class="u-btn">确 定</div>
+            </div> 
+      </div>
+      <div class="scoreLt scoreRt hide">
+            <ul>
+                <li>
+                    <a id="g2" href="javascript:;" class="icon" media-audio="<%=domain + data.target[1].record%>" data-index="8"></a>
+                    <img src="<%=domain +'pre_img_thumb/' + data.target[1].img%>" data-img="<%=domain + data.target[1].img%>" alt="" class="ltImg">
+                </li>
+                <li id="fallow-centence">So for <span class="grd">those</span> <span class="light">of</span> us who loved the host my fool! you want to sweet.
+                </li>
+                <li class="wordLink" style="border-bottom: none;"><%=data.target[1].spell!=null ? data.target[1].spell.replace(/\[/g, '<span style="background-color:#ffe8d0">').replace(/\]/g, "</span>") : ""%></li>
+            </ul>
+          <div class="soundRec newScore">
+                <div class="recordOuter new-record">
+                  <%if(data.score!=0){%>
+                    <a href="javascript:;" class="off" word_id="<%= data.id%>" media-audio="<%=domain + data.target[1].record%>" data-title="<%= data.target[1].spell_js%>"></a>
+                  <%}else{%>
+                      <a href="javascript:;" class="off2" word_id="<%= data.id%>" media-audio="<%=domain + data.target[1].record%>" data-title="<%= data.target[1].spell_js%>"></a>
+                  <%}%>
+                    <a href="javascript:;" id="replay" style="display:inline-block;"  media-audio = "<%=data.record_url?'http://'+data.record_url:''%>" class="<%=data.record_url?'down':'stop'%>"></a>
+                </div>
+                <div class="rec-pro new-recPro">
+                  <a href="javascript:;" class="error_warn" style="display:none">评分失败，请主人再说一次</a>
+                  <a href="javascript:;" class="munBer" style="<%=style%>">
+                    <%=score%>
+                  </a>
+                </div>
+          </div>
+      </div>
+</div>

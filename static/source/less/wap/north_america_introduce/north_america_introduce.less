@@ -1,0 +1,439 @@
+html{ font-size:625%;}
+@media only screen and (min-width: 375px){html{font-size: 733%;}}
+@media only screen and (min-width: 414px){html{font-size: 810%;}}
+@media only screen and (min-width: 481px){html{font-size: 940%;}}
+@media only screen and (min-width: 561px){html {font-size: 1090%;}}
+@media only screen and (min-width: 641px){html {font-size: 1250%;}}
+@import "../common/reset.less";
+@imgUrl:"../../../images/wap/north_america_introduce/";
+.introduce {
+	padding-bottom:44px;
+	overflow:hidden;
+	&-wrap {
+		padding:1.25rem 2rem;
+		background:#f7b53c;
+		color:#fff;
+	}
+	&-header {
+		display:flex;
+		&__logo {
+			flex:1;
+			width:50%;
+		}
+		&__slogan {
+			flex:1;
+			width:50%;
+			line-height:1.3;
+			color:#fff;
+			text-align:right;
+		}
+	}
+	&-staff {
+		margin-top:1.6rem;
+		text-align:center;
+		h1, h3 {
+			display:inline;
+		}
+		h1 {
+			font-size:2.3rem;
+			font-weight:bold;
+		}
+		h3 {
+			padding-right:0.5rem;
+			margin-right:0.5rem;
+			font-size:1.4rem;
+			border-right:#ffce73 solid 1px;
+		}
+	}
+	&-slogan {
+		margin:1rem 0 1.25rem;
+		font-size:3.7rem;
+		font-weight:bold;
+		text-align:center;
+	}
+	&-course {
+		position:relative;
+		background:#fff;
+		border-radius:18px;
+		.count {
+			position:absolute;
+			top:-0.7rem;
+			right:-0.95rem;
+			width:55px;
+			height:55px;
+			line-height:20px;
+			display:flex;
+			align-items:center;
+			justify-content:center;
+			border:#fc6a6c solid 2px;
+			color:#fc6a6c;
+			border-radius:50%;
+			background:#fff;
+			font-size:1.6rem;
+			font-weight:bold;
+			text-align:center;
+			transform: rotate(20deg);
+		}
+		dl {
+			display:flex;
+			overflow:hidden;
+		}
+		dt {
+			width:140px;
+			height:125px;
+			background:url("@{imgUrl}course.png") no-repeat;
+			background-size:100% 100%;
+		}
+		dd {
+			width:50%;
+			margin-left:1rem;
+			padding:1.25rem 0;
+			box-sizing:border-box;
+			h3 {
+				font-size:1.5rem;
+				font-weight:bold;
+				color:#f9ba3f;
+			}
+			.del {
+				display:block;
+				margin:1rem 0 0.5rem;
+				font-size:1.2rem;
+				color:#cdcdcd;
+			}
+			.price {
+				font-size:2.2rem;
+				font-weight:bold;
+				color:#fc6a6c;
+				&::before {
+					display:inline-block;
+					margin-right:8px;
+					padding:5px 7px;
+					font-size:1.2rem;
+					color:#fff;
+					background:#fc6a6c;
+					border-radius:6px;
+					font-weight:normal;
+					content:'内购价';
+					vertical-align:top;
+				}
+			}
+		}
+		&__info {
+			margin-top:0.8rem;
+			line-height:1.5;
+			font-size:1.3rem;
+			color:#fff;
+			text-align:center;
+		}
+	}
+	&-information {
+		padding:1.25rem 2rem;
+		.message {
+			position:relative;
+			margin-bottom:1rem;
+		}
+		.grade {
+			position:absolute;
+			right:0;
+			top:0;
+			width:50%;
+			padding:1.2rem;
+			border-radius:8px;
+			font-size:1.4rem;
+			border:#d7d7d7 solid 1px;
+			color:#cdcdcd;
+			box-sizing:border-box;
+			&::after {
+				position:absolute;
+				right:0;
+				top:0;
+				display:inline-block;
+				width:25%;
+				height:100%;
+				border-left:#e5e5e5 solid 1px;
+				background:url('@{imgUrl}arr.png') center center no-repeat;
+				content:' ';
+				background-size:8px 5px;
+			}
+		}
+		#name {
+			width:45%;
+		}
+		input {
+			width:100%;
+			padding:1rem;
+			border-radius:8px;
+			font-size:1.4rem;
+			box-sizing:border-box;
+			-webkit-appearance: none; 
+			border:#d7d7d7 solid 1px;
+			&::-webkit-placeholder {
+				color:#cdcdcd;
+				font-size:1.4rem;
+			}
+		}
+		select {
+			position:absolute;
+			right:0;
+			width:50%;
+			padding:1rem;
+			opacity:0;
+			font-size:1.4rem;
+			color:#333;
+		}
+		.current {
+			color:#000;
+		}
+		.submit {
+			margin-top:1rem;
+			padding:1.5rem 0;
+			background:#fc7368;
+			color:#fff;
+			font-size:1.6rem;
+			border-radius:8px;
+			text-align:center;
+		}
+	}
+	&-detail {
+		&__public-praise{
+			margin-top:10px;
+			padding:2.9rem 2rem;
+			background:#f7c42f;
+			overflow:hidden;
+			.title {
+				font-size:1.4rem;
+				color:#fff;
+				text-align:center;
+			}
+			.sub-title {
+				font-size:3.8rem;
+				font-weight:bold;
+				color:#fff;
+				text-align:center;
+			}
+			.swiper-container {
+				margin-top:2rem;
+			}
+			.swiper-wrapper {
+				display:flex;
+			}
+			.swiper-slide {
+				-webkit-flex-shrink: 0;
+			    -ms-flex: 0 0 auto;
+			    -ms-flex-negative: 0;
+			    flex-shrink: 0; 
+			    width: 90%;
+			    position: relative;
+			}
+			.swiper-pagination {
+				width:100%;
+				margin-top:10px;
+				padding:0 2rem;
+				text-align:center;
+				box-sizing:border-box;
+				&-bullet {
+					display:inline-block;
+					width:8px;
+					height:8px;
+					margin-right:5px;
+					border-radius:50%;
+					background:rgba(255,255,255,0.4);
+				}
+				&-bullet-active {
+					background:#fff;
+				}
+			}
+		}
+		&__advantage {
+			margin-top:10px;
+			padding-bottom:2.5rem;
+			background:#fff;
+			.item {
+				position:relative;
+				width:45px;
+				height:45px;
+				margin:3rem auto;
+				line-height:45px;
+				background:#f9c832;
+				font-size:2.7rem;
+				color:#fff;
+				font-weight:bold;
+				border-radius:50%;
+				text-align:center;
+				&::after, &::before {
+					position:absolute;
+					left:50%;
+					display:inline-block;
+					width:1px;
+					height:10px;
+					background:#f9c832;
+					content:'';
+					transform:scaleX(0.5);
+				}
+				&::before {
+					top:-12px;
+				}
+				&::after {
+					bottom:-12px;
+				}
+			}
+			.title {
+				font-size:2.2rem;
+				text-align:center;
+			}
+			dt {
+				margin-top:1rem;
+			}
+			dd {
+				padding:1rem;
+				line-height:1.7;
+				color:#787878;
+				font-size:1.5rem;
+			}
+		}
+		&__problem {
+			padding:2rem 1.25rem;
+			background:#fff;
+			.title {
+				margin-bottom:1rem;
+				font-size:1.8rem;
+				color:#3c3c3c;
+			}
+			&__item {
+				padding:1.65rem 0;
+				border-top:#f0f0f0 solid 1px;
+			}
+			&__ask {
+				position:relative;
+				.title {
+					position:relative;
+					margin-left:3.75rem;
+					padding:1rem;
+					font-size:1.4rem;
+					border-radius:6px;
+					border-top-left-radius: 0;
+					color:#ff444d;
+					background:#ffe9e9;
+					&::before {
+						position:absolute;
+						left:-10px;
+						top:0;
+						display:inline-block;
+						width:10px;
+						height:10px;
+						background:url('@{imgUrl}ask_arr.png') no-repeat;
+						background-size:cover;
+						content:''
+					}
+				}
+				&::before {
+					position:absolute;
+					left:0;
+					top:0;			
+					display:inline-block;
+					width:35px;
+					height:35px;
+					line-height:35px;
+					border-radius:50%;
+					color:#ff444d;
+					background:#ffe9e9;
+					font-size: 1.4rem;
+					content:'问';
+					text-align:center;
+					z-index:9;
+					box-sizing:border-box;
+				}
+			}
+			&__answer {
+				position:relative;
+				.text {
+					position:relative;
+					margin-left:3.75rem;
+					padding:1rem;
+					line-height:1.5;
+					font-size:1.4rem;
+					border-radius:6px;
+					border-top-left-radius: 0;
+					color:#787878;
+					border:#ffe2e2 solid 1px;
+					&::before {
+						position:absolute;
+						left:-10px;
+						top:-1px;
+						display:inline-block;
+						width:10px;
+						height:10px;
+						background:url('@{imgUrl}answer_arr.png') no-repeat;
+						background-size:cover;
+						content:'';
+						z-index:9;
+					}
+				}
+				&::before {
+					position:absolute;
+					left:0;
+					top:0;
+					display:inline-block;
+					width:35px;
+					height:35px;
+					line-height:33px;
+					border-radius:50%;
+					color:#787878;
+					border:#ffe2e2 solid 1px;
+					font-size: 1.4rem;
+					box-sizing:border-box;
+					content:'答';
+					text-align:center;
+					z-index:9;
+				}
+			}
+		}
+	}
+	&-fixbar {
+		display:none;
+		position:fixed;
+		bottom:0;
+		color:#fff;
+		width:100%;
+		padding:1.5rem 0;
+		background:#fc7368;
+		max-width:601px;
+		font-size:1.6rem;
+		text-align:center;
+		z-index:11;
+	}
+}
+.mask{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.4);
+}
+.error-box{
+	position: absolute;
+	top: 50%;
+	left: 5%;
+	z-index: 3;
+	width: 90%;
+	border-radius: 10px;
+	background-color: #f8f8f8;
+	text-align: center;
+	transform:translateY(-50%);
+	.error-text{
+		width: 100%;
+		line-height: 4rem;
+		color: #505050;
+		font-size: 1.4rem;
+		border-bottom: 1px solid #e3e3e3;
+	}
+	.error-sure{
+		display:block;
+		color: #fc6a6c;
+		font-size: 1.6rem;
+		line-height: 3rem;
+	}
+}

@@ -1,0 +1,154 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ */
+input,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-c {
+  background-color: #f7f8f8;
+}
+.com-box {
+  color: #595757;
+  padding: 10px;
+}
+.com-box p {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+}
+.com-box .star-box {
+  text-align: center;
+  margin-top: 10px;
+  position: relative;
+  height: 30px;
+}
+.com-box .star-box span {
+  /*margin-right:1.25rem;*/
+  margin-right: 5px;
+  width: 1.7rem;
+  height: 1.5rem;
+  background: url(../../../images/wap/junior_service_number/icons_t.png?v=e0arY08uQ1lpLcTS8IUTFA%3D%3D) no-repeat;
+  background-size: 25rem 25rem;
+  display: inline-block;
+}
+.com-box .star-box .click-div {
+  left: 50%;
+  z-index: 99;
+  opacity: 0;
+  margin-left: -5.75rem;
+  position: absolute;
+}
+.com-box .star-box .click-div span {
+  background: red;
+}
+.com-box .star-box .g-star {
+  left: 50%;
+  margin-left: -5.75rem;
+  position: absolute;
+}
+.com-box .star-box .g-star span {
+  background-position: -12.5rem 0;
+}
+.com-box .star-box .y-star {
+  left: 50%;
+  margin-left: -5.75rem;
+  z-index: 9;
+  position: absolute;
+}
+.com-box .star-box .y-star span {
+  background-position: -7.5rem 0;
+  display: none;
+  /*margin-right:1.5rem;*/
+  /*margin-right:7.5px;*/
+}
+.com-box .textarea-box {
+  height: 140px;
+  padding: 10px;
+  background-color: #e2e2d7;
+  border-radius: 5px;
+}
+.com-box .textarea-box textarea {
+  width: 100%;
+  height: 100%;
+  background-color: #e2e2d7;
+  border-radius: 5px;
+}
+.com-box .textarea-d {
+  font-size: 10px;
+  text-align: center;
+  margin-top: 5px;
+}
+.com-box .surebtn {
+  display: block;
+  width: 150px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
+  color: #fff;
+  font-size: 16px;
+  margin: 20px auto 20px;
+  background-color: #f4a640;
+  border-radius: 15px;
+}
+.showtips_layer {
+  position: fixed;
+  display: none;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.showtips_layer .showtips {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  position: absolute;
+  color: #595757;
+  top: 50%;
+  left: 50%;
+  margin-top: -57px;
+  margin-left: -135px;
+  width: 270px;
+  height: 115px;
+  background-color: #f7f8f8;
+}
+.showtips_layer .showtips .tit {
+  height: 20px;
+  font-size: 14px;
+  background: #e2e2d7;
+  -webkit-box-shadow: inset 0 0 5px #d0d0bf;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  text-indent: 8px;
+}
+.showtips_layer .showtips .content {
+  text-align: center;
+  padding-top: 20px;
+}
+.showtips_layer .showtips .content span {
+  display: inline-block;
+  width: 16px;
+  height: 12px;
+  background: url(../../../images/wap/junior_service_number/icons_t.png?v=e0arY08uQ1lpLcTS8IUTFA%3D%3D) -150px 0 no-repeat;
+  background-size: 250px 250px;
+}
+.showtips_layer .showtips .content p {
+  font-size: 12px;
+  color: #595757;
+  text-align: center;
+}
+.showtips_layer .showtips .content a {
+  display: inline-block;
+  width: 52px;
+  height: 19px;
+  background-color: #f4a640;
+  color: #fff;
+  font-size: 14px;
+  line-height: 17px;
+  border-radius: 10px;
+  margin-top: 15px;
+}

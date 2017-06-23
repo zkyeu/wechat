@@ -1,0 +1,545 @@
+@import "../common/base.less";
+@import "../common/www/w_header.less";
+@import "../common/www/w_footer.less";
+@imgPathImg: "../../../images/html/olympic_carnival/";
+.widthMain{
+  margin:0px auto;
+  width:@docWidth;
+  position: relative;
+  overflow: hidden;
+  padding: 910px 0 0;
+}
+.pri-header{
+  .header{
+    .hr-lt{
+      cursor: pointer;
+    }
+  }
+}
+.clearfix{
+    *zoom: 1;
+}
+.clearfix:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.subutton{
+    width: 250px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+}
+
+.pri-main{
+  .rota{
+    position: relative;
+    height: 1630px;
+    background: url('@{imgPathImg}lottery.jpg') top center no-repeat;
+    .lt{
+      float: left;
+      width: 522px;
+      color: #b43e08;
+      .prize_list{
+          margin-top: 100px;
+          height: 185px;
+          .names{
+              padding-left: 90px;
+              padding-top: 2px;
+              height: 169px;
+              line-height: 32px;
+              font-size: 16px;
+              overflow: hidden;
+              color: #f65b57;
+          }
+      }
+     
+      .tit{
+        font-size: 12px;
+        line-height: 20px;
+        margin-top: 15px;
+        margin-bottom: 16px;
+        margin-left: 30px;
+        color: #2183f6;
+      }
+      .l_btn{
+          background-position: 0 0;
+      }
+      .rota_more{
+        font-size: 16px;
+        margin-left: 30px;
+        cursor:pointer;
+        width: 90px;
+        color: #2183f6;
+      }
+    }
+    .dial-bg{
+      width: 396px;
+      height:396px;
+      padding:32px;
+      background: url('@{imgPathImg}dial_bg.png') no-repeat;
+      overflow: hidden;
+      .l_grid{
+        margin-right: -6px;
+        li{
+          width: 127px;
+          height: 132px;
+          margin-right: 6px;
+          margin-bottom: 2px;
+          float: left;
+          background:url('@{imgPathImg}l_bg.png') 0 -136px no-repeat;
+          &.pointer{
+            background-position:0 -274px;
+          }
+          &.pointer:active{
+            background-position:0 -412px;
+          }
+          &.l_now{
+            background-position: 0 0;
+          }
+          img{
+            margin-left: 5px;
+            margin-top: 10px;
+          }
+        }
+      }  
+    }
+  }
+}
+
+.talkshow {
+  height: 1262px;
+  text-align: center;
+  background: url('@{imgPathImg}talkshow.jpg') top center no-repeat;
+  .content {
+    position: relative;
+    display: inline-block;
+    height: 950px;
+    margin: 120px 0 0;
+    padding: 100px 0 0;
+    width: 1000px;
+    background: url('@{imgPathImg}talkshow-content.jpg') top center no-repeat;
+    .teacher {
+      margin: 15px auto 0;
+      width: 970px;
+      .c10b2f1 {
+         background-color: #10b2f1;   
+      }
+      .c5572fa {
+        background-color: #5572fa;   
+      }
+      .infomation {
+        float: left;
+        width: 228px;
+        border-radius: 10px 0 0 10px;
+        color: #fff;
+        .avatar {
+          margin: 25px 0 0;
+        }
+        .name {
+          margin: 30px 0 0;
+          font: normal 16px/24px "Microsoft YaHei";
+        }
+        .identity {
+           font: normal 14px/24px "Microsoft YaHei";       
+        }
+        .intro {
+          margin: 15px 0 0;
+          padding: 0 18px 20px;
+          font: normal 12px/24px "Microsoft YaHei";
+          text-align: left;
+        }
+      }
+      .b27bbf4 {
+        height: 300px;
+        border: 2px dashed #27bbf4;
+      }
+      .b5677f7 {
+        height: 324px;
+        border: 2px dashed #5677f7;
+      }
+      .courses {
+        overflow: hidden;
+        float: left;
+        position: relative;
+        width: 639px;
+        padding: 64px 47px 0;
+        border-left: none;
+        .wrap {
+          width: 639px;
+          overflow: hidden; 
+          position: relative;        
+        }
+        .list {
+          width: 10000px;
+          position: relative;
+        }
+        .c0192cb {
+          a {
+            color: #0192cb;                
+          }
+          .current {
+            border: 1px solid #00b1f4;
+          }
+          .desc {
+            display: none;
+            margin: 10px 0 0;
+            font: normal 12px/18px "Microsoft YaHei";
+            height: 126px;
+            overflow: hidden; 
+          }
+        }
+        .c3f56ae {
+          a {
+           color: #3f56ae;         
+          }
+          .current {
+            border: 1px solid #5572fa;
+          }
+          .desc {
+            display: none;
+            margin: 10px 0 0;
+            font: normal 12px/18px "Microsoft YaHei";
+            height: 144px;
+            overflow: hidden;  
+          }
+        }
+        li {
+          float: left;
+          margin: 0 18px 0 0;
+          padding: 7px;
+          width: 185px;
+          border: 1px solid #fff;
+          text-align: left;
+          .cover {
+            width: 100%;
+            height: 140px;
+          }
+          .title {
+            margin: 15px 0 0 0;
+            font: normal 14px/24px "Microsoft YaHei";
+          }
+          .subtitle {
+              font: normal 14px/24px "Microsoft YaHei";          
+          }
+          .time,
+          .way {
+             font: normal 12px/24px "Microsoft YaHei";           
+          }
+        }
+        .buttons {
+          span {
+            position: absolute;
+            width: 15px;
+            height: 32px;
+            top: 50%;
+            margin-top: -16px;
+            cursor: pointer;           
+          }
+        }
+        .prev {
+            left: 20px;
+            background: url('@{imgPathImg}left.png') top center no-repeat;
+        }
+        .next {
+            right: 20px;
+            background: url('@{imgPathImg}right.png') top center no-repeat;
+        }
+      }
+    }
+    .morecourse {
+      position: absolute;
+      left: 50%;
+      margin-left: -175px;
+      bottom: 60px;
+      z-index: 20;
+      width: 350px;
+      height: 60px;
+      background: url('@{imgPathImg}morecourse.png') 0 0 no-repeat;
+      cursor: pointer;
+    }
+  }
+}
+
+.show {
+  height: 1005px;
+  background: url('@{imgPathImg}show1.jpg') top center no-repeat;
+ 
+}
+//获得奖品
+.dialog {
+    display: none;
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 21;
+    width: 100%;
+    height: 100%;
+    filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#99000000', endColorstr='#99000000');
+  background-color:rgba(0,0,0,0.6);
+    .info{
+        position: relative;
+        width: 812px;
+        height: 583px;
+        left: 50%;
+        top: 50%;
+        margin-top: -350px;
+        margin-left: -406px;
+        background: url('@{imgPathImg}prize_bg02.png') center no-repeat;
+        .box{
+            position: relative;
+            left: 171px;
+            top: 196px;
+            width: 450px;
+            height: 357px;
+            text-align: center;
+            h3{
+                font-size: 18px;
+                color: #5e4000;
+                margin-bottom: 30px;
+            }
+            p{
+                background: url('@{imgPathImg}bottom_tit.png') center no-repeat;
+                position: absolute;
+                width: 400px;
+                height: 119px;
+                line-height: 85px;
+                left: 28.3px;
+                bottom: 0;
+                font-size: 16px;
+                color: #fcd209;
+                text-align: center;
+            }
+            .close{
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                right: 40px;
+                top: -54px;
+            }
+            img{
+              display: none;
+            }
+        }
+    }
+}
+// 我的抽奖记录和未抽奖
+.dialog2 {
+    display: none;
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 21;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    .tip{
+        position: relative;
+        width: 380px;
+        height: 170px;
+        left: 50%;
+        top: 50%;
+        background: #fff;
+        margin-top: -85px;
+        margin-left: -190px;
+        border-radius: 10px;
+        .close{
+            width: 36px;
+            height: 36px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background: url('@{imgPathImg}join_close.jpg') no-repeat;
+        }
+        .gold_box{
+          background: url('@{imgPathImg}look_detail02.png') no-repeat;
+          position: absolute;
+          width: 109px;
+          height: 56px;
+          right: 10px;
+          bottom: -2px;
+        }
+        .text{
+            float: left;
+            color: #1777f4;
+            padding-right: 25px;
+        }
+        .text1{
+            padding-left: 24px;
+            padding-top: 32px;
+            p{
+                line-height: 32px;
+                font-size: 16px;
+                font-weight: bold;
+            }
+            h3{
+                padding-top: 5px;
+                font-size: 24px;
+                span{
+                  font-size: 18px;
+                }
+            }
+        }
+        .text2{
+            padding-left: 55px;
+            h3{
+                font-size: 18px;
+                padding-top: 60px;
+            }
+        }
+    }
+    .tip-1,.tip-2{
+      display: none;
+    }
+}
+// 更多规则
+.dialog3 {
+    display: none;
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 21;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    .tip{
+        position: relative;
+        width: 540px;
+        height: 282px;
+        left: 50%;
+        top: 50%;
+        background: #fff;
+        margin-top: -200px;
+        margin-left: -270px;
+        border-radius: 10px;
+        .close{
+            width: 36px;
+            height: 36px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background: url('@{imgPathImg}join_close.jpg') no-repeat;
+        }
+       h3{
+        font-size: 18px;
+        color: #1777f4;
+        padding: 30px 0 15px 55px;
+        font-weight: 600;
+       }
+       .line{
+        margin-left: 4px;
+        width: 531px;
+        height: 4px;
+        background: url('@{imgPathImg}point_bg.png') no-repeat;
+       }
+       .details{
+        padding-left: 55px;
+        padding-top: 18px;
+        font-size: 14px;
+        line-height: 24px;
+        color:#1777f4;
+        ul{
+          padding-left: 10px;
+        }
+       }
+    }
+}
+.dialog4 {
+    display: none;
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index:21;
+    width: 100%;
+    height: 100%;
+    filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#99000000', endColorstr='#99000000');
+    background-color:rgba(0,0,0,0.6);
+    z-index: 1000;
+    .add_info{
+        position: relative;
+        width: 963px;
+        height: 548px;
+        left: 50%;
+        top: 50%;
+        margin-top: -320px;
+        margin-left: -481px;
+        background-color: transparent;
+        .close{
+          position: absolute;
+          left: 730px;
+          top: 90px;
+          width: 64px;
+          height: 64px;
+          background: url('@{imgPathImg}close03.png') center no-repeat;
+        }
+    }
+}
+.sysInfo{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: none;
+  .dtInfo{
+    position: absolute;
+    width: 234px;
+    top: 50%;
+    left: 50%;
+    margin:-100px 0 0 -117px;
+    .tit{
+      height: 30px;
+      line-height: 30px;
+      background-color: #ff8200;
+      padding:0 12px;
+      color: #fff;
+      border-top-right-radius: 3px;
+      border-top-left-radius: 3px;
+    }
+    .test{
+      text-align: center;
+      padding:20px 0;
+      border: 1px #e4eaee solid;
+      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+    background-color: #fff;
+      .down{
+        display: block;
+        width: 72px;
+        height: 24px;
+        line-height: 24px;
+        color: #fff;
+        text-align: center;
+        background-color: #ff8200;
+        margin:30px 0 0 80px;
+      }
+    }
+  }
+}
+
+.l_btn{
+  width: 350px;
+  height: 60px;
+  background-image: url('@{imgPathImg}l_btn.png');
+  background-repeat: no-repeat;
+  left: 50%;
+  margin-left: -175px;
+  bottom: 137px;
+  position: absolute;
+  z-index: 20;
+}

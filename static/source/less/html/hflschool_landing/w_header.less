@@ -1,0 +1,114 @@
+@import "../common/www/base.less";
+@imgPath: "../../../images/html/hflschool_landing/";
+.iconImg{
+ background: url("@{imgPath}icon.png") no-repeat;
+ display: inline-block;
+}
+
+.header{
+  .hfls-hl{
+      height:100%;
+      // width:445px;
+      width: 300px;
+      background:url("@{imgPath}hfls_edu.jpg")  no-repeat;
+      padding-left:255px;
+      float: left;
+  } 
+
+}
+ .hr-rt{
+    /*2015/12/18 青少抬头*/
+    position: absolute;
+    right: 0;
+    top: 0;
+    /*.right;*/
+    /*text-align: right;*/
+    width: 430px;
+    .rt-top{
+      .tar;
+      .right;
+      margin:11px 0 0 0;
+      width: 100%;
+      ul{
+        .right;
+        margin-bottom: 5px;
+        li{
+          .left;
+          .relative;
+          z-index: 6;
+          a{
+            margin-left: 15px;
+          }
+          &:nth-child(2){
+            a{
+              margin:0;
+            }
+          }
+        }
+      }
+    }
+    span{
+      display: block;
+      float: right;
+      //.ft19;
+       _vertical-align: middle;
+      i{
+       .iconImg;
+        width: 16px;
+        height: 20px;
+        background-position: -189px -14px;
+        margin-right: 6px;
+        *vertical-align: middle;
+      }
+    }
+    span.rt_username{
+      font-size: 12px; 
+      float: none; 
+      display: inline-block;
+      text-overflow:ellipsis; 
+      width:110px;
+      white-space:nowrap; 
+      *white-space:nowrap; 
+      overflow:hidden; 
+      height: 14px; 
+      line-height: 19px;
+    }
+    
+  }
+
+
+.weibo,.weixin{
+  .absolute;
+  z-index: 5;
+  right: -48px;
+  top:17px;
+  display: none;
+  transform:rotateY(0deg);
+  a{
+    display: block;
+    height: 51px;
+  }
+  /* &:hover{
+    transition:all 1s;
+    transform:rotateY(360deg);
+  } */
+}
+.weibo{
+  right: -45px;
+  top: 17px;
+  .iconImg;
+  width: 120px;
+  height: 51px;
+  line-height: 50px;
+  display: none;
+  .tac;
+  .ft14;
+  color: @hoverColor;
+  background-position: -210px -140px;
+}
+.hfls-hr{
+  width:400px;
+  ul{
+    float:right;
+  }
+}

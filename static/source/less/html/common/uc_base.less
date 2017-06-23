@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+/**
+ * 默认样式
+ * @file：   base.less
+ * @author:  xyyjk（maxingguo@51talk.com）
+ * @update:  2014-11-05
+ * @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+ */
+
+// -reset
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
+
+// -variable
+@docWidth: 1000px;
+@bgColor: #efefef;
+@fontSize: 13px;
+@textColor: #999;
+@linkColor: #000;
+@hoverColor: #ff8200;
+@borderColor: #dbdee0;
+@fontFamily: 'Microsoft YaHei','\5fae\8f6f\96c5\9ed1',Arial,Verdana,Tahoma;
+@imgPath: '../../../image/';
+@imgPathCommon: '../../../images/html/common/';
+
+// -custom
+html{background-color:@bgColor;_background-image:url(about:blank);_background-attachment:fixed;_overflow-x:hidden;}
+body{font:@fontSize @fontFamily;color:@textColor;}
+h1,h2,h3,h4,h5,h6,i,em{font-weight:normal;font-style:normal;}
+input,button,select,textarea{font-family:@fontFamily;outline:none;vertical-align:middle;border:0;border-radius:0;-webkit-appearance:none;}
+a{color:@linkColor;text-decoration:none;}
+a:hover{color:@hoverColor;}
+strong{font-weight:bold;}
+img{vertical-align:middle;}
+::selection{background-color:@hoverColor;color:white;text-shadow:none;}
+
+// -function
+.f-cb:before,.f-cb:after,.f-cbli li:before,.f-cbli li:after{content:'';display:table;}
+.f-cb:after,.f-cbli li:after{clear:both;}
+.f-cb,.f-cbli li{*zoom:1;}
+.f-ib{display:inline-block;*display:inline;*zoom:1;}
+.f-dn{display:none;}
+.f-db{display:block;}
+.f-fl{float:left;}
+.f-fr{float:right;}
+.f-pr{position:relative;}
+.f-pa{position:absolute;}
+.f-prz{position:relative;zoom:1;}
+.f-oh{overflow:hidden;}
+.f-ff0{font-family:'\5b8b\4f53',arial;}
+.f-ff1{font-family:'Microsoft YaHei','\5fae\8f6f\96c5\9ed1',arial,'\5b8b\4f53';}
+.f-fs1{font-size:12px;}
+.f-fs2{font-size:14px;}
+.f-fwn{font-weight:normal;}
+.f-fwb{font-weight:bold;}
+.f-tal{text-align:left;}
+.f-tac{text-align:center;}
+.f-tar{text-align:right;}
+.f-taj{text-align:justify;text-justify:inter-ideograph;}
+.f-vam,.f-vama *{vertical-align:middle;}
+.f-wsn{word-wrap:normal;white-space:nowrap;}
+.f-pre{overflow:hidden;text-align:left;white-space:pre-wrap;word-wrap:break-word;word-break:break-all;}
+.f-wwb{white-space:normal;word-wrap:break-word;word-break:break-all;}
+.f-ti{overflow:hidden;text-indent:-30000px;}
+.f-ti2{text-indent:2em;}
+.f-lhn{line-height:normal;}
+.f-tdu,.f-tdu:hover{text-decoration:underline;}
+.f-tdn,.f-tdn:hover{text-decoration:none;}
+.f-toe{overflow:hidden;word-wrap:normal;white-space:nowrap;text-overflow:ellipsis;}
+.f-csp{cursor:pointer;}
+.f-csd{cursor:default;}
+.f-csh{cursor:help;}
+.f-csm{cursor:move;}
+.f-usn{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;}
+
+// -mixins
+.fm-radius(@radius:50%){-webkit-border-radius:@radius;-moz-border-radius:@radius;border-radius:@radius;}
+.fm-arrow(@pos:top,@size:6px,@color:@hoverColor){font-size:0;width:0;height:0;line-height:0;display:inline-block;*display:inline;*zoom:1;vertical-align:-2px;border:0 dashed transparent;border-width:@size;.fm-arrow-pos(@pos,@color);}
+.fm-arrow-pos(@pos,@color)when(@pos=top){border-bottom-style:solid;border-bottom-color:@color;}
+.fm-arrow-pos(@pos,@color)when(@pos=bottom){border-top-style:solid;border-top-color:@color;}
+.fm-arrow-pos(@pos,@color)when(@pos=left){border-right-style:solid;border-right-color:@color;}
+.fm-arrow-pos(@pos,@color)when(@pos=right){border-left-style:solid;border-left-color:@color;}
+.fm-opacity(@opacity:50){filter:alpha(opacity=@opacity);-webkit-opacity:@opacity/100;-moz-opacity:@opacity/100;opacity:@opacity/100;}

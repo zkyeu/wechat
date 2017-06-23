@@ -1,0 +1,194 @@
+@import "../common/www/base.less";
+
+@import "../common/www/w_header.less";
+@import "w_header.less";
+@import "../common/www/w_footer.less";
+ 
+@import "../www/modules/w_tegrs.less";
+
+@imgPath: "../../../images/html/hflschool_landing/";
+// banner图
+.hfls-nav {
+  position: relative;
+  overflow: hidden;
+  height: 481px;
+}
+.hfls-nav img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -960px;
+}
+// 英高与51Talk战略合作公告
+.hfls-02{
+  height:574px;
+  width:100%;
+  background: url("@{imgPath}hfls_02.png") center bottom no-repeat;
+  text-align: center;
+  .hfls-txt01{
+    width:100%;
+    text-align: center;
+    margin:80px auto 50px;
+     h3{
+      font-size:40px;
+      color:#ff9e00;
+    }
+  }
+  .hfls-txt02{
+    display: inline-block;
+    width:@docWidth;
+    text-align: left;
+    line-height:36px;
+    font-size: 18px;
+  }
+}
+// 我们的英语培训优势
+.tegrs{
+  position:relative;
+  .hfls-txt03{
+    position:absolute;
+    top:-58px;
+    left:50%;
+    margin-left:-268px;
+  }
+  .ten-fri{
+    padding-top:145px;
+    padding-bottom: 134px;
+    .ten-dl dd span{
+      margin-top:0;
+      h4{
+        font-size:30px;
+      }
+      em{
+        font-size:18px;
+      }
+    }
+    
+    .ten-dl .ten-dd01{
+      left:414px;
+    }
+    .tit02{
+      margin:0;
+      margin-top:10px;
+    }
+    .ten-dl .ten-dd04{
+      left:78px;
+    }
+    .ten-dl .ten-dd07{
+      left:375px;
+    }
+  }
+
+}
+// 专业特色课程
+.FeatureC{
+  width:100%;
+  min-height: 1988px;
+  height:auto;
+  background:#efefef;
+  position:relative;
+  .hfls-txt04{
+    position:absolute;
+     top:-58px;
+     left:50%;
+     margin-left:-272px;
+  }
+  .gden{
+    padding-top:154px;
+    text-align: center;
+    h3{
+      font-size:40px;
+      font-weight:100;
+    }
+   .hfls_famliy{
+    display:inline-block;
+    background:#fff url("@{imgPath}hfls_fam.png") center 20px no-repeat;
+    text-align: left;
+    width:964px;
+    height:740px;
+    padding:20px;
+    margin-top:20px;
+    position:relative;
+    .hfls_txt01{
+      position:absolute;
+      bottom:0;
+      background:#fff;
+      opacity: 0.9;
+      filter:alpha(opacity=90);
+      height:284px;
+      width:964px;
+      padding-top:20px;
+      p{
+        line-height:38px;
+        font-size:18px;
+
+      }
+    }
+   }
+ }
+ .gden01{
+    padding-top: 45px;
+    .hfls_famliy{
+      background:#fff url("@{imgPath}hfls_fam02.png") center 20px no-repeat;
+    }
+ }
+
+}
+.tegrs .talk .t-h3{
+  font-size:40px;
+}
+.tegrs .ten-stu .stu-tit{
+  font-size:40px;
+}
+// 英高外语学校简介
+.hfls_intro{
+  width:100%;
+  text-align: center;
+  min-height:670px;
+  height:auto;
+  background:#fff url("@{imgPath}hfls_bg.png") center bottom no-repeat;
+  padding-top:80px;
+  h3{
+    font-size: 40px;
+  }
+  .hfls_intro01{
+    display:inline-block;
+    height:670px;
+    width: @docWidth;
+    text-align: left;
+    line-height:36px;
+    font-size:18px;
+    margin-top:40px;
+  }
+}
+.tegrs .talk{
+     .talk-list{
+     
+      li{
+        
+        &.icon-lina{
+          background: url("@{imgPath}hfls_lina.jpg") no-repeat; 
+        }
+      }
+     }
+}
+// 视频播放
+.ten-stu .centerMth li{
+  position:relative;
+}
+.ten-stu .centerMth li .video_play {
+  position: absolute;
+  top: 160px;
+  left: 75%;
+   
+}
+.ten-stu .centerMth li .video_play .video i {
+  background: url("@{imgPath}icon.png") no-repeat; 
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  background-position: -106px -127px;
+}
+.ten-stu .centerMth .video_play .video:hover i {
+  background-position: -4px -126px;
+}

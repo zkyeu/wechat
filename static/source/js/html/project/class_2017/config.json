@@ -1,0 +1,13 @@
+{
+	"define":[
+		"js/html/common/jquery-1.8.2.min.js",
+		"js/html/common/lodash.js",
+		"js/html/common/sea.min.js",
+		"js/html/project/class_2017/config.js",
+		"js/html/mod/cookie.js",
+		"js/html/project/class_2017/bx_alert.js",
+		"js/html/project/class_2017/bx_common.js",
+		"js/html/project/class_2017/bx_drag.js"
+
+	]
+}

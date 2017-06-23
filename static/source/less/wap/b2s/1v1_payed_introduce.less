@@ -1,0 +1,310 @@
+// 图片path
+@imgPath: '../../../images/wap/b2s/';
+//background: url("@{imgPath}start_bg.png") no-repeat;
+#fontSizeLoding{
+    width: 100%;
+    min-height: 100%;
+    max-width: 640px;
+    background-color: rgba(255, 255, 255, 1);
+    position: fixed;
+    top:0; 
+    z-index: 999;
+    img{
+        width: 30px;
+        height: 30px;
+        margin-left: -15px;
+        margin-top: -15px;
+        position: absolute;
+        top:50%;
+        left:50%;
+
+    }
+}
+.payed_1v1{
+    .top_message{
+        height: 2.52rem;
+        width: 100%;
+        background: url("@{imgPath}1v1_payed_intro_1.png");
+        background-size: 6.4rem 2.52rem;
+        color:#fff;
+        .mes_tit_1{
+            font-size: 0.32rem;
+            font-weight: 900;
+            padding:0.30rem 0 0.20rem 0.35rem;
+        }
+        .mes_tit_2{
+            font-size: 0.24rem;
+            padding-left: 0.35rem;
+            span{
+                color:#ff5456;
+            }
+        }
+        .mes_tit_3{
+            padding:0.2rem 0 0 0.35rem;
+            span{
+                color:#ff5456;
+            }
+        }
+    }
+    .to_class_content{
+        .test_title{
+            width: 4.83rem;
+            height: 0.45rem;
+            margin:0.6rem auto;
+            background: url("@{imgPath}test_title.png");
+            background-size: 4.83rem 0.45rem;
+        }
+        .test_text{
+            color:#8696ad;
+            line-height: 0.4rem;
+            font-size: 0.24rem;
+            padding: 0 0.4rem 0.45rem 0.4rem;
+        }
+        .class_step{
+            padding:0.15rem 0.2rem 0 0.3rem;
+            .left_step_1_img{
+                float: left;
+                width: 1.27rem;
+                height: 5.24rem;
+                background: url("@{imgPath}step_1.png");
+                background-size: 1.27rem 5.24rem;
+            }
+            .left_step_2_img{
+                float: left;
+                width: 1.27rem;
+                height: 1.73rem;
+                background: url("@{imgPath}step_2.png");
+                background-size: 1.27rem 1.73rem;
+            }
+            .left_step_3_img{
+                float: left;
+                width: 1.27rem;
+                height: 0.64rem;
+                background: url("@{imgPath}step_3.png");
+                background-size: 1.27rem 0.64rem;
+            }
+            .right_step{
+                float: left;
+                font-size: 0.24rem;
+                padding:0.05rem 0 0 0.1rem;
+                .title{
+                    width: 0.98rem;
+                    height: 0.4rem;
+                    border-radius: 999px;
+                    text-align: center;
+                    line-height: 0.4rem;
+                    color:#fff;
+                    background-color: #43c4ff;
+                    margin-bottom: 0.15rem;
+                }
+                .text_intro{
+                    font-weight: 900;
+                    color:#4e5c6f;
+                    padding:0rem 0 0.1rem 0;
+                    a{
+                        color:#ffcd00;
+                    }
+                }
+                .intro_more{
+                    color:#8696ad;
+                }
+                .intro_last{
+                    color:#8696ad;
+                    padding-bottom: 0.2rem;
+                }
+            }
+        }
+        .load_app{
+            width: 5.40rem;
+            height: 0.9rem;
+            margin:0.5rem auto 0.6rem;
+            position: relative;
+            a{
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top:0;
+            }
+            p{
+                width: 5.40rem;
+                height: 0.9rem;
+                line-height: 0.9rem;
+                border-radius: 999px;
+                background: #ff5456;
+                text-align: center;
+                color:#fff;
+                font-size: 0.3rem;
+            }
+        }
+    }
+    .step_all{
+        width: 6.4rem;
+        height: 6.07rem;
+        background: url("@{imgPath}step_all.png") no-repeat;
+        background-size: 6.4rem 5.43rem;
+        background-color: #ffe100;
+        .step_all_test{
+            display: flex;
+            padding-top: 3.85rem;
+            div{
+                flex : 1;
+                color:#323232;
+                font-size: 0.24rem;
+                text-align: center;
+                &:first-child{
+                    padding-top: 0.4rem;
+                }
+                &:last-child{
+                    padding-top: 0.2rem;
+                    p{
+                        &:last-child{
+                            font-size: 0.2rem;
+                        }
+                    }
+                }     
+            }
+        }
+        .back_class{
+            font-size: 0.2rem;
+            text-align: center;
+            color:#a08525;
+            padding-top:0.3rem;
+        }
+    }
+    .about_class{
+        width: 6rem;
+        padding:0 .2rem;
+       //height: 9.61rem;
+        background: url("@{imgPath}about_class_bg.png");
+        background-size: 6.4rem 9.61rem;
+        background-repeat: no-repeat;
+        background-color: #afebff;
+        .tips_text{
+            font-size: 0.2rem;
+            color: #8696ad;
+            padding: 0.6rem;
+            p{
+                line-height: 0.5rem;
+            }
+        }
+        .about_text_1{
+            color:#4e5c6f;
+            font-size: 0.32rem;
+            padding-top: 0.65rem;
+            text-align: center;
+        }
+        .about_text_2{
+            font-size: 0.36rem;
+            text-align: center;
+            color:#ff6062;
+            padding-bottom: 0.4rem;
+        }
+        .text_box{
+            background: #fff;
+            border-radius: 0.2rem;
+            padding: 0.28rem;
+            font-size: 0.24rem;
+            margin-bottom: 0.25rem;
+            span{
+                color:#ff6062;
+                font-weight: 900;
+            }
+            
+        }
+        .text_box_load{
+            background: #fff;
+            border-radius: 0.2rem;
+            font-size: 0.24rem;
+            overflow: hidden;
+            margin-bottom: 0.28rem;
+            .text_p{
+                padding: 0.25rem;
+                span{
+                    color:#4e5c6f;
+                    font-weight: 900;
+                }
+            }
+            .load_talk{
+                height: 0.9rem;
+                color:#fff;
+                line-height: 0.9rem;
+                background: url("@{imgPath}logo_head.png") no-repeat;
+                background-color: #ffc000;
+                background-size: 0.64rem 0.64rem;
+                background-position: 0.87rem 0.16rem;
+                position: relative;
+                padding-left: 1.8rem;
+                font-size: 0.3rem;
+                a{
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top:0;
+                }
+            }
+            .load_class{
+                height: 0.9rem;
+                color:#fff;
+                line-height: 0.9rem;
+                background: url("@{imgPath}load_bear.png") no-repeat;
+                background-color: #09b2ff;
+                background-size: 0.69rem 0.66rem;
+                background-position: 0.87rem 0.25rem;
+                position: relative;
+                padding-left: 2.3rem;
+                font-size: 0.3rem;
+                a{
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top:0;
+                }
+            }
+        }
+    }
+    .about_class_app{
+        width: 6rem;
+        padding:0 .2rem;
+       // height: 7.38rem;
+        background-image: url("@{imgPath}about_class_bg_app.png");
+        background-size: 6.4rem 7.78rem; 
+    }
+    .load_chose_class_null{
+        width: 5.40rem;
+        height: 1.3rem;
+    }
+    .load_chose_class{
+            width: 100%;
+            height: 0.9rem;
+            padding:0.2rem 0;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            background: #4998e0;
+            a{
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top:0;
+            }
+            p{
+                width: 5.40rem;
+                height: 0.9rem;
+                line-height: 0.9rem;
+                border-radius: 999px;
+                background: #ff5456;
+                text-align: center;
+                color:#fff;
+                font-size: 0.3rem;
+                 margin:0 auto ;
+            }
+        }
+}

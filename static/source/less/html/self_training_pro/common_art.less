@@ -1,0 +1,82 @@
+@import "../common/base.less";
+@imgPathImg: "../../../images/html/self_training_pro/";
+@docWidth: 1000px;
+@bgColor: #efefef;
+@fontSize: 14px;
+@linkColor: #000;
+@hoverColor: #ff8200;
+@fontFamily: 'Microsoft YaHei','\5fae\8f6f\96c5\9ed1',Arial,Verdana,Tahoma;
+@height:2250px;
+@text-align:center;
+
+html{
+	background:#f0f0f0;
+
+}
+body{
+	line-height:1;
+}
+//顶部
+.top_bar{
+	position:relative;
+	height:80px;
+	background:#efd288;
+	img{
+		position:absolute;
+		left:17px;
+		top:17px;
+	}
+}
+.content{
+	padding-top:22px;
+	&>*{
+		float:left;
+	}
+}
+.clearfix{
+	zoom:1;
+}
+.clearfix:after{
+	display:block;
+	content:"";
+	clear:both;
+}
+//左侧导航
+.left_bar{
+	width:203px;
+	font-size:13px;
+	.has_oder{
+		&>h4{
+			background:url("@{imgPathImg}has_oder.png") no-repeat 10px center;
+		}
+	}
+	.top_line{
+		h4{
+			padding-left:28px;
+			height:38px;
+			line-height:38px;
+
+		}
+		&>h4{
+			background-color:#0f0f0f;
+			color:#f8d06b;
+		}
+		li{
+			
+			background:#474747;
+			color:#f8d06b;
+			line-height:38px;
+			padding-left:28px;
+		}
+		&>ul{
+		}
+	}
+}
+
+.wrap{
+	height:100%;
+	width:1130px;
+	&>*{
+		float:left;
+	}
+}

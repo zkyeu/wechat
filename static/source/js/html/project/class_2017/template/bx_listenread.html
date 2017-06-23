@@ -1,0 +1,50 @@
+<div class="box">
+    <div class="box-main">
+        <div class="f-cb word-speak">
+            <div class="word-pic">
+                <img class="pic" src="<%= domain + data.target.img%>" />
+                <span class="audio-btn" media-audio="<%= domain + data.target.record%>"></span>
+                <div class="bom">
+                    <p class="word-txt">
+                        <%= targetTitle%>
+                    </p>
+                </div>
+            </div>
+            <div class="practice">
+                <h3 class="word"><%= data.title%></h3>
+                <% if(data.detail != null && data.detail.show == 'on') {%>
+                <div class="translation tc">
+                    <i class="ic_translation"></i>
+                    <span class="text"><%=data.detail.detail%></span>
+                </div>
+                <%}%>
+                <div class="funcs">
+                    <div class="f-item">
+                        <a href="javascript:;" media-audio="<%= domain + data.record%>" class="f-btn btn-listen"></a>
+                    </div>
+                    <div class="f-item">
+                        <a href="javascript:;" class="f-btn btn-record"></a>
+                        <div class="score-result"></div>
+                        <!--<span class="s-tip f18 t_score">100</span>-->
+                        <span class="s-tip-default"></span>
+                        <div class="d-tip hide">
+                            得分与你的能力不符，快检查一下你的麦克风和网络哦！
+                        </div>
+                    </div>
+                    <div class="f-item">
+                        <a href="javascript:;" class="f-btn btn-play disabled"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pagenation">
+        <a id="j_page_prev" href="javascript:;" class="btn prev-btn"></a>
+        <a id="j_page_next" href="javascript:;" class="btn next-btn"></a>
+    </div>
+</div>
+
+<!-- 成功 -->
+<div class="bx-tip animated zoomIn bx-tip-zan hide"></div>
+<div class="bx-tip animated zoomIn bx-tip-tzan hide"></div>
+<div class="bx-tip bx-tip-wrong hide"></div>

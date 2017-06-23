@@ -1,0 +1,59 @@
+<h3 class="pic-h3 f-cb"><span class="t2">看图猜词</span><span class="t1">通过图片理解词义，摆脱中文!</span></h3>
+<div style="clear:both"></div>
+      <div class="bom-wr new-aba">
+        <div class="lt" id="classOn">
+          <div class="w1mask abamask" style="display:none">
+          </div>
+          <div class="w1container pos" style="display:none">
+            <h2><span>猜：</span>对比AB图，猜A图含义</h2>
+
+            <div class="ab f-cb">
+              <div class="a">A图</div>
+              <div class="b">B图</div>
+            </div>
+            <div class="btn">确 定</div>
+          </div>
+          <ul>
+            <li style="z-index:995;">
+              <a href="javascript:;" class="icon" media-audio="<%=domain + data.target[0].record%>" data-index="1"></a>
+                <img  src="<%=domain +'pre_img_thumb/' + data.target[0].img %>" data-img="<%=domain + data.target[0].img%>"  alt="" class="abaImg ">
+            </li>
+            <li style="margin-left:30px; z-index:996;overflow: inherit;">
+              <span class="vs" style="z-index:997"></span>
+              <a href="javascript:;" class="icon" media-audio="<%= domain + data.target[1].record %>" data-index="2"></a>
+                <img src="<%=domain +'pre_img_thumb/' + data.target[1].img%>" data-img="<%=domain + data.target[1].img%>" alt="" class="abaImg">
+            </li>
+          </ul>
+        </div>
+        <div class="lt rt" id="classOff">
+          <a href="javascript:;" class="icon" media-audio="<%=domain + data.record%>" data-index="3"></a>
+          <ul>
+            <li style="margin-left:6px;" data-status="<%=(data.option[0].correct || 0)%>">
+              <a href="javascript:;" class="linkClass">
+                <img src="<%=domain + 'pre_img_thumb/' + data.option[0].img%>" data-img="<%=domain + data.option[0].img%>" alt="" class="abaImg">
+                <i class="check"></i>
+                <span class="correct"></span>
+              </a>
+            </li>
+            <li style="margin-left:26px;" data-status="<%=(data.option[1].correct || 0)%>">
+              <a href="javascript:;" class="linkClass">
+                    <img  src="<%=domain + 'pre_img_thumb/' + data.option[1].img%>" data-img="<%=domain + data.option[1].img%>" alt="" class="abaImg">
+                <i class="check"></i>
+                <span class="correct"></span>
+              </a>
+            </li>
+          </ul>
+          <div class="w2container pos" style="display:none">
+            <h2><em>强烈建议：</em><br/>
+            <span>仔细对比图片细节，学习效果<em>可翻倍</em>！</span></h2>
+            <div id="go-on" class="btn">猜词完毕，继续</div>
+          </div>
+          <div class="w2mask abamask" style="display:none">
+          </div>
+          <div class="w3container pos" style="display:none;">
+            <h2>选：</h2>
+            <h3>听声音，选图片</h3>
+            <div id="go-on" class="btn">确 定</div>
+          </div>
+        </div>
+      </div>

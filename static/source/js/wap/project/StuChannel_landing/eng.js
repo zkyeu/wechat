@@ -1,0 +1,26 @@
+/**
+ *
+ * @authors liyang (liyang@51talk.com)
+ * @date    2016-04-05 14:37:30
+ */
+define(function(require,exports,module){
+    var reTel = /^1[0-9]{10}$/;
+    $("#reg1").click(function(){
+        var tel = $("#reg1_tel").val();
+        var passwd = $("#reg1_passwd").val();
+        if (tel == "") {
+            alert("请填写手机号码");
+            return false;
+        }
+        if (!reTel.test(tel)) {
+            alert("请填写正确格式手机号码");
+            return false;
+        }
+        if (passwd == "") {
+            alert("请填写密码");
+            return false;
+        }
+        document.getElementById("reg1_form").submit();
+    });
+    
+});

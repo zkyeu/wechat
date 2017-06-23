@@ -1,0 +1,128 @@
+/*初始化样式*/
+html{font-size:62.5%;}
+body{ color:#515050;font-family:'Microsoft YaHei',STXihei,MingLiu; background: #ebebeb; width: 100%;}
+cite,i,s,b{ font-style:normal;font-weight:normal;}
+body,ul,li,p,dl,dt,dd,ol,h1,h2,h3,h4,h5,h6{ margin:0px; padding: 0px;}
+h1,h2,h3,h4{  font-weight: normal;}
+li{ list-style: none;}
+img{border:0px;}
+a,a:link,a:visited{ text-decoration: none;}
+input{font-family:'Microsoft YaHei',STXihei,MingLiu;outline: none;border: none;margin:0;padding: 0;}
+
+@media only screen and (min-width: 481px){
+    html {
+        font-size: 94%!important;
+    }
+}
+@media only screen and (min-width: 561px){
+    html {
+        font-size: 109%!important;
+    }
+}
+@media only screen and (min-width: 641px){
+    html {
+        font-size: 125%!important;
+    }
+}
+
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden} 
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;} 
+
+@imgPath: "../../../images/wap/gostDay";
+@green:#70bc4f;
+@Bgreen:#1f5967;
+@white:#fff;
+.position(r){
+    position: relative;
+}
+.position(a){
+    position:absolute;
+}
+.borderbot{
+    border-bottom: 1px #dadada solid;
+}
+
+.mb2{
+    margin-bottom: 2.1rem;
+
+}
+
+.wrap{
+    display: -webkit-box;
+    -webkit-box-orient:horital;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+}
+
+.wrap {
+    background: url("@{imgPath}/bg.jpg") left top no-repeat;
+    width: 26.66rem;
+    height: 42rem;
+    margin: 0 auto;
+    position: relative;
+    background-size: 100% 100%;
+}
+
+.music {
+    width: 3.56rem;
+    height: 3.26rem;
+    position: absolute;
+    left: 1.56rem;
+    top: 1.56rem;
+    background: transparent url("@{imgPath}/music.png") left center no-repeat;
+    background-size: 100% 100%;
+}
+/* .cont_box{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+} */
+.content{
+    background: url("@{imgPath}/content.png") left top no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+}
+
+
+.inputs {
+    padding-top: 11rem;
+    margin-bottom: 5.5rem;
+}
+
+.inputs p {
+    height: 3.5rem;
+    text-align: center;
+}
+
+.inputs p input {
+    background-color: transparent;
+    height: 1.4rem;
+    line-height: 1.4rem;
+    width: 8.37rem;
+    margin-left: 1.667rem;
+    margin-top: 1.307rem;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+
+.inputs p .phoneTxt {
+    background: url("@{imgPath}/phone.png") no-repeat left center/contain;
+}
+
+.inputs p .password {
+    background: url("@{imgPath}/password.png") no-repeat left center/contain;
+}
+
+.btnBar {
+    text-align: center;
+}
+
+.btnBar .subBtn {
+    width: 14.45rem;
+    height: 4.6rem;
+    background: url("@{imgPath}/btn.png") no-repeat left center;
+    cursor: pointer;
+    background-size: 100% 100%;
+}

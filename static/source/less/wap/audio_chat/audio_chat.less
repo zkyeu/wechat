@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+@import "../common/base.less";
+
+@imgPath: "../../../images/wap/audio_chat/";
+html,body{
+	height:100%;
+}
+body{
+	font-family: @fontFamily;
+}
+img{
+	vertical-align: top;
+}
+section{
+	height:100%;
+	background-color: #fefcf9;
+	min-width: 320px;
+    max-width: 640px;
+    margin:0 auto;
+}
+
+.ly_chat{
+	position :relative;
+	width:100%;
+	.chat_log{
+		margin-left: 1.1rem;
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+		border-bottom:1px solid #D7D7D7;
+		.log_teacher{
+			font-size: 1.3rem;
+			color:#ff8200;
+			line-height: 1.3rem;
+		}
+		.log_myself{
+			font-size: 1.3rem;
+			color:#888888;
+			line-height: 1.3rem;
+		}
+		p{
+			margin-right: 1.1rem;
+			word-wrap:break-word;
+			word-break:break-all;
+			padding-top: 1rem;
+			font-size: 1.5rem;
+			line-height: 1.5rem;
+			color:#363636;
+		}
+	}
+}
+.none_chat{
+	display:flex;
+	height:100%;
+	-webkit-box-align: center; 
+	-webkit-box-pack: center;  
+	-webkit-justify-content: center;
+	-webkit-align-items: center;  
+	.none_tit{
+		text-align: center;
+		height:1.5rem;
+		font-size: 1.3rem;
+		color:#ff8200;
+		line-height: 1.3rem;
+	}
+}
+@media screen and (max-width: 320px) {
+	.log_img{
+		 max-width: 270px;
+	}
+}

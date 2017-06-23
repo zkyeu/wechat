@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="description"  content="领取学习礼包，来51Talk玩转英语">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="<%= csslink%>">
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>appointment.css">
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>zepto.mtimer.css">
+    
+</head>
+<body id="container" data-init="appointment" class="bg-c">
+    <div class="fix-box" id="fixId">
+        <ul class="tab-box" id="tab">
+            <li class="current">优先外教</li>
+            <li>欧美外教</li>
+            <li>我的收藏</li>
+        </ul>
+        <div class="date-box">
+            <span class="date"><input type="text" id="picktime" value="03-27 15:00" readonly></span>
+            <span class="filter-btn" id="filterId">筛选</span>
+        </div>
+    </div>
+    <div class="appoinment-box">
+        <div class="tea-list" id="teaList" >
+            <div class="tea-l _tea-l show" id="tea0">
+                <ul>
+                    <li>
+                        <div class="tea-info">
+                            <span class="tea-icon">
+                                <img src="<%= imagessrc%>teacher01.png"/>
+                                <i>已收藏</i>
+                            </span>
+                            <div class="tea-des">
+                                <p class="tea-name">Sara LI</p>
+                                <div class="score">
+                                    <span class="score-v">评分：95</span>
+                                    <div class="star-box">
+                                        <div class="yellow-s _yellow-s" data-score = "95">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="half-star-g"></span>
+                                        </div>
+                                        <div class="grey-s">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="level">适合初级学员</p>
+                            </div>
+                            
+                        </div>
+                        <a class="appointment-btn" href="javascript:;">
+                            预约
+                        </a>
+                    </li>
+                    <li>
+                        <div class="tea-info">
+                            <span class="tea-icon">
+                                <img src="<%= imagessrc%>teacher01.png"/>
+                                <i>已收藏</i>
+                            </span>
+                            <div class="tea-des">
+                                <p class="tea-name">Sara LI</p>
+                                <div class="score">
+                                    <span class="score-v">评分：90</span>
+                                    <div class="star-box">
+                                        <div class="yellow-s _yellow-s" data-score = "90">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="half-star-g"></span>
+                                        </div>
+                                        <div class="grey-s">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="level">适合初级学员</p>
+                            </div>
+                            
+                        </div>
+                        <a class="appointment-btn" href="javascript:;">
+                            预约
+                        </a>
+                    </li>
+                    <li>
+                        <div class="tea-info">
+                            <span class="tea-icon">
+                                <img src="<%= imagessrc%>teacher01.png"/>
+                                <i>已收藏</i>
+                            </span>
+                            <div class="tea-des">
+                                <p class="tea-name">Sara LI</p>
+                                <div class="score">
+                                    <span class="score-v">评分：10</span>
+                                    <div class="star-box">
+                                        <div class="yellow-s _yellow-s" data-score = "10">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="half-star-g"></span>
+                                        </div>
+                                        <div class="grey-s">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="level">适合初级学员</p>
+                            </div>
+                            
+                        </div>
+                        <a class="appointment-btn" href="javascript:;">
+                            预约
+                        </a>
+                    </li>
+                    <li>
+                        <div class="tea-info">
+                            <span class="tea-icon">
+                                <img src="<%= imagessrc%>teacher01.png"/>
+                            </span>
+                            <div class="tea-des">
+                                <p class="tea-name">Sara LI</p>
+                                <div class="score">
+                                    <span class="score-v">评分：10</span>
+                                    <div class="star-box">
+                                        <div class="yellow-s _yellow-s" data-score = "10">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="half-star-g"></span>
+                                        </div>
+                                        <div class="grey-s">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="level">适合初级学员</p>
+                            </div>
+                            
+                        </div>
+                        <a class="appointment-btn" href="javascript:;">
+                            预约
+                        </a>
+                    </li>
+                    <li>
+                        <div class="tea-info">
+                            <span class="tea-icon">
+                                <img src="<%= imagessrc%>teacher01.png"/>
+                                <span class="mask-img"></span>
+                            </span>
+                            <div class="tea-des">
+                                <p class="tea-name">Sara LI</p>
+                                <div class="score">
+                                    <span class="score-v">评分：10</span>
+                                    <div class="star-box">
+                                        <div class="yellow-s _yellow-s" data-score = "10">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="half-star-g"></span>
+                                        </div>
+                                        <div class="grey-s">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="level">适合初级学员</p>
+                            </div>
+                            
+                        </div>
+                        <a class="appointment-btn-g" href="javascript:;">
+                            预约
+                        </a>
+                    </li>
+                    <li>
+                        <div class="tea-info">
+                            <span class="tea-icon">
+                                <img src="<%= imagessrc%>teacher01.png"/>
+                                <span class="mask-img"></span>
+                            </span>
+                            <div class="tea-des">
+                                <p class="tea-name">Sara LI</p>
+                                <div class="score">
+                                    <span class="score-v">评分：10</span>
+                                    <div class="star-box">
+                                        <div class="yellow-s _yellow-s" data-score = "10">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="half-star-g"></span>
+                                        </div>
+                                        <div class="grey-s">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="level">适合初级学员</p>
+                            </div>
+                            
+                        </div>
+                        <a class="appointment-btn-g" href="javascript:;">
+                            预约
+                        </a>
+                    </li>
+                    <li>
+                        <div class="tea-info">
+                            <span class="tea-icon">
+                                <img src="<%= imagessrc%>teacher01.png"/>
+                                <span class="mask-img"></span>
+                            </span>
+                            <div class="tea-des">
+                                <p class="tea-name">Sara LI</p>
+                                <div class="score">
+                                    <span class="score-v">评分：10</span>
+                                    <div class="star-box">
+                                        <div class="yellow-s _yellow-s" data-score = "10">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="half-star-g"></span>
+                                        </div>
+                                        <div class="grey-s">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="level">适合初级学员</p>
+                            </div>
+                            
+                        </div>
+                        <a class="appointment-btn-g" href="javascript:;">
+                            预约
+                        </a>
+                    </li>
+                    <li>
+                        <div class="tea-info">
+                            <span class="tea-icon">
+                                <img src="<%= imagessrc%>teacher01.png"/>
+                                <span class="mask-img"></span>
+                            </span>
+                            <div class="tea-des">
+                                <p class="tea-name">Sara LI</p>
+                                <div class="score">
+                                    <span class="score-v">评分：10</span>
+                                    <div class="star-box">
+                                        <div class="yellow-s _yellow-s" data-score = "10">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="half-star-g"></span>
+                                        </div>
+                                        <div class="grey-s">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="level">适合初级学员</p>
+                            </div>
+                            
+                        </div>
+                        <a class="appointment-btn-g" href="javascript:;">
+                            预约
+                        </a>
+                    </li>
+                    <li>
+                        <div class="tea-info">
+                            <span class="tea-icon">
+                                <img src="<%= imagessrc%>teacher01.png"/>
+                                <span class="mask-img"></span>
+                            </span>
+                            <div class="tea-des">
+                                <p class="tea-name">Sara LI</p>
+                                <div class="score">
+                                    <span class="score-v">评分：10</span>
+                                    <div class="star-box">
+                                        <div class="yellow-s _yellow-s" data-score = "10">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="half-star-g"></span>
+                                        </div>
+                                        <div class="grey-s">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="level">适合初级学员</p>
+                            </div>
+                            
+                        </div>
+                        <a class="appointment-btn-g" href="javascript:;">
+                            预约
+                        </a>
+                    </li>
+                    <li>
+                        <div class="tea-info">
+                            <span class="tea-icon">
+                                <img src="<%= imagessrc%>teacher01.png"/>
+                                <span class="mask-img"></span>
+                            </span>
+                            <div class="tea-des">
+                                <p class="tea-name">Sara LI</p>
+                                <div class="score">
+                                    <span class="score-v">评分：10</span>
+                                    <div class="star-box">
+                                        <div class="yellow-s _yellow-s" data-score = "10">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="half-star-g"></span>
+                                        </div>
+                                        <div class="grey-s">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="level">适合初级学员</p>
+                            </div>
+                            
+                        </div>
+                        <a class="appointment-btn-g" href="javascript:;">
+                            预约
+                        </a>
+                    </li>
+                    <li>
+                        <div class="tea-info">
+                            <span class="tea-icon">
+                                <img src="<%= imagessrc%>teacher01.png"/>
+                                <span class="mask-img"></span>
+                            </span>
+                            <div class="tea-des">
+                                <p class="tea-name">Sara LI</p>
+                                <div class="score">
+                                    <span class="score-v">评分：10</span>
+                                    <div class="star-box">
+                                        <div class="yellow-s _yellow-s" data-score = "10">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="half-star-g"></span>
+                                        </div>
+                                        <div class="grey-s">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="level">适合初级学员</p>
+                            </div>
+                            
+                        </div>
+                        <a class="appointment-btn-g" href="javascript:;">
+                            预约
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tea-l _tea-l hide" id="tea1">
+                <ul>
+                    <li>
+                        <div class="tea-info">
+                            <span class="tea-icon">
+                                <img src="<%= imagessrc%>teacher01.png"/>
+                                <i>已收藏</i>
+                            </span>
+                            <div class="tea-des">
+                                <p class="tea-name">Sara LI</p>
+                                <div class="score">
+                                    <span class="score-v">评分：81</span>
+                                    <div class="star-box">
+                                        <div class="yellow-s _yellow-s" data-score = "81">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="half-star-g"></span>
+                                        </div>
+                                        <div class="grey-s">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="level">适合初级学员</p>
+                            </div>
+                            
+                        </div>
+                        <a class="appointment-btn" href="javascript:;">
+                            预约
+                        </a>
+                    </li>
+                    <li>
+                        <div class="tea-info">
+                            <span class="tea-icon">
+                                <img src="<%= imagessrc%>teacher01.png"/>
+                                <i>已收藏</i>
+                            </span>
+                            <div class="tea-des">
+                                <p class="tea-name">Sara LI</p>
+                                <div class="score">
+                                    <span class="score-v">评分：81</span>
+                                    <div class="star-box">
+                                        <div class="yellow-s _yellow-s" data-score = "81">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="half-star-g"></span>
+                                        </div>
+                                        <div class="grey-s">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="level">适合初级学员</p>
+                            </div>
+                            
+                        </div>
+                        <a class="appointment-btn" href="javascript:;">
+                            预约
+                        </a>
+                    </li>
+                    <li>
+                        <div class="tea-info">
+                            <span class="tea-icon">
+                                <img src="<%= imagessrc%>teacher01.png"/>
+                                <i>已收藏</i>
+                            </span>
+                            <div class="tea-des">
+                                <p class="tea-name">Sara LI</p>
+                                <div class="score">
+                                    <span class="score-v">评分：81</span>
+                                    <div class="star-box">
+                                        <div class="yellow-s _yellow-s" data-score = "81">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="half-star-g"></span>
+                                        </div>
+                                        <div class="grey-s">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="level">适合初级学员</p>
+                            </div>
+                            
+                        </div>
+                        <a class="appointment-btn" href="javascript:;">
+                            预约
+                        </a>
+                    </li>
+                    <li>
+                        <div class="tea-info">
+                            <span class="tea-icon">
+                                <img src="<%= imagessrc%>teacher01.png"/>
+                                <i>已收藏</i>
+                            </span>
+                            <div class="tea-des">
+                                <p class="tea-name">Sara LI</p>
+                                <div class="score">
+                                    <span class="score-v">评分：81</span>
+                                    <div class="star-box">
+                                        <div class="yellow-s _yellow-s" data-score = "81">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="half-star-g"></span>
+                                        </div>
+                                        <div class="grey-s">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="level">适合初级学员</p>
+                            </div>
+                            
+                        </div>
+                        <a class="appointment-btn" href="javascript:;">
+                            预约
+                        </a>
+                    </li>
+                    <li>
+                        <div class="tea-info">
+                            <span class="tea-icon">
+                                <img src="<%= imagessrc%>teacher01.png"/>
+                                <i>已收藏</i>
+                            </span>
+                            <div class="tea-des">
+                                <p class="tea-name">Sara LI</p>
+                                <div class="score">
+                                    <span class="score-v">评分：81</span>
+                                    <div class="star-box">
+                                        <div class="yellow-s _yellow-s" data-score = "81">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="half-star-g"></span>
+                                        </div>
+                                        <div class="grey-s">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="level">适合初级学员</p>
+                            </div>
+                            
+                        </div>
+                        <a class="appointment-btn" href="javascript:;">
+                            预约
+                        </a>
+                    </li>
+                    <li>
+                        <div class="tea-info">
+                            <span class="tea-icon">
+                                <img src="<%= imagessrc%>teacher01.png"/>
+                                <i>已收藏</i>
+                            </span>
+                            <div class="tea-des">
+                                <p class="tea-name">Sara LI</p>
+                                <div class="score">
+                                    <span class="score-v">评分：81</span>
+                                    <div class="star-box">
+                                        <div class="yellow-s _yellow-s" data-score = "81">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="half-star-g"></span>
+                                        </div>
+                                        <div class="grey-s">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="level">适合初级学员</p>
+                            </div>
+                            
+                        </div>
+                        <a class="appointment-btn" href="javascript:;">
+                            预约
+                        </a>
+                    </li>
+                    <li>
+                        <div class="tea-info">
+                            <span class="tea-icon">
+                                <img src="<%= imagessrc%>teacher01.png"/>
+                                <i>已收藏</i>
+                            </span>
+                            <div class="tea-des">
+                                <p class="tea-name">Sara LI</p>
+                                <div class="score">
+                                    <span class="score-v">评分：81</span>
+                                    <div class="star-box">
+                                        <div class="yellow-s _yellow-s" data-score = "81">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="half-star-g"></span>
+                                        </div>
+                                        <div class="grey-s">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="level">适合初级学员</p>
+                            </div>
+                            
+                        </div>
+                        <a class="appointment-btn" href="javascript:;">
+                            预约
+                        </a>
+                    </li>
+                    <li>
+                        <div class="tea-info">
+                            <span class="tea-icon">
+                                <img src="<%= imagessrc%>teacher01.png"/>
+                                <i>已收藏</i>
+                            </span>
+                            <div class="tea-des">
+                                <p class="tea-name">Sara LI</p>
+                                <div class="score">
+                                    <span class="score-v">评分：81</span>
+                                    <div class="star-box">
+                                        <div class="yellow-s _yellow-s" data-score = "81">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="half-star-g"></span>
+                                        </div>
+                                        <div class="grey-s">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="level">适合初级学员</p>
+                            </div>
+                            
+                        </div>
+                        <a class="appointment-btn" href="javascript:;">
+                            预约
+                        </a>
+                    </li>
+                    <li>
+                        <div class="tea-info">
+                            <span class="tea-icon">
+                                <img src="<%= imagessrc%>teacher01.png"/>
+                                <i>已收藏</i>
+                            </span>
+                            <div class="tea-des">
+                                <p class="tea-name">Sara LI</p>
+                                <div class="score">
+                                    <span class="score-v">评分：81</span>
+                                    <div class="star-box">
+                                        <div class="yellow-s _yellow-s" data-score = "81">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="half-star-g"></span>
+                                        </div>
+                                        <div class="grey-s">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="level">适合初级学员</p>
+                            </div>
+                            
+                        </div>
+                        <a class="appointment-btn" href="javascript:;">
+                            预约
+                        </a>
+                    </li>
+                    <li>
+                        <div class="tea-info">
+                            <span class="tea-icon">
+                                <img src="<%= imagessrc%>teacher01.png"/>
+                                <i>已收藏</i>
+                            </span>
+                            <div class="tea-des">
+                                <p class="tea-name">Sara LI</p>
+                                <div class="score">
+                                    <span class="score-v">评分：81</span>
+                                    <div class="star-box">
+                                        <div class="yellow-s _yellow-s" data-score = "81">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="half-star-g"></span>
+                                        </div>
+                                        <div class="grey-s">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="level">适合初级学员</p>
+                            </div>
+                            
+                        </div>
+                        <a class="appointment-btn" href="javascript:;">
+                            预约
+                        </a>
+                    </li>
+                    <li>
+                        <div class="tea-info">
+                            <span class="tea-icon">
+                                <img src="<%= imagessrc%>teacher01.png"/>
+                                <i>已收藏</i>
+                            </span>
+                            <div class="tea-des">
+                                <p class="tea-name">Sara LI</p>
+                                <div class="score">
+                                    <span class="score-v">评分：81</span>
+                                    <div class="star-box">
+                                        <div class="yellow-s _yellow-s" data-score = "81">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="half-star-g"></span>
+                                        </div>
+                                        <div class="grey-s">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="level">适合初级学员</p>
+                            </div>
+                            
+                        </div>
+                        <a class="appointment-btn" href="javascript:;">
+                            预约
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="tea-l _tea-l hide" id="tea2">
+                <ul>
+                    <li>
+                        <div class="tea-info">
+                            <span class="tea-icon">
+                                <img src="<%= imagessrc%>teacher01.png"/>
+                                <i>已收藏</i>
+                            </span>
+                            <div class="tea-des">
+                                <p class="tea-name">Sara LI</p>
+                                <div class="score">
+                                    <span class="score-v">评分：15</span>
+                                    <div class="star-box">
+                                        <div class="yellow-s _yellow-s" data-score = "15">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="half-star-g"></span>
+                                        </div>
+                                        <div class="grey-s">
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                            <span class="star-g"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="level">适合初级学员</p>
+                            </div>
+                            
+                        </div>
+                        <a class="appointment-btn" href="javascript:;">
+                            预约
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="showtips_layer" id="showTipsLayer">
+        <div class="showtips">
+            <div class="tit">
+                <span>筛选老师</span>
+                <a href="javascript:;" id="sureBtn">
+                    确定
+                </a>
+            </div>
+            <div class="content">
+                <div class="clearfix">
+                    <div class="left-t">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</div>
+                    <div class="right-c" id="sexId">
+                        <span><i></i>男</span>
+                        <span><i></i>女</span>
+                        <span><i class="s-current"></i>不限</span>
+                    </div>
+                </div>
+                <div class="class clearfix">
+                    <div class="left-t">上课方式</div>
+                    <div class="right-c" id="classId">
+                        <span class="class-s"><i  class="s-current"></i>手机/51talk AC</span>
+                        <span><i></i>QQ</span>
+                        <span class="class-s"><i></i>SKype</span>
+                        <span><i></i>不限</span>
+                    </div>
+                </div>
+                <!-- <div class="class clearfix">
+                    <div class="left-t">擅长课程</div>
+                    <div class="right-c">
+                        <a href="javascript:;">青少英语</a>
+                        <a href="javascript:;">新概念英语</a>
+                        <a href="javascript:;">不限</a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</body>
+<!--公共尾部结束-->
+<script id="seajsnode" src="<%= jssrc%>"></script>
+</html>

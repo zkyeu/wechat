@@ -1,0 +1,64 @@
+<% include ../common/top_b2s_n.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>Inviting_friends.css">
+</head>
+<body data-init="Inviting_friends" class="Inviting_friends">
+    <img class="top_image" src="<%= imagessrc%>Inviting_friends_1.png">
+    <div class="Inviting_mes Inviting_mes_1">
+        <p class="title">每邀请一位好友购买1对1外教全程托管班可获得50元京东卡奖励，邀请越多奖励越多。</p>
+        <P class="share_btn">分享超值课程给好友</P>
+        <P class="tips">被邀请好友可享受148元的课程优惠价格</P>
+    </div>
+    <div class="body_box">
+        <div class="Inviting_mes ">
+            <p class="title_2">活动规则</p>
+            <P class="time">活动时间：6月1日~6月30日</P>
+            <P class="time">奖励发放：奖励将于7月初在微信群中由中教老师发放</P>
+            <p class="title_3">我的邀请</p>
+            <p class="has_invent">您已邀请2位好友购买成功</p>
+            <ul>
+                <li class="cfix"> 
+                    <img src="<%= imagessrc%>Inviting_friends_1.png">
+                    <P class="name">aaa</P>
+                    <P class="show_day">5月10日 17:05</P>
+                </li>
+                 <li class="cfix"> 
+                    <img src="<%= imagessrc%>Inviting_friends_1.png">
+                    <P class="name">aaa</P>
+                    <P class="show_day">5月10日 17:05</P>
+                </li>
+            </ul>
+
+            <!-- 还没邀请 -->
+            <p class="not_invent">您还没有成功邀请过好友购买，继续努力噢～</p>
+        </div>
+    </div>
+    
+<div class="share_pop disnone">
+    <img class="share_img" src="<%= imagessrc%>Inviting_friends_2.png">
+    <P><img src="<%= imagessrc%>Inviting_friends_3.png"></P>
+</div>
+<div class="app_share disnone">
+    <div class="dialog-share-con js_share">
+        <a class="shareBtn" href=""><img src="<%= imagessrc%>app_vacation-06.png" alt=""><i>微信好友</i></a>
+        <a class="shareBtn" href=""><img src="<%= imagessrc%>app_vacation-07.png" alt=""><i>朋友圈</i></a>
+    </div>
+</div>
+
+<!-- 微信为1  app为0-->
+<input id="isWeixin" value="1" type="hidden">
+<!-- 判断安卓版本  1版本 0 低版本 -->
+<input type="hidden" value="1" id="androidShareVersion"/>
+
+<!-- loading -->
+<div id="fontSizeLoding">
+    <img src="<%= imagessrc%>eff_loading.gif">
+</div>
+<script type="text/javascript">
+window.onload = function(){
+    document.documentElement.style.fontSize = document.body.clientWidth / 7.5 + "px";
+    document.getElementById("fontSizeLoding").style.display = "none";
+}
+</script>
+</body>
+<!--公共尾部结束-->
+<% include ../common/bottom.ejs %>

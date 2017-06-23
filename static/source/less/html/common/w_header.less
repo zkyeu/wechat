@@ -1,0 +1,495 @@
+.centerMth{
+  width:@docWidth;
+  margin:0px auto;
+}
+.iconImg{
+ background: url("@{imgPath}icon.png") no-repeat;
+ display: inline-block;
+}
+//登录注册模块
+.sign{
+ .absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ z-index: 1;
+  //登录注册模块
+  .m-main{
+    background: #0d0b00;
+    position: relative;
+    top:65px;
+    float: right;
+    width: 270px;
+    height: 340px;
+    transform-style:preserve-3d;
+    transition:0.4s all ease-out;
+    transform:perspective(1000px) rotateY(0deg);
+    z-index: 999;
+    &.turn{
+      transform:perspective(1000px) rotateY(180deg);
+    }
+    .m-reg{
+      position: absolute;
+      left: 0;top:0;
+      height: 340px;
+      background: #332a00;
+      transform: translateZ(2px);
+      z-index: 1000;
+      .m-tab{
+        width: 270px;
+        li{
+          float: left;
+          width: 50%;
+          height: 34px;
+          line-height: 34px;
+          color:#908f8d;
+          font-size: 16px;
+          text-align: center;
+          cursor: pointer;
+          background: #0d0b00;
+          &.crt{
+            background: #332a00;
+            color:#e0e0dd;
+            font-size: 18px;
+            cursor: default;
+          }
+        }
+      }
+      .m-ipts{
+        padding: 20px 20px 0 20px;
+        li{
+          margin-bottom: 10px;
+          border: 1px solid #e7e7e7;
+          background:#fff url("@{imgPath}sp_login.png") no-repeat;
+          &.icon1{
+            background-position: 9px 11px;
+            padding-left: 22px;
+          }
+          &.icon2{
+            background-position: 9px -19px;
+            padding-left: 22px;
+          }
+          &.icon3{
+            background-position: 9px -49px;
+            padding-left: 22px;
+          }
+          &.icon4{
+            background-position: 9px -79px;
+            padding-left: 22px;
+          }
+          &.focus{
+            border: 1px solid #ffa800;
+          }
+        }
+        input{
+          width: 196px;
+          height: 34px;
+          line-height: 34px;
+          padding-left: 10px;
+        }
+      }
+      .u-reg-btn{
+        color:#fff;
+        background: #ff3434;
+        text-align: center;
+        width: 230px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        border-radius: 3px;
+        cursor: pointer;
+        margin: 5px 20px 0px;
+      }
+      .u-txt{
+        color:#fff;
+        font-size: 13px;
+        text-align: center;
+        margin:14px 0 26px;
+        em{
+          color:#f56361;
+        }
+      }
+    }
+    .m-log{
+      position: absolute;
+      left: 0;top:0;
+      height: 340px;
+      background: #332a00;
+      transform: scaleX(-1) translateZ(-2px);
+      .m-tab{
+        width: 270px;
+        li{
+          float: left;
+          width: 50%;
+          height: 34px;
+          line-height: 34px;
+          color:#908f8d;
+          font-size: 16px;
+          text-align: center;
+          cursor: pointer;
+          background: #0d0b00;
+          &.crt{
+            background: #332a00;
+            color:#e0e0dd;
+            font-size: 18px;
+            cursor: default;
+          }
+        }
+      }
+      .m-ipts{
+        padding: 20px 20px 0 20px;
+        li{
+          background:#fff url("@{imgPath}sp_login.png") no-repeat;
+          margin-bottom: 10px;
+          border: 1px solid #e7e7e7;
+          &.icon1{
+            background-position: 9px 11px;
+            padding-left: 22px;
+          }
+          &.icon2{
+            background-position: 9px -19px;
+            padding-left: 22px;
+          }
+        }
+        input{
+          width: 196px;
+          height: 34px;
+          line-height: 34px;
+          padding-left: 10px;
+        }
+      }
+      .m-safe{
+        margin: 20px 20px;
+        .u-auto{
+          float: left;
+          color:#ebeae9;
+          vertical-align: middle;
+          line-height: 13px;
+          input{
+            outline: rgb(109, 109, 109) none 0px;
+            padding: 0;
+            margin: 0;
+          }
+        }
+        .u-forget a{
+          float: right;
+          color:#b2b2b2;
+        }
+      }
+      .u-log-btn{
+        color:#fff;
+        background: #ff3434;
+        text-align: center;
+        width: 230px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        border-radius: 3px;
+        cursor: pointer;
+        margin: 0 20px;
+      }
+      .m-other{
+        padding: 20px;
+        dt{
+          padding: 14px 0;
+          color:#fff;
+          border-top: 1px dashed #999680;
+        }
+        dd{
+          background: url("@{imgPath}sp_login.png") no-repeat;
+          width: 30px;
+          height: 30px;
+          float: left;
+          margin-right: 16px;
+        }
+        a{
+          display: block;
+          width: 30px;
+          height: 30px;
+        }
+        .icon-sina{
+          background-position: 0 -119px;
+        }
+        .icon-qq{
+          background-position: 0 -159px;
+        }
+      }
+    }
+  }
+  .m-online{
+    background: #332a00;
+    position: relative;
+    top:65px;
+    float: right;
+    width: 230px;
+    z-index: 999;
+    padding: 20px;
+    .u-hd{
+      color:#f5f5f4;
+      font-size: 16px;
+    }
+    .m-group{
+      padding-top: 20px;
+      color:#b2b2b2;
+      .u-txt{
+        margin-bottom: 8px;
+      }
+      .f-clo{
+        color:#ffa800;
+      }
+    }
+    .u-btn{
+      display: block;
+      height: 32px;
+      line-height: 32px;
+      width: 100%;
+      background: #ffa800;
+      text-align: center;
+      font-size: 14px;
+      color:#fff;
+      border-radius: 3px;
+    }
+    .u-ft{
+      margin-top: 26px;
+      padding-top: 14px;
+      border-top: 1px dashed #999680;
+    }
+    .u-btn-2{
+      display: block;
+      height: 40px;
+      line-height: 40px;
+      width: 100%;
+      background: #ff3434;
+      text-align: center;
+      font-size: 18px;
+      color:#fff5f5;
+      border-radius: 3px;
+    }
+
+  }
+}
+// 切换
+.sign-cha{
+    .absolute;
+    top: 200px;
+    left: 0;
+    right: 0;
+    z-index: 998;
+    .centerMth{
+      width: 1100px;
+      .change{
+        .lt{
+          float: left;
+          width: 35px;
+          i{
+            .iconImg;
+            width: 35px;
+            height: 65px;
+            background-position: -110px -230px;
+          }
+          &:hover{
+            i{
+              background-position: -75px -230px;
+            }
+          }
+        }
+
+        .rt{
+          float: right;
+          width: 35px;
+          i{
+           .iconImg;
+           width: 35px;
+           height: 65px;
+           background-position: -35px -230px;
+          }
+          &:hover{
+            i{
+              background-position: 0 -230px;
+            }
+          }
+        }
+      }
+      .video_play{
+        .absolute;
+        top: -10px;
+        left: 50%;
+        margin-left: -45px;
+        .video{
+          i{
+            .iconImg;
+            width: 90px;
+            height: 90px;
+            background-position: -106px -127px;
+          }
+          &:hover{
+            i{
+              background-position: -4px -127px;
+            }
+          }
+        }
+      }
+    }
+}
+//顶部
+.header{
+  .centerMth;
+  height: 72px;
+  padding-top: 8px;
+  .hr-lt{
+    float: left;
+    i{
+      .iconImg;
+      float: left;
+      width: 150px;
+      height: 60px;
+      background-position: -7px 0px;
+    }
+    b{
+      float: left;
+      height: 41px;
+      line-height: 1;
+      border-left: 1px #bfbfbf solid;
+      margin:13px 0 0 13px;
+      padding-left: 13px;
+      .ft15;
+      span{
+        display: block;
+        margin: 0 0 9px 0;
+      }
+    }
+  }
+  .hr-rt{
+    float: right;
+    .relative;
+    .rt-top{
+      .tar;
+      margin:11px 0 5px 0;
+      a{
+        margin-left: 15px;
+      }
+    }
+    span{
+      float: right;
+      .ft19;
+      i{
+       .iconImg;
+        float: left;
+        width: 16px;
+        height: 20px;
+        background-position: -189px -14px;
+        margin-right: 6px;
+      }
+    }
+    .weibo,.weixin{
+      .absolute;
+      z-index: 3;
+      right: -48px;
+      top:-21px;
+      a{
+        display: block;
+        height: 51px;
+      }
+    }
+    .weibo{
+      right: -1px;
+      top: 30px;
+      .iconImg;
+      width: 120px;
+      height: 51px;
+      line-height: 50px;
+      .tac;
+      .ft14;
+      color: @hoverColor;
+      background-position: -210px -140px;
+    }
+  }
+}
+// 导航
+.nav{
+  background: #332a00;
+  height: 40px;
+  .absolute;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  .fm-opacity(95);
+  .menu{
+    .centerMth;
+    .ft16;
+    color: @bgColor;
+    height: 40px;
+    li{
+      float: left;
+      .relative;
+      width: 125px;
+      .tac;
+      height: 40px;
+      line-height: 40px;
+      a{
+        display: block;
+        color: @bgColor;
+       &:hover{
+        background: @hoverColor;
+       }
+      }
+      .news{
+        .absolute;
+        top:-10px;
+        *top:0;
+        left: 105px;
+      }
+    }
+    .menu-on{
+      background: @hoverColor;
+    }
+  }
+}
+//轮播图片
+.play{
+  .relative;
+  overflow: hidden;
+  .pic{
+    width: 100%;
+    height: 520px;
+    li{
+      z-index: 0;
+      display: block;
+      width: 100%;
+      height: 520px;
+      .fm-opacity(0);
+      .absolute;
+      top: 0;
+      .p-img{
+        .absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -960px;
+      }
+    }
+    li.first{
+      z-index: 1;
+      .fm-opacity(100);
+    }
+  }
+  .switch{
+    .absolute;
+    top: 450px;
+    text-align: center;
+    left: 50%;
+    margin-left: -60px;
+    z-index: 999;
+    li{
+      float: left;
+      margin-left: 5px;
+      .iconImg;
+      width: 20px;
+      height: 20px;
+      background-position: -16px -100px;
+      .f-csp;
+    }
+    .crt{
+      background-position: -16px -70px;
+    }
+  }
+}

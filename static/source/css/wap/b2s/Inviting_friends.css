@@ -1,0 +1,198 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: 
+ */
+body {
+  font-family: Arial, "Microsoft YaHei";
+}
+input,
+button,
+select,
+textarea,
+dl,
+dd,
+dt {
+  font-family: Arial, "Microsoft YaHei";
+}
+#fontSizeLoding {
+  width: 100%;
+  min-height: 100%;
+  max-width: 640px;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+#fontSizeLoding img {
+  width: 30px;
+  height: 30px;
+  margin-left: -15px;
+  margin-top: -15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.Inviting_friends {
+  background-color: #f9dfb9;
+  padding: 4.8rem 0rem 0.2rem 0rem;
+  height: auto;
+  position: relative;
+}
+.Inviting_friends .top_image {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.Inviting_friends .Inviting_mes_1 {
+  margin-bottom: 0.2rem;
+  position: absolute;
+  left: 0.2rem;
+  right: 0.2rem;
+}
+.Inviting_friends .body_box {
+  padding: 4rem 0.2rem 0;
+}
+.Inviting_friends .Inviting_mes {
+  border-radius: 6px;
+  background: #fff;
+  padding: 0.55rem 0.45rem 0.45rem 0.45rem;
+}
+.Inviting_friends .Inviting_mes .title {
+  font-size: 0.3rem;
+  color: #37363b;
+}
+.Inviting_friends .Inviting_mes .share_btn {
+  font-size: 0.32rem;
+  text-align: center;
+  color: #fff;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  background: #27beff;
+  border-radius: 999px;
+  margin: 0.45rem auto 0.2rem;
+}
+.Inviting_friends .Inviting_mes .tips {
+  text-align: center;
+  color: #ffa72b;
+  font-size: 0.3rem;
+}
+.Inviting_friends .Inviting_mes .title_2 {
+  text-align: center;
+  color: #27beff;
+  font-size: 0.4rem;
+  padding-bottom: 0.3rem;
+}
+.Inviting_friends .Inviting_mes .time {
+  font-size: 0.28rem;
+  color: #333333;
+  padding-left: 0.3rem;
+  position: relative;
+}
+.Inviting_friends .Inviting_mes .time:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0.12rem;
+  width: 0.16rem;
+  height: 0.17rem;
+  background: url(../../../images/wap/b2s/process-class-3.png?v=Rt4ORR5IY4WgjjUhmFcFKw%3D%3D) no-repeat;
+  background-size: 0.16rem 0.17rem;
+}
+.Inviting_friends .Inviting_mes .title_3 {
+  text-align: center;
+  color: #27beff;
+  font-size: 0.4rem;
+  padding-bottom: 0.3rem;
+  padding-top: 0.6rem;
+}
+.Inviting_friends .Inviting_mes .has_invent {
+  text-align: center;
+  font-size: 0.28rem;
+  color: #333;
+}
+.Inviting_friends .Inviting_mes ul {
+  padding-top: 0.4rem;
+}
+.Inviting_friends .Inviting_mes ul li {
+  padding-bottom: 0.3rem;
+}
+.Inviting_friends .Inviting_mes ul li img {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 999px;
+  float: left;
+}
+.Inviting_friends .Inviting_mes ul li .name {
+  float: left;
+  line-height: 0.8rem;
+  color: #37363b;
+  font-size: 0.28rem;
+  padding-left: 0.2rem;
+}
+.Inviting_friends .Inviting_mes ul li .show_day {
+  font-size: 0.28rem;
+  color: #37363b;
+  float: right;
+  line-height: 0.8rem;
+}
+.Inviting_friends .Inviting_mes .not_invent {
+  color: #999999;
+  font-size: 0.28rem;
+  text-align: center;
+  padding-bottom: 0.4rem;
+}
+.share_pop {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  max-width: 640px;
+  top: 0;
+}
+.share_pop .share_img {
+  width: 7.11rem;
+  height: 4.82rem;
+  margin-top: 1.4rem;
+}
+.share_pop p {
+  width: 3.14rem;
+  height: 0.97rem;
+  margin: 0.4rem auto 0;
+}
+.share_pop p img {
+  width: 100%;
+}
+.disnone {
+  display: none;
+}
+.app_share {
+  position: fixed;
+  bottom: 0;
+  max-width: 640px;
+  background-color: #fff;
+  width: 100%;
+  padding-bottom: 0.2rem;
+}
+.app_share .dialog-share-con {
+  margin-top: 0.3rem;
+  text-align: center;
+}
+.app_share .dialog-share-con > a {
+  display: inline-block;
+  width: 2.1rem;
+  font-size: 0.24rem;
+  color: #999999;
+  text-align: center;
+}
+.app_share .dialog-share-con > a img {
+  width: 0.9rem;
+  height: 0.9rem;
+  display: inline-block;
+  margin-bottom: 0.2rem;
+}
+.app_share .dialog-share-con > a i {
+  display: block;
+  line-height: 0.24rem;
+}

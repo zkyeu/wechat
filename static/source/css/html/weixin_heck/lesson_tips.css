@@ -1,0 +1,129 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: 
+ */
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+[v-cloak] {
+  visibility: hidden;
+}
+.project_list {
+  float: left;
+  width: 119px;
+  border-right: 1px solid #dcdcdc;
+  height: 100%;
+  color: #646464;
+  text-align: center;
+}
+.project_list h4 {
+  height: 50px;
+  line-height: 50px;
+  font-size: 14px;
+  border-bottom: 1px solid #e3e2dd;
+}
+.project_list ul li {
+  position: relative;
+  line-height: 40px;
+  font-size: 14px;
+  border-left: 10px solid #fff;
+  color: #696969;
+  border-bottom: #dcdcdc solid 1px;
+  cursor: pointer;
+}
+.project_list ul li:hover {
+  color: #252525;
+  background: #f0efee;
+  border-left: 10px solid #fcc800;
+}
+.project_list ul li.active {
+  color: #252525;
+  background: #f0f0f0;
+  border-left: 10px solid #fcc800;
+}
+.lesson-tips {
+  position: fixed;
+  left: 140px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  color: #6e6e6e;
+  font-size: 14px;
+}
+.lesson-tips dt {
+  position: absolute;
+  height: 120px;
+  width: 100%;
+  left: 0;
+  top: 20px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.lesson-tips dt div {
+  margin-right: 80px;
+  height: 120px;
+}
+.lesson-tips dt div textarea {
+  border: 1px solid #bbb;
+  resize: none;
+  border-radius: 8px;
+  padding: 6px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.lesson-tips dt a {
+  position: absolute;
+  right: 33px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.lesson-tips dd {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 160px;
+  bottom: 20px;
+}
+.lesson-tips dd ul {
+  border: 1px solid #bbb;
+}
+.lesson-tips dd ul li {
+  overflow: hidden;
+  position: relative;
+}
+.lesson-tips dd ul li p {
+  word-break: break-word;
+  text-indent: 28px;
+  margin-right: 80px;
+  border-right: 1px solid #bbb;
+  padding: 8px;
+}
+.lesson-tips dd ul li a {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 0 10px;
+}
+.lesson-tips dd ul li:not(:nth-last-child(1)) {
+  border-bottom: 1px solid #bbb;
+}
+a.btn {
+  cursor: pointer;
+  background: #fcc800;
+  border-radius: 999px;
+  display: inline-block;
+  padding: 5px 15px;
+  line-height: 22px;
+  color: #252525;
+}
+a.btn.dis {
+  cursor: default;
+  background-color: #C9C9C9;
+}

@@ -1,0 +1,32 @@
+<% include ../common/top_b2s.ejs %>
+<link rel="stylesheet" type="text/css" href="<%= csslinkb2s %>lesson_tips.css">
+</head>
+<body data-init="lessonTips" v-cloak v-show="inited">
+<div class="project_list">
+    <h4>课前提醒</h4>
+    <ul>
+        <li v-for="x in types" :class="{'active' : x.type == curType}" @click="changeType(x)">
+            {{ x.name }}
+        </li>
+    </ul>
+</div>
+
+<dl class="lesson-tips">
+    <dt>
+        <div>
+            <textarea v-model="text"></textarea>
+        </div>
+        <a href="javascript:void(0);" class="btn" :class="{'dis' : _text == ''}" @click="add">添加</a>
+    </dt>
+    <dd>
+        <ul>
+            <li v-for="x in curList">
+                <p>{{ x.template_doc }}</p>
+                <a href="javascript:void(0);" class="btn" @click="del(x)">删除</a>
+            </li>
+        </ul>
+    </dd>
+</dl>
+<% include ../common/bottom.ejs %>
+</body>
+

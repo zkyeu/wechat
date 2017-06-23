@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="description"  content="登陆51Talk">
+    <title>登陆51Talk</title>
+    <script src="../../../js/wap/project/tmall_landing_43365/flexible.debug.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../css/wap/tmall_landing_43365/wap.css">
+</head>
+
+<body class="full">
+<div class="wap-main" id="container"  data-init="login">
+    <div class="title">
+        <img src="<%= imagessrc %>logo.png" >
+    </div>
+    <div class="banner"></div>
+    <!--<div class="content"></div>-->
+
+    <section class="content content-bg" id="content">
+        <p class="title">加入美国小学</p>
+        <div class="form">
+            <input id="register_from" type="hidden" value="4275297" name="register_from">
+            <ul>
+                <li>
+                    <label>手机号</label>
+                    <input type="text" id="reg1_tel" >
+                </li>
+                <li class="error-li error-mode tel_mode">
+                    <label></label>
+                    <div class="error">
+                        <div class="icon"></div>
+                        <span>您的手机号已注册！</span>
+                    </div>
+                </li>
+                <li>
+                    <label>图片验证码</label>
+                    <input type="text" id="authCode" class="code">
+                    <img   id="verifycode" src="http://www.51talk.com/passport/authCode" height="100%" width="100%" onclick="this.src='http://www.51talk.com/passport/authCode'+'?a'+'='+new Date().getTime()" alt="单击更换验证码">
+                </li>
+                <li>
+                    <label>验证码</label>
+                    <input type="text" id="tel_code" class="code">
+                    <button type="button" class="get_code">获取验证码</button>
+                </li>
+
+                <li class="error-li error-mode all_mode">
+                    <label></label>
+                    <div class="error">
+                        <div class="icon"></div>
+                        <span>验证码错误！</span>
+                    </div>
+                </li>
+                
+                
+
+               
+                <li><button id="register" class="opebtn">注册</button></li>
+            </ul>
+            <div class=" link">
+                <p class="find-psd "><a>已注册的用户点此登录</a></p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="showtips_layer">
+    <div class="showtips">
+        <span></span>
+        <em id="closeLayer">&times;</em>
+    </div>
+</div>
+</body>
+
+<!--公共尾部结束-->
+<script id="s eajsnode" src="<%= jssrc%>"></script>
+</html>

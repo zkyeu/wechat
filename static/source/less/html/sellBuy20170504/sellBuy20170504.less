@@ -1,0 +1,164 @@
+@import "../common/base.less";
+@imgPath: "../../../images/html/sellBuy20170504";
+html,body{
+	background :#efefef;
+}
+.sell{
+	width: 1000px;
+	margin:20px auto 0;
+	padding-bottom:196px;
+	background :#fff;
+	.s_tip{
+		color:#834400;
+		font-size: 13px;
+		height:38px;
+		line-height: 38px;
+		border:1px solid rgba(255,130,0,0.3);
+		background: #f3ead3;
+		text-indent: 12px;
+		position: relative;
+		i{
+			display: block;
+			width: 13px;
+			height:12px;
+			background:url("@{imgPath}/close.png") no-repeat left top;
+			position: absolute;
+			top:50%;
+			margin-top:-6px;
+			right:12px;
+			cursor: pointer;
+		}
+	}
+	.s_steps{
+		height:104px;
+		background:url("@{imgPath}/steps.png") center 32px no-repeat;
+	}
+	.sellBuy{
+		//width: 970px;
+		margin:0 auto;
+		padding:0 25px;
+		.fl{
+					float: left;
+			}
+		.main{
+			//width: 970px;
+			background:#f7f7f7;
+			padding:20px;
+			.clearfix:after{
+				clear: both;
+				display: table;
+				content: "";
+			}
+			.tit{
+				font-size: 15px;
+				color:#1e1e1e;
+			}
+			.class{
+				font-size: 13px;
+				margin-top:10px;
+				span{
+					color:#999;
+					display: inline-block;
+					height:30px;
+					line-height: 30px;
+				}
+				.seleter{
+					color:#1e1e1e;
+					width: 160px;
+					height:30px;
+					line-height: 30px;
+					text-indent: 5px;
+					border:1px solid #ccc;
+					background: #fcfcfc;
+					margin-right: 15px;
+					position: relative;
+					cursor: pointer;
+					i{
+						display: inline-block;
+						width: 9px;
+						height: 5px;
+						background: url("@{imgPath}/sprite.png") no-repeat left -16px;
+						position: absolute;
+						right:10px;
+						top:50%;
+						margin-top:-2.5px;
+					}
+					.c_teach,.f_teach{
+						position: absolute;
+						z-index: 66;
+						top:30px;
+						left:-1px;
+						border:1px solid #ccc;
+						width: 100%;
+						display: none;
+						.list{
+							width: 100%;
+							color:#1e1e1e;
+							height: 30px;
+							line-height: 30px;
+							text-indent: 5px;
+							background: #fcfcfc;
+							cursor: pointer;
+							&:hover{
+								color:#ff8e19;
+							}
+						}
+					}
+				}
+				.ri{
+					color:#1e1e1e;
+					font-size: 13px;
+				}
+				.dec{
+					margin:0 8px 0 4px;
+					color:#999;
+				}
+				.lt{
+					margin-left:65px;
+				}
+			}
+			.timeIntro{
+				width: 450px;
+			}
+			.classTntro{
+				display: inline-block;
+				color:#1e1e1e;
+				font-size: 15px;
+				margin-top:26px;
+				position: relative;
+				i{
+					display:inline-block;
+					width: 13px;
+					height:12px;
+					background: url("@{imgPath}/sprite.png") no-repeat left top;
+					position: absolute;
+					top:-2px;
+					right: -18px;
+				}
+			}
+		}
+		.footer{
+			margin-top:30px;
+			.subBtn{
+				display: block;
+				width: 180px;
+				height:40px;
+				background:#ff8e19;
+				border-radius: 4px;
+				font-size: 18px;
+				color:#fff;
+				line-height: 40px;
+				text-align: center;	
+			}
+			span{
+				height:40px;
+				line-height: 40px;
+				font-size: 13px;
+				margin-left: 10px;
+				i{
+					color:#ff8e19;
+				}
+			}
+		}
+	}
+}

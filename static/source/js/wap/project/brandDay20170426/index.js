@@ -1,0 +1,36 @@
+define(function(){
+   $('.video_adult_course').on("click",function(){
+      $(".mask_adult_course,.videomodule_adult_course,.close").show();
+      $(".ccH5PlayBtn").click();
+   });
+   $('.adult_teaching').on("click",function(){
+      $(".mask_adult_teaching,.videomodule_adult_teaching,.close").show();
+      $(".videomodule_adult_teaching").find(".ccH5PlayBtn").click();
+   });
+    $('.adult_exchange').on("click",function(){
+      $(".mask_adult_teaching,.videomodule_adult_exchange,.close").show();
+      $(".videomodule_adult_exchange").find(".ccH5PlayBtn").click();
+   });
+
+   $('.us_course1').on("click",function(){
+      $(".mask_us_course,.videomodule_us_course,.close").show();
+      $(".ccH5PlayBtn").click();
+   });
+    $('.us_teaching').on("click",function(){
+      $(".mask_us_teaching,.videomodule_us_teaching,.close").show();
+      $(".ccH5PlayBtn").click();
+   });
+    $('.junior_teaching').on("click",function(){
+      $(".mask_junior_teaching,.videomodule_junior_teaching,.close").show();
+      $(".ccH5PlayBtn").click();
+   });
+    $('.junior_course').on("click",function(){
+      $(".mask_junior_course,.mask_junior_course,.close").show();
+      $(".ccH5PlayBtn").click();
+   });
+    $(".close").on("click",function(){
+        $(".mask,.videomodule,.close").hide();
+        $(".ccH5TogglePause").click();
+    });
+
+});

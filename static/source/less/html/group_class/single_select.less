@@ -1,0 +1,50 @@
+.singleSelect(@wrongx, @wrongy, @rightx, @righty) {
+	ul{
+		margin:30px 0 0 20px;
+		counter-reset:li;
+	}
+	li{
+		float:left;
+		position:relative;
+		width:140px;
+		height:120px;
+		margin-right:22px;
+		border:@borderColor solid 2px;
+		background:url('@{imgUrl}first_grade.png') 0 0 no-repeat;
+		&::after{
+			position:absolute;
+			left:-15px;
+			top:-10px;
+			display:inline-block;
+			width:30px;
+			height:30px;
+			line-height:30px;
+			background:@afterColor;
+			color:#fff;
+			font-size:18px;
+			border-radius:50%;
+			content:counter(li,upper-latin);
+			counter-increment: li;
+			text-align:center;
+		}
+		&:hover{
+			margin-top:-3px;
+		}
+	}
+	.current{
+		margin-top:-3px;
+		border:#ea7118 solid 2px;
+		&::after{
+			background:#ea7118;
+		}
+		&:hover{
+			margin-top:-3px;
+		}
+	}
+	.wrong{
+		background-position:@wrongx @wrongy;
+	}
+	.right{
+		background-position:@rightx @righty;
+	}
+}

@@ -1,0 +1,347 @@
+// 图片path
+@import "modules/b2s_path.less";
+.tea-info-content{
+    width: 100%;
+    height:auto;
+    padding-bottom: 10px;
+    background: #2b98e2 url("@{imgMpath}tea_info_bg.png") center 168px no-repeat;
+    .tea-info{
+        width:1000px;
+        margin:0 auto;
+        padding-top:40px;
+        .project-box{
+            margin-bottom:40px;
+            .duties-input{
+                width: 155px;
+                height:27px;
+                border:1px solid #fff;
+                border-radius:4px;
+                padding-left:10px;
+                background-color:#fff;
+                input{
+                    line-height: 25px;
+                }
+            }
+            .border-s{
+                border:1px solid #ff5400;
+                position: relative;
+            }
+            .tit-box{
+                float:left;
+                width:100px;
+                color:#fff;
+                font-size: 16px;
+            }
+            .info-box{
+                float:left;
+                .school-choice{
+                    cursor:pointer;
+                    float:left;
+                    color:#fff;
+                    display: block;
+                    width:120px;
+                    height:28px;
+                    background-color:#66cc33;
+                    text-align: center;
+                    line-height: 28px;
+                    border-radius: 4px;
+                }
+                a{
+                    height:28px;
+                    color:#323232;
+                    line-height: 30px;
+                    display:inline-block;
+                    background: #fff;
+                    border-radius: 20px;
+                    margin-right: 5px;
+                    text-align: center;
+                }
+                .current{
+                    background-color:#ff9b29;
+                    color:#fff;
+                }
+                .grade{
+                    padding-left:30px;
+                    padding-right:30px;
+                }
+                .class-n{
+                    margin-bottom: 20px;
+                    width:60px;
+                    text-align: center;
+
+                }
+            }
+            .duties-box{
+                a{
+                    width:100px;
+                }
+
+            }
+            .class-box{
+                width:685px;
+            }
+            .code-info{
+                float:left;
+                a,span{
+                    display:block;
+                    font-size: 14px;
+                    height:28px;
+                    line-height: 28px;
+                    margin-left:10px;
+                }
+                a{
+                    color:#fff;
+                    text-decoration: underline;
+                }
+                span{
+                    color:#006cb5;
+                }
+            }
+            .upload-des{
+                font-size: 14px;
+                color:#fff;
+                float:left;
+                height:28px;
+                line-height: 28px;
+                margin-left:10px;
+                a{
+                    color:#fcff00;
+                    &:hover{
+                        color:#ffe100;
+                    }
+                }
+            }
+            .error-s{
+                width:15px;
+                height:15px;
+                position: absolute;
+                right: 5px;
+                top: 5px;
+                background: url("@{imgMpath}tea_close.png") no-repeat;
+            }
+            .error-box{
+                color:#fff;
+                float:left;
+                border-radius: 4px;
+                height:28px;
+                line-height: 28px;
+                padding-right:10px;
+                text-align: center;
+                padding-left: 32px;
+                margin-left:10px;
+                background:#1482cd url("@{imgMpath}tea_close.png") 10px 6px no-repeat;
+            }
+            .error{
+                background:#1482cd;
+                padding-left:10px;
+            }
+        }
+        
+    }
+    .btn-box{
+        width:180px;
+        height:40px;
+        margin:70px auto 0;
+        a{
+            width:100%;
+            height:100%;
+            display: block;
+            color:#fff;
+            background-color:#66cc33;
+            border-radius: 4px;
+            text-align: center;
+            line-height: 40px;
+            font-size: 16px;
+            &:hover{
+                background-color:#53bb1f;
+            }
+        }
+
+    }
+    .hide{
+        display: none!important;
+    }
+    #filelist{
+        margin-bottom:30px;
+    }
+
+} 
+.m-schoolx{
+    display: none;
+    position: fixed;
+    _position: absolute;
+    top: 0; right: 0;
+    bottom: 0; left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    _height: ~'expression(eval(document.documentElement.clientHeight+document.documentElement.scrollTop))';
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    background-color: rgba(0, 0, 0, 0.30);
+    .content{
+        width: 610px;
+        height: 460px;
+        position: absolute;
+        left: 50%;
+        top:50%;
+        background-color: #fff;
+        margin-left: -305px;
+        margin-top: -230px;
+        .u-title{
+            position: relative;
+            height: 50px;
+            line-height: 50px;
+            background-color: #fdbd3a;
+            font-size: 18px;
+            padding-left: 20px;
+            color: #fff;
+            margin-bottom: 30px;
+            a{
+                position: absolute;
+                width: 18px;
+                height: 18px;
+                background: url("@{imgMpath}ten_icon.png") -9px -262px no-repeat;
+                right: 20px;
+                top:16px;
+            }
+        }
+        .m-school-form{
+            padding-left: 30px;
+        }
+        .address{
+            height: 32px;
+            margin-bottom: 35px;
+            label{
+                float: left;
+                line-height: 32px;
+            }
+            .sel{
+                float: left;
+                position: relative;
+                width: 138px;
+                height: 30px;
+                border: 1px solid #cfe0f3;
+                border-radius: 2px;
+                margin-left: 20px;
+                h4{
+                    font-size: 14px;
+                    color: #9aafc7;
+                    line-height: 30px;
+                    padding-left: 10px;
+                    cursor: pointer;
+                }
+                .selIcon{
+                  position: absolute;
+                  top: 12px;
+                  right: 10px;
+                  width: 13px;
+                  height: 8px;
+                  background-position:  -271px -209px; 
+                }
+                .open{
+                    background-position:  -271px -240px;
+                }
+                .list{
+                    display: none;
+                    border: 1px solid #cfe0f3;
+                    width: 138px;
+                    height: 247px;
+                    overflow-x:hidden; 
+                    overflow-y: auto;
+                    background: #fff;
+                    z-index: 999;
+                    position: absolute;
+                    left: -1px;
+                    top: 30px;
+                    li{
+                        height: 30px;
+                        line-height: 30px;
+                        width: 130px;
+                        border-bottom: 1px solid #e8f2fd;
+                        padding-left: 8px;
+                        overflow: hidden;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .schools{
+            width: 552px;
+            .labels{
+                font-size: 14px;
+                border-bottom: 1px solid #f2ac05;
+                margin-bottom: 20px;
+                label{
+                    float: left;
+                    line-height: 32px;
+                    margin-right: 20px;
+                }
+                span{
+                    float: left;
+                    margin-right: 13px;
+                    line-height: 32px;
+                    cursor: pointer;
+                    padding-bottom: 8px;
+                }
+                .active{
+                    color: #f2ac05;
+                    background: url("@{imgMpath}sanj.png") 10px 35px no-repeat;
+                }
+                .last{
+                    margin-right: 0;
+                }
+                i{
+                    position: absolute;
+                    left: 99px;
+                    top: 27px;
+                    width: 0px;
+                    height: 0px;
+                    border-width: 6px;
+                    border-color: transparent transparent #f2ac05 transparent;
+                    border-style: solid;
+                }
+            }
+            .m-school-list{
+                width: 100%;
+                height: 180px;
+                //margin-bottom: 26px;
+                overflow: auto;
+                li{
+                    float: left;
+                    margin-bottom: 22px;
+                    width: 137px;
+                    white-space:nowrap; 
+                    overflow:hidden; 
+                    text-overflow:ellipsis;
+                    cursor: pointer;
+                }
+                .active{
+                    color: #f2ac05;
+                }
+            }
+            .m-school-list2{
+                margin-bottom: 26px;
+                li{
+                    width: 132px;
+                }
+            }
+            .makeSure{
+                text-align: center;
+                .submit{
+                    display: inline-block;
+                    color: #fff;
+                    width: 100px;
+                    height: 40px;
+                    line-height: 40px;
+                    border-radius: 2px;
+                    background-color: #cbcfd2;
+                    font-size: 18px;
+                }
+                .active{
+                    background-color: #f2ac05;
+                }
+            }
+        }
+    }
+}

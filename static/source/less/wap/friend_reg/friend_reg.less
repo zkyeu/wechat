@@ -1,0 +1,71 @@
+@charset "utf-8";
+@import "../common/base.less";
+@friImgPath: '../../../images/wap/friend_reg';
+@fColor:#ff8200;
+body{
+  background:@white;
+  background-size:32rem 26.8rem;
+  max-width: 640px;
+  min-width: 320px;
+  margin:0px auto;
+  font-size: 1.4rem;
+}
+.fri-reg{
+  
+  position: relative;
+  .fri-ber{
+    margin:0px auto;
+    width: 100%;
+    .fri-bj{
+      width: 100%;
+      height: auto;
+    }
+    .fri-img{
+      position: absolute;
+      width: 6.4rem;
+      height: 1.9rem;
+      top: 1.2rem;
+      right: 3rem;
+    }
+  }
+  .fri-iframe{
+    margin:1rem 3rem;
+    .input{
+      -webkit-box-sizing:border-box;
+      -mz-box-sizing:border-box;
+      -o-box-sizing:border-box;
+      -ms-box-sizing:border-box;
+      border-radius: 5px;
+      border:1px #ff8200 solid;
+      margin-top: 1.2rem;
+      padding:1rem;
+      font-size: 1.5rem;
+      width: 100%;
+    }
+  }
+  .btn{
+     margin:2rem 3rem;
+     border-radius: 5px;
+     background: #ff8200;
+     padding:1.1rem 0;
+     letter-spacing: 5px;
+  }
+  .fri-message{
+    display: block;
+    text-align: center;
+    font-size: 1.4rem;
+    margin: 2.3rem 0;
+  } 
+}
+
+@media screen and(min-width:768px){
+
+   html,body{
+    height: 100%;
+   }
+   .fri-reg{
+    height: 100%;
+    border:1px #ddd solid;
+   }
+
+}

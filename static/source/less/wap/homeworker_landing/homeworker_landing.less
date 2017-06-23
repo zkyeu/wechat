@@ -1,0 +1,355 @@
+@charset "utf-8";
+
+@import "../common/base.less";
+
+@imgPath: "../../../images/wap/together_youth/";
+
+body{width: 100%;font-family:@fontFamily;}
+h1,h2,h3,h4{margin:0;padding: 0;}
+img{
+	vertical-align: top;
+}
+input{
+	background-color: transparent;
+	line-height: 1;
+}
+.hide{display: none;}
+.g-hd{
+	.u-banner{
+		width: 100%;
+	}
+}
+.g-ct{
+	.m-reg{
+		padding: 1.85rem 3.6rem 1.25rem;
+		background: #f2f2f2;
+		.reg_txt{
+			margin-top: 1.2rem;
+			font-size: 1.25rem;
+			color:#707070;
+			text-align: center;
+		}
+		.login_now{
+			height: 1.5;
+			padding-bottom: 0.3rem;
+			margin-left: 0.5rem;
+			font-size: 1.25rem;
+			color:#ff4800;
+			border-bottom: 1px solid #ff4800;
+		}
+	}
+	.m-log{
+		padding: 3.6rem 3.6rem 4.8rem;
+		background: #f2f2f2;
+		.group{
+			.u-err{
+				padding: 0.4rem 0 1rem;
+			}
+		}
+		.u-btn-sb{
+			margin-top: 0.5rem;
+		}
+	}
+	.m-success{
+		padding: 4.6rem 0 6.4rem;
+		background: #f2f2f2;
+		text-align: center;
+		h2{
+			font-size: 2.3rem;
+			color: #f44737;
+		}
+		p{
+			margin-top: 1.7rem;
+			font-size: 1.5rem;
+			color:#414141;
+		}
+	}
+	.u-btn-sb{
+		height: 2.85rem;
+		line-height: 2.85rem;
+		color:#fff;
+		font-size: 1.65rem;
+		text-align: center;
+		display: block;
+		border-radius: 3px;
+		background: #ff7200;
+	}
+	.group{
+		.u-ipt{
+			width: 100%;
+			height: 2.5rem;
+			line-height: 2.5rem;
+			font-size: 1.5rem;
+			text-align: center;
+			border:1px solid #ccc;
+			border-radius: 3px;
+		}
+		.u-ipt1{
+			width: 100%;
+			height: 2.5rem;
+			line-height: 2.5rem;
+			font-size: 1.5rem;
+			text-align: center;
+			border:1px solid #ccc;
+			border-radius: 3px;
+		}
+		.u-err{
+			text-align: center;
+			color: #ff3000;
+			font-size: 1rem;
+			line-height: 1;
+			padding: 0.3rem 0 0.8rem;
+			visibility: hidden;
+		}
+	}
+	.group2{
+		display: flex;
+		.m-ipts{
+			flex:1;
+		}
+		.getCode{
+			margin-left: 1.6rem;
+			color:#ff4800;
+			height: 2.2rem;
+			line-height: 2.2rem;
+			margin-bottom: 0.3rem;
+			font-size: 1.15rem;
+			border-bottom: 1px solid #ff4800;
+		}
+		.getCode1{
+			margin-left: 1.6rem;
+			color:#ff4800;
+			height: 2.2rem;
+			line-height: 2.2rem;
+			margin-bottom: 0.3rem;
+			font-size: 1.15rem;
+			border-bottom: 1px solid #ff4800;
+		}
+		.no-bottom{
+			border-bottom: none;
+		}
+	}
+	.m-step-box{
+		background: #fff;
+		padding: 1.4rem 0 2.5rem;
+		text-align: center;
+		h2{
+			font-weight: bold;
+			font-size: 1.5rem;
+			color: #5c5c5c;
+		}
+		h3{
+			font-size: 0.65rem;
+			color: #b0b0b0;
+			margin: 0.65rem 0 1.45rem;
+		}
+		.m-steps{
+			display: flex;
+			li{
+				flex:1;
+				//text-align: center;
+				p{
+					font-size: 1rem;
+					color:#4e4e4e;
+					margin-bottom: 0.5rem;
+				}
+			}
+			.u-circle{
+				border-radius: 50%;
+				font-size: 2.25rem;
+				background: #ffc600;
+				width: 3.9rem;
+				height: 3.9rem;
+				line-height: 3.9rem;
+				color:#fff;
+				display: inline-block;
+				margin-bottom: 1.3rem;
+			}
+		}
+	}
+	.m-theme-box{
+		background: #00c3c9;
+		padding: 1.6rem 2rem 2.5rem;
+		text-align: center;
+		h2{
+			font-weight: bold;
+			font-size: 1.5rem;
+			color: #1f5967;
+		}
+		h3{
+			font-size: 0.65rem;
+			color: #00959a;
+			margin: 0.65rem 0 0.45rem;
+		}
+		.m-themes{
+			li{
+				display: flex;
+				margin-top: 1rem;
+				img{
+					width: 10.8rem;
+					height: 7.4rem;
+				}
+				.m-txt{
+					margin-left: 1.3rem;
+					flex:1;
+					font-size: 1.2rem;
+					text-align: left;
+				  color:#d7feff;
+				  margin-top:2.5rem;
+				}
+			}
+		}
+	}
+	.m-learn-box{
+		padding: 2.1rem 2rem 3rem;
+		background: #1f5967;
+		h2{
+			font-weight: bold;
+			font-size: 1.5rem;
+			color: #00c3c9;
+			text-align: center;
+		}
+		.m-learn{
+			display: flex;
+			padding: 2.4rem 1.2rem 0;
+			li{
+				flex:1;
+				text-align: center;
+				img{
+					width: 6.85rem;
+					height: 6.85rem;
+					margin-bottom: 0.8rem;
+				}
+				p{
+					text-align: center;
+					font-size: 1.2rem;
+					line-height: 1.5rem;
+					color:#00c3c9;
+				}
+			}
+			.first{
+				// margin-right: 6rem;
+			}
+		}
+	 
+	}
+	.m-lina-box{
+		background: #fff;
+		img{
+			width: 100%;
+		}
+	}
+}
+.g-ft{
+	padding: 1.5rem 0 2.7rem;
+	background: #fec526;
+	text-align: center;
+	.u-btn-enjoy{
+		display: inline-block;
+		margin-bottom: 2rem;
+		width: 18.3rem;
+		height: 3.1rem;
+		line-height: 3.1rem;
+		border-radius: 3px;
+		color: #fff;
+		font-size: 1.5rem;
+		background: #ff6c00;
+	}
+	p{
+		font-size: 0.9rem;
+		color: #3d3d3d;
+	}
+} 
+.top{
+	position: relative;
+	width: 100%;
+	.topT{
+		position: relative;
+	}
+	.topImg{
+		width:100%;
+	}
+	.top_t{
+		height: 3.3rem;
+		background-color: #d9d8d8;
+		font-size: 1.8rem;
+		text-align: center;
+		line-height: 3.3rem;
+		
+		font-weight:900;
+		color: #ea1a5b;
+		span{
+			color: #613538;
+		}
+	}
+	.reg1_form{
+			padding-top: 3.75rem;
+			padding-bottom:1.8rem;
+			background-color: #f6f6f6;
+			width:100%;
+			height:100%;
+			.OneS_logIn{
+					margin-bottom: 2.2rem;
+					right: 5rem;
+					bottom:3.4rem;
+					
+					li{
+						text-align: center;
+						height: 2.85rem;
+						width: 100%;
+						margin-bottom: 3rem;
+						display: -webkit-box;
+						-webkit-box-pack: center;
+						-webkit-box-align: center;
+						display: -ms-flexbox;
+						-ms-flex-align: center;
+						-ms-flex-pack: center;
+						/*display: -moz-box;
+						-moz-box-align: center;
+						-moz-box-pack: center;*/
+
+					}
+					input,a{
+						background-color: #fff;
+						height: 100%;
+						/*width: 100%;*/
+						width: 17rem;
+						border:1px solid #ccc;
+						padding:0 4rem;
+						text-align: center;
+						display: -ms-flexbox;
+						-ms-flex-align: center;
+						-ms-flex-pack: center;
+						display: -moz-box;
+						-moz-box-align: center;
+						-moz-box-pack: center;
+						display: -webkit-box;
+						-webkit-box-pack: center;
+						-webkit-box-align: center;
+						border-radius: 6px;
+						-moz-border-radius:6px;
+					}
+					input{
+						font-size: 1.5rem;
+						color: #000;
+					}
+					a{
+						font-size: 1.65rem;
+						background-color: #ff7200;
+						color: #fff;
+						border:none;
+						padding:0.3rem 4rem;
+					}
+				}
+			.login_btn{
+				width:100%;
+				text-align: center;
+				font-size:1.1rem;
+				a{
+					color:#e92a65;
+				}
+			}
+
+	}
+	
+}

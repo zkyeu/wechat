@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="description"  content="登陆51Talk">
+    <title>登陆51Talk</title>
+    <script src="../../../js/wap/project/tmall_landing_43365/flexible.debug.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../css/wap/tmall_landing_43365/wap.css">
+</head>
+
+<body class="full">
+<div class="wap-main" id="container"  data-init="login">
+    <div class="title">
+        <img src="<%= imagessrc %>logo.png" >
+    </div>
+    <div class="banner"></div>
+    <!--<div class="content"></div>-->
+
+    <section class="content content-bg" id="content">
+         <p class="title">会员登录</p>
+        <div class="form">
+            <input id="register_from" type="hidden" value="4275297" name="register_from">
+            <ul>
+                <li>
+                    <label>邮箱／账号</label>
+                    <input type="text" id="reg1_tel" >
+                </li>
+                <li>
+                    <label>密码</label>
+                    <input type="text" id="password" >
+                </li>
+
+                <li class="error-li error-mode pwd_mode">
+                    <label></label>
+                    <div class="error">
+                        <div class="icon"></div>
+                        <span>您还有三次机会</span>
+                    </div>
+                </li>
+
+                
+                <li><button id="login" class="login opebtn">登陆</button></li>
+            </ul>
+            <div class="clearFix link">
+                <p class="find-psd fl"><a>立即注册</a></p>
+                <p class="find-psd fr"><a>找回密码!</a></p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="showtips_layer">
+    <div class="showtips">
+        <span></span>
+        <em id="closeLayer">&times;</em>
+    </div>
+</div>
+</body>
+
+<!--公共尾部结束-->
+<script id="s eajsnode" src="<%= jssrc%>"></script>
+</html>

@@ -1,0 +1,155 @@
+@charset "utf-8";
+@import "../common/base.less";
+@imgPath: '../../../images/wap/double11App/';
+body,html{
+    min-width: 320px;
+    max-width: 640px;
+    margin:0 auto;
+    font-family: "微软雅黑";
+    background: #f93c5d;
+    height: 100%;
+}
+.container_order{
+    position: relative;
+    background: #f93c5d;
+    height:100%;
+    .widthImg{
+        display: block;
+        width: 100%;
+    }
+    a{
+        display: block;
+        margin:2.5rem auto ;
+        height:4rem;
+        width:27rem;
+        line-height: 4rem;
+        text-align: center;
+        position: relative;
+        background: #ffea00;
+        font-size: 1.8rem;
+        color:#ec7128;
+        border-radius: 4rem;
+        box-shadow: 0 5px 5px #fda324;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        font-weight: 900;
+        .c_order{
+            display:block;
+            height:4rem;
+            width:27rem; 
+        }
+        i{
+            display: block;
+            height:3.5rem;
+            width: 3.5rem;
+            background:url("@{imgPath}c_hand.png") no-repeat left top;
+            background-size:3.5rem 3.5rem;
+            position: absolute;
+            right:6.3rem;
+            top:1.8rem;
+            animation:clickOrder 1s ease infinite ;
+            -moz-animation:clickOrder 1s ease infinite ; 
+            -webkit-animation:clickOrder 1s ease infinite ;  
+            -o-animation:clickOrder 1s ease infinite ;  
+        }
+    }
+    @keyframes clickOrder
+        {
+            0% {
+                -o-transform:scale(1);
+                -webkit-transform:scale(1);
+                -moz-transform:scale(1);
+                -ms-transform:scale(1);
+                transform:scale(1);
+            }
+            50% {
+                 -o-transform:scale(1.5);
+                -webkit-transform:scale(1.5);
+                -moz-transform:scale(1.5);
+                -ms-transform:scale(1.5);
+                transform:scale(1.5);
+            }
+             100% {
+               -o-transform:scale(1);
+                -webkit-transform:scale(1);
+                -moz-transform:scale(1);
+                -ms-transform:scale(1);
+                transform:scale(1);
+            }
+        }
+      
+
+    @-moz-keyframes clickOrder  
+        {
+            0% {
+                -o-transform:scale(1);
+                -webkit-transform:scale(1);
+                -moz-transform:scale(1);
+                -ms-transform:scale(1);
+                transform:scale(1);
+            }
+            50% {
+                 -o-transform:scale(1.5);
+                -webkit-transform:scale(1.5);
+                -moz-transform:scale(1.5);
+                -ms-transform:scale(1.5);
+                transform:scale(1.5);
+            }
+             100% {
+               -o-transform:scale(1);
+                -webkit-transform:scale(1);
+                -moz-transform:scale(1);
+                -ms-transform:scale(1);
+                transform:scale(1);
+            }
+        }
+
+    @-webkit-keyframes clickOrder  
+        {
+            0% {
+                -o-transform:scale(1);
+                -webkit-transform:scale(1);
+                -moz-transform:scale(1);
+                -ms-transform:scale(1);
+                transform:scale(1);
+            }
+            50% {
+                 -o-transform:scale(1.5);
+                -webkit-transform:scale(1.5);
+                -moz-transform:scale(1.5);
+                -ms-transform:scale(1.5);
+                transform:scale(1.5);
+            }
+             100% {
+               -o-transform:scale(1);
+                -webkit-transform:scale(1);
+                -moz-transform:scale(1);
+                -ms-transform:scale(1);
+                transform:scale(1);
+            }
+        }
+
+    @-o-keyframes clickOrder  
+         {
+            0% {
+                -o-transform:scale(1);
+                -webkit-transform:scale(1);
+                -moz-transform:scale(1);
+                -ms-transform:scale(1);
+                transform:scale(1);
+            }
+            50% {
+                 -o-transform:scale(1.5);
+                -webkit-transform:scale(1.5);
+                -moz-transform:scale(1.5);
+                -ms-transform:scale(1.5);
+                transform:scale(1.5);
+            }
+             100% {
+               -o-transform:scale(1);
+                -webkit-transform:scale(1);
+                -moz-transform:scale(1);
+                -ms-transform:scale(1);
+                transform:scale(1);
+            }
+        }
+}

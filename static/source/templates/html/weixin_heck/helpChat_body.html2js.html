@@ -24,7 +24,7 @@
                     <ul class="user_op_pop" v-show="userOp.show" transition="trans1">
 
                         <li @click="openHelperSel">黑鸟小助手</li>
-                        <li @click="blackUseTips('show')">注意事项</li>
+                        <!-- <li @click="blackUseTips('show')">注意事项</li>
                         <li @click="myStudy">我的学员</li>
                         <li @click="addFriend({type:'0'})">添加好友</li>
                         <li @click="getMyFriend">新的好友<i class="wx_counts more" v-if="newFriCount > 999"></i><i class="wx_counts num" v-if="(newFriCount > 0) && (newFriCount <= 999)">{{ newFriCount }}</i></li>
@@ -33,7 +33,7 @@
                         <li @click="getChat('getChat')">发起群聊</li>
                         <li @click="updateInfo">个人信息</li>
                         <li @click="logoutTrust">托管</li>
-                        <li @click="userLogoutTrustByWX">退出</li>
+                        <li @click="userLogoutTrustByWX">退出</li> -->
                     </ul>
                 </div>
             </div>
@@ -2565,7 +2565,7 @@
             <div class="con-list">
                 <ul>
                     <template v-for="x in userGroupList.default">
-                        <li @click="getGroup(x.id,x.amount)" :class="{'cut-sel':x.id == userGroupList.curid.typeId }">
+                        <li @click="getGroup(x.id)" :class="{'cut-sel': groupsSel.indexOf(x.id) > -1 }">
                             <span>{{ x.name}}</span>
                         </li>
                     </template>
@@ -2573,40 +2573,39 @@
             </div>
         </div>
 
-        <!--<div class="block-con" v-if="userGroupList.group.length > 0">-->
-        <div class="block-con" v-if="userGroupList.groups && userGroupList.groups.length > 0">
+        <!-- <div class="block-con" v-if="userGroupList.groups && userGroupList.groups.length > 0">
             <h5>选择组</h5>
             <div class="con-list">
                 <ul>
                     <template v-for="x in userGroupList.groups">
-                        <li @click="getDetails(x.group_id)" :class="{'cut-sel':x.group_id == userGroupList.curid.groupId }" :title="x.group_id">
+                        <li @click="getDetails(x.organization_alias)" :class="{'cut-sel':x.organization_alias == userGroupList.curid.organization_alias }" :title="x.group_id">
                             <span>{{ x.group_name}}</span>
                         </li>
                     </template>
                 </ul>
             </div>
-        </div>
+        </div> -->
 
 
-        <div class="block-con" v-if="userGroupList.details && userGroupList.details.length > 0">
-            <div class="con-list detail-user">
-                <ul id="selUser">
-                    <template v-for="x in userGroupList.details">
-                        <li @click="getUserList(x.admin_id)" :class="{'cut-sels':list.indexOf(x.admin_id) > -1}">
-                            <span>{{ x.nick_name }}</span>
-                        </li>
-                    </template>
-                </ul>
-            </div>
-        </div>
+       <!--  <div class="block-con" v-if="userGroupList.details && userGroupList.details.length > 0">
+           <div class="con-list detail-user">
+               <ul id="selUser">
+                   <template v-for="x in userGroupList.details">
+                       <li @click="getUserList(x.admin_id)" :class="{'cut-sels':list.indexOf(x.admin_id) > -1}">
+                           <span>{{ x.nick_name }}</span>
+                       </li>
+                   </template>
+               </ul>
+           </div>
+       </div> -->
 
     </div>
 </template>
-
-
 
 
 <!--语音播放-->
 <div class="voice_play">
     <audio id="voiceMsgPlayer" preload="metadata" :src="voicePlay.voiceSrc" @playing="isPlaying" @ended="isEnded"></audio>
 </div>
+
+<iframe src="helperIframe.html?admin_id=12345&type=2"></iframe>

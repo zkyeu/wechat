@@ -1,0 +1,202 @@
+.reg-box{
+    font-size: 12px;
+    a,input{
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+    .banner{
+        border-bottom:1px dashed #2c2072;
+        img{
+            width:100%;
+        }
+    }
+    .receive-box{
+        border-bottom:1px dashed #2c2072;
+        background-color: #f6ead0;
+        padding:1.8rem 3.6rem 1.8rem;
+        .tit{
+            font-size: 12px;
+            color:#2c2072;
+            margin-bottom:15px;
+            text-align: center;
+        }
+        .input-box{
+            width: 100%;
+            height:31px;
+            line-height: 31px;
+            margin-top:5px;
+            background-color: #fcf9f1;
+            position: relative;
+            input{
+                padding-left: 10px;
+                background-color: #fcf9f1;
+                color:#727171;
+            }
+            .code-input{
+                width:60%;
+            }
+            .code-img{
+                img{
+                    width: 70px;
+                    margin-top: -11px;
+                }
+            }
+            .code-box{
+                position: absolute;
+                top: 4px;
+                right:10px;
+                padding-left: 10px;
+                display: inline-block;
+                border-left:1px solid #d3d3d3;
+                height:22px;
+                width:72px;
+                .count-down{
+                    display: none;
+                }
+                a{
+                    color: #fff;
+                    font-size: 12px;
+                }
+            }
+
+            .sendCode{
+                display: inline-block;
+                height: 31px;
+                padding-left: 0;
+                width: 93px;
+                line-height: 31px;
+                text-align: center;
+                top: 0;
+                background: #d7a246;
+                color: #fff;
+                right: 0;
+            }
+        }
+        .receive-btn{
+            width: 100%;
+            color:#fff;
+            background-color: #e61673;
+            font-size:18px;
+            text-align: center;
+            height:33px;
+            line-height: 33px;
+            border-radius: 5px;
+            display: block;
+            margin-top:13px;
+        }
+        
+    }
+    .des-box{
+        
+        h2{
+            color:#e61673;
+            text-align: center;
+            font-size: 16px;
+            margin-top:45px;
+        }
+        .info-box{
+            position: relative;
+        }
+        .img-box{
+            text-align: center;
+            img{
+                width:80%;  
+            }
+        }
+        .text-box{
+            color:#2c2072;
+            padding:15px 20px;
+            .title{
+                font-size: 16px;
+                margin-bottom:15px;
+            }
+            .info{
+                font-size: 14px;
+            }
+            
+        }
+        .text1{
+            background-color:#d0eefb;
+            position: relative;
+            top:-50px;
+            z-index: -2;
+            text-align: left;
+        }
+        .text2{
+            background-color:#fde9c0;
+            position: relative;
+            top:-50px;
+            z-index: -2;
+            text-align: right;
+        }
+        .text3{
+            background-color:#f4f6b2;
+            position: relative;
+            margin-top:-85px;
+            z-index: -2;
+            text-align: left;
+        }
+    }
+}
+.showtips_layer{
+  display: none;
+  position: fixed;
+  //width: 100vw;
+  //height: 100vh;
+  background: rgba(0,0,0,.6);
+  z-index: 99;
+  top:0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  .showtips{
+    display: block;
+    width: 60vw;
+    height:4.4rem;
+    line-height: 4.4rem;
+    font-size: 1.5rem;
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left:0;
+    margin: auto;
+    text-align: center;
+    background: #ddd;
+    border-radius: .5rem;
+    z-index: 999;
+    span{
+      display: block;
+      width: 100%;
+      height: 4.4rem;
+      overflow: hidden;
+    }
+    em{
+      position: relative;
+      display: block;
+      width: 2rem;
+      height: 2rem;
+      line-height: 2rem;
+      top:-5rem;
+      left:57vw;
+      border-radius: 50%;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}
+.tel-box{
+    height: 35px;
+    background-color: #fac000;
+    color:#fff;
+    font-size: 14px;
+    line-height: 35px;
+    text-align: center;
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    max-width: 640px;
+    a{
+        color:#fff;
+    }
+}

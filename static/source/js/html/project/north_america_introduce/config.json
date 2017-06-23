@@ -1,0 +1,12 @@
+{
+	"define":[
+		"!js/html/common/jquery.ui.effects.js",
+		"!js/html/common/jquery.ui.position.js",
+		"!js/html/common/lodash.js",
+		"js/html/common/jquery-1.8.2.min.js",
+		"js/html/common/sea.min.js",
+		"js/wap/common/pind.js",
+		"js/html/project/north_america_introduce/config.js",
+		"!js/html/mod/*.js"
+	]
+}

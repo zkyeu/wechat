@@ -1,0 +1,107 @@
+.TeachingPhilosophy{
+	//公共属性
+	.title{
+			text-align: center;
+			font-size:40px;
+			&:after{
+				display:block;
+				margin:0 auto;
+				content: '';
+				height:23px;
+				line-height: 23px;
+				font-size:14px;
+				color:#fff;
+				text-align: center;
+				background:url('@{imgUrl}t_icon.png')  left top no-repeat; 
+			}
+		}
+	.t_banner{
+		height: 520px;
+		background:url('@{imgUrl}t_banner.jpg')  center top no-repeat;
+	}
+	.t_goals{
+		padding:40px 0 48px 0;
+		h1:after{
+			width: 362px;
+			content:'Teaching Methodology and Goals';
+		}
+		img{
+			display: block;
+			margin:38px auto 0;
+		}
+	}
+	.t_features{
+		padding:70px 0;
+		background:#f5f5f5;
+		h1:after{
+			width: 360px;
+			content:'Four Combined Teaching Features';
+			 
+		}
+		.t_list{
+			width: 1000px;
+			margin:40px auto 0;
+			li{
+				float: left;
+				border-bottom:3px solid #d8453e;
+				background: #fff;
+				margin-right:20px;
+				dl{
+					width: 235px;
+					h3{
+						color:#d8453e;
+						font-size:24px;
+						text-align: center;
+						margin:30px auto 20px;
+					}
+					p{
+						text-align: center;
+						font-size: 14px;
+						margin-bottom: 30px;
+					}
+				}
+			}
+			.margin0{
+				margin-right:0;
+			}
+		}
+	}
+	.t_core{
+		padding-top:70px;
+		h1:after{
+			width: 320px;
+			content:'Core Teaching Methodology';
+			background-position:0 -46px ;
+		}
+		p{
+			text-align: center;
+			line-height: 22px;
+			color:#848484;
+			margin:40px 0 45px 0;
+			font-size:14px;
+		}
+		img{
+			display: block;
+			margin:0 auto;
+		}
+	}
+	.t_steps{
+		padding:70px 0 90px 0;
+		background:#f5f5f5 ;
+		h1:after{
+			width:370px;
+			content:'Six-step Teaching Approach';
+		}
+		p{
+			text-align: center;
+			line-height: 22px;
+			color:#848484;
+			margin:40px 0 45px 0;
+			font-size: 14px;
+		}
+		img{
+			display: block;
+			margin:0 auto;
+		}
+	}
+}

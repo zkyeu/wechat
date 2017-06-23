@@ -1,0 +1,1443 @@
+@import "../common/www/base.less";
+@import "../common/uc_common.less";
+@white:#fff;
+@border:#eee;
+@font:#1e1e1e;
+@orange:#ff8200;
+@imgUrl:"../../../images/html/certificate/";
+.m-head .add-frd__top {
+	background:url('@{imgUrl}nat_top.jpg') 0 0 no-repeat;
+}
+.certificate{
+	width:1000px;
+	margin:0 auto 40px;
+	background:@white;
+	.container{
+		//左侧边栏
+		.bar{
+			float:left;
+			width:189px;
+			border-left:@border solid 1px;
+			color:@font;
+			font-size:14px;
+			.header{
+				position:relative;
+				width:80px;
+				height:80px;
+				margin:30px auto 0;
+				img{
+					width:80px;
+					height:80px;
+				}
+				.cover{
+					position:absolute;
+					left:0;
+					top:0;
+					display:inline-block;
+					width:80px;
+					height:80px;
+					background:url('@{imgUrl}cover.png') 0 0 no-repeat;
+					z-index:9;
+				}
+			}
+			.name{
+				margin-top:10px;
+				font-size:16px;
+				color:@orange;
+				text-align:center;
+			}
+			.view{
+				display:block;
+				width:100px;
+				height:24px;
+				margin:15px auto 0;
+				line-height:24px;
+				color:@orange;
+				font-size:12px;
+				text-align:center;
+				border:@orange solid 1px;
+			}
+			ul{
+				width:150px;
+				margin:20px auto;
+				li{
+					position:relative;
+					margin-top:15px;
+					padding-left:85px;
+					white-space:nowrap;
+				}
+				em{
+					position:absolute;
+					left:0;
+					top:0;
+					display:inline-block;
+					width:85px;
+					text-align:right;
+				}
+			}
+		}
+		//右侧边栏
+		.cert-lst{
+			float:left;
+			width:809px;
+			border-left:@border solid 1px;
+			//tab标签
+			.tab{
+				padding:15px 0;
+				border-bottom:#ffdcb4 solid 1px;
+				text-align:center;
+				span{
+					color:#dbdee0;
+				}
+				a{
+					position:relative;
+					padding:0 25px;
+					font-size:16px;
+					color:#999;
+					i{
+						display:none;
+						position:absolute;
+						left:50%;
+						bottom:-16px;
+						*bottom:0;
+						width:50px;
+						height:10px;
+						margin-left:-25px;
+						background:#fffbeb url('@{imgUrl}icon.png') 0 -30px no-repeat;
+					}
+				}
+				.current{
+					color:@orange;
+					i{
+						display:block;
+					}
+				}
+			}
+			//即将获得的证书(成人新学员和成人老学员公用这段样式)
+			.no-get{
+				.title{
+					font-size:16px;
+					color:@orange;
+				}
+				.cert-show{
+					padding:30px 0;
+					background:#fffbeb;
+					border-bottom:#dbdee0 dashed 1px;
+					.tips{
+						position:relative;
+						width:750px;
+						height:367px;
+						margin:0 auto;
+						padding:5px;
+						background:url('@{imgUrl}show_bg.jpg') center center no-repeat;
+						color:@font;
+						text-align:center;
+					}
+					.mask{
+						position:absolute;
+						top:10px;
+						left:11px;
+						width:739px;
+						height:357px;
+						background:url('@{imgUrl}mask.jpg');
+						em{
+							color:@orange;
+						}
+					}
+					h1{
+						margin-top:100px;
+						font-size:24px;
+					}
+					h2{
+						margin-top:30px;
+						font-size:16px;
+					}
+					.go{
+						display:inline-block;
+						margin-top:70px;
+						padding:10px 40px;
+						border-radius:3px;
+						background:@orange;
+						font-size:14px;
+						color:@white;
+					}
+				}
+				.introduce{
+					margin:0 25px;
+					padding:25px 0;
+					.lst{
+						margin-top:25px;
+						dl{
+							float:left;
+							padding:0 28px;
+							text-align:center;
+							dd{
+								margin-top:15px;
+								line-height:25px;
+								font-size:13px;
+							}
+						}
+						.line{
+							float:left;
+							width:1px;
+							height:80px;
+							margin-top:18px;
+							background:#dbdee0;
+						}
+					}
+				}
+				.access{
+					margin:0 25px 25px;
+					padding-top:25px;
+					border-top:#dbdee0 dashed 1px;
+					h2{
+						margin-top:25px;
+						text-align:center;
+					}
+					ul{
+						width:720px;
+						margin:18px auto 0;
+						margin-right:-25px;
+						color:@font;
+						font-size:13px;
+					}
+					li{
+						float:left;
+						width:160px;
+						margin-right:80px;
+						text-align:center;
+					}
+				}
+			}
+			//已经获得的证书(成人新学员和成人老学员公用这段样式)
+			.get{
+				.title{
+					font-size:16px;
+					color:@orange;
+				}
+				.cert-show{
+					padding:0 25px;
+					background:#fffbeb;
+					.share-wrap{
+						position:relative;
+						height:49px;
+						margin-top:30px;
+						border:#ff8200 solid 1px;
+						border-radius:3px;
+						width: 298px;
+						&:after{
+							position:absolute;
+							top:-14px;
+							right:-12px;
+							display:inline-block;
+							width:18px;
+							height:12px;
+							background:url('@{imgUrl}share_icon.png') center center no-repeat;
+							content:'';
+						}
+						.txt{
+							float:left;
+							width:100px;
+							height:49px;
+							padding-left:46px;
+							line-height:49px;
+							background:url('@{imgUrl}share.jpg') center center no-repeat;
+							font-size:16px;
+							color:#fff;
+						}
+						.icon-lst{
+							float:left;
+							width:150px;
+							height:100%;
+							background:#fff;
+						}
+					}
+					.share{
+						a{
+							float:none;
+							display:inline-block;
+							width:24px;
+							height:24px;
+							margin:12px 0 0 8px;
+							padding:0;
+							background:url('@{imgUrl}share-icon-sns.png') no-repeat;
+						}
+						.bds_weixin{
+							background-position:0 -19px;
+						}
+						.bds_tsina{
+							background-position:-68px -19px;
+						}
+						.bds_sqq{
+							background-position:-34px -19px;
+						}
+						.bds_qzone{
+							background-position:-105px -19px;
+						}
+					}
+					dl{
+						padding:25px 0;
+						border-bottom:#ffdcb4 dashed 1px;
+						background:url('@{imgUrl}bg_logo.jpg') 95% 50% no-repeat;
+					}
+					.old{
+						background:url('@{imgUrl}talk_bg.jpg') 95% 50% no-repeat;
+					}
+					dt{
+						float:left;
+						margin-right:40px;
+					}
+					dd{
+						float:left;
+						h1{
+							color:@font;
+							font-size:16px;
+						}
+						h2{
+							margin-top:5px;
+							color:@font;
+							font-size:16px;
+						}
+						em{
+							color:@orange;
+							font-size:24px;
+						}
+						ul{
+							margin-top:20px;
+							margin-left:-15px;
+							overflow:hidden;
+						}
+						li{
+							float:left;
+							height:15px;
+							padding:0 15px;
+							margin-left:-1px;
+							line-height:15px;
+							border-left:#999 solid 1px;
+						}
+						i{
+							display:inline-block;
+							margin-right:5px;
+							background:url('@{imgUrl}icon.png') no-repeat;
+						}
+						a{
+							color:@font;
+						}
+						.download{
+							width:13px;
+							height:13px;
+							background-positon:0 0;
+						}
+						.express{
+							width:20px;
+							height:10px;
+							background-position:0 -16px;
+						}
+						.test-info{
+							width: 17px;
+							height: 13px;
+							background-position: 0 -53px;
+						}
+					}
+				}
+				.introduce{
+					margin:0 25px;
+					padding:25px 0;
+					.lst{
+						margin-top:25px;
+						dl{
+							float:left;
+							padding:0 30px;
+							text-align:center;
+							dt{
+							}
+							dd{
+								margin-top:15px;
+								line-height:25px;
+								font-size:13px;
+							}
+						}
+						.line{
+							float:left;
+							width:1px;
+							height:80px;
+							margin-top:18px;
+							background:#dbdee0;
+						}
+					}
+				}
+				.access{
+					margin:0 25px 25px;
+					padding-top:25px;
+					border-top:#dbdee0 dashed 1px;
+					h2{
+						margin-top:25px;
+						text-align:center;
+					}
+					ul{
+						width:720px;
+						margin:18px auto 0;
+						margin-right:-25px;
+						color:@font;
+						font-size:13px;
+					}
+					li{
+						float:left;
+						width:160px;
+						margin-right:80px;
+						text-align:center;
+					}
+				}
+			}
+			//成人青少即将获得的证书样式
+			.all-notget{
+				.title{
+					font-size:16px;
+					color:@orange;
+				}
+				.cert-show{
+					padding:30px 0;
+					background:#fffbeb;
+					border-bottom:#dbdee0 dashed 1px;
+					.tips{
+						position:relative;
+						width:750px;
+						height:367px;
+						margin:0 auto;
+						padding:5px;
+						background:url('@{imgUrl}show_bg.jpg') center center no-repeat;
+						color:@font;
+						text-align:center;
+					}
+					.mask{
+						position:absolute;
+						top:10px;
+						left:11px;
+						width:739px;
+						height:357px;
+						background:url('@{imgUrl}mask.jpg');
+						em{
+							color:@orange;
+						}
+					}
+					h1{
+						margin-top:100px;
+						font-size:24px;
+					}
+					h2{
+						margin-top:30px;
+						font-size:16px;
+					}
+					.go{
+						display:inline-block;
+						margin-top:70px;
+						padding:10px 40px;
+						border-radius:3px;
+						background:@orange;
+						font-size:14px;
+						color:@white;
+					}
+				}
+				.introduce{
+					margin:0 25px;
+					padding:25px 0;
+					border-bottom:#dbdee0 dashed 1px;
+					h2{
+						margin-top:30px;
+						text-align:center;
+					}
+					ul{
+						width:775px;
+						margin:15px auto;
+						margin-right:-70px;
+						font-size:13px;
+						color:@font;
+						li{
+							float:left;
+							width:110px;
+							margin-right:72px;
+							text-align:center;
+						}
+					}
+				}
+				.promotion{
+					margin:0 25px;
+					padding:25px 0;
+					border-bottom:#dbdee0 dashed 1px;
+					p{
+						text-align:center;
+					}
+				}
+				.earn{
+					margin-top:40px;
+					text-align:center;
+					p{
+						margin-bottom:15px;
+					}
+					.btn{
+						display:inline-block;
+						width:275px;
+						height:35px;
+						line-height:35px;
+						color:@white;
+						background:@orange;
+						border-radius:3px;
+						text-align:center;
+					}
+				}
+			}
+			//成人青少已经获得的证书样式
+			.all-get{
+				.title{
+					font-size:16px;
+					color:@orange;
+				}
+				.cert-show{
+					padding:0 25px;
+					background:#fffbeb;
+					.share-wrap{
+						position:relative;
+						height:49px;
+						margin-top:20px;
+						border:#ff8200 solid 1px;
+						border-radius:3px;
+						width: 298px;
+						&:after{
+							position:absolute;
+							top:-14px;
+							right:-12px;
+							display:inline-block;
+							width:18px;
+							height:12px;
+							background:url('@{imgUrl}share_icon.png') center center no-repeat;
+							content:'';
+						}
+						.txt{
+							float:left;
+							width:100px;
+							height:49px;
+							padding-left:46px;
+							line-height:49px;
+							background:url('@{imgUrl}share.jpg') center center no-repeat;
+							font-size:16px;
+							color:#fff;
+						}
+						.icon-lst{
+							float:left;
+							width:150px;
+							height:100%;
+							background:#fff;
+						}
+					}
+					.share{
+						a{
+							float:none;
+							display:inline-block;
+							width:24px;
+							height:24px;
+							margin:12px 0 0 8px;
+							padding:0;
+							background:url('@{imgUrl}share-icon-sns.png') no-repeat;
+						}
+						.bds_weixin{
+							background-position:0 -19px;
+						}
+						.bds_tsina{
+							background-position:-68px -19px;
+						}
+						.bds_sqq{
+							background-position:-34px -19px;
+						}
+						.bds_qzone{
+							background-position:-105px -19px;
+						}
+					}
+					dl{
+						padding:25px 0;
+						border-bottom:#ffdcb4 dashed 1px;
+						background:url('@{imgUrl}bg_logo.jpg') 95% 50% no-repeat;
+					}
+					dt{
+						float:left;
+						margin-right:40px;
+					}
+					dd{
+						float:left;
+						margin-top:10px;
+						h1{
+							color:@font;
+							font-size:16px;
+						}
+						h2{
+							margin-top:5px;
+							color:@font;
+							font-size:16px;
+						}
+						em{
+							color:@orange;
+							font-size:24px;
+						}
+						ul{
+							margin-top:20px;
+							margin-left:-15px;
+							overflow:hidden;
+						}
+						li{
+							float:left;
+							height:15px;
+							padding:0 15px;
+							margin-left:-1px;
+							line-height:15px;
+							border-left:#999 solid 1px;
+						}
+						i{
+							display:inline-block;
+							margin-right:5px;
+							background:url('@{imgUrl}icon.png') no-repeat;
+						}
+						a{
+							color:@font;
+						}
+						.download{
+							width:13px;
+							height:13px;
+							background-positon:0 0;
+						}
+						.express{
+							width:20px;
+							height:10px;
+							background-position:0 -16px;
+						}
+						.test-info{
+							width: 17px;
+							height: 13px;
+							background-position: 0 -53px;
+						}
+					}
+				}
+				.introduce{
+					margin:0 25px;
+					padding:25px 0;
+					border-bottom:#dbdee0 dashed 1px;
+					h2{
+						margin-top:30px;
+						text-align:center;
+					}
+					ul{
+						width:775px;
+						margin:15px auto;
+						margin-right:-70px;
+						font-size:13px;
+						color:@font;
+						li{
+							float:left;
+							width:110px;
+							margin-right:72px;
+							text-align:center;
+						}
+					}
+				}
+				.promotion{
+					margin:0 25px;
+					padding:25px 0;
+					border-bottom:#dbdee0 dashed 1px;
+					p{
+						text-align:center;
+					}
+				}
+				.earn{
+					margin-top:40px;
+					text-align:center;
+					p{
+						margin-bottom:15px;
+					}
+					.btn{
+						display:inline-block;
+						width:275px;
+						height:35px;
+						line-height:35px;
+						color:@white;
+						background:@orange;
+						border-radius:3px;
+						text-align:center;
+					}
+				}
+			}
+			//青少即将获得的证书样式
+			.young{
+				.title{
+					font-size:16px;
+					color:@orange;
+				}
+				.cert-show{
+					padding:30px 0;
+					background:#fffbeb;
+					border-bottom:#dbdee0 dashed 1px;
+					.tips{
+						position:relative;
+						width:750px;
+						height:367px;
+						padding:5px;
+						margin:0 auto;
+						background:url('@{imgUrl}show_bg.jpg') center center no-repeat;
+						color:@font;
+						text-align:center;
+					}
+					.mask{
+						position:absolute;
+						top:10px;
+						left:11px;
+						width:739px;
+						height:357px;
+						background:url('@{imgUrl}mask.jpg');
+						em{
+							color:@orange;
+						}
+					}
+					h1{
+						margin-top:100px;
+						font-size:24px;
+					}
+					h2{
+						margin-top:30px;
+						font-size:16px;
+					}
+					.go{
+						display:inline-block;
+						margin-top:70px;
+						padding:10px 40px;
+						border-radius:3px;
+						background:@orange;
+						font-size:14px;
+						color:@white;
+					}
+				}
+				.introduce{
+					margin:0 25px;
+					padding:25px 0;
+					border-bottom:#dbdee0 dashed 1px;
+					h2{
+						margin-top:30px;
+						text-align:center;
+					}
+					ul{
+						width:775px;
+						margin:15px auto;
+						margin-right:-70px;
+						font-size:13px;
+						color:@font;
+						li{
+							float:left;
+							width:110px;
+							margin-right:72px;
+							text-align:center;
+						}
+					}
+				}
+				.promotion{
+					margin:0 25px;
+					padding:25px 0;
+					border-bottom:#dbdee0 dashed 1px;
+					p{
+						text-align:center;
+					}
+				}
+				.earn{
+					margin-top:40px;
+					text-align:center;
+					p{
+						margin-bottom:15px;
+					}
+					.btn{
+						display:inline-block;
+						width:275px;
+						height:35px;
+						line-height:35px;
+						color:@white;
+						background:@orange;
+						border-radius:3px;
+						text-align:center;
+					}
+				}
+			}
+			//青少已经获得的证书样式
+			.young-get{
+				.title{
+					font-size:16px;
+					color:@orange;
+				}
+				.cert-show{
+					padding:0 25px;
+					background:#fffbeb;
+					.share-wrap{
+						position:relative;
+						height:49px;
+						margin-top:30px;
+						border:#ff8200 solid 1px;
+						border-radius:3px;
+						width: 298px;
+						&:after{
+							position:absolute;
+							top:-14px;
+							right:-12px;
+							display:inline-block;
+							width:18px;
+							height:12px;
+							background:url('@{imgUrl}share_icon.png') center center no-repeat;
+							content:'';
+						}
+						.txt{
+							float:left;
+							width:100px;
+							height:49px;
+							padding-left:46px;
+							line-height:49px;
+							background:url('@{imgUrl}share.jpg') center center no-repeat;
+							font-size:16px;
+							color:#fff;
+						}
+						.icon-lst{
+							float:left;
+							width:150px;
+							height:100%;
+							background:#fff;
+						}
+					}
+					.share{
+						a{
+							float:none;
+							display:inline-block;
+							width:24px;
+							height:24px;
+							margin:12px 0 0 8px;
+							padding:0;
+							background:url('@{imgUrl}share-icon-sns.png') no-repeat;
+						}
+						.bds_weixin{
+							background-position:0 -19px;
+						}
+						.bds_tsina{
+							background-position:-68px -19px;
+						}
+						.bds_sqq{
+							background-position:-34px -19px;
+						}
+						.bds_qzone{
+							background-position:-105px -19px;
+						}
+					}
+					dl{
+						margin:0 25px;
+						padding:25px 0;
+						border-bottom:#ffdcb4 dashed 1px;
+						background:url('@{imgUrl}talk_bg.jpg') 95% 50% no-repeat;
+					}
+					dt{
+						float:left;
+						margin-right:40px;
+					}
+					dd{
+						float:left;
+						h1{
+							color:@font;
+							font-size:16px;
+						}
+						h2{
+							margin-top:5px;
+							color:@font;
+							font-size:16px;
+						}
+						em{
+							color:@orange;
+							font-size:24px;
+						}
+						ul{
+							margin-top:20px;
+							margin-left:-15px;
+							overflow:hidden;
+						}
+						li{
+							float:left;
+							height:15px;
+							padding:0 15px;
+							margin-left:-1px;
+							line-height:15px;
+							border-left:#999 solid 1px;
+						}
+						i{
+							display:inline-block;
+							margin-right:5px;
+							background:url('@{imgUrl}icon.png') no-repeat;
+						}
+						a{
+							color:@font;
+						}
+						.download{
+							width:13px;
+							height:13px;
+							background-positon:0 0;
+						}
+						.express{
+							width:20px;
+							height:10px;
+							background-position:0 -16px;
+						}
+						.test-info{
+							width: 17px;
+							height: 13px;
+							background-position: 0 -53px;
+						}
+					}
+				}
+				.introduce{
+					margin:0 25px;
+					padding:25px 0;
+					border-bottom:#dbdee0 dashed 1px;
+					h2{
+						margin-top:30px;
+						text-align:center;
+					}
+					ul{
+						width:775px;
+						margin:15px auto;
+						margin-right:-70px;
+						font-size:13px;
+						color:@font;
+						li{
+							float:left;
+							width:110px;
+							margin-right:72px;
+							text-align:center;
+						}
+					}
+				}
+				.promotion{
+					margin:0 25px;
+					padding:25px 0;
+					border-bottom:#dbdee0 dashed 1px;
+					p{
+						text-align:center;
+					}
+				}
+				.earn{
+					margin-top:40px;
+					text-align:center;
+					p{
+						margin-bottom:15px;
+					}
+					.btn{
+						display:inline-block;
+						width:275px;
+						height:35px;
+						line-height:35px;
+						color:@white;
+						background:@orange;
+						border-radius:3px;
+						text-align:center;
+					}
+				}
+			}
+			//美小即将获得的证书样式
+			.nat{
+				.title{
+					font-size:16px;
+					color:@orange;
+				}
+				.cert-show{
+					padding:30px 0;
+					background:#fffbeb;
+					border-bottom:#dbdee0 dashed 1px;
+					.tips{
+						position:relative;
+						width:750px;
+						height:367px;
+						padding:5px;
+						margin:0 auto;
+						background:url('@{imgUrl}nabg.jpg') center center no-repeat;
+						color:@font;
+						text-align:center;
+					}
+					.mask{
+						position:absolute;
+						top:10px;
+						left:11px;
+						width:739px;
+						height:357px;
+						background:url('@{imgUrl}namask.jpg');
+						em{
+							color:@orange;
+						}
+					}
+					h1{
+						margin-top:100px;
+						font-size:24px;
+					}
+					h2{
+						margin-top:30px;
+						font-size:16px;
+					}
+					.go{
+						display:inline-block;
+						margin-top:70px;
+						padding:10px 40px;
+						border-radius:3px;
+						background:@orange;
+						font-size:14px;
+						color:@white;
+					}
+				}
+				.introduce{
+					margin:0 25px;
+					padding:25px 0;
+					border-bottom:#dbdee0 dashed 1px;
+					h2{
+						margin-top:30px;
+						text-align:center;
+					}
+					ul{
+						width:775px;
+						margin:15px auto;
+						margin-right:-70px;
+						font-size:13px;
+						color:@font;
+						li{
+							float:left;
+							width:110px;
+							margin-right:72px;
+							text-align:center;
+						}
+					}
+				}
+				.promotion{
+					margin:0 25px;
+					padding:25px 0;
+					border-bottom:#dbdee0 dashed 1px;
+					p{
+						text-align:center;
+					}
+				}
+				.earn{
+					margin-top:40px;
+					text-align:center;
+					p{
+						margin-bottom:15px;
+					}
+					.btn{
+						display:inline-block;
+						width:275px;
+						height:35px;
+						line-height:35px;
+						color:@white;
+						background:@orange;
+						border-radius:3px;
+						text-align:center;
+					}
+				}
+			}
+			.switch{
+				.cert-show{
+					.talk_logo{
+						background:url('@{imgUrl}talk_bg.jpg') 95% 50% no-repeat;
+					}
+				}
+				.placeholder{
+					width:809px;
+					height:236px;
+					background:url('@{imgUrl}placeholder.jpg') no-repeat;
+				}
+			}
+		}
+	}
+}
+//支付界面
+.pay{
+	width:960px;
+	margin:20px auto;
+	padding:20px;
+	background:@white;
+	border:#dbdee0 solid 1px;
+	h1{
+		font-size:16px;
+		color:@orange;
+		em{
+			margin-left:15px;
+			font-size:13px;
+			color:#999;
+		}
+	}
+	h2{
+		margin-top:15px;
+		font-size:14px;
+		color:@orange;
+	}
+	[type="radio"]{
+		visibility:hidden;
+		width:13px;
+		height:13px;
+	}
+	.order{
+		ul{
+			margin:35px 0 0 25px;
+			color:#666;
+		}
+		p{
+			margin:20px;
+		}
+		.edit{
+			display:inline-block;
+			width:15px;
+			height:14px;
+			margin-left:10px;
+			background:url('@{imgUrl}img_sprite.png') -12px 0 no-repeat;
+			cursor: pointer;
+		}
+	}
+	.payment{
+		margin-top:55px;
+		.lst{
+			margin-bottom:50px;
+			li{
+				position:relative;
+				float:left;
+				margin:20px 20px 0 0;
+				&:after{
+					position:absolute;
+					left:0;
+					top:50%;
+					width:12px;
+					height:12px;
+					margin-top:-6px;
+					content:'';
+					background:url('@{imgUrl}img_sprite.png') 0 0 no-repeat;
+				}
+				img{
+					border:#e8e8e8 solid 1px;
+				}
+				input{
+					margin-right:10px;
+				}
+			}
+			.current{
+				&:after{
+					background-position:0 -12px;
+				}
+				img{
+					border:@orange solid 1px;
+				}
+			}
+		}
+	}
+}
+.payment-bg{
+	display:none;
+	position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 63px;
+    background: rgba(0,0,0,0.7);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#bf000000,endColorstr=#bf000000);
+    _position: absolute;
+    _top: ~'expression(eval(document.documentElement.clientHeight-86+document.documentElement.scrollTop))';
+    _width:~'expression(eval(document.documentElement.clientWidth))';
+    padding-top: 23px;
+    text-align:center;
+    z-index: 100;
+    .pay-btn{
+    	display:inline-block;
+    	width:195px;
+    	height:36px;
+    	line-height:36px;
+    	color:@white;
+    	background:@orange;
+    	border-radius:3px;
+    	text-align:center;
+    }
+}
+.mask{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#B2000000', endColorstr='#B2000000');
+background-color:rgba(0,0,0,0.7);
+	z-index:101;
+	.edit-address{
+		position:absolute;
+		left:50%;
+		top:30%;
+		width:660px;
+		height:300px;
+		margin:-150px 0 0 -355px;
+		padding:25px;
+		border-radius:5px;
+		background:#f7f7f7;
+		h1{
+			font-size:18px;
+			color:@orange;
+		}
+		.close{
+			position:absolute;
+			right:0;
+			top:0;
+			display:inline-block;
+			width:43px;
+			height:43px;
+			background:url('@{imgUrl}img_sprite.png') 0 -24px no-repeat;
+			&:hover{
+				background-position:-43px -24px;
+			}
+		}
+		.address-info{
+			margin-top:20px;
+			padding:20px;
+			background:@white;
+			border:#e4eaee solid 1px;
+			font-size:13px;
+			color:#1e1e1e;
+			li{
+				margin-top:15px;
+			}
+			input{
+				width:188px;
+				height:30px;
+				padding:0 5px;
+				border:#ccc solid 1px;
+			}
+			#address{
+				width:343px;
+			}
+		}
+		.btn-lst{
+			margin-top:20px;
+			text-align:center;
+			a{
+				display:inline-block;
+				width:117px;
+				height:33px;
+				line-height:33px;
+				border:@orange solid 1px;
+			}
+			.submit{
+				margin-right:10px;
+				background:@orange;
+				color:@white;
+			}
+			.cancel{
+				color:@orange;
+			}
+		}
+	}
+
+	//支付结果确认
+	.pay-result{
+		position:absolute;
+		left:50%;
+		top:30%;
+		width:660px;
+		height:300px;
+		margin:-150px 0 0 -355px;
+		padding:25px;
+		border-radius:5px;
+		background:#f7f7f7;
+		h1{
+			font-size:18px;
+			color:@orange;
+		}
+		.close{
+			position:absolute;
+			right:0;
+			top:0;
+			display:inline-block;
+			width:43px;
+			height:43px;
+			background:url('@{imgUrl}img_sprite.png') 0 -24px no-repeat;
+			&:hover{
+				background-position:-43px -24px;
+			}
+		}
+		.address-info{
+			height:140px;
+			margin-top:20px;
+			padding:20px;
+			line-height:140px;
+			background:@white;
+			border:#e4eaee solid 1px;
+			font-size:13px;
+			color:#1e1e1e;
+			text-align:center;
+		}
+		.btn-lst{
+			margin-top:20px;
+			text-align:center;
+			a{
+				display:inline-block;
+				width:117px;
+				height:33px;
+				line-height:33px;
+				border:@orange solid 1px;
+			}
+			.submit{
+				margin-right:10px;
+				background:@orange;
+				color:@white;
+			}
+			.cancel{
+				color:@orange;
+			}
+		}
+	}
+}
+// 添加付费用户薅羊毛扫码弹层
+.scan-code {
+  position:absolute;
+  left:15px;
+  width:146px;
+  height:192px;
+  padding-top:60px;;
+  background:url('@{imgUrl}scan_code.png') no-repeat;
+  text-align:center;
+  &__viewdetail {
+    a {
+      display:block;
+      width:118px;
+      height:36px;
+      margin:40px auto 0;
+      background:url('@{imgUrl}view_detail.jpg') no-repeat;
+    }
+  }
+}
+// 分享
+.share-header{
+  height: 85px;
+  background: #fff;
+  border-bottom: #ff8200 solid 2px;
+  .wrap{
+    width: 1000px;
+    height: 85px;
+    margin: 0 auto;
+    .logo{
+      float: left;
+    }
+    .talk_logo{
+      display: inline-block;
+      float: left;
+      width: 150px;
+      height: 50px;
+      margin: 15px 20px 0 0;
+      background:url('@{imgUrl}log.png') no-repeat;
+    }
+    .joint{
+      display: inline-block;
+      height: 45px;
+      margin-top: 20px;
+      padding: 0 20px;
+      line-height: 20px;
+      border-left: #bfbfbf solid 1px;
+      font-style: normal;
+      font-size: 16px;
+      color: #1e1e1e
+    }
+    .home{
+      float: right;
+      margin-top: 35px;
+      font-size: 14px;
+      color: #ff8200;
+    }
+  }
+}
+.share-wrap{
+  width: 1000px;
+  margin: 20px auto;
+  padding-bottom: 45px;
+  background: #fff;
+  .topbar{
+    height: 360px;
+    background:url('@{imgUrl}share-bg.jpg') no-repeat;
+    .font{
+    	float: left;
+    	width: 590px;
+    	color: #fff;
+    	font-size: 26px;
+    	font-weight: normal;
+    	margin:55px 0 0 100px;
+    	line-height: 35px;
+    	h2 em{color: #fff000;}
+    	h3{
+    		font-size: 22px;
+    	}
+    }
+    .register{
+      float: right;
+      width: 225px;
+      height: 260px;
+      margin: 30px 30px 0 0;
+      padding: 25px 20px;
+      background: #fff;
+      border-radius: 5px;
+      .title{
+        font-size: 26px;
+        color: #1e1e1e;
+      }
+      ul{
+        margin-top: 20px;
+        li{
+          height: 33px;
+          padding: 0 7px;
+          margin-bottom: 10px;
+          border: #e7e7e7 solid 1px;
+          .icon{
+            display: inline-block;
+            float: left;
+            width: 13px;
+            margin: 10px 8px 0 0;
+            background:url('@{imgUrl}share-icon-reg.png') no-repeat;
+          }
+          input{
+            float: left;
+            width: 185px;
+            margin-top: 6px;
+          }
+        }
+        .email .icon{
+          height: 13px;
+          background-position: 0 0;
+        }
+        .tel .icon{
+          height: 16px;
+          background-position: -13px 0;
+        }
+        .password .icon{
+          height: 15px;
+          background-position: -26px 0;
+        }
+      }
+      .btn{
+        display: block;
+        margin-top: 40px;
+        padding: 10px 0;
+        font-size: 18px;
+        background: #fc373c;
+        border-radius: 5px;
+        color: #fff;
+        text-align: center;
+      }
+    }
+  }
+  .certi{
+    text-align: center;
+    h1{
+      margin: 35px 0;
+      font-size: 24px;
+      color: #1e1e1e;
+      em{
+        color: #ff8200;
+      }
+    }
+  }
+}
+//成人
+@import './adult.less';
+//青少
+@import './young.less';

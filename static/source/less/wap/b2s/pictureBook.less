@@ -1,0 +1,178 @@
+@import "modules/swiper-3.3.1.min.less";
+// 图片path
+@imgPath: '../../../images/wap/b2s/';
+//background: url("@{imgPath}start_bg.png") no-repeat;
+.disnone {
+    display: none;
+}
+
+#fontSizeLoding {
+    width: 100%;
+    min-height: 100%;
+    max-width: 640px;
+    background-color: rgba(255, 255, 255, 1);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    img {
+        width: 30px;
+        height: 30px;
+        margin-left: -15px;
+        margin-top: -15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+}
+
+.pictureBook-wrap {
+    .pictureBook-top {
+        img {
+            width: 100%;
+        }
+    }
+    .pictureBook-con {
+        .con-pic {
+            // height: 6.54rem;
+            .swiper-container{
+                .swiper-wrapper{
+                    .swiper-slide{
+                        height: 6.54rem;
+                        text-align: center;
+                        img{
+                            max-width: 100%;
+                            max-height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .con-audio {
+            height: 0.8rem;
+            margin-top: 0.3rem;
+            position: relative;
+            .audioBtn {
+                position: absolute;
+                left: 0.3rem;
+                top: 0;
+                width: 0.8rem;
+                height: 0.8rem;
+                border-radius: 50%;
+                background: #0097eb;
+                &.play {
+                    &:before {
+                        content: "";
+                        width: 0.31rem;
+                        height: 0.35rem;
+                        background: url("@{imgPath}pictureBook-02.png") no-repeat;
+                        background-size: 100%;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translateY(-50%) translateX(-50%);
+                    }
+                }
+                &.pause {
+                    &:before {
+                        content: "";
+                        width: 0.31rem;
+                        height: 0.35rem;
+                        background: url("@{imgPath}pictureBook-03.png") no-repeat;
+                        background-size: 100%;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translateY(-50%) translateX(-50%);
+                    }
+                }
+            }
+            .progressBar {
+                width: 5.7rem;
+                height: 0.12rem;
+                position: absolute;
+                left: 1.5rem;
+                top: 0.36rem;
+                .progressBac {
+                    width: 100%;
+                    height: 0.12rem;
+                    background: #e4e4e4;
+                    border-radius: 999px;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+                .speed {
+                    width: 0;
+                    height: 0.12rem;
+                    background: #f06060;
+                    border-radius: 999px;
+                    position: absolute;
+                    left: 0;
+                }
+                .drag {
+                    width: 0.48rem;
+                    height: 0.48rem;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateX(-50%) translateY(-50%);
+                    background: url("@{imgPath}pictureBook-04.png") no-repeat;
+                    background-size: 100%;
+                }
+            }
+        }
+    }
+    .pictureBook-tit{
+        line-height: 0.3rem;
+        padding: 0 0.3rem;
+        margin-top: 0.7rem;
+        font-size: 0.3rem;
+        color: #344658;
+    }
+    .pictureBook-other{
+        margin-top: 0.4rem;
+        margin-left: 0.3rem;
+        &>li{
+            float: left;
+            margin-right: 0.3rem;
+            .pictureBook-other-pic{
+                width: 2.1rem;
+                height: 2.5rem;
+                border-radius: 0.08rem;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .pictureBook-other-text{
+                line-height: 0.68rem;
+                font-size: 0.28rem;
+                color: #333;
+            }
+        }
+    }
+    .pictureBook-btn{
+        height: 1.06rem;
+        .pictureBook-btn-in{
+            width: 100%;
+            max-width: 640px;
+            height: 1.06rem;
+            line-height: 1.06rem;
+            background: #fd9b3a;
+            text-align: center;
+            font-size: 0.32rem;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            a{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

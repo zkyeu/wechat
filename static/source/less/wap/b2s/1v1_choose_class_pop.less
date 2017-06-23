@@ -1,0 +1,81 @@
+// 图片path
+@imgPath: '../../../images/wap/b2s/';
+//background: url("@{imgPath}start_bg.png") no-repeat;
+#fontSizeLoding{
+    width: 100%;
+    min-height: 100%;
+    max-width: 640px;
+    background-color: rgba(255, 255, 255, 1);
+    position: fixed;
+    top:0; 
+    z-index: 999;
+    img{
+        width: 30px;
+        height: 30px;
+        margin-left: -15px;
+        margin-top: -15px;
+        position: absolute;
+        top:50%;
+        left:50%;
+
+    }
+}
+.foreignTeachers{
+        padding: 0 0.25rem 0.6rem 0.25rem;
+        background-size: 1.96rem 1.39rem;
+        .foreignTeachers-tit{
+            padding: 0.5rem 0 0.36rem 0;
+            text-align: center;
+            font-size: 0.32rem;
+            color: #43c4ff;
+        }
+        .foreignTeachers-step{
+            display: flex;
+            &>dt{
+                width: 1.27rem;
+                padding: 0 0.18rem 0 0.09rem;
+                // float: left;
+                &>img{
+                    width: 100%;
+                }
+            }
+            &>dd{
+                // float: left;
+                flex:1;
+                padding-top: 0.04rem;
+                &>h3{
+                    margin-bottom: 0.1rem;
+                    line-height: 0.4rem;
+                    font-size: 0.28rem;
+                    color: #4e5c6f;
+                }
+                &>p{
+                    margin-bottom: 0.26rem;
+                    line-height: 0.4rem;
+                    font-size: 0.24rem;
+                    color: #8696ad;
+                    &:first-child{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        .foreignTeachers-btn{
+            margin-top: 0.4rem;
+            margin-bottom: 0.5rem;
+            line-height: 0.88rem;
+            border-radius: 999rem;
+            background:#ff6062;
+            text-align: center;
+            color: #fff;
+            font-size: 0.32rem;
+            position: relative;
+            &>a{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }

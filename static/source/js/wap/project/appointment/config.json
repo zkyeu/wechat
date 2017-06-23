@@ -1,0 +1,7 @@
+{
+	"define":[
+		"js/wap/common/*.js",
+		"js/wap/project/appointment/config.js",
+		"js/wap/mod/*.js"
+	]
+}

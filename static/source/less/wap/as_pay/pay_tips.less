@@ -1,0 +1,86 @@
+@import "module/pay_tips_public.less";
+.pay-tips-wrap {
+    height: 100%;
+    background: #f2f2f2;
+    .pay-tips-tit {
+        line-height: 58px;
+        border-bottom: 1px solid #c7c7c9;
+        background: #fff;
+        font-size: 18px;
+        color: #525252;
+        text-align: center;
+    }
+    .pay-tips-con {
+        height: 150px;
+        padding-top: 40px;
+        background: #fff;
+        text-align: center;
+        &>img {
+            width: 69px;
+            height: 69px;
+        }
+        &>p {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+            color: #1e1e1e;
+        }
+    }
+    .pay-tips-con2 {
+        height: 176px;
+        padding-top: 40px;
+        background: #fff;
+        text-align: center;
+        &>img {
+            width: 69px;
+            height: 69px;
+        }
+        .con-tips1 {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+            color: #1e1e1e;
+        }
+        .con-tips2 {
+            margin-top: 5px;
+            color: #999999;
+            font-size: 15px;
+        }
+    }
+    .pay-tips-bot {
+        padding-top: 36px;
+        border-top: 1px solid #d9d9d9;
+        text-align: center;
+        p {
+            font-size: 15px;
+            color: #999999;
+            text-align: center;
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                bottom: -22px;
+                transform: translateX(-50%);
+                border: 8px solid transparent;
+                border-top: 8px solid #c6c6c6;
+            }
+        }
+        &>img {
+            width: 45%;
+            margin-top: 26px;
+        }
+    }
+    .pay-tips-bot2 {
+        padding-top: 80px;
+        border-top: 1px solid #d9d9d9;
+        text-align: center;
+        line-height: 25px;
+        font-size: 15px;
+        color: #999999;
+        a{
+            color: #ff3e3e;
+                text-decoration: underline;
+        }
+    }
+}

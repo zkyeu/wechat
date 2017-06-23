@@ -98,8 +98,9 @@ define("articleManage",["upload","niceScroll"],function(require,exports,module){
 
         //关闭弹层
         function closeBtn() {
-            $(".close-btn ").on('click',function () {
-                $(".add-article-layer").fadeOut(380)
+            $(".close-layer-btn-right").on('click',function () {
+
+                $(".add-article-layer").fadeOut(380);
             });
         }
 

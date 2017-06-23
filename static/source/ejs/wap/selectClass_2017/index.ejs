@@ -1,0 +1,43 @@
+<% include ../common/top.ejs %>
+<body>
+	<header id="header" class="header">
+		<img src="<%= imagessrc%>head.png" alt="">
+	</header><!-- /header -->
+	<img class="t1" src="<%= imagessrc%>t1.png" alt="">
+	<img class="t2" src="<%= imagessrc%>t2.png" alt="">
+	<img class="t3" src="<%= imagessrc%>t3.png" alt="">
+	<section>
+		<form action="" method="post" accept-charset="utf-8">
+			<div class="select-box">
+					<h3 class="title">请选择宝贝的年级</h3>
+					<div class="list">
+						<div class="item active"><label><input type="radio" name="grade" value="1">小学一年级</label></div>
+						<div class="item"><label><input type="radio" name="grade" value="2">小学二年级</label></div>
+						<div class="item"><label><input type="radio" name="grade" value="3">小学三年级</label></div>
+						<div class="item"><label><input type="radio" name="grade" value="4">小学四年级</label></div>
+						<div class="item"><label><input type="radio" name="grade" value="5">小学五年级</label></div>
+						<div class="item"><label><input type="radio" name="grade" value="6">小学六年级</label></div>
+
+					</div>
+			</div>
+			<button type="submit">下一步</button>
+		</form>
+		
+		<h2 class="title2">服务小贴士</h2>
+		<dl>
+			<dt>1、为什么要选上课时间？</dt>
+			<dd>选择时间后才能正式开始课程哦！Level是和孩子年级匹配的英语水平，如有疑问咨询小5老师。</dd>
+		</dl>
+		<dl>
+			<dt>2、选班前后发现不合适怎么办？</dt>
+			<dd>选班前发现不合适，可咨询小5老师，选班后可在微信群内询问老师进行调换。开班前一天就不能再调换了哦！</dd>
+		</dl>
+	</section>
+	<div class="footer">
+		<img src="<%= imagessrc%>bottom.png" alt="">		
+	</div>
+</body>
+<script src="<%= jsPath%>jquery-1.8.2.min.js"></script>
+<script src="<%= jsPath%>flexible.js"></script>
+<script src="<%= jsPath%>index.js"></script> 
+</html>

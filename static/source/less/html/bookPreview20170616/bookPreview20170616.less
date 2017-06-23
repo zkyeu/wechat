@@ -1,0 +1,70 @@
+@charset "utf-8";
+body{font-family: "微软雅黑"}
+body,ol,ul,li,p,h1,h2,h3,h4,h5,h6,input{margin:0;padding:0;line-height: 1;}
+i,em,span,h1,h2,h3,h4,h5,h6{font-weight: normal;font-style: normal;line-height: 1;}
+li{list-style: none;}
+img{display: block;border:0;}
+a,a:link,a:visited{text-decoration: none;}
+input,textarea{outline:none;border:0;}
+.clearfix:after{display:block;clear:both;content:"";visibility:hidden;height:0} 
+.clearfix{zoom:1} 
+.width100{width:100%;}
+@imgPath: "../../../images/html/bookPreview20170616/";
+.bookPreview{
+  .product{
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+  }
+  .first{
+    opacity: 1;
+  }
+  iframe{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+  }
+  .arrow{
+    position: absolute;
+    height:100%;
+    width:66px;
+    top:0;
+    top:0;
+    cursor: pointer;
+    span{
+      display: block;
+      height:50px;
+      width:50px;
+      position: absolute;
+      top:50%;
+      margin-top:-25px;
+    }
+  }
+  .prev{
+    left:0;
+    span{
+      background: url("@{imgPath}prev.png") no-repeat left top;
+      background-size: cover;
+      left:50%;
+      margin-left:-25px;
+    }
+  }
+  .next{
+    right:0;
+    span{
+      background: url("@{imgPath}next.png") no-repeat left top;
+      background-size: cover;
+      left:50%;
+      margin-left: -25px;
+    }
+  }
+  .active{
+    background: #000;
+    opacity: 0.15;
+  }
+}

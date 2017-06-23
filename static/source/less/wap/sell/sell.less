@@ -1,0 +1,601 @@
+@import '../common/reset.less';
+@imgUrl:"../../../images/wap/sell/";
+@white:#fff;
+@titleColor:#828282;
+@infoColor:#323333;
+@orange:#ff8200;
+@red:#ff4545;
+body{
+	background:#f0f0f0;
+	font-size:1.4rem;
+}
+.sell{
+	padding-bottom:10px;
+	.header{
+		display:flex;
+		padding:1rem;
+		background:@white;
+		box-sizing:border-box;
+		.logo{
+			flex:2;
+			padding-right:1rem;
+			margin-right:1rem;
+			border-right:#e7e4d8 solid 1px;
+		}
+		.slogan{
+			flex:4;
+			font-size:1.2rem;
+			color:#231815;
+			p{
+				white-space:nowrap;
+			}
+		}
+	}
+	.semester-select,.classes-select,.level-select{
+		padding:1rem;
+		background:@white;
+		h2{
+			color:@titleColor;
+			font-size:1.3rem;
+		}
+		ul{
+			display:flex;
+			margin-top:1rem;
+			font-size:1.4rem;
+		}
+		li{
+			border-radius:0.6rem;
+		}
+		.current{
+			border-color:@orange;
+			color:@white;
+			background:@orange;
+		}
+		.disable{
+			border-color:#f0f0f0;
+			color:#f0f0f0;
+		}
+		.disable-gray {
+			background:#999;
+			color:#fff;
+		}
+		.error-tips{
+			display:inline;
+			margin-left:1rem;
+			color:@red;
+			&:before{
+				display:inline-block;
+				width:15px;
+				height:15px;
+				margin-right:0.2rem;
+				line-height:15px;
+				font-size:1.2rem;
+				color:@white;
+				border-radius:50%;
+				background:@red;
+				content:'!';
+				text-align:center;
+			}
+		}
+		.help{
+			display:inline-block;
+			width:12px;
+			height:12px;
+			margin-left:0.5rem;
+			line-height:12px;
+			font-size:1.2rem;
+			border-radius:50%;
+			border:@orange solid 1px;
+			color:@orange;
+			text-align:center;
+			font-style:normal;
+		}
+	}
+	.grade-select{
+		padding:1rem;
+		background:@white;
+		h2{
+			color:@titleColor;
+			font-size:1.3rem;
+		}
+		ul{
+			margin:0;
+			font-size:1.4rem;
+		}
+		li{
+			float:left;
+			width:20%;
+			padding:0.8rem 0;
+			margin:1rem 6% 0 0;
+			white-space:nowrap;
+			border:#cccccc solid 1px;
+			text-align:center;
+			box-sizing:border-box;
+			border-radius:0.6rem;
+			&:nth-child(4){
+				margin-right:0;
+			}
+			&:last-child{
+				margin-right:0;
+			}
+		}
+		.current{
+			border-color:@orange;
+			color:@white;
+			background:@orange;
+		}
+	}
+	.semester-select{
+		margin-top:1rem;
+		li{
+			flex:2;
+			padding:0.8rem 1.25rem;
+			margin-right:1rem;
+			white-space:nowrap;
+			border:#cccccc solid 1px;
+			text-align:center;
+			&:last-child{
+				margin-right:0;
+			}
+		}
+	}
+	.classes-select{
+		margin-top:1rem;
+		li{
+			flex:2;
+			padding:0.8rem 1.25rem;
+			margin-right:1rem;
+			white-space:nowrap;
+			border:#cccccc solid 1px;
+			text-align:center;
+			&:last-child{
+				margin-right:0;
+			}
+		}
+	}
+	.level-select{
+		margin:1rem 0 40px;
+		li{
+			flex:2;
+			padding:0.8rem 1.25rem;
+			margin-right:1rem;
+			white-space:nowrap;
+			border:#cccccc solid 1px;
+			text-align:center;
+			&:last-child{
+				margin-right:0;
+			}
+		}
+	}
+	.footer{
+		position:fixed;
+		left:0;
+		bottom:0;
+		width:100%;
+		padding:1rem 0;
+		background:#4c4c4c;
+		a{
+			display:block;
+			color:@white;
+			font-size:1.6rem;
+			text-align:center;
+		}
+	}
+	.clickable {
+		background:@orange;
+	}
+	//定制课表
+	.customize{
+		position:relative;
+		margin-bottom:30px;
+		transform:translate3D(0,0,0);
+		.c-header{
+			position:relative;
+			padding:0 5%;
+			height:40px;
+			line-height:40px;
+			background:@white;
+			font-size:1.6rem;
+			text-align:center;
+			&:after{
+				position:absolute;
+				left:0;
+				bottom:0;
+				display:block;
+				width:100%;
+				height:1px;
+				background:#d0d0d1;
+				content:'';
+				transform:scaleY(0.5);
+			}
+			.touch-area{
+				position:absolute;
+				width:20%;
+				left:5%;
+				height:100%;
+				z-index:9;
+			}
+			.arr{
+				float:left;
+				display:inline-block;
+				width:10px;
+				height:10px;
+				margin-top:15px;
+				background:@white;
+				border-left:#555 solid 1px;
+				border-top:#555 solid 1px;
+				transform:rotate(-45deg);
+			}
+		}
+		.teacher-select,.period,.time,.recommend{
+			padding:1rem;
+			background:@white;
+			font-size:1.4rem;
+			h2{
+				font-size:1.3rem;
+				color:@titleColor;
+				.help{
+					display:inline-block;
+					width:12px;
+					height:12px;
+					margin-left:0.5rem;
+					line-height:12px;
+					font-size:1.2rem;
+					border-radius:50%;
+					border:@orange solid 1px;
+					color:@orange;
+					text-align:center;
+					font-style:normal;
+				}
+			}
+			ul{
+				display:flex;
+				flex-wrap:wrap;
+				margin-top:1rem;
+			}
+			li{
+				color:#323333;
+				border:#ccc solid 1px;
+				border-radius:0.6rem;
+				box-sizing:border-box;
+				text-align:center;
+			}
+			.current{
+				border-color:@orange;
+				color:@white;
+				background:@orange;
+			}
+			.disable{
+				border-color:#f0f0f0;
+    			color:#f0f0f0;
+			}
+		}
+		.teacher-select{
+			padding:0.8rem 1rem;
+			label{
+				color:@titleColor;
+			}
+			.name{
+				color:#323333;
+			}
+			.replace{
+				float:right;
+				.icon{
+					display:inline-block;
+					width:12px;
+					height:12px;
+					margin-right:0.3rem;
+					background:url('@{imgUrl}replace.png') no-repeat;
+					background-size:100% 100%;
+				}
+			}
+		}
+		.period{
+			margin-top:1rem;
+			li{
+				padding:0.8rem 0;
+				width:31%;
+				margin:0 2.2% 2.3% 0;
+				&:last-child{
+					margin-right:0;
+				}
+			}
+
+		}
+		.time{
+			margin-top:1rem;
+			.error-tips{
+				display:none;
+				margin-left:0.5rem;
+				color:@red;
+				&:before{
+					display:inline-block;
+					width:15px;
+					height:15px;
+					margin-right:0.3rem;
+					line-height:15px;
+					border-radius:50%;
+					background:@red;
+					color:@white;
+					content:'!';
+					text-align:center;
+				}
+			}
+			.tab{
+				li{
+					position:relative;
+					width:17%;
+					margin-right:1rem;
+					padding:0.8rem 0;
+					z-index:99;
+				}
+				.default {
+					&::before {
+						position:absolute;
+						left:50%;
+						bottom:-20px;
+						display:inline-block;
+						width:12px;
+						height:12px;
+						margin-left:-6px;
+						content:'';
+						border-top:@orange solid 1px;
+						border-left:@orange solid 1px;
+						background:@white;
+						transform:rotate(45deg);
+					}
+				}
+				.current {
+					&::before {
+						position:absolute;
+						left:50%;
+						bottom:-20px;
+						display:inline-block;
+						width:12px;
+						height:12px;
+						margin-left:-6px;
+						content:'';
+						border-top:@orange solid 1px;
+						border-left:@orange solid 1px;
+						background:@white;
+						transform:rotate(45deg);
+					}
+				}
+			}
+			.time-lst{
+				position:relative;
+				margin-top:1rem;
+				border-top:@orange solid 1px;
+				.arr{
+					position:absolute;
+					left:7%;
+					top:-7px;
+					display:inline-block;
+					width:12px;
+					height:12px;
+					border-top:@orange solid 1px;
+					border-left:@orange solid 1px;
+					background:@white;
+					transform:rotate(45deg);
+				}
+				.second{
+					left:28%;
+				}
+				li{
+					width:17%;
+					margin:0 1.4% 1rem;
+					padding:0.8rem 0;
+				}
+				.current{
+					background:none;
+					border:@orange solid 1px;
+					color:@orange;
+				}
+			}
+		}
+		.recommend{
+			margin-top:1rem;
+			ul {
+				justify-content: center;
+			}
+			li{
+				width:100%;
+				margin-bottom:1rem;
+				padding:0.8rem 0;
+				font-size:1.3rem;
+			}
+			.load-more {
+				padding:0.5rem 0;
+				color:@orange;
+				text-align:center;
+			}
+		}
+	}
+	.c-footer{
+		position:fixed;
+		left:0;
+		bottom:0;
+		width:100%;
+		height:40px;
+		line-height:40px;
+		font-size:1.4rem;
+		text-align:center;
+		ul{
+			display:flex;
+		}
+		.money{
+			flex:2;
+			background:#4c4c4c;
+			color:@white;
+		}
+		.sign{
+			flex:1;
+			background:@orange;
+			color:@white;
+			a {
+				display:block;
+				color:@white;
+			}
+		}
+	}
+	// 选择老师侧边栏
+	.slider-bar-mask{
+		display:none;
+		position:absolute;
+		top:0;
+		width:100%;
+		height:100%;
+		background:rgba(0,0,0,0.65);
+		.slider-bar-wrap{
+			position:absolute;
+			top:0;
+			width:85%;
+			height:100%;
+			background:@white;
+			transform:translate3D(120%,0,0);
+			transition:transform ease 0.5s;
+		}
+		.s-header{
+			position:relative;
+			padding:0 5%;
+			height:40px;
+			line-height:40px;
+			background:@white;
+			font-size:1.6rem;
+			text-align:center;
+			&:after{
+				position:absolute;
+				left:0;
+				bottom:0;
+				display:block;
+				width:100%;
+				height:1px;
+				background:#d0d0d1;
+				content:'';
+				transform:scaleY(0.5);
+			}
+			.touch-area{
+				position:absolute;
+				width:20%;
+				height:100%;
+				z-index:9;
+			}
+			.arr{
+				float:left;
+				display:inline-block;
+				width:10px;
+				height:10px;
+				margin-top:15px;
+				background:@white;
+				border-left:#555 solid 1px;
+				border-top:#555 solid 1px;
+				transform:rotate(-45deg);
+			} 
+		}
+		.current{
+			color:@orange;
+		}
+		.unlimited{
+			position:relative;
+			&:after{
+				position:absolute;
+				left:0;
+				bottom:0;
+				display:block;
+				width:100%;
+				height:1px;
+				content:'';
+				background:#e6e6e6;
+			}
+		}
+		.unlimited,.appointed{
+			padding:0.8rem;
+			color:#828282;
+			label{
+				margin-right:1rem;
+			}
+			em{
+				color:#c5c5c5;
+			}
+		}
+		.teacher-lst{
+			position:relative;
+			&:before{
+				position:absolute;
+				left:0;
+				top:0;
+				display:block;
+				width:100%;
+				height:1px;
+				content:'';
+				background:#f2b77b;
+			}
+			li{
+				position:relative;
+				padding:1rem;
+				background:@white;
+				&:after{
+					position:absolute;
+					left:0;
+					bottom:0;
+					display:block;
+					width:100%;
+					height:1px;
+					background:#e6e6e6;
+					content:'';
+				}
+			}
+			img{
+				margin-right:1rem;
+				max-width:20%;
+				border-radius:50%;
+				border:@orange solid 1px;
+			}
+		}
+		.show{
+			transform:translate3D(18%,0,0);
+		}
+	}
+	//弹层
+	.dialog{
+		display:none;
+		position:absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+		padding:5%;
+		background:rgba(0,0,0,0.7);
+		color:@white;
+		box-sizing:border-box;
+		h2{
+			font-size:1.6rem;
+			text-align:center;
+		}
+		.close{
+			position:absolute;
+			top:2%;
+			left:0;
+			padding:3% 5%;
+			width:100%;
+			height:20px;
+			box-sizing:border-box;
+			background:url('@{imgUrl}close.png') 95% 0 no-repeat;
+			background-size:contain;
+		}
+		.info{
+			margin-top:0.5rem;
+			line-height:22px;
+			font-size:1.4rem;
+		}
+	}
+}
+.js-minidialog{
+	position:absolute;
+	width:80%;
+	margin-left:10%;
+	padding:1rem;
+	background:rgba(255,255,255,1);
+	text-align:center;
+	box-sizing:border-box;
+}

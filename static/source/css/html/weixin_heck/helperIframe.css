@@ -1,0 +1,341 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: 
+ */
+/**
+ * 默认样式
+ * @author:  liliang（liliang05@51talk.com）
+ * @update:  2017年 5月25日 星期四 18时28分35秒 CST
+ * @note:    黑鸟项目
+ */
+html,
+body {
+  width: 100%;
+}
+.w90_ {
+  width: 90vw;
+}
+.w95_ {
+  width: 95vw;
+}
+.dn {
+  display: none;
+}
+.tiyan-block {
+  font-size: 10px;
+  margin: 20px auto;
+}
+.tiyan-block .tab-list {
+  height: 32px;
+  width: 200px;
+  border: solid 1px #fcc800;
+  border-radius: 4px;
+}
+.tiyan-block .tab-list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.tiyan-block .tab-list li {
+  width: 200px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  cursor: pointer;
+}
+.tiyan-block .tab-list li.cut {
+  background-color: #fcc800;
+}
+.tiyan-block .table-block {
+  width: 100%;
+  margin-top: 20px;
+  padding-bottom: 130px;
+}
+.tiyan-block .table-block .table-control {
+  width: 100%;
+  border: solid 1px #dcdcdc;
+}
+.tiyan-block .table-block .table-control th {
+  height: 36px;
+  line-height: 36px;
+  background-color: #393939;
+  color: #fff;
+  font-size: 14px;
+  border: solid 1px #dcdcdc;
+}
+.tiyan-block .table-block .table-control td {
+  border: solid 1px #dcdcdc;
+  font-size: 12px;
+  padding: 5px 10px;
+  color: #6e6e6e;
+  text-align: center;
+}
+.tiyan-block .table-block .table-control td.col-1 {
+  min-width: 86px;
+}
+.tiyan-block .table-block .table-control td.col-2 {
+  min-width: 90px;
+}
+.tiyan-block .table-block .table-control td.col-3 {
+  min-width: 115px;
+}
+.tiyan-block .table-block .table-control td.col-4 {
+  min-width: 50px;
+}
+.tiyan-block .table-block .table-control td.col-5 {
+  text-align: left;
+}
+.tiyan-block .table-block .table-control td.col-6 {
+  min-width: 86px;
+}
+.tiyan-block .table-block .table-control td.col-7 {
+  text-align: left;
+}
+.tiyan-block .table-block .table-control td.col-8 {
+  min-width: 69px;
+}
+.tiyan-block .table-block .table-control td.col-9 {
+  min-width: 50px;
+}
+.tiyan-block .table-block .table-control td p {
+  line-height: 2;
+}
+.tiyan-block .table-block .table-control td p span {
+  color: #008eff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.tiyan-block .table-block .table-control td p span.link {
+  color: #008eff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.tiyan-block .table-block .table-control td p a {
+  color: #008eff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.tiyan-block .table-block h5 {
+  text-align: center;
+  font-size: 14px;
+  color: #969696;
+  line-height: 50px;
+}
+#smsCon::-webkit-input-placeholder {
+  color: #ccc;
+}
+.sms-layer {
+  position: absolute;
+  right: 127px;
+  width: 340px;
+  height: 200px;
+  padding: 10px 0;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.08);
+}
+.sms-layer i {
+  display: block;
+  width: 0;
+  height: 2px;
+  position: absolute;
+  top: 102px;
+  right: -11px;
+  border-top: transparent 5px solid;
+  border-right: transparent 5px solid;
+  border-bottom: transparent 5px solid;
+  border-left: #fff 8px solid;
+}
+.sms-layer textarea {
+  width: 320px;
+  height: 110px;
+  background: #fff;
+  padding: 10px;
+  resize: none;
+  line-height: 1.5;
+  font-size: 12px;
+}
+.sms-layer .btn-send {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 285px;
+  height: 35px;
+  margin: 20px auto;
+}
+.sms-layer .btn-send span {
+  width: 130px;
+  height: 38px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 38px;
+  color: #252525;
+  cursor: pointer;
+}
+.sms-layer .btn-send .send {
+  border: #fcc800 solid 1px;
+  background: #fcc800;
+}
+.sms-layer .btn-send .close {
+  border: #9c9c9c solid 1px;
+  background: #e5e5e5;
+}
+.close-layer-btn-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 35px;
+  height: 45px;
+  cursor: pointer;
+}
+.close-layer-btn-right em {
+  cursor: pointer;
+}
+.close-layer-btn-right em:before {
+  content: "";
+  position: absolute;
+  display: block;
+  right: -25px;
+  top: -5px;
+  width: 10px;
+  height: 31px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-right: #fff solid 2px;
+}
+.close-layer-btn-right em:after {
+  content: "";
+  position: absolute;
+  display: block;
+  right: -25px;
+  top: 2px;
+  width: 10px;
+  height: 31px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  border-right: #fff solid 2px;
+}
+.btn-global {
+  display: block;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  color: #252525;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.btn-global.default {
+  background-color: #fcc800;
+  border: solid 1px #fcc800;
+}
+.btn-global.default:hover {
+  background-color: #ffd533;
+  border: solid 1px #ffd533;
+}
+.btn-global.disable {
+  border: solid 1px #e5e5e5;
+  background-color: #e5e5e5;
+}
+.btn-global.disable:hover {
+  border: solid 1px #e5e5e5;
+  background-color: #e5e5e5;
+  cursor: default;
+}
+.btn-global.greey {
+  border: solid 1px #9c9c9c;
+}
+.btn-global.greey:hover {
+  background-color: #f0f0f0;
+}
+.flex-mask {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999999;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.flex-mask.dn {
+  display: none;
+}
+.helper-edit-layer {
+  position: relative;
+  width: 393px;
+  height: 221px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
+}
+.helper-edit-layer .add-remind {
+  font-size: 12px;
+  color: #252525;
+}
+.helper-edit-layer .add-remind dt {
+  float: left;
+  width: 40px;
+}
+.helper-edit-layer .add-remind dd {
+  margin-left: 40px;
+  height: 120px;
+}
+.helper-edit-layer .add-remind dd textarea {
+  border-radius: 4px;
+  border: solid 1px #dcdcdc;
+  height: 118px;
+  width: 347px;
+  resize: none;
+}
+.helper-edit-layer .add-remind .set-time {
+  margin: 20px 0;
+  line-height: 20px;
+}
+.helper-edit-layer .add-remind .set-time i {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #fff url(../../../images/html/weixin_heck/powersel.png?v=Krs157KzHG1qt7QMef8rlg%3D%3D) 0 -19px no-repeat;
+  margin-bottom: -3px;
+  cursor: pointer;
+}
+.helper-edit-layer .add-remind .set-time i.cut {
+  background-position: 0 5px;
+}
+.helper-edit-layer .add-remind .set-time .follow-time {
+  border: #dcdcdc solid 1px;
+  margin-top: -3px;
+  padding-left: 14px;
+  border-radius: 4px;
+  width: 80px;
+}
+.helper-edit-layer .helper-add-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 39px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.helper-edit-layer .helper-add-btn span {
+  width: 167px;
+}

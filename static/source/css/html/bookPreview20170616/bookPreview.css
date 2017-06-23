@@ -1,0 +1,67 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ */
+body {
+  font-family: "微软雅黑";
+}
+body,
+ol,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+i,
+em,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+}
+li {
+  list-style: none;
+}
+img {
+  display: block;
+  border: 0;
+}
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+input,
+textarea {
+  outline: none;
+  border: 0;
+}
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+.width100 {
+  width: 100%;
+}

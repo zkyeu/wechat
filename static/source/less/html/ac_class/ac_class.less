@@ -1,0 +1,179 @@
+@charset "utf-8";
+@import "../common/base.less";
+/*
+* 付费用户
+* @file：   reg.less
+* @author:  huhaili（huhaili@51talk.com）
+* @update:  2015-09-28
+* @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+*/
+body{
+  background: #fff;
+  font-size: 13px;
+}
+@imgPathProject: "../../../images/html/ac_class";
+@wColor: #999;
+@broderColor:#e8e8e8;
+@bgColor:#f2f2f2;
+@btnColor:#ff8200;
+.bg{
+  display: inline-block;
+  background: url("@{imgPathProject}/ac_bc.png") 0 0 no-repeat;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+.ac-ban{
+  float: left;
+  position: relative;
+  width: 100%;
+  border-bottom: 1px #ccc solid;
+  li{
+    float: left;
+    width: 55px;
+    cursor: pointer;
+    a{
+      float: left;
+      text-align: center;
+      width: 55px;
+      height: 1;
+      border-right: 1px #e1e1e1 solid;
+      margin:7px 0;
+      color: #999;
+      &:hover{
+        color: #333;
+      } 
+    }
+  }
+  .on{
+    color:@btnColor; 
+    a{
+      color:@btnColor; 
+    } 
+  }
+  .ac-word{
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+    top: 32px;
+    background: #fff;
+    border:1px #ccc solid;
+    padding:13px;
+    border-top:none;
+    width: 340px;
+    display: none;
+    p{
+      line-height: 22px;
+    }
+    .delete{
+     .bg;
+     float: right; 
+     background-position: -32px -22px;
+     margin-top: -10px;
+    }
+    .tra{
+      .bg;
+      position: absolute;
+      background-position: -64px -22px;
+      top: -13px;
+      right: 26px;
+    }
+  }
+  .ac-rt{
+   float: right;
+   width: 80px;
+   margin-top: 8px;
+    .bg-icon{
+      .bg;
+      background-position: -15px -24px;
+    }
+  }
+  .up-bg-icon{
+    a{
+      color: @btnColor;  
+    }
+    .bg-icon{
+      background-position: -82px -24px;   
+    } 
+  }
+}
+.ac-main{
+  li{
+    position: relative;
+    float: left;
+    height: 248px;
+    margin-top: 10px;
+    .seclet{
+      position:absolute;
+      top: 11px;
+      left: 1px;
+      width: 162px;
+      height: 182px;
+      filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#99000000', endColorstr='#99000000');
+      background-color:rgba(0,0,0,0.7);
+      padding:19px;
+      color: #fff;
+      display: none;
+      z-index: 1;
+      p{
+        line-height: 25px;
+        height: 160px;
+      }
+      .ac-btn{
+        color: #fff;
+        line-height: 30px;
+        display: block;
+        text-align: center;
+        background:@btnColor;
+        border-radius: 3px;
+      }
+      .ac-up-btn{
+        background: #e1e1e1;
+        color: @wColor;
+      }
+    }
+    .ac-li{
+      float: left;
+      width: 200px;
+      height: 248px;
+      border:1px @broderColor solid;
+      margin:11px 11px 0 0;
+      .ac-img{
+        width: 100%;
+        height: 135px;
+      }
+      h3,p{
+        font-size: 14px;
+        padding:6px 10px 5px 10px;
+        overflow: hidden;
+        height: 20px;
+      }
+      p{
+        padding:0 11px;
+        line-height: 18px;
+        font-size: 13px;
+        height: 35px;
+        color: @wColor;
+        &:last-child{
+          height: 28px;
+          line-height: 28px;
+          font-size: 12px;
+          background:@bgColor;  
+          border-top: 1px @broderColor solid;
+          margin-top: 18px;
+        }
+        .bg-icon{
+         .bg;
+         height: 10px;
+         background-position: 3px -21px; 
+        }
+        span{
+          float: right;
+        }
+      } 
+    }
+    &:hover .seclet{
+      display: block;
+    }
+  }
+}

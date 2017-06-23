@@ -1,0 +1,121 @@
+html,
+body {
+  height: 100%;
+}
+.slides {
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+   .slide {
+        width: 100%;
+        height: 100%;  
+      .pic {
+        width: 100%;
+      }
+      .gif {
+        left: 50%;
+/*        transform: translateX(-50%);
+*/      }
+      .text {
+        width: 1000px;
+        position: absolute;
+        left: 50%;
+        bottom: 5%;
+        color: #fff;
+        font-size: 24px;
+        text-align: center;
+        transform: translateX(-50%);
+        text-shadow: 0 0 10px #90d24e;
+      }  
+    }
+}
+.loading {
+    width: 100%;
+    height: 100%;
+    background-color: #8ed24d;
+    .content {
+       position: fixed;
+      top: 50%;
+      left: 50%;
+      color: #fff;
+      text-align: center;
+      transform: translate(-50%, -50%);
+      .txt {
+       font-size: 14px;
+        .progress {
+          vertical-align: top;
+          font-size: 46px;         
+        }
+        .percent {
+          display: inline-block;
+          margin-top: 5px;
+          vertical-align: top;
+        }       
+      }     
+    }
+}
+.horn {
+  display: none;
+  position: fixed;
+  z-index: 9;
+  right: 30px;
+  top: 30px;
+  width: 85px;
+  height: 85px;
+  background: url('@{imgUrl}horn.png') no-repeat 0 0 ;
+  cursor: pointer;
+}
+.close {
+  background-image: url('@{imgUrl}close.png')
+}
+.next {
+  display: none;
+  position: fixed;
+  z-index: 9;
+  right: 66px;
+  bottom: 60px;
+  width: 117px;
+  height: 106px;
+  background: url('@{imgUrl}next.png') no-repeat 0 0 ;
+
+  animation: tipsMove 2000ms infinite linear;
+}
+@keyframes tipsMove {
+  0% { transform: translate(0, 0);}
+  50% {transform: translate(20px, 20px);}
+  100% {transform: translate(0, 0);}
+}
+.guide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  background-color: rgba(00, 00, 00, 0.5) ;
+
+  .content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .monster {
+    width: 434px;
+    height: 374px;
+    background: url('@{imgUrl}monster.png') no-repeat 0 0 ;
+  }
+  .link {
+    display: block;
+    margin: 20px 0 0;
+    width: 434px;
+    height: 85px;
+    background: url('@{imgUrl}link.png') no-repeat 0 0 ; 
+        cursor: pointer;
+    &:hover {
+      background-image: url('@{imgUrl}link_hover.png');
+    };
+  }
+}

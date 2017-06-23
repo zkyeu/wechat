@@ -1,0 +1,108 @@
+// 图片path
+@imgPath: '../../../images/wap/b2s/';
+
+@charset "utf-8";
+@import "../common/base.less";
+@import "modules/public.less";
+
+.class-info-body{
+    background-color:#f5f5f5;
+    .order-class-box{
+        color:#323232;
+        font-size: 12px;
+        background-color:#fff;
+        .info-box{
+            
+            padding:20px 15px 17px;
+            
+            h1{
+                margin-bottom:5px;
+                color:#ff6b50;
+                font-size: 18px;
+                text-align: center;
+            }
+            .time-box{
+                width:230px;
+                color:#888888;
+                
+                margin: 0 auto;
+                span{
+                    display: inline-block;
+                    margin-left:19px;
+                    margin-right:19px;
+                }
+
+            }
+            .text{
+                margin-top:5px;  
+                line-height: 23px;
+            }
+            .mask{
+                margin-top:5px;
+                color:#ff6b50;
+            }
+        }
+        .tit-box{
+            height:27px;
+            line-height: 27px;
+            background-color:#00a8ff;
+            padding-left:15px;
+            h2{
+                color:#fff;
+                font-size:14px; 
+            }
+
+        }
+        .class-box{
+            padding-top:17px;
+            .class-des{
+                padding-left:15px;
+                padding-right:15px;
+                .school-name{
+                    background: url("@{imgPath}order_01.png") no-repeat;
+                    background-size: 17px;
+                    padding-left:21px;
+                }
+                .grade{
+                    margin-top:10px;
+                    span{
+                        color:#969696;
+                    }
+                }
+            }
+            .class-info{
+                border-top:1px solid #f0f0f0;
+                padding-left:15px;
+                padding-right:15px;
+                position: relative;
+                margin-top:10px;
+                height:40px;
+                line-height:40px; 
+                .class-id{
+                    color:#afafaf;
+                }
+                .time-box{
+                    background: url("@{imgPath}order_02.png") 0 13px no-repeat;
+                    padding-left:17px;
+                    background-size: 13px;
+                    right: 10px;
+                    position: absolute;
+                    top: 0;
+                    .class-time{
+                        color:#00a8ff;
+                    }
+                    .class-date{
+                        background-color:#00a8ff;
+                        color: #fff;
+                        border-radius: 5px; 
+                        padding-left: 4px;
+                        padding-right: 4px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+            
+        }
+    }
+    
+}

@@ -1,0 +1,127 @@
+<div id="player"></div>
+<div id="content">
+  <div id="aiPanel">
+    <button class="play" style="display: none"></button>
+  </div>
+</div>
+<div class="under">
+        <div class="list">
+          <ul>
+            <% for(var i=0;i<data.length;i++){%>
+              <%if(i==0){%>
+                <li data-tab="1" model="0" style="width:<%=width%>" class="on"><span>1</span><%=data[i]['key']%><em id="step">（0%）</em></li>
+              <%}else{%> 
+                <li model="<%=data[i]['model']%>" style="width:<%=width%>;<%=(i==(data.length-1))?'border-right:none':''%>" data-tab="<%=data[i]['index']%>"><span><%=i+1%></span><%=data[i]['key']%></li>
+              <%}%>
+             <%}%> 
+
+          </ul>
+        </div>
+        <div class="user-tip">
+            <div class="tip-point pl-img">内测说明</div>
+            <div class="tip-container hide">
+                <span class="rec pl-img"></span>
+                <h3>新产品：必学词汇（10分钟，上课效果翻1倍）</h3>
+                <p>通过图片猜词，实现词汇过目不忘、脱口而出；</p>
+                <p>内测期间，部分图片可能无法精准表达词汇含义，欢迎指正</p>
+                <h3>使用原有预习产品，请点击顶部导航的2、3、4模块</h3>
+            </div>
+        </div>
+        <div class="sub-class">
+        </div>
+        <div  class="ft" href="javascript:;" >
+          <i class="first-page first">第一页</i>
+          <i id="next" class="gry upGry">下一页</i>
+        </div>
+        <div class="loading-pic">
+          <i></i>
+        </div>
+        <div class="error-pic">
+          <i id="err-fresh"></i>
+          <p>加载失败了，请点击重试</p>
+        </div>
+        <div class="float-box">
+            <div class="f-cb">
+                <div class="left-tit">
+                    <div class="t1">以上图片的答案：</div>
+                    <div class="t2">请选择（必选）：</div>
+                </div>
+                <div class="right-tit">
+                    <div class="text">
+                        <div class="t1" id="en-word">a singer</div>
+                        <div class="t2" id="chn-word">一个歌手</div>
+                     </div>
+                    <div class="t3">
+                        <div class="btn1 pl-img" data-val=0 id="need"></div>
+                        <div class="btn2 pl-img" data-val=1 id="good"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="skipDialog" class="reLayer">
+          <div class="layerWord"></div>
+          <div class="layerPoi">
+            <p class="reTitle">跳过不说的话，学习效果会下降70%哦！</p>
+            <a id="wok" href="javascript:;">我要学好，我要说！</a>
+            <a id="wsorry" href="javascript:;" class="gry">跳过不说</a>
+          </div>
+        </div>
+        <div id="gradeDialog" class="reLayer">
+          <div class="layerWord"></div>
+          <div class="layerPoi" style="padding-top:80px;height:365px;">
+            <div class="grade"></div>
+            <div class="grade-btn">我明白了</div>
+          </div>
+        </div>
+        <div id="firstPageDialog" class="reLayer">
+          <div class="layerWord"></div>
+          <div class="layerPoi" style="padding-top:80px;">
+            <p class="reTitle">确定回到第一页重新学习吗?</p>
+            <p class="reTitle" style="color:#999;padding-top:10px;">此课程的学习进度将丢失</p>
+            <a id="confirm" href="javascript:;">确 定</a>
+            <a id="cancel" href="javascript:;" class="gry">取 消</a>
+          </div>
+        </div>
+
+        
+
+        <div id="countDown" class="count-down2">
+            <div class="count">3</div>
+            <div class="des">预习内容定制</div>
+        </div>
+        <div id="selectTimeDialog" class="reLayer">
+              <div class="layerWord"></div>
+              <div class="layerPoi">
+                  <p class="reTitle">小调查：您可以花费在课前预习上的时间是？</p>
+                  <span class="timeSelect" data-tag="1">10 分钟以内</span>
+                  <span class="timeSelect" data-tag="2">10 ~ 15 分钟</span>
+              </div>
+        </div>
+
+        <div class="m-dialog" id="runoff" style="display:none;">
+          <div class="in runoff">
+            <div class="hd hd2">
+              <a class="close" data-nid="{$Info.id}" href="javascript:void(0)" title="关闭"></a>
+            </div>
+            <div class="bd m-box2 f-cb">
+              <div class="f-cb">
+                <img src="/static/images/html/class_20150824/girl.png">
+                <div class="text-tit">告诉我中断使用“①必学词汇”的原因我会尽全力为你做好的！</div>
+              </div>
+              <textarea id="contentText"></textarea>
+            </div>
+            <div class="f-ft">
+               <span class="btn">已详细描述问题，提交</span>
+               <span>来自：<%=nick_name%>（<%=student_num%>）</span>
+            </div>
+          </div>
+        </div> 
+        <a class="ask" href="http://form.mikecrm.com/f.php?t=xPJ9Mp" style="width: 54px;" target="_blank">
+              <p>意 见</p>
+              <p>反 馈</p>
+        </a>
+        <a class="helper" href="http://www.51talk.com/page/detail/554" target="_blank">
+              <p>使 用</p>
+              <p>帮 助</p>
+        </a>
+</div>

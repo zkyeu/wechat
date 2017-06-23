@@ -1,0 +1,830 @@
+.centerMth{
+  width:@docWidth;
+  margin:0px auto; 
+}
+.iconImg{
+ background: url("@{imgPath}icon.png") no-repeat;
+ display: inline-block;
+}
+//登录注册模块
+
+  //登录注册模块
+.m-main{
+  // background: #0d0b00;
+  position: absolute;
+  top:-127px;
+  right: 60px;
+  float: right;
+  width: 270px;
+  //height: 350px;
+  transform-style:preserve-3d;
+  transition:0.3s all ease-out;
+  transform:perspective(1000px) rotateY(0deg);
+  z-index: 3;
+  &.turn{
+    transform:perspective(1000px) rotateY(180deg);
+  }
+  .m-reg{
+    position: absolute;
+    left: 0;top:0;
+    min-height: 350px;
+    //height: 350px;
+    background: #332a00;
+    // transform: translateZ(2);
+    z-index: 1000;
+    backface-visibility:hidden;
+    .m-tab{
+      width: 270px;
+      li{
+        float: left;
+        width: 50%;
+        height: 34px;
+        line-height: 34px;
+        color:#908f8d;
+        font-size: 16px;
+        text-align: center;
+        cursor: pointer;
+        background: #0d0b00;
+        &.crt{
+          background: #332a00;
+          color:#e0e0dd;
+          font-size: 18px;
+          cursor: default;
+        }
+      }
+    }
+    .m-ipts{
+      padding: 20px 20px 0 20px;
+      li{
+        margin-bottom: 10px;
+        border: 1px solid #e7e7e7;
+        background: #fff;
+        overflow: hidden;
+        dl{
+          width: 230px;
+        }
+        dt{
+          background:#fff url("@{imgPath}sp_login.png") no-repeat;
+          width: 22px;
+          height: 34px;
+          padding-right: 10px;
+          float: left;
+        }
+        dd{
+          width: 196px;
+          float: left;
+        }
+        .icon1{
+          background-position: 9px 11px;
+        }
+        .icon2{
+          background-position: 9px -19px;
+        }
+        .icon3{
+          background-position: 9px -49px;
+        }
+        .icon4{
+          background-position: 9px -79px;
+        }
+        &.focus{
+          border: 1px solid #ffa800;
+        }
+        &.u-error{
+          border: 1px solid #ff4444;
+          .u-err{
+            height: 20px;
+          }
+        }
+      }
+      .icon-btn{
+        border:1px #ffa800 solid;
+        dt{
+          background-color: #fff9f1;
+        }
+        .icon1{
+          background-position: -19px 11px;
+        }
+        .icon2{
+          background-position: -19px -19px;
+        }
+        .icon3{
+          background-position: -19px -49px;
+        }
+        .icon4{
+          background-position: -19px -79px;
+        }
+        dd{
+          .jsCheck{
+            background-color: #fff9f1;   
+          }
+        }
+      }
+      input{
+        display: inline-block;
+        width: 196px;
+        height: 34px;
+        line-height: 34px;
+      }
+      .u-err{
+        height: 0;
+        width: 100%;
+        overflow: hidden;
+        padding-left: 5px;
+        background: #ff4444;
+        line-height: 20px;
+        font-size: 12px;
+        color: #fff;
+        transition:height 0.5s;
+      }
+    }
+    .u-reg-btn{
+      color:#fff;
+      background: @redBtn;
+      text-align: center;
+      width: 230px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 18px;
+      border-radius: 3px;
+      cursor: pointer;
+      margin: 5px 20px 0px;
+      &:hover{
+        background: @redBtnHover;
+      }
+      &:active{
+        background: @redBtnActive;
+      }
+    }
+    .u-txt{
+      color:#fff;
+      font-size: 13px;
+      text-align: center;
+      margin:14px 0 26px;
+      em{
+        color:#f56361;
+      }
+    }
+  }
+  .m-log{
+    position: absolute;
+    left: 0;top:0;
+    //height: 350px;
+    background: #332a00;
+    transform: scaleX(-1) translateZ(-1px);
+    min-height: 350px;
+    .m-tab{
+      width: 270px;
+      li{
+        float: left;
+        width: 50%;
+        height: 34px;
+        line-height: 34px;
+        color:#908f8d;
+        font-size: 16px;
+        text-align: center;
+        cursor: pointer;
+        background: #0d0b00;
+        &.crt{
+          background: #332a00;
+          color:#e0e0dd;
+          font-size: 18px;
+          cursor: default;
+        }
+      }
+    }
+    .m-ipts{
+      padding: 20px 20px 0 20px;
+      li{
+        margin-bottom: 10px;
+        border: 1px solid #e7e7e7;
+        background: #fff;
+        overflow: hidden;
+        dl{
+          width: 230px;
+        }
+        dt{
+          background:#fff url("@{imgPath}sp_login.png") no-repeat;
+          width: 22px;
+          height: 34px;
+          float: left;
+          padding-right: 10px;
+        }
+        dd{
+          float: left;
+          width: 196px;
+        }
+        .icon1{
+          background-position: 9px 11px;
+        }
+        .icon2{
+          background-position: 9px -19px;
+        }
+        &.u-error{
+          border: 1px solid #ff4444;
+          .u-err{
+            height: 20px;
+          }
+        }
+      }
+      .icon-btn{
+        border:1px #ffa800 solid;
+        dt{
+          background-color: #fff9f1;
+        }
+        .icon1{
+          background-position: -19px 11px;
+        }
+        .icon2{
+          background-position: -19px -19px;
+        }
+        dd{
+          .jsCheck{
+            background-color: #fff9f1;   
+          }
+        }
+      }
+      input{
+        width: 196px;
+        height: 34px;
+        line-height: 34px;
+      }
+      .u-err{
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        padding-left: 5px;
+        background: #ff4444;
+        line-height: 20px;
+        font-size: 12px;
+        color: #fff;
+        transition:height 0.5s;
+      }
+    }
+    .m-safe{
+      margin: 15px 20px;
+      .u-auto{
+        float: left;
+        color:#ebeae9;
+        vertical-align: middle;
+        input{
+          outline: rgb(109, 109, 109) none 0px;
+          padding: 0;
+          margin: 0;
+        }
+      }
+      .u-forget a{
+        float: right;
+        color:#b2b2b2;
+        &:hover{
+          color: @hoverColor;
+        }
+      }
+    }
+    .u-log-btn{
+      color:#fff;
+      background: @redBtn;
+      text-align: center;
+      width: 230px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 18px;
+      border-radius: 3px;
+      cursor: pointer;
+      margin: 0 20px;
+      &:hover{
+        background: @redBtnHover;
+      }
+      &:active{
+        background: @redBtnActive;
+      }
+    }
+    .m-other{
+      padding: 20px;
+      dt{
+        padding: 14px 0;
+        color:#fff;
+        border-top: 1px dashed #999680;
+      }
+      dd{
+        background: url("@{imgPath}sp_login.png") no-repeat;
+        width: 30px;
+        height: 30px;
+        *float: left;
+        display: inline-block;
+        margin-right: 16px;
+      }
+      a{
+        display: block;
+        width: 30px;
+        height: 30px;
+      }
+      .icon-sina{
+        background-position: 0 -119px;
+      }
+      .icon-qq{
+        background-position: 0 -159px;
+      }
+    }
+  }
+}
+.m-online{
+  background: #332a00;
+  position:absolute;
+  top:-127px;
+  right: 60px;
+  width: 230px;
+  z-index: 4;
+  padding: 20px;
+  .u-hd{
+    color:#f5f5f4;
+    font-size: 16px;
+  }
+  .m-group{
+    padding-top: 20px;
+    color:#b2b2b2;
+    .u-txt{
+      margin-bottom: 8px;
+    }
+    .f-clo{
+      color:#ffa800;
+    }
+  }
+  .u-btn{
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    width: 100%;
+    background: #ffa800;
+    text-align: center;
+    font-size: 14px;
+    color:#fff;
+    border-radius: 3px;
+  }
+  .u-ft{
+    margin-top: 26px;
+    padding-top: 14px;
+    border-top: 1px dashed #999680;
+  }
+  .u-btn-2{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    background: #ff3434;
+    text-align: center;
+    font-size: 18px;
+    color:#fff5f5;
+    border-radius: 3px;
+  }
+}
+// 切换
+.sign-cha{
+    .absolute;
+    top: 238px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    .centerMth{
+      .relative;
+      width: 1100px;
+      .change{
+        .lt{
+          float: left;
+          width: 35px;
+          i{
+            .iconImg;
+            width: 35px;
+            height: 65px;
+            background-position: -110px -230px; 
+          }
+          &:hover{
+            i{
+              background-position: -75px -230px;
+            }
+          }
+        }
+        
+        .rt{
+          float: right;
+          width: 35px;
+          i{
+           .iconImg;
+           width: 35px;
+           height: 65px;
+           background-position: -35px -230px;
+          }
+          &:hover{
+            i{
+              background-position: 0 -230px; 
+            }
+          }
+        }
+      }
+      .video_play{
+        .absolute;
+        top: -10px;
+        left: 50%;
+        margin-left: -45px;
+        .video{
+          i{
+            .iconImg;
+            width: 90px;
+            height: 90px;
+            background-position: -106px -127px;  
+          }
+          &:hover{
+            i{
+              background-position: -4px -126px;   
+            }
+          }
+        }
+      }
+    }
+}
+//顶部
+.header{
+  .relative; /* 2015/12/18 青少抬头 */
+  .centerMth;
+  height: 72px;
+  padding-top: 8px;
+  .hr-lt{
+    float: left;
+    .f-csd;
+    i{
+      .iconImg;
+      float: left;
+      width: 150px;
+      height: 60px;
+      background-position: -7px 0px;
+    }
+    b{
+      float: left;
+      height: 41px;
+      line-height: 1;
+      border-left: 1px #bfbfbf solid;
+      margin:13px 0 0 11px;
+      padding-left: 13px;
+      color: @textColor;
+      .ft15;
+      span{
+        display:block;
+        margin-bottom:5px;
+        font-size:20px;
+        font-weight:600;
+      }
+    }
+    .qs-tit{
+      font-size: 20px;
+      line-height: 40px;
+    }
+  }
+  .hr-rt{
+    /*2015/12/18 青少抬头*/
+    position: absolute;
+    right: 0;
+    top: 0;
+    /*.right;*/
+    /*text-align: right;*/
+    .rt-top{
+      .tar;
+      .right;
+      margin:11px 0 0 0;
+      width: 100%;
+      ul{
+        .right;
+        margin-bottom: 5px;
+        li{
+          .left;
+          .relative;
+          z-index: 6;
+          a{
+            margin-left: 15px;
+          }
+        }
+      }
+    }
+    span{
+      display: block;
+      float: right;
+      .ft19;
+      _vertical-align: middle;
+      i{
+       .iconImg;
+        width: 16px;
+        height: 20px;
+        background-position: -189px -14px;
+        margin-right: 6px;
+        *vertical-align: middle;
+      }
+    }
+    span.rt_username{
+      font-size: 12px; 
+      float: none; 
+      display: inline-block;
+      text-overflow:ellipsis; 
+      width:110px;
+      white-space:nowrap; 
+      *white-space:nowrap; 
+      overflow:hidden; 
+      height: 14px; 
+      line-height: 19px;
+    }
+    
+  }
+}
+.weibo,.weixin{
+  .absolute;
+  z-index: 5;
+  right: -48px;
+  top:17px;
+  display: none;
+  transform:rotateY(0deg);
+  a{
+    display: block;
+    height: 51px;
+  }
+  /* &:hover{
+    transition:all 1s;
+    transform:rotateY(360deg);
+  } */
+}
+.weibo{
+  right: -45px;
+  top: 17px;
+  .iconImg;
+  width: 120px;
+  height: 51px;
+  line-height: 50px;
+  display: none;
+  .tac;
+  .ft14;
+  color: @hoverColor;
+  background-position: -210px -140px;
+}
+// 导航
+.nav{
+  background: #332a00;
+  height: 40px;
+  .absolute;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  .fm-opacity(95);
+  .menu{
+    width:1125px;
+    margin:0 auto;
+    .ft16;
+    color: @bgColor;
+    height: 40px;
+    li{
+      float: left;
+      .relative;
+      width: 125px;
+      .tac;
+      height: 40px;
+      line-height: 40px;
+      a{
+        display: block;
+        color: @bgColor;
+       &:hover{
+        background: @borderColor;
+       } 
+      }
+      .news{
+        .absolute;
+        top:-10px;
+        *top:0;
+        left: 105px;
+        z-index: 1;
+      }
+    }
+    .menu-on{
+      background: @borderColor; 
+    }
+  }
+}
+//轮播图片
+.play{
+  .relative;
+  overflow: hidden;
+  .pic{
+    width: 100%;
+    height: 520px;
+    li{
+      z-index: 0;
+      display: block;
+      width: 100%;
+      height: 520px;
+      .fm-opacity(0);
+      .absolute;
+      top: 0;
+      .p-img{
+        .absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -960px;
+      }
+    }
+    li.first{
+      z-index: 1;
+      .fm-opacity(100);
+    }
+  }
+  .switch{
+    .absolute;
+    top: 483px;
+    text-align: center;
+    left: 50%;
+    margin-left: -60px;
+    z-index: 3;
+    li{
+      float: left;
+      margin-left: 5px;
+      .iconImg; 
+      width: 20px;
+      height: 20px;
+      background-position: -16px -100px;
+      .f-csp;
+    }
+    .crt{
+      background-position: -16px -70px; 
+    }
+  }
+}
+
+//视频弹窗
+#ckplayerDialog{
+  position: fixed;
+  _position:absolute;
+  top:50%;left: 50%;
+  width: 800px;
+  height: 450px;
+  margin:-239px 0 0 -400px;
+  z-index: 999;
+  border:10px solid #fff;
+  border-top: 37px solid #fff;
+  display: none;
+  .source{
+    position: absolute;
+    top: -27px;
+    color:#999;
+    &:hover{
+      color:#999;
+    }
+  }
+  .close{
+    position: absolute;
+    position: absolute;
+    top: -49px;
+    right: -22px;
+    width: 30px;
+    height: 30px;
+    background: transparent url("@{imgPath}vedio_close.png");
+  }
+}
+//遮罩层
+#j-mask{
+  position: absolute;
+  left: 0;top:0;
+  width: 100%;
+  height: 100%;
+  background: rgb(119, 119, 119);
+  .fm-opacity(70);
+  z-index: 998;
+}
+
+//在线咨询弹窗
+.alert_online{
+  position: fixed;
+  background: url("@{imgPath}alert_online.png") no-repeat;
+  width: 613px;
+  height: 309px;
+  top:50%;left: 50%;
+  z-index: 1000;
+  margin:-155px 0 0 -306px;
+  display: none;
+  .u-close{
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    right: 6px;
+    top:4px;
+  }
+  .u-btn{
+    position: absolute;
+    display: block;
+    width: 268px;
+    height: 62px;
+    right: 45px;
+    bottom: 32px;
+  }
+}
+
+//注册登录优化---2016/3/15--张天
+.m-main{
+  .m-reg{
+    .m-ipts{
+      li{
+        dt{
+          &.icon-user{
+            background:#fff url("@{imgPath}w_username.png") 9px 13px no-repeat;
+          }
+        }
+        &.m-referral{
+          border:none;
+          background-color: transparent;
+          color: #b2b2b2;
+          .referral-code{
+            .f-csp;
+          }
+          dl{
+            display: none;
+          }
+          
+        }
+      }
+      .icon-btn{
+        .icon-user{
+          background-position:9px -13px;
+        }
+      }
+    }
+  }
+}
+//提示框
+.notice-mast-box{
+  width:100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top:0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  display: none;
+  z-index: 1040;
+}
+.m-notice{
+  position: absolute;
+  left: 50%;
+  top:276px;
+  margin-left: -231.5px;
+  z-index: 6;
+  width: 399px;
+  border-radius: 5px;
+  font-size: 16px;
+  .notice-tit{
+    height: 54px;
+    line-height: 54px;
+    padding:0 30px;
+    filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#CC000000', endColorstr='#CC000000');
+    background-color:rgba(0,0,0,0.8);
+    color: #fff;
+    border-radius: 5px 5px 0 0;
+  }
+  .notice-inner{
+    padding:22px 45px 30px;
+    border:1px solid #7f7f7f;
+    border-top:none;
+    border-radius: 0 0 5px 5px;
+    background-color: #fff;
+    position: relative;
+    z-index: 7;
+    p{
+      line-height: 30px;
+      margin-bottom: 22px;
+    }
+    .notice-sub{
+      height: 40px;
+      li{
+        float: left;
+        width: 134px;
+        height: 38px;
+        line-height: 38px;
+        text-align: center;
+        border:1px solid #ff3434;
+        background-color: #ff3434;
+        color: #fff;
+        border-radius: 3px;
+        .f-csp;
+        &.sub-left{
+          margin-right: 35px;
+          background-color: #fff;
+          color: #ff3434;
+        }
+      }
+    }
+  }
+  .notice-bg{
+    width: 100%;
+    height: 30px;
+    filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#33000000', endColorstr='#33000000');
+    background-color:rgba(0,0,0,0.2);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    z-index: 5;
+    border-radius: 0 0 5px 5px;
+  }
+}

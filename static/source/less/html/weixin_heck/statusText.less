@@ -1,0 +1,179 @@
+/**
+ * 默认样式
+ * @author:  liliang（liliang05@51talk.com）
+ * @update:  2017年01月04日 星期四 13时45分37秒 CST
+ * @note:    黑鸟项目后台中转页面样式
+ */
+
+// 图片path
+@imgMpath: "../../../images/html/weixin_heck/";
+html,body{
+    width: 100%;
+}
+.title{
+    font-size: 18px;
+    color:#252525;
+    height: 50px; line-height: 50px;
+    text-align: center;
+}
+
+.table-style{
+    text-align: center;
+}
+.table-detail {
+    width: 70vw;
+    margin: 0 auto;
+    th, td {
+        border: #f0f0f0 solid 1px;
+    }
+    thead {
+        background: #393939;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        color: #fff;
+    }
+    tbody {
+        tr {
+            background: #fff;
+            &:hover {
+                background: #ededed;
+            }
+            td {
+                line-height: 30px;
+                vertical-align: middle;
+                text-align: left;
+                color: #6e6e6e;
+                font-size: 14px;
+                padding: 0 10px;
+                &:nth-child(1) {
+                    min-width: 140px;
+                    text-align: center;
+                }
+                &:nth-child(3) {
+                    min-width: 100px;
+                    text-align: center;
+                }
+                span {
+                    display: inline-block;
+                    width: 80px;
+                    line-height: 30px;
+                    text-align: center;
+                    cursor: pointer;
+                    color: #00aeff;
+                }
+            }
+        }
+    }
+}
+
+.flex-layer{
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,.5);
+    z-index: 9;
+    &.dn{
+        display: none;
+    }
+}
+.edit-layer{
+    width: 400px;
+    height: 190px;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 20px;
+    position: absolute;
+    margin: auto;
+    top:0;
+    right:0;
+    bottom: 0;
+    left: 0;
+    h5{
+        font-size: 16px;
+        color: #ff8c00;
+        text-align: center;
+        height: 45px;
+        //line-height: 45px;
+    }
+    .status-con{
+        display: flex;
+        justify-content: space-between;
+        dt{
+            width: 73px;
+            margin-top: 3px;
+            font-size: 14px;
+        }
+        dd{
+            width: 328px;
+            textarea{
+                width: 317px;
+                border: #dcdcdc solid 1px;
+                border-radius: 4px;
+                height: 80px;
+                resize: none;
+                background: #fefefe;
+                font-size: 14px;
+                padding: 3px;
+                color: #666;
+            }
+        }
+    }
+    .btn-group{
+        display: flex;
+        justify-content: space-between;
+        width: 328px;
+        height: 40px;
+        margin:20px 0 0  72px;
+        span{
+            width: 150px;
+            height: 32px;
+            //border: #ff8c00 solid 1px;
+            //line-height: 32px;
+            //text-align: center;
+            //background-color: #ff8c00;
+            //color: #252525;
+            //border-radius: 4px;
+        }
+    }
+}
+
+/*全局btn样式*/
+.btn-global {
+    display: block;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    color: #252525;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    &.default {
+        background-color: #fcc800;
+        border: solid 1px #fcc800;
+        &:hover {
+            background-color: #ffd533;
+            border: solid 1px #ffd533;
+        }
+    }
+    &.disable {
+        border: solid 1px #e5e5e5;
+        background-color: #e5e5e5;
+        &:hover {
+            border: solid 1px #e5e5e5;
+            background-color: #e5e5e5;
+            cursor: default;
+        }
+    }
+    &.greey {
+        border: solid 1px #9c9c9c;
+        &:hover {
+            background-color: #f0f0f0;
+        }
+    }
+}

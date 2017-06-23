@@ -1,0 +1,8 @@
+{
+	"define":[
+		"js/html/common/jquery.min.js",
+		"js/html/common/sea.min.js",
+		"js/html/project/selltomany_20170417/config.js"
+	]
+}
+

@@ -1,0 +1,243 @@
+@imgUrl:"../../../images/html/north_america/";
+.course-container{
+	.banner{
+		height: 520px;
+		background:url('@{imgUrl}course-banner.jpg') center center no-repeat;
+	}
+	.common-style,.course-level{
+		padding:70px 0;
+		.wrap{
+			width:1000px;
+			margin:0 auto;
+		}
+		.title{
+			margin:0 auto;
+			font-size:40px;
+			color:#3c3c3c;
+			white-space:nowrap;
+			text-align:center;
+			&:after{
+				display:block;
+				height:20px;
+				margin-top:3px;
+				line-height:20px;
+				content:'';
+				background:url('@{imgUrl}title_sprite.png') no-repeat;
+				color:#fff;
+				font-size:14px;
+				text-align:center;
+			}
+		}
+	}
+	.study-method{
+		height:540px;
+		background:url('@{imgUrl}learning_method.jpg') center center no-repeat;
+		.wrap{
+			text-align:center;
+		}
+		.title{
+			width:400px;
+			&:after{
+				background-position:0 -103px;
+				content:'Student Approaches to Learning';
+			}
+		}
+		img{
+			margin-top:20px;
+		}
+	}
+	.course-system{
+		.title{
+			width:340px;
+			&:after{
+				background-position:0 -123px;
+				content:'Curriculum Strictly Aligned with CCSS';
+			}
+		}
+	}
+	.course-level{
+		padding: 0;
+		padding-bottom: 75px;
+		height:auto;
+		background:url('@{imgUrl}course_level.jpg') top center repeat-y;
+		background-size: cover;
+		.title{
+			padding-top: 70px;
+			width:340px;
+			&:after{
+				background-position:0 -123px;
+				content:'Leveled Courses';
+			}
+		}
+		
+		.course-con{
+			margin-top: 34px;
+			background:#fff;
+
+			.tabs{
+				margin-left: -1px;
+				height: 73px;
+				border-bottom: #f2f2f0 solid 2px;
+				position: relative;
+				.slide{
+					width: 141px;
+					height: 9px;
+					background: #54a8ff;
+					position: absolute;
+					left: 0;
+					bottom: 0;
+				}
+			}
+			.tabs li{
+				width: 141px;
+				height: 21px;
+				display: inline-block;
+				float: left;
+				text-align: center;
+				margin: 26px 0;
+				font-size: 16px;
+				border-left: #f0f0f0 solid 1px;
+				cursor: pointer;
+				span{
+					font-size: 20px;
+					padding-right: 8px;
+				}
+			}
+
+			.tabs li.selected {
+				color: #54a8ff
+			}
+			.content-box .content-item{display: none}
+			.content-box .show{display: block;}
+			.content-box .box{
+				font-size: 16px;
+				width: 800px;
+				margin: 0 auto;
+				dl{
+					margin-bottom: 22px;
+				}
+				dt{
+					margin-left: -6px;
+					font-weight: bold;
+				}
+				dd{
+					color: #787878;
+					font-size: 99%;
+					line-height: 24px;
+					margin-top: 8px;
+				}
+				a{
+					color: #54a8ff;
+					text-decoration: underline;
+				}
+			}
+			.content-box .box1{
+				margin-top: 51px;
+				dl{
+					float: left;
+					display: inline-block;
+					width: 266px;
+					
+				}
+			}
+			.content-box .box3{
+				padding-top: 20px;
+				border-top: dotted 1px #e6e6e6;
+			}
+			.bottom{
+				height: 95px;
+				position: relative;
+				.list-li{
+					text-align: center;
+					padding-top: 23px;
+				}
+				.list-li li{
+					display: inline-block;
+					width: 20px;
+					height: 20px;
+					background-color: #e6e6e6;
+					border-radius: 50%;
+					margin-left: 10px;
+					color: #fff;
+					position: relative;
+				}
+				.list-li li.selected{
+					background: #54a8ff;
+				}
+			}
+			.light-box{
+				width: 800px;
+				margin: 0 auto;
+				position: relative;
+			}
+			.lunbo{
+				width: 800px;
+				height: 453px;
+				overflow: hidden;
+				position: relative;
+				margin: 0 auto;
+				img{
+					float: left;
+					width: 800px;
+					height: 453px;
+				}
+				.box-card{
+					position: absolute;
+				}
+				
+			}
+
+			.btn{
+					height: 84px;
+					position: absolute;
+					top: 36%;
+					left: -40px;
+					right: -40px;
+					.btn-l,.btn-r{
+						background:url('@{imgUrl}lunbobtn.png')  no-repeat;
+						width: 40px;
+						height: 84px;
+						font-size: 82px;
+						color: #ccc;
+						cursor: pointer;
+						
+					}
+					.btn-l{
+						float: left;
+					}
+					.btn-r{float: right; background-position: -40px 0;}	
+					.btn-con-l,.btn-con-r{width: 150px;height: 100px;}
+					.btn-con-l img,.btn-con-r img{width: 100%;height: 100%}
+				}
+				
+		}
+	}
+	.reading{
+		text-align:center;
+		.title{
+			width:536px;
+			&:after{
+				background-position:0 -163px;
+				content:'Picture-book Reading-based Collaborative Group Classes';
+			}
+		}
+		img{
+			margin-top:20px;
+		}
+		h2{
+			margin-top:60px;
+			font-size:28px;
+			color:#3c3c3c;
+		}
+		p{
+			margin:35px 85px 0;
+			color:#848484;
+			font-size:16px;
+		}
+		em{
+			margin:0 5px;
+			color:#558dff;
+			font-size:28px;
+		}
+	}
+}

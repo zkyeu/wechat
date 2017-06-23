@@ -1,0 +1,57 @@
+<div class="g-note">
+  <div class="m-title">
+    <p>单词发声训练：点击“听”试听单词发音，点击“读”进行发音练习后，系统会自动为你打分。</p>
+    <a style="margin-left: 100px;" href="http://www.51talk.com/user/sword" target="_blank">查看生词表</a>
+  </div>
+  <div class="m-translate">
+    <%for (var i=0, len=res.total; i<len; i++) {%>
+      <div class="trans-content" <%=(i!=0 ? 'style=display:none' : '')%>>
+        <div class="trans-group">
+            <div class="title">
+                <span class="word"><%=res.words[i].title%></span>
+                <span class="spell"><%=res.words[i].content.yinb%>
+                <a class="add" add_content="<%=res.words[i].title%>" is_words="<%=res.words[i].is_words%>" add_preid="<%=res.words[i].id%>" add_courseid="<%=res.words[i].course_id%>" href="javascript:void(0)" title="添加该单词到生词本" style="background-position: <%=res.words[i].is_words != 0?'-116px -74px':'0 -74px'%>">
+                </a>
+            </div>
+            <div class="comment">
+              <p>释义:<%=res.words[i].content.explain%></p>
+              <p style="padding-left: 2em;"><%=res.words[i].content.yinj || ''%></p>
+            </div>
+            <div class="oper">
+              <span class="listen" title="听" media-audio="<%=domain1 + res.words[i].record%>"  data-index="200<%=i%>">听<i></i>
+              </span>
+              <span class="read" title="读" data-title="<%=res.words[i].title%>">读<i></i></span>
+              <span class="result"></span>
+            </div>
+      </div>
+      <div class="samples">
+        <div class="exp">例句：</div>
+        <ol>
+          <%for (var j=0; j<res.words[i].sentence.length; j++) {%>
+             <li>
+               <div class="sent">
+                  <div class="comment">
+                    <p><%=res.words[i].sentence[j].e_sentence%></p>
+                    <p style="color:#999;"><%=res.words[i].sentence[j].c_sentence%></p>
+                  </div>
+                  <div class="oper">
+                    <span class="listen" title="听" media-audio="<%=domain1 + res.words[i].sentence[j].record%>" data-index="200<%=i%><%=j%>">听<i></i></span>
+                    <span class="read" title="读" data-title="<%=res.words[i].sentence[j].e_sentence%>">读<i></i></span>
+                    <span class="result"></span>
+                  </div>
+                </div>
+              </li>
+          <%}%>
+         </div>
+       </div>
+    <%}%>
+    <%if (res.total<=1) {%>
+    </div>
+    <%}else{%>
+        <div class="trans-pages">
+          <a class="prev dis-prev" href="javascript:;" title="上一个单词">&lt;</a>
+          <span class="crt"><span id="cur">1</span>/<%=res.total%></span>
+          <a class="next" href="javascript:;" title="下一个单词">&gt;</a>
+        </div>
+      </div>
+    <%}%>     

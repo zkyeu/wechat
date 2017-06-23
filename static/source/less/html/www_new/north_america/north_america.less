@@ -1,0 +1,566 @@
+@imgPath: "../../../../images/html/www_new/";
+@titlecolor: #ccc;
+@gbcolor: #999;
+@bgColor: #fff;
+.hidden{overflow:hidden;}
+.relative{position:relative;}
+.absolute{position:absolute;}
+.tac{text-align:center;}
+.tal{text-align:left;}
+.f-csp{cursor:pointer;}
+.left{float:left;}
+.north_america{
+  body{
+    color: #333;
+  }
+  .america-width{
+    margin:0px auto;
+    width: 1200px;  
+  }
+  .america-title{
+    font-size: 38px;
+    .tac;
+    line-height: 1;
+  }
+  .america-img{margin-top:20px;}
+  // america-banner
+  .north-banner{
+    .america-width;
+    .tac;
+    padding:77px 0 78px 0;
+    .m-silder-youth{
+      .relative;
+      margin-top: 40px;
+      .m-silder-box{
+        position: relative;
+        width: 785px;
+        height: 522px;
+        margin-left: 17.5%;
+        *margin-left: 0;
+        overflow: hidden;
+        .m-silder-list{
+          position: relative;
+          width: 2355px;
+          left: 0;
+          right: 0;
+          li{
+            float: left;
+            height: 490px;
+          }
+        }
+      }
+      .u-text-icon{
+        .absolute;
+        .f-csp;
+        top: 142px;
+        width: 26px;
+        height: 49px;
+        background: url("@{imgPath}north_america/america_lt_icon.png") no-repeat;  
+      }
+      .u-next{
+        right: 120px;
+      }
+      .u-prev{
+        left: 120px;
+        background-position: -26px 0;
+      }
+      .u-dots{
+        margin-top: 38px;
+        overflow: hidden;
+        padding-left: 46%;
+        li{
+          .f-csp;
+          float: left;
+          width: 14px;
+          height: 14px;
+          border-radius: 50%;
+          background-color:@titlecolor;
+          margin:0 7px;
+        }
+        .silder-crt{background-color: #db423b;}
+      }
+    }
+  }
+  // north-ads
+  .north-ads{
+    width: 100%;
+    height: 160px;
+    background: url("@{imgPath}north_america/america_ads01.jpg") center no-repeat;
+    color: @bgColor;
+    background-attachment: fixed;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -webkit-transform: translate3D(0,0,0);
+    -moz-transform: translate3D(0,0,0);
+    -o-transform: translate3D(0,0,0);
+    -ms-transform: translate3D(0,0,0);
+    transform: translate3D(0,0,0);
+    text-align: center;
+    .tac;
+    padding-top:72px;
+    .title{
+      font-size: 20px;
+      line-height: 1;
+      margin-top: 32px;
+    }
+  }
+  // north-education
+  .north-education{
+    .tac;
+    .america-width; 
+    padding:81px 0 89px 0;
+    .edu-tit{
+      .relative;
+      height: 292px;
+      color:@gbcolor; 
+      font-size: 18px;
+      margin:32px 0 30px 0;
+      opacity: 0;
+      *opacity: 1;
+      .animation-e{
+        .absolute;
+        top: 0;
+        left: 0;
+      }
+      .tit{
+        line-height: 29px;
+        margin-bottom: 25px;
+      }
+    } 
+    .edu-list ul{
+      .hidden;
+      li{
+        .relative;
+        .left;
+        .tal;
+        width: 362px;
+        min-height: 278px;
+        margin-left: 57px;
+        &:first-child{
+          margin: 0;
+        }
+        .animation-edu01,.animation-edu02,.animation-edu03{
+          .absolute;
+          top: 0;
+          opacity: 0;
+          *opacity: 1;
+          img{
+            width: 362px;
+            height: 156px;
+          }
+          .title{
+            color: #3c3c3c;
+            font-size: 18px;
+            margin: 15px 0 10px 0;
+          }
+          .content{
+            font-size: 14px;
+            color: #848484;
+            line-height: 25px;
+          }
+        }
+      }
+    }
+  }
+  // north-service
+  .north-service{
+    .tac;
+    background-color: #f8f8f8; 
+    padding:101px 0 49px 0; 
+    .ser-list ul{
+      overflow: hidden;
+      margin-top: 75px;
+      li{
+        .left;
+        width: 190px;
+        margin-left: 62.5px;
+        &:first-child{
+          margin: 0;
+        }
+        .title{
+          font-size: 22px;
+          color: #004ea2;
+          line-height: 1;
+          margin:31px 0 10px 0;
+        }
+        .content{
+          line-height: 22px;
+          color: @gbcolor;
+        }
+      }
+    }
+  }
+  // north-learning
+  .north-learning{
+    .tac;
+    .america-width; 
+    padding-top: 95px;
+    .lear-img{
+      .relative;
+      width: 100%;
+      height: 516px;
+      padding-top: 62px;
+      background: url("@{imgPath}north_america/america_learning.jpg") center no-repeat;
+      img{opacity: 0;*opacity: 1;}
+      .america-bg02{
+        .absolute;
+        top: 51px;
+        left: 50%;
+        margin-left: -228px;
+      }
+      .america-bg01{
+        .relative;
+        width: 438px;
+        height: 437px;
+        margin-left: 383px;
+        *margin-left: 0;
+        img{
+          .absolute;  
+        }
+        .line01{
+          top: 42px;
+          left: 0;
+        }
+        .line02{
+          top:0;
+          left: 82px;
+        }
+        .line03{
+          top:60px;
+          right: 0;
+        }
+        .line04{
+          bottom:0;
+          left: 72px;
+        }
+        .m-tit01{
+          top: 5px;
+          left: 19px;
+        }
+        .m-tit02{
+          top: 5px;
+          right: 23px;
+        }
+        .m-tit03{
+          bottom: 6px;
+          right: 23px;
+        }
+        .m-tit04{
+          bottom: 5px;
+          left: 20px;
+        }
+      }
+    }
+  }
+  // north-more
+  .north-more{
+    width: 100%;
+    height: 356px;
+    background: url("@{imgPath}north_america/america_ads02.jpg") center no-repeat;
+    color: @bgColor;
+    background-attachment: fixed;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -webkit-transform: translate3D(0,0,0);
+    -moz-transform: translate3D(0,0,0);
+    -o-transform: translate3D(0,0,0);
+    -ms-transform: translate3D(0,0,0);
+    transform: translate3D(0,0,0);
+    text-align: center;
+    .tac;
+    padding-top:70px; 
+    .more-list{
+      .america-width; 
+      ul{
+        .hidden;
+        padding:0 142.5px;
+        margin-top: 50px;
+        li{
+          .left;
+          width: 233px;
+          height: 132px;
+          border:1px @bgColor solid;
+          border-radius: 18px;
+          margin-left: 104px;
+          span{display:block;}
+          .num{
+            line-height: 71px;
+            border-bottom:1px #81a6cd solid;
+            font-size: 48px;
+            margin:0 33px;
+            padding-top: 4px;
+          }
+          .name{
+            font-size: 18px;
+            margin-top: 18px;
+          }
+          &:first-child{margin:0;}
+        }  
+      } 
+    } 
+  }
+  // animation
+  .animation-hover{
+    .edu-tit{
+      -webkit-animation: fadeInUp 0.8s;
+        animation: fadeInUp 0.8s;
+          -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+    } 
+    .edu-list ul li{
+      .animation-edu01{
+        -webkit-animation: fadeInUp 1.5s;
+          animation: fadeInUp 1.5s;
+          -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      }
+      .animation-edu02{
+        -webkit-animation: fadeInUp 2s;;
+          animation: fadeInUp 2s;
+          -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      }
+      .animation-edu03{
+        -webkit-animation: fadeInUp 2.5s;
+          animation: fadeInUp 2.5s;
+          -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      } 
+    } 
+  } 
+  .north-learning .animation-hover{ 
+    .america-bg02{
+       -webkit-animation: p2_circle_middle linear .5s 2.1s;
+          animation: p2_circle_middle linear .5s 2.1s;
+            -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+    }
+    .america-bg01{
+      .line01{
+        -webkit-animation: line01 1s; 
+          animation: line01 1s;
+            -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;  
+      }
+      .line02{
+        -webkit-animation: line01 2s;
+          animation: line01 2s;
+            -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;  
+      }
+      .line03{
+        -webkit-animation: line01 2.7s;
+          animation: line01 2.7s;
+            -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;  
+      }
+      .line04{
+        -webkit-animation: line01 3.2s;
+          animation: line01 3.2s;
+            -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;  
+      }
+      .m-tit01{
+        -webkit-animation: m-tit01 1s;
+          animation: m-tit01 1s;
+            -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;  
+      } 
+      .m-tit02{
+        -webkit-animation: m-tit02 1.8s;
+          animation: m-tit02 1.8s;
+            -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;  
+      }
+      .m-tit03{
+        -webkit-animation: m-tit03 2.5s;
+          animation: m-tit03 2.5s;
+            -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;  
+      }
+      .m-tit04{
+        -webkit-animation: m-tit04 2.8s;
+          animation: m-tit04 2.8s;
+            -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;  
+      }  
+    }
+  }
+  @-webkit-keyframes fadeInUp {
+    0%,50%{
+      opacity: 0;
+        -webkit-transform: translateY(100px);
+          transform: translateY(100px)
+    }
+
+    100% {
+      opacity: 1;
+        -webkit-transform: translateY(0);
+          transform: translateY(0)
+    }
+  }
+  @keyframes fadeInUp {
+    0%,50%{
+      opacity: 0;
+        -webkit-transform: translateY(100px);
+          transform: translateY(100px)
+    }
+
+    100% {
+      opacity: 1;
+        -webkit-transform: translateY(0);
+          transform: translateY(0)
+    }
+  }
+  @-webkit-keyframes p2_circle_middle {
+    0%,50%{
+      opacity: 0;
+        -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+    }
+    100% {
+      opacity: 1;
+        -webkit-transform: rotate(720deg);
+          transform: rotate(720deg);
+    }
+  }
+  @keyframes p2_circle_middle {
+      0%,50% {
+        opacity: 0;
+          -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+      }
+      100% {
+        opacity: 1;
+          -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+      }
+  }
+  @-webkit-keyframes m-tit01 {
+      0%,50%{
+        opacity: 0;
+          -webkit-transform: translate(-45px,100px);
+            transform: translate(-45px,100px)
+                
+      }
+      100% {
+        opacity: 1;
+          -webkit-transform: translate(0);
+            transform: translate(0)
+      }
+  }  
+  @keyframes m-tit01 {
+      0%,50%{
+        opacity: 0;
+          -webkit-transform: translate(-45px,100px);
+            transform: translate(-45px,100px)
+                
+      }
+      100% {
+        opacity: 1;
+          -webkit-transform: translate(0);
+            transform: translate(0)
+      }
+  }
+  @-webkit-keyframes m-tit02 {
+      0%,50%{
+        opacity: 0;
+          -webkit-transform: translate(-100px,-80px);
+            transform: translate(-100px,-80px);
+                
+      }
+      100% {
+        opacity: 1;
+          -webkit-transform: translate(0);
+            transform: translate(0)
+      }
+  }  
+  @keyframes m-tit02 {
+      0%,50%{
+        opacity: 0;
+          -webkit-transform: translate(-100px,-80px);
+            transform: translate(-100px,-80px);       
+      }
+      100% {
+        opacity: 1;
+          -webkit-transform: translate(0);
+            transform: translate(0)
+      }
+  }
+  @-webkit-keyframes m-tit03 {
+      0%,50%{
+        opacity: 0;
+          -webkit-transform: translate(70px,-80px);
+            transform: translate(70px,-80px); 
+                
+      }
+      100% {
+        opacity: 1;
+          -webkit-transform: translate(0);
+            transform: translate(0)
+      }
+  }  
+  @keyframes m-tit03 {
+      0%,50%{
+        opacity: 0;
+          -webkit-transform: translate(70px,-80px);
+            transform: translate(70px,-80px);          
+      }
+      100% {
+        opacity: 1;
+          -webkit-transform: translate(0);
+            transform: translate(0)
+      }
+  }
+  @-webkit-keyframes m-tit04 {
+      0%,50%{
+        opacity: 0;
+          -webkit-transform: translate(120px,80px);
+            transform: translate(120px,80px); 
+                
+      }
+      100% {
+        opacity: 1;
+          -webkit-transform: translate(0);
+            transform: translate(0)
+      }
+  }  
+  @keyframes m-tit04 {
+      0%,50%{
+        opacity: 0;
+          -webkit-transform: translate(120px,80px);
+            transform: translate(120px,80px);          
+      }
+      100% {
+        opacity: 1;
+          -webkit-transform: translate(0);
+            transform: translate(0)
+      }
+  }
+  @-webkit-keyframes line01 {
+      0%,50%{
+        opacity: 0;  
+        transform: scale(0,0,0);    
+      }
+      100% {
+        opacity: 1;
+        transform:scale(1.5,0,0);
+      }
+  }  
+  @keyframes line01 {
+      0%,50%{
+        opacity: 0;  
+        transform: scale(0,0,0);    
+      }
+      100% {
+        opacity: 1;
+        transform:scale(1.5,0,0);
+      }
+  }  
+}

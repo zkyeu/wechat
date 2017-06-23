@@ -1,0 +1,102 @@
+@import "../up_class_21574/common/base.less";
+/*-- author:zhangtian pms:21574  timestamp:2016/4/19--*/
+@imgComponentsPath:"../../../components/html/my_schedule/images/";
+
+@import "../../../components/html/my_schedule/less/modules/m_s_c.less";
+@import "../../../components/html/my_schedule/less/modules/m_cont.less";
+@import "../../../components/html/my_schedule/less/modules/m_s_tips.less";
+@import "../../../components/html/my_schedule/less/modules/m_s_evaluate.less";
+@import "../../../components/html/my_schedule/less/modules/m_s_mask.less";
+@import "../../../components/html/my_schedule/less/modules/m_s_record.less";
+@import "../../../components/html/my_schedule/less/modules/tipBox.less";
+body{
+    color: #000;
+    background-color: #efefef;
+}
+.g-center{
+	/*float: left;
+	overflow:hidden;*/
+	display: inline-block;
+	.up-class-gless{
+		width: 600px;
+		padding:24px;
+		padding-bottom: 0;
+		border:1px solid #dbe2e5;
+		color: #1e1e1e;
+		background-color: #fff;
+		margin-bottom: 10px;
+	}
+}
+/*pagination 分页样式*/
+.pagination {
+    display: none;
+    padding-left: 0;
+    margin: 20px auto;
+    border-radius: 4px;
+}
+.pagination>li {
+    display: inline;
+}
+.pagination>li:first-child>a, .pagination>li:first-child>span {
+    margin-left: 0;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+.pagination>li>a, .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    line-height: 1.42857143;
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-left: -1px;
+}
+.pagination>.disabled>span, .pagination>.disabled>span:hover, .pagination>.disabled>span:focus, .pagination>.disabled>a, .pagination>.disabled>a:hover, .pagination>.disabled>a:focus {
+    color: #999;
+    background-color: #fff;
+    border-color: #ddd;
+    cursor: not-allowed;
+}
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus {
+    z-index: 2;
+    color: #fff;
+    background-color: #ff8200;
+    border-color: #ff8200;
+    cursor: default;
+}
+.pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus {
+    color: #2a6496;
+    background-color: #eee;
+    border-color: #ddd;
+}
+/*
+ 弹层radio样式
+*/
+.confirmRadio{
+    padding: 0 20px;
+    border-left: 1px solid #dbdee0;
+    border-right: 1px solid #dbdee0;
+}
+.confirmRadio li{
+    height: 24px;
+    line-height: 24px;
+}
+    
+.confirmRadio li .my-l-icon1 {
+    background-position: -110px -15px;
+}
+.confirmRadio li .my-l-icon2 {
+    background-position: -110px 0;
+}
+.confirmRadio li .my-l-icon1, .confirmRadio li .my-l-icon2 {
+    width: 12px;
+    height: 12px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.my-l-icon:hover{
+    cursor: pointer;
+}

@@ -1,0 +1,54 @@
+@charset "utf-8";
+@import "../common/reset.less";
+@imgPath: "../../../images/wap/usIntro/";
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+.usIntro{
+    min-width: 320px;
+    max-width: 640px;
+    margin:0 auto;
+    a{
+        -webkit-tap-highlight-color:transparent
+    }
+    section{
+        width: 100%;
+        .imgSection{
+            width: 100%;
+        } 
+    }
+    .videoBg{
+        position: relative;
+        padding:0 2rem 10rem;
+        width: 100%;
+        box-sizing: border-box;
+            .vPlayer{
+                position: relative;
+                div{
+                    height: 225px;
+                }
+                object{
+                    position: absolute;
+                }
+            }
+    }
+    footer{
+        height:6.5rem;
+        background:#226374;
+        padding-top:1.5rem;
+        position: fixed;
+        bottom:0;
+        left: 0;
+        width: 100%;
+        .freeEntery{
+            display: block;
+            width:27.5rem;
+            height:4.5rem;
+            background: url("@{imgPath}freeEntery.png") no-repeat center;
+            background-size:27.5rem 4.5rem;
+            margin:0 auto;
+        }
+    }
+}
+ 

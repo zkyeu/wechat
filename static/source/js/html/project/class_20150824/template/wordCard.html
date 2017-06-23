@@ -1,0 +1,74 @@
+<h3 class="pic-h3 f-cb"><span class="t2">单词卡</span><span class="t1">确认猜想 & 练习发音</span></h3>
+<div style="clear:both"></div>
+<div class="<%=(data.img.length == 0?'wordCard wordTip':'wordCard wordTip')%>" >
+  <div class="word word-new">
+    <div id="word_card">
+      <h2 id="word_content" style="cursor: pointer;" data-index="400"><%=data.record.title%></h2>
+    </div>
+    <h3 id="word_click_y"><%=  data.record.phonetic || ''%></h3>
+    <div id="word-tip">
+      <h2 id="word_click" media-audio="<%=domain + data.record.record%>" data-index="400">
+        <i class=""></i>
+      </h2>
+      <div class="soundRec">
+        <div class="recordOuter new-record">
+          <a href="javascript:;" class="<%=data.score==0?'off2':'off'%>" word_id="<%=data.id%>" media-audio="<%=domain + data.record.record%>" data-title="<%=data.record.title%>" isrecord="false"></a>
+          <a href="javascript:;" id="replay" style="display:inline-block;"  media-audio = "<%=data.record_url?'http://'+data.record_url:''%>" class="<%=data.record_url?'down':'stop'%>"></a>
+        </div>
+      <div class="rec-pro new-recPro">
+        <a href="javascript:;" class="error_warn" style="display:none">评分失败，请主人再说一次(&gt;_&lt;)</a>
+        <a href="javascript:;" class="munBer" style="<%=style%>"><%=score%></a>
+      </div>
+    </div>
+  </div>
+  
+</div>
+  <div class="wordImg compare-out">
+    <%if(data.img.length>0){%>
+        <h4 class="t1">解释</h4>
+        <p class="u-describe">
+          <%=data.record.explain || ""%>
+        </p>
+        <h4 class="t2">例句</h4>
+        <ul class="slide" id="slidLink">
+          <% for (var i=0; i<data.img.length; i++){%>
+          <li style="display: block;">
+            <img   src="<%=domain +'pre_img_thumb/' + data.img[i]%>" data-img="<%=domain + data.img[i]%>" title="轮播图片" title="轮播图片">
+          </li>
+          <%}%>
+        </ul>
+        <ul class="slidebar" id="slideLink">
+          <%for (var i=0; i<data.img.length; i++) {%>
+            <%if(data.img.length > 1){%>
+              <%if (i==0) {%>
+                <li class='on'><a href='javascript:;'></a></li>
+              <%} else {%>
+                <li><a href='javascript:;'></a></li>
+              <%}%>
+            <%}%>
+          <%}%>
+        </ul>
+        <%if(!data.sentence){%>
+        <p style="margin-top: 20px;padding-bottom: 20px;"><%= data.spell!=null ? data.spell.replace(/\[/g, '<span id="color-tips" style="background-color:#ffe8d0">').replace(/\]/g, "</span>") : ""%></p>
+        <%}else{%>
+                 <p style="margin-top: 3px;padding-bottom: 0px;">- <%= data.spell!=null ? data.spell.replace(/\[/g, '<span id="color-tips" style="background-color:#ffe8d0">').replace(/\]/g, "</span>") : ""%></p>
+                    <%for (var i=0;i<1;i++){%>
+                        <p style="margin-top: 3px;padding-bottom: 0px;">- <%= data.sentence[i].e_sentence!=null ? data.sentence[i].e_sentence.replace(/\[/g, '<span id="color-tips" style="background-color:#ffe8d0">').replace(/\]/g, "</span>") : ""%></p>
+                    <%}%>
+
+        <%}%>
+    <%}else{%>
+      <div class="word-noimg">
+        <h4 class="t1">解释</h4>
+        <p class="u-describe">
+          <%=data.record.explain || ""%>
+        </p>
+      </div>  
+    <%}%>
+    <div class="compare-box compare-box2" style="display:none;">
+          <h3 class="word-t1">确认猜想</h3>
+          <div class="word-t2">刚才猜的对不对，一目了然。</div>
+          <div class="u-btn">确 定</div>
+    </div> 
+  </div>
+</div>

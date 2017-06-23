@@ -1,0 +1,91 @@
+@import "../common/www/base.less";
+@imgPath: "../../../images/html/vide_more/";
+html,body{
+  background: #f17c13;
+}
+.more-video {
+  .topbar {
+    height:80px;
+    padding:15px 40px;
+    background:#fff;
+    box-sizing:border-box;
+    .logo {
+      float:left;
+      display:inline-block;
+      width:140px;
+      height:47px;
+      padding-right:22px;
+      border-right:#f0f0f0 solid 1px;
+      background:url('@{imgPath}video_log.png') no-repeat;
+    }
+    .name {
+      float:left;
+      height:50px;
+      margin-left:18px;
+      line-height:50px;
+      font-size:26px;
+      color:#3c3c3c;
+    }
+  }
+  .video-container {
+    position:relative;
+    height:880px;
+    width: 100%;
+    background:url('@{imgPath}video_bj.jpg') top center no-repeat;
+    overflow:hidden;
+    background-size:100% 100%;
+    .chat-wrap{
+      position:absolute;
+      right:0;
+      top:0;
+      width:420px;
+      height:880px;
+    }
+    .video-wrap {
+      .video-wrap__container {
+        position: relative;
+        width:1044px;
+        height:758px;
+        margin:25px auto 0;
+        padding:95px 12px 47px;
+        box-sizing:border-box;
+        .video-nav-img{
+          position: absolute;
+          width: 100%;
+          top: 0;
+          img{
+            width: 1044px;
+            height: 694px;
+          }
+        }
+        #playerContainer{
+          position: absolute;
+          z-index: 1;
+          top: 75px;
+          left: 24px;
+          border-radius: 12px;
+          overflow: hidden;
+          // &:before{
+          //   position: absolute;
+          //   content: "";
+          //   right: 0;
+          //   bottom: 5px;
+          //   width: 60px;
+          //   height: 25px;
+          //   background-color: #fafafa;
+          //   z-index: 20;
+          // }
+        }
+      }
+    }
+  }
+}
+// .play-border{
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 1022px;
+//   height: 576px;
+//   background-color: #fff;
+//   border-radius: 5px;
+// }

@@ -1,0 +1,99 @@
+//官网突出公开课宣传
+.ml_mask{
+    height:200px;
+    width: 100%;
+    background: #000;
+    filter:alpha(opacity=80) ;
+    opacity: 0.8;
+    position: fixed;
+    // bottom:-200px;
+    z-index: 9990;
+    _position:absolute;
+    bottom:-200px;
+    _top: ~'expression(eval(document.documentElement.clientHeight-100+document.documentElement.scrollTop))';
+  }
+.mk_mask{
+    height:200px;
+    width: 100%;
+    position: fixed;
+    bottom:-200px;
+    //  background: #000;
+    // filter:alpha(opacity=80) ;
+    // opacity: 0.8;
+    z-index: 9991;
+    _position:absolute;
+    bottom:-200px;
+    _top: ~'expression(eval(document.documentElement.clientHeight-100+document.documentElement.scrollTop))';
+    .mk_contain{
+      width:1000px;
+      height:160px;
+      margin:0 auto;
+      padding:22px 0;
+      position: relative;
+      .mk_close{
+        height:34px;
+        width:34px;
+        position: absolute;
+        right:-100px;
+        top:50%;
+        margin-top:-17px;
+        cursor: pointer;
+      }
+      .mk_border{
+        height:160px;
+        float:left;
+        width:1px;
+        background: #fff;
+        filter:alpha(opacity=20) ;
+        opacity: 0.2;
+      }
+      .mk-module{
+        float:left;
+        height:160px;
+        width:499px;
+        cursor: pointer;
+        dt{
+          width:220px;
+          height:160px;
+          float:left;
+        }
+        dd{
+          width:279px;
+          height:160px;
+          float:left;
+          position: relative;
+          p{
+            font-size: 14px;
+            line-height:26px;
+            color:#fff;
+            span{
+              color:#ffa800;
+              font-size:16px;
+            }
+          }
+          em{
+            padding:11px 80px;
+            color:#fff;
+            font-size:18px;
+            line-height: 18px;
+            background: #ff4c4c;
+            border-radius: 4px;
+            -moz-border-radius:4px;
+            position:absolute;
+            bottom:5px;
+            left:0;
+          }
+        }
+      } 
+      // .mk_adult{
+      //   border-right:1px solid #fff;
+      // }
+      .mk_junior{
+         width: 454px;
+         padding-left:44px;
+         dd{
+          width:232px;
+         }
+      }
+    }
+  }

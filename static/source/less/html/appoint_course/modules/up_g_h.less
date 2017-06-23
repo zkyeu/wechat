@@ -1,0 +1,293 @@
+@charset "utf-8";
+//这些代码写的够恶心，恶心的要死
+.g-in{width:@docWidth;margin:0 auto}
+.g-hd{
+  margin-bottom: 17px;
+  border-bottom: solid 3px #f8ebde;
+}
+.g-bd{
+  min-height: 500px;
+  padding-bottom: 40px;
+}
+.g-mn{
+  float: left;
+  width: 650px;
+  padding-left: 10px;
+  &.gw{ width: 860px; }
+  &.gs{
+    float: none;
+    width: inherit;
+    padding-left: 0;
+  }
+  &.gl{
+    width: 790px;
+    padding-left: 0;
+  }
+}
+.g-mnc{}
+.g-mncw{
+  background-color: #fff;
+  border: 1px solid @borderColor;
+}
+.g-sd-l{
+  float: left;
+  width: 130px;
+}
+.g-sd-r{
+  float: right;
+  width: 200px;
+  _width: 198px;
+  font-size: 12px;
+}
+.g-ft{
+  font-size: 12px;
+  background-color: #878787;
+  
+  .links{
+    .f-ib;
+    height: 16px;
+    line-height: 16px;
+    padding-top: 21px;
+    padding-bottom: 12px;
+    vertical-align: middle;
+    a,i{ float: left; }
+    a{
+      color: #fff;
+      &:hover{ color: @hoverColor; }
+    }
+    i{
+      margin-left: 14px;
+      margin-right: 16px;
+      color: #6c6c6c;
+    }
+  }
+  .trust{
+    .f-ib;
+    vertical-align: middle;
+    padding-right: 1px;
+    margin-top: 11px;  
+    a{
+      background: url('@{imgPath}xx.png') no-repeat;
+      width: 135px;
+      height: 45px;
+      display: block;
+      .f-fl;
+      margin-left: 23px;
+    }
+    .t1{
+      background-position: 0 -2px;
+    }
+    .t2{
+      background-position: -158px -2px;
+    }
+    .t3{
+      background-position: -317px -2px;
+    } 
+    .t4{
+      background-position: -475px -2px;
+    }           
+
+  }
+  .piped{
+    .f-ib;
+    height: 16px;
+    line-height: 16px;
+    padding: 23px 0 25px 23px;
+    color: #333333;
+    a{
+      color: #333333;
+      &:hover{ text-decoration: underline; }
+    }
+    i{
+      margin-left: 5px;
+      margin-right: 2px;
+      color: #6c6c6c;
+    }
+    #cnzz_stat_icon_1253020514{
+      position: relative;
+      top: -2px;
+      z-index: 0;
+    }
+  }
+}
+.m-top{    
+  height: 33px;
+  line-height: 32px;
+  font-size: 12px;
+  background-color: #f3f3f3;
+  border-bottom: solid 1px #e3e3e3;
+  a{
+    color: #818181;
+    &:hover{ color: @hoverColor; }
+  }
+}
+//顶部登录登出
+.m-menu{
+  height: 33px;
+  a{
+    .f-ib;
+    _position: relative;
+    _top: 2px;
+    vertical-align: top;
+  }
+  .num{
+    .f-ib;
+    _margin-top:8px;
+    margin-left: 1px;
+    width: 14px; height: 14px;
+    line-height: 14px;
+    font-size: 11px;
+    color: #fff;
+    text-align: center;
+    background: url('@{imgPath}sprites.gif') -268px -258px no-repeat;
+  }
+  .tips{
+    .f-ib;
+    height: 23px;
+    line-height: 23px;
+    padding-left: 10px;
+    margin-top: 5px;
+    margin-left: 4px;
+    background-color: #fff;
+    background: url('@{imgPath}sprites.gif') -126px -304px no-repeat;
+    .txt{
+      float: left;
+      color: @hoverColor;
+      background: url('@{imgPath}sprites.gif') -100px -354px repeat-x;
+      _position: relative;
+      _top: 0;
+    }
+    .close{
+      float: left;
+      width: 24px;
+      height: 23px;
+      .f-ti; .f-csp;
+      background: url('@{imgPath}sprites.gif') -150px -304px repeat-x;
+    }
+  }
+  i{
+    .f-ib;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: #d0d0d0;
+    vertical-align: top;
+  }
+}
+//顶部右侧链接
+.m-link{
+  _position: relative;
+  _top: 2px;
+  li{
+    float: left;
+    padding-left: 20px;
+  }
+  a{ display: block; }
+  .follow{
+    position: relative;
+    ul{
+      display: none;
+      position: absolute;
+      top: 29px; left: 0;
+      _top: 27px;
+      width: 88px;
+      height: 64px;
+      padding-top: 5px;
+      _padding-top: 6px;
+      background: url('@{imgPath}sprites.gif') -506px -416px no-repeat;
+    }
+    li{
+      height: 32px;
+      line-height: 32px;
+      padding-left: 32px;
+    }
+  }
+}
+//logo & nav & phone
+.m-head{
+  .f-ff1;
+  background-color: #fff;
+  border-bottom: solid 2px @hoverColor;
+  .g-in{ height: 84px; }
+  .logo{
+    float: left;
+    margin-top: 17px;
+    background: url('@{imgPath}sprites.gif') -27px -165px no-repeat;
+    a{
+      display: block;
+      width: 147px;
+      height: 50px;
+      .f-ti;
+    }
+  }
+  .nav{
+    .f-ib;
+    float: left;
+    margin-top: 26px;
+    margin-left: 36px;
+    font-size: 16px;
+    li{
+      float: left;
+      margin-left: 1px;
+      margin-right: 1px;
+    }
+    a{
+      display: block;
+      _display: inline-block;
+      height: 40px;
+      line-height: 30px;
+      padding: 0 18px 18px;
+    }
+    .crt a{
+      color: @hoverColor;
+      background: url('@{imgPath}sprites.gif') center -182px no-repeat;
+    }
+  }
+  .ad-sm{
+    float: right;
+    width: 198px;
+    height: 40px;
+    margin: 22px 35px 0 0;
+    background: url('@{imgPath}ad-198_40.png') 0 0 no-repeat;
+    .f-ti;
+    &.m_1{ background-position: 0 -1px; }
+    &.m_2{ background-position: 0 -43px; }
+    &.m_3{ background-position: 0 -85px; }
+    &.m_4{ background-position: 0 -127px; }
+    &.m_5{ background-position: 0 -169px; }
+    &.m_6{ background-position: 0 -211px; }
+    &.m_7{ background-position: 0 -253px; }
+    &.m_8{ background-position: 0 -295px; }
+    &.m_9{ background-position: 0 -337px; }
+    &.m_10{ background-position: 0 -379px; }
+    &.m_11{ background-position: 0 -421px; }
+    &.m_12{ background-position: 0 -463px; }
+  }
+  .file_style{float: right;width: 200px; height: 40px;margin: 22px 35px 0 0;background: url('@{imgPath}invite_friend.png') 0 0 no-repeat;}
+  .contact{
+    float: right;
+    _width: 174px;
+    margin-top: 18px;
+    color: @linkColor;
+    .bizapp{
+      height: 20px;
+      line-height: 20px;
+      font-size: 12px;
+      text-indent: 18px;
+      background: url('@{imgPath}sprites.gif') -200px -164px no-repeat;
+    }
+    .phone{
+      height: 26px;
+      line-height: 26px;
+      padding-top: 2px;
+      font-size: 20px;
+      letter-spacing: 1px;
+      text-indent: 18px;
+      background: url('@{imgPath}sprites.gif') -200px -188px no-repeat;
+    }
+  }
+}
+// 20170401
+.m-head .addFile{
+  background: url('@{imgUrl}nat_top.jpg') no-repeat;
+}
+

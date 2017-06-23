@@ -1,0 +1,327 @@
+// 图片path
+@import "modules/b2s_path.less";
+
+.clear-fix:after{
+    content: "";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    clear: both;
+}
+.clear_f{
+    zoom: 1;
+}
+
+.AC_introduce{
+    width:830px;
+    height:505px;
+    margin:0 auto;
+    background:#f2f2f2;
+    border-radius: 10px;
+    padding:50px 20px 20px 20px;
+    position: relative;
+    
+}
+.AC_close{
+        width: 18px;
+        height:18px;
+        position: absolute;
+        right:20px;
+        top:15px;
+        background:url("@{imgMpath}AC_close.png");
+        cursor: pointer;
+    }
+    .AC_content{
+        width:790px;
+        height:410px;
+        background:#fff;
+        padding:0px 20px 20px 20px;
+        .pay_suc_code{
+            width: 140px;
+            height: 140px;
+            background:url("@{imgMpath}pay_suc_code_bg.png") no-repeat;
+            margin:0px auto 0;
+            padding:12px 18px;
+            img{
+                width: 140px;
+                height: 140px;
+            }
+        }
+        .notice_code{
+            font-size: 14px;
+            padding-top: 15px;
+            text-align: center;
+        }
+        .introduce_cont{
+              padding:20px 0px;
+              border-bottom:1px solid #dee9f0;
+              height:150px;
+              img{
+                 float:left;
+              }
+              .intro_right{
+                width:320px;
+                height:150px;
+                float:left;
+                margin-left:20px;  
+
+                .intro_right_text1{
+                  width:320px;
+                  border-bottom:1px dashed #dee9f0;
+                  .text_fudao{
+                    padding:10px 0 10px 0;
+                    font-weight:900;
+                    font-size: 18px;
+                  }
+                  .text_intr{
+                    padding-bottom:20px;
+                    font-size: 14px;
+                    color: #012345;
+                  }
+                }
+                .intro_right_text2{
+                  position: relative;
+                  padding-top:12px;
+                  P{
+                    line-height: 47px;
+                    span{
+                      color:#ff4800;
+                      font-weight:900;
+                      font-size: 22px;
+                    }
+                  }
+                }
+              }
+             
+            }
+        .introduce_cont_setTime{
+              padding:20px 0px;
+              border-bottom:1px solid #dee9f0;
+              height:150px;
+              position: relative;
+              .countTime{
+                position: absolute;
+                right:20px;
+                top:40px;
+                width:100px;
+                height:60px;
+                .time{
+                    width:100px;
+                    height:30px;
+                    background:#f5f5f5;
+                    border:1px solid #d1d1d1;
+                    border-radius: 3px;
+                    color:#b1b1b1;
+                    text-align: center;
+                    line-height: 30px;
+                    font-size: 20px;
+                }
+                .text{
+                    color:#ff5010;
+                    font-size: 12px;
+                    line-height: 30px;
+                    text-align: center;
+                }
+              }
+              img{
+                 float:left;
+              }
+              .intro_right{
+                width:320px;
+                height:150px;
+                float:left;
+                margin-left:20px;    
+                .intro_right_text1{
+                  width:320px;
+                  border-bottom:1px dashed #dee9f0;
+                  .text_fudao{
+                    padding:10px 0 10px 0;
+                    font-weight:900;
+                    font-size: 18px;
+                    line-height: 45px;
+                  }
+                  .text_intr{
+                    padding-bottom:20px;
+                    font-size: 14px;
+                    color: #012345;
+                  }
+                }
+                .intro_right_text2{
+                  position: relative;
+                  padding-top:12px;
+                  .before_price{
+                    color:#577a9e;
+                    text-decoration:line-through;
+                  }
+                  P{
+                    line-height: 35px;
+                    span{
+                      color:#ff4800;
+                      font-weight:900;
+                      font-size: 22px;
+                    }
+                  }
+                }
+              }
+             
+            }
+        .set_meal{
+            padding-bottom:30px;
+          p{
+            padding:20px 0 10px 0;
+            font-size: 16px;
+          }
+          ul{
+            li{
+              height:40px;
+              line-height: 40px;
+              background:url("@{imgMpath}radu.png") left center no-repeat;
+              padding-left: 18px;
+              font-size: 14px;
+              span{
+                color:#59595a;
+                font-size:12px;
+              }
+            }
+          }
+        }
+        .suc_pay{
+            width:600px;
+            //height:185px;
+            padding-top:55px;
+            /*border-bottom:1px solid #dee9f0;*/
+            padding-bottom:10px;
+            margin:0px auto ;
+            .success-des{
+                    //border-bottom:1px solid #dfdfdf;
+                    padding-left:135px;
+                    i{
+                        width:60px;
+                        height:60px;
+                        display:block;
+                        position: relative;
+                        top: -67px;
+                        left: -80px;
+
+
+                        background: url("@{imgMpath}ac_icons.png") -200px 0 no-repeat;
+                    }
+                    .sucess-tit{
+                        font-size:28px;
+                        color:#000;
+                    }
+                    .sucess-info{
+                        color:#012345;
+                        span{
+                            color:#ff4200;
+                            font-size: 16px;
+                        }
+                    }
+                } 
+            .suc_pay_text1{
+                color:#000;
+                font-size: 30px;
+                background:url("@{imgMpath}bg_suc.png") no-repeat;
+                height:70px;
+                line-height: 70px;
+                padding-left:95px;
+                margin-bottom:20px;
+            }
+            .suc_pay_cont{
+                line-height: 65px;
+                padding:0 25px;
+                height:65px;
+                text-align: center;
+                overflow: hidden;
+                font-size: 18px;
+            }
+
+        }
+    }
+    .AC_a{
+        width:140px;
+        height:35px;
+        line-height: 35px;
+        text-align: center;
+        display: block;
+        background:#ff8200;
+        font-size: 18px;
+        color:#fff;
+        border-radius: 3px;
+        margin:20px auto;
+      }
+     /* 微信支付*/
+    .wei_text{
+        line-height: 35px;
+        font-size: 14px;
+        height:35px;
+        width:100%;
+        padding-left:25px;
+        border-bottom:1px solid #dee9f0;
+        padding-top:25px;
+        margin-bottom:20px;
+        span{
+            color:#ff4200;
+        }
+        i{
+            font-size: 12px;
+        }
+    }
+    .wei_text1{
+        padding-left:10px;
+        color:#6ce17b;
+        font-size: 20px;
+        /*float:left;
+        width: 150px;*/
+        span{
+            color:#012345;
+            padding-left:320px;
+            font-size: 20px;
+        }
+    }
+    .wei_code{
+        float:left;
+        width:380px;
+        height:300px;
+        border-right:1px solid #dee9f0;
+        /*margin-bottom: 35px;*/
+        
+        span{
+            font-size: 12px;
+            color:#646464;
+            display: inline-block;
+            text-align: center;
+            width:100%;
+        }
+        .bg_code{
+            width: 172px;
+            height:168px;
+            background:url("@{imgMpath}bg_code.png") no-repeat;
+            margin:45px auto 20px;
+            img{
+                width:140px;
+                height:140px;
+                margin:15px;
+            }
+        }
+    }
+    .weixin_right{
+        position: relative;
+        width:295px;
+        height:290px;
+        float:left;
+        padding:20px 0 0 90px;
+        li{
+            margin-top:25px;
+        }
+        span{
+            padding-left:20px;
+        }
+        a{
+            position: absolute;
+            right:0;
+            bottom: 0;
+        }
+    }

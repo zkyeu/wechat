@@ -1,0 +1,766 @@
+@charset "utf-8";
+body{
+    font-family: "微软雅黑";
+}
+a{
+    text-decoration: none;
+}
+
+ul,li{
+    list-style: none;
+}
+img{
+    border: 0;
+    display: block;
+}
+h1,h2,h3{
+    font-weight: normal;
+}
+
+@import "../common/base.less";
+@import "../common/www/w_header.less";
+@import "../common/www/w_footer.less";
+@imgPath: "../../../images/html/studyDay/";
+@bgColor: #efefef;
+@fontSize: 13px;
+@textColor: #999;
+@linkColor: #000;
+@hoverColor: #ff8200;
+@borderColor: #dbdee0;
+.f-ib{display:inline-block;*display:inline;*zoom:1;}
+.f-csp{cursor:pointer;}
+.fm-radius(@radius:50%){-webkit-border-radius:@radius;-moz-border-radius:@radius;border-radius:@radius;}
+.clearfix:after{
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.container{
+    .btnMore{
+        width: 258px;
+        height: 58px;
+        margin: 0 auto;
+        display: block;
+        color: #fff;
+        font-size: 24px;
+        line-height: 48px;
+        text-align: center;
+        background: url('@{imgPath}labels.png') 0px -177px no-repeat;
+    }
+    .banner{
+        height: 700px;
+        background: url('@{imgPath}banner.jpg') center center no-repeat;
+        .links{
+            width: 650px;
+            margin: 0 auto;
+            padding-top: 450px;
+            font-size: 0;
+            a{
+                display: inline-block;
+                width: 130px;
+                height: 140px;
+                margin-right: 40px;
+            }
+            .last{
+                margin-right: 0;
+            }
+        }
+    }
+    .contentBg{
+        height: 3627px;
+        background: url('@{imgPath}content.jpg') center center no-repeat;
+        .content{
+            width: 1000px;
+            margin:0 auto;
+            .part1{
+                background-color: #c90d03;
+                height: 724px;
+                padding-top: 12px;
+                position: relative;
+                .snow1{
+                    position: absolute;
+                    left: 90px;
+                    top: -32px;
+                    width: 856px;
+                    height: 221px;
+                    background: url('@{imgPath}snow1.png') no-repeat;
+                }
+                .title{
+                    margin: 0 auto 10px;
+                    width: 425px;
+                    height: 83px;
+                    background: url('@{imgPath}title1.png') no-repeat;
+                }
+                .lotteryBox{
+                    width: 960px;
+                    margin: 0 auto;
+                    position: relative;
+                    padding-top: 50px;
+                    .prizeDetail{
+                        width: 500px;
+                        .prizeList{
+                            height: 244px;
+                            background-color: #f35a2a;
+                            overflow: hidden;
+                            .prizeTitle{
+                                color: #fed70d;
+                                font-size: 24px;
+                                line-height: 56px;
+                                height: 56px;
+                                padding-left: 34px;
+                            }
+                            .dots{
+                                height: 7px;
+                                background: url('@{imgPath}dots.png') no-repeat;
+                            }
+                            .nameList{
+                                margin-left: 32px;
+                                background: url('@{imgPath}liBg.png') 0px 14px no-repeat;
+                                li{
+                                    font-size: 18px;
+                                    line-height: 36px;
+                                    color: #fff;
+                                    padding-left: 28px;
+                                }
+                            }
+                        }
+                        .rule{
+                            padding-top: 15px;
+                            background-color: #eb4916;
+                            padding-left: 32px;
+                            .ruleList{
+                                color: #ffd647;
+                                font-size: 13px;
+                                line-height: 18px;
+                            }
+                            .more{
+                                display: block;
+                                color: #ffd647;
+                                font-size: 16px;
+                                margin: 20px auto;
+                                width: 100px;
+                                padding-bottom:20px; 
+                            }
+                        }  
+                    }
+                    .lottery{
+                        position: absolute;
+                        right: 0;
+                        top:20px;
+                        width: 462px;
+                        height: 464px;
+                        background: url('@{imgPath}lottery_bg.png') no-repeat;
+                        .prizeBox{
+                            width: 394px;
+                            height: 400px;
+                            margin: 32px auto;
+                            overflow: hidden;
+                            .prizes{
+                                width: 400px;
+                                li{
+                                    float: left;
+                                    margin-right: 6px;
+                                    margin-bottom: 1px;
+                                    background: url('@{imgPath}prize_bg.png') 0px -136px no-repeat;
+                                    span{
+                                        display: inline-block;
+                                        width: 127px;
+                                        height: 132px;
+                                        background: url('@{imgPath}prizes.png') 0px 0px no-repeat;
+                                    }
+                                    .prize1{
+                                        background-position: 20px 32px;
+                                    }
+                                    .prize2{
+                                        background-position: -128px 20px;
+                                    }
+                                    .prize3{
+                                        background-position: -266px 20px;
+                                    }
+                                    .prize4{
+                                        background-position: 20px -112px;
+                                    }
+                                    .prize5{
+                                        background: url('@{imgPath}prize_bg.png') 0px -274px no-repeat;
+                                        cursor: pointer;
+                                    }
+                                    .prizeActive{
+                                        background: url('@{imgPath}prize_bg.png') 0px -412px no-repeat;
+                                    }
+                                    .prize6{
+                                        background-position: -258px -108px;
+                                    }
+                                    .prize7{
+                                        background-position: 28px -238px;
+                                    }
+                                    .prize8{
+                                        background-position: -110px -240px;
+                                    }
+                                    .prize9{
+                                        background-position: -256px -240px;
+                                    }
+                                }
+                                .active{
+                                    background: url('@{imgPath}prize_bg.png') no-repeat;
+                                }
+                            }
+
+                        }
+                        
+                    }
+                }
+                .btnMore{
+                    margin-top: 70px;
+                }
+
+            }
+            .part2{
+                background-color: #ff6316;
+                height: 910px;
+                position: relative;
+                .snow2{
+                    position: absolute;
+                    left: -20px;
+                    top: -16px;
+                    width: 873px;
+                    height: 63px;
+                    background: url('@{imgPath}snow2.png') no-repeat;
+                }
+                .blank{
+                    height: 60px;
+                }
+                .title{
+                    margin: 0 auto 10px;
+                    width: 423px;
+                    height: 58px;
+                    background: url('@{imgPath}title2.png') no-repeat;
+                }
+                .classBox{
+                    width: 100%;
+                    position: relative;
+                    .label{
+                        width: 209px;
+                        height: 39px;
+                        font-size: 22px;
+                        line-height: 36px;
+                        color: #fffc00;
+                        text-align: center;
+                        margin-left: -6px;
+                        margin-bottom: 10px;
+                        background: url('@{imgPath}labels.png') -376px -178px no-repeat;
+                    }
+                    .classList{
+                        li{
+                            float: left;
+                            position: relative;
+                            width: 470px;
+                            margin-left: 20px;
+                            margin-bottom: 20px;
+                            background-color: #fff;
+                            img{
+                                width: 210px;
+                                height: 156px;
+                                margin-right: 25px;
+                                float: left;
+                            }
+                            .item{
+                                width: 226px;
+                                float: left;
+                                .desc{
+                                    padding-top: 16px;
+                                    font-size: 22px;
+                                    line-height: 30px;
+                                }
+                                .price{
+                                    line-height: 36px;
+                                    span{
+                                        vertical-align: middle;
+                                    }
+                                    .old{
+                                        color:#b1b1b1;
+                                        font-size: 14px;
+                                        text-decoration: line-through;
+                                    }
+                                    .cur{
+                                        font-size: 24px;
+                                        color: #ff2728;
+                                    }
+                                }
+                            }
+                            .buy{
+                                position: absolute;
+                                right: 10px;
+                                bottom: 10px;
+                                width: 98px;
+                                height: 34px;
+                            }
+                            .active{
+                                background: url('@{imgPath}buy.jpg') no-repeat;
+                            }
+                            .hover2{
+                                background: url('@{imgPath}cart.jpg') no-repeat;
+                            }
+                        }
+                        .por{
+                            position: relative;
+                            .half{
+                                width: 88px;
+                                height: 88px;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                background: url('@{imgPath}half_price.png') no-repeat;
+                            }
+                        }
+                    }
+                }
+                .btnMore{
+                    margin-top: 40px;
+                }
+            }
+            .part3{
+                background-color: #ffa200;
+                height: 820px;
+                position: relative;
+                .snow3{
+                    position: absolute;
+                    right: -20px;
+                    top: -16px;
+                    width: 282px;
+                    height: 61px;
+                    background: url('@{imgPath}snow3.png') no-repeat;
+                }
+                .blank{
+                    height: 57px;
+                }
+                .title{
+                    margin: 0 auto;
+                    width: 346px;
+                    height: 76px;
+                    background: url('@{imgPath}title3.png') no-repeat;
+                }
+                .intro{
+                    margin: -12px auto 45px;
+                    width: 791px;
+                    height: 153px;
+                    font-size: 24px;
+                    color: #fff;
+                    text-align: center;
+                    background: url('@{imgPath}labels.png') left top no-repeat;
+                    p{
+                        padding-top: 48px;
+                        padding-left: 80px;
+                        line-height: 94px;
+                    }
+                }
+                .gift{
+                    width: 872px;
+                    height: 311px;
+                    margin: 0 auto;
+                    background: url('@{imgPath}gift.png') left top no-repeat;
+                }
+                .btnMore{
+                    margin-top: 72px;
+                }
+
+            }
+            .part4{
+                background-color: #ffcc00;
+                height: 1100px;
+                position: relative;
+                .snow4{
+                    position: absolute;
+                    left: 130px;
+                    top: -16px;
+                    width: 285px;
+                    height: 41px;
+                    background: url('@{imgPath}snow4.png') no-repeat;
+                }
+                .blank{
+                    height: 45px;
+                }
+                .title{
+                    margin: 0 auto;
+                    width: 506px;
+                    height: 92px;
+                    background: url('@{imgPath}title4.png') no-repeat;
+                }
+                .classBox{
+                    width: 880px;
+                    margin: 30px auto 30px;
+                    overflow: hidden;
+                    .classList{
+                        width: 900px;
+                        li{
+                            float: left;
+                            width: 236px;
+                            padding: 22px;
+                            margin-right: 20px;
+                            margin-bottom: 20px;
+                            background-color: #fff;
+                            img{
+                                width: 236px;
+                                height: 178px;
+                                display: block;
+                                margin-bottom: 12px;
+                            }
+                            p{
+                                font-size: 14px;
+                                line-height: 24px;
+                                color: #333333;
+                                span{
+                                    font-weight: bold;
+                                }
+                            }
+                            .price{
+                                font-size: 0px;
+                                margin-bottom: 15px;
+                                span{
+                                    vertical-align: middle;
+                                    line-height: 34px;
+                                }
+                                .new{
+                                    color: #ff2728;
+                                    font-size: 24px;
+                                    margin-right: 10px;
+                                }
+                                .old{
+                                    font-size: 14px;
+                                    color: #b1b1b1;
+                                    text-decoration: line-through;
+                                }
+                            }
+                            .order{
+                                height: 38px;
+                                line-height: 38px;
+                                width: 190px;
+                                text-align: center;
+                                background-color: #ff4224;
+                                color: #fff;
+                                display: block;
+                                border-radius: 20px;
+                                margin: 15px auto 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+body{
+    position: relative;
+}
+.mask{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.7;
+    filter:alpha(opacity=70);
+    z-index: 999;
+    display: none;
+}
+
+.prizeLog{
+    position: fixed;   
+    left:50%;
+    top:50%; 
+    width: 380px;
+    height: 170px;
+    margin-left:-190px;    
+    margin-top:-85px; 
+    border-radius: 10px;  
+    z-index: 1000; 
+    background-color: #fff;
+    display: none;
+    .front{
+        width: 100%;
+        height: 100%;
+        background: url('@{imgPath}logBg.png') right bottom no-repeat;
+        position: relative;
+        .btn{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            width: 36px;
+            height: 36px;
+            background: url('@{imgPath}closeBtn.png') right bottom no-repeat;
+        }
+        .yesLog{
+            padding-left: 30px;
+            padding-top: 40px;
+            color: #333333;
+            display: none;
+            h3{
+                font-size: 16px;
+                line-height: 36px;
+            }
+            p{
+                font-size: 24px;
+                line-height: 36px;
+            }
+        }
+        .noLog{
+            padding-left: 55px;
+            padding-top: 60px;
+            font-size: 18px;
+            display: none;
+        }
+    }
+}
+.dialog{
+    display: none;
+    width: 812px;
+    height: 588px;
+    position: fixed;   
+    left:50%;
+    top:50%; 
+    text-align: center;   
+    background: url('@{imgPath}prizeDialog.png') left top no-repeat;       
+    margin-left:-406px;    
+    margin-top:-294px;   
+    z-index: 1000; 
+    .box{
+        position: relative;
+        left: 160px;
+        top: 186px;
+        width: 450px;
+        height: 300px;
+        text-align: center;
+        .close{
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: 28px;
+            top: -60px;
+        }
+        .title{
+            color: #5e4000;
+            margin-bottom: 56px;
+            font-size: 18px;
+        }
+        .detail{
+            img{
+                display: none;
+                margin: 0 auto;
+            }
+        }
+    } 
+}
+
+//购物车
+.m-cart{
+  z-index: 10000;
+  position: fixed;
+  right: -251px;
+  top: 54px;
+  _position: absolute;
+  _top: ~'expression(eval(document.documentElement.clientHeight+document.documentElement.scrollTop-552))';
+  //_top: ~'expression(eval(document.documentElement.clientHeight+document.documentElement.scrollTop-this.offsetHeight-40))';
+  .cart-hd{
+    .f-csp; .f-usn;
+    position: absolute;
+    top: 50%; left: -36px;
+    width: 36px;
+    height: 127px;
+    margin-top: -63px;
+    background: url('@{imgPath}cart-bg.gif') 0 0 no-repeat;
+    em{
+      position: absolute;
+      left: 0; bottom: 11px;
+      width: 100%;
+      font-size: 12px;
+      font-weight: bold;
+      color: #ff5252;
+      text-align: center;
+    }
+  }
+  .cart-bd{
+    float: left;
+    width: 251px;
+    background-color: #fff;
+    .title{
+      position: relative;
+      height: 28px;
+      line-height: 28px;
+      padding-top: 8px;
+      padding-bottom: 6px;
+      font-size: 14px;
+      color: @hoverColor;
+      .u-pages{
+        position: absolute;
+        top: 12px; right: -6px;
+        font-size: 12px;
+      }
+    }
+  }
+  .cart-in{
+    width: 220px;
+    // height: 496px;
+    height: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid @hoverColor;
+    border-right: none;
+  }
+  .products{
+    position:relative;
+    overflow:hidden;
+    height: 267px;
+    .jsWrap{
+      position: absolute;
+      top: 0px; left: 0px;
+      width: 100%;
+    }
+  }
+  .product{
+    padding-top: 6px;
+    padding-bottom: 9px;
+    line-height: 1.5;
+    border-top: 1px solid @borderColor;
+    &:hover,&.hover{ background-color: @bgColor; }
+    .name{
+      padding-top: 6px;
+      color: @linkColor;
+      a{
+        float: right;
+        color: #ccc;
+        &:hover{ text-decoration: underline;}
+      }
+    }
+    .valid{ padding-top: 3px; }
+    .added{
+      padding-top: 3px;
+      .u-ckb{
+        .f-ib;
+        margin: 2px 6px 0 0;
+        _margin-top: 1px;
+        vertical-align: middle;
+      }
+      .u-txt{
+        height: 18px;
+        line-height: 18px;
+      }
+      a{
+        margin-left: 4px;
+        color: #3e93cc;
+        &:hover{ text-decoration: underline;}
+      }
+    }
+    .total{
+      height: 18px;
+      padding-top: 8px;
+      overflow: hidden;
+      color: #ff5252;
+      text-align: right;
+      em{
+        .f-ib;
+        padding-left: 8px;
+        background: url('@{imgPath}cart-bg.gif') 0 -132px no-repeat;
+      }
+    }
+    .s-fc6:hover{ text-decoration: underline; }
+  }
+  .differ{
+    padding-top: 8px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    border-top: 1px solid @borderColor;
+    em{
+      padding-left: 8px;
+      background: url('@{imgPath}cart-bg.gif') 0 -163px no-repeat;
+    }
+  }
+  .total-orders{
+    height: 20px;
+    padding-top: 6px;
+    margin-top: 8px;
+    color: @linkColor;
+    text-align: right;
+    em{
+      .f-ib;
+      position: relative;
+      top: 1px;
+      height: 20px;
+      line-height: 20px;
+      padding-left: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #ff5252;
+      background: url('@{imgPath}cart-bg.gif') 0 -192px no-repeat;
+    }
+  }
+  .total-orders-stagin{
+    height: 60px;
+    padding-top: 6px;
+    margin-top: 8px;
+    color: @linkColor;
+    text-align: left;
+    em{
+      .f-ib;
+      position: relative;
+      top: 1px;
+      height: 20px;
+      line-height: 20px;
+      padding: 18px 0 23px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #ff5252;
+    }
+  }
+  .submit{
+    margin-top: 18px;
+    margin-bottom: 20px;
+    text-align: right;
+    .button{
+      .f-ib; .f-csp; .fm-radius(2px);
+      width: 105px;
+      height: 35px;
+      line-height: 35px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #fff;
+      text-align: center;
+      background-color: #ff5252;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,292 @@
+{
+    "state": 1,
+    "info": "",
+    "data": [
+        {
+            "type": "baseinfo",
+            "name": "LeiText",
+            "level": "8",
+            "course": "¾­µäÓ¢ÓïÇàÉÙ°æ Level 8 >> µÚÒ»µ¥Ôª ÈËÎï´«¼Ç Biographies >> µÚ¶þ¿Î ÍøÇò¹Ú¾üÀîÄÈ Tennis Champion Li Na"
+        },
+        {
+            "type": "communication",
+            "mainTitle": "Communication Skilll",
+            "data": [
+                {
+                    "key": "Pronunciation",
+                    "star": 0
+                },
+                {
+                    "key": "Grammar",
+                    "star": 0
+                },
+                {
+                    "key": "Vocabulary Range",
+                    "star": 0
+                },
+                {
+                    "key": "Fluency",
+                    "star": 0
+                },
+                {
+                    "key": "Listening Strategy",
+                    "star": 0
+                }
+            ]
+        },
+        {
+            "type": "level",
+            "mainTitle": "Choose level",
+            "data": [
+                {
+                    "key": 1,
+                    "checked": false
+                },
+                {
+                    "key": 2,
+                    "checked": false
+                },
+                {
+                    "key": 3,
+                    "checked": false
+                },
+                {
+                    "key": 4,
+                    "checked": false
+                },
+                {
+                    "key": 5,
+                    "checked": false
+                },
+                {
+                    "key": 6,
+                    "checked": false
+                }
+            ]
+        },
+        {
+            "type": "stage",
+            "mainTitle": "Choose Stage",
+            "data": [
+                {
+                    "key": "Beginner",
+                    "checked": false,
+                    "sublevel": [
+                        {
+                            "level": 0,
+                            "checked": false
+                        },
+                        {
+                            "level": 1,
+                            "checked": false
+                        },
+                        {
+                            "level": 2,
+                            "checked": false
+                        },
+                        {
+                            "level": 3,
+                            "checked": false
+                        }
+                    ]
+                },
+                {
+                    "key": "Elementary",
+                    "checked": false,
+                    "sublevel": [
+                        {
+                            "level": 4,
+                            "checked": false
+                        },
+                        {
+                            "level": 5,
+                            "checked": false
+                        },
+                        {
+                            "level": 6,
+                            "checked": false
+                        }
+                    ]
+                },
+                {
+                    "key": "Intermediate",
+                    "checked": true,
+                    "sublevel": [
+                        {
+                            "level": 7,
+                            "checked": false
+                        },
+                        {
+                            "level": 8,
+                            "checked": true
+                        },
+                        {
+                            "level": 9,
+                            "checked": false
+                        }
+                    ]
+                },
+                {
+                    "key": "Upper Intermediate",
+                    "checked": false,
+                    "sublevel": [
+                        {
+                            "level": 10,
+                            "checked": false
+                        },
+                        {
+                            "level": 11,
+                            "checked": false
+                        },
+                        {
+                            "level": 12,
+                            "checked": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "note",
+            "mainTitle": "Personalized Note to Your Student",
+            "content": null
+        },
+        {
+            "type": "communication",
+            "mainTitle": "Communication Skilll",
+            "data": [
+                {
+                    "key": "Participation",
+                    "star": 0
+                },
+                {
+                    "key": "Speaking",
+                    "star": 0
+                },
+                {
+                    "key": "Listening",
+                    "star": 0
+                },
+                {
+                    "key": "Reading",
+                    "star": 0
+                }
+            ]
+        },
+        {
+            "type": "pronunciation",
+            "mainTitle": "Pronunciation",
+            "keyWords": [
+                {
+                    "value": "badminton",
+                    "checked": false
+                },
+                {
+                    "value": "coach",
+                    "checked": false
+                },
+                {
+                    "value": " tennis",
+                    "checked": false
+                },
+                {
+                    "value": "finals ",
+                    "checked": false
+                },
+                {
+                    "value": " victory",
+                    "checked": false
+                },
+                {
+                    "value": " success  ",
+                    "checked": false
+                }
+            ],
+            "soundmark": [
+                {
+                    "value": "badminton Ó¢ ['b?dm?nt&#40;?&#41;n]   ÃÀ ['b?dm?nt?n]"
+                },
+                {
+                    "value": "coach Ó¢ [k??t?]   ÃÀ [kot?]"
+                },
+                {
+                    "value": " tennis Ó¢ ['ten?s]   ÃÀ [?ten?s]"
+                },
+                {
+                    "value": "finals  Ó¢ ['fain?lz]"
+                },
+                {
+                    "value": " victory Ó¢ ['v?kt&#40;?&#41;r?]   ÃÀ ['v?kt?ri]"
+                },
+                {
+                    "value": " success   Ó¢ [s?k'ses]   ÃÀ [s?k's?s]"
+                }
+            ]
+        },
+        {
+            "type": "Grammar / Syntax",
+            "mainTitle": "Pronunciation",
+            "data": [
+                {
+                    "incorrect": null,
+                    "correct": null
+                },
+                {
+                    "incorrect": null,
+                    "correct": null
+                }
+            ]
+        },
+        {
+            "type": "Assessment",
+            "mainTitle": "Assessment",
+            "evaluation": null,
+            "suggestion": "Give time to look through the lesson material before coming into class. That way you are prepared with your vocabulary and you can ask questions. What's more is that you can also practice making your own examples.",
+            "optionMore": null,
+            "evaluationLevel": [
+                {
+                    "value": "A+",
+                    "checked": false
+                },
+                {
+                    "value": "A",
+                    "checked": false
+                },
+                {
+                    "value": "A-",
+                    "checked": false
+                },
+                {
+                    "value": "B+",
+                    "checked": false
+                },
+                {
+                    "value": "B",
+                    "checked": false
+                }
+            ],
+            "weakness": [
+                {
+                    "value": "A+",
+                    "checked": false
+                },
+                {
+                    "value": "A",
+                    "checked": false
+                },
+                {
+                    "value": "A-",
+                    "checked": false
+                },
+                {
+                    "value": "B+",
+                    "checked": false
+                },
+                {
+                    "value": "B",
+                    "checked": false
+                }
+            ]
+        }
+    ]
+}

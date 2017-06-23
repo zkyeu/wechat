@@ -1,0 +1,42 @@
+<a class="recommand disableDrag" href="/efl/operationFile?classify=2&course_id=<%=courseid%>" target="_blank"></a>
+<div class="waiting"></div>
+<div class="nav-tab disableDrag">
+    <div class="list list-<%=count%> f-cb">
+        <ul>
+            <% for(var i=0;i<data.length;i++){%>
+                <% if(i==0){%>
+                  <li class="on" data-tab="<%=data[i]['index']%>" model="<%=data[i]['model']%>">
+                    <%=data[i]['key']%>
+                  </li>
+                <%} else {%>
+                  <li data-tab="<%=data[i]['index']%>" model="<%=data[i]['model']%>">
+                    <%=data[i]['key']%>
+                  </li>
+                <%}%>
+            <%}%>
+        </ul>
+    </div>
+</div>
+<div class="sub-class"></div>
+<div class="m-dialog" id="runoff" style="display:none;">
+  <div class="in runoff">
+    <div class="hd hd2">
+      <a class="close"   href="javascript:void(0)" title="关闭"></a>
+    </div>
+    <div class="bd m-box2 f-cb">
+      <div class="f-cb">
+        <img src="<%=staticPath%>/images/html/class_2017/girl.png">
+        <div class="text-tit" style="width:400px;padding-top:30px;">
+          主人，不要放弃我！！<br/>
+          请告诉我本次没学完<①必学词汇>的原因，<br/>
+          奴婢为您改还不行吗，呜呜... T o T
+        </div>
+      </div>
+      <textarea id="contentText"></textarea>
+    </div>
+    <div class="f-ft">
+       <span class="btn">已详细描述问题，提交</span>
+       <span>来自：<%=nick_name%>（<%=student_num%>）</span>
+    </div>
+  </div>
+</div>

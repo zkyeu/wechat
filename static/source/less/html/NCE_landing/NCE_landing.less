@@ -1,0 +1,196 @@
+@import "../common/www/base.less";
+@import "../common/www/w_header.less";
+@import "../common/www/w_footer.less";
+@imgPathImg: "../../../images/html/NCE_landing/";
+.nec_main{
+  .nce_banner{
+    height:550px;
+    width:100%;
+    background:url("@{imgPathImg}nce_banner.jpg") no-repeat center top;
+  }
+  .nce_triangle{
+    height:386px;
+    width: 1000px;
+    margin:0 auto;
+    background:url("@{imgPathImg}nce_triangle.png") no-repeat center 90px;
+    margin-bottom:30px;
+    position:relative;
+    .nce_triangle_tit{
+      font-size:30px;
+      color:#1e1e1e;
+      text-align: center;
+      font-weight:normal;
+    }
+    .nce_btn{
+      padding:16px 122px;
+      background:#ff9e00;
+      color:#fff;
+      font-size:32px;
+      border-radius: 8px;
+      -moz-border-radius:8px;
+      position: absolute;
+      right:0;
+      bottom:12px;
+    }
+    .nce_txt1{
+      position:absolute;
+      right:120px;
+      top:68px;
+      font-size: 24px;
+      color:#333;
+      i{
+        color:#ff4444;
+        font-size:60px;
+      }
+    }
+    .nce_txt2{
+      position:absolute;
+      right:198px;
+      bottom:200px;
+      font-size:22px;
+      color:#333;
+      i{
+        color:#ff4444;
+      }
+    }
+    .nce_txt3{
+      position:absolute;
+      right:22px;
+      bottom:154px;
+      color:#ff9e00;
+      font-size:16px;
+    }
+  }
+  .nce_advantage{
+    height:864px;
+    width:100%;
+    .nce_advantage_bg{
+      height:864px;
+      width:100%;
+      background:url("@{imgPathImg}nce_advantage.jpg") no-repeat center top;
+      padding-top:92px;
+      .nce_advantage_tit{
+        font-size:40px;
+        color:#1e1e1e;
+        text-align: center;
+        font-weight:normal;
+      }
+    }
+  }
+  .nce_book{
+    height:650px;
+    width: 100%;
+    margin-top:-18px;
+    background:url("@{imgPathImg}nce_center.jpg") no-repeat center top;
+    .nce_center{
+      height:616px;
+      width: 100%;
+      background:url("@{imgPathImg}nce_float.png") no-repeat center top;
+      padding-top:34px;
+      position:relative;
+      .nce_pic{
+        height:409px;
+        width: 729px;
+        position:absolute;
+        left:50%;
+        margin-left:-384px;
+        top:132px;
+        li{
+          position: absolute;
+          display:none;
+        }
+        .nce_pic1{
+          display: block;
+        }
+      }
+      .nce_centerIn{
+        width:1000px;
+        height:616px;
+        margin:0 auto;
+        position:relative;
+          p{
+            font-size: 40px;
+            color:#1e1e1e;
+            text-align: center;
+          }
+          i{
+            display:block;
+            height:94px;
+            width:94px;
+            background:url("@{imgPathImg}nce_icon.png") no-repeat left top;
+            position:absolute;
+            left:0;
+            top:246px;
+            cursor: pointer;
+          }
+          .nce_right{
+            background:url("@{imgPathImg}nce_icon.png") no-repeat right top;
+            left:auto;
+            right:30px;
+          }
+      }
+    }
+  }
+  .nce_NCE{
+    height:550px;
+    width:100%;
+    background: #eee;
+    position: relative;
+    p{
+      font-size:40px;
+      color:#1e1e1e;
+      text-align: center;
+    }
+    .nce_NCE3{
+      width:1000px;
+      height:550px;
+      margin:0 auto;
+      position: relative;
+      .n_left{
+        position:absolute;
+        left:0;
+        bottom: 120px;
+      }
+      .n_center{
+        position:absolute;
+        left:50%;
+        margin-left:-155px;
+        bottom: 120px;
+      }
+      .n_right{
+        position: absolute;
+        right:0;
+        bottom: 120px;
+      }
+    }
+    .nce_radius{
+      position: absolute;
+      top:-82px;
+      height:82px;
+      width: 100%;
+      background:url("@{imgPathImg}nce_radius.png") no-repeat center top; 
+    }
+  }
+  .nce_bottom{
+    height:328px;
+    width:100%;
+    background:url("@{imgPathImg}nce_bot.jpg") no-repeat center top; 
+   .nce_bottomIn{
+    width:1000px;
+    height:328px;
+    margin:0 auto;
+    position: relative;
+     a{
+      color:#fff;
+      font-size: 20px;
+      padding:15px 75px;
+      background-color: #ff8201;
+      border-radius: 8px;
+      -moz-border-radius:8px;
+      position:absolute;
+      right:160px;
+      top:180px;
+    }
+   }
+  }
+} 

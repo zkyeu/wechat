@@ -1,0 +1,235 @@
+// 图片path
+@imgPath: '../../../images/wap/b2s/';
+//background: url("@{imgPath}start_bg.png") no-repeat;
+.disnone{
+    display: none;
+}
+#fontSizeLoding{
+    width: 100%;
+    min-height: 100%;
+    max-width: 640px;
+    background-color: rgba(255, 255, 255, 1);
+    position: fixed;
+    top:0; 
+    z-index: 999;
+    img{
+        width: 30px;
+        height: 30px;
+        margin-left: -15px;
+        margin-top: -15px;
+        position: absolute;
+        top:50%;
+        left:50%;
+
+    }
+}
+.invited_speakers-wrap{
+    .top_img{
+        img{
+            width: 100%;
+        }
+    }
+    .choose_box{
+        padding-top: 0.4rem;
+        .title{
+            letter-spacing:2px;
+            width: 2.66rem;
+            padding-left: 0.8rem;
+            height: 0.6rem;
+            line-height: 0.6rem;
+            font-size: 0.3rem;
+            color: #fff;
+            background: url("@{imgPath}invited_speakers_mes_1.png") no-repeat right top;
+            background-size: 4.96rem 0.6rem;
+        }
+        .choose_list{
+            padding:0.4rem 0.4rem 0 0.4rem;
+            p{
+                background:#f0f0f0;
+                position: relative;
+                font-size: 0.28rem;
+                color: #333333;
+                height: 0.8rem;
+                line-height: 0.8rem;
+                border-radius: 100px;
+                padding:0 0.35rem;
+                box-sizing: border-box;
+                margin-bottom: 0.3rem;
+                em{
+                    width: 1.2rem;
+                    display: inline-block;
+                }
+                .choose_list-input{
+                    display: block;
+                    width: 4.8rem;
+                    height: 0.28rem;
+                    line-height: 0.28rem;
+                    padding: 0.26rem 0;
+                    font-size: 0.28rem;
+                    color: #777777;
+                    background: #f0f0f0;
+                    position: absolute;
+                    top: 0;
+                    left: 1.5rem;
+                }
+                .choose_list-input2{
+                    display: block;
+                    width: 1.9rem;
+                    height: 0.28rem;
+                    line-height: 0.28rem;
+                    padding: 0.26rem 0;
+                    font-size: 0.28rem;
+                    color: #777777;
+                    background: #f0f0f0;
+                    position: absolute;
+                    top: 0;
+                    left: 1.5rem;
+                }
+                .choose_list-btn{
+                    width: 2.56rem;
+                    height: 0.8rem;
+                    background: #3fa9f7;
+                    border-radius: 999px;
+                    line-height: 0.8rem;
+                    text-align: center;
+                    font-size: 0.28rem;
+                    color: #fff;
+                    position: absolute;
+                    top: 0;
+                    right: -2.86rem;
+                }
+            }
+            .choose_list-bg1{
+                
+            }
+            .choose_list-bg2{
+                width: 3.84rem;
+            }
+            button{
+                width: 100%;
+                height: 0.8rem;
+                line-height: 0.8rem;
+                text-align: center;
+                background:#3fa9f7;
+                color: #fff;
+                font-size: 0.32rem;
+                border-radius: 999px;
+            }
+        }
+    }
+    .title_show{
+        width: 100%;
+        margin:1.15rem 0 0.75rem 0;
+    }
+    .title_show2{
+        width: 100%;
+        margin-top: 1.15rem;
+    }
+    .speaker{
+        padding: 0 0.4rem;
+        .introduce{
+            background:#ebf6fe;
+            border-radius: 10px;
+            padding:0.4rem 0.1rem 0.4rem 0.2rem;
+            position: relative;
+            img{
+                width: 2rem;
+                height: 2rem;
+                position: absolute;
+                right: 0.3rem;
+                top:0.3rem;
+            }
+            p{
+                font-size: 0.24rem;
+                color: #333;
+                line-height: 0.5rem;
+            }
+            .title{
+                color:#1293f2;
+                font-size: 0.36rem;
+            }
+        }
+    }
+    .speak_intr{
+        padding:0 0.7rem;
+        p{
+            color:#333333;
+            font-size: 0.24rem;
+            line-height: 0.54rem;
+        }
+        .time{
+            width: 4.70rem;
+            height: 0.8rem;
+            text-align: center;
+            line-height: 0.8rem;
+            background: #ebf6fe;
+            margin: 0.5rem auto;
+            color:#008bf2;
+            font-size: 0.28rem;
+            text-align: center;
+            line-height: 0.8rem;
+            border-radius: 999px;
+        }
+        .iocn{
+            padding-left: 0.3rem;
+            position: relative;
+            &:before{
+                content: "";
+                display: block;
+                width: 0.12rem;
+                height: 0.12rem;
+                background: #37a7fa;
+                position: absolute;
+                left: 0;
+                top:0.2rem;
+                border-radius: 999px;
+            }
+        }
+    }
+    .last{
+        font-size: 0.2rem;
+        color: #333;
+        padding: 0.9rem 0.45rem 0.25rem 0;
+        text-align: right;
+    }
+    .load_null{
+        height: 1.2rem;
+    }
+    .load{
+        position: fixed;
+        max-width: 640px;
+        bottom: 0;
+        img{
+            width: 100%;
+        }
+        a{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: block;
+            left: 0;
+            top:0;
+        }
+    }
+    .appPrompt {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        z-index: 9999;
+        width: 100%;
+        max-width: 640px;
+        text-align: center;
+        span{
+            display: inline-block;
+            max-width: 90%;
+            line-height: 0.4rem;
+            padding: 0.4rem;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 0.16rem;
+            text-align: center;
+            font-size: 0.24rem;
+            color: #fff;
+        }
+    }
+}

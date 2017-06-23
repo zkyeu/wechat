@@ -1,0 +1,476 @@
+
+
+@import "../common/www/base.less";
+@import "../common/www/w_header.less";
+@import "../common/www/w_footer.less";
+// 成人
+@import "../www/modules/w_adult.less";
+// 成人结束
+ @imgPath: "../../../images/html/courseSystem/";
+ body,html{
+    overflow-x: hidden;
+ }
+.cs_banner{
+  height:418px;
+  width:100%;
+  background:#efefef;
+  .cs_banner01{
+    height:418px;
+    width: @docWidth;
+    margin:0 auto;
+    background: url("@{imgPath}cs_peo.jpg") no-repeat 164px 74px;
+    position: relative;
+    .cs_bannerCon{
+      padding:65px 0 0 448px;
+      h3{
+        font-size:30px;
+        color:#ff9e00;
+      }
+      p{
+        line-height:30px;
+        margin-top:14px;
+        font-size:14px;
+        color:#7c7c7c;
+      }
+    }
+
+  }
+  .cs_list{
+    position:absolute;
+    top:72px;
+    z-index:20;
+    #cs_border01{
+      border-right:1px solid #00a9cd;
+      width:124px;
+    }
+    .cs_list01{
+      height:46px;
+      width:125px;
+      text-align: center;
+      line-height:46px;
+      background-color:#00a9cd;
+      font-size:16px;
+      color:#fff;
+      border:1px solid #00a9cd;
+      border-right:none;
+      cursor: pointer;
+      .displayNone{
+        display:none;
+      }
+      .displayBlock{
+        display:block;
+      }
+      a{
+        color:#fff;
+        display:block;
+        height:100%;
+        width:100%;
+        &:hover{
+          color:#00a9cd;
+        }
+      }
+      &:hover{
+        color:#00a9cd;
+        background-color: #fff;
+      }
+      ul{
+        position:absolute;
+        z-index:-1;
+        border:1px solid #00a9cd;
+        left:125px;
+        top:0;
+        width:250px;
+        height:348px;
+        background:#fff;
+        filter: alpha(opacity=95);
+        opacity: .95; 
+        display: none;
+        margin:0;
+        padding:0;
+        li{
+            width:250px;
+            height:46px;
+            position: relative;
+            text-indent: 20px;
+            margin:0;
+            padding:0;
+            overflow:hidden;
+            vertical-align:middle;
+            line-height: 46px; 
+            a{
+              color:#00a9cd;
+            }
+          .cs_list02{
+            display:block;
+            height:26px;
+            width:42px;
+            background:url("@{imgPath}cs_mar.png") no-repeat;
+            position:absolute;
+            left:40px;
+            top:14px;
+          }
+          .icon01{
+            &:hover{
+                background-position: -71px 0;
+              }
+            
+          }
+          .icon02{
+            background-position: 0 -38px;
+            &:hover{
+              background-position: -71px -38px;
+            }
+
+          }
+          .icon03{
+            background-position: 0 -77px;
+            &:hover{
+              background-position: -71px -77px;
+            }
+          }
+          .icon04{
+            background-position: 0 -114px;
+             &:hover{
+              background-position: -71px -114px;
+            }
+
+          }
+          .icon05{
+            background-position: 0 -152px;
+             &:hover{
+              background-position: -71px -152px;
+            }
+          }
+        }
+      }
+      .cs_list01Sel{
+        width:254px;
+         li{
+          height:35px;
+          // background:green!important;
+          *margin:-10px;
+          a{
+            font-size:15px;
+          }
+          .cs_list02{
+             background:url("@{imgPath}cs_select.png") no-repeat;
+          }
+          .icon06{
+            &:hover{
+              background-position: -71px 0;
+            }
+          }
+          .icon07{
+             background-position: 0 -41px;
+             &:hover{
+              background-position: -71px -41px;
+             }
+          }
+           .icon08{
+             background-position: 0 -80px;
+             &:hover{
+              background-position: -71px -80px;
+             }
+          }
+           .icon09{
+             background-position: 0 -117px;
+             &:hover{
+              background-position: -71px -117px;
+             }
+          }
+           .icon10{
+             background-position: 0 -156px;
+             &:hover{
+              background-position: -71px -156px;
+             }
+          }
+           .icon11{
+             background-position: 0 -194px;
+             &:hover{
+              background-position: -71px -194px;
+             }
+          }
+           .icon12{
+             background-position: 0 -232px;
+             &:hover{
+              background-position: -71px -232px;
+             }
+          }
+          .icon13{
+             background-position: 0 -270px;
+             &:hover{
+              background-position: -71px -270px;
+             }
+          }
+          .icon14{
+             background-position: 0 -312px;
+             &:hover{
+              background-position: -71px -312px;
+             }
+          }
+         }
+      } 
+    }
+
+  }
+}
+.clearfix:after 
+{ 
+content:"."; 
+display:block; 
+height:0; 
+clear:both; 
+visibility:hidden; 
+}
+.main{
+  width:100%;
+  height:auto;
+  .mainIn{
+    width: 836px;
+    height:auto;
+    margin:0 auto;
+    padding:60px 0 0 164px;
+    .cs_level{
+      height:214px;
+      li{
+        float:left;
+        margin-right:2px;
+        cursor: pointer;
+        position:relative;
+        i{
+          position:absolute;
+          left:50%;
+          margin-left:-10px;
+          bottom: -10px;
+          display:inline-block;
+          height:10px;
+          width:20px;
+          
+        }
+        .activei00{
+          background:url("@{imgPath}cs_triangle.png") no-repeat;
+        }
+         .activei01{
+          background:url("@{imgPath}cs_triangle.png") no-repeat -20px 0;
+        }
+         .activei02{
+          background:url("@{imgPath}cs_triangle.png") no-repeat -38px 0;
+        }
+         .activei03{
+          background:url("@{imgPath}cs_triangle.png") no-repeat -58px 0;
+        }
+         .activei04{
+          background:url("@{imgPath}cs_triangle.png") no-repeat -78px 0;
+        }
+         .activei05{
+          background:url("@{imgPath}cs_triangle.png") no-repeat -100px 0;
+        }
+      }
+    }
+    .cs_levelCon{
+      margin-top: 20px;
+      .cs_levelCon01{
+        position:relative;
+        min-height:580px;
+        .cs_levelCon01_tit{
+          height:60px;
+          width: 832px;
+          line-height:60px;
+          fon-size:18px;
+          text-align: center;
+          background:#efefef;
+          color:#7c7c7c;
+          font-family: "微软雅黑";
+        }
+        .cs_picPlay{
+          width:832px;
+          height:475px;
+          position:relative;
+          li{
+            position: absolute;
+            width:832px;
+            height:475px;
+            img{
+              width:620px;
+              height:auto;
+              position: absolute;
+              left:50%;
+              margin-left:-310px;
+              top:10%;
+            }
+          }
+          .lastImg{
+            img{
+              width: 500px;
+              margin-left:-250px;
+            }
+             a{
+              position:absolute;
+              bottom: 0;
+              left:50%;
+              margin-left:-115px;
+              display: inline-block;
+              text-decoration: none;
+              height:50px;
+              width:230px;
+              line-height:50px;
+              font-size:20px;
+              text-align: center;
+              background:#ff9e00;
+              color:#fff;
+              border-radius: 8px;
+              -moz-border-radius:8px;
+
+             } 
+            }
+        }
+        .cs_switch{
+          position: absolute;
+          left:45%;
+          top:560px;
+          li{
+            float:left;
+            margin-right:10px;
+             i{
+                display: block;
+                height:10px;
+                width:10px;
+                border-radius: 10px;
+                -moz-border-radius:10px;
+                background:#d7d7d7;
+                z-index:10;
+                }
+                .activei{
+                  background-color: #ff9e00;
+                }
+          }
+         
+        }
+        .cs_change{
+          width:100%;
+          position: absolute;
+          top:40%;
+          a{
+            text-decoration: none;
+            height:51px;
+            width:27px;
+            position:absolute;
+          }
+          .gt{
+            background: url("@{imgPath}cs_gtlt.png") no-repeat;
+            left:34px;
+          }
+          .lt{
+            background: url("@{imgPath}cs_gtlt.png") no-repeat right top;
+            right:34px;
+          }
+
+        }
+        .cs_txt{
+           margin:0 0 150px;
+           width:101%;
+          h3{
+            font-size:30px;
+          }
+          .cs_txtbot{
+            margin-top:44px;
+            .cs_tit{
+              width:100%;
+              height:52px;
+              // background:blue;
+              dt{
+                float:left;
+                height:52px;
+                line-height:52px;
+                text-align: center;
+                width:52px;
+                border-radius: 52px;
+                -moz-border-radius:52px;
+                background:#00a9cd;
+                color:#fff;
+                font-size:24px;
+                font-family: "微软雅黑";
+              }
+              dd{
+                float:left;
+                height:90px;
+                text-indent:15px;
+                line-height:50px;
+                font-size:18px;
+              }
+            }
+            .cs_h3{
+              margin-top:43px;
+              span{
+                font-size:18px;
+                font-weight:900;
+                color:#ff9e00;
+              }
+              h3{
+                font-size:22px;
+                color:#ff9e00;
+              }
+            }
+            .cs_h3Con{
+              margin-top:26px;
+              color:#666;
+              line-height:30px;
+              h3{
+                font-size:22px;
+                margin-top:20px;
+              }
+              p{
+                font-size: 14px;
+              }
+            }
+            .cs_h3ConBook{
+              height:240px;
+              width:100%;
+              margin-bottom: 100px;
+            }
+            ul{
+              height:100px;
+               li{
+                float:left;
+
+              }
+            }
+          }
+        }
+      }
+      
+    }
+    .cs_reserBtn{
+      width:100%;
+      text-align: center;
+      margin:50px 0 50px -80px;
+
+      a{
+        display: inline-block;
+        text-decoration: none;
+        height:70px;
+        width:280px;
+        line-height:70px;
+        font-size:26px;
+        background:#ff9e00;
+        color:#fff;
+        border-radius: 8px;
+        -moz-border-radius:8px;
+        margin-top:-100px;
+
+      }
+    }
+    
+  }
+}
+//显示，隐藏
+.displayNone{
+    display:none;
+}
+.displayBlock{
+    display:block;
+}
+//专业课-商务英语
+@import "professionalCourses.less";
+
+

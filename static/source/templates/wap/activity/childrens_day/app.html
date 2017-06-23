@@ -1,0 +1,358 @@
+
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title></title>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta name="flexible" content="initial-dpr=2"/>
+    <link href="/css/wap/activity/childrens_day/childrens_day.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <section data-init="app" class="childrens-day">
+      <section class="top-container clearfix">
+        <section class="logo"><img src="/images/wap/activity/childrens_day/logo.png"/></section>
+        <input type="hidden" id="first_phone" value="0"/>
+        <section class="sudoku">
+          <ul class="clearfix">
+            <li class="prize-item prize-0 prize-current">
+              <section class="prize-column-0"></section>
+              <section class="prize-count">剩余<em>9999</em></section>
+            </li>
+            <li class="prize-item prize-1">
+              <section class="prize-column-1"></section>
+              <section class="prize-count">剩余<em>9999</em></section>
+            </li>
+            <li class="prize-item prize-2">
+              <section class="prize-column-2"></section>
+              <section class="prize-count">剩余<em>9999</em></section>
+            </li>
+            <li class="prize-item prize-7">
+              <section class="prize-column-7"></section>
+              <section class="prize-count">剩余<em>9999</em></section>
+            </li>
+            <li class="default"></li>
+            <li class="prize-item prize-3">
+              <section class="prize-column-3"></section>
+              <section class="prize-count">剩余<em>9999</em></section>
+            </li>
+            <li class="prize-item prize-6">
+              <section class="prize-column-6"></section>
+              <section class="prize-count">剩余<em>9999</em></section>
+            </li>
+            <li class="prize-item prize-5">
+              <section class="prize-column-5"></section>
+              <section class="prize-count">剩余<em>9999</em></section>
+            </li>
+            <li class="prize-item prize-4">
+              <section class="prize-column-4"></section>
+              <section class="prize-count__none">再接再厉</section>
+            </li>
+          </ul>
+        </section>
+        <section class="count">您还有<em>0</em>次机会</section>
+        <section class="help-submit"></section>
+      </section>
+      <section class="rule">
+        <section class="title">活动规则</section>
+        <ul class="clearfix">
+          <li>活动时间：5月22-5月29日</li>
+          <li>每人均有3次初始抽奖机会，每求助一位好友，可增加1次抽奖机会，同一好友不能重复赠送。</li>
+          <li>获得51Talk一对一外教课时的用户，将于48小时内，由工作人员联系发放。</li>
+          <li>获得实物奖品的用户，请正确填写姓名、联系方式、收获地址等信息，实物奖及精品公开课将于6月30日前发放完毕。</li>
+          <li>实物奖品港澳台及国外不包邮。</li>
+          <li>如发现任何违规行为，则抽取的奖品将统一清零。</li>
+          <li>活动最终解释权归51Talk美国小学所有！</li>
+        </ul>
+      </section>
+      <section class="trends">
+        <section class="title">中奖动态</section>
+        <section class="trends-list">
+          <section class="trends-list__scroll">
+            <ul class="clearfix">
+              <li><em class="name">小月0楼小月楼小月楼</em>抽中了美国夏令营亲子游!</li>
+              <li><em class="name">小月1楼小月楼小月楼</em>抽中了美国夏令营亲子游!</li>
+              <li><em class="name">小月2楼小月楼小月楼</em>抽中了美国夏令营亲子游!</li>
+              <li><em class="name">小月3楼小月楼小月楼</em>抽中了美国夏令营亲子游!</li>
+              <li><em class="name">小月4楼小月楼小月楼</em>抽中了美国夏令营亲子游!</li>
+            </ul>
+          </section>
+        </section>
+      </section>
+      <section class="my-prize">
+        <section class="title">我的奖品</section>
+        <section class="my-prize__list clearfix">
+          <dl class="clearfix">
+            <dt><img src="/images/wap/activity/childrens_day/prize_01.png"/></dt>
+            <dd>外教一对一1节</dd>
+          </dl>
+          <dl class="clearfix">
+            <dt><img src="/images/wap/activity/childrens_day/prize_02.png"/></dt>
+            <dd>精品公开课1节</dd>
+          </dl>
+          <dl class="clearfix">
+            <dt><img src="/images/wap/activity/childrens_day/prize_03.png"/></dt>
+            <dd>创意火车文具盒</dd>
+          </dl>
+          <dl class="clearfix">
+            <dt><img src="/images/wap/activity/childrens_day/prize_04.png"/></dt>
+            <dd>360儿童电话手表</dd>
+          </dl>
+          <dl class="clearfix">
+            <dt><img src="/images/wap/activity/childrens_day/prize_05.png"/></dt>
+            <dd>36色可洗水彩笔</dd>
+          </dl>
+        </section>
+      </section>
+      <section class="lucky-list">
+        <section class="title">抽奖榜单</section>
+        <section class="tips"> 
+          <p>前20名有额外奖品</p><em>按抽奖次数排行，每十分钟刷新一次排行榜</em>
+        </section>
+        <!--前二十名-->
+        <section class="before-twentieth">
+          <section class="rank"><span>排名</span><em>7</em></section>
+          <section class="head"><img src="/images/wap/activity/childrens_day/head.jpg"/></section>
+          <section class="base">
+            <section class="name">小月楼小月楼小月楼</section>
+            <section class="count">已抽<em>58</em>次</section>
+          </section>
+          <section class="prize">将获得
+            <p>儿童英文绘本一套</p>
+          </section>
+        </section>
+        <!--后二十名-->
+        <section style="display:none;" class="after-twentieth">
+          <section class="rank"><span>排名</span><em>21</em></section>
+          <section class="head"><img src="/images/wap/activity/childrens_day/head.jpg"/></section>
+          <section class="base">
+            <section class="name">小月楼小月楼小月楼</section>
+            <section class="count">已抽<em>58</em>次</section>
+          </section>
+          <section class="prize">前20名有额外奖品
+            <p>快去抽奖吧</p>
+          </section>
+        </section>
+        <!--无榜单数据-->
+        <section style="display:none;" class="null">榜单正在统计中，请稍后查看...</section>
+        <section class="ranking twentieth">
+          <ul class="clearfix">
+            <li>
+              <section class="head"><img src="/images/wap/activity/childrens_day/head.jpg"/></section>
+              <section class="base">
+                <section class="name">小叮当小叮当小叮当</section>
+                <section class="count">已抽 <em>102</em> 次</section>
+              </section>
+              <section class="prize">将获得
+                <p>1000元京东卡</p>
+              </section>
+            </li>
+            <li>
+              <section class="head"><img src="/images/wap/activity/childrens_day/head.jpg"/></section>
+              <section class="base">
+                <section class="name">小叮当小叮当小叮当</section>
+                <section class="count">已抽 <em>102</em> 次</section>
+              </section>
+              <section class="prize">将获得
+                <p>1000元京东卡</p>
+              </section>
+            </li>
+            <li>
+              <section class="head"><img src="/images/wap/activity/childrens_day/head.jpg"/></section>
+              <section class="base">
+                <section class="name">小叮当小叮当小叮当</section>
+                <section class="count">已抽 <em>102</em> 次</section>
+              </section>
+              <section class="prize">将获得
+                <p>1000元京东卡</p>
+              </section>
+            </li>
+            <li>
+              <section class="head"><img src="/images/wap/activity/childrens_day/head.jpg"/></section>
+              <section class="base">
+                <section class="name">小叮当小叮当小叮当</section>
+                <section class="count">已抽 <em>102</em> 次</section>
+              </section>
+              <section class="prize">将获得
+                <p>1000元京东卡</p>
+              </section>
+            </li>
+            <li>
+              <section class="head"><img src="/images/wap/activity/childrens_day/head.jpg"/></section>
+              <section class="base">
+                <section class="name">小叮当小叮当小叮当</section>
+                <section class="count">已抽 <em>102</em> 次</section>
+              </section>
+              <section class="prize">将获得
+                <p>1000元京东卡</p>
+              </section>
+            </li>
+            <li>
+              <section class="head"><img src="/images/wap/activity/childrens_day/head.jpg"/></section>
+              <section class="base">
+                <section class="name">小叮当小叮当小叮当</section>
+                <section class="count">已抽 <em>102</em> 次</section>
+              </section>
+              <section class="prize">将获得
+                <p>1000元京东卡</p>
+              </section>
+            </li>
+            <li>
+              <section class="head"><img src="/images/wap/activity/childrens_day/head.jpg"/></section>
+              <section class="base">
+                <section class="name">小叮当小叮当小叮当</section>
+                <section class="count">已抽 <em>102</em> 次</section>
+              </section>
+              <section class="prize">将获得
+                <p>1000元京东卡</p>
+              </section>
+            </li>
+            <li>
+              <section class="head"><img src="/images/wap/activity/childrens_day/head.jpg"/></section>
+              <section class="base">
+                <section class="name">小叮当小叮当小叮当</section>
+                <section class="count">已抽 <em>102</em> 次</section>
+              </section>
+              <section class="prize">将获得
+                <p>1000元京东卡</p>
+              </section>
+            </li>
+            <li>
+              <section class="head"><img src="/images/wap/activity/childrens_day/head.jpg"/></section>
+              <section class="base">
+                <section class="name">小叮当小叮当小叮当</section>
+                <section class="count">已抽 <em>102</em> 次</section>
+              </section>
+              <section class="prize">将获得
+                <p>1000元京东卡</p>
+              </section>
+            </li>
+            <li>
+              <section class="head"><img src="/images/wap/activity/childrens_day/head.jpg"/></section>
+              <section class="base">
+                <section class="name">小叮当小叮当小叮当</section>
+                <section class="count">已抽 <em>102</em> 次</section>
+              </section>
+              <section class="prize">将获得
+                <p>1000元京东卡</p>
+              </section>
+            </li>
+          </ul>
+        </section>
+      </section>
+      <footer class="footer">
+        <section class="copyright">51Talk 美国小学</section>
+        <section class="tel">客服电话 | 4000-51-51-51</section>
+      </footer>
+      <section style="display:none;" class="mask">
+        <section style="display:none" class="share-dialog-app">
+          <section class="share-dialog-app__channel">
+            <dl>
+              <dt><img src="/images/wap/activity/childrens_day/wechat_icon.png"/></dt>
+              <dd>微信好友</dd>
+            </dl>
+            <dl>
+              <dt><img src="/images/wap/activity/childrens_day/moments_icon.png"/></dt>
+              <dd>朋友圈</dd>
+            </dl>
+          </section>
+          <section class="share-dialog-app__cancel">取消</section>
+        </section>
+        <!--填写手机号-->
+        <section style="display:none;" class="tel-dialog"><a href="javascript:;" class="close"></a>
+          <section class="form">
+            <h3 class="title">为了中奖后方便联系</h3>
+            <h3 class="title">请输入手机号</h3>
+            <ul class="clearfix">
+              <li class="tel">
+                <input type="tel" placeholder="输入手机号" id="tel"/>
+              </li>
+              <li class="code">
+                <input type="number" placeholder="输入验证码" id="code"/><a data-url="verifyCode" class="get-code">获取验证码</a>
+              </li>
+            </ul>
+          </section><a href="javascript:;" class="submit"></a>
+        </section>
+        <!--谢谢参与(抽中六一快乐)-->
+        <section style="display:none;" class="thanks-dialog"><a href="javascript:;" class="close"></a></section>
+        <!--没有抽奖次数-->
+        <section style="display:none;" class="count-dialog"><a href="javascript:;" class="close"></a>
+          <section class="count">0</section><span>抽奖次数</span>
+          <p>快去向好友求抽奖机会吧！</p>
+        </section>
+        <!--分享获得抽奖机会-->
+        <section style="display:none;" class="share-dialog">
+          <section class="share-wrap"><img src="/images/wap/activity/childrens_day/share_guide.png"/></section><a href="javascript:;" class="btn"></a>
+        </section>
+        <!--好友求助获取抽奖机会弹层-->
+        <section style="display:none;" class="help-dialog"><a href="javascript:;" class="close"></a>
+          <section class="base">
+            <section class="head"><img src="/images/wap/activity/childrens_day/head.jpg"/></section>
+            <section class="name">傲娇王中王</section>
+            <section class="help-text">正在向你求助!!!</section>
+            <section class="give-wrap"><a href="javascript:;" class="give"></a></section>
+          </section>
+          <section class="gift-list-wrap">
+            <h3 class="title"><em>“傲娇王中王”</em>已抽中奖品</h3>
+            <section class="gift-list clearfix">
+              <dl class="clearfix">
+                <dt><img src="/images/wap/activity/childrens_day/prize_01.png"/></dt>
+                <dd>外教一对一1节</dd>
+              </dl>
+              <dl class="clearfix">
+                <dt><img src="/images/wap/activity/childrens_day/prize_list_02.png"/></dt>
+                <dd>可洗水彩笔</dd>
+              </dl>
+              <dl class="clearfix">
+                <dt><img src="/images/wap/activity/childrens_day/prize_list_03.png"/></dt>
+                <dd>360儿童手表</dd>
+              </dl>
+            </section>
+          </section>
+          <section class="text">
+            <p>51Talk美国小学 “六一活动”,</p>
+            <p>正在火热进行中...快来帮帮他吧！</p>
+          </section>
+        </section>
+        <section style="display:none;" class="help-dialog-app"><a href="javascript:;" class="close"></a>
+          <section class="base">
+            <section class="help-text">正在向你求助!!!</section>
+            <section class="give-wrap"><a href="javascript:;" class="give"></a></section>
+          </section>
+          <section class="gift-list-wrap">
+            <h3 class="title">已抽中奖品</h3>
+            <section class="gift-list clearfix">
+              <dl class="clearfix">
+                <dt><img src="/images/wap/activity/childrens_day/prize_01.png"/></dt>
+                <dd>外教一对一1节</dd>
+              </dl>
+              <dl class="clearfix">
+                <dt><img src="/images/wap/activity/childrens_day/prize_list_02.png"/></dt>
+                <dd>可洗水彩笔</dd>
+              </dl>
+              <dl class="clearfix">
+                <dt><img src="/images/wap/activity/childrens_day/prize_list_03.png"/></dt>
+                <dd>360儿童手表</dd>
+              </dl>
+            </section>
+          </section>
+          <section class="text">
+            <p>51Talk美国小学 “六一活动”,</p>
+            <p>正在火热进行中...快来帮帮他吧！</p>
+          </section>
+        </section>
+        <!--好友求助获取抽奖机会赠送成功-->
+        <section style="display:none;" class="help-success-dialog"><a href="javascript:;" class="close"></a>
+          <p class="text">你也获得了</p>
+          <p class="count">"3次抽奖机会"</p><a href="javascript:;" class="go"></a>
+        </section>
+      </section>
+    </section>
+    <script src="/js/wap/project/activity/childrens_day/main.js" id="seajsnode"></script>
+  </body>
+</html>

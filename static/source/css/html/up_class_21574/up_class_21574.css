@@ -1,8 +1,7 @@
 @charset "utf-8";
 /*!
  * http://www.51Talk.com
- * copyright (c) 2016 51Talk
- * author: 
+ * copyright (c) 2015 51Talk
  */
 /**
  * 默认样式
@@ -441,7 +440,8 @@ img {
   margin-left: -110px;
   background: white url(../../../components/html/up_class_21574/images/icon-load.gif?v=dcGzqfoVURnJbQtXPqImWA%3D%3D) 55px 40px no-repeat;
   border: 1px solid #ff8200;
-  box-shadow: -4px 4px 0 rgba(255, 130, 0, 0.1);
+  -webkit-box-shadow: -4px 4px 0 rgba(255, 130, 0, 0.1);
+          box-shadow: -4px 4px 0 rgba(255, 130, 0, 0.1);
 }
 #classMask {
   display: none;
@@ -662,6 +662,88 @@ img {
 }
 .m-c-schedule .m-classic .cont_r .rows .unread {
   background: url(../../../components/html/up_class_21574/images/mark_unread.png?v=Mj632zKUP8oooz3UDN206Q%3D%3D) 80px 7px no-repeat;
+}
+.m-c-schedule .m-classic .cont_r .rows .get {
+  padding-left: 0 !important;
+}
+.m-c-schedule .m-classic .cont_r .rows .get .btn {
+  display: inline-block;
+  width: 90px;
+  height: 24px;
+  line-height: 24px;
+  color: #fff;
+  background: #fe880d;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 2px;
+}
+.m-c-schedule .m-classic .cont_r .rows .get .red-packet__icon {
+  display: inline-block;
+  width: 17px;
+  height: 24px;
+  margin-left: 5px;
+  background: url(../../../components/html/up_class_21574/images/price.png?v=Ku%2FOkQPcbxFn9KxjF%2BpLmA%3D%3D) center center no-repeat;
+  vertical-align: top;
+}
+.m-c-schedule .m-classic .cont_r .rows .receive {
+  padding-left: 0 !important;
+  background: none !important;
+}
+.m-c-schedule .m-classic .cont_r .rows .receive .btn {
+  display: inline-block;
+  width: 90px;
+  height: 24px;
+  line-height: 24px;
+  color: #fff;
+  background: #fe880d;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 2px;
+}
+.m-c-schedule .m-classic .cont_r .rows .receive .red-packet__icon {
+  display: inline-block;
+  width: 17px;
+  height: 24px;
+  margin-left: 5px;
+  background: url(../../../components/html/up_class_21574/images/price.png?v=Ku%2FOkQPcbxFn9KxjF%2BpLmA%3D%3D) center center no-repeat;
+  vertical-align: top;
+}
+.m-c-schedule .m-classic .cont_r .rows .received a {
+  color: #000;
+  font-size: 13px;
+}
+.m-c-schedule .m-classic .cont_r .rows .received a:hover {
+  color: #000;
+}
+.m-c-schedule .m-classic .cont_r .rows .received .red-packet__icon {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-left: 5px;
+  background: url(../../../components/html/up_class_21574/images/mark_done.png?v=cUXUuNMfSoXvrzmxaGgqnA%3D%3D) center center no-repeat;
+}
+.m-c-schedule .m-classic .cont_r .rows .expired a {
+  color: #a0a0a0;
+  font-size: 13px;
+}
+.m-c-schedule .m-classic .cont_r .rows .expired .red-packet__icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+  background: url(../../../components/html/up_class_21574/images/icon.png?v=oNzcsCAWO5e8HajpO6GEXA%3D%3D) center center no-repeat;
+  vertical-align: text-bottom;
+}
+.m-c-schedule .m-classic .cont_r .rows .expired-tips {
+  position: absolute;
+  width: 135px;
+  border: #ff9b33 solid 1px;
+  padding: 12px 19px;
+  margin-top: 10px;
+  line-height: 1.75;
+  background: #fff;
+  z-index: 99;
+  text-align: left;
 }
 .m-c-schedule .m-classic .cont_r .rows .cls-make-btn {
   display: block;
@@ -1089,7 +1171,8 @@ img {
   margin-left: -117px;
   overflow: hidden;
   background-color: #fff;
-  box-shadow: -3px 3px 0px 0px rgba(0, 0, 0, 0.03);
+  -webkit-box-shadow: -3px 3px 0px 0px rgba(0, 0, 0, 0.03);
+          box-shadow: -3px 3px 0px 0px rgba(0, 0, 0, 0.03);
 }
 .m-alert .hd {
   height: 31px;

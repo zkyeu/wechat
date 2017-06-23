@@ -160,7 +160,7 @@ textarea::-webkit-input-placeholder {
   width: 85%;
   height: 4.4rem;
   border: none;
-  background: url(../../../images/wap/north-america/reg_btn.png?v=kv%2Be3u3pw4lxvNGM0%2Bk1Xg%3D%3D) no-repeat;
+  background: url(../../../images/wap/north-america/reg_btn.png?v=vMXaEyAiiI3YecMBL%2FgOPA%3D%3D) no-repeat;
   background-size: 100% 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -182,7 +182,7 @@ textarea::-webkit-input-placeholder {
   margin: 1.6rem 0 0;
   width: 2.7rem;
   height: 1.5rem;
-  background: url(../../../images/wap/north-america/arrow.png?v=GdFKsFp7w7DNQBS03pHgug%3D%3D) no-repeat 0 0;
+  background: url(../../../images/wap/north-america/arrow.png?v=LgeLyDpvL9ysZarNa8QOhg%3D%3D) no-repeat 0 0;
   background-size: 27px auto;
   -webkit-animation-name: skyset;
   -webkit-animation-duration: 1500ms;
@@ -204,7 +204,7 @@ textarea::-webkit-input-placeholder {
   }
 }
 .features {
-  background: #fe5e39 url(../../../images/wap/north-america/down.png?v=qll%2BOHn0KGXiOYnexT9n1A%3D%3D) repeat-x 0 0;
+  background: #fe5e39 url(../../../images/wap/north-america/down.png?v=HgQ9Cq81Ht2%2FWINnSazZcA%3D%3D) repeat-x 0 0;
   background-size: 1.5rem auto;
   padding: 0.48rem 0 1rem 0;
 }
@@ -311,7 +311,7 @@ textarea::-webkit-input-placeholder {
   bottom: 0.8rem;
   width: 10.5rem;
   height: 8rem;
-  background: url(../../../images/wap/north-america/bird.png?v=tJqacZAGxESuyeMZgMnTNA%3D%3D) repeat-x 0 0;
+  background: url(../../../images/wap/north-america/bird.png?v=B5ARXRu5%2FNluX%2BDxFP3CDQ%3D%3D) repeat-x 0 0;
   background-size: auto 8rem;
 }
 .fixbar .bird .gotop {
@@ -320,7 +320,7 @@ textarea::-webkit-input-placeholder {
   width: 10.5rem;
   height: 3.3rem;
   line-height: 3.3rem;
-  background: #FEDC3C url(../../../images/wap/north-america/link.png?v=n94Zzb9rZ7Di%2FNUmHdeKbw%3D%3D) repeat-x 0 bottom;
+  background: #FEDC3C url(../../../images/wap/north-america/link.png?v=%2BnqHKL%2FDnhawTnN5qEoacA%3D%3D) repeat-x 0 bottom;
   color: #864e17;
   text-align: center;
   background-size: auto 3.3rem;
@@ -329,7 +329,7 @@ textarea::-webkit-input-placeholder {
   -weblit-tap-highcolor-color: rgba(0, 0, 0, 0);
 }
 .stars {
-  background: #fff url(../../../images/wap/north-america/up.png?v=J8%2FdptA5C3s2B1T8Fjd8TA%3D%3D) repeat-x 0 0;
+  background: #fff url(../../../images/wap/north-america/up.png?v=n8QNUYKlKeA791q1pE%2FDHA%3D%3D) repeat-x 0 0;
   background-size: 1.5rem auto;
   padding: 4.8rem 0 10rem 0;
 }
@@ -416,7 +416,7 @@ textarea::-webkit-input-placeholder {
   background: #fe5e39;
 }
 .teacher {
-  background: #fff url(../../../images/wap/north-america/up.png?v=J8%2FdptA5C3s2B1T8Fjd8TA%3D%3D) repeat-x 0 0;
+  background: #fff url(../../../images/wap/north-america/up.png?v=n8QNUYKlKeA791q1pE%2FDHA%3D%3D) repeat-x 0 0;
   background-size: 1.5rem auto;
   padding: 4rem 0 5.5rem 0;
 }
@@ -493,7 +493,7 @@ textarea::-webkit-input-placeholder {
   color: #505050;
 }
 .textbook {
-  background: #fe5e39 url(../../../images/wap/north-america/down.png?v=qll%2BOHn0KGXiOYnexT9n1A%3D%3D) repeat-x 0 0;
+  background: #fe5e39 url(../../../images/wap/north-america/down.png?v=HgQ9Cq81Ht2%2FWINnSazZcA%3D%3D) repeat-x 0 0;
   background-size: 1.5rem auto;
   padding: 4rem 0 8rem 0;
   color: #fff;
@@ -568,18 +568,36 @@ textarea::-webkit-input-placeholder {
   width: calc(76.5px);
   height: -webkit-calc(65.5px);
   height: calc(65.5px);
-  background: url(../../../images/wap/north-america/share_arr.png?v=1zlA3JPTx3ztSPBRNMeUfw%3D%3D) center center no-repeat;
+  background: url(../../../images/wap/north-america/share_arr.png?v=hGNRUymu1riDtdH2gOvtcw%3D%3D) center center no-repeat;
   background-size: contain;
 }
 .mask .share-guide__close {
   width: 44px;
   height: 44px;
   margin: 0 auto;
-  background: url(../../../images/wap/north-america/share_close.png?v=mtqyQOx9C%2FWJWWgCQ3To2Q%3D%3D) center center no-repeat;
+  background: url(../../../images/wap/north-america/share_close.png?v=C0YoxFCaNjHavUWRPh30Bw%3D%3D) center center no-repeat;
   background-size: cover;
   -webkit-transform: translate3D(0, -50%, 0);
       -ms-transform: translate3D(0, -50%, 0);
           transform: translate3D(0, -50%, 0);
+}
+.showModel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.showModel img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 22.6rem;
 }
 @media screen and (min-width: 320px) {
   .header .desc .advantage {

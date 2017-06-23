@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+@import "../common/base.less";
+
+@imgPath: "../../../images/wap/challenge_say/";
+
+//全局
+body,html{
+	font-family: @fontFamily;	
+	width: 100%;
+	// height: 100%;
+}
+img{
+	vertical-align: top;
+}
+//多说7日挑战英语口语
+section#container{
+	min-width: 320px;
+	max-width: 640px;
+	margin:0 auto;
+	// background: url('@{imgPath}spoken_bg.jpg') no-repeat;
+	// background-size: 100% 100%;
+	// height: 100%;
+	position: relative;
+}
+.spoken_bg{
+	width: 100%;
+}
+.logIn{
+	position: absolute;
+	// position: relative;
+	bottom: .3rem;
+	left: 0;
+	width: 100%;
+	z-index: 9999;
+	.OneS_logIn{
+		width: 90%;
+		margin:0 auto;
+		li{
+			height: 4.5rem;
+			width: 100%;
+			margin-bottom: 1.4rem;
+			display: -webkit-box;
+		}
+		input{
+			background-color: #fff;
+			font-size: 1.6rem;
+			border-radius: 5px;
+			padding:0 2.5rem;
+			text-align: left;
+			display: -webkit-box;
+			box-sizing: border-box;
+			width: 100%;
+			height: 4.5rem;
+		}
+		.tel_code{
+			padding:0 2.5rem;
+			display: -webkit-box;
+			-webkit-box-flex:1;
+			box-sizing: border-box;
+			width: auto;
+		} 
+		.tel_btn{
+			display: -webkit-box;
+			-webkit-box-flex:1;
+			background:#52db88;
+			border-radius: 5px;
+			font-size: 1.6rem;
+			color:#fff;
+			line-height: 4.5rem;
+			margin-left:1rem;
+			-webkit-box-pack:center;
+			box-sizing: border-box;
+		}
+		.tel_btn.hover{
+			background:#bbbbbb;
+		}
+		a{
+		  display: -webkit-box;
+		  -webkit-box-flex:1;			
+			background: url('@{imgPath}spoken_btn.png') no-repeat;
+			width:100%;
+			background-size: 100% 100%;
+			height: 4.5rem;
+		}
+	}
+}
+.cs_bg img{
+	position: absolute;
+	top: 6rem;
+	width: 100%;
+	left: 0;
+	z-index: 999;
+	height: auto;
+}
+
+//landing
+#landing{
+	background: #fec413;
+}
+#landing > section > article{
+  img{
+  	width: 100%;
+  }
+  &:nth-child(4),&:nth-child(5),&:nth-child(6),&:nth-child(7){
+  	width: 90%;
+  	margin: auto;
+  }
+  &:nth-child(5){
+  	padding-top: 2.2rem;
+  }
+  &:nth-child(6){
+  	padding-top: 2.7rem;
+  	width: 70%;
+  }  
+  &:nth-child(7){
+  	padding: 4.7rem 0 6rem;
+  	width: 100%; 	
+  }    
+}
+
+//苹果4，4S，5，5S适配
+@media screen and (max-width: 321px) {
+.logIn{
+	.OneS_logIn{
+		li{
+			height: 3.8rem;
+			margin-bottom: 1rem;
+		}
+		input{
+			height: 3.8rem;
+		}
+		.tel_btn{
+			line-height: 3.8rem;
+			width: 50%;
+		}
+		a{
+			height: 3.8rem;
+		}
+	}
+ }
+}
+
+//ipad，台式机适配
+@media screen and (min-width: 768px) {
+.logIn{
+	.OneS_logIn{
+		li{
+			height: 3.8rem;
+			margin-bottom: 1rem;
+		}
+		input{
+			height: 3.8rem;
+		}
+		.tel_btn{
+			line-height: 3.8rem;
+			width: 50%;
+		}
+		a{
+			height: 3.8rem;
+		}
+	}
+ }
+}

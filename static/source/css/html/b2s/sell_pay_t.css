@@ -195,15 +195,28 @@
   margin-top: 15px;
 }
 .bg-s .color-s .pay-info .left-box .btn-notStarted {
-  width: 216px;
-  height: 46px;
-  line-height: 46px;
-  background: #ffad00;
-  border: 2px solid #fec119;
-  border-radius: 999px;
+  width: 250px;
+  padding-left: 20px;
+  margin-top: 5px;
+  line-height: 24px;
+  font-size: 16px;
+  color: #ff1b1b;
+  position: relative;
 }
-.bg-s .color-s .pay-info .left-box .btn-notStarted a {
-  color: #fed18d;
+.bg-s .color-s .pay-info .left-box .btn-notStarted i {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  margin-right: 5px;
+  background: #ff1b1b;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
 }
 .bg-s .color-s .pay-info .s-icon {
   display: block;

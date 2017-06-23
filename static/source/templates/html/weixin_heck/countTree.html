@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="app下载专页">
+    <meta name="keywords" content="app下载专页">
+    <title>欢迎下载51Talk App</title>
+    <link rel="stylesheet" type="text/css" href="/css/html/weixin_heck/common.css">
+    <link rel="stylesheet" type="text/css" href="/css/html/weixin_heck/countTree.css">
+    <link rel="stylesheet" type="text/css" href="/css/html/weixin_heck/layui.css">
+</head>
+<body data-init="countTree">
+<div class="board" id="countTree" v-cloak >
+    <div class="col-left groups">
+        <ul>
+            <li v-for="(val, key) in requestData.userGroupList" @click="getTeamList(val)" :class="{'cut': val == cut.group}">{{key}}</li>
+        </ul>
+    </div>
+    <div class="col-center groupList">
+        <h4 v-if="team.selType">请选择类型</h4>
+        <h6 v-if="team.noGroup">暂无组别</h6>
+        <ul>
+            <li v-for="(val, key) in requestData.teamList" :class="{'cut': val == cut.team}">
+                <h5 @click="getUserList(val)" :class="{'cut': val == cut.team}">
+                    <i></i>
+                    <span>{{key}}</span>
+                    <em class="{'cut':val == cut.team}"></em>
+                </h5>
+                <div class="user-list" v-if="val == cut.team">
+                    <i v-for="(val, key) in requestData.userList" :class="{'cut':val == cut.user}" @click.stop.prevent="getMassMessageList(val)">{{key}}</i>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="col-right">
+        <div class="detail-top">
+            <div class="detail-name">
+                <h5></h5>
+                <span class="detail-name"></span>
+            </div>
+            <div class="search-box">
+                <span>日期：</span>
+                <span class="start-date">
+                    <!--<input type="text" class="time-style" v-model="time.start" >-->
+                    <input type="text" class="time-style" v-model="time.start" onclick="layui.laydate({elem: this})" id="startTime">
+                </span>
+                <span>-</span>
+                <span class="end-date">
+                    <input type="text" class="time-style" v-model="time.end" onclick="layui.laydate({elem: this})" id="endTime">
+                </span>
+                <span id="searchBtn" @click="getMassMessageList(cut.user)">确定</span>
+            </div>
+        </div>
+        <div class="detail-list">
+            <h5 v-if="team.message">暂无相关群发信息！</h5>
+            <ul v-if="cut.user">
+                <li v-for="x in requestData.messageList">
+                    <div class="content">
+                        <template v-if="x.message_type == 0">
+                            {{ x.content }}
+                        </template>
+                        <template v-if="x.message_type == 1">
+                            <img :src="x.content">
+                        </template>
+                        <template v-if="x.message_type == 3000">
+                            <dt>
+                                <a :href="x.content.link">
+                                    <p>{{x.content.title}}</p>
+                                    <p :title="x.content.introduction">{{x.content.introduction}}</p>
+                                </a>
+                                <p class="beizhu" :title="x.content.forward_text">
+                                    文章留言：{{x.content.forward_text}}
+                                </p>
+                            </dt>
+                            <dd>
+                                <img :src="x.content.icon">
+                            </dd>
+                        </template>
+                    </div>
+                    <div class="time">
+                        {{x.add_time}}
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+<!--公共尾部结束-->
+<script src="/js/html/project/weixin_heck/vendor.js"></script>
+</html>

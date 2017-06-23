@@ -1,0 +1,145 @@
+@import "../common/reset.less";
+@imgUrl:"../../../images/wap/future/";
+input{
+	border: none;
+	background-color: transparent;
+}
+body{
+	font-size:1.5rem;
+}
+.login{
+	height: 17rem;
+	position: relative;
+	img{
+		width: 100%;
+		height: 300%;
+		position: absolute;
+		left: 0;
+		top:-20rem;
+		z-index: -1;
+	}
+	.list{
+		margin:0 6.7rem;
+		.phone,.password{
+			border:1px solid #a5a5a5;
+			background-color: #fff;
+			padding:0 2rem;
+			margin-bottom: 0.8rem;
+			input{
+				width: 100%;
+				height: 3.8rem;
+				font-size: 1.5rem;
+			}
+		}
+		.sure{
+			height: 4.1rem;
+			background-color: #eb6100;
+			border-radius: 10px;
+			margin-bottom: 1.8rem;
+			input{
+				color: #fff;
+				font-size: 1.8rem;
+				height: 100%;
+				width: 100%;
+				text-align: center;
+			}
+		}
+		.link{
+			text-align: center;
+			span{
+				border-bottom: 1px solid #eb6100;
+			}
+			a{
+				color: #eb6100;
+			}
+		}
+	}
+}
+.s-top{
+	width: 100%;
+	background: url('@{imgUrl}f_w_bg.jpg') no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	position: relative;
+	padding-bottom: 7.7rem;
+	span{
+		width: 6.6rem;
+		height: 6rem;
+		position: absolute;
+		right:3.2rem;
+		bottom: 0;
+		background:url('@{imgUrl}f_w_icon.png') no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+}
+.level-score{
+	height: auto;
+	min-height: 12rem;
+}
+.level-cont{
+	font-size: 1.4rem;
+	color: #595757;
+	margin-top: 2rem;
+	margin-left: 7.2rem;
+	margin-right: 4rem;
+	.level-now{
+		line-height:2rem;
+		font-weight: bold;
+		margin-bottom: 1rem;
+		em{
+			font-style: normal;
+			color: #eb6100;
+		}
+	}
+	.level-text{
+		line-height: 1.8rem;
+	}
+}
+.the-charts{
+	background-color: #fff200;
+	padding-bottom: 2rem;
+	.charts{
+		margin: 0 5rem;
+		background-color: #ffe600;
+		border-radius: 10px;
+		color: #595757;
+		padding: 1.4rem 1.5rem 1.7rem;
+	}
+	.tit{
+		font-size: 1.8rem;
+		text-align: center;
+		font-weight: bold;
+		height: 3.7rem;
+		line-height: 1;
+	}
+	ul{
+		height: 2.5rem;
+		font-size: 1.5rem;
+		color: #595757;
+		line-height: 2.5rem;
+		li:first-child{
+			width:22%;
+		}
+		li:last-child{
+			width:25%;
+		}
+		li:nth-child(2){
+			width:53%;
+		}
+		li{
+			float: left;
+			text-align: center;
+		}
+		&.list-tit{
+			height: 2rem;
+			line-height: 1;
+		}
+		
+	}
+	.charts-cont{
+		height: 25rem;
+		overflow: auto;
+	}
+}
+

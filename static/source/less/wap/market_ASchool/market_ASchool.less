@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+@import "../common/reset.less";
+
+@imgPath: "../../../images/wap/market_ASchool/";
+
+body,html{width: 100%; color: @bgcolor; font-family: "Microsoft Yahei";}
+img{
+	vertical-align: top;
+	width: 100%;
+}
+
+input{
+	background-color: transparent;
+	line-height: 1;
+}
+section{
+	width: 100%;
+	overflow: hidden;
+}
+@bgcolor:#1e1e1e;
+@gray:#999;
+@fs1:0.65rem;
+@fs2:0.6rem;
+.content{
+   h2{
+     font-size: @fs1;
+     padding: 0.75rem 0 0 0.75rem;
+   }
+   p{
+   	font-size: @fs1;
+   	color: #ff3e3e;
+   	padding: 0.1rem 0.75rem 0 ;
+   	b{
+   	  font-size: 0.9rem;
+   	  display: inline-block;
+   	}
+   }
+   p.parse{
+   	color:@gray;
+   	font-size: 0.5rem;
+   	text-decoration:line-through;
+   }
+   h3{
+   	.fm-arrow-pos(bottom,#d9d9d9,1px);
+   	background: #f2f2f2;
+   	height: 1.6rem;
+   	color: @gray;
+   	margin-top: 0.45rem;
+   	font-size: @fs2;
+   	line-height: 1.6rem;
+   	padding-left: 0.75rem;
+   }
+   p.text{
+   	line-height: 1rem;
+   	font-size: @fs2;
+   	color: @bgcolor;
+   	padding-top: 0.5rem;
+   }
+}
+h1{
+ font-size: 0.85rem;
+ height: 2.45rem;
+ line-height: 2.45rem;
+ text-align: center;
+}	
+article{
+	.fm-arrow-pos(bottom,#d9d9d9,1px);
+	height: 2.51rem;
+	margin-top: 0.45rem;
+	a{
+		width: 6.5rem;
+		height: 1.625rem;
+		display: block;
+	    margin:0.375rem auto 0;
+	    text-align: center;
+	    line-height:  1.625rem;
+	    color: #fff;
+	    border-radius: 1rem;
+	    background: #ff3e3e;
+	    font-size: 0.75rem;
+	}
+}
+
+

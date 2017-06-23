@@ -1,0 +1,289 @@
+@import "modules/swiper-3.3.1.min.less";
+// 图片path
+@imgPath: '../../../images/wap/b2s/';
+//background: url("@{imgPath}start_bg.png") no-repeat;
+#fontSizeLoding{
+    width: 100%;
+    min-height: 100%;
+    max-width: 640px;
+    background-color: rgba(255, 255, 255, 1);
+    position: fixed;
+    top:0; 
+    z-index: 999;
+    img{
+        width: 30px;
+        height: 30px;
+        margin-left: -15px;
+        margin-top: -15px;
+        position: absolute;
+        top:50%;
+        left:50%;
+
+    }
+}
+.experience_class{
+    .to_pay_on{
+            width: 100%;
+            height: 0.9rem;
+            padding:0.2rem 0;
+            position: fixed;
+            max-width: 640px;
+            bottom: 0;
+            background: #fff;
+            z-index: 20;
+            border-top:1px solid #c5c3c4;
+            a{
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top:0;
+            }
+            p{
+                width: 6.9rem;
+                height: 0.9rem;
+                line-height: 0.9rem;
+                border-radius: 999px;
+                background: #ff6062;
+                text-align: center;
+                color:#fff;
+                font-size: 0.34rem;
+                 margin:0 auto ;
+            }
+        }
+    .to_pay_fix{
+        height: 1.3rem;
+    }
+}
+
+.experience_class{
+    .intro_top_new{
+        width: 100%;
+        height: 5.12rem;
+        background: url("@{imgPath}experience_class.png") no-repeat;
+        background-size: 100% 100%;
+        .experience_class_payed{
+            padding: 3.1rem 0 0 0.75rem;
+            font-weight: 900;
+            p{
+                font-size: 0.28rem;
+                color:#ffde00;
+            }
+        }
+        .experience_class_vip{
+            padding: 3.1rem 0 0 0.75rem;
+            font-weight: 900;
+            p{
+                font-size: 0.28rem;
+                color:#ffde00;
+            }
+            .di-color{
+                color:#590001;
+                font-size: 0.24rem;
+            }
+        }
+        .experience_class_code{
+            padding: 3.0rem 0 0 0.75rem;
+            font-weight: 900;
+            p{
+                font-size: 0.28rem;
+                color:#ffde00;
+            }
+            .di-color{
+                color:#590001;
+                font-size: 0.24rem;
+            }
+        }
+        .experience_class_pay{
+            font-size: 0.4rem;
+            color: #ffde00;
+            padding: 2.7rem 0 0 0.75rem;
+            font-weight: 900;
+            span{
+                font-size: 0.4rem;
+                i{
+                    font-size: 0.6rem;
+                    color: #ffde00;
+                    padding-left: 0rem;
+                    font-weight: 900;
+                    text-decoration: none;
+                }
+            }
+            i{
+                font-size: 0.3rem;
+                color: #590001;
+                padding-left: 0.0rem;
+                font-weight: 900;
+                text-decoration: line-through;
+            }
+        }
+    }
+    .intro_top_new_after{
+        background-image: url("@{imgPath}experience_class_new.png");
+    }
+
+    .intro_tab_new{
+        height: 9.5rem;
+        padding-top: 0.9rem;
+        background: #ffd33d;
+        position: relative;
+        &>img{
+            width: 100%;
+        }
+        .swiper-container{
+            width: 100%;
+            height: 8.5rem;
+            .swiper-wrapper{
+                width: 100%;
+                height: 100%;
+                .swiper-slide{
+                    text-align: center;
+                    &>img{
+                        width: 100%;
+                    }
+                    .font1{
+                        line-height: 0.6rem;
+                        font-size: 0.4rem;
+                        color: #313131;
+                    }
+                    .font2{
+                        line-height: 0.48rem;
+                        font-size: 0.28rem;
+                        color: #313131;
+                    }
+                }
+            }
+            .swiper-pagination{
+                //bottom: 2.1rem;
+                .swiper-pagination-bullet{
+                    width: 0.18rem;
+                    height: 0.18rem;
+                    background: #fff;
+                    margin: 0 0.11rem;
+                    opacity: 0.3;
+                }
+                .swiper-pagination-bullet-active{
+                    background: #fff;
+                    opacity: 1;
+                }
+            }
+        }
+         &:before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform:translateY(-50%);
+            width: 100%;
+            height: 0.36rem;
+            background: url("@{imgPath}1v1_pay_introduce-14-2.png") no-repeat;
+            background-size: 100% 100%;
+        }
+    }
+    .intro_section1{
+        //height: 16.6rem;
+        padding-top: 0.68rem;
+        padding-bottom: 0.6rem;
+        position: relative;
+        &:before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform:translateY(-50%);
+            width: 100%;
+            height: 0.36rem;
+            background: url("@{imgPath}1v1_pay_introduce-14.png") no-repeat;
+            background-size: 100% 100%;
+        }
+        &:after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transform:translateY(50%);
+            width: 100%;
+            height: 0.36rem;
+            background: url("@{imgPath}1v1_pay_introduce-14.png") no-repeat;
+            background-size: 100% 100%;
+        }
+        &>img{
+            width: 100%;
+        }
+        .experience_code_bg{
+            //width: 2.5rem;
+            //height: 2.5rem;
+            //margin: 1.2rem auto 0;
+            //background: url("@{imgPath}experience_class6.jpg") no-repeat;
+            //background-size: 2.5rem 2.5rem;
+           
+            text-align: center;
+            padding-top: 0.8rem;
+            .experience_code_img{
+                margin: 0.1rem auto 0;
+                width: 2.2rem;
+                height: 2.2rem;
+                border:1px solid #4dc7ff;
+                padding:0.1rem;
+                img{
+                    width: 2.18rem;
+                    height: 2.18rem;
+                }
+            }
+            
+            p{
+                font-size: 0.26rem;
+                color:#4b5c71;
+                padding-top: 0.15rem;
+            }
+            .code_num{
+                padding-top: 0.05rem;
+                color:#fe5e39;
+                span{
+                    font-size: 0.5rem;
+                }
+            }
+            // .code_num_new{
+            //     padding-top: 0.05rem;
+            //     color:#fe5e39;
+            //     font-weight: 900;
+            //     font-size: 0.3rem;
+            // }
+        }
+        .experience_ex_bg{
+            //padding: 1.1rem 0 0.3rem 0;
+            padding: 1.1rem 0 0.3rem 0;
+            text-align: center;
+            img{
+                width: 100%;
+            }
+        }
+        .good_mes{
+            padding-top: 0.6rem;
+            .title{
+                font-size: 0.3rem;
+                color:#ff4e3a;
+                padding:0rem 0 0.35rem 0;
+                text-align: center;
+                font-weight: 900;
+            }
+            .intro_mes{
+                padding: 0 0.3rem 0.25rem 0.3rem;
+                font-size: 0.26rem;
+                span{
+                    float: left;
+                    display: block;
+                    padding:0rem 0.1rem;
+                    border-radius: 100px;
+                    background-color: #ff4e3a;
+                    color:#fff;
+                    margin-right: 0.1rem;
+                }
+                i{
+                    color:#34b5ff;
+                }
+            }
+        }
+    }
+}

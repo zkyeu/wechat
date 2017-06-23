@@ -1,0 +1,23 @@
+<% include ../common/top_b2s_n.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>invited_speakers_suc.css">
+</head>
+<body data-init="" class="invited_speakers_suc">
+    <img src="<%= imagessrc%>invited_speakers_mes_7.jpg" class="top_img">
+    <img src="<%= imagessrc%>invited_speakers_mes_8.png" class="top_img2">
+    <div>获取更多名家直播讲堂信息<br/>
+请下载无忧课堂APP</div>
+    <p><a href=""></a>马上下载</p>
+
+<!-- loading -->
+<div id="fontSizeLoding">
+    <img src="<%= imagessrc%>eff_loading.gif">
+</div>
+<script type="text/javascript">
+window.onload = function(){
+    document.documentElement.style.fontSize = document.body.clientWidth / 7.5 + "px";
+    document.getElementById("fontSizeLoding").style.display = "none";
+}
+</script>
+</body>
+<!--公共尾部结束-->
+<% include ../common/bottom.ejs %>

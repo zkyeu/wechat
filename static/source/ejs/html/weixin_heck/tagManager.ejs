@@ -1,0 +1,130 @@
+<% include ../common/top_b2s.ejs %>
+<link rel="stylesheet" type="text/css" href="<%= csslinkb2s %>tag_manager.css">
+</head>
+<body data-init="tagManager" class="tag-manager" v-cloak v-show="inited">
+    <div class="tag-edit" v-if="editShow">
+        <div class="tag-edit-in">
+            <h4>添加标签</h4>
+            <dl>
+                <dt>分组编号</dt>
+                <dd>
+                    <input type="text" placeholder="分组编号" v-model="curEdit.tag_class" />
+                </dd>
+            </dl>
+            <dl>
+                <dt>标签类型</dt>
+                <dd>
+                    <input type="text" placeholder="分组编号" v-model="curEdit.status" />
+                </dd>
+            </dl>
+            <dl>
+                <dt>所属身份</dt>
+                <dd>
+                    <input type="text" placeholder="所属身份" v-model="curEdit.user_group" />
+                </dd>
+            </dl>
+            <dl v-if="editType != 0">
+                <dt>标签序号</dt>
+                <dd>
+                    <input type="text" placeholder="标签序号" v-model="curEdit.tag_posion" disabled />
+                </dd>
+            </dl>
+            <dl>
+                <dt>标签名称</dt>
+                <dd>
+                    <input type="text" placeholder="标签名称" v-model="curEdit.tag_name" />
+                </dd>
+            </dl>
+            <dl>
+                <dt>标签简称</dt>
+                <dd>
+                    <input type="text" placeholder="标签简称" v-model="curEdit.tag_short" />
+                </dd>
+            </dl>
+            <dl>
+                <dt>标签描述</dt>
+                <dd>
+                    <input type="text" placeholder="标签描述" v-model="curEdit.tag_brief" />
+                </dd>
+            </dl>
+            <dl>
+                <dt>&nbsp;</dt>
+                <dd class="sel_foot">
+                    <span class="sel_sure" :class="{'sel_nosure': cantEdit}" @click="editSubmit">确定</span>
+                    <span class="sel_cancel" @click="editHide">取消</span>
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="clearfix tag-manager-in">
+        <div class="project_list">
+            <h4>标签管理</h4>
+            <ul>
+                <li v-for="x in types" :class="{'active' : x.type == curType}" @click="changeType(x)">
+                    {{ x.name }}
+                </li>
+            </ul>
+        </div>
+
+        <dl class="data_list">
+            <dt>
+                <a href="javascript:void(0);" @click="add">添加</a>
+            </dt>
+            <dd>
+                <table>
+                    <thead>
+                        <tr>
+                            <td width="10%">分组编号</td>
+                            <td width="10%">标签类型</td>
+                            <td width="10%">所属身份</td>
+                            <td width="10%">标签序号</td>
+                            <td width="10%">标签名称</td>
+                            <td width="10%">标签简称</td>
+                            <td width="20%">标签描述</td>
+                            <td width="20%">操作</td>
+                        </tr>
+                    </thead>
+                </table>
+
+                <div class="data_list_con">
+                    <table>
+                        <tbody>
+                            <template v-for="x in curList">
+                                <tr>
+                                    <td width="10%">
+                                        {{ x.tag_class }}
+                                    </td>
+                                    <td width="10%">
+                                        {{ x.status }}
+                                    </td>
+                                    <td width="10%">
+                                        {{ x.user_group }}
+                                    </td>
+                                    <td width="10%">
+                                        {{ x.tag_posion }}
+                                    </td>
+                                    <td width="10%">
+                                        {{ x.tag_name }}
+                                    </td>
+                                    <td width="10%">
+                                        {{ x.tag_short }}
+                                    </td>
+                                    <td width="20%">
+                                        {{ x.tag_brief || '无' }}
+                                    </td>
+                                    <td width="20%">
+                                        <em @click="edit(x)">修改</em>
+                                        <em @click="del(x)">删除</em>
+                                    </td>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </div>
+            </dd>
+        </dl>
+    </div>
+<% include ../common/bottom.ejs %>
+</body>
+

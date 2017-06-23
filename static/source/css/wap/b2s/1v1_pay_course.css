@@ -167,6 +167,24 @@ dt {
 .pay_course_1v1 .course-items > li .course-item-top .item-top-prompt3 > span {
   color: #251102;
 }
+.pay_course_1v1 .course-items > li .course-item-top .item-top-prompt4 {
+  padding-right: 0.36rem;
+  padding-left: 0.38rem;
+  line-height: 0.3rem;
+  font-size: 0.26rem;
+  color: #9c601a;
+  position: relative;
+}
+.pay_course_1v1 .course-items > li .course-item-top .item-top-prompt4:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.03rem;
+  width: 0.24rem;
+  height: 0.24rem;
+  background: url(../../../images/wap/b2s/1v1-pay-course-07.png?v=Jtt5GDIbHCCVKVZfVyltmw%3D%3D) no-repeat;
+  background-size: 100%;
+}
 .pay_course_1v1 .course-items > li .course-item-bottom {
   padding: 0 0.24rem 0 0.32rem;
   background: #fff;
@@ -219,7 +237,6 @@ dt {
   line-height: 1.4rem;
 }
 .pay_course_1v1 .course-items > li .course-item-bottom .course-item-bottom-l2 {
-  height: 0.8rem;
   line-height: 0.4rem;
   padding: 0.3rem 0;
 }
@@ -275,6 +292,14 @@ dt {
 .pay_course_1v1 .course-items > li .course-item-bottom .course-item-bottom-r1 img {
   width: 0.2rem;
   height: 0.32rem;
+}
+.pay_course_1v1 .course-items > li .course-item-bottom .course-item-bottom-r2 {
+  position: absolute;
+  right: 0.24rem;
+  top: 0;
+  padding: 0.3rem 0;
+  font-size: 0.3rem;
+  color: #999;
 }
 .pay_course_1v1 .course-items > li .course-item-bottom2 {
   padding: 0 0.32rem;

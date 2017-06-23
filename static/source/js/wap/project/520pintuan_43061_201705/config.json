@@ -1,0 +1,7 @@
+{
+  "define":[
+    "js/wap/common/sea.min.js",
+    "js/wap/common/zepto.min.js",
+    "js/wap/project/520pintuan_43061_201705/config.js"
+  ]
+}

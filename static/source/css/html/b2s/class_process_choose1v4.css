@@ -48,6 +48,7 @@
 }
 .bg-s .cls-main.color-s .banner-box .toList {
   display: block;
+  display: none;
   position: absolute;
   width: 170px;
   height: 40px;
@@ -59,12 +60,23 @@
   bottom: 25px;
   text-align: center;
 }
+.bg-s .cls-main.color-s .banner-box .toList:before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 12px;
+  background: url(../../../images/html/b2s/raduis_1.png?v=%2Fb9kR1%2BocyV196V5%2BnGThg%3D%3D);
+  position: absolute;
+  right: 20px;
+  top: 14px;
+}
 .bg-s .cls-main.color-s .banner-box h5 {
   font-size: 26px;
   color: #fff;
   padding-top: 16px;
 }
 .bg-s .cls-main.color-s .banner-box .banner-box-in {
+  display: none;
   overflow: hidden;
   line-height: 36px;
   padding: 10px 40px 10px 20px;
@@ -91,6 +103,14 @@
   bottom: 20px;
   font-weight: bold;
   cursor: pointer;
+}
+.bg-s .cls-main.color-s .banner_new {
+  color: #43c4ff;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 70px;
+  padding-bottom: 50px;
 }
 .bg-s .cls-main.color-s .banner-box-after {
   width: 760px;
@@ -178,7 +198,7 @@
 }
 .bg-s .class-process {
   background-color: #fff;
-  padding: 45px 0;
+  padding: 0px 0px 45px 0;
 }
 .bg-s .class-process h5 {
   font-size: 24px;
@@ -254,6 +274,9 @@
   margin-top: 10px;
   text-indent: 10px;
 }
+.bg-s .class-process .class-process-in .class-process-in-r dl.dl-1 {
+  background: url(../../../images/html/b2s/process_class_2-2.png?v=tH%2BUJmthEm3AUDHl8%2FOAJw%3D%3D) no-repeat left top;
+}
 .bg-s .class-process .class-process-in .class-process-in-r dl.dl2 {
   padding: 58px 120px 34px 50px;
   background: url(../../../images/html/b2s/process_class_3.png?v=HrqewYxJtEuCUFNrFSj6Yw%3D%3D) no-repeat left top;
@@ -277,7 +300,7 @@
   margin: 20px 140px 0;
 }
 .bg-s .class-process .class-process-in-after .class-process-in-r dl.dl1 {
-  background: url(../../../images/html/b2s/process_class_5-1.png?v=x5lzc3vOSL3KmM6oRwps%2BQ%3D%3D) no-repeat left top;
+  background: url(../../../images/html/b2s/process_class_5-1.png?v=HbjJvjZht3b6YOP2ZiZQJQ%3D%3D) no-repeat left top;
 }
 .bg-s .class-process .class-process-in-after .class-process-in-r dl.dl1 .spcel {
   color: #70b764;
@@ -286,6 +309,9 @@
   border-radius: 99px;
   display: inline-block;
   padding: 0 10px;
+}
+.bg-s .class-process .class-process-in-after .class-process-in-r dl.dl-1 {
+  background: url(../../../images/html/b2s/process_class_5-2.png?v=asGXpCuu3SXCKYzWuzwzGQ%3D%3D) no-repeat left top;
 }
 .bg-s .class-process .class-process-in-after .class-process-in-r dl.dl2 {
   background: url(../../../images/html/b2s/process_class_6.png?v=RaRpkZESl3yWqPUKIm2TXg%3D%3D) no-repeat left top;

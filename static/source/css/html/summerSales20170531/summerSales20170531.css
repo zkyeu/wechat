@@ -1,0 +1,537 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ */
+/**
+ * 默认样式
+ * @file：   base.less
+ * @author:  chenxiaosong（chenxiaosong@51talk.com）
+ * @update:  2015-10-12
+ * @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  background-color: #fff;
+  _background-image: url(about:blank);
+  _background-attachment: fixed;
+  _overflow-x: hidden;
+}
+body {
+  font: 13px 'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial, Verdana, Tahoma;
+  color: #1e1e1e;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+}
+input,
+button,
+select,
+textarea {
+  font-family: 'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial, Verdana, Tahoma;
+  outline: none;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 0;
+}
+a {
+  color: #1e1e1e;
+  text-decoration: none;
+  outline: none;
+}
+a:hover {
+  color: #ff9600;
+}
+strong {
+  font-weight: bold;
+}
+img {
+  vertical-align: middle;
+}
+::-moz-selection {
+  background-color: #ff9600;
+  color: white;
+  text-shadow: none;
+}
+::selection {
+  background-color: #ff9600;
+  color: white;
+  text-shadow: none;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  *zoom: 1;
+  *display: inline;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.relative {
+  position: relative;
+}
+.relativez {
+  position: relative;
+  zoom: 1;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.hidden {
+  overflow: hidden;
+}
+.ft12 {
+  font-size: 12px;
+}
+.ft13 {
+  font-size: 13px;
+}
+.ft14 {
+  font-size: 14px;
+}
+.ft15 {
+  font-size: 15px;
+}
+.ft16 {
+  font-size: 16px;
+}
+.ft18 {
+  font-size: 18px;
+}
+.ft19 {
+  font-size: 19px;
+}
+.ft20 {
+  font-size: 20px;
+}
+.normal {
+  font-weight: normal;
+}
+.bold {
+  font-weight: bold;
+}
+.tal {
+  text-align: left;
+}
+.tac {
+  text-align: center;
+}
+.tar {
+  text-align: right;
+}
+.f-taj {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+.f-vam,
+.f-vama * {
+  vertical-align: middle;
+}
+.f-wsn {
+  word-wrap: normal;
+  white-space: nowrap;
+}
+.f-pre {
+  overflow: hidden;
+  text-align: left;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.f-wwb {
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.f-ti {
+  overflow: hidden;
+  text-indent: -30000px;
+}
+.f-ti2 {
+  text-indent: 2em;
+}
+.f-lhn {
+  line-height: normal;
+}
+.f-tdu,
+.f-tdu:hover {
+  text-decoration: underline;
+}
+.f-tdn,
+.f-tdn:hover {
+  text-decoration: none;
+}
+.f-toe {
+  overflow: hidden;
+  word-wrap: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.f-csp {
+  cursor: pointer;
+}
+.f-csd {
+  cursor: default;
+}
+.f-csh {
+  cursor: hand;
+}
+.f-csm {
+  cursor: move;
+}
+.f-usn {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.fm-arrow-pos {
+  border-style: solid;
+  border-color: #ffa800;
+  border-width: 1px;
+}
+.auto0 {
+  width: 1000px;
+  margin: 0 auto;
+}
+.pc_junior {
+  /* updata */
+}
+.pc_junior .width100 {
+  width: 100%;
+}
+.pc_junior .top {
+  height: 84px;
+  background: url(../../../images/html/summerSales20170531/logo.png?v=UZSKyQdOmVh7tr87eiV0fQ%3D%3D) 45px center no-repeat;
+}
+.pc_junior .banner_new {
+  height: 653px;
+  width: 100%;
+  background: url(../../../images/html/summerSales20170531/banner.jpg?v=PeJEawVE%2BZq59Osb0lSPWg%3D%3D) center top no-repeat;
+}
+.pc_junior .banner {
+  position: relative;
+}
+.pc_junior .banner .iterm {
+  position: relative;
+}
+.pc_junior .banner .iterm a {
+  position: absolute;
+  bottom: 62px;
+  left: 96px;
+  height: 77px;
+  width: 246px;
+  background: url(../../../images/html/summerSales20170531/freeBtn.png?v=e%2BhW9cRMjX0cdM0Zh2Vw5A%3D%3D) center no-repeat;
+}
+.pc_junior .banner .advantage {
+  display: block;
+  width: 316px;
+  height: 43px;
+  background: url(../../../images/html/summerSales20170531/advantage.png?v=HKIZvcqXSHiF8vbqwFfI6Q%3D%3D) center no-repeat;
+  position: absolute;
+  z-index: 99999;
+  bottom: -20px;
+  left: 50%;
+  margin-left: -158px;
+}
+.pc_junior .bottom {
+  position: relative;
+  height: 310px;
+  background: url(../../../images/html/summerSales20170531/phone_2.jpg?v=ZfOqhEA5QbgnE6wc0Ajzvw%3D%3D) center top no-repeat;
+}
+.pc_junior .bottom .form2_Reg .form2_RegIn {
+  padding: 50px 527px 0 125px;
+}
+.pc_junior .bottom .form2_Reg .form2_RegIn .formList {
+  width: 100%;
+  height: 44px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+}
+.pc_junior .bottom .form2_Reg .form2_RegIn .formList input {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 44px;
+  text-align: center;
+  background: #fff;
+  font-size: 26px;
+  color: #3e3a39;
+}
+.pc_junior .bottom .form2_Reg .form2_RegIn .subBtn {
+  height: 74px;
+  margin-top: 20px;
+}
+.pc_junior .bottom .form2_Reg .form2_RegIn .subBtn a {
+  display: block;
+  height: 74px;
+  width: 233px;
+  background: url(../../../images/html/summerSales20170531/freeSub.png?v=5I7aOzKIwOq0z8tUbO07Tw%3D%3D) no-repeat center top;
+  background-size: cover;
+  margin: 0 auto;
+}
+.pc_junior .features {
+  height: 412px;
+  background: url(../../../images/html/summerSales20170531/features.jpg?v=7Ga31K%2FdgBaW91dPUrzUTQ%3D%3D) center top no-repeat;
+}
+.pc_junior .junior {
+  height: 490px;
+  background: url(../../../images/html/summerSales20170531/junior.jpg?v=eqeXG5Rh2%2FmSttv8C78T1w%3D%3D) center top no-repeat;
+}
+.pc_junior .adult {
+  height: 404px;
+  background: url(../../../images/html/summerSales20170531/adult.jpg?v=SoL7F%2BSLxtOCKwWzthgedQ%3D%3D) center top no-repeat;
+}
+.pc_junior .world {
+  height: 274px;
+  background: url(../../../images/html/summerSales20170531/world.jpg?v=oU6RtifgZrpG6DPWZMPkVA%3D%3D) center top no-repeat;
+}
+.pc_junior .coe {
+  height: 585px;
+  background: url(../../../images/html/summerSales20170531/coe.jpg?v=PSYFrJp5azmr%2F22AiqpgaQ%3D%3D) center top no-repeat;
+}
+.pc_junior .star {
+  height: 537px;
+  background: url(../../../images/html/summerSales20170531/star.jpg?v=bWw3HunoFV5xHG%2BxbOZx0Q%3D%3D) center top no-repeat;
+}
+.pc_junior .phone_top {
+  height: 401px;
+  background: url(../../../images/html/summerSales20170531/phone_top.jpg?v=fKz%2FOrVjylDgESwC15UsVw%3D%3D) center top no-repeat;
+}
+.mask {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  z-index: 99999;
+  margin-left: -375px;
+  width: 750px;
+  height: 640px;
+  border: 5px solid #fff;
+  border-radius: 20px;
+  background: #000;
+  opacity: 0.6;
+  display: none;
+}
+.mask_sp {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  z-index: 999999;
+  margin-left: -375px;
+  width: 750px;
+  display: none;
+}
+.mask_sp .close {
+  display: block;
+  height: 68px;
+  width: 68px;
+  background: url(../../../images/html/summerSales20170531/close.png?v=X7u%2BxzHAW99ZdEsrk0MGDQ%3D%3D) no-repeat center top;
+  position: absolute;
+  right: -94px;
+  top: -2px;
+}
+.mask_sp .maskIn {
+  width: 100%;
+  padding-top: 95px;
+}
+.mask_sp .maskIn h3 {
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 70px;
+}
+.mask_sp .maskIn .mobile {
+  width: 495px;
+  margin: 0 auto;
+  position: relative;
+}
+.mask_sp .maskIn .mobile .form2_Reg {
+  position: absolute;
+  top: 130px;
+  left: 0;
+  width: 100%;
+}
+.mask_sp .maskIn .mobile .form2_Reg .form2_RegIn {
+  padding: 0 50px;
+}
+.mask_sp .maskIn .mobile .form2_Reg .form2_RegIn .formList {
+  width: 100%;
+  height: 44px;
+  margin: 0 auto;
+  margin-bottom: 12px;
+}
+.mask_sp .maskIn .mobile .form2_Reg .form2_RegIn .formList input {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 44px;
+  text-align: center;
+  background: #fff;
+  font-size: 26px;
+  color: #3e3a39;
+}
+.mask_sp .maskIn .mobile .form2_Reg .form2_RegIn .subBtn {
+  height: 122px;
+}
+.mask_sp .maskIn .mobile .form2_Reg .form2_RegIn .subBtn a {
+  display: block;
+  height: 122px;
+  width: 392px;
+  background: url(../../../images/html/summerSales20170531/mask_btn.png?v=l5fesEuPXlWkT3%2FzTRmgMQ%3D%3D) no-repeat center top;
+  background-size: cover;
+  margin: 0 auto;
+}
+.mask_sp .maskIn .mobile .form2_Reg .form2_RegIn .end {
+  text-align: center;
+  color: #3e3a39;
+  font-size: 20.5px;
+}

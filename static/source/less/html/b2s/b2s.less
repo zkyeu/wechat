@@ -1,0 +1,530 @@
+@import "../common/base.less";
+@import "../common/b2s/b2s_header.less";
+@import "../common/b2s/b2s_banner.less";
+@import "../common/b2s/b2s_ce_banner.less";
+@import "../common/b2s/b2s_sidebar.less";
+@import "../common/b2s/b2s_footer.less";
+@imgMpath: "../../../images/html/b2s/";
+/* 2015-12-15huhaili*/
+body{
+  .ft14;
+  color: #012345;
+}
+.widthMain{  
+  margin:0px auto;
+  width:@docWidth;
+}
+.tenIcon{
+  background: url("@{imgMpath}ten_icon.png") no-repeat;
+}
+.dialog {
+  display: none;
+  position: fixed;
+  _position: absolute;
+  top: 0; right: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  _height: ~'expression(eval(document.documentElement.clientHeight+document.documentElement.scrollTop))';
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  background-color: rgba(0, 0, 0, 0.30);
+  .content {
+    position: absolute;
+    width: 380px;
+    border-radius: 2px;
+    background-color: #FFFFFF;
+    top: 30%;
+    left: 50%;
+    margin-left: -190px;
+    .tips{
+      width: 100%;
+      height: 50px;
+      background-color: #ffbe23;
+      border-radius: 3px 3px 0 0;
+      h4{
+        float: left;
+        margin-top: 15px;
+        margin-left: 15px;
+        font-size: 18px;
+        color: #FFFFFF;
+      }
+      .close{
+        float: right;
+        width: 20px;
+        height: 20px;
+        margin-top: 15px;
+        margin-right: 15px;
+        background: url("@{imgMpath}ten_icon.png") -82px -162px no-repeat;
+      }
+    }
+    .info{
+    padding-top: 40px;
+      .info-content{
+        padding-left: 40px;
+        padding-right: 40px;
+        height: 60px;
+        margin-bottom: 10px;
+        .label{
+          float: left;
+          padding-top: 7px;
+          height: 60px;
+          span{
+            font-size: 14px;
+            font-color: #012345;
+          }
+        }
+        .info-txt{
+          float: left;
+          margin-left: 10px;
+          .txt{
+            border:1px solid #cfe0f4;
+            width: 240px;
+            height: 30px;
+          }
+          .err-tips {
+            display: none;
+            margin-top: 10px;
+            line-height: 15px;
+            color: #ff446c;
+            vertical-align: middle;
+            font-size: 13px;
+            i {
+              display: inline-block;
+            width: 15px;
+              height: 15px;
+              background: url("@{imgMpath}ten_icon.png") -2px -59px no-repeat;
+            }
+          }
+          select{
+              color: #a9a9a9;
+              option{
+                color: #000;
+              }
+          }
+          .sexSel{
+              width: 240px;
+              height: 30px;
+              .check-icon{
+                  width: 12px;
+                  height: 12px;
+                  background-position: -204px -71px;
+                  margin-right: 12px;
+              }
+              .check-on{
+                  background-position: -219px -71px;
+              }
+              strong{
+                  font-weight: normal;
+                  display: inline-block;
+                  padding-top: 5px;
+                  margin-right: 32px;
+              }
+              span{
+                  vertical-align: middle;
+                  display: inline-block;
+                  -moz-user-select: none;
+                  -webkit-user-select: none;
+                  -ms-user-select: none;
+              }
+          }
+        }
+      }
+    }
+    
+    .submit {
+      width: 100%;
+      text-align: center;
+      padding-bottom: 40px;
+      a {
+        display: inline-block;
+        text-align: center;
+        width: 120px;
+        height: 40px;
+        color: #FFFFFF;
+        background-color: #ffbe23;
+        border-radius: 3px;
+        font-size: 18px;
+        line-height: 39px;
+      }
+    }
+  }
+}
+.tea-dialog{
+  .content {
+    top:5%;
+    .info{
+      .info-content{
+        .label{
+          width:70px;
+          text-align: right;
+        }
+        .info-txt{
+          .txt{
+            width:210px;
+          }
+          .input-text{
+            padding-left: 5px;
+            width:203px;
+          }
+        }
+      }
+    }
+  }  
+  .prompt-text{
+    font-size:13px;
+    color:#fe5a90;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+.m-alert {
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100%;
+    height: 100%;
+    _height: ~'expression(eval(document.documentElement.clientHeight+document.documentElement.scrollTop))';
+    .in{
+        border-radius: 5px; 
+        position: relative;
+        top: 50%;
+        left: 50%;
+        _top: ~'expression(eval(document.documentElement.clientHeight+document.documentElement.scrollTop-307))';
+        width: 320px;
+        margin-top: -120px;
+        margin-left: -160px;
+        overflow: hidden;
+        background-color: #fff;
+        box-shadow: -3px 3px 0 0 rgba(0,0,0,0.03);
+        .hd {
+            height: 40px;
+            line-height: 40px;
+            color: #fff;
+            background-color: #ffbe23;
+            position: relative;
+            .close {
+                overflow: hidden;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                width: 20px;
+                height: 20px;
+                background: url("@{imgMpath}ten_icon.png") -82px -162px no-repeat;
+            }
+            h4 {
+                text-indent: 22px;
+                font-size: 14px;
+            }
+        } 
+        .bd {
+            line-height: 1.8;
+            min-height: 38px;
+            _height: 38px;
+            padding: 32px 40px;
+            font-size: 18px;
+            color: #000;
+            border-left: 1px solid #dbdee0;
+            border-right: 1px solid #dbdee0;
+        }
+        .ft {
+            padding-bottom: 32px;
+            border: 1px solid #dbdee0;
+            border-top: none;
+            .u-btn {
+                display: inline-block;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                -o-user-select: none;
+                user-select: none;
+                border-radius: 2px;
+                text-align: center;
+                background-color: #fff;
+                border-width: 1px;
+                border-style: solid;
+                width: 88px;
+                height: 38px;
+                line-height: 38px;
+                &:active{
+                    color: #fff;
+                    background-color: #ff8200;
+                    border-color: #ff8200;
+                }
+            }
+            .jsCancel{
+                color: #9eb3c8;
+                border-color: #becee0;
+                background-color: #eaf1f9;
+            }
+            .jsSure{
+                color: #fff;
+                border-color: #ffbe23;
+                background-color: #ffbe23;
+            }
+        }
+        .f-tac{
+            text-align: center;
+        }
+    }
+}
+
+.m-schoolx{
+    display: none;
+    position: fixed;
+    _position: absolute;
+    top: 0; right: 0;
+    bottom: 0; left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    _height: ~'expression(eval(document.documentElement.clientHeight+document.documentElement.scrollTop))';
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    background-color: rgba(0, 0, 0, 0.30);
+    .content{
+        width: 610px;
+        height: 460px;
+        position: absolute;
+        left: 50%;
+        top:50%;
+        background-color: #fff;
+        margin-left: -305px;
+        margin-top: -230px;
+        .u-title{
+            position: relative;
+            height: 50px;
+            line-height: 50px;
+            background-color: #fdbd3a;
+            font-size: 18px;
+            padding-left: 20px;
+            color: #fff;
+            margin-bottom: 30px;
+            a{
+                position: absolute;
+                width: 18px;
+                height: 18px;
+                background: url("@{imgMpath}ten_icon.png") -9px -262px no-repeat;
+                right: 20px;
+                top:16px;
+            }
+        }
+        .m-school-form{
+            padding-left: 30px;
+        }
+        .address{
+            height: 32px;
+            margin-bottom: 35px;
+            label{
+                float: left;
+                line-height: 32px;
+            }
+            .sel{
+                float: left;
+                position: relative;
+                width: 138px;
+                height: 30px;
+                border: 1px solid #cfe0f3;
+                border-radius: 2px;
+                margin-left: 20px;
+                h4{
+                    font-size: 14px;
+                    color: #9aafc7;
+                    line-height: 30px;
+                    padding-left: 10px;
+                    cursor: pointer;
+                }
+                .selIcon{
+                  position: absolute;
+                  top: 12px;
+                  right: 10px;
+                  width: 13px;
+                  height: 8px;
+                  background-position:  -271px -209px; 
+                }
+                .open{
+                    background-position:  -271px -240px;
+                }
+                .list{
+                    display: none;
+                    border: 1px solid #cfe0f3;
+                    width: 138px;
+                    height: 247px;
+                    overflow-x:hidden; 
+                    overflow-y: auto;
+                    background: #fff;
+                    z-index: 999;
+                    position: absolute;
+                    left: -1px;
+                    top: 30px;
+                    li{
+                        height: 30px;
+                        line-height: 30px;
+                        width: 130px;
+                        border-bottom: 1px solid #e8f2fd;
+                        padding-left: 8px;
+                        overflow: hidden;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .schools{
+            width: 552px;
+            .labels{
+                font-size: 14px;
+                border-bottom: 1px solid #f2ac05;
+                margin-bottom: 20px;
+                label{
+                    float: left;
+                    line-height: 32px;
+                    margin-right: 20px;
+                }
+                span{
+                    float: left;
+                    margin-right: 13px;
+                    line-height: 32px;
+                    cursor: pointer;
+                    padding-bottom: 8px;
+                }
+                .active{
+                    color: #f2ac05;
+                    background: url("@{imgMpath}sanj.png") 10px 35px no-repeat;
+                }
+                .last{
+                    margin-right: 0;
+                }
+                i{
+                    position: absolute;
+                    left: 99px;
+                    top: 27px;
+                    width: 0px;
+                    height: 0px;
+                    border-width: 6px;
+                    border-color: transparent transparent #f2ac05 transparent;
+                    border-style: solid;
+                }
+            }
+            .m-school-list{
+                width: 100%;
+                height: 180px;
+                //margin-bottom: 26px;
+                overflow: auto;
+                li{
+                    float: left;
+                    margin-bottom: 22px;
+                    width: 137px;
+                    white-space:nowrap; 
+                    overflow:hidden; 
+                    text-overflow:ellipsis;
+                    cursor: pointer;
+                }
+                .active{
+                    color: #f2ac05;
+                }
+            }
+            .m-school-list2{
+                margin-bottom: 26px;
+                li{
+                    width: 132px;
+                }
+            }
+            .makeSure{
+                text-align: center;
+                .submit{
+                    display: inline-block;
+                    color: #fff;
+                    width: 100px;
+                    height: 40px;
+                    line-height: 40px;
+                    border-radius: 2px;
+                    background-color: #cbcfd2;
+                    font-size: 18px;
+                }
+                .active{
+                    background-color: #f2ac05;
+                }
+            }
+        }
+    }
+}
+
+.clearfix:after{
+    display: block;
+    content: "";
+    clear: both;
+}
+.clearfix{
+    *zoom: 1;
+}
+
+.clearfixed:after{
+    content: ".";
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfixed{
+  *zoom:1;
+}
+
+.ell{
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  overflow: hidden;
+}
+.dls{
+  color:#00b1fa;
+  text-decoration: underline;
+}
+.dls:hover{
+  color:#ff7800;
+}
+//首页
+@import "modules/home.less";
+@import "modules/my_class.less";
+@import "modules/class_grade.less";
+@import "modules/stu_class.less";
+@import "modules/how_class.less";
+/*校企合作申请*/
+@import "modules/ce_apply.less";
+@import "modules/login_account.less";
+@import "modules/perfect_info.less";
+@import "modules/ce_apply_form.less";
+@import "modules/find_password.less";
+/*代理商*/
+@import "modules/agent.less";
+ /*支付*/
+@import "modules/pay.less";
+/*AC支付*/
+@import "modules/AC_pay.less";
+/*班级邀请码*/
+@import "modules/class_invite.less";
+@import "modules/class_record.less";
+/*登录注册更改*/
+@import "modules/login_registe.less";
+/*首页*/
+@import "modules/home_page.less";
+/*老师学生注册页*/
+@import "modules/stu_teaRegister.less";
+/*编辑资料页*/
+@import "modules/complie_thing.less";
+@import "modules/t_report.less";
+/*分页*/
+@import "modules/b2s-paging.less";
+/*约课*/
+@import "modules/about_class.less";
+/* app介绍页 */
+@import "modules/b2s_app.less";
+@import "modules/tea_class.less";
+//代理商 班级信息
+@import "modules/class_info.less";

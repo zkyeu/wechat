@@ -1,0 +1,174 @@
+@import "../common/www/base.less";
+
+@import "../common/www/w_header.less";
+@import "../common/www/w_footer.less";
+/* 中教LANDING页-成人 */
+@imgPathImg: "../../../images/html/EnglishCartoon/";
+/*动漫详情页*/
+.cartoonDetails{
+	padding-top: 70px;
+	padding-bottom: 100px;
+	background-color: #efefef;
+	.c-width{
+		width:850px;
+		padding:0 75px;
+		margin:0 auto;
+		.g-icon{
+			margin-bottom: 20px;
+		}
+		.icon-text{
+			font-size: 16px;
+			line-height: 30px;
+			/*height: 119px;*/
+			background-color: #fff;
+			padding:33px 35px;
+		}
+		.g-end{
+			padding-top: 60px;
+			
+		}
+		.end-text{
+			font-size: 28px;
+			line-height: 1px;
+			color: #ccc;
+			text-align: center;
+			border-bottom: 1px solid #d9d9d9;
+			position: relative;
+			span{
+				padding: 0 20px;
+				background-color: #efefef;
+			}
+		}
+	}
+}
+/*动漫列表页*/
+.cartoonList{
+	.g-top{
+		height: 70px;
+		position: relative;
+		border-bottom: 1px solid #dbdbdb;
+		text-align: center;
+		padding-top: 90px;
+		.g_icon{
+			position: absolute;
+			left: 50%;
+			top:160px;
+			margin-left: -17.5px;
+		}
+	}
+	.g-list{
+		background-color: #efefef;
+		padding-top: 80px;
+		padding-bottom: 30px;
+		.list-width{
+			width: 1000px;
+			margin:0 auto;
+		}
+		ul{
+			margin-right: -50px;
+		}
+		li{
+			width: 475px;
+			float: left;
+			height: 359px;
+			margin-right: 50px;
+			margin-bottom: 50px;
+		}
+		.l-text{
+			font-size: 18px;
+			line-height: 88px;
+			height: 88px;
+			background-color: #fff;
+			text-align: center;
+			overflow: hidden;
+		}
+	}
+}
+/*音频列表页*/
+.cartoon{
+	.g-list{
+		li{
+			height: 88px;
+		}
+		.list-left{
+			width: 54px;
+			padding: 17px;
+			height: 54px;
+			background-color: #dedede;
+			float: left;
+			.playNow{
+				width: 54px;
+				height: 54px;
+				background:url("@{imgPathImg}play.png") left top no-repeat;
+				.f-csp;
+				&.stop{
+					background-image: url("@{imgPathImg}stop.png");
+				}
+			}
+		}
+		.list-right{
+			width: 347px;
+			height: 100%;
+			background-color: #fff;
+			line-height:88px;
+			padding-left: 20px;
+			padding-right: 20px;
+			float: left;
+			font-size: 18px;
+			overflow: hidden;
+		}
+	}
+}
+//改版
+.hr_bo{
+	height:5px;
+	width:100%;
+	background:url("@{imgPathImg}ml_bor.jpg") left bottom repeat-x;
+}
+.cartoonList{
+	.g-list{
+			 .l-text1{
+				font-size: 18px;
+				line-height: 30px;
+				background-color: #fff;
+				text-align: center;
+				overflow: hidden;
+				padding-top:20px;
+		}
+		.l-text2{
+			color:#999999;
+			font-size: 16px;
+			padding-top:0;
+			padding-bottom:25px;
+		}
+	}
+}
+.reg{
+	li{
+		.f_email{
+			margin-left:10px;
+		}
+		.f_password{
+			margin-left:10px;
+			width:142px;
+		}
+		.f_mobile{
+			margin-left:10px;
+			width:142px;
+		}
+		.jscheckbox{
+			float:left;
+			margin:24px 0 0 10px;
+			a{
+				color:#fff;
+			}
+		}
+	}
+}
+.cartoonList {
+	#g-top{
+		background: #efefef;
+		padding-top:45px;
+		z-index:-99;
+	}
+}

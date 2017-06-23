@@ -1,0 +1,177 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ */
+body {
+  font-family: "微软雅黑";
+  background: #efefef;
+}
+body,
+ol,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input {
+  margin: 0;
+  padding: 0;
+}
+i,
+b,
+em,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-style: normal;
+}
+li {
+  list-style: none;
+}
+img {
+  display: block;
+  border: 0;
+}
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+input,
+textarea {
+  outline: none;
+  border: 0;
+}
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+.width100 {
+  width: 100%;
+}
+.oTm {
+  width: 1000px;
+  margin: 0 auto ;
+  padding: 25px 0 60px;
+  background: #fff;
+}
+.oTm .lf {
+  float: left;
+}
+.oTm .product {
+  padding: 0 40px 0 96px;
+}
+.oTm .product .pro-img {
+  width: 360px;
+  height: 248px;
+  border-radius: 8px;
+}
+.oTm .product .pro-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+.oTm .product .pro-des {
+  width: 468px;
+  margin-left: 36px;
+  padding-top: 12px;
+}
+.oTm .product .pro-des h2 {
+  font-size: 24px;
+  color: #000;
+  line-height: 1;
+}
+.oTm .product .pro-des .des {
+  font-size: 14px;
+  color: #999;
+  margin: 12px 0 32px;
+  line-height: 1;
+}
+.oTm .product .pro-des .price {
+  font-size: 18px;
+  color: #999;
+  line-height: 1;
+}
+.oTm .product .pro-des .price span {
+  color: #ff7a42;
+  line-height: 1;
+}
+.oTm .product .pro-des .price span b {
+  font-size: 34px;
+  line-height: 1;
+}
+.oTm .product .pro-des .price span em {
+  color: #ff9568;
+}
+.oTm .product .pro-des .timer {
+  font-size: 12px;
+  color: #999;
+  margin: 33px 0 6px 2px;
+  line-height: 1;
+}
+.oTm .product .pro-des .timer .title {
+  color: #555;
+  margin-right: 8px;
+  line-height: 1;
+}
+.oTm .product .pro-des .timer i {
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  background: url(../../../images/html/oneToMany20170614/sprites.png?v=RSD%2B3QTC6Qb1a6JIKFSD4w%3D%3D) no-repeat center -19px;
+  line-height: 1;
+  margin-right: 6px;
+  margin-bottom: -2px;
+}
+.oTm .product .pro-des .service {
+  font-size: 12px;
+  color: #999;
+  line-height: 1;
+  margin-left: 2px;
+}
+.oTm .product .pro-des .service .title {
+  color: #555;
+  margin-right: 8px;
+  line-height: 1;
+}
+.oTm .product .pro-des .service i {
+  display: inline-block;
+  height: 17px;
+  width: 14px;
+  background: url(../../../images/html/oneToMany20170614/sprites.png?v=RSD%2B3QTC6Qb1a6JIKFSD4w%3D%3D) no-repeat center top;
+  line-height: 1;
+  margin-right: 6px;
+  margin-bottom: -4px;
+}
+.oTm .product .pro-des .goBuy {
+  color: #fff;
+  font-size: 16px;
+  display: block;
+  height: 36px;
+  width: 200px;
+  background: #ff8200;
+  border-radius: 3px;
+  line-height: 36px;
+  text-align: center;
+  margin-top: 16px;
+  margin-left: 2px;
+  padding-left: 2px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}

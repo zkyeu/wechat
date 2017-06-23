@@ -1,0 +1,327 @@
+@charset "utf-8";
+@import "../common/base.less";
+@imgPath: '../../../images/wap/double12list/';
+
+html{height: 100%;}
+body { position: relative; font-family:"微软雅黑"; max-width: 640px; min-width: 320px; margin: 0 auto; }
+.clearfix:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+h3{
+    margin: 0;
+}
+.container{
+    .banner{
+        width: 100%;
+        height: 33.6rem;
+        background: url('@{imgPath}bg.jpg') 0 0 no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+        .blank{
+            height: 13rem;
+        }
+        .rule{
+            position: absolute;
+            right: 1.5rem;
+            bottom: 4.8rem;
+            color: #f94159;
+            font-size: 1.4rem;
+        }
+        .couponBox{
+            width: 18.7rem;
+            height: 18.75rem;
+            margin: 0 auto;
+        }
+        .applyCoupon{
+            width: 100%;
+            height: 100%;
+            background: url('@{imgPath}applyCoupon.png') left top no-repeat;
+            background-size: 100% 100%;
+            position: relative;
+            
+            a{
+                width: 17rem;
+                height: 3.8rem;
+                position: absolute;
+                bottom: 1.8rem;
+            }
+        }
+        .getCoupon{
+            width: 100%;
+            height: 100%;
+            background: url('@{imgPath}getCoupon.png') left top no-repeat;
+            background-size: 100% 100%;
+            text-align: center;
+            display: none;
+            .title{
+                height: 5rem;
+                font-size: 3rem;
+                line-height: 5rem;
+                margin: 0 auto 1rem;
+                color: #fff;
+                padding-top: 5.2rem;
+                span{
+                    font-size: 1.5rem;
+                }
+            }
+            .desc{
+                font-size: 1.2rem;
+                color: #fee11b;
+                line-height: 1.5rem;
+                margin-bottom: 0.9rem;
+            }
+            a{
+                width: 17rem;
+                height: 3.8rem;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        .getCoupon2{
+            width: 100%;
+            height: 100%;
+            background: url('@{imgPath}applyOk.png') left top no-repeat;
+            background-size: 100% 100%;
+            text-align: center;
+            display: none;
+            .title{
+                height: 5rem;
+                font-size: 3rem;
+                line-height: 5rem;
+                margin: 0 auto 1rem;
+                color: #fff;
+                padding-top: 5.2rem;
+                span{
+                    font-size: 1.5rem;
+                }
+            }
+            .desc{
+                font-size: 1.2rem;
+                color: #fee11b;
+                line-height: 1.5rem;
+                margin-bottom: 0.9rem;
+            }
+        }
+    }
+    .classList{
+        padding-top: 1.4rem;
+        background-color: #ffcd01;
+        li{
+            float: left;
+            margin-left: 4.68%;
+            margin-bottom: 1.5rem;
+            width: 42.97%;
+            text-align: center;
+            background-color: #fff;
+            img{
+                width: 100%;
+                /* height: 9.5rem; */
+                display: block;
+                border: none;
+            } 
+            .title{
+                font-size: 1.4rem;
+                line-height: 3.2rem;
+                color: #333333;
+                margin: 0;
+            }
+            .desc{
+                line-height: 1.5rem;
+                margin-bottom: 1rem;
+                span{
+                    font-size: 1.5rem;
+                    color: #ff2728;
+                    margin-right: 0.5rem;
+                    vertical-align: middle; 
+                    display: inline-block;
+                }
+                i{
+                   font-size: 1.2rem;
+                   color: #b1b1b1;
+                   text-decoration: line-through;
+                   vertical-align: middle; 
+                }
+            }
+        }
+    }
+    .course_list {
+      background: #ffcd01;
+      padding: 1.5rem;
+      li {
+        margin-top: 1.5rem;
+        &:first-child {
+          margin-top: 0;
+        }
+        .item{
+            position: relative;
+            overflow: hidden;
+            height: 9.5rem;
+            background: #fff;
+            display: flex;
+        }
+        img {
+          width: 12.8rem;
+          height: 9.5rem;
+          background: #eee;
+        }
+        .text {
+          flex: 1;
+          margin: 1rem 0 0 1rem;
+          .package_name {
+            font-size: 1.5rem;
+            color: #333333;
+            margin-bottom: 0.5rem;
+          }
+          .desc {
+            display: inline-flex;
+            align-items: center;
+            .low {
+              font-size: 1.2rem;
+              color: #ff2728;
+            }
+            .price_new {
+              color: #ff2728;
+              font-size: 1.6rem;
+              font-weight: bold;
+            }
+            .price_old {
+              text-decoration: line-through;
+              color: #b1b1b1;
+              font-size: 1.2rem;
+              margin-left: 0.5rem;
+            }
+          }
+        }
+        .btn_buy {
+          position: absolute;
+          right: 0.5rem;
+          bottom: 0.5rem;
+          width: 8rem;
+          height: 2.5rem;
+          line-height: 2.5rem;
+          text-align: center;
+          background: #ff4224;
+          border-radius: 1.25rem;
+          color: #fff;
+          font-size: 1.5rem;
+        }
+        &:active {
+          box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+        }
+      }
+      
+      .l_btn {
+        margin: 1.5rem auto 2.5rem auto;
+      }
+    }
+    .footerBox{
+      background: #d41549;
+    }
+    .fix-footer {
+      width: 100%;
+      padding: 2rem 1rem;
+      box-sizing: border-box;
+      display: -webkit-box;
+      display: flexbox;
+      flex-pack: center;
+      flex-align: center;
+      .list {
+        -webkit-box-flex: 1;
+        box-flex: 1;
+        text-align: center;
+        a {
+          color: #fff;
+          -webkit-tap-highlight-color: transparent;
+        }
+        img {
+          height: 4rem;
+          width: 4rem;
+          margin-bottom: 0.8rem;
+        }
+      }
+    }
+    .footer {
+      height: 6.5rem;
+      .info {
+        font-size: 0.9rem;
+        color: #fff;
+        text-align: center;
+        line-height: 6.5rem;
+      }
+    }
+}
+.tipBox{
+    width: 29rem;
+    height: 18.5rem;
+    position: fixed;
+    left: 50%;
+    margin-left: -14.5rem; 
+    top: 50%;
+    margin-top: -9.25rem; 
+    background-color: #fff;
+    border-radius: 0.5rem;
+    display: none;
+    z-index: 1000;
+    .content{
+        width: 26rem;
+        margin: 0 auto;
+        color: #333333;
+        .header{
+            font-size: 1.6rem;
+            line-height: 4.5rem;
+            border-bottom: 1px solid #e5e5e5;
+            margin-bottom: 0.8rem;
+            a{
+                width: 2.35rem;
+                height: 2.3rem;
+                float: right;
+                margin-top: 1.1rem;
+                background: url('@{imgPath}close.png') left top no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+        ul{
+            font-size: 1.2rem;
+            line-height: 2.45rem;
+        }
+    }
+}
+.mask{
+    background:rgba(0,0,0,0.7);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

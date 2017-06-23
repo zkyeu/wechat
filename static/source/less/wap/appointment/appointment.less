@@ -1,0 +1,197 @@
+html{ font-size:625%;}
+@media only screen and (min-width: 375px){html{font-size: 733%;}}
+@media only screen and (min-width: 414px){html{font-size: 810%;}}
+@media only screen and (min-width: 481px){html{font-size: 940%;}}
+@media only screen and (min-width: 561px){html {font-size: 1090%;}}
+@media only screen and (min-width: 641px){html {font-size: 1250%;}}
+@import "../common/reset.less";
+@imgPath: "../../../images/wap/appointment/";
+.border-style() {
+	border-bottom:#b1d6fd solid 1px;
+}
+.common-style() {
+	flex:1.5;
+	width:60%;
+	margin-right:1rem;
+	.border-style;
+	input {
+		width:80%;
+	}
+}
+input:-webkit-autofill {
+	background:rgb(255,255,255);
+}
+.appointment {
+	.header {
+		// margin-top:1rem;
+		padding:1.25rem 0 1.25rem 1.95rem;
+		background:#eff0f7;
+		img {
+			max-width:60%;
+		}
+	}
+	.wrap {
+		padding:1.95rem;
+	}
+	.tips {
+		color:#54a8fc;
+		font-size:1.5rem;
+		white-space:nowrap;
+	}
+	.form {
+		margin-top:3.33rem;
+		.btn {
+			display:inline-block;
+			width:8.8rem;
+			padding:1rem 0;
+			font-size:1.5rem;
+			color:#54a8fc;
+			border:#b1d6fd solid 1px;
+			border-radius:6px;
+			text-align:center;
+		}
+		.resend {
+			font-size:1.2rem;
+			color:#ffada1;
+			border:#ffada1 solid 1px;
+		}
+		.disabled {
+			color:#9e9ea7;
+			border:#9e9ea7 solid 1px;
+		}
+		input {
+			width:100%;
+			padding:1rem 0;
+			font-size:1.4rem;
+			background:#fff;
+			border:none;
+			&:-webkit-autofill {
+				background:#fff;
+				 -webkit-box-shadow: 0 0 0 1000px white inset;
+			}
+		}
+		li {
+			position:relative;
+			display:flex;
+			align-items:center;
+			margin-bottom:2rem;
+		}
+		.error {
+			position:absolute;
+			left:0;
+			bottom:-18px;
+			width:100%;
+			color:red;
+			font-size:1.4rem;
+		}
+		.clear {
+			display:none;
+			width:15px;
+			height:15px;
+			content:'';
+			background:url('@{imgPath}clear.png') no-repeat;
+			background-size:cover;
+		}
+		&-name {
+			&__wrap {
+				display:flex;
+				align-items:center;
+				.common-style;
+				&::before {
+					display:inline-block;
+					width:20px;
+					height:20px;
+					margin-right:1rem;
+					background:url('@{imgPath}name_icon.png') no-repeat;
+					background-size:contain;
+					content:'';
+				}
+			}
+		}
+		&-birthday {
+			.border-style;
+			&::before {
+				display:inline-block;
+				width:20px;
+				height:14px;
+				margin-right:1.3rem;
+				background:url('@{imgPath}birthday_icon.png') no-repeat;
+				background-size:contain;
+				content:'';
+			}
+			&::after {
+				display:inline-block;
+				width:20px;
+				height:24px;
+				margin-left:1rem;
+				background:url('@{imgPath}calendar_icon.png') no-repeat;
+				background-size:contain;
+				content:'';
+			}
+			.clear {
+				width:18px;
+			}
+		}
+		&-tel {
+			.border-style;
+			&::before {
+				display:inline-block;
+				width:15px;
+				height:18px;
+				margin-right:1.3rem;
+				background:url('@{imgPath}phone_icon.png') no-repeat;
+				background-size:cover;
+				content:'';
+			}
+			.clear {
+				width:17px;
+			}
+		}
+		&-code {
+			&__wrap {
+				display:flex;
+				align-items:center;
+				.common-style;
+				&::before {
+					display:inline-block;
+					width:20px;
+					height:17px;
+					margin-right:1rem;
+					background:url('@{imgPath}code_icon.png') no-repeat;
+					background-size:contain;
+					content:'';
+				}
+			}
+			&__btn {
+				width:8.3rem;
+			}
+		}
+		&-telcode {
+			&__wrap {
+				display:flex;
+				align-items:center;
+				.common-style;
+				&::before {
+					display:inline-block;
+					width:20px;
+					height:16px;
+					margin-right:1rem;
+					background:url('@{imgPath}phone-code_icon.png') no-repeat;
+					background-size:contain;
+					content:'';
+				}
+			}
+		}
+	}
+	.sure {
+		margin-top:4rem;
+		padding:1rem 0;
+		font-size:1.8rem;
+		color:#fff;
+		background:#66affb;
+		text-align:center;
+		border-radius:6px;
+	}
+}
+@import "success.less";
+@import "selector.less";
