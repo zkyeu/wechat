@@ -1,0 +1,214 @@
+html{ font-size:625%;}
+@media only screen and (min-width: 375px){html{font-size: 733%;}}
+@media only screen and (min-width: 414px){html{font-size: 810%;}}
+@media only screen and (min-width: 481px){html{font-size: 940%;}}
+@media only screen and (min-width: 561px){html {font-size: 1090%;}}
+@media only screen and (min-width: 641px){html {font-size: 1250%;}}
+@import "../common/reset.less";
+@imgUrl:"../../../images/wap/picture/";
+body {
+	font-size:1.4rem;
+}
+.picture {
+	padding-top:1.83rem;
+	background:#5dc0fb;
+	&-logo {
+		text-align:center;
+		img {
+			max-width:50%;
+		}
+	}
+	&-title {
+		margin-top:1.83rem;
+		text-align:center;
+		img {
+			max-width:80%;
+		}
+	}
+	&-title__en {
+		margin-top:1.83rem;
+		font-size:1.8rem;
+		color:#fff;
+		text-align:center;
+	}
+	&-title__cn {
+		margin-top:0.67rem;
+		font-size:1.8rem;
+		color:#fff;
+		text-align:center;
+	}
+	&-wrap {
+		padding-top:2rem;
+		background:url('@{imgUrl}book_bg.jpg') center center no-repeat;
+		background-size:cover;
+		&__cover {
+			position:relative;
+			width:170px;
+			height:151px;
+			margin:0 auto;
+			padding:0 9px;
+			background:url('@{imgUrl}cover_bg.png') center center no-repeat;
+			background-size:cover;
+			text-align:center;
+			img {
+				border-radius:8px;
+			}
+			.mask {
+				position:absolute;
+				top:1px;
+				right:0;
+				width:50%;
+				height:100%;
+				background:rgba(255,255,255,0.1);
+				border-top-right-radius:8px;
+				border-bottom-right-radius:8px;
+			}
+		}
+	}
+	&-form {
+		padding:1.67rem;
+		li {
+			margin-bottom:1rem;
+		}
+		input {
+			width:100%;
+			padding:1.35rem 1.32rem;
+			box-sizing:border-box;
+			border-radius:10px;
+			border:none;
+			&::-webkit-input-placeholder {
+				font-size:1.6rem;
+			}
+		}
+	}
+	&-tips {
+		margin-top:1.5rem;
+		font-size:1.6rem;
+		color:#fff;
+		text-align:center;
+	}
+	&-unlock {
+		margin-top:1.5rem;
+		padding:0 12.5%;
+	}
+	&-more {
+		padding:1.67rem;
+		background:url('@{imgUrl}more_bg.jpg') center center no-repeat;
+		background-size:contain;
+		h3 {
+			text-align:center;
+			&::before, &::after {
+				display:inline-block;
+				width:4.15rem;
+				height:1px;
+				background:#7fcfff;
+				content:'';
+				vertical-align: middle;
+			}
+			&::before {
+				margin-right:1.25rem;
+			}
+			&::after {
+				margin-left:1.25rem;
+			}
+			img {
+				max-width:50%;
+			}
+		}
+		&__list {
+			margin-top:3.33rem;
+			&__book {
+				float:left;
+				width:47%;
+				margin-bottom:1.25rem;
+				box-sizing:border-box;
+				background:#fff;
+				border-radius:10px;
+				text-align:center;
+				.title {
+					margin:1rem;
+					white-space:nowrap;
+					font-weight:normal;
+					font-size:1.4rem;
+					color:#666;
+					text-overflow:ellipsis;
+					overflow:hidden;
+				}
+				img {
+					border-top-left-radius:10px;
+					border-top-right-radius:10px;
+				}
+				&:nth-child(odd) {
+					margin-right:1.25rem;
+				}
+			}
+		}
+	}
+	.share-mask {
+		position:absolute;
+		left:0;
+		top:0;
+		width:100%;
+		background:rgba(0,0,0,0.8);
+		.share-guide {
+			padding:0 2% 0 8%;
+			&__img {
+				text-align:right;
+				img {
+					max-width:80%;
+				}
+			}
+			.sure {
+				display:block;
+				width:120px;
+				height:39px;
+				margin:2.3rem auto;
+				background:url('@{imgUrl}sure.png') center center no-repeat;
+				background-size:cover;
+			}
+		}
+	}
+}
+.f-mark {
+	display: none;
+	z-index: 99;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	.error_tips_wrap {
+		overflow: hidden;
+		position: relative;
+		top: 50%;
+		width: 85%;
+		height: 18rem;
+		margin: -9rem auto;
+		color: #fff;
+		border-radius: 15px;
+		background:url('@{imgUrl}more_bg.jpg') center center repeat;
+		background-size: 100% auto;
+		.error_txt {
+			height: 7.5rem;
+			padding-top: 4rem;
+			font-size: 1.5rem;
+			line-height: 2.5rem;
+			text-align: center;
+		}
+		.sure_btn {
+			display: block;
+			width: 12rem;
+			height: 3.5rem;
+			margin: 1rem auto 0;
+			line-height: 3.5rem;
+			background-color: #ffd02e;
+			border-bottom: 0.35rem solid #ffbf14;
+			border-radius: 10px;
+			text-align: center;
+			font-size: 1.8rem;
+			font-weight: 600;
+			
+		}
+	}
+}

@@ -22,8 +22,7 @@
   left: 50%;
 }
 .choose_class .top_message {
-  min-height: 3rem;
-  padding-bottom: 0.36rem;
+  min-height: 2rem;
   background: #6bcefc url(../../../images/wap/b2s/1v1_choose_class_new-04.png?v=TWRv7oOZDKacXElVwwPQ2g%3D%3D) no-repeat;
   background-size: 100% 100%;
 }

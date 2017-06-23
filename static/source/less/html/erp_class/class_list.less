@@ -1,0 +1,151 @@
+@import "../common/base.less";
+@import "./class_table_list.less";
+@imgPath: "../../../images/html/erp_class/";
+
+html,body{background-color: #fff;}
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.cont-nav, .cont-nav .cont-nav-in ul li a{
+	-webkit-box-sizing: initial;
+     -moz-box-sizing: initial;
+          box-sizing: initial;//因为设置的border-box,所以需要增加高度
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clearfixs:after{
+	clear: both;
+	display: table;
+	content: "";
+}
+.content{
+  width: @docWidth;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+.mode{display: none;}
+.show_lessons{
+	margin-top: 15px;
+	border-radius: 8px;
+	.title{
+		height: 100px;
+		font-size: 18px;
+		background-color: #f6f6f6;
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+		padding: 45px 0 0 155px;
+		position: relative;
+		img{
+			position: absolute;
+			top:30px;
+			left: 30px;
+			height: 100px;
+			width: 100px;
+		}
+	}
+	.time_detail{
+		padding: 0 20px;
+		.chose_region{
+			line-height: 72px;
+			height: 72px;
+			position: relative;
+		}
+		.chose_detail{
+			width: 215px;
+			margin: 0 auto;
+			font-size: 16px;
+			.arrow_left,.arrow_right{
+				height: 72px;
+				float: left;
+				width: 47px;
+				background:url("@{imgPath}/arrow_left.png") left center no-repeat;
+				background-size: 7px 13px;
+			}
+			.arrow_right{
+				float: right;
+				background:url("@{imgPath}/arrow_right.png") right center no-repeat;
+			}
+		}
+		.week_day{
+			width: 64px;
+			position: absolute;
+			top:28px;
+			right:0;
+			
+			.week,.day{
+				width: 50%;
+				background-color: #fff;
+				color: #fcc800;
+				height: 22px;
+				line-height: initial;
+				text-align: center;
+				border:1px solid #fcc800;
+				border-radius: 8px;
+			}
+			.week{
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+			.day{
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+			.on{
+				background-color: #fcc800;
+				color: #1e1e1e;
+			}
+		}
+
+	}
+	.dayinfo{
+		padding: 20px 0;
+		border-bottom: 1px solid #e5e5e5;
+		img{
+			width: 180px;
+			height: 130px;
+		}
+		.tag{
+			padding: 0 6px;
+			height: 18px;
+			background-color: #fcc800;
+			text-align: center;
+			display: inline-block;
+			border-radius: 8px;
+		}
+		.operate{
+			padding-left: 25px;
+			a{
+				color: #ffb400;
+				margin-bottom: 12px;
+				display: block;
+			}
+			a.class_status{color: #1e1e1e;cursor: default;}
+		}
+		.info_detail{
+			padding: 0 30px;
+			border-right: 1px solid #e5e5e5;
+			width: 663px;
+			.titledesc{
+				margin: 16px 0;
+				&.haslink{
+					text-decoration: underline;
+				}
+			} 
+			p:last-child{
+				margin-top: 18px;
+			}
+		}
+	}
+}

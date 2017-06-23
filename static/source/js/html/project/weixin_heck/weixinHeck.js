@@ -35,7 +35,8 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
     // 大图
     $("[rel=gallery]").fancybox({
         openEffect: 'none',
-        closeEffect: 'none'
+        closeEffect: 'none',
+        padding : 0
     });
 
     // 小助手数据处理
@@ -85,6 +86,10 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
             clientVersion: '',
             //最新版本
             cloudVersion: '',
+            // 微信版本
+            wechat_version : '',
+            //当前版本信息
+            //dylib_version: '',
             // 置顶列表
             topList: [],
             // 微信小助手列表
@@ -94,7 +99,7 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
             //屏蔽列表
             muteList:[]
         }
-        wxHeck.title = document.title;
+        
         //引用外部封装方法
         wxHeck.Util = require("weixinUtil");
         wxHeck.Util.wxPop();
@@ -126,16 +131,43 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
             }
         })();
         //根据类型显示内容
-        wxHeck.checkUserType = function(){
+        wxHeck.checkUserType = function(name,type){
             var nameTitle = '';
             if (wxHeck.isCC()) {
-                if(localInfo.user_group == 6 || localInfo.user_group == 7){
-                    nameTitle = '51Talk中教老师: ';
+                if(localInfo.user_group == 6 || localInfo.user_group == 7 || localInfo.user_group == 8 || localInfo.user_group == 9){
+                    nameTitle = name;
                 }else{
-                    nameTitle = '51Talk课程顾问: ';
+                    //var _talk = '我是51Talk课程老师';
+                    var _on = '我是'+name +'，我带您做一下课前准备，您加一下我的微信吧～';
+                    var _end = '您好，我是'+ name +'，我给您发一下体验课报告，您加一下我的微信吧～';
+                    var _cancel = '您好，我是' + name +'，我帮您重新预约一节外教课吧～';
+                    var _non = '您好，我是' + name +'，有时间我帮您预约一节外教课吧～';
+                    console.log('userName：'+name, '类型：'+type);
+                    switch (type){
+                        //代表已约课
+                        case 'on':
+                            nameTitle = _on;
+                            break;
+                        //代表未约课
+                        case 'non':
+                            nameTitle = _non;
+                            break;
+                        //代表体验课完成
+                        case 'end':
+                            nameTitle = _end;
+                            break;
+                        //cancel、s_absent、t_absent分别代表取消、学生缺席，老师缺席
+                        case 'cancel':
+                        case 's_absent':
+                        case 't_absent':
+                            nameTitle = _cancel;
+                            break;
+                        default:
+                            nameTitle = name;
+                    }
                 }
             } else {
-                nameTitle = '51Talk班主任老师：';
+                nameTitle = '51Talk班主任老师：' + name;
             }
             return nameTitle;
         }
@@ -162,7 +194,7 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
             var wxData = wxHeck.wxInit.wxData;
 
             //屏蔽消息
-            if(wxData.msgList[id].userInfo.mute_session || wxData.muteList.indexOf(id) > -1) return;
+            //if(wxData.msgList[id].userInfo.mute_session || wxData.muteList.indexOf(id) > -1) return;
             // 是否小助手
             var helpIndex = wxData.helpList.indexOf(id);
             // 是否置顶列表
@@ -191,10 +223,12 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
         }
         wxHeck.scrollToBottom = function () {
             if (!wxHeck.msgBox) return;
+            if (document.hidden) return;
             wxHeck.msgBox.scrollTop(wxHeck.msgBox.get(0).scrollHeight);
         }
         wxHeck.getData = function (options) {
             var defaults = {
+                    timeout : 10000,
                     type: "post",
                     dataType: "json",
                     error : function(){
@@ -385,7 +419,7 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                         return wxHeck.Util.msgFilter(obj.msg);
                     }
                     // 如果是名片
-                    if (obj.cnt_type == 42 || obj.cnt_type == 3000 || obj.cnt_type == 3100 || obj.cnt_type == 495 || obj.cnt_type == 4950 || obj.cnt_type == 6000 || obj.cnt_type == 6001) {
+                    if (obj.cnt_type == 42 || obj.cnt_type == 3000 || obj.cnt_type == 3001 || obj.cnt_type == 3100 || obj.cnt_type == 495 || obj.cnt_type == 4950 || obj.cnt_type == 6000 || obj.cnt_type == 6001) {
                         try {
                             return JSON.parse(obj.msg);
                         } catch (e) {
@@ -407,7 +441,8 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     // 消息类型 在msgConfig中的 当 0(文本) 来处理
                     cnt_type: obj.cnt_type,
                     mem_id: opts.source ? opts.source.mem_id : "",
-                    from_id: opts.source ? opts.source.from_id : ""
+                    from_id: opts.source ? opts.source.from_id : "",
+                    source : opts.source
                 });
                 // 如果为拉取历史记录 则不更新最后一条消息
                 if (!obj.isGetHistory) {
@@ -419,7 +454,7 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                             if (obj.cnt_type == 1 || obj.cnt_type == 9999) return "[图片消息]";
                             if (obj.cnt_type == 2) return "[语音消息]";
                             if (obj.cnt_type == 42) return "[名片消息]";
-                            if (obj.cnt_type == 3000) return "[卡片消息]";
+                            if (obj.cnt_type == 3000 || obj.cnt_type == 3001) return "[卡片消息]";
                             if (obj.cnt_type == 495) return "[文章消息]";
                             if (obj.cnt_type == 4950) return "[加群邀请]";
                             if (obj.cnt_type == 6000) return "[收到文件]";
@@ -444,7 +479,8 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
             var key = url.split(".")[0].replace(/h.*\//, "");
             var config = {
                 testtest1117 : "bbimage1",
-                weixinheiniao : "bbimage2"
+                weixinheiniao : "bbimage2",
+                useoss : "bbimage2"
             }
             // 转换后的url 服务器配置反向代理访问 跳过跨域
             var _url = url.replace(/h.*com/, "/" + config[key]);
@@ -453,7 +489,6 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
             return _url;
         }
         wxHeck.isMyFriend = function(id){
-            // console.log(id, wxHeck.wxInit.wxData.userList);
             return $.inArray(id, wxHeck.wxInit.wxData.userList) > -1;
         }
         wxHeck.isHelper = function(){
@@ -461,6 +496,26 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
             var helpList = wxHeck.wxInit.wxData.helpList;
             return $.inArray(curUserId, helpList) > -1;
         }
+
+        wxHeck.flashTitle = wxHeck.Util.flashText();
+
+        wxHeck.flashTitleFn = (function(){
+            var title = document.title;
+            return {
+                set : function(text){
+                   wxHeck.flashTitle.set(text, function (flashText) {
+                        document.title = flashText;
+                    });
+                },
+                reset : function(cb){
+                    wxHeck.flashTitle.reset(function(){
+                        document.title = title;
+                        typeof(cb) == "function" && cb();
+                    });
+                }
+            }
+        })();
+
         // 联系人搜索框组件
         var userSel = Vue.extend({
             template: "#weixin_sel_bom",
@@ -623,6 +678,8 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     this.selLabel = "";
                     this.chatType = "";
                     this.isPendingDefault();
+                    this.$root.parentSend = false;
+                    this.$root.forwardText = "";
                 },
                 isPendingDefault: function () {
                     this.isPending.flag = false;
@@ -684,12 +741,13 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                 return {
                     editShow: false,
                     editvalue: "",
-                    isGroup: false
+                    isGroup: false,
+                    isNicker: false
                 }
             },
             computed: {
                 editValue: function () {
-                    return $.trim(this.editvalue)
+                    return $.trim(this.editvalue.replace(/<|>|\//g,''))
                 }
             },
             methods: {
@@ -697,11 +755,12 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     this.editShow = false;
                     this.editvalue = "";
                 },
-                selSure: function () {
+                selSure: function (a) {
                     if (this.editValue == "") return;
                     this.$dispatch("editNameSure", {
                         isGroup: this.isGroup,
-                        editValue: this.editValue
+                        editValue: this.editValue,
+                        nickInfo: a
                     });
                 }
             },
@@ -710,9 +769,16 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     this.editvalue = data.reMark;
                     this.editShow = true;
                     this.isGroup = data.isGroup;
+                    this.isNicker = data.isNicker
                 },
                 editNameClose: function () {
                     this.selCancel();
+                },
+                editMyNicker: function (data) {
+                    this.editShow = true;
+                    this.isNicker = true;
+                    this.isGroup = true;
+                    this.editvalue = data.nicker;
                 }
             }
         });
@@ -722,7 +788,17 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
             data: function () {
                 return {
                     conList: [],
-                    otherList : [],
+                    otherList : [
+                        { content : "1.如何使用黑鸟给学员发送教材？点开学员聊天界面，右上角会显示学员当天预约的教材，点击一键发送即可。目前黑鸟支持当天或黑鸟上显示预约的教材，如想发其他日期上的教材需要进入学员会员中心下载单独发送。" },
+                        { content : "2.如何把学员设置为全部标签里的某一个标签，如：快到期，已过期？全部标签所有的标签都是系统判断的，不能手动设置。如有发现名字下有此类学员没有被系统标注正确标签，请您及时反馈给我们。" },
+                        { content : "3.如何建群？点击左上角菜单按钮，点击发起群聊，在搜索栏里选择你要群聊的对象，点击确认即可。" },
+                        { content : "4.如何群发个人？点击左上角菜单按钮，点击 群发个人，在搜索栏里选择你要群发的对象和图片，点击确认即可。目前群发图片和文字时不能同步发送。" },
+                        { content : "5.如何群发图片？黑鸟支持群发图片和文字，点击群发按钮，选择群发对象，选中群发图片即可。" },
+                        { content : "6.学员推荐好友给我，如何查看推荐来源推荐人是谁？目前黑鸟无法实现此功能，建议您问学员是被谁推荐来的：如微信名字或者手机号等。" },
+                        { content : "7.如果使用黑鸟往朋友圈分享小视频？1）安装PC端微信客户端，登陆自己的微信号。2）使用自己微信发视频给黑鸟工作微信。3）在黑鸟微信浏览器端点击分享到朋友圈。" },
+                        { content : "8.微信掉线怎么办？及时复制下图上的微信ID发到黑鸟工作群里，以便技术及时为您解决。如果是自己使用手机踢掉线的，在准备提掉线之前请提前说明。" }
+                    ],
+                    isOther : false,
                     inputData: "",
                     tagSel: {
                         selShow: false,
@@ -742,11 +818,35 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
             },
             computed : {
                 conLists : function(){
-                    if(this.otherList.length > 0) return this.otherList;
-                    return this.conList;
+                    return this.isOther ? this.otherListCom : this.conList;
+                },
+                otherListCom : function(){
+                    var _val = $.trim(this.inputData);
+                    if(_val == "") return this.otherList;
+                    return this.highLight(_val, this.otherList, true);
                 }
             },
             methods: {
+                // 高亮搜索关键字
+                highLight : function(key, list, isFilter){
+                    var result = [];
+                    if(list.length == 0) return result;
+                    var reg = new RegExp(key.split(/\s+/).join("|"), "gi");
+                    $.map(list, function (ele, index) {
+                        var content = ele.content;
+                        if(isFilter){
+                            if(content.search(reg) < 0) return;
+                        }
+                        var _content = content.replace(reg, function (e) {
+                            return "<em>" + e + "</em>";
+                        });
+                        result.push({
+                            content : content,
+                            _content : _content
+                        });
+                    });
+                    return result;
+                },
                 sendQuickCon: function (content) {
                     this.$dispatch("getQuickCon", content);
                 },
@@ -772,7 +872,7 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     var that = this;
                     that.tagSel.selShow = false;
                     that.labelId = data.id;
-                    console.log(data.id);
+                    // console.log(data.id);
                     wxHeck.getData({
                         url: "/Knowledge/getCardPushByKeywordId",
                         data: {
@@ -796,6 +896,8 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                 inputData: function (val) {
                     var _val = $.trim(val);
                     var that = this;
+                    // 如果是黑鸟小助手的数据
+                    if(this.isOther) return;
                     if (_val == "") return that.conList = [];
                     wxHeck.getData({
                         url: "/Knowledge/getPushContent",
@@ -805,27 +907,17 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                         },
                         success: function (r) {
                             if (r.status != 10000) return alert(r.message);
-                            // 高亮搜索关键字
-                            var reg = new RegExp(_val.split(/\s+/).join("|"), "gi");
-                            var message = (function (msg) {
-                                if (msg.length == 0) return msg;
-                                return $.map(msg, function (ele, index) {
-                                    ele._content = ele.content.replace(reg, function (e) {
-                                        return "<em>" + e + "</em>";
-                                    });
-                                    return ele;
-                                });
-                            })(r.message);
-                            that.conList = message;
+                            that.conList = that.highLight(_val, r.message);
                             that.tagSel.selName = "";
                             if (that.conList.length != 0) that.isSearch = true;
                         }
                     });
+
                 }
             },
             events: {
-                setOtherList : function(list){
-                    this.otherList = list;
+                setOtherList : function(isOther){
+                    this.isOther = isOther;
                 },
                 setTagList:function(data){
                     if(data){
@@ -1039,12 +1131,13 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     crm: localInfo.id,
                     resetError : {
                         show : false,
-                        time : 10,
-                        timeRemark : 10,
+                        time : 20,
+                        timeRemark : 20,
                         mt : null,
                         send : false
                     },
-                    showLast : false
+                    showLast : false,
+                    isKickOff : false
                 }
             },
             methods : {
@@ -1068,11 +1161,13 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     if(this.resetError.show) return;
                     var that = this;
                     clearInterval(this.resetError.mt);
+                    // 如果是 踢出 /Reboot/setReboot 否则 /AdminContact/killWechat
+                    var api = this.isKickOff ? "/Reboot/setReboot" : "/AdminContact/killWechat";
                     wxHeck.getData({
                         beforeSend : function(){
                             that.resetError.send = true;
                         },
-                        url : "/AdminContact/killWechat",
+                        url : api,
                         data : {
                             wechat_id : localInfo.wechat_id
                         },
@@ -1097,7 +1192,6 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                             });
                         }
                     });
-
                 },
                 resetErrSuccess : function(){
                     this.resetError.show = true;
@@ -1113,6 +1207,7 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                 resetErrClear : function(){
                     clearInterval(this.resetError.mt);
                     this.errDetail = false;
+                    this.isKickOff = false;
                     this.resetError.time = this.resetError.timeRemark;
                     this.resetError.show = false;
                 }
@@ -1143,8 +1238,20 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     }
                     this.iscc = data.iscc;
                     this.isss = data.isss;
+
+                    // 设置滚动标题
+                    var isErrors = errors.netErr || errors.phoneErr;
+                    if(isErrors){
+                        wxHeck.flashTitleFn.set("黑鸟已掉线！");
+                    }else{
+                        wxHeck.flashTitleFn.reset(function(){
+                            if(wxHeck.wxInit.noReadAll > 0) wxHeck.flashTitleFn.set("您有新的消息！");
+                        });
+                    }
+
+                    // 网络错误
                     if(errors.netErr){
-                        console.log(that.mt);
+                        // console.log(that.mt);
                         clearInterval(that.mt);
                         that.bTime = that.ttt;
                         that.errDetail = false;
@@ -1163,9 +1270,28 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                             }else{
                                 that.sendStatus(3);
                                 clearInterval(that.mt);
-                                that.bTime = that.ttt;
-                                that.errDetail = true;
-                                that.iscc = that.isss = false;
+                                wxHeck.getData({
+                                    url : "/Reboot/getKickOutStatus",
+                                    data : {
+                                        wechat_id : localInfo.wechat_id
+                                    },
+                                    success : function(r){
+                                        that.isKickOff = r.status == 10000;
+                                        that.bTime = that.ttt;
+                                        that.errDetail = true;
+                                        that.iscc = that.isss = false;
+                                    },
+                                    error : function(){
+                                        that.bTime = that.ttt;
+                                        that.errDetail = true;
+                                        that.iscc = that.isss = false;
+                                    }
+                                });
+                                /*
+                                 clearInterval(that.mt);
+                                 that.bTime = that.ttt;
+                                 that.errDetail = true;
+                                 that.iscc = that.isss = false;*/
                             }
                         }, 1000);
                     }else{
@@ -1214,7 +1340,11 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     // crm手机号
                     crmMobile : "",
                     // 是否是我的学员添加
-                    addType : ""
+                    addType : "",
+                    //当前学员课程状态
+                    trialStatus : "",
+                    //个人介绍字符长度
+                    longStrTip : false
                 }
             },
             props: ["localInfo"],
@@ -1229,6 +1359,7 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     this.wxDes = "";
                     this.wxAcc = "";
                     this.addType = "";
+                    this.trialStatus = "";
                     this.addFriendShow = false;
                     this.toNext = false;
                 },
@@ -1237,7 +1368,8 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     // 如果从我的学员过来的 已经有crmid 跟crmmobile 直接走添加
                     if(this.addType){
                         this.$dispatch("addFriendNextCb", {
-                            keyword: this._wxAcc
+                            keyword: this._wxAcc,
+                            trialStatus: this.trialStatus
                         });
                         return;
                     }
@@ -1257,9 +1389,11 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                                     // 如果是有crmid
                                     that.crmId = r.message.id;
                                     that.crmMobile = r.message.mobile;
+                                    that.trialStatus = r.message.trialStatus || '';
                                     that.$dispatch("addFriendNextCb", {
                                         keyword: that._wxAcc,
-                                        crmId: that.crmId
+                                        crmId: that.crmId,
+                                        trialStatus: that.trialStatus
                                     });
                                 }else{
                                     // 如果没有
@@ -1267,8 +1401,10 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                                         keyword: that._wxAcc
                                     });
                                 }
+                                console.log('状态是：'+ that.trialStatus);
                             }
                         });
+
                     }else{
                         this.$dispatch("addFriendNextCb", {
                             keyword: this._wxAcc
@@ -1314,12 +1450,34 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                 _wxDes: function () {
                     return $.trim(this.wxDes);
                 },
+                _wxDesLen: function () {
+                    //判断自我介绍长度
+                    // var tem = [];
+                    // var str = this._wxDes;
+                    // if(str){
+                    //     for(var i = 0; i < str.length; i++){
+                    //         if(str.charCodeAt(i) > 255){
+                    //             tem.push('.','.','.')
+                    //         }else{
+                    //             tem.push(str[i]);
+                    //         }
+                    //     }
+                    // }
+                    var tem = this._wxDes;
+                    if(tem.length > 50){
+                        this.longStrTip = true;
+                    }else{
+                        this.longStrTip = false;
+                    }
+                    return tem.length;
+                },
                 canUpdate: function () {
-                    return this._wxAcc != "" && this._wxDes != "";
+                    return this._wxAcc != "" && this._wxDes != "" && this._wxDesLen <= 50;
                 }
             },
             events: {
                 showAddFriend: function (data) {
+                    console.log(data);
                     if (data.type == 1){
                         // 如果是卡片传入wxid
                         this.wxAcc = data.wxAcc;
@@ -1327,9 +1485,30 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                         // 否则清空添加
                         this.wxAcc = data.acc || "";
                     }
+                    //如果是我的学员添加
+
+                    if(data.addType == 'fromMyStudy'){
+                        switch (data.trialStatus){
+                            case 1:
+                                this.trialStatus = 'end';
+                                break;
+                            case 2:
+                                this.trialStatus = 'on';
+                                break;
+                            case 3:
+                                this.trialStatus = 'non';
+                                break;
+                            case 4:
+                                this.trialStatus = 'cancel';
+                                break;
+                            default:
+                                this.trialStatus = 'noData';
+                        }
+                    }
                     // 正常 or 卡片
                     this.type = data.type;
-                    this.wxDes = wxHeck.checkUserType() + this.localInfo.nick_name;
+                    this.wxDes = wxHeck.checkUserType(localInfo.nick_name,this.trialStatus);
+                    console.log('a',localInfo.nick_name,this.trialStatus);
                     // 从我的学员过来 可能会传入 crmId 跟 crmMobile
                     this.crmId = data.crmId || "";
                     this.crmMobile = data.crmMobile || "";
@@ -1361,6 +1540,8 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     this.wechat_img = data.wechat_img;
                     this.wechat_nick = data.wechat_nick;
                     this.remark = remark.join("-");
+                    this.wxDes = wxHeck.checkUserType(localInfo.nick_name,this.trialStatus);
+                    console.log('b',localInfo.nick_name,this.trialStatus);
                     this.toNext = true;
                 },
                 // 私聊的时候 不是好友 直接到第二步
@@ -1369,8 +1550,9 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     this.wechat_nick = data.wechat_nick;
                     this.toNext = true;
                     this.wxAcc = data.wxid.split('$')[1];
-                    this.wxDes = wxHeck.checkUserType() + this.localInfo.nick_name;
+                    this.wxDes = wxHeck.checkUserType(localInfo.nick_name,this.trialStatus);
                     this.addFriendShow = true;
+                    console.log('c',localInfo.nick_name,this.trialStatus);
                 },
                 hideAddFriend: function () {
                     this.addFriendHide();
@@ -1468,7 +1650,9 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     articleListData: [],
                     curArticleIndex: null,
                     articlePageCount: 0,
-                    articleCurrentPage: null
+                    //当前选择的类型／
+                    articleCurrentPage: null,
+                    searchKey:''
                 }
             },
             methods: {
@@ -1481,11 +1665,14 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                             autohidemode: false,
                             cursorcolor: "#686b71",
                             cursoropacitymin: 0.7,
-                            cursoropacitymax: 0.7
+                            cursoropacitymax: 0.7,
+                            railpadding: { top: 10, right: 0, left: 0, bottom: 10}
                         });
                     });
                 },
+                //获取文章类型跟列表
                 getArticle: function (page) {
+                    this.searchKey = '';
                     if (page == this.articleCurrentPage) return;
                     var that = this;
 
@@ -1493,7 +1680,7 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     wxHeck.getData({
                         url: "/Article/getArctype",
                         success: function (data) {
-                            if (data.status != 10000) return alert(data.message);
+                            if (data.status != 10000) return _alert(data.message);
                             that.navlist = data.message;
                         }
                     });
@@ -1508,11 +1695,51 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                             aid: page
                         },
                         success: function (data) {
-                            if (data.status != 10000) return alert(data.message);
+                            if (data.status != 10000) return _alert(data.message);
                             that.articleListData = data.message.list;
                             that.articlePageCount = data.message.pageCount;
                             // that.articleCurrentPage = data.message.currentPage;
                             that.articleCurrentPage = page;
+                            that.curArticleIndex = null;
+                        },
+                        complete: function () {
+                            that.isLoading = false;
+                        }
+                    });
+                },
+                //搜索文章
+                searchArticle:function () {
+                    var that = this;
+                    wxHeck.getData({
+                        url: "/Article/search",
+                        beforeSend: function () {},
+                        data: {
+                            aid: that.articleCurrentPage,
+                            keyword: that.searchKey
+                        },
+                        success: function (data) {
+                            if (data.status != 10000){
+                                //获取文章分类文章
+                                wxHeck.getData({
+                                    url: "/Article/chatList",
+                                    beforeSend: function () {
+                                    },
+                                    data: {
+                                        page: 1,
+                                        aid: that.articleCurrentPage
+                                    },
+                                    success: function (data) {
+                                        that.articleListData = data.message.list;
+                                        that.curArticleIndex = null;
+                                    },
+                                    complete: function () {
+                                        that.isLoading = false;
+                                    }
+                                });
+                                //return _alert(data.message);
+                            }
+                            that.articleListData = data.message.list;
+                            that.articlePageCount = data.message.pageCount;
                             that.curArticleIndex = null;
                         },
                         complete: function () {
@@ -1525,10 +1752,32 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     this.curArticleIndex = null;
                     this.articleCurrentPage = null;
                     this.articleListData = [];
+                    this.searchKey = '';
                 },
                 cutAticle: function (curArticleIndex) {
                     this.curArticleIndex = curArticleIndex;
                     this.articleListShow = true;
+                },
+                sendArticleParent : function(data){
+                    var msgObj = JSON.stringify({
+                        title: data.title,
+                        introduction: data.desc,
+                        icon: data.thumbUrl,
+                        link: data.urlStr,
+                        id: localInfo.admin_id,
+                        forward_text : data.forwardText
+                    });
+
+                    var _msgObj = {
+                        "action": "chat",
+                        "id": localInfo.id,
+                        "to_id": wxHeck.wxInit.wxData.curUserId,
+                        "type": "web",
+                        cnt_type: 3000,
+                        content: msgObj
+                    }
+
+                    wxHeck.wxInit.sendGroupChat(_msgObj, true);
                 },
                 sendArticle: function () {
                     var msgObj = JSON.stringify({
@@ -1538,6 +1787,7 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                         link: this.articleListData[this.curArticleIndex].link,
                         id: this.articleListData[this.curArticleIndex].id
                     });
+
                     var _msgObj = {
                         "action": "chat",
                         "id": localInfo.id,
@@ -1548,7 +1798,14 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     }
                     // 群发到群
                     if (wxHeck.wxInit.setGroupChat.flag) {
-                        wxHeck.wxInit.sendGroupChat(_msgObj, true);
+                        var root = this.$root;
+                        root.temShareMsg = {
+                            desc : this.articleListData[this.curArticleIndex].introduction,
+                            thumbUrl : this.articleListData[this.curArticleIndex].icon,
+                            title : this.articleListData[this.curArticleIndex].title,
+                            urlStr : this.articleListData[this.curArticleIndex].link
+                        }
+                        root.parentSend = true;
                     } else {
                         wxHeck.pushMsg({
                             pushId: wxHeck.wxInit.wxData.curUserId,
@@ -1574,6 +1831,61 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                         success:function(r){},
                         error:function(r){}
                     })
+                }
+            },
+            filters:{
+                filterKey: function (value) {
+                    var newExp = new RegExp(this.searchKey, 'g');
+                    return value.replace(newExp, '<span>'+this.searchKey+'</span>');
+                }
+            },
+            watch:{
+                    searchKey:function (val) {
+                        var _val = $.trim(val);
+                        var that = this;
+                        if (_val == ""){
+                            wxHeck.getData({
+                                url: "/Article/search",
+                                beforeSend: function () {},
+                                data: {
+                                    aid: that.articleCurrentPage,
+                                    keyword: that.searchKey
+                                },
+                                success: function (data) {
+                                    if (data.status != 10000){
+                                        //获取文章分类文章
+                                        wxHeck.getData({
+                                            url: "/Article/chatList",
+                                            beforeSend: function () {
+                                            },
+                                            data: {
+                                                page: 1,
+                                                aid: that.articleCurrentPage
+                                            },
+                                            success: function (data) {
+                                                that.articleListData = data.message.list;
+                                                that.curArticleIndex = null;
+                                            },
+                                            complete: function () {
+                                                that.isLoading = false;
+                                            }
+                                        });
+                                        //return _alert(data.message);
+                                    }
+                                    that.articleListData = data.message.list;
+                                    that.articlePageCount = data.message.pageCount;
+                                    that.curArticleIndex = null;
+                                },
+                                complete: function () {
+                                    that.isLoading = false;
+                                }
+                            });
+                        }
+                    }
+            },
+            events:{
+                shareMsg: function (r) {
+                    this.sendArticleParent(r.msg);
                 }
             }
         });
@@ -1974,7 +2286,7 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                         playVoiceSrc2: ""
                     },
                     contentType: {
-                        types: ["0", "1", "2", "9999", "42", "3000", "3100", "4000", "5000", "495", "4950", "6000", "6001", "10000"]
+                        types: ["0", "1", "2", "9999", "42", "3000",  "3001", "3100", "4000", "5000", "495", "4950", "6000", "6001", "10000"]
                     },
                     //删除按钮
                     delShow: {
@@ -2130,277 +2442,6 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                 }
             }
         });
-        //日历组件
-        // function getCalendar(y, m) {
-        //     //输出一个日历数据源  月份不必减1
-        //     y = parseInt(y)
-        //     m = parseInt(m)
-        //     var time = new Date(y,m-1,1)
-        //     var lastDate,
-        //         nextDate
-        //     var lastMonth = m - 1
-        //     var nextMonth = m + 1
-        //     if(m == 1){
-        //         lastDate = "" + (y - 1) + '-' + + 12 + '-'
-        //         nextDate = "" + y + '-' + 2 + '-'
-        //         lastMonth = 12
-        //     }else if(m == 12){
-        //         lastDate = "" + y + '-' + 11 + '-'
-        //         nextDate = "" + (y + 1) + '-' + 1 + '-'
-        //         nextMonth = 1
-        //     }else{
-        //         lastDate = "" + y + '-' + (m - 1) + '-'
-        //         nextDate = "" + y + '-' + (m + 1) + '-'
-        //     }
-        //     var maxNumber = 42
-        //     var r1 = [],
-        //         r2 = [],
-        //         r3 = []
-        //     var lastFix = time.getDay() - 1
-        //     lastFix = lastFix < 0 ? lastFix + 7 : lastFix
-        //     var lastMaxDate = new Date(y, m-1, 0).getDate() //上个月份最大天数
-        //     var maxDate = new Date(y, m, 0).getDate()  //当前月份的
-        //     var i,t
-        //     for (i = 0; i < lastFix; i++) {
-        //         t = lastMaxDate - lastFix + i + 1
-        //         r1[i] = {month: lastMonth, day: t, data: lastDate + t}
-        //     }
-        //     for (i = 0; i < maxDate; i++) {
-        //         t = i + 1
-        //         r2[i] = {month: m, day: t, data: "" + y + '-' + + m + '-' + t}
-        //     }
-        //     var nextFix = maxNumber - maxDate - lastFix
-        //     for (i = 0; i < nextFix; i++) {
-        //         t = i + 1
-        //         r3[i] = {month: nextMonth, day: t, data: nextDate + t}
-        //     }
-        //     var result = r1.concat(r2, r3)
-        //     var ar = []
-        //     for(i=0; i<6; i++){
-        //         ar.push(result.splice(0,7))
-        //     }
-        //     return ar
-        // }
-        // var calendarLine = Vue.extend({
-        //     props:['items', 'cur', 'sel', 'month'],
-        //     data:function(){
-        //         return {}
-        //     },
-        //     template: '#datalayer',
-        //     methods: {
-        //         click:function(item){
-        //             this.$dispatch('click', item.data)
-        //         }
-        //     }
-        // });
-        // //开始时间
-        // var calendar = Vue.extend({
-        //     props:['date'],
-        //     data:function(){
-        //         var d = ''  //用于显示的日历
-        //         var len = (''+this.date).length
-        //         if(!this.date||(len!= 13&&len!= 10)){
-        //             //为空
-        //             d = new Date()
-        //         }else{
-        //             d = len == 13 ? new Date(parseInt(this.date)):new Date(this.date*1000)
-        //         }
-        //         var sel = ''
-        //         if ( Object.prototype.toString.call(d) === "[object Date]" ) {
-        //             // it is a date
-        //             if ( isNaN( d.getTime() ) ) {  // d.valueOf() could also work
-        //                 // date is not valid
-        //                 d = new Date()
-        //             }
-        //             else {
-        //                 // date is valid
-        //                 sel = d.getFullYear()+ '-' +(d.getMonth()+1) + '-' + d.getDate()
-        //             }
-        //         }
-        //         else {
-        //             // not a date
-        //             d = new Date()
-        //         }
-        //         if(!this.date){
-        //             sel = ''
-        //         }
-        //         var pastTime = new Date().getTime() - 1000*60*60*24*90;
-        //         var curTime = new Date(pastTime)
-        //         var cur = "" + curTime.getFullYear() + '-' + (curTime.getMonth()+1) + '-' + curTime.getDate() //当前日期
-        //         var y = d.getFullYear()
-        //         var m = d.getMonth()+1
-        //         var data = getCalendar(d.getFullYear(), d.getMonth()+1)  //显示的日历
-        //         return {
-        //             cur:cur,
-        //             sel:sel,
-        //             y: y,
-        //             m: m,
-        //             data: data,
-        //             show: false,
-        //             curTime:cur
-        //         }
-        //     },
-        //     template:'#startTime',
-        //     methods:{
-        //         cm:function(flag){
-        //             //前进后退月
-        //             if(flag == -1){
-        //                 if(this.m == 1){
-        //                     this.$emit('init', parseInt(this.y) - 1,12)
-        //                 } else {
-        //                     this.$emit('init', this.y, parseInt(this.m)-1)
-        //                 }
-        //             }else{
-        //                 if(this.m == 12){
-        //                     this.$emit('init', parseInt(this.y) + 1,1)
-        //                 }else {
-        //                     this.$emit('init', this.y, parseInt(this.m)+1)
-        //                 }
-        //             }
-        //         },
-        //         cy:function(flag){
-        //             //前进后退年
-        //             if(flag == -1){
-        //                 this.$emit('init', parseInt(this.y) -1,this.m)
-        //             }else{
-        //                 this.$emit('init', parseInt(this.y) +1,this.m)
-        //             }
-        //         },
-        //         clickNow:function(){
-        //             var t = new Date()
-        //             var y = t.getFullYear()
-        //             var m = t.getMonth()+1
-        //             var d = t.getDate()
-        //             this.$emit('init', y, m)
-        //         },
-        //         foc:function(){
-        //             this.show = true
-        //         },
-        //
-        //         hide:function () {
-        //             this.show = false;
-        //         }
-        //     },
-        //     events:{
-        //         init:function(y, m){
-        //             //切换日历
-        //             this.data = getCalendar(y, m);
-        //             this.y = y;
-        //             this.m = m;
-        //         },
-        //         click:function(data){
-        //             this.show = false;
-        //             this.$dispatch("setTimePast",data);
-        //             this.sel = this.date = data;
-        //         }
-        //     },
-        //     components:{
-        //         'calendar-line': calendarLine
-        //     }
-        // });
-        // //结束时间
-        // var calendarNow = Vue.extend({
-        //     props:['date'],
-        //     data:function(){
-        //         var d = ''  //用于显示的日历
-        //         var len = (''+this.date).length
-        //         if(!this.date||(len!= 13&&len!= 10)){
-        //             //为空
-        //             d = new Date()
-        //         }else{
-        //             d = len == 13 ? new Date(parseInt(this.date)):new Date(this.date*1000)
-        //         }
-        //         var sel = ''
-        //         if ( Object.prototype.toString.call(d) === "[object Date]" ) {
-        //             // it is a date
-        //             if ( isNaN( d.getTime() ) ) {  // d.valueOf() could also work
-        //                 // date is not valid
-        //                 d = new Date()
-        //             }
-        //             else {
-        //                 // date is valid
-        //                 sel = d.getFullYear()+ '-' +(d.getMonth()+1) + '-' + d.getDate()
-        //             }
-        //         }
-        //         else {
-        //             // not a date
-        //             d = new Date()
-        //         }
-        //         if(!this.date){
-        //             sel = ''
-        //         }
-        //         var curTime = new Date();
-        //         var cur = "" + curTime.getFullYear() + '-' + (curTime.getMonth()+1) + '-' + curTime.getDate() //当前日期
-        //         var y = d.getFullYear()
-        //         var m = d.getMonth()+1
-        //         var data = getCalendar(d.getFullYear(), d.getMonth()+1)  //显示的日历
-        //         return {
-        //             cur:cur,
-        //             sel:sel,
-        //             y: y,
-        //             m: m,
-        //             data: data,
-        //             show: false,
-        //             curTime:cur
-        //         }
-        //     },
-        //     template:'#endTime',
-        //     methods:{
-        //         cm:function(flag){
-        //             //前进后退月
-        //             if(flag == -1){
-        //                 if(this.m == 1){
-        //                     this.$emit('init', parseInt(this.y) - 1,12)
-        //                 } else {
-        //                     this.$emit('init', this.y, parseInt(this.m)-1)
-        //                 }
-        //             }else{
-        //                 if(this.m == 12){
-        //                     this.$emit('init', parseInt(this.y) + 1,1)
-        //                 }else {
-        //                     this.$emit('init', this.y, parseInt(this.m)+1)
-        //                 }
-        //             }
-        //         },
-        //         cy:function(flag){
-        //             //前进后退年
-        //             if(flag == -1){
-        //                 this.$emit('init', parseInt(this.y) -1,this.m)
-        //             }else{
-        //                 this.$emit('init', parseInt(this.y) +1,this.m)
-        //             }
-        //         },
-        //         clickNow:function(){
-        //             var t = new Date()
-        //             var y = t.getFullYear()
-        //             var m = t.getMonth()+1
-        //             var d = t.getDate()
-        //             this.$emit('init', y, m)
-        //         },
-        //         foc:function(){
-        //             this.show = true
-        //         },
-        //         hide:function () {
-        //             this.show = false;
-        //         }
-        //     },
-        //     events:{
-        //         init:function(y, m){
-        //             //切换日历
-        //             this.data = getCalendar(y, m)
-        //             this.y = y
-        //             this.m = m;
-        //         },
-        //         click:function(data){
-        //             this.show = false
-        //             this.$dispatch("setTimeNow",data);
-        //             this.sel = this.date = data;
-        //         }
-        //     },
-        //     components:{
-        //         'calendar-line-now': calendarLine
-        //     }
-        // });
         //分页组件
         var page = Vue.extend({
             template:"#page",
@@ -2539,8 +2580,15 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     this.$dispatch("studyChat", this.user_info + "$" + id);
                     this.show = false;
                 },
-                goAddFriend: function (crmMobile, crmId, addType) {
-                    this.$dispatch("addListFriend", crmMobile, crmId, addType);
+                goAddFriend: function (crmMobile, crmId, addType, trialStatus) {
+                    var that = this;
+                    _confirm('提前电话沟通，并告诉学员会加她好友会极大提高加好友的通过率，请确认已与学员进行过电话沟通。', function () {
+                        that.$dispatch("addListFriend", crmMobile, crmId, addType, trialStatus);
+                    });
+
+                    // _alert("提前电话沟通，并告诉学员会加她好友会极大提高加好友的通过率，请确认已与学员进行过电话沟通。", function(){
+                    //     that.$dispatch("addListFriend", crmMobile, crmId, addType)
+                    // });
                     // this.show = false;
                 },
                 //我的学员备注
@@ -2562,110 +2610,6 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                         that.$broadcast("changePage", data);
                     },0);
                 },
-                // //SS我的学员搜索按钮
-                // studySearchBtn :function () {
-                //     // 初始化数据
-                //     this.cutBtn.appoint_status = 1;
-                //     var that = this;
-                //     var reqUrl = '';
-                //     if(wxHeck.isCC()){
-                //         var curday = new Date(that.endTime).getTime() + 1000*60*60*24*2;
-                //         _curday = new Date(curday);
-                //         var cur = '' + _curday.getFullYear() + '-' + (_curday.getMonth()+1) + '-' + _curday.getDate();
-                //         var data = {
-                //             start_time: that.startTime,
-                //             end_time:  cur,
-                //             page_num: 1,
-                //             page_size: 10,
-                //             appoint_status:1
-                //         }
-                //     }else{
-                //         var data = {
-                //             start_time: that.startTime,
-                //             end_time:  that.endTime,
-                //             page_num: 1,
-                //             page_size: 10,
-                //             appoint_status:1
-                //         }
-                //     }
-                //     if(wxHeck.isSS()){
-                //         reqUrl = '/UserContact/getCrmUser';
-                //     }
-                //     if(wxHeck.isCC()){
-                //         reqUrl = '/UserContact/getCrmUserByCc';
-                //     }
-                //     wxHeck.getData({
-                //         url: reqUrl,
-                //         data: data,
-                //         success: function (r) {
-                //             if (r.status != 10000) return _alert(r.message);
-                //             if(r.message.list.length == 0){
-                //                 that.curStudyList = [];
-                //                 that.hasStudy = false;
-                //             }else{
-                //                 that.curStudyList = r.message.list;
-                //                 that.hasStudy = true;
-                //                 setTimeout(function () {
-                //                     that.$broadcast("changePage",r.message.pagenation);
-                //                 },0)
-                //             }
-                //         }
-                //     });
-                // },
-                // //CC我的学员当前按钮
-                // cutClass:function(x){
-                //     var that = this;
-                //     var reqUrl = '';
-                //     if(wxHeck.isSS()){
-                //         reqUrl = '/UserContact/getCrmUser';
-                //     }
-                //     if(wxHeck.isCC()){
-                //         reqUrl = '/UserContact/getCrmUserByCc';
-                //     }
-                //     switch(x){
-                //         case 'classA':
-                //             that.cutBtn.appoint_status = 1;
-                //             break;
-                //         case 'classB':
-                //
-                //             that.cutBtn.appoint_status = 2;
-                //             break;
-                //         case 'classC':
-                //
-                //             that.cutBtn.appoint_status = 3;
-                //             break;
-                //         case 'classD':
-                //
-                //             that.cutBtn.appoint_status = 4;
-                //             break;
-                //         default:
-                //             that.cutBtn.appoint_status = 1;
-                //     }
-                //     var data = {
-                //         start_time: that.startTime,
-                //         end_time:  that.endTime,
-                //         page_num: 1,
-                //         page_size: 10,
-                //         appoint_status:that.cutBtn.appoint_status
-                //     }
-                //     wxHeck.getData({
-                //         url: reqUrl,
-                //         data: data,
-                //         success: function (r) {
-                //             if (r.status != 10000) return _alert(r.message);
-                //             if(r.message.list.length == 0){
-                //                 that.curStudyList = [];
-                //                 that.hasStudy = false;
-                //             }else{
-                //                 that.curStudyList = r.message.list;
-                //                 that.hasStudy = true;
-                //                 setTimeout(function () {
-                //                     that.$broadcast("changePage",r.message.pagenation);
-                //                 },0)
-                //             }
-                //         }
-                //     });
-                // },
                 checkType:function(x){
                     var reqUrl = '';
                     var that = this;
@@ -2841,19 +2785,10 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                 show: function () {
                     this.isShow = true;
                     this.$nextTick(function () {
-                        $(".friend-box-in ul").wxScroll();
+                        $(".friend-box-in").wxScroll();
                     });
                 },
                 accept: function (encryptusername) {
-                    wxHeck.sendMsg({
-                        "action": "add_hello_friend",
-                        "id": localInfo.id,
-                        "type": "web",
-                        "encryptusername": encryptusername
-                    });
-                },
-                //忽略好友申请
-                ignore: function (encryptusername) {
                     wxHeck.sendMsg({
                         "action": "add_hello_friend",
                         "id": localInfo.id,
@@ -2882,7 +2817,6 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                 }
             }
         });
-
         // 批改作业
         var homeWork = Vue.extend({
             template: "#homeWork",
@@ -2915,7 +2849,8 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                         "6001" : "Video"
                     },
                     // 是否重新批改
-                    isReEdit : false
+                    isReEdit : false,
+                    mt : null
                 }
             },
             methods: {
@@ -3204,6 +3139,9 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                         },
                         success: function (r) {
                             if (r.status == 10000) {
+                                var time = (new Date).getTime();
+                                // test
+                                if(window.testURL)  r.message = window.testURL;
                                 // 上传成功
                                 // 消息体
                                 var msgObj = {
@@ -3214,37 +3152,46 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                                     to_type: "ios",
                                     content: r.message,
                                     // 图片发送cnt_type 为1
-                                    cnt_type: 1
+                                    cnt_type: 1,
+                                    content_id : String(time)
                                 }
-                                // 在页面上放置图片
-                                wxHeck.pushMsg({
-                                    pushId: that.wxData.curUserId,
-                                    isCC: true,
-                                    msg: [_imgSrc, r.message],
-                                    time: (new Date).getTime(),
-                                    cnt_type: 9999
-                                });
+
+                                self.setSuccessFn = function(){
+                                    clearTimeout(self.mt);
+                                    // 在页面上放置图片
+                                    wxHeck.pushMsg({
+                                        pushId: that.wxData.curUserId,
+                                        isCC: true,
+                                        msg: [_imgSrc, r.message],
+                                        time: time,
+                                        cnt_type: 9999
+                                    });
+                                    //@ ta
+                                    self.$dispatch("getAt", self.groupData[self.editKey].wechat_nick, self.editKey);
+                                    that.sendMsg();
+                                    // 设置已批改
+                                    self.checkList({
+                                        score : _score,
+                                        correct_img : r.message,
+                                        u_wechat_id : _u_wechat_id,
+                                        text : _text
+                                    });
+                                    _alert("发送批改结果成功！");
+                                    that.loading.show = false;
+                                }
                                 // 发送消息
                                 wxHeck.sendMsg(msgObj);
-                                //@ ta
-                                self.$dispatch("getAt", self.groupData[self.editKey].wechat_nick, self.editKey);
-                                that.sendMsg();
-                                // 设置已批改
-                                self.checkList({
-                                    score : _score,
-                                    correct_img : r.message,
-                                    u_wechat_id : _u_wechat_id,
-                                    text : _text
-                                });
-                                _alert("发送批改结果成功！");
+
+                                clearTimeout(self.mt);
+                                self.mt = setTimeout(self.setFailFn, 10 * 1000);
+
                             } else {
                                 _alert("上传失败请重试！");
+                                that.loading.show = false;
                             }
                         },
                         error: function () {
                             _alert("网络错误请重试！");
-                        },
-                        complete: function () {
                             that.loading.show = false;
                         }
                     });
@@ -3254,6 +3201,13 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     this.imgSrc = "";
                     this.score = "";
                     this.comText = "";
+                },
+                setSuccessFn : function(){},
+                setFailFn : function(msg){
+                    clearTimeout(this.mt);
+                    this.setSuccessFn = function(){};
+                    _alert(msg || "发送失败请重试！");
+                    this.$parent.loading.show = false;
                 }
             },
             computed: {
@@ -3265,6 +3219,13 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                 }
             },
             events: {
+                hwSetSuccess : function(){
+                    this.setSuccessFn();
+                    this.setSuccessFn = function(){};
+                },
+                hwSetFail : function(msg){
+                    this.setFailFn(msg);
+                },
                 sendHomeWorkResult: function (data) {
                     this.scoreShow = true;
                     this.imgSrc = data.img;
@@ -3326,7 +3287,8 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                         "6001" : "Video"
                     },
                     // 是否重新批改
-                    isReEdit : false
+                    isReEdit : false,
+                    mt : null
                 }
             },
             methods: {
@@ -3594,6 +3556,9 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                         },
                         success: function (r) {
                             if (r.status == 10000) {
+                                var time = (new Date).getTime();
+                                // test
+                                if(window.testURL)  r.message = window.testURL;
                                 // 上传成功
                                 // 消息体
                                 var msgObj = {
@@ -3604,34 +3569,40 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                                     to_type: "ios",
                                     content: r.message,
                                     // 图片发送cnt_type 为1
-                                    cnt_type: 1
+                                    cnt_type: 1,
+                                    content_id : String(time)
                                 }
-                                // 在页面上放置图片
-                                wxHeck.pushMsg({
-                                    pushId: that.wxData.curUserId,
-                                    isCC: true,
-                                    msg: [_imgSrc, r.message],
-                                    time: (new Date).getTime(),
-                                    cnt_type: 9999
-                                });
+                                self.setSuccessFn = function(){
+                                    clearTimeout(self.mt);
+                                    // 在页面上放置图片
+                                    wxHeck.pushMsg({
+                                        pushId: that.wxData.curUserId,
+                                        isCC: true,
+                                        msg: [_imgSrc, r.message],
+                                        time: time,
+                                        cnt_type: 9999
+                                    });
+                                    // 设置已批改
+                                    self.checkList({
+                                        score : _score,
+                                        correct_img : r.message,
+                                        u_wechat_id : _u_wechat_id,
+                                        text : _text
+                                    });
+                                    _alert("发送批改结果成功！");
+                                    that.loading.show = false;
+                                }
                                 // 发送消息
                                 wxHeck.sendMsg(msgObj);
-                                // 设置已批改
-                                self.checkList({
-                                    score : _score,
-                                    correct_img : r.message,
-                                    u_wechat_id : _u_wechat_id,
-                                    text : _text
-                                });
-                                _alert("发送批改结果成功！");
+                                clearTimeout(self.mt);
+                                self.mt = setTimeout(self.setFailFn, 10 * 1000);
                             } else {
                                 _alert("上传失败请重试！");
+                                that.loading.show = false;
                             }
                         },
                         error: function () {
                             _alert("网络错误请重试！");
-                        },
-                        complete: function () {
                             that.loading.show = false;
                         }
                     });
@@ -3641,6 +3612,13 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     this.imgSrc = "";
                     this.score = "";
                     this.comText = "";
+                },
+                setSuccessFn : function(){},
+                setFailFn : function(msg){
+                    clearTimeout(this.mt);
+                    this.setSuccessFn = function(){};
+                    _alert(msg || "发送失败请重试！");
+                    this.$parent.loading.show = false;
                 }
             },
             computed: {
@@ -3652,6 +3630,13 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                 }
             },
             events: {
+                hwSetSuccess : function(){
+                    this.setSuccessFn();
+                    this.setSuccessFn = function(){};
+                },
+                hwSetFail : function(msg){
+                    this.setFailFn(msg);
+                },
                 sendHomeWorkResult: function (data) {
                     this.scoreShow = true;
                     this.imgSrc = data.img;
@@ -3696,6 +3681,15 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                 }
             },
             methods: {
+                getJson : function(str){
+                    var _str;
+                    try{
+                        _str = JSON.parse(str);
+                    }catch(e){
+                        _str = "";
+                    }
+                    return _str;
+                },
                 playVoice: function (src) {
                     this.voicePlay.voiceSrc = src;
                     this.$nextTick(function () {
@@ -4260,7 +4254,7 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                             _alert(data.message);
                             this.crm = '';
                             that.show = false;
-                            window.location.href = 'http://www.51talk.com/';
+                            location.replace('http://www.51talk.com/');
                         }
                     });
                 }
@@ -4458,6 +4452,29 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
             }
         });
 
+        var helperLink = Vue.extend({
+            template : "#helperLink",
+            data : function(){
+                return {
+                    show : false,
+                    data : {}
+                }
+            },
+            methods : {
+                close : function(){
+                    this.show = false;
+                    this.data = {};
+                }
+            },
+            events : {
+                helperLinkOpen : function(data){
+                    this.data = data;
+                    //this.data.link = "http://local.51talk.com/templates/html/weixin_heck/helperLink.html";
+                    this.show = true;
+                }
+            }
+        });
+
         // 聊天工具
         wxHeck.wxInit = new Vue({
             el: "body",
@@ -4531,7 +4548,7 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                 contentTip: "",
                 // 消息类型
                 contentType: {
-                    types: ["0", "1", "2", "9999", "42", "3000", "3100", "4000", "5000", "495", "4950", "6000", "6001", "400", "10000"]
+                    types: ["0", "1", "2", "9999", "42", "3000", "3001", "3100", "4000", "5000", "495", "4950", "6000", "6001", "400", "10000"]
                 },
                 //文件类型
                 fileDetailType: "",
@@ -4607,6 +4624,11 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     qrcode_url: '',
                     show :false
                 },
+                //转介绍二维码
+                introImg:{
+                    show: false,
+                    img:'http://weixinheiniao.oss-cn-beijing.aliyuncs.com/images/b2BZpkmGCriTDpTwhJSA.jpg'
+                },
                 //设置群为班级群
                 classGroupInfo:{
                     show: false,
@@ -4631,7 +4653,15 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     }
                 },
                 showLabelEditor : "",
-                showLabelEditorBlur : ""
+                showLabelEditorBlur : "",
+                //分享文章按钮显示
+                showShare:'',
+                //群发文章
+                parentSend: false,
+                //群发文章留言
+                forwardText: "",
+                //分享的消息数据
+                temShareMsg:{}
             },
             filters: {
                 //文件大小取整
@@ -4679,7 +4709,8 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                 instead : instead,
                 sendClass :sendClass,
                 recommend : recommend,
-                labelEditor : labelEditor
+                labelEditor : labelEditor,
+                helperLink : helperLink
             },
             computed: {
                 userListByType: function () {
@@ -4730,6 +4761,34 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                 }
             },
             methods: {
+                //发送文章给组件
+                parentSendFn: function (x) {
+                    if(x == 'send'){
+                        var msg = $.extend({}, this.temShareMsg, {
+                            forwardText : $.trim(this.forwardText)
+                        });
+                        this.$broadcast("shareMsg",{
+                            msg:msg
+                        });
+                    }else{
+                        this.$broadcast("userSelClose");
+                        this.setGroupChat.flag = false;
+                        this.parentSend = false;
+                        this.forwardText = "";
+                    }
+                },
+                // 黑鸟小助手消息加载
+                openHelperLink : function(data){
+                    this.$broadcast("helperLinkOpen", data);
+                },
+                //分享文章按钮显示
+                showShareMenu: function(x,y){
+                    if(y == 'show'){
+                        this.showShare = x.content.urlStr || x.content.url;
+                    }else{
+                        this.showShare = '';
+                    }
+                 },
                 //点击绑定学员头像进入个人中心
                 operationLog: function(t){
                     wxHeck.getData({
@@ -4760,13 +4819,79 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                         user_id: this.wxData.msgList[this.wxData.curUserId].crmInfo.user_id
                     });
                 },
+                //转介绍二维码
+                introWechat: function (a) {
+                    //显示隐藏层
+                    this.introImg.show = a == 'show' ? true : false;
+                    return;
+                    //获取当前二维码
+                    if(this.introImg.show){
+                        var that = this;
+                        wxHeck.getData({
+                            url:'',
+                            data:{
+                                
+                            },
+                            success: function (data) {
+                                that.introImg.img = '';
+                            }
+                        });
+                    }
+                },
+                //发送转介绍二维码
+                introWechatImg: function () {
+                    var obj = {
+                        action: "chat",
+                        id: localInfo.id,
+                        type: "web",
+                        to_id: this.wxData.curUserId,
+                        to_type: "ios",
+                        content: this.introImg.img,
+                        // 图片发送cnt_type 为1
+                        cnt_type: 1
+                    }
+
+                    // 在页面上放置图片
+                    wxHeck.pushMsg({
+                        pushId: this.wxData.curUserId,
+                        isCC: true,
+                        msg: [this.introImg.img, this.introImg.img],
+                        time: (new Date).getTime(),
+                        cnt_type: 9999
+                    });
+
+                    wxHeck.sendMsg(obj);
+                    this.introImg.show = false;
+
+                    var _con = '亲爱的孩子家长，您只要将二维码图片和三张孩子上课图片配上走心文字一起分享到朋友圈，朋友通过您分享的二维码注册并付费，1990元的10节外 教课就到账哦！朋友也能获得3节外教课哦！比如您可以这样发朋友圈： 我和宝贝正在51Talk学习，宝贝从开始支支吾吾到如今已经能与外教老师流畅沟通，快带孩子一起来学习吧！';
+                    //发送文字
+                    var objText = {
+                        action: "chat",
+                        id: localInfo.id,
+                        type: "web",
+                        to_id: this.wxData.curUserId,
+                        to_type: "ios",
+                        content: _con,
+                        // 图片发送cnt_type 为1
+                        cnt_type: 0
+                    }
+                    wxHeck.sendMsg(objText);
+
+                    // 页面插入cc发送的消息
+                    wxHeck.pushMsg({
+                        pushId: this.wxData.curUserId,
+                        isCC: true,
+                        msg: _con,
+                        time: (new Date).getTime()
+                    });
+                },
                 //点击当前学员，右上角菜单end
                 mesBack : function(){
                     var obj = {
                         "action": "revoke_last_msg",
                         "id": localInfo.id,
                         "type": "web",
-                        "u_id" : this.wxData.curUserId.split("$")[1]
+                        "to_id" : this.wxData.curUserId.split("$")[1]
                     }
                     wxHeck.sendMsg(obj);
                 },
@@ -5160,42 +5285,152 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                         "id": localInfo.id
                     });
                 },
-                //群信息屏蔽
-                shieldMes: function(b){
+                //群面板菜单相关
+                groupMenuSet: function(b,c){
                     var that = this;
                     var msg = {
-                        "action": "mute_session",
+                        "action": "",
                         "u_id": this.wxData.curUserId.split("$")[1],
                         "type": "web",
-                        "id": localInfo.id,
-                        "mute_session":0
+                        "id": localInfo.id
                     }
-                    if(b == 'open'){
-                        wxHeck.sendMsg(msg);
-                        that.contentGroupLayer.show = false;
-                    }else{
-                        _confirm("确定要屏蔽该群的消息提醒吗？",function(){
-                            console.log(0);
-                            that.contentGroupLayer.show = false;
-                            msg.mute_session = 1;
+                    switch (b){
+                        //开启屏蔽群消息
+                        case 'open':
+                            msg.action = 'mute_session',
+                            msg.mute_session = 0;
                             wxHeck.sendMsg(msg);
-                        });
+                            that.contentGroupLayer.show = false;
+                            break;
+                        //屏蔽群消息
+                        case 'close':
+                            _confirm("确定要屏蔽该群的消息提醒吗？",function(){
+                                console.log(0);
+                                that.contentGroupLayer.show = false;
+                                msg.action = 'mute_session',
+                                msg.mute_session = 1;
+                                wxHeck.sendMsg(msg);
+                            });
+                            break;
+                        //置顶聊天
+                        case 'toTop':
+                            msg.action = 'top_chat_session',
+                            msg.set_to_top = 1;
+                            wxHeck.sendMsg(msg);
+                            break;
+                        //取消置顶聊天
+                        case 'closeTop':
+                            msg.action = 'top_chat_session',
+                            msg.set_to_top = 0;
+                            wxHeck.sendMsg(msg);
+                            break;
+                        //打开群公告编辑框
+                        case 'announce':
+                            that.$broadcast("showAnnLayer", that.wxData.curUserId.split("$")[1]);
+                            that.contentGroupLayer.show = false;
+                            break;
+                        //群主管理权转让
+                        case 'power':
+                            that.$broadcast('showChangeOwner', {
+                                groupOwnner: that.wxData.groupOwnner,
+                                groupList : that.wxData.groupUserLists[that.wxData.curUserId],
+                                groupId:that.wxData.curUserId.split("$")[1]
+                            });
+                            break;
+                        //群成员列表删除
+                        case 'delIco':
+                            that.contentGroupLayer.show = true;
+                            that.$nextTick(function () {
+                                $(".content-group-list").wxScroll();
+                            });
+                            that.contentGroupLayer.del = true;
+
+                            that.$broadcast("showDelBtn", that.contentGroupLayer.show);
+                            $(".content-group-show-layer").focus();
+                            break;
+                        //修改群昵称
+                        case 'myNicker':
+                            //当前所在的群
+                            var groupCutUserLists = that.wxData.groupUserLists[that.wxData.curUserId] || [];
+                            var temNicker = '';
+                            $.map(groupCutUserLists, function (ele, index) {
+                                var wechat_id = ele.wechat_id.split("$")[1];
+                                var wechat_nick = ele.wechat_nick;
+                                if(wechat_id == localInfo.wechat_id){
+                                    temNicker = wechat_nick;
+                                }
+                            });
+                            console.log('当前昵称：'+temNicker);
+                            that.$broadcast("editMyNicker",{
+                                show:true,
+                                u_id:this.wxData.curUserId.split("$")[1],
+                                nicker:temNicker
+                            });
+                            break;
+                            //群聊邀请确认
+                        case 'invite':
+                            // 0 关 1 开
+                            console.log(c)
+                            if(c){
+                                _confirm("确认关闭【群聊邀请确认】功能？", function () {
+                                    msg.action = 'allow_owner_approve';
+                                    msg.allow_owner_approve_value = 0;
+                                    wxHeck.sendMsg(msg);
+                                });
+                            }else {
+                                _confirm("确认开启【群聊邀请确认】功能？", function () {
+                                    msg.action = 'allow_owner_approve';
+                                    msg.allow_owner_approve_value = 1;
+                                    wxHeck.sendMsg(msg);
+                                });
+                            }
+                            break;
+                        case 'quit':
+                                _confirm('退出后不会通知群聊中其他成员，且不会再接受此群聊信息', function () {
+                                    msg.action = 'quit_chatroom';
+                                    wxHeck.sendMsg(msg);
+                                });
+                            break;
+                        case 'vip':
+                            var _con = '亲爱的孩子家长，您只要将二维码图片和三张孩子上课图片配上走心文字一起分享到朋友圈，朋友通过您分享的二维码注册并付费，1990元的10节外 教课就到账哦！朋友也能获得3节外教课哦！ 比如您可以这样发朋友圈： 我和宝贝正在51Talk学习，宝贝从开始支支吾吾到如今已经能与外教老师流畅沟通，快带孩子一起来学习吧！',
+                                datas = {
+                                    user_id:c,
+                                    wechat_id:that.wxData.curUserId.split("$")[1]
+                                };
+                            _confirm(_con, function (){
+                                wxHeck.getData({
+                                    url: "/RemindMainWechat/addRemindMainWechat",
+                                    data:datas,
+                                    success:function (data) {
+                                        switch(data.status){
+                                            //正常
+                                            case 10000 :
+                                                _alert(data.message);
+                                                break;
+                                            case 10003:
+                                                _confirm('该学员主跟进微信号已经被指定,要确定本次更改吗？', function () {
+                                                    wxHeck.getData({
+                                                        url:'/RemindMainWechat/updateRemindMainWechat',
+                                                        data:datas,
+                                                        success: function (data) {
+                                                            if(data.status !=10000) return _alert(data.message);
+                                                            _alert(data.message);
+                                                        }
+                                                    });
+                                                });
+                                                break;
+                                            default:
+                                                _alert(data.message);
+                                        }
+                                    },
+                                    error: function () {
+                                        console.log("请求失败")
+                                    }
+                                });
+                            });
+                            break;
+                        default:
                     }
-
-
-                },
-                //打开群公告编辑框
-                showAnnounceLayer: function () {
-                    this.$broadcast("showAnnLayer", this.wxData.curUserId.split("$")[1]);
-                    this.contentGroupLayer.show = false;
-                },
-                //群主管理权转让
-                groupPowerChange:function(){
-                    this.$broadcast('showChangeOwner', {
-                        groupOwnner: this.wxData.groupOwnner,
-                        groupList : this.wxData.groupUserLists[this.wxData.curUserId],
-                        groupId:this.wxData.curUserId.split("$")[1]
-                    });
                 },
                 // 打开操作菜单
                 userOpShow: function () {
@@ -5236,10 +5471,7 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     this.$broadcast("showDelBtn", this.contentGroupLayer.show);
                     $(".content-group-show-layer").focus();
                 },
-                //群成员列表删除
-                showGroupDelIcon: function () {
-                    this.contentGroupLayer.del = true;
-                },
+
                 delGroupDetailUser: function (x) {
                     console.log(x.wechat_id, x.wechat_nick)
                     var userCurrent = x.wechat_id.split("$");
@@ -5262,6 +5494,10 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                 },
                 // 发起聊天
                 getChat: function (type, chatType) {
+                    // 群发个人次数限制
+                    if(chatType == '0'){
+                        _alert('为保障学员的体验，黑鸟每周只允许使用3次【群发个人】（其中：只允许使用1次单发话术，只允许使用2次发送文章或图片）。请认真编辑你发给学员的话术，黑鸟会监控群发的内容。');
+                    }
                     this.setGroupChat.chatType = chatType || "";
                     this.userOpHide();
                     this.$broadcast("userSelOpen", {
@@ -5272,7 +5508,6 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     });
                     // 群发到群
                     if (type == "getGroupChat") {
-                        // if (this.wxData.curUserId == "") this.changeUser(this.wxData.userList[0]);
                         if (this.wxData.curUserId == "") this.changeUser(this.userListByType[0]);
                         // 存储当前消息
                         this.setGroupChat.msg = this.wxData.msgList[this.wxData.curUserId].msgContent;
@@ -5335,6 +5570,17 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                             });
                         }
                     });
+                },
+                setHeight : function(){
+                    var allHeight = $(window).height();
+                    // 上面盒子高度
+                    var topBlockHeight = $('.user_mes_boxc').outerHeight();
+                    // 下面盒子的上部分高度
+                    var bottomDtHeight = $('.user_mes_con dt').outerHeight();
+                    // 下面盒子的下部分高度
+                    var bottomDdHeight = allHeight - topBlockHeight - bottomDtHeight - 10;
+                    $('.user_mes_con dd').height(bottomDdHeight);
+                    console.log('底部高度：'+bottomDdHeight);
                 },
                 // 拉取用户信息
                 getCrmInfo: function (isForce, userid) {
@@ -5410,6 +5656,9 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                                             //if(r.message.recent.constructor == Object){
                                                 that.$broadcast("sendLinkClassName",r.message.recent);
                                             //}
+
+                                            that.$nextTick(that.setHeight);
+
                                         }
                                     });
                                     // 发送微信id 跟 群列表 获取是否在达拉斯群
@@ -5433,23 +5682,6 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                                         }
                                         wxHeck.sendMsg(msgObj);
                                     })();
-                                    //设置聊天右侧高度
-                                    setTimeout(function(){
-                                        //console.log($('.user_mes_conc')[0].offsetHeight);
-                                        //总高度
-                                        var allHeight = document.documentElement.clientHeight;
-                                        // 上面盒子高度
-                                        var topBlockHeight = that.$el.querySelector('.user_mes_conc').offsetHeight+20;
-                                        // 下面盒子的上部分高度
-                                        var bottomDtHeight = that.$el.querySelector('.user_mes_con dt').offsetHeight;
-                                        // 下面盒子的下部分高度
-                                        var bottomDdHeight = allHeight - topBlockHeight -bottomDtHeight -20;
-                                        $('.user_mes_boxc').attr("style","height:"+ topBlockHeight + "px");
-                                        $('.user_mes_content').attr("style","height:"+ (allHeight-topBlockHeight) + "px");
-                                        $('.user_mes_con dd').attr("style","height:"+ bottomDdHeight +"px");
-                                        console.log(bottomDtHeight);
-                                        console.log(bottomDdHeight);
-                                    },300);
 
                                 } else {
                                     // 没有信息的
@@ -5463,23 +5695,9 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                                     that.$broadcast("setTagList",{
                                         labelList:''
                                     });
-                                    //设置聊天右侧高度
-                                    setTimeout(function(){
-                                        //console.log($('.user_mes_conc')[0].offsetHeight);
-                                        //总高度
-                                        var allHeight = document.documentElement.clientHeight;
-                                        // 上面盒子高度
-                                        var topBlockHeight = 292;
-                                        // 下面盒子的上部分高度
-                                        var bottomDtHeight = that.$el.querySelector('.user_mes_con dt').offsetHeight;
-                                        // 下面盒子的下部分高度
-                                        var bottomDdHeight = allHeight - topBlockHeight -bottomDtHeight -20;
-                                        $('.user_mes_boxc').attr("style","height:"+ topBlockHeight + "px");
-                                        $('.user_mes_content').attr("style","height:"+ (allHeight-topBlockHeight) + "px");
-                                        $('.user_mes_con dd').attr("style","height:"+ bottomDdHeight +"px");
-                                        console.log(bottomDtHeight);
-                                        console.log(bottomDdHeight);
-                                    },300);
+
+                                    that.$nextTick(that.setHeight);
+
                                 }
                             }
                         });
@@ -5558,17 +5776,7 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
 
                     // 小助手
                     ;(function(){
-                        var list = isHelper ? [
-                            { content : "1.如何使用黑鸟给学员发送教材？点开学员聊天界面，右上角会显示学员当天预约的教材，点击一键发送即可。目前黑鸟支持当天或黑鸟上显示预约的教材，如想发其他日期上的教材需要进入学员会员中心下载单独发送。" },
-                            { content : "2.如何把学员设置为全部标签里的某一个标签，如：快到期，已过期？全部标签所有的标签都是系统判断的，不能手动设置。如有发现名字下有此类学员没有被系统标注正确标签，请您及时反馈给我们。" },
-                            { content : "3.如何建群？点击左上角菜单按钮，点击发起群聊，在搜索栏里选择你要群聊的对象，点击确认即可。" },
-                            { content : "4.如何群发个人？点击左上角菜单按钮，点击 群发个人，在搜索栏里选择你要群发的对象和图片，点击确认即可。目前群发图片和文字时不能同步发送。" },
-                            { content : "5.如何群发图片？黑鸟支持群发图片和文字，点击群发按钮，选择群发对象，选中群发图片即可。" },
-                            { content : "6.学员推荐好友给我，如何查看推荐来源推荐人是谁？目前黑鸟无法实现此功能，建议您问学员是被谁推荐来的：如微信名字或者手机号等。" },
-                            { content : "7.如果使用黑鸟往朋友圈分享小视频？1）安装PC端微信客户端，登陆自己的微信号。2）使用自己微信发视频给黑鸟工作微信。3）在黑鸟微信浏览器端点击分享到朋友圈。" },
-                            { content : "8.微信掉线怎么办？及时复制下图上的微信ID发到黑鸟工作群里，以便技术及时为您解决。如果是自己使用手机踢掉线的，在准备提掉线之前请提前说明。" }
-                        ] : [];
-                        that.$broadcast("setOtherList", list);
+                        that.$broadcast("setOtherList", isHelper);
                     })();
                     // 渲染后的
                     this.$nextTick(function () {
@@ -5675,6 +5883,7 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     this.clearAtUs();
                     //重置快捷标签
                     wxHeck.wxInit.$refs.quickcon.tagSel.selName = '';
+                    wxHeck.wxInit.$refs.quickcon.inputData = '';
                     //重置选取的标签
                     wxHeck.wxInit.$refs.quickcon.conList=[];
                 },
@@ -5761,16 +5970,120 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     // 是否通过转发助手发送
                     // 规则 群发个人 且不能为发送文章 则使用转发助手
                     var isForward = (chatType == "0" && !isArticle);
-                    // 提示信息
-                    var sendTip = "";
-                    if(isForward){
-                        // 转发助手
-                        sendTip = "频繁群发会被微信限制，而且学员也不喜欢经常收到和营销相关的内容，是否群发？";
+
+                    //限制群发个人次数
+                    if(chatType == "0"){
+                        //获取已群发次数
+                        var that = this;
+                        wxHeck.getData({
+                            url: "/MassMessageLog/getMassMessageCount",
+                            data: {
+                                admin_id: localInfo.admin_id
+                            },
+                            success: function (r) {
+                                if (r.status != 10000) return _alert(r.message);
+                                if(isForward && data.cnt_type != 1){
+                                    // 验证文本次数
+                                    if(parseInt(r.message[0]) > 0){
+                                        _alert('本周已经无法通过【群发个人】发送话术给学员，你还可以尝试发送文章或图片');
+                                    }else{
+                                        //发送文字或者图片
+                                        sendGroupMes();
+                                    }
+                                }else{
+                                    // 验证文章次数
+                                    if(parseInt(r.message[1]) > 1){
+                                        _alert('本周已经无法【群发个人】发送文章或图片给学员');
+                                    }else {
+                                        //发送文章
+                                        var sendTip = "选择"+ length +"人群发消息需等待"+ Math.ceil(length * 3 / 60) +"分钟，频繁群发会被微信限制，是否群发？";
+                                        _confirm(sendTip ,function (){
+                                            sendGroupMes();
+                                        });
+                                    }
+                                }
+                            }
+                        });
                     }else{
-                        // 单聊接口
-                        sendTip = "选择"+ length +"人群发消息需等待"+ Math.ceil(length * 3 / 60) +"分钟，频繁群发会被微信限制，是否群发？";
+                        var sendTip = "选择"+ length +"人群发消息需等待"+ Math.ceil(length * 3 / 60) +"分钟，频繁群发会被微信限制，是否群发？";
+                        _confirm(sendTip ,function (){
+                            sendGroupMes();
+                        });
                     }
-                    _confirm(sendTip ,function (){
+                    
+                    // 提示信息
+                    // var sendTip = "";
+                    // if(isForward){
+                    //     // 转发助手
+                    //     sendTip = "频繁群发会被微信限制，而且学员也不喜欢经常收到和营销相关的内容，是否群发？";
+                    // }else{
+                    //     // 单聊接口
+                    //     sendTip = "选择"+ length +"人群发消息需等待"+ Math.ceil(length * 3 / 60) +"分钟，频繁群发会被微信限制，是否群发？";
+                    // }
+                    // _confirm(sendTip ,function (){
+                    //     that.loading.show = true;
+                    //     data.to_id = list.join(",")
+                    //     if(isForward){
+                    //         // 转发助手
+                    //         // 适用 群发个人 文字 图片
+                    //         wxHeck.getData({
+                    //             url: "/WechatMessage/ajaxMassMessage",
+                    //             data: {
+                    //                 "id": localInfo.id,
+                    //                 "wechat_id": localInfo.wechat_id,
+                    //                 "action": "group_chat",
+                    //                 "type": "web",
+                    //                 "to_type": "ios",
+                    //                 "u_ids": data.to_id,
+                    //                 "content": data.content,
+                    //                 "cnt_type" : data.cnt_type,
+                    //                 "chatType":chatType
+                    //             },
+                    //             success: function (r) {
+                    //                 if(r.status != 10000) return _alert(r.message);
+                    //                 _alert("转发成功");
+                    //                 // 关闭群发
+                    //                 that.closeGroupChat();
+                    //             },
+                    //             complete:function(){
+                    //                 that.loading.show = false;
+                    //             }
+                    //         });
+                    //     }else{
+                    //         // 单聊接口
+                    //         // 适用 群发个人 文章
+                    //         // 适用 群发给群 文字 图片 文章
+                    //         data.chatType = chatType;
+                    //         wxHeck.getData({
+                    //             url:"/WechatMessage/ajaxChangeMessage",
+                    //             data:data,
+                    //             success:function(r){
+                    //                 if(r.status != 10000) return _alert(r.message);
+                    //                 _alert("转发成功");
+                    //                 // 关闭群发
+                    //                 that.closeGroupChat();
+                    //             },
+                    //             complete:function(){
+                    //                 that.loading.show = false;
+                    //             }
+                    //         });
+                    //     }
+                    //     //群发统计次数
+                    //     wxHeck.getData({
+                    //         url:"/OperationLog/addOperationLog",
+                    //         data:{
+                    //             operation_type :1
+                    //         },
+                    //         success:function(r){
+                    //             console.log("统计群发到群次数")
+                    //         },
+                    //         error:function(){
+                    //             console.log("请求出错")
+                    //         }
+                    //     });
+                    // });
+                    
+                    function sendGroupMes() {
                         that.loading.show = true;
                         data.to_id = list.join(",")
                         if(isForward){
@@ -5786,7 +6099,8 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                                     "to_type": "ios",
                                     "u_ids": data.to_id,
                                     "content": data.content,
-                                    "cnt_type" : data.cnt_type
+                                    "cnt_type" : data.cnt_type,
+                                    "chatType":chatType
                                 },
                                 success: function (r) {
                                     if(r.status != 10000) return _alert(r.message);
@@ -5802,6 +6116,7 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                             // 单聊接口
                             // 适用 群发个人 文章
                             // 适用 群发给群 文字 图片 文章
+                            data.chatType = chatType;
                             wxHeck.getData({
                                 url:"/WechatMessage/ajaxChangeMessage",
                                 data:data,
@@ -5823,13 +6138,13 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                                 operation_type :1
                             },
                             success:function(r){
-                                console.log("统计群发岛群次数")
+                                console.log("统计群发到群次数")
                             },
                             error:function(){
                                 console.log("请求出错")
                             }
                         });
-                    });
+                    }
                 },
                 // 绑定crm信息弹层
                 bindUser: function () {
@@ -6028,8 +6343,8 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                                 $.map(r.message, function (ele, index) {
                                     ;
                                     (function () {
-                                        // 如果为获取未读 则不需要给score赋值
-                                        if (configs.isGetNoRead) return;
+                                        /*// 如果为获取未读 则不需要给score赋值
+                                        if (configs.isGetNoRead) return;*/
                                         // 取第一条的时间戳作为新的score
                                         if (index == r.message.length - 1) {
                                             that.wxData.msgList[curUserId].historyMsg.score = ele.time;
@@ -6042,6 +6357,20 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                                         var pushId = isCC ? data.to_id : data.from_id;
                                         if (!wxHeck.wxInit.wxData.msgList[pushId]) return;
                                         var content = typeof(data.content) == "object" ? JSON.stringify(data.content) : data.content;
+                                        // 如果是卡片 且有留言
+                                        if(data.cnt_type == 3000 && data.content.forward_text && data.content.forward_text != ""){
+                                            wxHeck.pushMsg({
+                                                pushId: pushId,
+                                                isCC: isCC,
+                                                msg: data.content.forward_text,
+                                                pushType: "unshift",
+                                                isGetHistory: true,
+                                                time: data.time,
+                                                name: data.name,
+                                                c_remark: data.c_remark,
+                                                source: data
+                                            });
+                                        }
                                         // 插入历史纪录
                                         wxHeck.pushMsg({
                                             pushId: pushId,
@@ -6194,20 +6523,54 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     this.$broadcast("showAutoLayer");
                 },
                 //分享文章&朋友圈相关
-                shareArticleData: function (x,y) {
-                    if(y == 'article'){
-                        this.shareArticle.dig = this.shareArticle.videoUrl = "";
-                        this.shareArticle.show = true;
-                        this.shareArticle.title = x.title;
-                        this.shareArticle.desc = x.desc;
-                        this.shareArticle.icon = x.thumbUrl;
-                        this.shareArticle.urlStr = x.urlStr;
-                    }
-                    if(y == 'video'){
-                        if(x.size > 1048576) return _alert("该视频超出分享限制,大小不能超过1M");
-                        this.shareArticle.dig =  this.shareArticle.title = this.shareArticle.desc = this.shareArticle.icon =  this.shareArticle.urlStr = "";
-                        this.shareArticle.show = true;
-                        this.shareArticle.videoUrl = x.url;
+                shareMenu: function (x,y,z) {
+                    switch (y){
+                        // 分享文章
+                        case 'article':
+                            this.shareArticle.dig = this.shareArticle.videoUrl = "";
+                            this.shareArticle.show = true;
+                            this.shareArticle.title = x.title;
+                            this.shareArticle.desc = x.desc;
+                            this.shareArticle.icon = x.thumbUrl;
+                            this.shareArticle.urlStr = x.urlStr;
+                            break;
+                        // 粉线视频
+                        case 'video':
+                            var wechat_version = this.wxData.wechat_version;
+                            if(x.size > 1048576 && wechat_version <= '6.3.23') return _alert("该视频超出分享限制,大小不能超过1M");
+                            this.shareArticle.dig =  this.shareArticle.title = this.shareArticle.desc = this.shareArticle.icon =  this.shareArticle.urlStr = "";
+                            this.shareArticle.show = true;
+                            this.shareArticle.videoUrl = x.url;
+                            break;
+                        // 转发个人
+                        case 'single':
+                            this.parentSend = true;
+                            this.showShare = '';
+                            this.getChat('getGroupChat', '0');
+                            this.temShareMsg = x;
+                            break;
+                        // 转发给群
+                        case 'group':
+                            this.parentSend = true;
+                            this.showShare = '';
+                            this.getChat('getGroupChat', '1');
+                            this.temShareMsg = x;
+                            break;
+                        // 转发视频
+                        case 'videoSend':
+                            this.parentSend = true;
+                            this.showShare = '';
+                            this.getChat('getGroupChat', z == 'single' ? '0' : '1');
+                            this.temShareMsg = {
+                                desc : "",
+                                // 封面
+                                thumbUrl : "http://useoss.51talk.com/images/5C84hnaJsdmJpzadXiiW.jpg",
+                                title : "视频分享",
+                                urlStr : x.url.replace(/^http:.+com/, "http://useoss.51talk.com")
+                            };
+                            break;
+                        default:
+                            break;
                     }
                 },
                 shareArticleBtn : function () {
@@ -6252,7 +6615,7 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                 },
                 //被删除，申请添加好友
                 addDelFriend: function(){
-                    this.addDelFriendInfo.nameTitle = wxHeck.checkUserType();
+                    this.addDelFriendInfo.nameTitle = wxHeck.checkUserType('','');
                     this.addDelFriendInfo.show = true;
                 },
                 //删除后申请添加好友
@@ -6261,7 +6624,7 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                         "id": localInfo.id,
                         "action": "add_friend",
                         "type": "web",
-                        "to_id": this.wxData.curUserId,
+                        // "to_id": this.wxData.curUserId,
                         "to_type": "ios",
                         "wxid": this.wxData.curUserId.split("$")[1],
                         "verify_msg":this.addDelFriendInfo.msg,
@@ -6357,8 +6720,25 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                             break;
                         default:
                     }
-                }
+                },
                 //右上角绑定信息收缩 end
+
+                // 查询老师缺席
+                checkTea : function(wechatId, msgList){
+                    var crmInfo = msgList.crmInfo;
+                    if(!crmInfo) _alert("该学员未被绑定！");
+
+                    wxHeck.getData({
+                        url : "/Ifttt/AbsenceJudgment",
+                        data : {
+                            user_id : crmInfo.user_id,
+                            wechat_id : wechatId
+                        },
+                        success : function(r){
+                            if(r.status != 10000) return _alert(r.message);
+                        }
+                    });
+                }
             },
             events: {
                 changeLabel: function (data) {
@@ -6538,7 +6918,7 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                             "id": localInfo.id,
                             "action": actionConfig[data.type],
                             "type": "web",
-                            "to_id": this.wxData.curUserId,
+                            // "to_id": this.wxData.curUserId,
                             "to_type": "ios",
                             "wxid": data.wxid,
                             "verify_msg": data.verify_msg,
@@ -6566,13 +6946,14 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     });
                 },
                 //添加学员好友
-                addListFriend: function (crmMobile, crmId, addType) {
+                addListFriend: function (crmMobile, crmId, addType, trialStatus) {
                     this.$broadcast("showAddFriend", {
                         type: 0,
                         acc: crmMobile,
                         crmMobile : crmMobile,
                         crmId: crmId,
-                        addType : addType
+                        addType : addType,
+                        trialStatus: trialStatus
                     });
                 },
                 // 发送表情
@@ -6640,16 +7021,37 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                 },
                 // 修改群名字
                 editNameSure: function (data) {
+                    console.log(data);
+                    // return;
                     this.$broadcast("editNameClose");
                     // return console.log(data);
-                    wxHeck.sendMsg({
-                        "id": localInfo.id,
-                        "action": data.isGroup ? "modify_name" : "modify_remark",
-                        "type": "web",
-                        "to_id": this.wxData.curUserId,
-                        "to_type": "ios",
-                        "new_name": data.editValue
-                    });
+                    if(data.nickInfo == 'nicker'){
+                        wxHeck.sendMsg({
+                            "id": localInfo.id,
+                            "action": "modify_self_groupname",
+                            "type": "web",
+                            "u_id": this.wxData.curUserId.split("$")[1],
+                            "to_type": "ios",
+                            "displayname": data.editValue
+                        });
+                    }else{
+                        wxHeck.sendMsg({
+                            "id": localInfo.id,
+                            "action": data.isGroup ? "modify_name" : "modify_remark",
+                            "type": "web",
+                            "to_id": this.wxData.curUserId,
+                            "to_type": "ios",
+                            "new_name": data.editValue
+                        });
+                    }
+                    // wxHeck.sendMsg({
+                    //     "id": localInfo.id,
+                    //     "action": data.isGroup ? "modify_name" : "modify_remark",
+                    //     "type": "web",
+                    //     "to_id": this.wxData.curUserId,
+                    //     "to_type": "ios",
+                    //     "new_name": data.editValue
+                    // });
                 },
                 //我的学员备注
                 crmRemarkTableOpen : function (id) {
@@ -6708,20 +7110,38 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                 },
                 noReadAll: function (value) {
                     if (value > 0) {
-                        wxHeck.flashText && wxHeck.flashText.clearFlash();
-                        wxHeck.flashText = wxHeck.Util.flashText("您有新的消息！", function (text) {
-                            document.title = text;
-                        });
+                        wxHeck.flashTitleFn.set("您有新的消息！");
                     } else {
-                        wxHeck.flashText && wxHeck.flashText.clearFlash();
-                        document.title = wxHeck.title;
+                        wxHeck.flashTitleFn.reset();
                     }
                 }
             },
-            mounted:{
-                getHeight: function(){
-                    console.log(this.$refs.upRightHeight.style);
-                }
+            created : function(){
+                $(document).on("visibilitychange", function(){
+                    if(document.hidden) return;
+                    var wxData = this.wxData;
+                    var curUserId = wxData.curUserId;
+                    // 如果没有当前user
+                    if(!curUserId) return;
+                    var noRead = wxData.msgList[curUserId].noRead;
+                    // 如果当前user没有未读消息
+                    if(noRead == 0) return;
+                    var content_message = $(".content_message")[0];
+                    // 如果没有对话框
+                    if (!content_message) return;
+                    // 如果没有滚动条
+                    var isNoScroll = content_message.clientHeight == content_message.scrollHeight;
+                    if(!isNoScroll) return;
+                    wxData.msgList[curUserId].noRead = 0;
+                    this.noReadAll -= noRead;
+                    // 发送确认消息
+                    wxHeck.sendMsg({
+                        "action": "chat_ok",
+                        "id": localInfo.id,
+                        "type": "web",
+                        "to_id": curUserId
+                    });
+                }.bind(this));
             }
         });
         ;
@@ -6777,8 +7197,8 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                 }
                 // 登入成功
                 that.enter = function (data) {
-                    // 获取列表
-                    // wxHeck.getUserList();
+                    // enter时间
+                    wxHeck.enterTime = data.time || (new Date).getTime();
                     // 关闭net err
                     wxHeck.wxInit.$broadcast("setErrors", {
                         netErr: false,
@@ -6997,7 +7417,7 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                                         // 是否拉取完所有的历史纪录
                                         isGetAll: false,
                                         // score
-                                        score: Date.parse(new Date())
+                                        score: wxHeck.enterTime
                                     },
                                     // 未读消息中的第一条的时间戳
                                     time: time,
@@ -7028,7 +7448,7 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                                 }
                             });
                             // 遍历完成 将初次加载置为false
-                            wxHeck.wxInit.userProgress.isFirst = false;
+                            if(wxHeck.wxInit.userProgress.isFirst) wxHeck.wxInit.userProgress.isFirst = false;
                         })(data.list, wxHeck.dataSource.msgList);
                         // 如果是user_list 获取置顶
                         if (isuserList) {
@@ -7094,7 +7514,9 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     wxHeck.dataSource.msgList[data.from_id].userInfo.label = data.labels;
                 }
                 // 获取消息
+                // 获取消息
                 that.chat = function (data) {
+                    //@人消息
                     if (data.cnt_type == 3100) {
                         var getAt_fg = JSON.parse(data.content);
                         var that = wxHeck.wxInit;
@@ -7107,27 +7529,59 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                         var isCC = data.from_id == localInfo.id;
                         var pushId = isCC ? data.to_id : data.from_id;
                         if (!wxHeck.wxInit.wxData.msgList[pushId]) return;
+
+                        // ifttt
+                        ;(function(){
+                            if(data.cnt_type != 0 || isCC) return;
+                            var key = new RegExp("老师没来|老师缺席");
+                            if(data.content.search(key) < 0) return;
+                            wxHeck.getData({
+                                url : "/Ifttt/sendCustMessage",
+                                data : {
+                                    wechat_id : pushId,
+                                    admin_id : localInfo.id,
+                                    // 是否缺席
+                                    cust_type : '1'
+                                },
+                                success : function(){},
+                                error : function(){}
+                            });
+                        })();
+
                         // 满足未读+1的条件
+                        // 滚动条是否在底部
+                        var isnotDown = (function () {
+                            var content_message = $(".content_message")[0];
+                            if (!content_message) return false;
+                            return content_message.scrollTop + content_message.clientHeight < content_message.scrollHeight;
+                        })();
                         // 如果不是当前user 且不是cc自己发的
                         var flag1 = (wxHeck.wxInit.wxData.curUserId != pushId && !isCC);
                         // 如果是公告消息
-                        var flag2 = (data.cnt_type == 4000 || data.cnt_type == 5000);
-                        // 如果是当前user 且不是cc自己发的 且滚动条不在底部
-                        var flag3 = (function () {
-                            var content_message = $(".content_message")[0];
-                            if (!content_message) return false;
-                            var isnotDown = content_message.scrollTop + content_message.clientHeight < content_message.scrollHeight;
-                            return wxHeck.wxInit.wxData.curUserId == pushId && !isCC && isnotDown;
+                        var flag2 = (function(){
+                            // 如果是公告消息
+                            var isGG = data.cnt_type == 4000 || data.cnt_type == 5000;
+                            // 如果是公告消息且不是当前user 或者 如果是公告消息是当前user但是不在底部
+                            return (isGG && wxHeck.wxInit.wxData.curUserId != pushId) || (isGG && wxHeck.wxInit.wxData.curUserId == pushId && isnotDown);
                         })();
+                        // 如果是当前user 且不是cc自己发的 且滚动条不在底部
+                        var flag3 = wxHeck.wxInit.wxData.curUserId == pushId && !isCC && isnotDown;
+                        // 如果是当前user 且当前页面未激活状态
+                        var flag4 = wxHeck.wxInit.wxData.curUserId == pushId && document.hidden;
                         // 更新已读 未读
                         // 如果不是当前user 且不是cc自己发的
-                        if (flag1 || flag2 || flag3) {
-                            // 未读加1
-                            wxHeck.wxInit.wxData.msgList[pushId].noRead++;
-                            //不是屏蔽消息20170515
-                            if(!wxHeck.wxInit.wxData.msgList[pushId].userInfo.mute_session){
-                                // 更新noReadAll
-                                wxHeck.wxInit.noReadAll++;
+                        if (flag1 || flag2 || flag3 || flag4) {
+                            //屏蔽ss，cst提醒
+                            if (data.cnt_type == 5000 && (localInfo.admin_type == 'is' || localInfo.user_group == '2' || localInfo.user_group == '4' || localInfo.user_group == '6' || data.visible == 1)){
+                                console.log('SS，CST消息不提醒！')
+                            }else{
+                                // 未读加1
+                                wxHeck.wxInit.wxData.msgList[pushId].noRead++;
+                                //不是屏蔽消息20170515
+                                if(!wxHeck.wxInit.wxData.msgList[pushId].userInfo.mute_session){
+                                    // 更新noReadAll
+                                    wxHeck.wxInit.noReadAll++;
+                                }
                             }
 
                             // 置顶操作
@@ -7135,8 +7589,8 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                             // 先删除 再从数组前端压入
                             wxHeck.toTop(pushId);
                         }
-                        // 如果是当前user 且不是cc自己发的
-                        if (wxHeck.wxInit.wxData.curUserId == pushId && !isCC && !flag3) {
+                        // 如果是当前user 且不是cc自己发的 且页面为激活状态
+                        if (wxHeck.wxInit.wxData.curUserId == pushId && !isCC && !flag3 && !flag4) {
                             // 发送确认消息
                             wxHeck.sendMsg({
                                 "action": "chat_ok",
@@ -7173,10 +7627,12 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                 that.get_version = function (data) {
                     wxHeck.dataSource.clientVersion = data.client_version;
                     wxHeck.dataSource.cloudVersion = data.cloud_version;
+                    wxHeck.dataSource.wechat_version = data.wechat_version || "";
+                    //wxHeck.dataSource.dylib_version = data.dylib_version;
                 }
                 // 托管账号
                 that.chat_trust_set = function () {
-                    alert("托管成功！");
+                    _alert("托管成功！");
                     wxHeck.Util.closeTab();
                 }
                 //验证群内是否为好友
@@ -7218,7 +7674,7 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                 }
                 //接收文件
                 that.receive_file = function (data) {
-                    console.log(data)
+                    console.log(data);
                 }
                 //接收视频
                 // that.receive_video = function (data) {
@@ -7244,13 +7700,52 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     if(data.mute_session == 1){
                         _alert("屏蔽群消息设置成功");
                         wxHeck.dataSource.muteList.push(data.from_id);
-                        console.log(wxHeck.wxInit.wxData.muteList)
                     }else{
                         _alert("开启群消息成功");
                         wxHeck.dataSource.muteList.$remove(data.from_id);
-                        console.log(wxHeck.wxInit.wxData.muteList)
                     }
                     wxHeck.wxInit.wxData.msgList[data.from_id].userInfo.mute_session = data.mute_session == 1;
+                }
+                //群置顶相关
+                that.top_chat_session = function (data) {
+                //
+                //     var topList = wxHeck.wxInit.wxData.topList
+                //     if(data.set_to_top == 1){
+                //         //删除当前置顶的数据
+                //         wxHeck.wxInit.wxData.userList.$remove(data.from_id);
+                //         //将当前选取置顶的插入置顶列表
+                //         topList.unshift(data.from_id);
+                //     }else{
+                //         topList.$remove(data.from_id);
+                //         wxHeck.wxInit.wxData.userList.unshift(data.from_id);
+                //     }
+                //
+                //     // 微信小助手列表
+                //     //var helpList = wxHeck.wxInit.wxData.helpList;
+                //     // 最终的用户列表
+                //     var userList = topList.concat(wxHeck.wxInit.wxData.userList);
+                //     wxHeck.wxInit.wxData.userList = userList;
+                //     wxHeck.wxInit.wxData.topList = topList;
+                //
+                //
+                //     // if(data.set_to_top == 1){
+                //     //     var topList = wxHeck.wxInit.wxData.userList.$remove(data.from_id);
+                //     //     wxHeck.wxInit.wxData.userList.unshift(topList);
+                //     //     _alert("置顶设置成功");
+                //     // }else{
+                //     //     _alert("取消置顶成功");
+                //     // }
+                //     //
+                    wxHeck.wxInit.wxData.msgList[data.from_id].userInfo.set_to_top = data.set_to_top == 1;
+                }
+                //群昵称修改
+                that.modify_self_groupname = function (data) {
+                    var groupListTem = wxHeck.wxInit.wxData.groupUserLists[data.from_id];
+                    $.map(groupListTem, function (elm, index) {
+                        if(elm.wechat_id.split("$")[1] == localInfo.wechat_id){
+                            groupListTem[index].wechat_nick = data.displayname;
+                        }
+                    });
                 }
 
                 //当前学员微信信息
@@ -7258,6 +7753,23 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     wxHeck.wxInit.$broadcast("showCutUserLayer",{
                         details:data.details
                     })
+                }
+                
+                //开启关闭【群聊邀请确认】
+                that.allow_owner_approve = function (data) {
+                    console.log(data.allow_owner_approve_value);
+                    wxHeck.wxInit.wxData.msgList[data.from_id].userInfo.allow_owner_approve_value = data.allow_owner_approve_value == 1;
+                }
+                
+                //退出群聊
+                that.quit_chatroom =  function (data) {
+                    var index = $.inArray(data.wxid, wxHeck.dataSource.userList);
+                    var _index = index == wxHeck.dataSource.userList.length - 1 ? index - 1 : index + 1;
+                    var _curId = wxHeck.dataSource.userList[_index];
+                    wxHeck.dataSource.userList.$remove(data.wxid);
+                    wxHeck.dataSource.userListGroup.$remove(data.wxid);
+                    wxHeck.wxInit.changeUser(_curId);
+                    _alert("退出群聊成功！");
                 }
             }
             // 连接websocket
@@ -7314,6 +7826,15 @@ define("weixinHeck", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                         _alert("有新版本上线，请刷新浏览器更新", function(){
                             window.location.reload(true);
                         });
+                        return;
+                    }
+                    // 发送图片回调
+                    if(data.action == "proc_comp"){
+                        if(data.status == 10000){
+                            wxHeck.wxInit.$broadcast("hwSetSuccess");
+                        }else{
+                            wxHeck.wxInit.$broadcast("hwSetFail", data.msg);
+                        }
                         return;
                     }
                     if (data.status == 10005 && data.action == "enter") {

@@ -1,0 +1,47 @@
+.b2s-paging{
+  padding: 50px 0;
+  text-align: center;
+  a{
+    display: inline-block;
+    color: #557fa7;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #badaff;
+    border-radius: 4px;
+    margin: 0 5px;
+    background-color: #fff;
+    &:hover{
+      border-color:#7795b3;
+    }
+    &.paging-arr{
+      position: relative;
+      color: #fff;
+      i{
+        width: 0;
+        height: 0;
+        left: 50%;
+        top: 50%;
+        margin: -6px 0 0 -3px;
+        position: absolute;
+        border: 6px solid #557fa7;
+        border-top-color: transparent;
+        border-bottom-color: transparent; 
+      }
+      &.paging-prev i{
+        border-left: 0;
+      }
+      &.paging-next i{
+        border-right: 0; 
+      }
+    }
+  }
+  .cur{
+    background: #ff7b00;
+    border:1px solid #ff7b00;
+    color: #fff;
+    &:hover{
+      border:1px solid #ff7b00;
+    }
+  }
+}

@@ -1,0 +1,169 @@
+.login_registe{
+	width:100%;
+	height: 630px;
+	background: url("@{imgMpath}login_reg.jpg") no-repeat center;
+	position: relative;
+	.bigger_bg{
+		width:376px;
+		height:318px;
+		background:url("@{imgMpath}bigger.png") no-repeat center; 
+		position: absolute;
+		top:70px;
+		right:23%;
+		.reginste_bg{
+			width:316px;
+			height:258px;
+			position: absolute;
+			left:0;
+			top:0;
+			color:323232;
+			font-size: 14px;
+			padding:30px;
+			.return_login{
+				display: block;
+				padding-left:25px;
+				background:url("@{imgMpath}log_reg.png") no-repeat -370px -7px;
+			}
+			.reg_code{
+				margin:17px 0 10px 75px;
+			}
+			p{
+				text-align: center;
+				color:#646464;
+				line-height:25px;
+			}
+		}
+		.login_bg{
+			width:296px;
+			height:228px;
+			position: absolute;
+			left:0;
+			top:0;
+			padding:40px 45px;
+			.cfix{
+				.error-tips{
+					position: absolute;
+					height: 22px;
+					background-color: #f66741;
+					bottom: -22px;
+					left: 32px;
+					border-radius: 4px;
+					-webkit-border-radius: 4px;
+					color: #fff;
+					line-height: 22px;
+					font-size: 12px;
+					padding: 0 8px;
+					display: none;
+					.err-arr{
+						position: absolute;
+						width: 0;
+						height: 0;
+						border: 6px solid #f66741;
+						border-left-color: transparent;
+						border-right-color: transparent;
+						border-top: 0;
+						top: -6px;
+						left: 20px;
+					}
+				}
+				border:1px solid #fff;
+				border-bottom-color:#faca93;
+				position: relative;
+				width:280px;
+				height:28px;
+				background: #fff;
+				padding:5px;
+				border-radius: 3px;
+				&.active{
+					border-color:#ffa527;
+					.phone-img{
+						background-position: -2px -88px;
+						border-right-color:#ffa527;
+					}
+					.lock_img{
+						background-position: -2px -125px;
+						border-right-color:#ffa527;
+					}
+				}
+				.phone-img{
+					width:40px;
+					height:30px;
+					border-right:1px solid #dcdcdc;
+					float:left;
+					background:url("@{imgMpath}log_reg.png") no-repeat -2px -4px; 
+				}
+				.lock_img{
+					width:40px;
+					height:30px;
+					border-right:1px solid #dcdcdc;
+					float:left;
+					background:url("@{imgMpath}log_reg.png") no-repeat -2px -48px;
+				}
+				.li_input{
+					width:200px;
+					float:left;
+					input{
+						height:28px;
+						line-height: 28px\9;
+						padding-left:8px;
+					}
+				}
+				.clear_text{
+					float:right;
+					width:25px;
+					height:28px;
+					background:url("@{imgMpath}log_reg.png") no-repeat -94px -8px;
+					cursor: pointer;
+				}
+			}
+			.mar{
+				margin: 30px 0 20px 0;
+			}
+			.submit-btn{
+				width:290px;
+				height:40px;
+				border-radius: 3px;
+				input{
+					width:290px;
+					height:40px;
+					border-radius: 3px;
+					background: #ffa527;
+					color:#fff;
+					text-align: center;
+					line-height: 40px;
+					font-size: 20px;
+					letter-spacing: 3px;
+					cursor: pointer;
+					padding: 0;
+					&:hover{
+						background:#ffb956;
+					}
+				}
+				
+			}
+			.next{
+				width:290px;
+				height:20px;
+				margin-bottom:20px;
+				li{
+					float:left;
+					height:20px;
+					width:144px;
+					line-height: 20px;
+					a{
+						float: right;
+						color:#ffa527;
+					}
+				}
+			}
+			.return_reg{
+				position: absolute;
+				right:50px;
+				bottom:20px;
+			}
+		}
+	}
+}
+.bot{
+	height:80px;
+}

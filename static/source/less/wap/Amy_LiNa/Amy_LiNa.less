@@ -1,0 +1,269 @@
+@charset "utf-8";
+
+@import "../common/base.less";
+
+@imgPath: "../../../images/wap/red_youth/";
+
+body{
+	font-family: @fontFamily;
+}
+img{
+	vertical-align: top;
+}
+section{
+	background-color: #fff;
+	min-width: 320px;
+    max-width: 640px;
+    margin:0 auto;
+}
+.top{
+	position: relative;
+	width: 100%;
+	a{
+		position: absolute;
+		right: 2.2rem;
+		top:1.3rem;
+		width: 4.5rem;
+		height: 1.6rem;
+		line-height:1.6rem;
+		border: 2px solid #fff;
+		border-radius: 3px; 
+		text-align: center;
+		color:#fff;
+	}
+	.topImg{
+		width:100%;
+	}
+}
+.logIn{
+	background-color: #ebebeb;
+	padding-bottom: 3.8rem;
+	.OneS_logIn{
+		/*position: absolute;
+		right: 5rem;
+		bottom:3.4rem;*/
+		padding-top: 3rem;
+		color: #7c7b7b;
+		width: 22rem;
+		margin:0 auto;
+		li{
+			height: 3rem;
+			width: 22rem;
+			margin-bottom: 1.4rem;
+		}
+		input{
+			background-color: #fff;
+			height: 100%;
+			width: 17rem;
+			border:1px solid #cfcfcf;
+			border-top-color:#cfcfcf;
+			border-bottom-color:#a6a6a6;
+			border-left-color: #b8b8b8;
+			border-right-color: #b8b8b8;
+			font-size: 1.4rem;
+			border-radius: 5px;
+			padding:0 2.5rem;
+			text-align: center;
+		}
+		a{
+			
+			display: -ms-flexbox;
+			-ms-flex-align:center;
+			-ms-flex-pack:center;
+
+			display: -moz-box;
+			-moz-box-align:center;
+			-moz-box-pack:center;
+
+			display: -webkit-box;
+			-webkit-box-pack:center;
+			-webkit-box-align:center;
+
+			display: flexbox;
+			flex-pack:center;
+			flex-align:center;
+			
+			height: 100%;
+			background-color: #ed1158;
+			color: #fff;
+			border-width:1px;
+			border-style: solid;
+			border-top-color:#fe719e;
+			border-bottom-color:#b00c41;
+			border-left-color:#dc4475;
+			border-right-color:#dc4475;
+			border-radius: 5px;
+			width:100%;
+			text-align: center;
+			font-size: 1.4rem;
+		}
+	}
+	h3{
+		margin:0;
+		background-color: #d8d8d8;
+		height: 3.5rem;
+		line-height: 3.5rem;
+		font-size: 1.8rem;
+		color: #ed1158;
+		text-align: center;
+		font-weight: bold;
+	}
+}
+.center{
+	padding-top: 1.9rem;
+	h3{
+		text-align: center;
+		font-size: 1.8rem;
+		margin-bottom: 3.5rem;
+		color: #626161;
+	}
+	li{
+		position: relative;
+		text-align: center;
+		i{
+			width: 3.55rem;
+			height: 3.55rem;
+
+			position: absolute;
+			font-size: 1.5rem;
+			background-color: #ed1158;
+			border-radius: 50%;
+			color: #fff;
+			font-weight: bold;
+			font-style:italic ;
+			display: -ms-flexbox;
+			-ms-flex-align:center;
+			-ms-flex-pack:center;
+
+			display: -moz-box;
+			-moz-box-align:center;
+			-moz-box-pack:center;
+
+			display: -webkit-box;
+			-webkit-box-pack:center;
+			-webkit-box-align:center;
+
+			line-height: 3.55rem;
+			/*display: flexbox;
+			flex-pack:center;
+			flex-align:center;*/
+			&.right{
+				left: 56%;
+				top:-0.5rem;
+			}
+			&.left{
+				left: 34%;
+				top:-0.5rem;
+			}
+		}
+	}
+		
+	p{
+		font-size: 1.4rem;
+		line-height: 1.8rem;
+		margin-bottom: 3.5rem;
+		color: #848484;
+		font-weight: bold;
+	}
+	img{
+		width: 10.8rem;
+		height: 10.8rem;
+		margin-bottom: 0.4rem;
+		border-radius: 100%;
+	}
+	.borderG{
+		display: inline-block;
+		width: 10.8rem;
+		height: 10.8rem;
+		border:#f2f1f0 0.5rem solid;
+		border-radius: 100%;
+		margin-bottom: 0.5rem;
+	}
+}
+footer{
+	background-color: #fafafa;
+	padding-bottom:2.7rem;
+	text-align:center;
+	img{
+		width: 100%;
+		margin-bottom: 2.1rem;
+	}
+	a{
+		padding:1.1rem 1.8rem 1rem;
+		background-color: #ed1158;
+		font-size: 1.5rem;
+		color: #fff;
+		border-radius: 5px;
+		display: inline-block;
+		margin-bottom: 1.2rem;
+	}
+	p{
+		font-size: 0.9rem;
+		color: #2b2b2b;
+		line-height: 1;
+	}
+
+}
+//app下载
+.app_load{
+	padding-bottom:0;
+	img{
+		margin-bottom:0;
+	}
+	.app_loadBtn{
+		background:#312c2f;
+		width: 100%;
+    height:7.25rem;
+    display: -webkit-box;
+    -webkit-box-align:start;
+    -webkit-box-pack:center;
+
+    display: -ms-flexbox;
+    -ms-flex-align:start;
+    -ms-flex-pack:center;
+
+    display: -moz-box;
+    -moz-box-pack: center; 
+    -moz-box-align: start;
+
+    display: flexbox;
+    flex-pack:center;
+    flex-align:start;
+    img{
+    	margin-top:-1rem;
+    	height:5.85rem;
+    	width: 5.85rem;
+    }
+    p{
+    	font-size:1.5rem;
+    	color:#fff;
+    	line-height: 1.8rem;
+    	margin:1rem 2rem 0 1rem;
+    	span{
+    		font-weight:900;
+    	}
+    }
+    a{
+    	margin-top:1rem;
+    	padding:1rem 1.2rem;
+    	background:#ff8429;
+    }
+	}
+}
+
+
+
+
+
+@media screen and (max-width: 320px) {
+    .logIn_go{
+		height: 26.6rem;
+		.logIn_img{
+			width: 100%;
+			height: 100%;
+		}
+		.dt_img{
+			margin-left: 6rem;
+		}
+	}
+}

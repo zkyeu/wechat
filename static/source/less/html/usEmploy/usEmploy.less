@@ -1,0 +1,506 @@
+@charset "utf-8";
+@imgPath: "../../../images/html/usEmploy/";
+@font-path:"./font/";
+
+
+//为了解决字体文件跨域问题，将字体文件放到PHP模板的目录下，font-face在模板中使用相对路径解决。
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "dinPro Light","Times New Roman";
+}
+a{
+    text-decoration: none;
+}
+
+ul,li{
+    list-style: none;
+}
+img{
+    border: 0;
+    display: block;
+}
+
+
+.clearfix{
+    zoom:1;
+}
+.clearfix:after{
+    display: block;
+    content: "";
+    clear: both;
+}
+
+@width: 1200px;
+
+.container{
+    .top{
+        position: relative;
+        .topBg{
+            width: 100%;
+            height: 1111px;
+            background: #858992 url('@{imgPath}bannerBg.jpg') center no-repeat;
+            .topDesc{
+                width: @width;
+                margin: 0 auto 48px;
+                padding-top: 268px;
+                h3{
+                    text-shadow:2px 2px 2px #e8e8ec;
+                    font:normal 80px/90px "k_E_Light";
+                    margin-bottom: 80px;
+                    color:#393939;
+                }
+                a{
+                    font:56.25px/92px "k_E_Light";
+                    font-family:"k_E_Light";
+                    display: inline-block;
+                    height: 92px;
+                    width: 480px;
+                    text-align: center;
+                    background-color: #febf00;
+                    border-radius: 50px;
+                    color:#000;
+                    opacity: 0.8;
+                }
+            }
+            .priceDesc{
+                font:22.5px/37px "k_Light";
+                width: @width;
+                margin: 0 auto;
+                color: #2e2e2e;
+                span{
+                    font:bold 22.5px/22.5px "k_Heavy";
+                    color: #000;
+                }
+
+            }
+        }
+        .topTitle{
+            position: absolute;
+            height: 70px;
+            width: 100%;
+            background-color: #febf00;
+            opacity: 0.7;
+            .logoBox{
+                width: @width;
+                height: 70px;
+                margin: 0 auto;
+                img{
+                    margin-top: 12px;
+                    width: 331px;
+                    height: 45px;
+                } 
+            }
+        }
+        .topIntro{
+            width: 100%;
+            height: 268px;
+            background-color: rgba(0,0,0,0.54);
+            position: absolute;
+            bottom: 0;
+            .list{
+                width: @width;
+                margin: 0 auto;
+                padding-top: 50px;
+                li{
+                    float: left;
+                    margin-left: 50px;
+                    color: #fefefe;
+                    h3{
+                        font-family:"k_Light";
+                        font-size:18px;
+                        margin-bottom: 12px;
+                        i{
+                            display: inline-block;
+                            width: 16px;
+                            height: 16px;
+                            margin-right: 16px;
+                            background: url('@{imgPath}icons.png') -75px -65px no-repeat;
+                            vertical-align: middle;
+                        }
+                        span{
+                            vertical-align: middle;
+                        }
+                    }
+                    .desc{
+                        font-family:"k_Light";
+                        font-size:16.5px;
+                        padding-left: 30px;
+                        padding-right: 44px;
+                        width: 280px;
+                        height: 140px;
+                        border-right: 1px solid #fff;
+                        line-height: 30px;
+                    }
+                }
+                .last{
+                    .desc{
+                        
+                        padding-right: 0;
+                        border-right: none;
+                    }
+                }
+            }
+        }
+    }
+    .intro{
+        width: 100%;
+        height: 793px;
+        background-color: #f8ca00;
+        .introBox{
+            width: @width;
+            height: 793px;
+            margin: 0 auto;
+            background: url('@{imgPath}51intro.jpg') center no-repeat;
+            .introDesc{
+                padding-top: 360px;
+                text-align: center;
+                h3{
+                    font-family:"K_Light";
+                    font-size: 58px;
+                    line-height: 72px;
+                    margin-bottom: 20px;
+                }
+                p{
+                    font-family:"K_E_Light";
+                    font-size: 20px;
+                    line-height: 36px;
+                }
+            }
+        }
+        
+    }
+    .join{
+        width: 100%;
+        height: 585px;
+        background: #767676 url('@{imgPath}joinBg.jpg') center no-repeat;
+        .joinDesc{
+            width: @width;
+            margin: 0 auto;
+            height: 100%;
+            text-align: center;
+            overflow: hidden;
+            h3{
+                font-family:"K_Light";
+                font-size: 58px;
+                padding-top: 68px;
+                margin-bottom: 68px;
+                color: #fff;
+            }
+            .imgBox{
+                height: 430px;
+                background: url('@{imgPath}join.png') center no-repeat;
+                margin: 0 auto;
+            }
+        }
+    }
+    .apply{
+        height: 16px;
+        width: 100%;
+        background-color: #febf00;
+        position: relative;
+        .btn{
+            font-family:"K_Light";
+            width: 236px;
+            height: 58px;
+            line-height: 58px;
+            text-align: center;
+            background-color: #f4bf1b;
+            font-size: 30px;
+            position: absolute;
+            left: 50%;
+            margin-left: -118px;
+            top: 50%;
+            margin-top: -29px;
+            border-radius: 30px;
+            color: #000;
+        }
+    }
+    .teachers{
+        width: 100%;
+        height: 393px;
+        background-color: #323030;
+        .teachBox{
+            width: @width;
+            position: relative;
+            margin: 0 auto;
+            height: 100%;
+            .swiperBtn{
+                width: 18px;
+                height: 94px;
+                position: absolute;
+                top: 50%;
+                margin-top: -47px;
+            }
+            .prev{
+                left: 18px;
+                background: url('@{imgPath}icons.png') 0px 0px no-repeat;
+            }
+            .next{
+                right: 24px;
+                background: url('@{imgPath}icons.png') -35px 0px no-repeat;
+            }
+            .sliderBox{
+                margin-left: 130px;
+                padding-top: 88px;
+                width: 1020px;
+                overflow: hidden;
+                position: relative;
+                height: 235px;
+                ul{
+                    position: absolute;
+                    height: 235px;
+                    li{
+                        float: left;
+                        width: 1020px;
+                        color: #febf00;
+                        .leftPart{
+                            width: 170px;
+                            padding-right: 95px;
+                            text-align: center;
+                            border-right: 1px solid #febf00;
+                            float: left;
+                            img{
+                                width: 140px;
+                                height: 140px;
+                                border-radius: 50%;
+                                margin-bottom: 7px;
+                            }
+                            h3{
+                                font-family:"K_Light";
+                                font-size: 20px;
+                                line-height: 36px;
+                            }
+                            p{
+                                font-family:"K_E_Light";
+                                font-size: 12px;
+                            }
+                        }
+                        .rightPart{
+                            float: right;
+                            width: 640px;
+                            h3{
+                                font-family:"K_Light";
+                                padding: 4px  0 16px 0;
+                                font-size: 36px;
+                                line-height:44px;
+                            }
+                            p{
+                                font-family:"K_E_Light";
+                                font-size: 20px;
+                                line-height: 26px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .looking{
+        width: 100%;
+        padding-bottom: 20px;
+        background-color: #efc236;
+        .lookBox{
+
+            width: @width;
+            margin: 0 auto;
+            
+            h3{
+                font-family:"K_Light";
+                text-align: center;
+                padding: 20px 0  15px 0 ;
+                font-size: 58px;
+            }
+            p{
+                font-family:"K_E_Light";
+                font-size: 20px;
+                line-height:30px;
+            }
+            ul{
+                li{
+                    font-family:"K_E_Light";
+                    line-height: 30px;
+                    font-size: 20px;
+                    background: url("@{imgPath}dot.jpg") left center no-repeat;
+                    padding-left: 15px;
+                }
+            }
+            .list-2{
+                
+                
+                li{
+                    background: none;
+                }
+            }
+        }
+    }
+    .howApply{
+        width: 100%;
+        height: 608px;
+        background: url('@{imgPath}applyBg.jpg') center no-repeat;
+        .applyBox{
+            width: @width;
+            margin: 0 auto;
+            .title{
+                font-family:"K_Light";
+                text-align: center;
+                padding: 60px 0  0;
+                font-size: 58px;
+                line-height:58px;
+                margin-bottom: 80px;
+            }
+            .stepBox{
+                .steps{
+                    padding-left: 46px;
+                    margin-bottom: 20px;
+                    span{
+                        font-family:"K_E_Light";
+                        display: inline-block;
+                        margin-right: 205px;
+                        margin-right:212px\9;
+                        font-size: 22px;
+                    }
+                    .lastSpan{
+                        margin-right: 0;
+                    }
+                }
+                .stepImg{
+                    padding-left:17.5px;
+                    height: 108px;
+                    margin-bottom: 50px;
+                }
+                .list{
+                    li{
+                        float: left;
+                        text-align: center;
+                        h3{
+                            font-family:"K_E_Light";
+                            font-size: 22px;
+                            line-height:22px;
+                            margin-bottom: 15px;
+                        }
+                        p{
+                            font-family:"K_E_Light";
+                            font-size: 16px;
+                            line-height:16px;
+                        }
+                    }
+                    .one{
+                        width: 179px;
+                        margin-right: 91px;
+                    }
+                    .two{
+                        width: 145px;
+                        margin-right: 90px;
+                    }
+                    .three{
+                        width: 190px;
+                        margin-right: 46px;
+                    }
+                    .four{
+                        width: 245px;
+                        margin-right: 84px;
+                    }
+                    .five{
+                        width: 130px;
+                    }
+                }
+            }
+        }
+    }
+    .contact{
+        width: 100%;
+        background-color: #1b1b1b;
+        height: 410px;
+        .contactBox{
+            width: 550px;
+            margin: 0 auto;
+            padding-top: 143px;
+            color: #6b6b6b;
+            .left{
+                float: left;
+                width: 245px;
+                .title{
+                    font:20px/20px "K_E_Light";
+                    margin-bottom: 18px;
+                }
+                .imgs{
+                    padding-top: 25px;
+                    padding-left: 20px;
+                    padding-bottom: 24px;
+                    height: 51px;
+                    border-right: 1px solid #6b6b6b;
+                    a{
+                        width: 53px;
+                        height: 100%;
+                        display: inline-block;
+                    }
+                    .twitter{
+                        background: url('@{imgPath}icons.png') -65px 0px no-repeat;
+                        margin-right: 30px;
+                    }
+                    .facebook{
+                        background: url('@{imgPath}icons.png') -127px 0px no-repeat;
+                    }
+                }
+            }
+            .right{
+                float: right;
+                width: 250px;
+                text-align: center;
+                .title{
+                    font:20px/20px "K_E_Light";
+                    margin-bottom: 20px;
+                }
+                .tel{
+                    font:16px/16px "K_Light";
+                    padding-top: 18px;
+                    margin-bottom: 16px;
+                }
+                a{
+                    font:16px/16px "K_Light";
+                    display: block;
+                    color: #6b6b6b;
+
+                }
+            }
+            p{
+                font:13px/13px "K_Heavy";
+                text-align: center;
+                margin-top: 45px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

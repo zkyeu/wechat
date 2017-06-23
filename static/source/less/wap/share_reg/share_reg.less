@@ -1,0 +1,93 @@
+@charset "utf-8";
+@import "../common/base.less";
+@shaImgPath: '../../../images/wap/share_reg/';
+body{
+  max-width: 640px;
+  min-width: 320px;
+  margin:0px auto;
+  background: #fff;
+}
+.posi{
+  width: 100%;
+  background-size: 100%;
+}
+.share{
+  position: relative;
+    .sha-ban{
+      .posi;
+    }
+    .sha-clas,.sha-fot{
+      position: relative;
+      float: left;
+      width: 100%;
+      background:url("@{shaImgPath}share_bj.jpg") top center no-repeat;
+      background-size: 100%;
+      text-align: center;
+      h3{
+        .posi;
+        font-size: 1.5rem;
+        color: #231815;
+        margin-top: 3rem;
+      }
+      .sha-input,.share-btn{
+        margin:0 2.3rem 1rem 2.3rem;
+        padding:0 1.2rem;
+        line-height: 4.4rem;
+        border-radius: 0.5rem;
+        background: #fff;
+        text-align: left;
+        border-bottom: 0.1rem #ccc2aa solid;
+        font-size: 1.6rem;
+        .input{
+          color: #bbb;
+          font-size: 1.6rem;
+          width: 100%;
+          border:none;
+          background: none;
+        }
+      }
+      .share-btn{
+        display: block;
+        margin:2.3rem 2.3rem 3rem 2.3rem;
+        background:#ff8200;
+        text-align: center;
+        color: #fff;
+        font-size: 1.8rem;
+      }
+      .sha-hover{
+        position: absolute;
+        bottom: -2.2rem;
+        left: 50%;
+        margin-left: -1.5rem;
+        img{
+          display: inline-block;
+          width: 3rem;
+          height: 4.8rem;
+        }
+      }
+    }
+
+  .sha-cer{
+    float: left;
+    width: 100%;
+    .sha-img{
+      .posi; 
+      margin-bottom: 4rem;
+    }
+  }
+  .sha-fot{
+    position: relative;
+    margin-top:2rem;
+    height: auto;
+    background: none;
+    .sha-input{
+      background: #4f4f4f;
+    }
+  }
+  .share-wbtn{
+    text-align: center;
+    display: block;
+    font-size: 1.4rem;
+    line-height: 3rem;
+  }
+}

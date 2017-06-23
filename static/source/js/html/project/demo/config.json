@@ -1,0 +1,10 @@
+{
+	"define":[
+		"js/html/common/*.js",
+		"js/html/project/www/config.js",
+		"js/html/mod/*.js",
+		"!js/html/mod/drag.js",
+		"!js/html/mod/jquery.calendar.js",
+		"!js/html/mod/jquery.paginator.js"
+	]
+}

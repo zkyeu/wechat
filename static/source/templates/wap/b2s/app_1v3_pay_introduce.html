@@ -23,7 +23,7 @@
 
 
 <!-- 距离开始的状态  disnone 为隐藏样式-->
-    <input type="hidden" class="play_time disnone"  start-time="1494577577" end-time="1494597887" >
+    <input type="hidden" class="play_time disnone"  start-time="60" end-time="0" systime="50">
     <div class="cfix start_buy disnone">
          <div class="left_content">
             <p class="pac new_stu">新生特惠包</p>
@@ -39,12 +39,13 @@
     <div class="cfix cannot_buy">
          <div class="left_content">
             <p class="pac new_stu">新生特惠包</p>
-            <P>¥?98<span>&nbsp;&nbsp;<i>¥398</i></span></P>
-            <P class="pac_mes">中教预习课2次+美教1对4班课4次</P>
+            <P>¥148<span>&nbsp;&nbsp;<i>¥398</i></span></P>
+            <P class="pac_mes before">本次招生未开始，招生开始前我们将及时通知，感谢您的耐心。</P>
+            <P class="pac_mes after disnone">本期招生已结束，请关注APP、微信群、服务号新一期招生信息。</P>
         </div>
-        <div class="timmer">
+        <!-- <div class="timmer">
             暂未开始
-        </div>
+        </div> -->
     </div>
 
 
@@ -57,7 +58,7 @@
                 <P class="pac_mes">外教1对1课6节＋中教辅导课2节</P>
             </div>
             <div class="timmer" start-time="" end-time="">
-                <p>距离结束仅剩<i class="Tday">0</i>天</p>
+                <p>距离结束仅剩<em><i class="Tday">0</i>天</em></p>
                 <P><span class="Thor">03</span>:<span class="Tmin">07</span>:<span class="Tsec">03</span></P>
             </div>
         </li>
@@ -187,11 +188,11 @@
                 <span>2016年12月9日</span>
             </p>
         </div>
-        <div class="fix_null"></div>
+        <div class="fix_null "></div>
     </div>
 
 
-    <div class="to_pay_on">
+    <div class="to_pay_on disnone">
         <a href="javascript:;"></a>
         <p>立即支付</p>
     </div>
@@ -199,7 +200,7 @@
         <a href="javascript:;"></a>
         <p>去约课</p>
     </div> -->
-    <div class="cfix shpping_car">
+    <div class="cfix shpping_car disnone">
         <P class="shop_car after">
             已选一门课程
         </P>
@@ -327,10 +328,10 @@
 
 
 <!-- 不能购买样式 -->
-    <div class="cannot_buy_btn">
+   <!--  <div class="cannot_buy_btn">
         <a href="javascript:;"></a>
         <p>立即抢购</p>
-    </div>
+    </div> -->
 <!-- loading -->
 <div id="fontSizeLoding">
     <img src="/images/wap/b2s/eff_loading.gif">

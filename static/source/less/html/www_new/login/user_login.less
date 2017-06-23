@@ -1,0 +1,161 @@
+@imgPath: "../../../../images/html/www_new/";
+@titlecolor:#ffa900;
+@inputcolor:#ccc;
+@wordcolor:#999;
+@white: #fff;
+@redcolor:#ff3737;
+.wrap-nav-index{background-color: #fff;}
+.tac{text-align:center;}
+.docwidth{
+  margin:0px auto;
+  width: 850px;
+}
+.loginicon{
+  display: inline-block;
+  background:url("@{imgPath}login/login_icon.png") no-repeat;
+}
+.user_login,.user_register{
+  .docwidth;
+  margin-top: 132px;
+  padding:55px 0 90px 0;
+  .title{
+    .tac;
+    font-size: 38px;
+    color:@titlecolor; 
+  }
+  .p-tit{
+    .tac;
+    font-size: 16px;
+    color: @wordcolor;
+    margin:10px 0 50px 0;
+  }
+  .login{
+    ul{
+      margin-left: 90px;
+      li{
+        margin-top: 18px;
+        overflow: hidden;
+        .lt-title{
+          float: left;
+          width: 135px;
+          line-height: 39px;
+          text-align: right;
+          i{color: @redcolor;margin-right: 3px;}
+        }
+      }
+      .last-list{
+        color: @wordcolor;
+        margin-left: 135px;
+        .checkbox{
+          .loginicon;
+          float: left;
+          width: 14px;
+          height: 14px; 
+          background-position: -110px 0; 
+          margin:2px 5px 0 0;
+        }  
+        .checked{background-position: -110px -16px}
+        .f-word a{color: @titlecolor;}
+      }
+    }
+    .num-href{
+      margin-top: 15px;
+      .tac;
+      color: @wordcolor;
+      a{color: @titlecolor;} 
+    } 
+  }
+}
+.rt-input{
+  display: inline-block;
+  position: relative;
+  input{
+    width: 388px;
+    padding:10px;
+    color: #333;
+    border:1px @inputcolor solid;
+    border-radius: 3px;
+  }
+}
+// 错误提示
+.error{
+  color: @redcolor;
+  margin:8px 0 0 130px;
+  display: none;
+  font-size: 12px;
+  i{
+    .loginicon;
+    float: left;
+    width: 20px;
+    height: 20px;
+    background-position: -124px 2px;
+    margin-right: 5px; 
+  }
+  span a{color: #6c9dfa;margin-left: 5px;}
+}
+.input-error input{border:1px @redcolor solid;}
+.last-list .error{margin-left:-4px;}
+
+// 正确
+.correct:after{
+    content: "";
+    position:absolute;
+    .loginicon;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-position: -142px 3px;
+}
+.user-btn{
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  width: 410px;
+  .tac;
+  color: @white;
+  font-size: 18px;
+  background-color:@redcolor;
+  border-radius: 5px;
+  margin:50px 0 0 26.5%;
+  cursor: pointer;
+  &:hover{color: #fff;}
+}
+// 会员登录
+.user_login .sign{
+  ul{
+    width: 410px;
+    margin:30px 0 0 225px;
+    .last-list{
+      margin-left: 0;
+      .forget{
+        float: right;
+        color: @titlecolor;
+      }
+    }
+  }
+  .error{margin-left:-3px;}
+  .api-href{
+    width: 410px;
+    height: 36px;
+    margin:30px 0 0 225px;
+    a{
+      .loginicon;
+      float: left;
+      background-position: 0 0;
+      width: 36px;
+      height: 36px;
+      margin-right: 15px;
+    }
+    .qq{background-position: -36px 0}
+    .weibo{background-position: -72px 0}
+    .new-reg{
+      float:right;
+      background: none;
+      color: @titlecolor;
+      width: 100px;
+      text-align: right;
+      margin-right: 0;
+    }
+  }
+}

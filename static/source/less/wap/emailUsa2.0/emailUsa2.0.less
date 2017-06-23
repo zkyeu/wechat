@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+@import "../common/base.less";
+
+@imgPath: "../../../images/wap/emailUsa2.0/";
+
+body,html{
+	font-family: @fontFamily;
+}
+img{
+	vertical-align: top;
+	display: block;
+	border:none;
+}
+.topPart{
+	width: 100%;
+	padding-top:5%;	
+	text-align: center; 
+	p{
+		font-size: 1.8rem;
+		color:#383838;
+		line-height: 2.5rem;
+
+		span{
+				color:#ff5400;
+				font-size:2.0rem;
+				font-weight: 900;
+		}
+	}
+	.e-get{
+		  display: inline-block;
+			text-align: center;
+			font-size: 2.2rem;
+			color:#2788ff;
+			margin-top:1rem;
+			border-bottom:2px solid #2788ff;
+	}
+
+}
+.bottomPart{
+	width:100%;
+	position: relative;
+	img{
+		width: 100%;
+	}
+	.btn-logo{
+		position: absolute;
+		bottom:35px;
+		left:0;
+		width: 100%;
+		ul{
+			width:62%;
+			margin:0 auto;
+			overflow: hidden;
+			li{
+				float: left;
+				.e-usa{
+					width: 7.9rem;
+				}
+				.e-facebook{
+					width: 2.75rem;
+				}
+				.e-twitter{
+					width: 2.75rem;
+				}
+			}
+			.e-fb{
+				margin-left:15%;
+			}
+		}
+	}
+}

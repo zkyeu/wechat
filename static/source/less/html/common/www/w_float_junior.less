@@ -1,0 +1,116 @@
+//青少官网公开课展示
+.jn_ml_mask{
+    height:200px;
+    width: 100%;
+    background: #fff;
+    filter:alpha(opacity=99) ;
+    opacity: 0.95;
+    position: fixed;
+    // bottom:-200px;
+    z-index: 9990;
+    _position:absolute;
+    bottom:-200px;
+    _top: ~'expression(eval(document.documentElement.clientHeight-100+document.documentElement.scrollTop))';
+  }
+.jn_mk_mask{
+  border-top:2px solid #ffa800;
+    height:200px;
+    width: 100%;
+    position: fixed;
+    bottom:-200px;
+    z-index: 9991;
+    _position:absolute;
+    bottom:-200px;
+    _top: ~'expression(eval(document.documentElement.clientHeight-100+document.documentElement.scrollTop))';
+    .jn_mk_contain{
+      width:1000px;
+      height:160px;
+      margin:0 auto;
+      padding:22px 0;
+      position: relative;
+      .jn_mk_close{
+        height:34px;
+        width:34px;
+        position: absolute;
+        right:-100px;
+        top:50%;
+        margin-top:-17px;
+        cursor: pointer;
+      }
+      .jn_mk_border{
+        height:160px;
+        float:left;
+        width:1px;
+        background: #fff;
+        filter:alpha(opacity=20) ;
+        opacity: 0.2;
+      }
+      .jn_mk-module{
+        float:left;
+        height:160px;
+        width:499px;
+        cursor: pointer;
+        dt{
+          width:220px;
+          height:160px;
+          float:left;
+        }
+        dd{
+          width:279px;
+          height:160px;
+          float:left;
+          position: relative;
+          p{
+            font-size: 14px;
+            line-height:26px;
+            color:#000;
+            span{
+              color:#ff4c4c;
+              font-size:18px;
+            }
+          }
+          em{
+            padding:11px 80px;
+            color:#fff;
+            font-size:18px;
+            line-height: 18px;
+            background: #ff4c4c;
+            border-radius: 4px;
+            -moz-border-radius:4px;
+            position:absolute;
+            bottom:5px;
+            left:0;
+          }
+        }
+      } 
+      .jn_mk_adult{
+        background:url("@{imgPath}qj_bg.png") no-repeat 60px top;
+        line-height:48px;
+        padding:35px 0 0 60px;
+        height:125px;
+        width: 439px;
+        a{
+          p{
+            font-size:30px;
+            span{
+              color:#ff4c4c;
+            }
+          }
+          em{
+            font-size: 24px;
+          }
+          &:hover{
+            color:#000;
+          }
+        }
+        
+      }
+      .jn_mk_junior{
+         width: 454px;
+         // padding-right:70px;
+         dd{
+          width:232px;
+         }
+      }
+    }
+  }

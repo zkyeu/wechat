@@ -1,0 +1,107 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ */
+input,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.g-s-body {
+  background-color: #e2e2d7;
+  color: #595757;
+}
+.g-s-body .my-group {
+  padding: 15px 8px 0;
+}
+.g-s-body .my-group .tab-ul {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.g-s-body .my-group .tab-ul li {
+  text-align: center;
+  background-color: #c1bfaa;
+  -webkit-box-flex: 1;
+          flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  font-size: 16px;
+  margin-left: 2px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 25px;
+  line-height: 25px;
+}
+.g-s-body .my-group .tab-ul .current {
+  background-color: #ed712c;
+  color: #fff;
+}
+.g-s-body .my-group .list-box .o-color {
+  color: #ed712c;
+}
+.g-s-body .my-group .list-box .position-v {
+  position: absolute;
+  left: 23px;
+}
+.g-s-body .my-group .list-box .info-box {
+  background-color: #ffffee;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 7px;
+}
+.g-s-body .my-group .list-box .info-box .title {
+  font-size: 16px;
+  border-bottom: 1px solid #e2e2d7;
+  padding-bottom: 10px;
+}
+.g-s-body .my-group .list-box .info-box .group-info {
+  font-size: 14px;
+  border-bottom: 1px solid #e2e2d7;
+}
+.g-s-body .my-group .list-box .info-box .group-info .class-box {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+}
+.g-s-body .my-group .list-box .info-box .group-info .class-box .class-info {
+  -webkit-box-flex: 1;
+          flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+}
+.g-s-body .my-group .list-box .info-box .group-info .top-v {
+  margin-top: 10px;
+}
+.g-s-body .my-group .list-box .info-box .btn {
+  text-align: right;
+  margin-top: 10px;
+  position: relative;
+}
+.g-s-body .my-group .list-box .info-box .btn a {
+  font-size: 12px;
+  display: inline-block;
+  border: 1px solid #a1a099;
+  border-radius: 5px;
+  padding: 0 5px;
+  min-width: 60px;
+  text-align: center;
+}
+.g-s-body .my-group .list-box .info-box .btn .invitation {
+  color: #fff;
+  background-color: #ed712c;
+  border: 1px solid #ed712c;
+}
+.g-s-body .my-group .list-box .info-box .btn span {
+  font-size: 14px;
+}
+.hide {
+  display: none!important;
+}

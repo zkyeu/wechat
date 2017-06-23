@@ -1,0 +1,143 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ */
+input,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.g-s-body {
+  background-color: #e2e2d7;
+}
+.g-s-body .g-s-content {
+  padding: 0 23px;
+}
+.g-s-body .g-s-content .content {
+  padding-top: 15px;
+  padding-bottom: 30px;
+  background-color: #ffffee;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.g-s-body .g-s-content .content .c-text {
+  font-size: 18px;
+  color: #595757;
+  text-align: center;
+}
+.g-s-body .g-s-content .content .c-text .icon-b {
+  display: inline-block;
+  position: relative;
+  width: 21px;
+  height: 16px;
+  background: url(../../../images/wap/group_purchase/g_icons.png?v=1EmHGK45qGDrOfCgCIlkeA%3D%3D) no-repeat;
+  background-size: 70px 20px;
+  top: 3px;
+}
+.g-s-body .g-s-content .content .c-text .r-img {
+  background-position: 0 0;
+  left: -4px;
+}
+.g-s-body .g-s-content .content .c-text .e-img {
+  background-position: -50px 0;
+}
+.g-s-body .g-s-content .content .c-des {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #595757;
+  text-align: center;
+}
+.g-s-body .g-s-content .content .group-p {
+  margin-top: 15px;
+  text-align: center;
+}
+.g-s-body .g-s-content .content .group-p li {
+  display: inline-block;
+  margin-left: 1px;
+  margin-right: 1px;
+  position: relative;
+}
+.g-s-body .g-s-content .content .group-p li img {
+  width: 48px;
+  height: 48px;
+}
+.g-s-body .g-s-content .content .group-p li span {
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 15px;
+  background-color: #ea5514;
+  text-align: center;
+  line-height: 15px;
+  color: #fff;
+  border-radius: 10px;
+  position: absolute;
+  right: -8px;
+  top: 0;
+}
+.g-s-body .g-s-content .group-info {
+  color: #595757;
+  font-size: 14px;
+  padding: 15px 0 10px;
+  border-bottom: 1px solid #9d9c97;
+}
+.g-s-body .g-s-content .group-info p {
+  line-height: 27px;
+}
+.g-s-body .g-s-content .group-info .r-group {
+  text-align: center;
+}
+.g-s-body .g-s-content .group-info .r-group a {
+  display: inline-block;
+  background-color: #f4a640;
+  text-align: center;
+  line-height: 35px;
+  width: 235px;
+  height: 35px;
+  border: 10px;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.g-s-body .g-s-content .group-info .class-process {
+  border-top: 1px solid #9d9c97;
+  padding: 40px 0 40px;
+  margin-top: 10px;
+}
+.g-s-body .g-s-content .group-info .class-process .process-img img {
+  width: 100%;
+}
+.g-s-body .g-s-content .group-info .look-info {
+  text-align: center;
+  font-size: 10px;
+  border-bottom: 1px solid #9d9c97;
+  padding-bottom: 30px;
+}
+.g-s-body .g-s-content .group-info .look-info a {
+  color: #f39700;
+}
+.g-s-body .g-s-content .code-box {
+  text-align: center;
+  margin-bottom: 35px;
+}
+.g-s-body .g-s-content .code-box .code-text {
+  font-size: 14px;
+  color: #595757;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.g-s-body .g-s-content .code-box .code-img {
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+.g-s-body .g-s-content .code-box .code-img img {
+  width: 125px;
+  height: 125px;
+}
+.hide {
+  display: none!important;
+}

@@ -1,0 +1,122 @@
+
+@import '../common/base.less';
+@imgUrl:"../../../images/wap/sabcn35587/";
+body{
+  font-size:1.4rem;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  font-family: "微软雅黑";
+  min-width: 320px;
+  max-width: 640px;
+  margin:0 auto;
+}
+.sabcn35587{
+  background: #142d53;
+}
+.widthImg{
+  width: 100%;
+}
+.sac-form{
+  position: relative;
+  .s_tip{
+    color:#fac000;
+    line-height: 1.4rem;
+  }
+}
+.sac-input{
+  padding:1.5rem 2.7rem 0;
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  top:0;
+  ul{
+    li{
+      position: relative;
+      margin-bottom: 1.0rem;
+      input,.select{ 
+        width: 100%;
+        height: 2.5rem;
+        line-height: 2.5rem;
+        background-color:#fff;
+        text-align: center;  
+        font-size: 1.4rem;
+        color: #ababab;
+        border-radius: 2.5rem;
+      }
+      &:last-child{
+        height: 3rem;
+        line-height:3rem;
+        background-color: #fac000;
+        color: #2e1919;
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: bold;
+      }
+      .sab-select{display: none;}
+      .select{
+        cursor: pointer;
+        img{
+          float:right;
+          width: 0.4rem;
+          height: 1.5rem;
+          margin:0.5rem 1rem 0 0;
+        }
+      }
+      .slt-list{
+        position: absolute;
+        top: 2.5rem;
+        width: 100%;
+        background-color: #fff;
+        border-top:none;
+        z-index: 1;
+        color: #ababab;
+        text-align: center;
+        display: none;
+        ul li{
+          border-top:1px #eaeaea solid;
+          line-height: 3rem;
+          line-height: 3rem;
+          font-size: 1.2rem;
+          &:last-child{
+            height: 3rem;
+            line-height: 3rem;
+            background-color: #fff;
+            color: #ababab; 
+            font-size: 1.2rem;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+    .lastli{
+      border-radius: 3rem;
+    }
+  }
+}
+ 
+.sac-input ul li .phoneCode{
+    width: 58%;
+}
+.sac-input ul li .getCode{
+  width: 35%;
+  margin-left:5%;
+  color: #fac000;
+  text-decoration: underline!important;
+}
+.sac-input ul li .sumbit{
+    color:#000;
+}
+.sac-input ul li .slt-list ul li{
+  line-height: 3;
+  margin-bottom:0;
+}
+.sac-input ul li .sumbit{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+@media screen  and (max-width:321px){
+  .sac-input ul li .phoneCode{
+    width: 50%;
+  }
+}

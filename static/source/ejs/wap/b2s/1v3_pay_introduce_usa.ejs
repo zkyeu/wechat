@@ -12,7 +12,7 @@
     </div>
 
     <!-- 距离开始的状态  disnone 为隐藏样式-->
-    <input type="hidden" class="play_time disnone"  start-time="1494577577" end-time="1494587887" >
+    <input type="hidden" class="play_time disnone"  start-time="60" end-time="70" systime="65">
     <div class="cfix start_buy disnone">
          <div class="left_content">
             <p class="pac new_stu">新生特惠包</p>
@@ -26,32 +26,45 @@
     </div>
     <!-- 不能购买的状态  disnone 为隐藏样式-->
     <div class="cfix cannot_buy">
-         <div class="left_content">
+        <div class="left_content">
             <p class="pac new_stu">新生特惠包</p>
-            <P>¥?98<span>&nbsp;&nbsp;<i>¥398</i></span></P>
-            <P class="pac_mes">中教预习课2次+美教1对4班课4次</P>
+            <P>¥148<span>&nbsp;&nbsp;<i>¥398</i></span></P>
+            <P class="pac_mes before">本期招生未开始，开始前我们及时通知，感谢等待！</P>
+            <P class="pac_mes after disnone">本期招生已结束，请关注APP、微信群新一期招生</P>
         </div>
-        <div class="timmer">
+        <!-- <div class="timmer">
             暂未开始
+        </div> -->
+    </div>
+<!-- 带有倒计时并可购买的样式 -->
+    <div class="time_cannot_buy">
+        <div class="cfix has_time disnone" money="198" d-money="0" isvip="1" packageid="1" vip-money="298">
+            <div class="left_content">
+                <p class="pac new_stu">新生特惠包</p>
+                <P>¥148<span>&nbsp;&nbsp;<i>¥398</i></span></P>
+                <P class="pac_mes">外教1对1课6节＋中教辅导课2节</P>
+            </div>
+            <div class="timmer" start-time="" end-time="">
+                <p>距离结束仅剩<em><i class="Tday">0</i>天</em></p>
+                <P><span class="Thor">03</span>:<span class="Tmin">07</span>:<span class="Tsec">03</span></P>
+            </div>
         </div>
     </div>
-
-
 
    <!-- choose_class --> 
     <ul class="choose_class_one">
         <!-- 带有倒计时并可购买的样式 -->
-        <li class="cfix has_time disnone" money="198" d-money="0" isvip="1" packageid="1" vip-money="298">
+        <!-- <li class="cfix has_time disnone" money="198" d-money="0" isvip="1" packageid="1" vip-money="298">
             <div class="left_content">
                 <p class="pac new_stu">新生特惠包</p>
                 <P>¥?98<span>&nbsp;&nbsp;<i>¥398</i></span></P>
                 <P class="pac_mes">外教1对1课6节＋中教辅导课2节</P>
             </div>
             <div class="timmer" start-time="" end-time="">
-                <p>距离结束仅剩<i class="Tday">0</i>天</p>
+                <p>距离结束仅剩<em><i class="Tday">0</i></em>天</p>
                 <P><span class="Thor">03</span>:<span class="Tmin">07</span>:<span class="Tsec">03</span></P>
             </div>
-        </li>
+        </li> -->
         <!-- 正常购买的样式 -->
         <!-- <li class="cfix" money="198" d-money="0" isvip="1" packageid="1" vip-money="298">
             <div class="left_content">
@@ -62,8 +75,8 @@
             <p class="choose_btn">
                 <span>购买</span><br/>课程
             </p>
-        </li>
-        <li class="cfix" money="598" d-money="100" isvip="0" packageid="2" vip-money="298">
+        </li> -->
+        <!-- <li class="cfix" money="598" d-money="100" isvip="0" packageid="2" vip-money="298">
             <div class="left_content">
                 <p class="pac">一个月课程包</p>
                 <P >¥598<span>&nbsp;&nbsp;<i>¥748</i>&nbsp; (VIP优惠价 ¥498)</span></P>
@@ -136,7 +149,7 @@
     </div>
 
 
-    <div class="to_pay_on">
+    <div class="to_pay_on disnone">
         <a href="javascript:;"></a>
         <p>立即支付</p>
     </div>
@@ -144,7 +157,7 @@
         <a href="javascript:;"></a>
         <p>去约课</p>
     </div> -->
-    <div class="cfix shpping_car">
+    <div class="cfix shpping_car disnone">
         <P class="shop_car after">
             已选一门课程
         </P>
@@ -268,10 +281,10 @@
 
 
     <!-- 不能购买样式 -->
-    <div class="cannot_buy_btn">
+    <!-- <div class="cannot_buy_btn">
         <a href="javascript:;"></a>
         <p>立即抢购</p>
-    </div>
+    </div> -->
 
 <!-- loading -->
 <div id="fontSizeLoding">

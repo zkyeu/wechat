@@ -1,0 +1,61 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: 
+ */
+.disnone {
+  display: none;
+}
+#fontSizeLoding {
+  width: 100%;
+  min-height: 100%;
+  max-width: 640px;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+#fontSizeLoding img {
+  width: 30px;
+  height: 30px;
+  margin-left: -15px;
+  margin-top: -15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.invited_speakers_suc {
+  background: #2b99e2;
+}
+.invited_speakers_suc .top_img {
+  width: 100%;
+}
+.invited_speakers_suc .top_img2 {
+  width: 100%;
+  margin: 1.16rem auto 1.76rem;
+}
+.invited_speakers_suc div {
+  text-align: center;
+  font-size: 0.26rem;
+  color: #fff;
+}
+.invited_speakers_suc p {
+  text-align: center;
+  width: 6.7rem;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  border-radius: 999px;
+  margin: 0.2rem auto;
+  position: relative;
+  font-size: 0.32rem;
+  background: #55cb42;
+  color: #fff;
+}
+.invited_speakers_suc p a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  left: 0;
+  top: 0;
+}

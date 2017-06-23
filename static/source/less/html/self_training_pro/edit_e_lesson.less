@@ -1,0 +1,162 @@
+@o: #ff8200;
+@b: #696969;
+
+//less设置placeholder样式
+.placeholder(@a){
+      &::-webkit-input-placeholder { 
+            @a();
+      }
+      &:-moz-placeholder { 
+            @a();
+      }
+      &::-moz-placeholder { 
+            @a();
+      }
+      &:-ms-input-placeholder {
+            @a();
+      }
+}
+input{
+    .placeholder({
+          color:@b
+    })
+}
+.refer_wrap{
+	width:1000px;
+	background: #fff;
+	margin-left:40px;
+	color:@b;
+	.bread{
+		height: 70px;
+		line-height: 70px;
+		&>*{
+			padding:0 20px;
+		}
+		&>a{
+			color:@o;
+		}
+	}
+	.edit_wrap{
+		padding-left:30px;
+		.inline_top{
+			height:auto;
+			&>*{
+				vertical-align: top;	
+			}
+			
+		}
+		div{
+			height:48px;
+			line-height: 48px;
+			margin-bottom:20px;
+			.inline{
+				height:35px;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.inline_s{
+				height:auto;
+				width:800px;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			&>*{
+				vertical-align: middle;
+			}
+			&>label{
+				display: inline-block;
+				width:130px;
+			}
+			&>input{
+				height:35px;
+				line-height: 35px;
+				padding-left:10px;
+				border:1px solid #ececec;
+			}
+			&>select{
+				height:35px;
+				width:80px;
+				padding-left:10px;
+				line-height: 35px;
+				border:1px solid #ececec;
+			}
+			ul.job,ul.percent{
+				width:500px;
+				&>*{
+					float: left;
+				}
+				li{
+					height:35px;
+					line-height: 35px;
+					border:1px solid #ececec;
+					padding:0 10px;
+					margin-right: 10px;
+					cursor: pointer;
+				}
+				.active{
+					border-color:@o;
+				}
+			}
+			ul.check_code{
+				li{
+					margin-bottom:20px;
+						&>*{
+							float: left;
+						}
+				}
+				&>*{
+					float: left;
+					span{
+						height:35px;
+						line-height: 35px;
+						padding:0 10px;
+						background:rgba(228, 228, 228, 1);
+						margin-right:10px;
+					}
+					input{
+						height:35px;
+						line-height: 35px;
+						border:1px solid #ececec;
+						margin-right:10px;
+						padding-left:10px;
+					}
+					a.recheck{
+						width:90px;
+						height:35px;
+						line-height: 35px;
+						border:1px solid @o;
+						color:@o;
+						cursor:pointer;
+						text-align: center;
+					}
+				}
+			}
+
+			
+		}
+	}
+}
+a.publish{
+	display: inline-block;
+	width:120px;
+	height:35px;
+	line-height: 35px;
+	text-align: center;
+	color:#fff;
+	border-radius: 4px;
+	background: @o;
+	margin-left:134px;
+	cursor: pointer;
+}
+a.cancel:extend(a.publish){
+	background: rgba(153, 153, 153, 1);
+	margin-left:20px;
+}
+.add_pad{
+	input{
+		margin:0 10px;
+	}
+	input.no_p{
+		margin-left:0;
+	}
+}

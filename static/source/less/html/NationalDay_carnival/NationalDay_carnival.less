@@ -1,0 +1,556 @@
+@import "../common/base.less";
+@import "../common/www/w_header.less";
+@import "../common/www/w_footer.less";
+@imgPathImg: "../../../images/html/NationalDay_carnival/";
+.widthMain{margin:0px auto;width:@docWidth;position: relative;}
+.clearfix{*zoom: 1;}
+.clearfix:after{content: "";display: block;clear: both;}
+// 公共头部
+.pri-header{
+  background-color: #fff;
+  .header{
+    .hr-lt{
+      cursor: pointer;
+    }
+  }
+}
+// 主体内容
+.pri-main{
+  position: relative;
+  // banner
+  .banner{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 639px;
+    background: url('@{imgPathImg}banner.jpg') top center no-repeat;
+  }
+  .pri-list01,.pri-list02,.pri-list03,.pri-list04,.pri-list05,.pri-list06{
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    .widthMain{
+      margin-top: 63px;
+      position: relative;
+      z-index: 2;
+    }
+    .u-btn{
+      z-index: 99;
+      position: absolute;
+      left: 50%;
+      bottom: 130px;
+      display: inline-block;
+      width: 350px;
+      height: 60px;
+      margin-left: -175px;
+      background: url('@{imgPathImg}icon-btn.png') top center no-repeat;
+    }
+  }
+  // 开始抽奖
+  .pri-list01{
+    overflow: hidden;
+    height: 910px;
+    background-color: #f9514b;
+    .widthMain{
+      height: 765px;
+      background: url('@{imgPathImg}rota_bg.png') top center no-repeat;
+      .lt{
+        float: left;
+        position: relative;
+        left: -39px;
+        top:235px;
+        width: 522px;
+        color: #b43e08;
+        z-index: 9;
+        .prize_list{
+            margin-top: 20px;
+            height: 185px;
+            .names{
+                padding-left: 110px;
+                padding-top: 19px;
+                height: 169px;
+                line-height: 32px;
+                font-size: 16px;
+                overflow: hidden;
+                color: #f65b57;
+            }
+        }       
+        .tit{
+          font-size: 13px;
+          line-height: 20px;
+          margin-top: 44px;
+          margin-bottom: 16px;
+          margin-left: 69px;
+          color: #ea4e00;
+        }
+        .rota_more{
+          font-size: 16px;
+          margin-left: 69px;
+          cursor:pointer;
+          width: 90px;
+          color: #ea4e00;
+        }
+      }
+      .dial-bg{
+        z-index: 100;
+        width: 396px;
+        height:396px;
+        padding:32px;
+        position: absolute;
+        top:172px;
+        right: 30px;
+        background: url('@{imgPathImg}dial_bg.png') no-repeat;
+        overflow: hidden;
+        .l_grid{
+          margin-right: -6px;
+          li{
+            width: 127px;
+            height: 132px;
+            margin-right: 6px;
+            margin-bottom: 2px;
+            float: left;
+            background:url('@{imgPathImg}l_bg.png') 0 -136px no-repeat;
+            &.pointer{
+              background-position:0 -274px;
+            }
+            &.pointer:active{
+              background-position:0 -412px;
+            }
+            &.l_now{
+              background-position: 0 0;
+            }
+            img{
+              margin-left: 5px;
+              margin-top: 10px;
+            }
+          }
+        }  
+      }
+    }
+    .u-btn{background-position: 0 0;}
+  }
+  // 爆款课程
+  .pri-list02{
+    overflow: hidden;
+    height: 868px;
+    background-color: #ff6338;
+    .widthMain{
+      position: relative;
+      z-index: 2;
+      height: 724px;
+      background: url('@{imgPathImg}best_class_bg.png') top center no-repeat;
+    }
+    .u-btn{background-position: 0 -180px;}
+  }
+  //teacher课程
+  .pri-list03{
+    height: 2083px;
+    background-color: #0090ff;
+    .widthMain{
+      position: relative;
+      .caption-wrap{
+        text-align: center;
+      }
+      .teacher-wrap{
+        position: relative;
+        margin-top: 48px;
+        width: 1000px;
+        height: 413px;
+        background: url('@{imgPathImg}teacher_bg.png') no-repeat;
+        .tit{
+          font-size: 36px;
+          line-height: 48px;
+          font-weight: 600;
+          color: #ec4d00;
+          text-align: center;
+          margin-bottom: 5px;
+        }
+        .teacher-base{
+          margin-top: 43px;
+          float: left;
+          width: 160px;
+          margin-left: 33px;
+          text-align: center;
+          .head{
+            width: 160px;
+            height: 160px;
+          }
+          .name{
+            margin-top: 15px;
+            margin-bottom: 15px;
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 600;
+            color: #e4ff00;
+          }
+          .other-name{
+            font-size: 16px;
+            line-height: 24px;
+            color: #fff;
+          }
+        }
+        .details{
+          position: relative;
+          z-index: 2;
+          margin-top: 43px;
+          padding-left: 5px;
+          padding-right: 5px;
+          float: left;
+          height: 258px;
+          border-radius: 10px;
+          background-color: #2bcdff;
+          .time_country{
+            padding-top: 8px;
+            height: 75px;
+            color:#e4ff00;
+            font-size: 15px;
+            line-height: 18px;
+            font-weight: 600;
+            border-bottom: 3px dashed #00bfff;
+            p{
+              margin-left: 20px;
+              margin-top: 7px;
+            }
+          }
+          .details-text{
+            padding: 15px 20px;
+            font-size: 14px;
+            line-height: 24px;
+            color: #fff;
+          }
+        }
+        .u-mleft-37{margin-left: 37px;}
+        .u-mleft-63{margin-left: 63px;}
+      }
+      //老师列表中 详细的宽度设置和距离右侧的DOM元的距离
+      .t-list01,.t-list02{
+        .teacher-base{
+          margin-right: 50px;
+        }
+        .details{
+          width: 334px;
+        }    
+      }
+      .t-list03,.t-list04{
+        .teacher-base{
+          margin-right: 30px;
+        }
+        .details{
+          width: 234px;
+        }    
+      }
+      .building-1{
+        z-index: 1;
+        position: absolute;
+        right: 37px;
+        top: -50px;
+      }
+      .building-2{
+        z-index: 2;
+        position: absolute;
+        right: 10px;
+        top: -110px;
+      }
+      .building-3{
+        z-index: 2;
+        position: absolute;
+        left: 145px;
+        bottom: 1px;
+      }
+      .building-4{
+        z-index: 1;
+        position: absolute;
+        right: 26px;
+        top: -70px;
+      }
+      .building-5{
+        z-index: 1;
+        position: absolute;
+        right: 28px;
+        top: -29px;
+      }
+      .building-6{
+        z-index: 2;
+        position: absolute;
+        left: 152px;
+        bottom: 7px;
+      }
+    }
+  }
+  // 推荐送次卡
+  .pri-list04{
+    background-color: #7fa41d;
+    height: 859px;
+    .widthMain{
+      position: relative;
+      height: 713px;
+      background: url('@{imgPathImg}recommend_bg.png') top center no-repeat;
+    }
+    .u-btn{background-position: 0 -120px;}
+  }
+  // 美国小学展示
+  .pri-list05{
+    height: 776px;
+    background-color: #4c4285;
+    .widthMain{
+      position: relative;
+      height: 629px;
+      background: url('@{imgPathImg}north_school_bg.png') top center no-repeat;
+    }
+    .u-btn{background-position: 0 -240px;}
+  }
+}
+
+// 获得奖品
+.dialog {
+    display: none;
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 21;
+    width: 100%;
+    height: 100%;
+    filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#99000000', endColorstr='#99000000');
+    background-color:rgba(0,0,0,0.6);
+    .info{
+        position: relative;
+        width: 812px;
+        height: 583px;
+        left: 50%;
+        top: 50%;
+        margin-top: -350px;
+        margin-left: -406px;
+        background: url('@{imgPathImg}prize_bg02.png') center no-repeat;
+        .box{
+            position: relative;
+            left: 171px;
+            top: 196px;
+            width: 450px;
+            height: 357px;
+            text-align: center;
+            h3{
+                font-size: 18px;
+                color: #5e4000;
+                margin-bottom: 30px;
+            }
+            .close{
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                right: 40px;
+                top: -54px;
+            }
+            img{
+              display: none;
+            }
+        }
+    }
+}
+// 我的抽奖记录和未抽奖
+.dialog2 {
+    display: none;
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 21;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    .tip{
+        position: relative;
+        width: 380px;
+        height: 170px;
+        left: 50%;
+        top: 50%;
+        background: #fff;
+        margin-top: -85px;
+        margin-left: -190px;
+        border-radius: 10px;
+        .close{
+            width: 36px;
+            height: 36px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background: url('@{imgPathImg}join_close.jpg') no-repeat;
+        }
+        .gold_box{
+          background: url('@{imgPathImg}look_detail02.png') no-repeat;
+          position: absolute;
+          width: 109px;
+          height: 56px;
+          right: 10px;
+          bottom: -2px;
+        }
+        .text{
+            float: left;
+            color: #ee6400;
+            padding-right: 25px;
+        }
+        .text1{
+            padding-left: 24px;
+            padding-top: 32px;
+            p{
+                line-height: 32px;
+                font-size: 16px;
+                font-weight: bold;
+            }
+            h3{
+                padding-top: 5px;
+                font-size: 24px;
+                span{
+                  font-size: 18px;
+                }
+            }
+        }
+        .text2{
+            padding-left: 55px;
+            h3{
+                font-size: 18px;
+                padding-top: 60px;
+            }
+        }
+    }
+    .tip-1,.tip-2{
+      display: none;
+    }
+}
+// 更多规则
+.dialog3 {
+    display: none;
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 21;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    .tip{
+        position: relative;
+        width: 540px;
+        height: 282px;
+        left: 50%;
+        top: 50%;
+        background: #fff;
+        margin-top: -200px;
+        margin-left: -270px;
+        border-radius: 10px;
+        .close{
+            width: 36px;
+            height: 36px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background: url('@{imgPathImg}join_close.jpg') no-repeat;
+        }
+       h3{
+        font-size: 18px;
+        color: #ee6400;
+        padding: 30px 0 15px 55px;
+        font-weight: 600;
+       }
+       .line{
+        margin-left: 4px;
+        width: 531px;
+        height: 4px;
+        background: url('@{imgPathImg}point_bg.png') no-repeat;
+       }
+       .details{
+        padding-left: 55px;
+        padding-top: 18px;
+        font-size: 14px;
+        line-height: 24px;
+        color:#ee6400;
+        ul{
+          padding-left: 10px;
+        }
+       }
+    }
+}
+.dialog4 {
+    display: none;
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index:21;
+    width: 100%;
+    height: 100%;
+    filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#99000000', endColorstr='#99000000');
+    background-color:rgba(0,0,0,0.6);
+    z-index: 1000;
+    .add_info{
+        position: relative;
+        width: 963px;
+        height: 548px;
+        left: 50%;
+        top: 50%;
+        margin-top: -320px;
+        margin-left: -481px;
+        background-color: transparent;
+        .close{
+          position: absolute;
+          left: 730px;
+          top: 90px;
+          width: 64px;
+          height: 64px;
+          background: url('@{imgPathImg}close03.png') center no-repeat;
+        }
+    }
+}
+.sysInfo{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: none;
+  .dtInfo{
+    position: absolute;
+    width: 234px;
+    top: 50%;
+    left: 50%;
+    margin:-100px 0 0 -117px;
+    .tit{
+      height: 30px;
+      line-height: 30px;
+      background-color: #ff8200;
+      padding:0 12px;
+      color: #fff;
+      border-top-right-radius: 3px;
+      border-top-left-radius: 3px;
+    }
+    .test{
+      text-align: center;
+      padding:20px 0;
+      border: 1px #e4eaee solid;
+      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+    background-color: #fff;
+      .down{
+        display: block;
+        width: 72px;
+        height: 24px;
+        line-height: 24px;
+        color: #fff;
+        text-align: center;
+        background-color: #ff8200;
+        margin:30px 0 0 80px;
+      }
+    }
+  }
+}

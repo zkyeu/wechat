@@ -1,0 +1,52 @@
+@import "../common/base.less";
+@imgPathImg: "../../../images/html/parents_guide/";
+.showImg{
+	position: relative;
+	width:1000px;
+	left: 50%;
+	margin-left: -500px;
+	img{
+		width: 100%;	
+	}
+}
+.video_show{
+	position: relative;
+	width:1000px;
+	left: 50%;
+	margin-left: -500px;
+	.top_mask{
+		width: 820px;
+		height: 455px;
+		position: absolute;
+		left: 100px;
+		top: 66px;
+		background: url('@{imgPathImg}mask_bg.png') repeat;
+		.play{
+			cursor: pointer;
+			position: relative;
+			left: 50%;
+			margin-left: -50px;
+			top: 50%;
+			margin-top: -50px;
+			background: url('@{imgPathImg}paly_btn.png') no-repeat;
+			background-size: 100% 100%;
+			width: 100px;
+			height: 100px;
+		}
+		.play_hover{
+			background: url('@{imgPathImg}play_hover.png') no-repeat;
+			background-size: 100% 100%;
+		}
+	}
+	img{
+		width: 100%;	
+	}
+}
+#ckplayerDialog {
+	width: 820px;
+	height: 455px;
+	position: absolute;
+	left: 100px;
+	top: 66px;
+	z-index: 999;
+}

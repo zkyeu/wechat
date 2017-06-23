@@ -3856,8 +3856,15 @@ body {
 .weixin_circle .heck_center .content .send_message .select_mes .show-lable p {
   float: left;
 }
+.weixin_circle .heck_center .content .send_message .select_mes .show-lable dt {
+  float: left;
+  width: 114px;
+}
+.weixin_circle .heck_center .content .send_message .select_mes .show-lable dd {
+  margin-left: 120px;
+}
 .weixin_circle .heck_center .content .send_message .select_mes .show-lable span {
-  background: url(../../../images/html/weixin_heck/show_icon.png?v=fnyt2vz%2FXhTjljVrCqyhUw%3D%3D) no-repeat;
+  background: url(../../../images/html/weixin_heck/friend_icons.png?v=OmZIdXKHrbN1iJ4WsmZTMA%3D%3D) no-repeat;
   display: block;
   float: left;
   height: 20px;
@@ -4661,11 +4668,11 @@ body {
 }
 .weixin_circle.weixin_circle_new .heck_center .content .send_message .select_mes .show-lable span {
   padding-left: 22px;
-  background: url(../../../images/html/weixin_heck/friend_icons.png?v=OmZIdXKHrbN1iJ4WsmZTMA%3D%3D) 0 -23px no-repeat;
+  background: url(../../../images/html/weixin_heck/powersel.png?v=Krs157KzHG1qt7QMef8rlg%3D%3D) 0 -23px no-repeat;
 }
 .weixin_circle.weixin_circle_new .heck_center .content .send_message .select_mes .show-lable span.choose-show,
 .weixin_circle.weixin_circle_new .heck_center .content .send_message .select_mes .show-lable span.choose-show2 {
-  background-position: 0 -43px;
+  background-position: 0 2px;
 }
 .weixin_circle.weixin_circle_new .heck_center .content .message_center {
   width: 600px;
@@ -4854,6 +4861,7 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 4px;
+  cursor: pointer;
 }
 .weixin_circle.weixin_circle_new .heck_center .content .already_mes .mes_detail {
   margin-left: 50px;
@@ -5035,7 +5043,8 @@ body {
             transform: scale(2);
   }
 }
-.zhuanfa-layer {
+.zhuanfa-layer,
+.wait-layer {
   display: none;
 }
 .flex-layer {
@@ -5108,4 +5117,51 @@ body {
 }
 .zhuanfa .zf-btn span.concel {
   border: #9c9c9c solid 1px;
+}
+.spinner {
+  margin: 100px auto 0;
+  width: 150px;
+  text-align: center;
+}
+.spinner div {
+  width: 30px;
+  height: 30px;
+  background-color: #67CF22;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+@-webkit-keyframes bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes bouncedelay {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
 }

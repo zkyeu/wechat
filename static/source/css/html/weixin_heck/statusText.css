@@ -1,0 +1,186 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: 
+ */
+/**
+ * 默认样式
+ * @author:  liliang（liliang05@51talk.com）
+ * @update:  2017年01月04日 星期四 13时45分37秒 CST
+ * @note:    黑鸟项目后台中转页面样式
+ */
+html,
+body {
+  width: 100%;
+}
+.title {
+  font-size: 18px;
+  color: #252525;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+.table-style {
+  text-align: center;
+}
+.table-detail {
+  width: 70vw;
+  margin: 0 auto;
+}
+.table-detail th,
+.table-detail td {
+  border: #f0f0f0 solid 1px;
+}
+.table-detail thead {
+  background: #393939;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+}
+.table-detail tbody tr {
+  background: #fff;
+}
+.table-detail tbody tr:hover {
+  background: #ededed;
+}
+.table-detail tbody tr td {
+  line-height: 30px;
+  vertical-align: middle;
+  text-align: left;
+  color: #6e6e6e;
+  font-size: 14px;
+  padding: 0 10px;
+}
+.table-detail tbody tr td:nth-child(1) {
+  min-width: 140px;
+  text-align: center;
+}
+.table-detail tbody tr td:nth-child(3) {
+  min-width: 100px;
+  text-align: center;
+}
+.table-detail tbody tr td span {
+  display: inline-block;
+  width: 80px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+  color: #00aeff;
+}
+.flex-layer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+}
+.flex-layer.dn {
+  display: none;
+}
+.edit-layer {
+  width: 400px;
+  height: 190px;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 20px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.edit-layer h5 {
+  font-size: 16px;
+  color: #ff8c00;
+  text-align: center;
+  height: 45px;
+}
+.edit-layer .status-con {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.edit-layer .status-con dt {
+  width: 73px;
+  margin-top: 3px;
+  font-size: 14px;
+}
+.edit-layer .status-con dd {
+  width: 328px;
+}
+.edit-layer .status-con dd textarea {
+  width: 317px;
+  border: #dcdcdc solid 1px;
+  border-radius: 4px;
+  height: 80px;
+  resize: none;
+  background: #fefefe;
+  font-size: 14px;
+  padding: 3px;
+  color: #666;
+}
+.edit-layer .btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 328px;
+  height: 40px;
+  margin: 20px 0 0  72px;
+}
+.edit-layer .btn-group span {
+  width: 150px;
+  height: 32px;
+}
+/*全局btn样式*/
+.btn-global {
+  display: block;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  color: #252525;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.btn-global.default {
+  background-color: #fcc800;
+  border: solid 1px #fcc800;
+}
+.btn-global.default:hover {
+  background-color: #ffd533;
+  border: solid 1px #ffd533;
+}
+.btn-global.disable {
+  border: solid 1px #e5e5e5;
+  background-color: #e5e5e5;
+}
+.btn-global.disable:hover {
+  border: solid 1px #e5e5e5;
+  background-color: #e5e5e5;
+  cursor: default;
+}
+.btn-global.greey {
+  border: solid 1px #9c9c9c;
+}
+.btn-global.greey:hover {
+  background-color: #f0f0f0;
+}

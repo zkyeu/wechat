@@ -1,0 +1,21 @@
+<div class="g-grammar">
+  <%for (var i=0; i<res.total; i++) {%>
+      <div class="tab" <%=i!=0?'style=display:none':''%>>
+          <div class="m-title"><%=res.syntax[i].title%></div>
+          <div class="m-exp">
+              <ol>
+                <%for (var j=0; j<res.syntax[i].yt.length;j++){%>
+                   <li> <%=res.syntax[i].yt[j] %></li>
+                 <%}%>  
+              </ol>
+          </div>
+      </div>
+  <%}%>
+    <%if (res.total>1) {%>
+      <div class="trans-pages">
+                <a class="prev dis-prev" href="javascript:;" title="上一个单词">&lt;</a>
+                <span class="crt"><span id="cur">1</span>/<%=res.total%></span>
+                <a class="next" href="javascript:;" title="下一个单词">&gt;</a>
+      </div>
+    <%}%>
+</div>

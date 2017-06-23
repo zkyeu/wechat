@@ -1,0 +1,15 @@
+<%for(var i=0;i<noticelist.length;i++){%>
+    <div class="m-dialog greay-dialog"  style="display: block;">
+      <div class="in poster">
+        <div class="hd hd2">
+          <a class="close" data-nid="<%=noticelist[i].id%>" href="javascript:void(0)" title="关闭"></a>
+        </div>
+
+        <%if(noticelist[i].url){%>
+          <a class="linka" href="<%=noticelist[i].url%>" target="_blank"><img src="<%=domain+noticelist[i].imgurl%>"></a>
+        <%}else{%>
+          <img src="<%=domain+noticelist[i].imgurl%>">
+        <%}%>
+      </div>
+    </div> 
+<%}%>

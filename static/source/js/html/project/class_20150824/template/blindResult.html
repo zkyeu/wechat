@@ -1,0 +1,33 @@
+<div class="blind">
+    <div class="title">
+        <h3>本课预习内容定制<span class="pl-img question-des"></span></h3>
+        <div class="u-tip">
+            注：口语练习环节目前仍需学习，后期将可以跳过，敬请期待
+            <span class="pl-img avater"></span>
+        </div>
+    </div>
+  <%if(data.hear_num!=data.total){%>  
+    <ul class="res f-cb">
+          <li class="green">
+              <h3>无需预习</h3>
+              <p class="total"><span><%=data.hear_num%></span>个</p>
+          </li>
+          <li class="red">
+              <h3>需要预习</h3>
+              <p class="total"><span><%=(data.total-data.hear_num)%></span>个</p>
+              <div class="tip pl-img">
+                <dl>
+                  <dt><%=(data.total-data.hear_num)/data.total*100%>%</dt>
+                  <dd>可进步空间</dd>
+                </dl>
+              </div>
+          </li>
+    </ul>
+    <div class="dd-btn">5分钟，全面提升听说能力</div>
+  <%}else{%>
+    <div class="nopre"><span class="pl-img  nopre-l"></span>本课听力全达标，无需预习！<span class="pl-img  nopre-r"></span></div>
+    <div class="goon">再接再厉，突破口语能力即可流畅上课啦！</div>
+    <div style="clear:both"></div>
+    <div class="dd-btn">5分钟，突破口语</div>
+  <%}%>
+</div>

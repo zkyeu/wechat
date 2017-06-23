@@ -1,0 +1,54 @@
+//首页右侧 在线客服+微信
+.m-ntkf-box{
+  position: fixed;
+  _position: absolute;
+  top:20%;
+  _top: ~'expression(eval(90+document.documentElement.scrollTop))';
+  right: 60px;
+  z-index: 1000;
+  cursor: pointer;
+  .m-ntkf,.m-wx{
+    margin-bottom: 1px;
+    position: relative;
+    height: 144px;
+  }
+  li{
+    height: 144px;
+    position: absolute;
+     background: url("@{imgPath}ntkf.png") no-repeat;
+    right: 0;top:0;
+  }
+  .u-l-ntkf{
+    width: 34px;
+    background-position: -38px 0;
+  }
+  .u-b-ntkf{
+    width: 130px;
+    background-position: 0px -149px;
+    display: none;
+  }
+  .u-l-wx{
+    width: 34px;
+    background-position: 0 0;
+  }
+  .u-l-wx2{
+    background-position: -79px 0;
+  }
+  //成人二维码
+  .u-b-wx-adult{
+    width: 130px;
+    background-position: 0px -444px;
+    display: none;
+  }
+  //青少二维码
+  .u-b-wx-youth{
+    width: 130px;
+    background-position: 0px -297px;
+    display: none;
+  }
+  //手机端二维码
+  .u-b-wx-phone{
+    background-position: 0px -601px;
+  }
+}
+

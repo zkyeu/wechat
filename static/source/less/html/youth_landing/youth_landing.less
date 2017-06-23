@@ -1,0 +1,302 @@
+@import "../common/base.less";
+@imgPathImg: "../../../images/html/youth_landing/";
+.widthMain{
+  margin:0px auto;
+  width: 1000px;
+}
+.head{
+   background-color: #ffc600;
+    .nav{
+      height: 100px;
+      .lt{
+        float: left;
+        margin-top: 28px;
+      }
+      .rt{
+        float: right;
+        margin-top: 36px;
+      }
+    }
+    .baner{
+     position: relative; 
+     height: 512px;
+     margin-top: 34px;
+     .ban-img{
+      position: absolute;
+      left: -120px;
+     }
+     .bar-rt{
+      position: absolute;
+      right: 44px;
+      top: 60px;
+      .rt-input{
+        float: left;
+        width: 284px;
+        margin:17px 0 0 88px;
+        .pow-input{
+          width: 100%;
+          height: 40px;
+          line-height: 40px;
+          background: #fff;
+          margin-top: 14px;
+          border-radius: 5px;
+          border:1px #bc9304 solid;
+          .tac;
+          font-size: 16px; 
+        }
+        .ctr-btn{
+          float: left;
+          width: 100%;
+          height: 43px;
+          line-height: 43px;
+          background: #ff6200;
+          border-radius: 6px;
+          margin-top: 14px;
+          font-size: 24px;
+          color: #fff;
+          border-bottom: 2px #ce4e00 solid;
+          .tac;
+          &:hover{
+            color: #fff;
+          } 
+        }
+      }
+     }
+    }
+}
+.time-img{
+  background-color: #fff;
+  margin:44px 0 44px 0;
+}
+.langer{
+  background-color: #01c3c9;
+  padding-top: 35px;
+  p{
+    text-align: center;
+    margin:0 0 15px 0;
+  }
+  .rt-img{
+    margin-left: 50px;
+  }
+}
+.free{
+  margin: 40px 0;
+  .widthMain{
+    width: 1100px;
+  }
+  p{
+    text-align: center;
+    margin-bottom: 68px;
+  }
+  .fr-main{
+    position: relative;
+    .fr-rt{
+      position:absolute;
+      top:5px;
+      right: 63px;
+      width: 466px;
+      .rt-img{
+        margin:0 0 32px 56px;
+      }
+      .fr-bom{
+        position: relative;
+        width: 100%;
+        height: 179px;
+        background-color: #20616f;
+        .form{
+          position: absolute;
+          top: 10px;
+          left: 111px;
+          width: 244px;
+          .pow-input{
+            width: 100%;
+            height: 35px;
+            line-height: 35px;
+            font-size: 16px;
+            background-color: #fff;
+            text-align: center;
+            margin-top: 10px;
+          }
+        }
+        .ctr-btn{
+          position: absolute;
+          width: 189px;
+          height: 40px;
+          line-height: 40px;
+          background-color: #ffc600;
+          border-radius: 3px;
+          border-bottom: 1px #8c8c8c solid;
+          bottom: -26px;
+          left: 137px;
+          color: #2c2c2c;
+          text-align: center;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
+.m_evaluation{
+  background:url("@{imgPathImg}/indexBg.png") center no-repeat;
+  padding-top: 42px;
+  .m_student{
+    width: 100%;
+    height:385px;
+    position: relative;
+    .m_studentI{
+      width: 491px;
+      height: 292px;
+      background: url("@{imgPathImg}/borderLine.png") left top no-repeat;
+      position: absolute;
+      left: 0;
+      top:0;
+      &.f_p1{
+        left: 14px;
+        top:20px;
+      }
+      &.f_p2{
+        left: 472px;
+        top:0px;
+      }
+      .m_studentE{
+        padding: 30px 44px 0; 
+        line-height: 25px;
+        font-size: 14px;
+        margin-bottom: 64px;
+        &.m_s1{
+          padding:22px 44px 0;
+          margin-bottom: 80px;
+        }
+        &.m_s3{
+          padding-top:22px;
+        }
+      }
+      dl{
+        margin-left: 122px;
+        height: 76px;
+        color: #128fdf;
+        font-size: 12px;
+        dt{
+          float: left;
+        }
+        dd{
+          margin-left: 90px;
+          padding-top: 24px;
+        }
+        span{
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .m_courseT{
+    font-size: 24px;
+    text-align: center;
+  }
+  .m_courseTe{
+    text-align: center;
+    font-size: 7px;
+    color: #ccc;
+    margin:10px 0 30px 0;
+  }
+}
+// 合作企业
+.cooper{
+  padding:50px 0 75px 0;
+  .tac;
+  width: 100%;
+  background: @bgColorGay;
+  .cop-h3{
+    margin-bottom: 50px;
+    color: #1e1e1e;
+    font-size: 40px;
+    .tac;
+  }
+  .cop-ul{
+    display: inline-block;
+    width: 100%;
+    li{
+      float: left;
+      vertical-align: middle;
+      margin:0 22px;
+      .clearfix;
+      a{
+        .f-csd;
+      }
+    }
+  }
+}
+.g_bottom{
+  background-color: #6d6869;
+  width: 100%;
+  height: 180px;
+  .g_bottomT{
+    padding-top: 37px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    position: relative;
+    .f_bM,.f_bW,.f_bN{
+      position: relative;
+      float: left;
+      span{
+        font-size: 12px;
+        color: #dad9d9;
+        position: absolute;
+        left: 6px;
+        top:2px;
+      }
+      input{
+        height: 44px;
+        line-height: 44px;
+        width: 220px;
+        text-align: center;
+        border-radius: 5px;
+        margin-right: 5px;
+        background-color: #f1f1f1;
+        font-size: 16px;
+        margin-right: 10px;
+      }
+    }
+    a{
+      float: left;
+      width:270px;
+      height: 44px;
+      line-height: 44px;
+      text-align: center;
+      font-size: 16px;
+      background-color: #fcd500;
+      color: #2f2f2f;
+      position: relative;
+      border-radius: 5px;
+      font-size: 20px;
+      span{
+        position: absolute;
+        width:10px;
+        height: 8px;
+        right: 10px;
+        top:0;
+      }
+    }
+    img{
+      position: absolute;
+      left: 50%;
+      top:90px;
+      margin-left:-130px;
+    }
+  }
+  .piped{
+    text-align: center;
+    margin-top: 45px;
+    *margin-top: 20px;
+    color:#fff; 
+    font-size: 12px;
+    i{
+      margin:0 5px 0 7px;
+    }
+    a{
+      color:#fff;
+    }
+  }
+}

@@ -1,0 +1,98 @@
+@import "modules/swiper-3.3.1.min.less";
+// 图片path
+@imgPath: '../../../images/wap/b2s/';
+//background: url("@{imgPath}start_bg.png") no-repeat;
+#fontSizeLoding{
+    width: 100%;
+    min-height: 100%;
+    max-width: 640px;
+    background-color: rgba(255, 255, 255, 1);
+    position: fixed;
+    top:0; 
+    z-index: 999;
+    img{
+        width: 30px;
+        height: 30px;
+        margin-left: -15px;
+        margin-top: -15px;
+        position: absolute;
+        top:50%;
+        left:50%;
+
+    }
+}
+
+.experience_suc{
+    .intro_section1{
+        height: 10.2rem;
+        padding-top: 0.68rem;
+        position: relative;
+        &>img{
+            width: 100%;
+        }
+        .experience_code_bg{
+            width: 2.5rem;
+            height: 2.5rem;
+            margin: 1rem auto 0;
+            background: url("@{imgPath}experience_class6.jpg") no-repeat;
+            background-size: 2.5rem 2.5rem;
+            text-align: center;
+            img{
+                width: 2.15rem;
+                height: 2.15rem;
+                margin: 0.15rem auto;
+            }
+            p{
+                font-size: 0.26rem;
+                color:#4b5c71;
+                padding-top: 0.15rem;
+            }
+            .code_num{
+                padding-top: 0.05rem;
+                color:#8296af;
+            }
+        }
+        .good_mes{
+            .title{
+                font-size: 0.3rem;
+                color:#ff4e3a;
+                padding:0.5rem 0 0.35rem 0.3rem;
+                //text-align: center;
+                font-weight: 900;
+            }
+            .intro_mes{
+                padding: 0.3rem 0.25rem 0.3rem;
+                font-size: 0.3rem;
+                span{
+                    float: left;
+                    display: block;
+                    padding:0rem 0.1rem;
+                    border-radius: 100px;
+                    background-color: #ff4e3a;
+                    color:#fff;
+                    margin-right: 0.1rem;
+                }
+            }
+        }
+        .good_null{
+            height: 1rem;
+        }
+        .intro_suc{
+            text-align: center;
+            font-size: 0.26rem;
+            padding: 0.3rem 0.3rem 0;
+            color:#344758;
+            text-align: center;
+            span{
+                color:#ff505b;
+                font-size: 0.8rem;
+            }
+            i{
+                color:#34b5ff;
+            }
+            em{
+                color:#ff505b;
+            }
+        }
+    }
+}

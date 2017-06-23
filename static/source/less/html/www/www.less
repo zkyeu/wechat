@@ -1,0 +1,96 @@
+@import "../common/www/base.less";
+
+@import "../common/www/w_header.less";
+@import "../common/www/w_footer.less";
+// 2015-10-15huhaili
+// 首页
+@import "modules/w_home_page.less";
+// 首页结束
+// 青少
+@import "modules/w_tegrs.less";
+// 青少结束
+// 成人
+@import "modules/w_adult.less";
+// 成人结束
+// 青少明星学员
+@import "modules/w_ten_star.less";
+// 青少明星学员结束
+// 青少上课流程
+@import "modules/w_ten_class.less";
+// 青少上课流程结束
+// 青少教学理念
+@import "modules/w_ten_teaching.less";
+// 青少教学理念结束
+// 2015-10-15huhaili结束
+
+// 2015-10-20zhangtian开始
+//学习理念
+@import "modules/w_concept.less";
+//外教师资
+@import "modules/w_foreignTeachers.less";
+//青少
+@import "modules/w_youth.less";
+//学员页
+@import "modules/w_student.less";
+//学员页
+@import "modules/ntkf.less";
+//在线学习页
+@import "modules/w_online_learn.less";
+//公共的背景
+.teacherB_img span,.teacherB_star span,.youth_text a,.youth_text span,.teacherT_img{
+  background-image: url("@{imgPath}teachersIcon.png");
+  background-repeat: no-repeat;
+}
+.selective_img{
+  background-image: url("@{imgPath}y_top3_2.png");
+  background-repeat: no-repeat;
+}
+.hide{display: none;}
+// 2015-10-20zhangtian结束
+#double11{
+	img{
+		width:70px
+	}
+	position: fixed;
+	right: 60px;
+	z-index: 9999;
+
+}
+/* 2015-11-26 公开课 */
+@import "modules/w_ten_public_class.less";
+
+/*2015-12-8经典英语*/
+@import "modules/classic_eng.less";
+
+//小额支付页
+@import "modules/w_little_pay.less";
+
+/* 2016-2-23 第三方登录页面 */
+@import "modules/thirdPartyLogin.less";
+
+
+// 2016.3.10nce
+@import "modules/nce.less";
+
+// 2016.3.12 ce_class_introduce
+
+@import "modules/ce_class_introduce.less";
+@import "modules/nce_class_introduce.less";
+
+//猎聘活动在官网的介绍 2016.3.12
+@import "modules/w_jobs.less";
+//猎聘活动在官网的介绍结束
+
+//官网突出公开课宣传 2016.3.28
+@import "../common/www/w_float.less";
+//官网突出公开课宣传
+
+//官网区分成人青少弹窗 2016.4.06
+@import "modules/adult-junior-popup.less";
+
+//青少官网公开课展示 2016.04.19
+@import "../common/www/w_float_junior.less";
+//青少官网公开课展示结束
+
+//官网右上角增加AC下载
+@import "../common/www/w_acLoad.less";

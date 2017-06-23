@@ -1,0 +1,30 @@
+<% include ../common/top_b2s_n.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>verification.css">
+</head>
+<body data-init="verification" class="verification-wrap">
+    <form action="" id="js_form"> 
+    <div class="verification-tit"><img src="<%= imagessrc%>verification-01.png"><span>无忧课堂</span></div>
+    <div class="verification-font1">手机号</div>
+    <div class="verification-input">
+        <input type="text" name="aa" class="js_telephone" placeholder="请输入您的手机号">
+    </div>
+    <div class="verification-font1">验证码</div>
+    <div class="verification-captcha">
+        <span class="send-cap"><input type="button" class="send-captcha js_send_captcha" data-captchaurl="http://www.51talk.com"  send-type="2" value="发送验证码"></span>
+        <input type="text" class="js_captcha" placeholder="请输入验证码" name="bb">
+    </div>
+    <div class="verification-btn js_register">确认</div>
+    </form>
+<!-- loading -->
+<div id="fontSizeLoding">
+    <img src="<%= imagessrc%>eff_loading.gif">
+</div>
+<script type="text/javascript">
+window.onload = function(){
+    document.documentElement.style.fontSize = document.body.clientWidth / 7.5 + "px";
+    document.getElementById("fontSizeLoding").style.display = "none";
+}
+</script>
+</body>
+<!--公共尾部结束-->
+<% include ../common/bottom.ejs %>

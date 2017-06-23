@@ -1,0 +1,343 @@
+
+@imgPath: '../../../images/wap/editor_share/';
+@media only screen and (min-width: 640px){html {font-size: 100%;}}
+.e-talk51{
+    max-width: 640px;
+    margin:0 auto;
+    position: relative;
+    padding-top: 4.4rem;
+}
+.m-header{
+    /*padding: 0.7rem 1.2rem;*/
+    background: #fac000;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    top:0;
+    height:4.4rem;
+    width: 100%;
+    z-index: 3;
+    a{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+    }
+    img{
+        float: left;
+        height: 3rem;
+        position: absolute;
+        left: 1.2rem;
+        top:50%;
+        margin-top: -1.5rem;
+    }
+    span{
+        float: right;
+        width: 7.5rem;
+        height: 3rem;
+        /*padding: 0.8rem 0;*/
+        text-align: center;
+        font-size: 1.3rem;
+        line-height: 3rem;
+        color: #231714;
+        background: #fff;
+        border-radius: 5px;
+        position: absolute;
+        right: 1.2rem;
+        top:50%;
+        margin-top: -1.5rem;
+    }
+}
+.m-tt{
+    padding: 1.2rem;
+    background: #f6f6f6;
+    overflow: hidden;
+    height: 3.5rem;
+    .m-user{
+        float: left;
+        .u-head{
+            float: left;
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+        .u-name{
+            float: left;
+            padding-left: 1rem;
+        }
+        .username{
+            font-size: 1.5rem;
+            line-height: 1.7rem;
+            height: 1.7rem;
+            color:#333;
+            margin-bottom: 0.5rem;
+        }
+        .story{
+            font-size: 1.3rem;
+            line-height:1.3rem;
+            height: 1.3rem;
+            color: #ff8200;
+        }
+    }
+    .m-date{
+        float: right;
+        text-align: right;
+        p{
+            font-size: 1.3rem;
+            line-height: 1.8rem;
+            color: #888;
+        }
+
+    }
+}
+.m-ct{
+    padding: 2.1rem 1.2rem 2.5rem;
+    .u-summary{
+        font-size: 1.9rem;
+        line-height: 3rem;
+        color: #000;
+        font-weight: bold;
+        margin-bottom: 1.4rem;
+    }
+    .u-txt{
+        font-size: 1.75rem;
+        line-height: 2.7rem;
+        color: #000;
+        margin-bottom: 1.45rem;
+    }
+    .tigger{
+        display: block;
+        width: 100%;
+        margin: 2rem auto 2.05rem;
+    }
+    .u-txt-last{
+        /*margin-top: 3.6rem;*/
+    }
+    .u-text-mb17{
+        margin-bottom: 1.7rem;
+    }
+}
+.m-audio{
+    height: 4.2rem;
+    .u-paly{
+        width: 3.9rem;
+        height: 3.9rem;
+        background: #ff8200 url("@{imgPath}/pause.png") no-repeat;
+        background-size: 1.4rem 1.75rem;
+        background-position: 1.35rem 1.2rem;
+        border: 1px solid #ff8200;
+        position: relative;
+        float: left;
+        &.on{
+            background-image: url("@{imgPath}/play.png");
+        }
+    }
+
+    .m-bar{
+        /*width: 100%;*/
+        /*float: left;*/
+        margin-left: 3.9rem;
+
+        border: 1px solid #d7d7d7;
+        border-left: none;
+        padding: 1.8rem 0 1.8rem 1.3rem;
+        height: 0.3rem;
+        overflow: hidden;
+        position: relative;
+    }
+    .m-total{
+        /*width: 100%;*/
+        margin-right: 5.6rem;
+        position: relative;
+        height: 0.35rem;
+        background: #b2b2b2;
+        height: 0.35rem;
+        /*float: left;*/
+    }
+    .u-time{
+        position: absolute;
+        top:1.25rem;
+        right: 0;
+        font-size: 1.3rem;
+        color: #888;
+        width: 5.6rem;
+        height: 1.3rem;
+        text-align: center;
+        /*float: left;*/
+    }
+    .m-progress{
+        float: left;
+        position: absolute;
+        
+        height: 0.35rem;
+        background: #ff8200;
+        width: 0%;
+    }
+    .u-point{
+        position: absolute;
+        top:-0.7rem;
+        right: -0.7rem;
+        float: left;
+        width: 1.8rem;
+        height: 1.8rem;
+        border-radius: 9999px;
+        background: #e7e7e7;
+        em{
+            position: absolute;
+            width: 0.6rem;
+            height: 0.6rem;
+            left: 50%;
+            top: 50%;
+            border-radius: 9999px;
+            margin: -0.3rem 0 0 -0.3rem;
+            background: #b9b9b9;
+        }
+    }
+}
+.m-comment{
+    position: relative;
+    padding-left: 1.2rem;
+    border-top: 1px solid #d7d7d7;
+    .u-icon{
+        position: absolute;
+        left:1.2rem;
+        top:-0.85rem;
+        padding:0 0.7rem;
+        text-align: center;
+        color: #888;
+        font-size: 1.5rem;
+        line-height: 1;
+        height: 1.5rem;
+        background: #fff;
+    }
+    li{
+        display: flex;
+        border-bottom: 1px solid #d7d7d7;
+        padding: 1.5rem 1.2rem 1.15rem 0;
+        &.m-c-first{
+            padding-top: 2.55rem;
+        }
+        .u-head{
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+        .m-info{
+            overflow: hidden;
+            padding-bottom: 0.45rem;
+        }
+        .m-info em:first-child{
+            float: left;
+            font-size: 1.5rem;
+            color: #888;
+            height: 2rem;
+            line-height: 2rem;
+            /*padding-top: 0.4rem;*/
+        }
+        .m-info em:last-child{
+            float: right;
+            font-size: 1.3rem;
+            color: #c2c2c2;
+            margin-top: 0.4rem;
+        }
+        .m-msg{
+            flex: 1;
+            padding-left: 1.2rem;
+        }
+        .m-cmt-txt{
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            color:#333;
+        }
+    }
+    .m-cmt-audio{
+        position: relative;
+        padding: 0.9rem 1.2rem;
+        margin: 1.1rem 0 0.35rem 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        height: 1.6rem;
+        line-height: 1;
+        .msg{
+            color: #ff8200;
+            font-size: 1.6rem;
+            height: 1.6rem;
+            line-height: 1;
+        }
+        .time{
+            color:#ff8200;
+            font-size: 1.6rem;
+        }
+        .blink{
+            position: absolute;
+            top:0.9rem;
+            right: 1.2rem;
+            width: 1.15rem;
+            height: 1.7rem;
+            background: url("@{imgPath}/blink51.png") no-repeat;
+            background-size:1.15rem 1.7rem;
+            &.on{
+                background-image:url("@{imgPath}/on51.gif");
+            }
+        }
+        &.long{
+            width: 19.1rem;
+        }
+        &.short{
+            width: 6.2rem;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            left: -0.9rem;
+            top: 0.2rem;
+            width: 0.8rem;
+            height: 0.9rem;
+            border-right: 1px solid #ccc;
+            background-color: #ffffff;
+            border-bottom: 1px solid #ccc;
+            border-bottom-left-radius: 3.5rem 1.15rem;
+        }
+        &:before {
+            content: "";
+			position: absolute;
+			left: -0.9rem;
+			top: 0.6rem;
+			width: 0.9rem;
+			height: 0.7rem;
+			background-color: #ffffff;
+			border-bottom: 1px solid #ccc;
+			border-bottom-left-radius: 1.5rem 1.5rem;
+        }
+    }
+}
+.m-footer{
+    /*padding:1.5rem 1.2rem 2.2rem 6rem;*/
+    overflow: hidden;
+    width: 100%;
+    height: 7rem;
+    a{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+    }
+    p{
+        float: left;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        color:#898989;
+        margin-top: 1.5rem;
+        margin-left: 2.2rem;
+        font-size:1.4rem;
+    }
+    span{
+        float: right;
+        width: 8.3rem;
+        text-align: center;
+        line-height: 2.8rem;
+        height: 2.8rem;
+        color:#ff8200;
+        border: 1px solid #ff8200;
+        border-radius: 5px;
+        margin-top: 1.5rem;
+        margin-right: 1.2rem;
+        font-size: 1.5rem;
+    }
+}

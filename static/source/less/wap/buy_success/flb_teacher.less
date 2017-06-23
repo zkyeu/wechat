@@ -1,0 +1,270 @@
+@charset "utf-8";
+
+@import "base.less";
+
+@imgPath: "../../../images/wap/flb_teacher/";
+
+body{width: 100%;font-family:@fontFamily;}
+h1,h2,h3,h4{margin:0;padding: 0;}
+img{
+	vertical-align: top;
+}
+input{
+	background-color: transparent;
+	line-height: 1;
+}
+.hide{display: none;}
+input::-webkit-input-placeholder{color: #57515c};
+input::-moz-placeholder{color: #57515c};
+section{
+	height: auto;
+	min-width: 320px;
+	max-width: 640px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+//头部的展示
+.top{
+	position: relative;
+	width: 100%;
+	.topT{
+		position: relative;
+	}
+	.topImg{
+		width:100%;
+	}
+	.tit{
+		height: 2.1rem;
+		width: 100%;
+		line-height: 2.1rem;
+		text-align: center;
+		background-color: #735b46;
+		color: #fff;
+		font-size: 1rem;
+
+	}
+}
+//表单
+.send_box{
+	margin-top: 2rem;
+	margin-bottom: 3rem;
+	position: relative;
+	width: 100%;
+	.group{
+		width: 100%;
+		.show{
+			display: -ms-flexbox;
+			-ms-flex-align: start;
+			-ms-flex-pack: center;
+			display: -moz-box;
+			-moz-box-align: start;
+			-moz-box-pack: center;
+			display: -webkit-box;
+			-webkit-box-pack: center;
+			-webkit-box-align: start;
+			width: 100%;
+			height: 4rem;
+			span{
+				vertical-align: top;
+				position: relative;
+				width: 5.7rem;
+				height: 2.5rem;
+				line-height: 2.5rem;
+				color: #57515c;
+				font-size: 1rem;
+				display: inline-block;
+				i{
+					position: absolute;
+					left: -1rem;
+					top: 0.2rem;
+					color: red;
+				}
+			}
+			.l_height{
+				line-height: 1.25rem;
+				height: 1.25rem;
+			}
+			.show2{
+				height: 100%;
+				input{
+					display: inline-block;
+					vertical-align: top;
+					padding-left: 0.5rem;
+					border: 0.1rem solid #756f7b;
+					color: #57515c;
+					height: 2.3rem;
+					line-height: 2.3rem;
+					width: 16rem;
+					font-size: 1rem;
+				}
+				select{
+					display: inline-block;
+					vertical-align: top;
+					border: 0.1rem solid #756f7b;
+					color: #57515c;
+					padding-left: 0.3rem;
+					height: 2.5rem;
+					width: 16.7rem;
+					font-size: 1rem;
+				}
+				p{
+					display: none;
+					margin-left: 0.5rem;
+					color:red;
+					font-size: 0.7rem;
+					height: 1.5rem;
+					line-height: 1.5rem;
+				}
+			}
+		}
+	}
+	//提交表单
+	.send{
+		.send_now{
+			position: relative;
+			margin-left: -5rem;
+			left: 50%;
+			border-radius: 5px;
+			text-align: center;
+			display: inline-block;
+			width: 10rem;
+			line-height: 2.75rem;
+			height: 2.75rem;
+			background-color: #ff5910;
+			color: #fff;
+			font-size: 1.5rem;
+		}
+	}
+}
+//加入51的具体信息
+.join_51{
+	position: relative;
+	width: 100%;
+	.tit1{
+		text-align: center;
+		color: #474747;
+		font-size: 1.8rem;
+		line-height: 1.8rem;
+	}
+	.tit2{
+		margin-top: 0.5rem;
+		padding-bottom: 1.2rem;
+		text-align: center;
+		color: #ff9d10;
+		font-size: 1.1rem;
+	}
+	.point_box{
+		margin-bottom: 2.2rem;
+		li{
+			margin-top: 1.5rem;
+			display: -ms-flexbox;
+			-ms-flex-align: center;
+			-ms-flex-pack: center;
+			display: -moz-box;
+			-moz-box-align: center;
+			-moz-box-pack: center;
+			display: -webkit-box;
+			-webkit-box-pack: center;
+			-webkit-box-align: center;
+			img{
+				margin-left: 2rem;
+				width: 7.5rem;
+				height: 7.5rem;
+			}
+			.m-txt{
+				display: -ms-flexbox;
+				-ms-flex-align: center;
+				display: -moz-box;
+				-moz-box-align: center;
+				display: -webkit-box;
+				-webkit-box-align: center;
+				width: 18.5rem;
+				height: 7.5rem;
+				p{
+					margin-left: 1.5rem;
+					text-align: left;
+					font-family: Arial;
+				}
+				.tit-1{
+					font-weight: 600;
+					font-size: 1.2rem;
+					line-height: 1.5rem;
+					color: #000000;
+					margin-bottom: 0.3rem;
+				}
+				.tit-2{
+					font-size: 0.9rem;
+					line-height: 1.1rem;
+					color: #333333;
+				}
+			}
+		}	
+	}
+}
+//李娜展示图
+.lina_box{
+	position: relative;
+	width: 100%;
+	.lina_img{
+		width: 100%;
+	}
+}
+//底部加入我们的提交按钮
+.join_us{
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 59.55rem;
+	background: url("@{imgPath}bottom_bg.jpg") left top no-repeat;
+	background-size: 100% 100%;
+	.tea_box{
+		margin: 6rem auto 0;
+		width: 24.5rem;
+		.teafirst,.teasecond{		
+			display: -ms-flexbox;
+			-ms-flex-pack: justify;
+			display: -moz-box;
+			-moz-box-pack: justify;
+			display: -webkit-box;
+			-webkit-box-pack: justify;
+			div{
+				position: relative;
+				width: 11.5rem;
+				height: 21rem;
+			}
+		}
+		.teasecond{
+			margin-top: 2.5rem;
+		}
+	}
+	.link_img{
+		width: 11.5rem;
+		height: 16.5rem;
+		display: inline-block;
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.p_1{width: 5.6rem;height: 4.6rem;margin-left: 5.9rem;}
+	.p_2{width: 11.5rem;height: 4.6rem;}
+	.p_3{width: 11.55rem;height: 4.65rem;}
+	.p_4{width: 7.9rem;height: 4.7rem;margin-top: -0.1rem;}
+	.btn_join{
+		z-index: 20;
+		position: absolute;
+		bottom: 2rem;
+		left: 50%;
+		margin-left: -4.85rem;
+		display: inline-block;
+		height: 2.8rem;
+		line-height: 2.8rem;
+		width: 9.7rem;
+		text-align: center;
+		position: absolute;
+		color: #fff;
+		font-size: 1.5rem;
+		border-radius: 5px;
+		background-color: #ff5910;
+	}
+}

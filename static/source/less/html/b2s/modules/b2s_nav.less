@@ -1,0 +1,47 @@
+.b2s-nav{
+    background-color: #1776c1;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+
+    .b2s-nav-in{
+    	position: relative;
+
+	    ul{
+	    	position: relative;
+	    	z-index: 2;
+	    	float: left;
+	        li{
+	            float: left;
+	            a{
+	                float: left;
+	                padding: 0 45px;
+					color: #fff;
+
+	                &:hover{
+	                	color: #fff;
+	                }
+	            }
+	            
+	            &.line{
+					float: left;
+	            	width: 1px;
+	                height: 14px;
+	                background-color: #4991cd;
+	                margin-top: 18px;
+	            }
+	        }
+	    }
+
+	    .b2s-nav-line{
+	    	position: absolute;
+	    	height: 3px;
+	    	width: 100%;
+	    	left: 0;
+	    	bottom: 0;
+	    	background-color: #fff;
+	    	display: none;
+	    }
+    }
+}

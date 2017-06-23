@@ -1,0 +1,9 @@
+{
+	"define":[
+		"js/wap/common/*.js",
+		"!js/wap/common/iscroll.js",
+		"js/wap/project/north_america_sell/config.js",
+		"js/wap/mod/swipe.js",
+		"js/wap/mod/swiper.js"
+	]
+}

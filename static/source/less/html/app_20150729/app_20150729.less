@@ -1,0 +1,80 @@
+@charset "utf-8";
+@import "../common/uc_common.less";
+/*
+* 付费用户
+* @file：   reg.less
+* @author:  huhaili（huhaili@51talk.com）
+* @update:  2015-07-29
+* @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+*/
+@imgPathProject: "../../../images/html/app_20150729";
+body{
+  background: #fff;
+}
+@media only screen and (width:640px){
+  .container {
+      width: 1280px;
+  }
+}
+.container{
+  width: 100%;
+  margin:0px auto;
+  height: auto;
+  overflow: hidden;
+  /*导航*/
+  .header{
+    width: 100%;
+    height: 84px;
+    border-bottom:2px solid #ff8200;
+    line-height: 84px;
+    .content_app{
+      width: 980px;
+      margin:0px auto;
+      .logo_app{
+        float:left;
+        a{
+          display: block;
+        }
+      }
+      .phone_app{
+        float:right;
+        a{
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+  .main{
+    height: auto;
+    margin: 0px auto;
+    text-align: center;
+    .nav{
+      width: 100%;
+      height: 514px;
+      background: url("@{imgPathProject}/add_banner.jpg") center no-repeat;
+      .link{
+        width: 1000px; 
+        height: 500px;
+        margin:0px auto;
+        .rt{
+          float:right;
+          width: 185px;
+          height: 158px;
+          margin:282px 0 0 20px;
+        }
+        .lt{
+          float:right;
+          width: 284px;
+          margin-top: 285px;
+          a{
+            float: left;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+    p{
+      margin-top: 110px;
+    }
+  }
+}

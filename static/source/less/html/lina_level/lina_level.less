@@ -1,0 +1,91 @@
+@charset "utf-8";
+@import "../common/uc_common.less";
+
+/*
+* 青少landing
+* @file：   index.less
+* @author:  huhaili（huhaili@51talk.cm）
+* @update:  2015-09-15
+* @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+*/
+
+/* 公共样式 */
+@imgPath: "../../../images/html/lina_level";
+@width:1900px;
+@mWidth:1000px;
+@wColor:#fff;
+@bColor:#ea4c00;
+@tColor:#000;
+@f16:16px;
+@f42:42px; 
+.minWidth{width:@mWidth;margin:0 auto;font-size: @f16;}
+
+.levl{
+	.levBom{
+		height: 555px;
+		background: url("@{imgPath}/lev_banner.jpg") center no-repeat #ffd800;
+	}
+	.levW{
+		height: 452px;
+		background:#fff;
+		.levW_word{
+			.minWidth;
+			color: @tColor;
+			padding-top:30px;
+			p{
+				line-height:30px;
+				padding-top: 25px;
+			}
+			span{
+				color: @bColor;
+			}
+		}
+	}
+	.levBlue{
+		height: 520px;
+		background: url("@{imgPath}/lev_b.jpg") center no-repeat #00a8ff;
+		.levB_word{
+			.minWidth;
+			color: @wColor;	
+			padding-top: 90px;
+			.levB_mix{
+				width: 690px;
+				float: right;
+				h3{
+					font-size: @f42;
+					span{
+						margin-left: 25px;
+					}
+				}
+				p{
+					line-height: 30px;
+					margin-top: 27px;
+				}
+			}
+		}
+	}
+	.levC{
+		height: 830px;
+		background: url("@{imgPath}/lev_z.jpg") center no-repeat #8960ff;
+		.levB_word{
+			padding-top: 100px;
+			.levB_mix{
+				width: 770px;
+				float: left;
+				p{
+					width: 700px;
+					margin-top: 30px;
+				}
+			}	
+		}
+	}
+	.levH{
+		height: 400px;
+			background: url("@{imgPath}/lev_y.jpg") center no-repeat #404040;
+	}
+}
+
+
+
+
+

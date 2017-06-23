@@ -1,0 +1,384 @@
+/**
+ * 右侧边栏
+ * @file：   sidebar.less
+ * @author:  xyyjk（maxingguo@51talk.com）
+ * @update:  2014-12-24
+ * @note:    学员动态、网站动态、人气新老师、每日新老师、排行榜
+ */
+
+.g-sd-r{
+  .box1{
+    padding: 16px 22px 0 22px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid @borderColor;
+    h3{
+      height: 22px;
+      line-height: 22px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+  .box2{
+    margin-bottom: 10px;
+    border: 1px solid @borderColor;
+  }
+  .box3{
+    margin-bottom: 10px;
+  }
+}
+//级别证书
+.m-cer-index{
+  .f-pr;
+  .u-mask{
+    .f-pa;
+    left:0;
+    top:0;
+    width:190px;
+    height: 135px;
+    margin:5px;
+    background: #fff;
+    .fm-opacity(80);
+    p{
+      line-height: 22px;
+      font-size: 13px;
+      color: #000;
+      margin: 45px 17px 0;
+    }
+  }
+}
+//学员动态
+.m-ls-stut{
+  ul{ padding-bottom: 14px; }
+  li{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    line-height: 20px;
+    border-bottom: 1px dashed @borderColor;
+    &:last-child,&.last{ border-bottom-style: none; }
+  }
+  .txt{ .f-toe; }
+}
+//网站动态
+.m-ls-web{
+  ul{ padding-bottom: 14px; }
+  li{
+    height: 16px;
+    line-height: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    a{ display: block; }
+    .f-toe{ _width: 154px; }
+    &.img{
+      @indent: 48px;
+      height: @indent;
+      padding: 5px 0 5px @indent;
+      img{
+        float: left;
+        width: @indent;
+        height: @indent;
+        margin-left: -@indent;
+      }
+      a,span{
+        position: relative;
+        left: 58px;
+        float: left;
+        width: 106px;
+        margin-left: -@indent;
+      }
+    }
+  }
+}
+//排行榜
+.m-ls-rank{
+  h3{
+    a,i{
+      float: left;
+      color: #aaa;
+    }
+    i{
+      margin-left: 4px;
+      margin-right: 4px;
+    }
+    .crt{ color: @hoverColor; }
+  }
+  h4{
+    .f-csd; .f-usn;
+    .fm-radius(2px;);
+    height: 23px;
+    margin-top: 7px;
+    _margin-top: 2px;
+    border: 1px solid @textColor;
+    span{
+      float: left;
+      width: 50%;
+      height: 23px;
+      line-height: 23px;
+      color: @textColor;
+      text-align: center;
+      &.crt{
+        color: #fff;
+        background-color: @textColor;
+      }
+    }
+  }
+  ul{
+    padding-top: 9px;
+    padding-bottom: 15px;
+  }
+  li{    
+    height: 20px;
+    line-height: 20px;
+    padding: 2px 0 2px 66px;
+    .f-fl{
+      position: relative;
+      left: -66px;
+      width: 60px;
+      color: @linkColor;
+      i,em{ float: left; }
+      i{ width: 18px; }
+      em{
+        .f-wwb;
+        width: 42px;
+        height: 20px;
+        overflow: hidden;
+      }
+    }
+    .f-fr{
+      width: 100%;
+      margin-left: -66px;
+      em{
+        margin-left: 3px;
+        margin-right: 3px;
+      }
+    }
+  }
+}
+.m-ls-flow{
+  ul{
+    border-left: 1px solid #e4eaee;
+    margin: 20px 0;
+  }
+  li{
+    .f-pr;
+    padding: 0 0 32px 17px;
+    width: 137px;
+    //width: 100%;
+    .circle{
+      .f-pa;
+      top:0;
+      left: -8px;
+      width: 15px;
+      height: 15px;
+      line-height: 15px;
+      border-radius: 50%;
+      background: @hoverColor;
+      color:#fff;
+      font-size: 12px;
+      text-align: center;
+    }
+    a{
+      color:#7eb1d9;
+      text-decoration: underline;
+    }
+    p{
+      color:#1e1e1e;
+      font-size: 12px;
+      //line-height: 20px;
+      word-wrap:break-word;
+    }
+  }
+  .last{
+    padding-bottom: 0;
+    .circle{
+      top:auto;
+      bottom: 0;
+    }
+  }
+}
+//每日老师推荐
+.m-sticky{
+  @indent: 60px;
+  .wrap{
+    height: @indent;
+    padding: 12px 0 24px @indent + 8 ;
+  }
+  .img{
+    float: left;
+    width: @indent - 2;
+    height: @indent - 2;
+    margin-left: -@indent - 8;
+    border: 1px solid #e6e6e6;
+    &:hover{ border-color: @hoverColor; }
+  }
+  .cnt{
+    position: relative;
+    left: @indent;
+    float: left;
+    width: 86px;
+    margin-left: -@indent;
+    dt{
+      line-height: 22px;
+      padding-bottom: 2px;
+      font-size: 14px;
+      color: #1e1e1f;
+    }
+    dd{ line-height: 18px; }
+  }
+}
+//人气老师
+.m-ls-pop{
+  @height: 40px;
+  ul{ padding-bottom: 14px; }
+  li{
+    height: @height;
+    line-height: @height;
+    padding: 10px 30px 10px @height + 10;
+    border-bottom: 1px dashed @borderColor;
+    &.last{ border-bottom: none; }
+  }
+  .img{
+    float: left;
+    width: @height - 2;
+    margin-left: -@height - 10;
+    font-size: 0;
+    border: 1px solid #e6e6e6;
+    &:hover{ border-color: @hoverColor; }
+    img{ display: block; }
+  }
+  .txt{
+    .f-toe;
+    position: relative;
+    left: @height + 10;
+    float: left;
+    width: 74px;
+    margin-left: -@height - 10;
+  }
+  .num{
+    position: relative;
+    right: -28px;
+    float: right;
+    width: 28px;
+    color: @hoverColor;
+    text-align: right;
+  }
+}
+
+//侧边栏广告
+.m-ad-sm{}
+
+//更多视频
+.vedio-more{
+  display: inline-block; 
+  overflow: hidden; 
+  margin-bottom: 0px;
+  .f-pr;
+  .link-more{
+    .f-pa;
+    .f-db;
+    top: 0;
+    right: 0;
+    width: 37px;
+    height: 127px;
+    background: #fff;
+    .fm-opacity(0);
+  }
+}
+// 2015-11-19服务中心
+.ser-try{
+  position: relative;
+  /*float: left;*/
+  width: 100%;
+  height: 130px;
+  background-color: #fff;
+  border:1px solid #dbdee0;
+  margin-bottom: 10px;
+  .entry{
+    float: left;
+    color: #1e1e1e;
+    font-size: 16px;
+    margin:40px 0 0 13px;
+  }
+  .ser-btn{
+    float: left;
+    width: 80px;
+    height: 23px;
+    margin:9px 0 0 13px;
+  }
+  .ser-rt{
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+    width: 107px;
+    height: 115px;
+  }
+}
+// 2015-11-23 青少学豆
+.zn-id {
+  .zn-num {
+    margin-left: 25px;
+  }
+  .zn-bean {
+    vertical-align: bottom;
+    background:url('@{imgPath}bean.png') 0 3px no-repeat;
+    width: 17px;
+    height: 20px;
+    display: inline-block;
+    margin-left: 3px;
+  }
+  .zn-help {
+    vertical-align: bottom;
+    background:url('@{imgPath}bean.png') -18px 1px no-repeat;
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 1px;
+  }
+}
+
+//耐力闯关
+.add-u-tit{
+  span{
+    float: left;
+    font-size: 16px;
+    color: #ff8200;
+  }
+  .rt-tit{
+    float: right;
+    &:hover{
+      color:#ff8200; 
+    }
+  }
+}
+.m-ls-rank .add-crt-jsTab1 li{
+  line-height: 27px;
+  height: 27px;
+  overflow: hidden;
+  padding-left:0;
+}
+.m-ls-rank .add-crt-jsTab1 .add-word{
+  padding:0;
+}
+.m-ls-rank .add-crt-jsTab1 .add-word .add-lt-tit{
+  float: left;
+  color: #333;
+  font-size: 14px;
+}
+.m-ls-rank .add-crt-jsTab1 .add-word .add-rt-tit{
+  float: right;
+}
+.m-ls-rank .add-crt-jsTab1 li .f-fr{
+  width: 50px;
+  margin-left:0;
+  text-align: right;
+}
+.m-ls-rank .add-crt-jsTab1 li .f-fl{
+  width: 100px;
+  left: 0;
+}
+.m-ls-rank .add-crt-jsTab1 li .f-fl i{
+  width: 25px;
+  text-align: center;
+  margin-right: 15px;
+}

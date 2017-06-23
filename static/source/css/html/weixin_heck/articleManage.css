@@ -1,7 +1,6 @@
 /*!
  * http://www.51Talk.com
  * copyright (c) 2015 51Talk
- * author: 
  */
 /**
  * 默认样式
@@ -43,9 +42,9 @@ body {
   width: 880px;
   height: 38px;
   line-height: 38px;
-  border: #edb070 solid 1px;
+  border: #fcc800 solid 1px;
   border-radius: 6px;
-  color: #fd8224;
+  color: #fcc800;
   font-size: 16px;
   text-align: center;
   margin: 30px 0 20px 0;
@@ -63,8 +62,8 @@ body {
   font-size: 40px;
 }
 .article_ontainer .add_article_btn:hover {
-  background: #fd8224;
-  color: #fff;
+  background-color: #ffd533;
+  color: #252525;
   cursor: pointer;
 }
 .article_ontainer .article_list .type-sel {
@@ -73,18 +72,19 @@ body {
 .article_ontainer .article_list .type-sel li {
   display: block;
   width: 100px;
-  height: 40px;
-  line-height: 40px;
+  height: 30px;
+  line-height: 30px;
   background: #eee;
-  margin-right: 30px;
+  margin-right: 20px;
   float: left;
   text-align: center;
-  border: #ddd solid 1px;
+  border: #dcdcdc solid 1px;
   cursor: pointer;
 }
 .article_ontainer .article_list .type-sel li.active {
-  background: #ff8000;
-  color: #fff;
+  border: #fcc800 solid 1px;
+  background: #fcc800;
+  color: #252525;
 }
 .article_ontainer .article_list .type-list {
   margin-bottom: 20px;
@@ -94,18 +94,19 @@ body {
 .article_ontainer .article_list .type-list li {
   display: block;
   padding: 0 15px;
-  line-height: 30px;
+  line-height: 24px;
   background: #eee;
   margin: 0 20px 10px 0;
   float: left;
   text-align: center;
-  border: #ddd solid 1px;
+  border: #dcdcdc solid 1px;
   cursor: pointer;
   border-radius: 15px;
 }
 .article_ontainer .article_list .type-list li.active {
-  background: #ff8000;
-  color: #fff;
+  border: #fcc800 solid 1px;
+  background: #fcc800;
+  color: #252525;
 }
 .article_ontainer .article_list .article_list_detail {
   width: 101%;
@@ -173,15 +174,14 @@ body {
   position: absolute;
   bottom: -3px;
   right: 0;
-  background: #fd8224;
+  background: #fcc800;
   padding: 5px 15px;
   border-radius: 5px;
-  color: #fff;
+  color: #252525;
 }
 .article_ontainer .article_list .article_list_detail li .at_right div:hover {
-  background: #c00;
+  background: #ffd533;
   cursor: pointer;
-  color: #fff;
 }
 .article_ontainer .article_list .article_list_detail h5 {
   height: 200px;
@@ -208,9 +208,9 @@ body {
   cursor: pointer;
 }
 .article_ontainer .article-page li a.cut {
-  background: #fd8224;
+  background-color: #ffd533;
   color: #fff;
-  border: #fd8224 solid 1px;
+  border: #ffd533 solid 1px;
 }
 .add-article-layer {
   display: none;
@@ -226,13 +226,13 @@ body {
   height: 30px;
   line-height: 20px;
   font-size: 20px;
-  color: #fd8224;
+  color: #fcc800;
   text-align: center;
 }
 .add-article-layer .article-form {
   position: relative;
-  width: 700px;
-  height: 520px;
+  width: 70vw;
+  height: 500px;
   background: #fff;
   position: absolute;
   top: 0;
@@ -269,6 +269,44 @@ body {
   z-index: 9999;
   margin-left: 17px;
 }
+.add-article-layer .article-form .close-layer-btn-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 35px;
+  height: 45px;
+  cursor: pointer;
+}
+.add-article-layer .article-form .close-layer-btn-right em {
+  cursor: pointer;
+}
+.add-article-layer .article-form .close-layer-btn-right em:before {
+  content: "";
+  position: absolute;
+  display: block;
+  right: -25px;
+  top: -5px;
+  width: 10px;
+  height: 31px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-right: #fff solid 2px;
+}
+.add-article-layer .article-form .close-layer-btn-right em:after {
+  content: "";
+  position: absolute;
+  display: block;
+  right: -25px;
+  top: 2px;
+  width: 10px;
+  height: 31px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  border-right: #fff solid 2px;
+}
 .add-article-layer .article-form li {
   display: block;
   padding: 6px 0;
@@ -279,7 +317,6 @@ body {
   font-size: 14px;
 }
 .add-article-layer .article-form li.radio-sel div {
-  max-width: 630px;
   margin-left: 72px;
   padding: 0;
 }
@@ -333,22 +370,25 @@ body {
   border-radius: 50%;
   cursor: pointer;
 }
+.add-article-layer .article-form li.radio-sel span.active {
+  border: #fcc800 solid 1px;
+}
 .add-article-layer .article-form li.radio-sel span.active em {
   display: block;
-  background-color: #ff6900;
-  width: 7px;
-  height: 7px;
+  background-color: #fcc800;
+  width: 10px;
+  height: 10px;
   z-index: 1000;
   position: relative;
-  top: 4px;
-  left: 3px;
+  top: 2px;
+  left: 2px;
   border-radius: 50%;
 }
 .add-article-layer .article-form li > label {
   margin-right: 10px;
 }
 .add-article-layer .article-form li input {
-  width: 610px;
+  width: 88%;
   height: 30px;
   line-height: 30px;
   padding-left: 10px;
@@ -357,8 +397,8 @@ body {
   background: #f5f5f5;
 }
 .add-article-layer .article-form li textarea {
-  width: 609px;
-  height: 100px;
+  width: 88%;
+  height: 80px;
   line-height: 20px;
   padding-left: 10px;
   font-size: 14px;
@@ -378,25 +418,24 @@ body {
 }
 .add-article-layer .article-form li .err-bor {
   border: #c00 solid 1px;
-  box-shadow: 0 0 5px #c00;
+  -webkit-box-shadow: 0 0 5px #c00;
+          box-shadow: 0 0 5px #c00;
 }
 .add-article-layer .article-form #addArticleBtn {
   width: 100px;
-  height: 40px;
-  line-height: 40px;
-  background: #fd8224;
-  border-radius: 6px;
+  height: 36px;
+  line-height: 36px;
+  background-color: #fcc800;
+  border-radius: 4px;
   text-align: center;
   color: #fff;
   font-size: 16px;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .add-article-layer .article-form #addArticleBtn:hover {
-  text-shadow: 0 0 1px #555;
-  background: #f0bd42;
+  background-color: #ffd533;
   cursor: pointer;
-  box-shadow: 0 2px 5px #777;
 }
 .add-article-layer #update_btn {
   width: 100px;

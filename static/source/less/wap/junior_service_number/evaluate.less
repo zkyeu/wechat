@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+@imgPath: "../../../images/wap/junior_service_number/";
+.content-box{
+  padding: 10px 8px 10px;
+  .class-introduce{
+    padding-left:5px;
+    padding-right:5px;
+    position: relative;
+    .tit-box{
+      width:100%;
+      float:left;
+      line-height: 21px;
+      .text-des{
+        width:63%;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+      }
+      .title{
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .des{
+        font-size: 14px;
+      }
+    }
+    .img-box{
+      position: absolute;
+      width: 116px;
+      height:61px;
+      right:0px;
+      top:0px;
+      img{
+        width: 116px;
+        height:61px;
+      }
+    }
+  }
+  .sec-box{
+    margin-top:17px;
+    .main-title{
+      font-size:15px;
+      font-weight:bold;
+      height:33px;
+      line-height: 33px;
+      padding-left:12px;
+      background-color:#f9bf00;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      box-shadow:5px 5px 5px #f7a500 inset;
+    }
+    .comment-box{
+      margin-top:12px;
+      .tea-img{
+        float:left;
+        margin-left:13px;
+        width:65px;
+        color:#4b4848;
+        img{
+          width:64px;
+          height:64px;
+          border-radius: 35px;
+          border:1px solid #f9bf00;
+        }
+        span{
+          display: block;
+          font-size: 14px;
+          text-align: center;
+          margin-top:5px;
+        }
+      }
+      .comment-text{
+        margin-left:100px;
+        padding-right:7px;
+        font-size: 14px;
+      }
+    }
+    .class-info{
+      background-color: #f2f2f2;
+      margin-top:3px;
+      padding:10px 10px 15px 10px;
+      
+      span{
+        display: block;
+        width:29px;
+        height:29px;
+        background:url("@{imgPath}icons.png") no-repeat;
+        background-size: 300px 250px;
+        float:left;
+      }
+      .icon1{
+        background-position: -100px 0;
+      }
+      .icon2{
+        background-position: -150px 0;
+      }
+      .icon3{
+        background-position: -200px 0;
+      }
+      .icon4{
+        background-position: 0px -150px;
+      }
+      .class-text{
+        margin-left:35px;
+        .class-tit1{
+          color:#6666ff;
+        }
+        .class-tit2{
+          color:#66cc33;
+        }
+        .class-tit3{
+          color:#ff66cc;
+        }
+        .class-tit4{
+          color:#F9BF00;
+        }
+        .class-tit{
+          font-size: 15px;
+          font-weight: bold;
+          line-height: 27px;
+        }
+        .class-con{
+          font-size: 14px;
+          margin-top:7px;
+          .q-title{
+            font-weight: bold;
+            margin-bottom:7px;
+          }
+          p{
+            margin-bottom:7px;
+          }
+        }
+      }
+      .video-play{
+        margin-top:16px;
+        position: relative;
+        .video-bg{
+          width: 100%;
+        }
+        .player-btn{
+          width:4.8rem;
+          height:4.8rem;
+          display: block;
+          position: absolute;
+          top:50%;
+          left:50%;
+          margin-top:-2.4rem;
+          margin-left:-2.4rem;
+          background: url("@{imgPath}play_btn.png") no-repeat;
+          background-size:  4.8rem 4.8rem;
+        }
+      }
+      
+      .video-box{
+        display: none;
+        margin-top:17px;
+      }
+      
+    }
+  }
+  
+
+}

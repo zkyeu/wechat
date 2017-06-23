@@ -1,0 +1,1 @@
+define("helperLink",["layui","helperIframe"],function(a,n,t){a("helperIframe");var e=$(".helper-link"),i=window.parent.wxHeck.wxInit,r=new function(){if(i){var a=this;a.addFriend=function(a){i.$broadcast("showAddFriend",a)}}};e.on("click","[data-action]",function(){var a=$(this),n=a.attr("data-action"),t=a.attr("data-data");"function"==typeof r[n]&&r[n](JSON.parse(t))})});

@@ -1,0 +1,8 @@
+{
+	"define":[
+		"js/wap/common/*.js",
+		"js/wap/project/pre_class20170207/config.js",
+		"!js/wap/mod/swipe.js",
+		"js/wap/mod/swiper.js"
+	]
+}

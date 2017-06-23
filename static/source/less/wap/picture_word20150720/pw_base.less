@@ -1,0 +1,64 @@
+@charset "utf-8";
+/*
+* 图片学词
+* @file：   pw.less
+* @author:  xiaosong zhangtian（xiaosong@51talk.cn zhangtian@51talk.cn）
+* @update:  2015-07-21
+* @note:    图片学词
+*/
+/*图片学词*/
+
+html{ font-size:62.5%;}
+@media only screen and (min-width: 481px){
+    html {
+        font-size: 94%;
+    }
+}
+@media only screen and (min-width: 561px){
+    html {
+        font-size: 109%;
+    }
+}
+@media only screen and (min-width: 641px){
+    html {
+        font-size: 125%;
+    }
+}
+/*variable*/
+@imgPath: '../../../images/wap/picture_word20150720/';
+@bgColor: #fff;
+@fontSize: 1.4rem;
+@borderColor:#d9d9d9;
+@borderImgColor:#999;
+@textColor: #000;
+@txtColor: #7c7c7c;
+@linkColor: #666;
+@hoverColor: #ff8200;
+@white: #fff;
+@fontFamily: "Microsoft YaHei";
+/*custom*/
+body{font-size:@fontSize; font-family:@fontFamily;color:@textColor; padding:0px; margin:0px; background:@bgColor;}
+h1,h2,h3,h4,h5,h6,i,em{font-weight:normal;font-style:normal;padding:0px; margin:0px; }
+input,button,select,textarea,dl,dd,dt{font-family:@fontFamily;outline:none;vertical-align:middle;border:0;border-radius:0; padding:0px; margin:0px;}
+ul,li{ padding:0px; margin:0px; list-style-type:none;}
+p{ margin:0; padding:0;}
+a{color:@textColor;text-decoration:none;}
+a:hover{color:@hoverColor;}
+strong{font-weight:bold;}
+img{vertical-align:middle;}
+b{ font-weight:normal;}
+::selection{background-color:@hoverColor;color:white;text-shadow:none;}
+strong{font-weight:normal;}
+.pr{position: relative;}
+.pa{position: absolute;}
+//font-size
+.ft16{font-size: 1.6rem;}
+// -mixins
+.fm-radius(@radius:50%){-webkit-border-radius:@radius;-moz-border-radius:@radius;border-radius:@radius;}
+.fm-arrow(@pos:top,@size:6px,@color:@hoverColor){font-size:0;width:0;height:0;line-height:0;display:inline-block;*display:inline;*zoom:1;vertical-align:-2px;border:0 dashed transparent;border-width:@size;}
+.fm-arrow-bgpos(@bgpos,@bgcolor,@bgw){ border-style:@bgpos; border-color:@bgcolor; border-width:@bgw}
+.fm-arrow-pos(@pos,@color,@w)when(@pos=top){border-bottom-style:solid;border-bottom-color:@color; border-width: @w;}
+.fm-arrow-pos(@pos,@color,@w)when(@pos=bottom){border-top-style:solid;border-top-color:@color; border-width: @w;}
+.fm-arrow-pos(@pos,@color,@w)when(@pos=left){border-right-style:solid;border-right-color:@color; border-width: @w;}
+.fm-arrow-pos(@pos,@color,@w)when(@pos=right){border-left-style:solid;border-left-color:@color; border-width: @w;}
+.fm-opacity(@opacity:50){filter:alpha(opacity=@opacity);-webkit-opacity:@opacity/100;-moz-opacity:@opacity/100;opacity:@opacity/100;}

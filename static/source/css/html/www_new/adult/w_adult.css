@@ -1,8 +1,8 @@
 /*!
  * http://www.51Talk.com
  * copyright (c) 2015 51Talk
- * author: zningpc@gmail.com
- * update: Mon Dec 05 2016 11:21:37 GMT+0800 (中国标准时间)
+ * author: 
+ * update: Mon Jun 19 2017 15:19:33 GMT+0800 (中国标准时间)
  */
 .info {
   background: #303030;
@@ -239,14 +239,14 @@
 .adult .major_list {
   height: 308px;
   margin: 0 auto;
-  width: 100%;
+  width: 674px;
   margin-bottom: 20px;
 }
 .adult .major_list li {
   width: 184px;
   float: left;
   text-align: center;
-  margin-right: 20px;
+  margin-right: 60px;
 }
 .adult .major_list li.mr0 {
   margin-right: 0;
@@ -301,7 +301,7 @@
   transition: 0.3s -webkit-transform;
   transition: 0.3s transform;
   transition: 0.3s transform, 0.3s -webkit-transform;
-  background: url(../../../../images/html/www_new/adult/y_top3_2.png?v=Mno7ecbNmB7RqiUFVZCyUA%3D%3D) no-repeat;
+  background: url(../../../../images/html/www_new/adult/y_top3_2.png?v=pmFWpjhb0WPE2c%2BiONdlLg%3D%3D) no-repeat;
 }
 .adult .selective_img:hover {
   -webkit-transform: rotateY(180deg) scaleX(-1);

@@ -1,0 +1,8 @@
+{
+	"define":[
+		"js/wap/common/zepto.min.js",
+		"js/wap/common/sea.min.js",
+		"js/wap/project/selltomany_20170417/config.js"
+	]
+}
+

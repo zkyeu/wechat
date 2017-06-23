@@ -1,0 +1,47 @@
+<div class="box">
+    <div class="box-main">
+        <div class="choose-ans">
+            <!--<a href="#" class="audio-btn"></a>-->
+            <div id="j_word" class="word">
+                <span class="letter hide"><%=data.title%></span>
+            </div>
+            <div id="j_monster" class="monster-pic" media-audio="<%= domain + data.record%>" media-blow="<%= staticPath%>/images/html/class_2017/audio/blow.mp3">
+                <img class="animated bounce pic-s" src="<%= staticPath%>/images/html/class_2017/monster/<%=data.monster%>-monster_big.png"/>
+                <i class="talk-gif hide"></i>
+            </div>
+
+            <div class="tc options">
+                <ul>
+                    <% for (var i=0; i<data.option.length; i++) {%>
+                        <%if(data.option[i].correct==1){%>
+                        <li class="item" data-correct="1" media-audio="<%= staticPath%>/images/html/class_2017/audio/goodjob.mp3">
+                        <%} else {%>
+                        <li class="item" data-correct="0" media-audio="<%= staticPath%>/images/html/class_2017/audio/no.mp3">
+                        <%}%>
+                            <%if(i==0){%>
+                            <i class="s">A</i>
+                            <%}%>  
+                            
+                            <%if(i==1){%>
+                            <i class="s">B</i>
+                            <%}%>
+
+                            <%if(i==2){%>
+                            <i class="s">C</i>
+                            <%}%>
+                            <span class="tt"><%=data.option[i].title%></span>
+                        </li>
+                    <%}%>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="pagenation">
+        <a id="j_page_prev" href="javascript:;" class="btn prev-btn"></a>
+        <a id="j_page_next" href="javascript:;" class="btn next-btn disabled"></a>
+    </div>
+</div>
+
+<!-- 成功 -->
+<div id="j_tip_zan" class="bx-tip bx-tip-zan animated zoomIn hide"></div>
+<div id="j_tip_wrong" class="bx-tip bx-tip-wrong animated zoomIn hide"></div>

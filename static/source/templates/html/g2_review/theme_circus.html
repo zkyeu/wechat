@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title></title>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link href="/css/html/g2_review/g2_review.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <input type="hidden" id="fetchdata" value=""/>
+    <input type="hidden" id="userCenter" value=""/>
+    <input type="hidden" id="submiturl" value=""/>
+    <input type="hidden" id="from_igs" value="true"/>
+    <div id="question_mp3"></div>
+    <div data-init="circus" id="container"></div>
+    <div id="game">
+      <div id="game_header" class="game_header"><span class="course_name"></span><a href="javascript:;" target="_blank" class="pdf_down">课后作业 Worksheet （PDF版 下载）</a></div>
+    </div>
+    <div id="finish"></div>
+    <script>
+      var loadingSprite = {
+       	url: 'http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/loading.png',
+       	width: 350,
+       	height: 500
+      }
+      var assetsJson = {
+      	"game": {
+      		"type": {
+      			"image": [
+      				{
+      					"key": "sceneBg",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/circus_hbg.jpg"
+      				},
+      				{
+      					"key": "star",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/star.png"
+      				},
+      				{
+      					"key": "progress",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/progress.png"
+      				},
+      				{
+      					"key": "answerNone",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/answer_none.png"
+      				},
+      				{
+      					"key": "ledNone",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/led_none.png"
+      				},
+      				{
+      					"key": "answerFail",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/answer_fail.png"
+      				},
+      			],
+      			"spritesheet": [
+      				{
+      					"key": "playBtn",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/play_btn.png",
+      					"width": 90,
+      					"height": 90
+      				},
+      				{
+      					"key": "playingBtn",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/playing.png",
+      					"width": 90,
+      					"height": 90
+      				},
+      				{
+      					"key": "answerBg",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/answer_bg.png",
+      					"width": 320,
+      					"height": 300
+      				},
+      				{
+      					"key": "answerSuccess",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/answer_success.png",
+      					"width": 271,
+      					"height": 375
+      				},
+      				{
+      					"key": "textsBg",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/texts_bg.png",
+      					"width": 1000,
+      					"height": 70
+      				},
+      				{
+      					"key": "wordsBg",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/words_bg.png",
+      					"width": 300,
+      					"height": 70
+      				},
+      				{
+      					"key": "submitBtn",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/submit_btn.png",
+      					"width": 200,
+      					"height": 80
+      				},
+      				{
+      					"key": "ledSuccess",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/led_success.png",
+      					"width": 1920,
+      					"height": 245
+      				},
+      				{
+      					"key": "rabbitNone",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/rabbit_none.png",
+      					"width": 210,
+      					"height": 327
+      				},
+      				{
+      					"key": "rabbitSuccess",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/rabbit_success.png",
+      					"width": 210,
+      					"height": 327
+      				},
+      				{
+      					"key": "rabbitFail",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/rabbit_fail.png",
+      					"width": 210,
+      					"height": 327
+      				},
+      				{
+      					"key": "clownNone",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/clown_none.png",
+      					"width": 434,
+      					"height": 390
+      				},
+      				{
+      					"key": "clownSuccess",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/clown_success.png",
+      					"width": 434,
+      					"height": 390
+      				},
+      				{
+      					"key": "clownFail",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/clown_fail.png",
+      					"width": 434,
+      					"height": 390
+      				}
+      			],
+      			"audio": [
+      				{
+      					"key": "bgMusic",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/audio/bg.mp3"
+      				},
+      				{
+      					"key": "answerFailMusic",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/audio/answer_fail.mp3"
+      				},
+      				{
+      					"key": "answerSuccessMusic",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/audio/answer_success.mp3"
+      				},
+      				{
+      					"key": "clickMusic",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/audio/click.mp3"
+      				},
+      				{
+      					"key": "completeFailMusic",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/audio/complete_fail.mp3"
+      				},
+      				{
+      					"key": "completeSuccessMusic",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/audio/complete_success.mp3"
+      				}
+      			],
+      			"atlas": [
+      			]
+      		}
+      	},
+      	"finish": {
+      		"type": {
+      			"image": [
+      				{
+      					"key": "finishLight",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/finish_light.png"
+      				},
+      				{
+      					"key": "finishBody",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/finish_body.png"
+      				}
+      			],
+      			"spritesheet": [
+      				{
+      					"key": "finishLed",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/finish_led.png",
+      					"width": 609,
+      					"height": 749
+      				},
+      				{
+      					"key": "finishBtn",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/finish_btn.png",
+      					"width": 158,
+      					"height": 58
+      				},
+      				{
+      					"key": "finishColours",
+      					"url": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/finish_colours.png",
+      					"width": 60,
+      					"height": 60
+      				}
+      			],
+      			"atlas": [
+      				{
+      					"key": "finishPerfect",
+      					"image": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/finish_perfect.png",
+      					"data": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/finish_perfect.json"
+      				},
+      				{
+      					"key": "finishSuccess",
+      					"image": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/finish_success.png",
+      					"data": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/finish_success.json"
+      				},
+      				{
+      					"key": "finishFail",
+      					"image": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/finish_fail.png",
+      					"data": "http://172.16.19.158:3000/images/html/g2_review/assets/images/theme_circus/finish_fail.json"
+      				}
+      			]
+      		}
+      	}
+      }
+    </script>
+    <script src="../../../js/html/project/g2_review/pind.js?v=1"></script>
+    <script src="../../../js/html/project/g2_review/phaser.min.js?v=1"></script>
+    <script src="/js/html/project/g2_review/vendor.js" id="seajsnode" type="text/javascript"></script>
+  </body>
+</html>

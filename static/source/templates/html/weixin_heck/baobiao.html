@@ -9,17 +9,16 @@
     <title>欢迎下载51Talk App</title>
     <link rel="stylesheet" type="text/css" href="/css/html/weixin_heck/common.css">
     <link rel="stylesheet" type="text/css" href="/css/html/weixin_heck/tableStyle.css">
-<link rel="stylesheet" type="text/css" href="/css/html/weixin_heck/layui.css">
+    <link rel="stylesheet" type="text/css" href="/css/html/weixin_heck/layui.css">
 </head>
 <body data-init="baobiao">
-<div class="pad20px content-width80 clearfix">
+<div class="pad20px content-width90 clearfix">
     <div class="page-title">KPI报表</div>
-
-    <div class="ptb20 clear-fix">
-        <div class="guide-link fl">
+    <div class="ptb20 top-group">
+        <div class="guide-link">
             全部 > <a href="#">某团队</a> > <a href="#">某人</a>
         </div>
-        <div class="set-pos fr">
+        <div class="set-pos">
             <div class="select-time">
                 <div class="layui-form-pane">
                     <div class="layui-form-item">
@@ -33,6 +32,18 @@
                     </div>
                 </div>
             </div>
+            <form action="baobiao.html?da=1&a=5">
+                <div class="by-time fl">
+                    <a class="by-time-btn" data-time="1">按日</a>
+                    <a class="by-time-btn cut-sel" data-time="2">按周</a>
+                    <a class="by-time-btn" data-time="3">按月</a>
+                </div>
+                <div class="click-time">
+                    <input  class="pre-time" value="1">
+                    <input id="setTime" name="setTime" class="time-day" type="text" value="" readonly>
+                    <input  class="next-time" value="1">
+                </div>
+            </form>
             <div class="add-btn">
                 <a href="javascript:;" id="countBtn">统计查询</a>
             </div>

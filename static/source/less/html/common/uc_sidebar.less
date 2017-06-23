@@ -1,0 +1,232 @@
+@charset "utf-8";
+
+// Common
+@import "uc_common.less";
+
+/**
+ * 右侧边栏
+ * @file：   sidebar.less
+ * @author:  xyyjk（maxingguo@51talk.com）
+ * @update:  2014-12-24
+ * @note:    学员动态、网站动态、人气新老师、每日新老师、排行榜
+ */
+
+.g-sd-r{
+  .box1{
+    padding: 16px 22px 0 22px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid @borderColor;
+    h3{
+      height: 22px;
+      line-height: 22px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+  .box2{
+    margin-bottom: 10px;
+    border: 1px solid @borderColor;
+  }
+  .box3{
+    margin-bottom: 10px;
+  }
+}
+//级别证书
+.m-cer-index{
+  .f-pr;
+  .u-mask{
+    .f-pa;
+    left:0;
+    top:0;
+    width:190px;
+    height: 135px;
+    margin:5px;
+    background: #fff;
+    .fm-opacity(80);
+    p{
+      line-height: 22px;
+      font-size: 13px;
+      color: #000;
+      margin: 45px 17px 0;
+    }
+  }
+}
+//学员动态
+.m-ls-stut{
+  ul{ padding-bottom: 14px; }
+  li{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    line-height: 20px;
+    border-bottom: 1px dashed @borderColor;
+    &:last-child,&.last{ border-bottom-style: none; }
+  }
+  .txt{ .f-toe; }
+}
+//网站动态
+.m-ls-web{
+  ul{ padding-bottom: 14px; }
+  li{
+    height: 16px;
+    line-height: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    a{ display: block; }
+    .f-toe{ _width: 154px; }
+    &.img{
+      @indent: 48px;
+      height: @indent;
+      padding: 5px 0 5px @indent;
+      img{
+        float: left;
+        width: @indent;
+        height: @indent;
+        margin-left: -@indent;
+      }
+      a,span{
+        position: relative;
+        left: 58px;
+        float: left;
+        width: 106px;
+        margin-left: -@indent;
+      }
+    }
+  }
+}
+//排行榜
+.m-ls-rank{
+  h3{
+    a,i{
+      float: left;
+      color: #aaa;
+    }
+    i{
+      margin-left: 4px;
+      margin-right: 4px;
+    }
+    .crt{ color: @hoverColor; }
+  }
+  h4{
+    .f-csd; .f-usn;
+    .fm-radius(2px;);
+    height: 23px;
+    margin-top: 7px;
+    _margin-top: 2px;
+    border: 1px solid @textColor;
+    span{
+      float: left;
+      width: 50%;
+      height: 23px;
+      line-height: 23px;
+      color: @textColor;
+      text-align: center;
+      &.crt{
+        color: #fff;
+        background-color: @textColor;
+      }
+    }
+  }
+  ul{
+    padding-top: 9px;
+    padding-bottom: 15px;
+  }
+  li{    
+    height: 20px;
+    line-height: 20px;
+    padding: 2px 0 2px 66px;
+    .f-fl{
+      position: relative;
+      left: -66px;
+      width: 60px;
+      color: @linkColor;
+      i,em{ float: left; }
+      i{ width: 18px; }
+      em{
+        .f-wwb;
+        width: 42px;
+        height: 20px;
+        overflow: hidden;
+      }
+    }
+    .f-fr{
+      width: 100%;
+      margin-left: -66px;
+      em{
+        margin-left: 3px;
+        margin-right: 3px;
+      }
+    }
+  }
+}
+
+//每日老师推荐
+.m-sticky{
+  @indent: 60px;
+  .wrap{
+    height: @indent;
+    padding: 12px 0 24px @indent + 8 ;
+  }
+  .img{
+    float: left;
+    width: @indent - 2;
+    height: @indent - 2;
+    margin-left: -@indent - 8;
+    border: 1px solid #e6e6e6;
+    &:hover{ border-color: @hoverColor; }
+  }
+  .cnt{
+    position: relative;
+    left: @indent;
+    float: left;
+    width: 86px;
+    margin-left: -@indent;
+    dt{
+      line-height: 22px;
+      padding-bottom: 2px;
+      font-size: 14px;
+      color: #1e1e1f;
+    }
+    dd{ line-height: 18px; }
+  }
+}
+//人气老师
+.m-ls-pop{
+  @height: 40px;
+  ul{ padding-bottom: 14px; }
+  li{
+    height: @height;
+    line-height: @height;
+    padding: 10px 30px 10px @height + 10;
+    border-bottom: 1px dashed @borderColor;
+    &.last{ border-bottom: none; }
+  }
+  .img{
+    float: left;
+    width: @height - 2;
+    margin-left: -@height - 10;
+    font-size: 0;
+    border: 1px solid #e6e6e6;
+    &:hover{ border-color: @hoverColor; }
+    img{ display: block; }
+  }
+  .txt{
+    .f-toe;
+    position: relative;
+    left: @height + 10;
+    float: left;
+    width: 74px;
+    margin-left: -@height - 10;
+  }
+  .num{
+    position: relative;
+    right: -28px;
+    float: right;
+    width: 28px;
+    color: @hoverColor;
+    text-align: right;
+  }
+}
+
+//侧边栏广告
+.m-ad-sm{}

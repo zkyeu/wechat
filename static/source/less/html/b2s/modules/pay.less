@@ -1,0 +1,361 @@
+.chang_color{
+	.relative;
+	height: auto;
+	background-color: #fff;
+	padding:20px 40px;
+	overflow: hidden;
+	.cls-icon{
+      .absolute;
+      top: 0;
+      left: 5px;
+      right: 0;
+      height: 22px;
+      background: url("@{imgMpath}class_top_bj.png") repeat-x;
+      display: inline-block;
+    }
+    .your_order{
+    	color:#012345;
+    	font-size: 18px;
+    	padding-left:15px;
+    }
+    .order{
+    	width:360px;
+    	border-bottom:1px solid #dee9f0;
+    	padding: 10px 15px 15px;
+        .class_payfor{
+            height:40px;
+            line-height: 30px;
+        }
+    	p{
+    		height:35px;
+    		line-height: 35px;
+    		font-size: 14px;
+    		span{
+    			float:right;
+                color:#a3a9b1;
+                font-size: 13px;
+    		}
+            .no_price{
+                color:#a3a9b1;
+                font-size: 13px;
+                text-decoration: line-through;
+            }
+    		.big_size{
+    			font-size: 18px;
+    		}
+    	}
+    	.class_free{
+    		line-height: normal;
+            font-size: 18px;
+            .suc_free{
+                font-size: 14px;
+            }
+    	}
+    }
+    .order_total{
+    	height:45px;
+    	line-height: 45px;
+    	width:360px;
+    	padding:0 15px;
+    	span{
+    		float:right;
+    	}
+    	.order-value{
+    		font-size: 20px;
+    		color:#ff4800;
+    	}
+    }
+    .pay_table{
+    	margin-top:11px;
+    	.three_table{
+    		height:37px;
+    		border-bottom:1px solid #dee9f0;
+    		position:relative;
+    		.posi_table{
+    			position:absolute;
+    			left:0;
+    			top:0;
+    			height:35px;
+    			span{
+	    			height:35px;
+	    			line-height: 35px;
+	    			padding:0 20px;
+	    			font-size: 14px;
+	    			display: inline-block;
+	    			background:#eff7fc;
+	    			border-top:1px solid #dee9f0;
+	    			border-right:1px solid #dee9f0;
+	    			border-bottom:1px solid #dee9f0;
+	    			cursor: pointer;
+    			}
+    			.have_bot{
+					border-bottom:1px solid #fff;
+					border-top:2px solid #ffbe23;
+					background:#fff;
+    			}
+    			.first{
+    				border-left:1px solid #dee9f0;
+    			}
+    		}
+    		
+    	}
+		.pay_tit{
+			overflow: hidden;
+			margin-bottom:65px;
+			.boxs{
+					width:230px;
+					height:55px;
+					margin-top:30px;
+					float:left;
+					span{
+						display: inline-block;
+						width:25px;
+						height:50px;
+						background-image:url("@{imgMpath}pay_rad.png");
+						background-repeat: no-repeat;
+						background-position: -35px 23px;
+						float:left;
+					}
+					div{
+						width:185px;
+						height:53px;
+						float:left;
+						border:1px solid #dee9f0;
+					}
+					.cli{
+						border:1px solid #ffbe23;
+					}
+					.cli_on{
+						background-position: 3px 23px;
+					}
+				}
+			
+		}
+	   .pay_bot{
+		 	position: absolute;
+		 	right:40px;
+		 	bottom:30px;
+		 	.liji_pay{
+				display: inline-block;
+				width:193px;
+				height:35px;
+				line-height: 35px;
+				text-align: center;
+				color:#fff;
+				font-size: 18px;
+				border-radius: 3px;
+				background:#ff8200;
+			}
+			span{
+				padding:0 20px 0 40px;
+				background: url("@{imgMpath}checked.png") 10px no-repeat; 
+			}
+		}
+	}
+/*银行转账页面*/
+	.union_pay{
+				font-size: 14px;
+				
+				.remitt_text{
+					line-height: 75px;
+					margin:70px 0 45px 0;
+					}
+				table{
+					width:100%;
+						.first_text{
+							width:100%;
+							background:#efefef;
+							color:#878686;
+							}
+						.one_line{
+								height:40px;
+								line-height: 40px;
+								}
+						tr{
+							text-align: center;
+
+						}
+						td{
+							height:50px;
+							line-height: 50px;
+							border:1px solid #dbdee0;
+						}
+					}		
+			}
+
+
+	/*微信支付页*/
+	.wei_text{
+		position: absolute;
+		left:0;
+		top:6px;
+		line-height: 70px;
+		font-size: 14px;
+		background:#f5f5f5;
+		height:70px;
+		width:100%;
+		padding-left:55px;
+		span{
+			color:#ff4200;
+		}
+	}
+	.wei_text1{
+		margin-top:70px;
+		padding-left:10px;
+		color:#ff7e00;
+		font-size: 20px;
+
+	}
+	.wei_code{
+		float:left;
+		width:215px;
+		height:250px;
+		border:2px solid #c8c8c8;
+		margin-left:100px;
+		margin-top:50px;
+		img{
+			margin:40px;
+		}
+		span{
+			font-size: 12px;
+			color:#646464;
+			display: inline-block;
+			text-align: center;
+			width:100%;
+		}
+	}
+	.phone{
+		width:384px;
+		height:519px;
+		background:url("@{imgMpath}phone.png") ;
+		float:right;
+		margin-right:140px;
+	}
+	/*支付成功页面*/
+	.suc_pay{
+		width:425px;
+		height:320px;
+		//border-bottom:1px solid #dee9f0;
+		padding-bottom:10px;
+		margin:65px auto 20px;
+		.pay_suc_code{
+			width: 140px;
+			height: 140px;
+			background:url("@{imgMpath}pay_suc_code_bg.png") no-repeat;
+			margin:35px auto 0;
+			padding:12px 18px;
+			img{
+				width: 140px;
+				height: 140px;
+			}
+		}
+		.notice_code{
+			font-size: 14px;
+			padding-top: 15px;
+			text-align: center;
+		}
+		.suc_pay_text1{
+			color:#000;
+			font-size: 30px;
+			background:url("@{imgMpath}bg_suc.png") no-repeat;
+			height:70px;
+			line-height: 70px;
+			padding-left:95px;
+			margin-bottom:20px;
+		}
+		.suc_pay_cont{
+				line-height: 65px;
+				padding:0 25px;
+				height:65px;
+				text-align: center;
+				overflow: hidden;
+				font-size: 18px;
+		}
+
+	}
+	.pay_order{
+			width:195px;
+			margin:0px auto;
+			height: 35px;
+			a{
+				width:195px;
+				height: 35px;
+				line-height: 35px;
+				background:#ff8200;
+				display: inline-block;
+				color:#fff;
+				text-align: center;
+				font-size: 18px;
+				float:right;
+				border-radius: 3px;
+			}
+		}
+}
+
+
+/*弹层*/
+.tanceng{
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	background:#cccccc;
+	filter: Alpha(opacity=5); /* IE */   
+	-moz-opacity:0.5;    /* FF 主要是为了兼容老版本的FF */
+	opacity:0.5; 
+
+}
+.center{
+		position: absolute;
+		top:50%;
+		left:50%;
+		width:655px;
+		height:325px;
+		margin-left: -358px;
+		margin-top: -192px;
+		z-index: 1000;
+		border-radius: 10px;
+		padding:30px;
+		background-color:#f7f7f7;
+		.pay_res{
+			color:#ff7e00;
+			font-size: 16px;
+		}
+		.res_text{
+			width:600px;
+			height:220px;
+			color:#012345;
+			font-size: 16px;
+			background:#fff;
+			line-height: 220px;
+			text-align: center;
+		}
+		a{
+			display: inline-block;
+			width:155px;
+			height:35px;
+			text-align: center;
+			line-height: 35px;
+			font-size: 16px;
+			border:1px solid #ff8200;
+			border-radius: 3px;
+		}
+		.problem{
+			color:#ff8200;
+			margin:45px 20px 0 148px;
+		}
+		.pay_done{
+			color:#fff;
+			background: #ff8200;
+		}
+		.close{
+			position: absolute;
+			right:0;
+			top:0;
+			background: url("@{imgMpath}close.png") -0px -2px no-repeat;			
+			width:53px;
+			height:53px;
+			cursor: position;
+		}
+}
+

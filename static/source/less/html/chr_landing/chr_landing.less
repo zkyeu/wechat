@@ -1,0 +1,172 @@
+@charset "utf-8";
+body,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,p,input,select,textarea,form{margin: 0; padding: 0;}
+ul,ol{list-style: none;}
+img{border: none;}
+input,select,textarea{outline: none; border:none; background-color: transparent;}
+textarea{resize: none;}
+a{text-decoration: none;}
+h1,h2,h3,h4,h5,h6{font-size: 1em;}
+em{font-style: normal;}
+@import "../common/base.less";
+/*浮动*/
+.fl{float: left;}
+.fr{float: right;}
+.clearfix:after,
+.clearfix:before{content: "";display: table;}
+.clearfix:after{clear: both;}
+.clearfix{*zoom:1;}
+.centerWidth{
+    margin: 0px auto;
+    width: 736px;
+}
+.chr-icon{
+  background: url('@{imgPath}/cr_icon.png');
+  display: inline-block;    
+}
+@imgPath: "../../../images/html/chr_landing";
+body{
+    background-color: #b6d7ff;  
+}
+.chr-nav{
+    background: url('@{imgPath}/chr_bj.jpg') top center no-repeat;
+    margin: 0px auto;
+    height: 1486px;
+    width: 1000px;
+   .nav-img{
+    width: 100%;
+    height: 400px;
+   } 
+   .chr-login{
+    position: relative;
+    width: 716px;
+    height: 200px;
+    background: url('@{imgPath}/intro_1.png')  no-repeat;
+        .login-lt{
+            position: absolute;
+            top: 109px;
+            left: 37px;
+            width: 140px;
+            height: 100px;
+            background-position: 0 1px;
+        }
+        p{  
+            font-size: 30px;
+            color: #fff;
+            text-align: center;
+            padding-top: 125px;
+        }
+        .login-rt{
+            position: absolute;
+            top: 109px;
+            right: 37px;
+            width: 77px;
+            height: 100px;
+            background-position: 0 1px;
+        }
+
+   }
+   .chr-show{
+        position: relative;
+        width: 716px;
+        height: 220px;
+        background: url('@{imgPath}/intor_5.png')  no-repeat;
+        margin-top: 30px;
+        padding-top:120px;
+        ul{
+            overflow: hidden;
+            font-size: 16px;
+            color: #fff;
+            margin:0 50px;
+            li{
+                line-height: 44px;
+                .show-img{
+                    width: 40px;
+                    height: 30px;
+                    line-height: 30px;
+                    background-position: -231px -263px;
+                    text-align: center;    
+                }   
+            }
+        }
+        .show-bj{
+            position: absolute;
+            top: 256px;
+            right: -77px;
+            width: 160px;
+            height: 220px;
+            background-position: -5px -109px;
+            z-index: 5;
+        }
+    }
+    .iphone-show{
+        position: relative;
+        width: 717px;
+        height: 201px;
+        background: url('@{imgPath}/intor_6.png')  no-repeat;
+        margin-top: 30px;
+        padding-top:120px;
+        ul{
+            overflow: hidden;
+            font-size: 16px;
+            color: #fff;
+            margin-left: 80px;
+            width: 340px;
+            li{
+                line-height: 44px; 
+            }
+            .show-li{
+                line-height: 25px;
+            }
+        }
+        .ipo-bj{
+                width: 200px;
+                height: 230px;
+                position: absolute;
+                top: 64px;
+                right: 46px;
+                background-position: -362px -331px;
+                .nav-img{
+                    position: absolute;
+                    top: 70px;
+                    right: 34px;
+                    width: 130px;
+                    height: 130px;
+                    text-align: center;
+                }
+        }
+        .show-bj{
+                width: 145px;
+                height: 200px;
+                position: absolute;
+                top: 200px;
+                left: -25px;
+                background-position: -176px -23px;
+        }  
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

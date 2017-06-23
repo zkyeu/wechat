@@ -1,0 +1,148 @@
+@import "modules/swiper-3.3.1.min.less";
+// 图片path
+@imgPath: '../../../images/wap/b2s/';
+//background: url("@{imgPath}start_bg.png") no-repeat;
+body {
+    font-family: Arial, "Microsoft YaHei";
+}
+input, button, select, textarea, dl, dd, dt{
+    font-family: Arial, "Microsoft YaHei";
+}
+#fontSizeLoding{
+    width: 100%;
+    min-height: 100%;
+    max-width: 640px;
+    background-color: rgba(255, 255, 255, 1);
+    position: fixed;
+    top:0; 
+    z-index: 999;
+    img{
+        width: 30px;
+        height: 30px;
+        margin-left: -15px;
+        margin-top: -15px;
+        position: absolute;
+        top:50%;
+        left:50%;
+
+    }
+}
+.seeScore-wrap{
+    min-height: 100%;
+    background: #eaf9ff;
+    .seeScore-con{
+        &>img{
+            width: 100%;
+        }
+    }
+    .seeScore-btn{
+        height: 1.2rem;
+    }
+    .seeScore-pay{
+        width: 100%;
+        max-width: 640px;
+        height: 1.2rem;
+        border-top: 1px solid #0082b3;
+        background: #2196e5;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+        .seeScore-payL{
+            width: 60%;
+            height: 1.2rem;
+            background: #2196e5;
+            .price{
+                padding-left: 0.3rem;
+                line-height: 1.2rem;
+                .font1{
+                    font-size: 0.3rem;
+                    color: #fff;
+                }
+                .font2{
+                    font-size: 0.38rem;
+                    color: #fff;
+                }
+                .font3{
+                    font-size: 0.22rem;
+                    color: #a6d5f5;
+                    text-decoration: line-through;
+                }
+            }
+            .prompt{
+                padding: 0.24rem 0.3rem 0.24rem 0;
+                line-height: 0.36rem;
+                font-size: 0.28rem;
+                color: #a6d5f5;
+            }
+        }
+        .seeScore-payR{
+            width: 40%;
+            height: 1.2rem;
+            line-height: 1.2rem;
+            background: #54cd42;
+            text-align: center;
+            font-size: 0.36rem;
+            color: #fff;
+        }
+    }
+}
+
+
+.disnone{
+    display: none;
+}
+.pay-dialog-wrap{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 200%;
+    background: rgba(0, 0, 0, 0.7);
+}
+.pay-dialog {
+    // display: none;
+    width: 100%;
+    height: 4.1rem;
+    background: #f7f7f7;
+    z-index: 999;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    .pay-dialog-tit {
+        height: 3.2rem;
+        .pay-dialog-tit-top {
+            line-height: 1.12rem;
+            font-size: 0.36rem;
+            color: #384756;
+            text-align: center;
+        }
+        .pay-dialog-tit-con {
+            text-align: center;
+            span {
+                display: inline-block;
+                width: 2rem;
+                font-size: 0.28rem;
+                color: #999999;
+                text-align: center;
+                img {
+                    width: 1.14rem;
+                    height: 1.14rem;
+                    display: inline-block;
+                    margin-bottom: 0.2rem;
+                }
+                i {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    .pay-dialog-but {
+        height: 0.92rem;
+        line-height: 0.92rem;
+        border-top: 1px solid #e0e0e0;
+        text-align: center;
+        font-size: 0.32rem;
+        color: #384756;
+    }
+}

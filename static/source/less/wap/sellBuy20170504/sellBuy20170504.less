@@ -1,0 +1,58 @@
+@charset "utf-8";
+@import "../common/base.less";
+@imgPath:"../../../images/wap/sellBuy20170504/";
+a {
+	outline: none;
+}
+body {
+	min-width: 320px;
+	max-width:640px;
+	margin: 0 auto;
+	-webkit-tap-highlight-color: transparent;
+	background: #ededed ;
+}
+.sellBuy{
+	.top{
+		 padding:6.5rem 0 6.0rem;
+		 background:#fff;
+		.title{
+				text-align: center;
+				color:#ff8200;
+				font-size: 1.8rem;
+				i{
+					display: inline-block;
+					width: 2.35rem;
+					height:1.7rem;
+					background: url("@{imgPath}ok.png") no-repeat center top;
+					background-size: cover;
+				}
+				em{
+					display: inline-block;
+					width:1.0rem;
+				}
+			}
+			.teachGroup{
+				display: block;
+				width: 14.5rem;
+				height: 19.3rem;
+				margin:0 auto;
+			}
+	}
+	.footer{
+		padding: 2.5rem 0 2.8rem;
+		text-align: center;
+		font-size: 1.2rem;
+		.title{
+			font-size: 1.5rem;
+			color:#333;
+		}
+		.time{
+			margin:1.3rem 0 1.5rem;
+			color:#999;
+			line-height: 1.8rem;
+		}
+		.last{
+			color:#ff8200;
+		}
+	}
+}

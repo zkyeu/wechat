@@ -1,0 +1,194 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ */
+body {
+  font-family: 'Microsoft YaHei', STXihei, MingLiu;
+  background: #ecf8ff;
+}
+cite,
+i,
+s,
+b {
+  font-style: normal;
+  font-weight: normal;
+}
+body,
+ul,
+li,
+p,
+dl,
+dt,
+dd,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+  padding: 0px;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+li {
+  list-style: none;
+}
+img {
+  border: 0px;
+}
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+input {
+  font-family: 'Microsoft YaHei', STXihei, MingLiu;
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.header {
+  width: 100%;
+  text-align: center;
+}
+.header img {
+  width: 10.0rem;
+  height: auto;
+}
+section {
+  width: 9.2rem;
+  margin: 0 auto;
+}
+section .select-box {
+  background: #fff;
+  border-radius: 0.32rem;
+  padding: 0.96rem;
+  margin-bottom: 0.56rem;
+}
+section .select-box .title {
+  text-align: center;
+  color: #00c6ff;
+  font-size: 0.4rem;
+  font-weight: bold;
+  margin-bottom: 1.173333rem;
+}
+section .select-box .list {
+  width: 100%;
+  display: -webkit-flex;
+  /* Safari */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+section .select-box .list .item {
+  width: 2.16rem;
+  height: 1.44rem;
+  border-radius: 0.24rem;
+  border: #00c6ff solid 0.026667rem;
+  margin-bottom: 0.453333rem;
+  text-align: center;
+  line-height: 1.44rem;
+  font-size: 0.373333rem;
+  color: #888888;
+  font-weight: bold;
+}
+section .select-box .list .item label {
+  width: 100%;
+}
+section .select-box .list .item label input {
+  display: none;
+}
+section .select-box .list .active {
+  color: #fff;
+  background: #00c6ff;
+}
+section button {
+  height: 1.2rem;
+  line-height: 1.2rem;
+  color: #fff;
+  text-align: center;
+  width: 7.866667rem;
+  font-size: 0.373333rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.6rem;
+  background: #ff505b;
+  display: block;
+  margin: 0 auto;
+}
+section .title2 {
+  font-size: 0.453333rem;
+  text-align: center;
+  margin-top: 1.386667rem;
+  color: #00c6ff;
+}
+section dl dt {
+  color: #00c6ff;
+  padding-top: 0.933333rem;
+  padding-bottom: 0.533333rem;
+  font-size: 0.373333rem;
+  font-weight: bold;
+}
+section dl dd {
+  color: #4b5c71;
+  font-size: 0.32rem;
+  line-height: 0.533333rem;
+}
+.footer img {
+  width: 10.0rem;
+  height: 1.706667rem;
+  margin-bottom: -1rem;
+}
+.t1,
+.t2,
+.t3 {
+  position: absolute;
+  z-index: -1;
+}
+.t1 {
+  top: 2.533333rem;
+  width: 1.493333rem;
+  height: 1.72rem;
+}
+.t2 {
+  width: 2.666667rem;
+  height: 1.72rem;
+  right: 0;
+  top: 13.24rem;
+}
+.t3 {
+  width: 1.853333rem;
+  height: 1.013333rem;
+  left: 0;
+  top: 18rem;
+}

@@ -8,10 +8,9 @@
         </div>
     </div> -->
     <input type="hidden" data-nick='winfred' wechat-id='1' id="data-self">
-    <div class="friend_comment"><h5>通知</h5><h6>新增评论<em>3</em>条</h6></div>
     <input type="hidden" data-id="" id="data-id">
     <input type="hidden" wechat-id="" id="wechat-id">
-    <div class="clear-fix heck_center" >
+    <div class="clear-fix heck_center" data-init="lazyLoad">
         <div class="content">
             
             <h5 class="content-head">朋友圈</h5>
@@ -44,13 +43,29 @@
                         <div class="icon image_icon" id="browse">
                             图片
                         </div>
-                        <div class="show-lable" style="display: none;">
-                            <p>朋友圈可见标签：</p>
-                            <span onselectstart="return false" label-value="all">全部可见</span>
-                            <span onselectstart="return false" label-value="已付费">已付费</span>
-                            <span onselectstart="return false" label-value="未付费1">未付费1</span>
-                            <span onselectstart="return false" label-value="未付费2">未付费2</span>
-                            <span onselectstart="return false" label-value="未付费3">未付费3</span>
+                        <div class="show-lable">
+                            <dt>朋友圈可见标签：</dt>
+                            <dd>
+                                <span onselectstart="return false" label-value="all">全部可见</span>
+                                <span onselectstart="return false" label-value="已付费">已付费</span>
+                                <span onselectstart="return false" label-value="未付费1">未付费sdf1</span>
+                                <span onselectstart="return false" label-value="未付费2">未付sdffsdf费2</span>
+                                <span onselectstart="return false" label-value="未付费3">未付费3</span>
+                                <span onselectstart="return false" label-value="未付费4">未付费4</span>
+                                <span onselectstart="return false" label-value="未付费5">未付费5</span>
+                                <span onselectstart="return false" label-value="未付费6">未付费6</span>
+                                <span onselectstart="return false" label-value="未付费7">未付费6</span>
+                                <span onselectstart="return false" label-value="未付费8">未付费6</span>
+                                <span onselectstart="return false" label-value="未付费9">未付费6</span>
+                                <span onselectstart="return false" label-value="未付费10">未付费6</span>
+                                <span onselectstart="return false" label-value="未付费11">未付费6</span>
+                                <span onselectstart="return false" label-value="未付费12">未付费6</span>
+                                <span onselectstart="return false" label-value="未付费13">未付费16</span>
+                                <span onselectstart="return false" label-value="未付费14">未付费`6</span>
+                                <span onselectstart="return false" label-value="未付费15">未付费`6</span>
+                                <span onselectstart="return false" label-value="未付费16">未付费`6</span>
+                            </dd>
+
                         </div>
 
                         <div class="up_img">
@@ -75,7 +90,7 @@
                         <!-- 有新的消息 -->
                         <li data-url="http://www.baidu.com">
                             <div class="message_user_info">
-                                <img src="<%= imagessrc%>cchead.jpg" />
+                                <img _src="<%= imagessrc%>cchead.jpg" />
                         
                                 <div class="user_info">
                                     <h6>winfred<span class="is_like"></span></h6>
@@ -85,12 +100,12 @@
                             </div>
                             
                             <div class="message_user_tt">
-                                <img src="<%= imagessrc%>border_thumb.jpg" class="message_user_img" />
+                                <img _src="<%= imagessrc%>border_thumb.jpg" class="message_user_img" />
                             </div>
                         </li>
                         <li data-url="http://www.baidu.com">
                             <div class="message_user_info">
-                                <img src="<%= imagessrc%>cchead.jpg" />
+                                <img _src="<%= imagessrc%>cchead.jpg" />
                         
                                 <div class="user_info">
                                     <h6>winfred</h6>
@@ -105,7 +120,7 @@
                         </li>
                         <li data-url="http://www.baidu.com">
                             <div class="message_user_info">
-                                <img src="<%= imagessrc%>cchead.jpg" />
+                                <img _src="<%= imagessrc%>cchead.jpg" />
                         
                                 <div class="user_info">
                                     <h6>winfred</h6>
@@ -120,7 +135,7 @@
                         </li>
                         <li data-url="http://www.baidu.com">
                             <div class="message_user_info">
-                                <img src="<%= imagessrc%>cchead.jpg" />
+                                <img _src="<%= imagessrc%>cchead.jpg" />
                         
                                 <div class="user_info">
                                     <h6>winfred</h6>
@@ -135,7 +150,7 @@
                         </li>
                         <li data-url="http://www.baidu.com">
                             <div class="message_user_info">
-                                <img src="<%= imagessrc%>cchead.jpg" />
+                                <img _src="<%= imagessrc%>cchead.jpg" />
                         
                                 <div class="user_info">
                                     <h6>winfred</h6>
@@ -150,7 +165,7 @@
                         </li>
                         <li data-url="http://www.baidu.com">
                             <div class="message_user_info">
-                                <img src="<%= imagessrc%>cchead.jpg" />
+                                <img _src="<%= imagessrc%>cchead.jpg" />
                         
                                 <div class="user_info">
                                     <h6>winfred</h6>
@@ -176,21 +191,19 @@
                     <div class="personal">
                         <a href="https://www.baidu.com">
                             <div class="layer"></div>
-                            <img src="<%= imagessrc%>cchead.jpg">
+                            <img _src="<%= imagessrc%>cchead.jpg">
                         </a>
                     </div>
                 </h6>
 
                 <!--视频-->
-                <div class="already_mes already_img_mes" wechat-mid="hh">
-                    <img src="<%= imagessrc%>cchead.jpg" class="person_detail" />
+                <div class="already_mes already_img_mes" wechat-mid="hh" data-wechat="123456">
+                    <img _src="<%= imagessrc%>cchead.jpg" class="person_detail" />
                     <div class="mes_detail">
                         <h4>winfred</h4>
                         <p class="mes_detail_text">如果有道云笔记登录或同</p>
                         <div class="share-video">
-                            <video controls >
-                                <source src="http://testtest1117.oss-cn-beijing.aliyuncs.com/5cf78580ead04253f5145ccb803abe2a.mp4">
-                            </video>
+                            <video controls _src="http://testtest1117.oss-cn-beijing.aliyuncs.com/5cf78580ead04253f5145ccb803abe2a.mp4"></video>
                         </div>
                         <!--评论-->
                         <div class="comment_people">
@@ -237,15 +250,15 @@
                     </div>
                 </div>
                 <!--文章-->
-                <div class="already_mes already_img_mes" wechat-mid="hh">
-                    <img src="<%= imagessrc%>cchead.jpg" class="person_detail" />
+                <div class="already_mes already_img_mes" wechat-mid="hh" data-wechat="4321">
+                    <img _src="<%= imagessrc%>cchead.jpg" class="person_detail" />
                     <div class="mes_detail">
                         <h4>winfred</h4>
                         <p class="mes_detail_text">如果有道云笔记登录或记的...</p>
                         <div class="share-article">
                             <a href="javascript:;">
                                 <dt>
-                                    <img src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=4044263107,811056825&fm=58">
+                                    <img _src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=4044263107,811056825&fm=58">
                                 </dt>
                                 <dd>
                                     <p>交互产品中的音效设计</p>
@@ -280,20 +293,20 @@
                 </div>
                 <!--正常消息-->
                 <div class="already_mes already_img_mes" wechat-mid="hh">
-                    <img src="<%= imagessrc%>cchead.jpg" class="person_detail" />
+                    <img _src="<%= imagessrc%>cchead.jpg" class="person_detail" />
                     <div class="mes_detail">
                         <h4>winfred</h4>
                         <p class="mes_detail_text">如果有道云笔...</p>
                         <ul class="clear-fix">
-                            <li><img src="<%= imagessrc%>account_img2.png"></li>
-                            <li><img src="<%= imagessrc%>account_img2.png"></li>
-                            <li><img src="<%= imagessrc%>account_img2.png"></li>
-                            <li><img src="<%= imagessrc%>account_img2.png"></li>
-                            <li><img src="<%= imagessrc%>account_img2.png"></li>
-                            <li><img src="<%= imagessrc%>account_img2.png"></li>
-                            <li><img src="<%= imagessrc%>account_img2.png"></li>
-                            <li><img src="<%= imagessrc%>account_img2.png"></li>
-                            <li><img src="<%= imagessrc%>account_img2.png"></li>
+                            <li><img _src="<%= imagessrc%>account_img2.png"></li>
+                            <li><img _src="<%= imagessrc%>account_img2.png"></li>
+                            <li><img _src="<%= imagessrc%>account_img2.png"></li>
+                            <li><img _src="<%= imagessrc%>account_img2.png"></li>
+                            <li><img _src="<%= imagessrc%>account_img2.png"></li>
+                            <li><img _src="<%= imagessrc%>account_img2.png"></li>
+                            <li><img _src="<%= imagessrc%>account_img2.png"></li>
+                            <li><img _src="<%= imagessrc%>account_img2.png"></li>
+                            <li><img _src="<%= imagessrc%>account_img2.png"></li>
                         </ul>
                     
                         <!--评论-->
@@ -340,7 +353,7 @@
 
 
                 <div class="already_mes already_img_mes" wechat-mid="hh">
-                    <img src="<%= imagessrc%>cchead.jpg" class="person_detail" />
+                    <img _src="<%= imagessrc%>cchead.jpg" class="person_detail" />
                     <div class="mes_detail">               
                         <h4>winfred</h4>
                         <p class="mes_detail_text">如果有道云笔记登录...</p>
@@ -391,13 +404,12 @@
                 <h6 class="already_send_mes_type">其他内容</h6>
                 <!--视频-->
                 <div class="already_mes already_img_mes" wechat-mid="hh">
-                    <img src="<%= imagessrc%>cchead.jpg" class="person_detail" />
+                    <img _src="<%= imagessrc%>cchead.jpg" class="person_detail" />
                     <div class="mes_detail">
                         <h4>winfred</h4>
                         <p class="mes_detail_text">如果有道云笔记登录或同</p>
                         <div class="share-video">
-                            <video controls >
-                                <source src="http://testtest1117.oss-cn-beijing.aliyuncs.com/5cf78580ead04253f5145ccb803abe2a.mp4">
+                            <video controls _src="http://testtest1117.oss-cn-beijing.aliyuncs.com/5cf78580ead04253f5145ccb803abe2a.mp4">
                             </video>
                         </div>
                         <!--评论-->
@@ -441,14 +453,14 @@
                 </div>
                 <!--文章-->
                 <div class="already_mes already_img_mes" wechat-mid="hh">
-                    <img src="<%= imagessrc%>cchead.jpg" class="person_detail" />
+                    <img _src="<%= imagessrc%>cchead.jpg" class="person_detail" />
                     <div class="mes_detail">
                         <h4>winfred</h4>
                         <p class="mes_detail_text">如果有道云笔记登录或记的...</p>
                         <div class="share-article">
                             <a href="javascript:;">
                                 <dt>
-                                    <img src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=4044263107,811056825&fm=58">
+                                    <img _src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=4044263107,811056825&fm=58">
                                 </dt>
                                 <dd>
                                     <p>交互产品中的音效设计</p>
@@ -479,29 +491,29 @@
                 </div>
                 <!--正常消息-->
                 <div class="already_mes already_img_mes" wechat-mid="hh">
-                    <img src="<%= imagessrc%>cchead.jpg" class="person_detail" />
+                    <img _src="<%= imagessrc%>cchead.jpg" class="person_detail" />
                     <div class="mes_detail">
                         <h4>winfred</h4>
                         <p class="mes_detail_text">如果有道云笔...</p>
                         <ul class="clear-fix">
                             <li>
                                 <a rel=gallery href="<%= imagessrc%>account_img2.png">
-                                    <img src="<%= imagessrc%>account_img2.png">
+                                    <img _src="<%= imagessrc%>account_img2.png">
                                 </a>
                             </li>
                             <li>
                                 <a rel=gallery href="<%= imagessrc%>account_img2.png">
-                                    <img src="<%= imagessrc%>account_img2.png">
+                                    <img _src="<%= imagessrc%>account_img2.png">
                                 </a>
                             </li>
                             <li>
                                 <a rel=gallery href="<%= imagessrc%>account_img2.png">
-                                    <img src="<%= imagessrc%>account_img2.png">
+                                    <img _src="<%= imagessrc%>account_img2.png">
                                 </a>
                             </li>
                             <li>
                                 <a rel=gallery href="<%= imagessrc%>account_img2.png">
-                                    <img src="<%= imagessrc%>account_img2.png">
+                                    <img _src="<%= imagessrc%>account_img2.png">
                                 </a>
                             </li>
                         </ul>
@@ -549,7 +561,7 @@
 
 
                 <div class="already_mes already_img_mes" wechat-mid="hh">
-                    <img src="<%= imagessrc%>cchead.jpg" class="person_detail" />
+                    <img _src="<%= imagessrc%>cchead.jpg" class="person_detail" />
                     <div class="mes_detail">               
                         <h4>winfred</h4>
                         <p class="mes_detail_text">如果有道云笔记登录...</p>
@@ -605,7 +617,7 @@
         <div class="show-circle">
             <span><em>&times;</em><i></i></span>
             <h5><span>朋友圈库</span></h5>
-            <iframe class="ifra" src="CircleLibrary.html"></iframe>
+            <iframe class="ifra" data-src="CircleLibrary.html"></iframe>
         </div>
     </div>
     <!--<div class="footer"></div>-->
@@ -624,6 +636,15 @@
     </div>
 </div>
 
+<!--<div class="wait-layer">-->
+    <!--<div class="flex-layer">-->
+        <!--<div class="spinner">-->
+            <!--<div class="bounce1"></div>-->
+            <!--<div class="bounce2"></div>-->
+            <!--<div class="bounce3"></div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
 
 </body>
 <% include ../common/bottom.ejs %>

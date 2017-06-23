@@ -1,0 +1,119 @@
+@charset "utf-8";
+@import "../common/base.less";
+@imgPath: "../../../images/html/flb_popup/";
+
+.attention-popup{
+    width: 390px;
+    margin:2% auto 0;
+    padding:25px;
+    border:1px solid #ccc;
+    position: relative;
+    h3{
+        color:#ff8201;
+        font-size:16px;
+        margin-bottom:20px;
+    }
+    p{
+      margin-bottom:85px;
+    }
+    .p_close{
+      display: block;
+      height:11px;
+      width: 11px;
+      background: url("@{imgPath}p_close.png") no-repeat center;
+      position: absolute;
+      top:11px;
+      right:11px;
+    }
+    .p_button{
+        display:block;
+        width: 250px;
+        height:35px;
+        background: #ff8201;
+        border-radius: 4px;
+        font-size: 16px;
+        color:#fff;
+        line-height: 35px;
+        text-align: center;
+        margin:85px auto 40px;
+    }
+}
+.attention-popup2{
+  margin-top:2%;
+}
+.audit-popup{
+  width: 580px;
+  margin:2% auto;
+  border:1px solid #ccc;
+  padding:25px;
+  position: relative;
+  h3{
+    color:#ff8201;
+    font-size: 16px;
+    margin-bottom:22px;
+  }
+  .p_close{
+      display: block;
+      height:11px;
+      width: 11px;
+      background: url("@{imgPath}p_close.png") no-repeat center;
+      position: absolute;
+      top:11px;
+      right:11px;
+    }
+  .category,.category_child{
+    height:45px;
+    span,select{
+      display: inline-block;
+      font-size: 13px;
+    }
+    span{
+      width: 75px;
+    }
+    select{
+      width: 208px;
+      height:25px;
+      border:1px solid #ccc;
+    }
+  }
+  .objective{
+    height:145px;
+    span,textarea{
+      display: inline-block;
+      font-size: 13px;
+      float: left;
+    }
+    span{
+      width: 75px;
+    }
+    textarea{
+      width: 412px;
+      height:99px;
+      border:1px solid #ccc;
+      padding:13px;
+    }
+  }
+  .category_child{
+    height: 62px;
+  }
+  .audit-button{
+    width: 420px;
+    margin:20px auto 30px;
+    a{
+      display: inline-block;
+      height:34px;
+      width: 184px;
+      border:1px solid #ff8e19;
+      line-height: 34px;
+      text-align: center;
+      margin:0 10px;
+      border-radius: 4px;
+      font-size: 16px;
+      color:#ff8e19;
+    }
+    .Submit{
+      background:#ff8e19;
+      color:#fff;
+    }
+  }
+}

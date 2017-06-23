@@ -1,0 +1,249 @@
+@import:'../common/reset_pro.less';
+@import "../common/common.less";
+@o_y:#ffb412;
+@b_3:#333333;
+@b_9:#999999;
+@orange:ff8200;
+@imgPath:"../../../../images/html/www_ph/careers/";
+
+
+/****************首页********************/
+.m_content{
+	min-width: 1200px;
+	.m_wrap{
+		.floor_1{/**轮播图**/
+			position: relative;
+			height:608px;
+			width:100%;
+			overflow: hidden;
+			.banner{
+				position: absolute;
+				left:0;
+				top:0;
+				z-index:1;
+				width:100%;
+				height:100%;
+				li{
+					img{
+						position: relative;
+				    left: 50%;
+				    -webkit-transform: translateX(-50%);
+				    -ms-transform: translateX(-50%);
+				    transform: translateX(-50%);
+				    max-width: none;
+				    height: 100%;
+					}
+				}
+			}
+			.shadow_popup{
+				position: absolute;
+				left:0;
+				top:0;
+				z-index:2;
+				background: #000;
+				opacity:.3;
+				filter:alpha(opacity=30);
+				width:100%;
+				height:100%;
+			}
+			.show_msg{
+				position: absolute;
+				left:0;
+				top:0;
+				z-index:3;
+				width:100%;
+				height:100%;
+				text-align: center;
+					color: #fff;
+				h1{
+					padding-top:296px;
+					font-size:50px;
+					font-weight: bold;
+					line-height: 50px;
+				}
+				p{
+					padding-top:33px;
+					font-size:22px;
+				}
+				a{
+					display: inline-block;
+					width:200px;
+					height:55px;
+					line-height: 55px;
+					font-size:25px;
+					font-weight: bold;
+					background: @o_y;
+					border-radius:22px;
+					margin-top:40px;
+				}
+			}
+		}
+		
+	}
+}
+.top_fixed{
+	position: fixed;
+	left:0;
+	top:0;
+	z-index:999;
+	width:100%;
+	opacity:0.9;
+	filter:alpha(opacity=90);
+	background: #fff ;
+}
+//careers--details-home
+.m_content{
+	.m_wrap{ 
+		.m_title{
+			text-align: center;
+			color:#333;
+			font-size: 40px;
+		}
+		.floor_2{
+			position: relative;
+			overflow: hidden;
+			width: 100%;
+			margin-top:-290px;
+			z-index: 4;
+			height:290px;
+			.floor_2In{
+				width: 1100px;
+				margin:0 auto;
+				overflow: hidden;
+				padding:70px 50px 0;
+				height:220px;
+				background: #fff;
+				border-top-right-radius: 8px;
+				border-top-left-radius:8px;
+				h1{
+					font-size: 40px;
+					font-weight: bold;
+					color:#333;
+					text-align: center;
+				}
+				p{
+					color:#696969;
+					line-height: 30px;
+					margin-top:45px;
+					// font-weight: bold;
+					font-size: 18px;
+				}
+			}
+		}
+		 
+	}
+	.c_wrap{
+		position: relative;
+		width: 100%;
+		background:#f3f3f3;
+		color:#696969;
+		font-size: 18px;
+		overflow: hidden;
+		.floor_3{
+			width: 1100px;
+			margin:0 auto;
+			padding:0 50px;
+			overflow: hidden;
+			background: #fff;
+			.c_line{
+				height:0;
+				width: 100%;
+				border:1px solid #f3f3f3;
+				margin-bottom:40px;
+			}
+			h2{
+				color:#ffb412;
+				font-weight: bold;
+				font-size: 24px;
+				margin-bottom:28px;
+				line-height: 32px;
+			}
+			p{
+				line-height: 30px;
+
+			}
+			.c_starp{
+				text-indent:30px;
+			}
+			.c_line{
+				margin:50px 0 40px;
+			}
+			.c_lineTop{
+				margin-top:0;
+			}
+		}
+	}
+	.b_wrap{
+		width: 100%;
+		background:#f3f3f3 url("@{imgPath}c_bg.jpg") no-repeat center bottom;
+		min-height:742px;
+		.floor_4{
+			position: relative;
+			width: 1200px;
+			background: #fff;
+			margin:0 auto;
+			border-bottom-left-radius: 8px;
+			border-bottom-right-radius: 8px;
+			.c_btn{
+				width:100%;
+				height:50px;
+				text-align: center;
+				padding:60px 0 40px;
+				a{
+					display: inline-block;
+					height:50px;
+					width: 215px;
+					background:
+					#ffb81f;
+					border-radius: 50px;
+					line-height: 50px;
+					text-align: center;
+					color:#fff;
+					font-size: 20px;
+					box-shadow: 0px 4px 18px rgba(255, 180, 18, 0.3);
+				}
+			}
+		}
+		.floor_5{
+				position: relative;
+				width: 1156px;
+				margin:0 auto;
+				padding:90px 22px 80px;
+				overflow: hidden;
+				h1{
+					font-size: 40px;
+					font-weight: bold;
+					color:#333;
+					text-align: center;
+				}
+				ul{
+					overflow: hidden;
+					margin-top:75px;
+					li{
+						float: left;
+						width: 196px;
+						text-align: center;
+						margin-right:122px;
+						img{
+							display: inline-block;
+						}
+						h3{
+							color:#333;
+							font-size: 24px;
+							margin:36px 0 16px;
+						}
+						p{
+							color:#696969;
+							font-size: 14px;
+							line-height: 24px;
+						}
+					}
+					.last{
+						margin-right:0;
+					}
+				}
+		}
+	}
+}
+
+ 

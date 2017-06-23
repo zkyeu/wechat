@@ -1,0 +1,475 @@
+@charset "utf-8";
+@import "../common/www/base.less";
+body,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,p,input,select,textarea,form{margin: 0; padding: 0;}
+ul,ol{list-style: none;}
+img{border: none;}
+input,select,textarea{outline: none; border:none; background-color: transparent;}
+textarea{resize: none;}
+a{text-decoration: none;}
+h1,h2,h3,h4,h5,h6{font-size: 1em;}
+em{font-style: normal;}
+
+
+/*浮动*/
+.fl{float: left;}
+.fr{float: right;}
+.clearfix:after,
+.clearfix:before{content: "";display: table;}
+.clearfix:after{clear: both;}
+.clearfix{*zoom:1;}
+@imgPath: "../../../images/html/stage_summary";
+/* 头部 */
+.g-head{
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    .m-logo{
+        width: 1000px;
+        height: 80px;
+        margin-left: auto;
+        margin-right: auto;
+        .logo{
+            float: left;
+            margin-top: 17px;
+        }
+        .link{
+            float: right;
+            height: 80px;
+            line-height: 80px;
+            font-size: 16px;
+            display: inline-block;
+            color: #ff8200;
+        }
+    }
+}
+/* 第一部分 个人信息 */
+.m-list1{
+    position: relative;
+    width: 100%;
+    height: 203px;
+    background: url('@{imgPath}/m-list1_bg.jpg') center center no-repeat;
+    .m-show1{
+        width: 405px;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        .head_photo{
+            width: 80px;
+            height: 80px;
+            margin: 24px auto 13px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            border-radius: 40px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .person_message{
+            width: 100%;
+            border:1px solid transparent;
+            height: 64px;
+            box-shadow: 0 1px 1px #da6f00;
+            li{
+                position: relative;
+                height: 64px;
+                float: left;
+                color: #fff;
+                p{
+                    text-align: center;
+                }
+                .tit01{
+                    font-size: 14px;
+                    margin-top: 5px;
+                }
+                .tit02{
+                    margin-top: 5px;
+                    font-size: 16px;
+                    height: 30px;
+                    line-height: 30px;
+                    span{
+                        font-size: 24px;
+                    }
+                }
+            } 
+            .w-123{
+                width: 123px;
+            }
+            .line{
+                height: 48px;
+                margin-top: 11px;
+                border-right:1px solid #fff;
+                opacity: 0.3;
+                filter:alpha(opacity=30);
+            }
+        }
+    }
+}
+/* 第二部分 can do 能力 */
+.m-list2{
+    position: relative;
+    width: 100%;
+    height: 510px;
+    background: url('@{imgPath}/m-list2_bg.jpg') center center no-repeat;
+    .list2-tit{
+        margin-top: 20px;
+        text-align: center;
+        font-size: 16px;
+        color: #ff8200;
+    }
+    .m-show2-wrap{
+        position: absolute;
+        bottom: 0;
+        margin-left: 147px;
+        width: 804px;
+        height: 414px;
+        color: #fff;
+        background: url('@{imgPath}/macbook_bg.png') center center no-repeat;  
+        .m-show2{
+            position: absolute;
+            left: 83px;
+            top: 27px;
+            width: 460px;
+            height: 313px;
+            padding: 25px 40px 0;
+            word-wrap:break-word;
+            word-break:break-all;
+            .tit01{margin:auto;display: block;}
+            .tit02{font-size: 16px;line-height: 24px;margin-top: 15px;}
+            .tit03{font-size: 13px;line-height: 20px;margin-top: 20px;}
+        } 
+    }
+}
+/* 第三部分 achievement 成就 */
+.m-list3{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 849px;
+    background: url('@{imgPath}/m-list3_bg.jpg') center center no-repeat;
+    .list3-tit{
+        width: 395px;
+        height: 44px;
+        margin: 63px auto;
+        background: url('@{imgPath}/list3-titbg.png') center center no-repeat;
+    }
+    /* 第三部分第一个ul，悬停此ul 里的 li 下面的ul对应显示 */
+    .m-ul01{
+        width: 100%;
+        height: 150px;
+        margin-top: 40px;
+        li{
+            cursor: pointer;
+            float: left;
+            width: 250px;
+            height: 150px;
+            p{
+                text-align: center;
+            }
+            .tit01{
+                font-family: Arail;
+                font-size: 30px;
+                span{font-size: 80px;}
+            }
+            .tit02{font-size: 16px;}
+            .tit03{font-size: 14px;}
+        }
+        /* 不同li的不同文字颜色 */
+        .m-li01{color:#ff8200;}
+        .m-li02{color:#0491ea;}
+        .m-li03{color:#1bbc17;}
+        .m-li04{color:#ff2c8a;}
+    }
+    /* 第三部分悬停要显示的ul的样式 */
+    .ul-wrap{
+        display: none;
+        position: relative;
+        width: 100%;
+        height: 436px;
+        margin-top: 20px;
+        /* 三角箭头 */
+        .sanjiao{
+            display: inline-block;
+            position: absolute;
+            width: 30px;
+            height: 18px;
+            z-index: 10;
+        }
+        /* 第三部分的第二类ul(要显示的四个ul) */
+        /* 公共ul的样式 */
+        .m-show{
+            width: 950px;
+            height: 386px;
+            padding: 25px 15px 25px 25px;
+            border-radius: 10px;
+        }
+        /* 控制每个ul的背景颜色颜色，和与其他不同的ul的样式 */
+       .m-show01{
+            z-index: 10;
+            width: 100%;
+            height: 436px;
+            overflow: hidden;
+            border-radius: 10px;
+            background-color: #ff8200;
+            li{
+                position: relative;
+                float: left;
+                width: 249px;
+                height: 217px;
+                color: #fff;
+                border-right: 1px solid #2a2a2a;
+                border-bottom: 1px solid #2a2a2a;
+                p{text-align: center;font-size: 24px;}
+                .tit01{margin-top: 62px;}
+                .tit02{margin-top: 20px;}
+            }
+        } 
+        .m-show02{background-color: #0491ea;}
+        .m-show03{background-color: #1bbc17;}
+        .m-show04{background-color: #ff2c8a;}
+        // m-show02、m-show03、m-show04里面ul的设置
+        .public-ul{
+            width: 100%;
+            li{
+                margin-bottom: 17px;
+                width: 100%;
+                font-size: 20px;
+                color: #fff;
+                p{
+                    line-height: 40px;
+                }
+                .h-fontsize{
+                    font-size: 18px;
+                }
+                span{
+                    color: #fff600;
+                }
+            }
+            .example{
+                font-size: 24px;
+            }
+        }
+    }
+    /* 第三部分 设置第一个ul显示，还有每个ul里的三角箭头的位置 */
+    .ul-wrap-01{display: block;.sanjiao{ left: 107px;top: -18px;background: url('@{imgPath}/sanjiao01.png')no-repeat;}}
+    .ul-wrap-02{.sanjiao{ left: 359px;top: -18px;background: url('@{imgPath}/sanjiao02.png')no-repeat;}}
+    .ul-wrap-03{.sanjiao{ left: 613px;top: -18px;background: url('@{imgPath}/sanjiao03.png')no-repeat;}}
+    .ul-wrap-04{.sanjiao{ left: 855px;top: -18px;background: url('@{imgPath}/sanjiao04.png')no-repeat;}}
+}
+/* 第四部分 */
+.m-list4{
+    // font-family: Helvetica Light;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 679px;
+    background: url('@{imgPath}/m-list4_bg.jpg') center center no-repeat;
+    .list4-tit01{
+        display: block;
+        margin: 50px auto 0;
+    }
+    .list4-tit02{
+        margin-top: 50px;
+        color: #3f3f3f;
+        text-align: center;
+        font-size: 24px;
+    }
+    .m-ul03{
+        margin-left: -24px;
+        margin-top: 15px;
+        li{
+            float: left;
+            width: 232px;
+            height: 162px;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-left: 24px;
+            margin-top: 24px;
+            p{
+                padding-left: 20px;
+                padding-right: 20px;
+                word-wrap:break-word;
+                word-break:break-all;
+                text-align: center;
+                color: #fff;
+                font-size: 22px;
+            }
+            .tit01{
+                margin-top: 40px;
+            }
+            .tit02{
+                margin-top: 15px;
+            }
+            .tit03{
+                margin-top: 30px;
+            }
+            .tit04{
+                margin-top: 5px;
+            }
+        }
+        .m-li01{
+            background-color: #1bbc17;
+        }
+        .m-li02{
+            background-color: #ff8200;
+        }
+        .m-li03{
+            background-color: #009cff;
+        }
+        .m-li04{
+            background-color: #ff2c8a;
+        }
+        .m-li05{
+            background-color: #009cff;
+        }
+        .m-li06{
+            background-color: #ff2c8a;
+        }
+        .m-li07{
+            background-color: #1bbc17;
+        }
+        .m-li08{
+            background-color: #ff8200;
+        }
+    }
+}
+/* 第五部分 */
+.m-list5{
+    // font-family: Helvetica Light;
+    position: relative;
+    width: 100%;
+    height: 620px;
+    background: url('@{imgPath}/m-list5_bg.jpg') center center no-repeat;
+    .m-ul04{
+        width: 1000px;
+        height: 300px;
+        margin: 48px auto 0;
+        li{
+            position: relative;
+            float: left;
+            width: 500px;
+            height: 300px;
+            p{
+                color: #fff;
+                font-size: 30px;
+                text-align: center;
+                padding-left: 20px;
+                padding-right: 20px;
+                span{
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    font-size: 50px;
+                }
+            }
+            .details{margin-top: 17px;}
+            .img01{
+                position: relative;
+                top: 0;
+                left: 50%;
+                width: 134px;
+                height: 149px;
+                margin-left: -67px;
+            }
+            .img02{
+                position: relative;
+                top: 0;
+                left: 50%;
+                width: 171px;
+                height: 147px;
+                margin-left: -85.5px;
+            }
+        }
+    }
+    .text01{
+        margin-top: 65px;
+        padding-left: 5px;
+        padding-right: 5px;
+        text-align: center;
+        font-size: 16px;
+        color: #fff;
+    }
+    .text02{
+        margin-top: 20px;
+        text-align: center;
+        font-size: 16px;
+        color: #fff; 
+    }
+    .text03{
+        position: absolute;
+        width: 100%;
+        bottom: 15px;
+        text-align: center;
+        font-size: 16px;
+        color: #fff; 
+    }
+}
+/* 第一部分到第五部分的统一设置 */
+.m-wrap{
+    position: relative;
+    overflow: hidden;
+    width: 1000px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* 尾部 */
+.g-footer{
+    z-index: 999;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #3b342e;
+    overflow: hidden;
+    .u-btn{
+        position: absolute;
+        left: 50%;
+        top: 20px;
+        margin-left: -300px;
+        display: inline-block;
+        width: 600px;
+        height: 60px;
+        background-color: #ff8200;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 30px;
+        line-height: 60px;
+        text-align: center;
+    }
+}
+/* 分享样式设置 */
+#stage_share{
+    .share{
+        width: 130px;
+        margin-left: 15px;
+        margin-top: 8px;
+    }
+    a{
+        margin: 0;
+        padding: 0;
+        width: 26px;
+        height: 26px;
+    }
+   .bds_weixin{
+        background: url('@{imgPath}/share_bg.png') center center no-repeat;
+        background-position: 0 0;
+   } 
+   .bds_tsina{
+        margin-left: 7px;
+        background: url('@{imgPath}/share_bg.png') center center no-repeat;
+        background-position: -34px 0;
+   }
+   .bds_sqq{
+        margin-left: 7px;
+        background: url('@{imgPath}/share_bg.png') center center no-repeat;
+        background-position: -68px 0;
+   }
+   .bds_qzone{
+        margin-left: 7px;
+        background: url('@{imgPath}/share_bg.png') center center no-repeat;
+        background-position: -102px 0;
+   }
+} 

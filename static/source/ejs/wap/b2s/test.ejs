@@ -1,0 +1,18 @@
+<% include ../common/top_b2s_n.ejs %>
+    <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>test.css">
+</head>
+<body data-init="test" class="">
+    <audio controls="" class="js_audio" src="" data-audioarr='["http://records.cloud.chivox.com/574520abb7749b8a6d2c8294.mp3","http://records.cloud.chivox.com/5745203b2bedad45592c8ebb.mp3"]'></audio>
+<!-- loading -->
+<div id="fontSizeLoding">
+    <img src="<%= imagessrc%>eff_loading.gif">
+</div>
+<script type="text/javascript">
+window.onload = function(){
+    document.documentElement.style.fontSize = document.body.clientWidth / 7.5 + "px";
+    document.getElementById("fontSizeLoding").style.display = "none";
+}
+</script>
+</body>
+<!--公共尾部结束-->
+<% include ../common/bottom.ejs %>

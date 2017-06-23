@@ -477,6 +477,11 @@ img {
   display: block;
   margin: 0 0 9px 0;
 }
+.wrap-nav .logo_usa i {
+  width: 222px;
+  height: 50px;
+  background: url("http://static.51talk.com/static/images/html/www_new/common/log_usa.png");
+}
 .wrap-nav .nav {
   position: relative;
 }
@@ -680,9 +685,23 @@ img {
 .rt-side-bar .bar-list .w-wx .b-up {
   background-position: -32px 0;
 }
+.rt-side-bar .bar-list .mobile {
+  height: 114px;
+}
 .rt-side-bar .bar-list .mobile .b-up {
   height: 114px;
   background-position: -64px 0;
+}
+.rt-side-bar .ipad {
+  position: relative;
+  width: 32px;
+  height: 96px;
+}
+.rt-side-bar .ipad .b-up {
+  float: left;
+  width: 32px;
+  height: 96px;
+  background: url(../../../../images/html/www_new/common/ipad.png?v=nTzSmxGviu5qiBKgRakwOQ%3D%3D) 0 0 no-repeat;
 }
 .rt-side-bar .b-hover {
   position: absolute;

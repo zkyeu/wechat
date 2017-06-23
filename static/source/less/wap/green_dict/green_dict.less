@@ -1,0 +1,336 @@
+@charset "utf-8";
+@import "base.less";
+/*
+* amy着陆页
+* @file：   ln20150914.less
+* @author:  zhangtian（huhaili@51talk.cn）
+* @update:  2015-10-08
+* @note:    绿wap端着陆页
+*/
+/*amy着陆页*/
+
+
+
+
+section{
+	height: auto;
+	background-color: #fff;
+	min-width: 320px;
+    max-width: 640px;
+    margin:0 auto;
+
+}
+.top{
+	position: relative;
+	width: 100%;
+	padding-top: 1rem;
+	.topImg{
+		width:100%;
+		margin-bottom: 1.6rem;
+	}
+	.OneS_logIn{
+		margin-bottom: 2.2rem;
+		right: 5rem;
+		bottom:3.4rem;
+		li{
+			text-align: center;
+			height: 3.4rem;
+			width: 100%;
+			margin-bottom: 1.5rem;
+			display: -webkit-box;
+			-webkit-box-pack: center;
+			-webkit-box-align: center;
+			display: -ms-flexbox;
+			-ms-flex-align: center;top
+			-ms-flex-pack: center;
+
+			/*display: -moz-box;
+			-moz-box-align: center;
+			-moz-box-pack: center;*/
+
+		}
+		input,a{
+			outline: none;
+			background-color: #fff;
+			height: 100%;
+			/*width: 100%;*/
+			width: 17.2rem;
+			border:1px solid #cfcfcf;
+			border-bottom-width:2px; 
+			border-top-color:#a6a6a6;
+			border-bottom-color:#cfcfcf;
+			border-left-color: #b8b8b8;
+			border-right-color: #b8b8b8;
+			border-radius: 5px;
+			padding:0 4rem;
+			text-align: center;
+			display: -ms-flexbox;
+			-ms-flex-align: center;
+			-ms-flex-pack: center;
+			display: -moz-box;
+			-moz-box-align: center;
+			-moz-box-pack: center;
+			display: -webkit-box;
+			-webkit-box-pack: center;
+			-webkit-box-align: center;
+		}
+		input{
+			font-size: 1.6rem;
+			color: #444;
+		}
+		a{
+			font-size: 2rem;
+			background-color: #c5cf4b;
+			color: #fff;
+			border:none;
+			padding:0.3rem 4rem;
+		}
+	}
+}
+.center{
+	padding-top: 1.7rem;
+
+	li{
+		position: relative;
+		text-align: center;
+		padding-bottom: 2.7rem;
+		i{
+			width: 3.55rem;
+			height: 3.55rem;
+
+			position: absolute;
+			font-size: 1.5rem;
+			background-color: #c5cf4b;
+			border-radius: 50%;
+			color: #fff;
+			font-weight: bold;
+			font-style:italic ;
+			display: -ms-flexbox;
+			-ms-flex-align:center;
+			-ms-flex-pack:center;
+
+			display: -moz-box;
+			-moz-box-align:center;
+			-moz-box-pack:center;
+
+			display: -webkit-box;
+			-webkit-box-pack:center;
+			-webkit-box-align:center;
+
+			line-height: 3.55rem;
+			/*display: flexbox;
+			flex-pack:center;
+			flex-align:center;*/
+			&.right{
+				left: 56%;
+				top:-0.5rem;
+			}
+			&.left{
+				left: 34%;
+				top:-0.5rem;
+			}
+		}
+	}
+		
+	p{
+		font-size: 1.4rem;
+		line-height: 1.8rem;
+		/*margin-bottom: 3.5rem;*/
+		color: #a4ab4f;
+	}
+	img{
+		width: 11rem;
+		height: 11rem;
+		margin-bottom: 0.4rem;
+		border-radius: 100%;
+	}
+	.borderG{
+		display: inline-block;
+		width: 11rem;
+		height: 11rem;
+		border:#e7eac3 0.5rem solid;
+		border-radius: 100%;
+	}
+}
+.bg_c{
+	background-color: #f6f7ec;
+}
+.centTit{
+	color: #a4ab4f;
+	text-align: center;
+	font-size: 1.8rem;
+	margin-bottom: 3.5rem;
+	.c_t_b{
+		display: inline-block;
+		border-bottom: 2px solid #a4ab4f;
+		position: relative;
+	}
+	.c_t_bs{
+		position: absolute;
+		width: 1.7rem;
+		height: 1rem;
+		bottom: -1rem;
+		left: 50%;
+		margin-left: -0.85rem;
+		background: url("@{imgPath}wap/green_dict/lnbg3.png") left top no-repeat;
+		-webkit-background-size: 100% 100%;
+		background-size: 100% 100%;
+	}
+}
+.centerT{
+	padding:1.7rem 2rem 0;
+	dl{
+		overflow: hidden;
+		margin-bottom: 2.3rem;
+	}
+	dt{
+		float: left;
+	}
+	dd{
+		color: #3a3a3a;
+		padding-top: 0.9rem;
+		.centTL{
+			height: 2rem;
+			line-height: 2rem;
+		}
+		.centL{
+			font-size: 1.4rem;
+			float: left;
+			width: 25%;
+			font-weight: bold;
+			position: relative;
+			text-align: center;
+			background-color:#e6e6e6;
+			margin-right: 0.5rem;
+		}
+		.centTL_r,.centB_r{
+			position: absolute;
+			width: 0.75rem;
+			height: 2rem;
+		}
+		.centTL_r{
+			background:url("@{imgPath}wap/green_dict/lnbg1.gif") left top no-repeat;
+			right:-0.75rem;
+			top:0;
+			z-index: 3;
+			-webkit-background-size: 100% 100%;
+			background-size: 100% 100%;
+		}
+		.centB{
+			float: left;
+			width: 46%;
+			height: 100%;
+			position: relative;
+			text-align: center;
+			border-left:none;
+			background:url("@{imgPath}wap/green_dict/lnbg4.gif") left top no-repeat;
+			-webkit-background-size: 100% 100%;
+			background-size: 100% 100%;
+
+		}
+		.centText{
+			line-height: 1.8rem;
+			margin-top: 1.1rem;
+			padding-left: 7.7rem;
+		}
+	}
+	img{
+		border:0.5rem solid #e6e6e6;
+		width: 6.4rem;
+	}
+}
+footer{
+	width: 100%;
+	background-color: #f6f7e8;
+	text-align: center;
+	p{
+		padding:1rem 6rem;
+		.bout-btn{
+			float: left;
+			height: 3.4rem;
+			line-height: 3.4rem;
+			width: 100%;
+			background-color: #c5cf4b;
+			color: #fff;
+			border-radius: 5px;
+			text-align: center;
+			font-size: 1.5rem;
+		}
+		&:last-child{
+			margin-top: 2rem;
+			font-size: 0.9rem;
+			padding:1rem 0;
+		}
+	}
+}
+@media screen and (min-width: 375px) {
+	.top{
+		.OneS_logIn{
+			input{
+				width: 20rem;
+			}
+	    
+           a{
+           	 width: 20rem;
+          
+	       }		
+		}  
+	} 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -234,14 +234,14 @@ html {
   width: 2rem;
 }
 .wap-main .header .time {
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  bottom: 0.86rem;
   width: 8.14rem;
   background: url(../../../images/wap/520qingshao_pintuan_43061/time_bg.png?v=vT2Yyw%2FEZdbPiLUAbSRc%2Bw%3D%3D) no-repeat;
   text-align: center;
   background-size: cover;
   height: 0.86rem;
-  left: 0.93rem;
+  margin: 0 auto;
 }
 .wap-main .header .time span {
   display: inline-block;
@@ -273,7 +273,7 @@ html {
 }
 .wap-main .content .invite-header div {
   float: left;
-  width: 7.2rem;
+  width: 6.2rem;
 }
 .wap-main .content .invite-header div p {
   font-size: 0.4rem;
@@ -413,7 +413,7 @@ html {
 }
 .wap-main .content .courses-container .courses img {
   width: 4rem;
-  margin-right: 0.2rem;
+  margin-right: 0.1rem;
   border: solid 0.1rem transparent;
 }
 .wap-main .content .courses-container .courses img.active {

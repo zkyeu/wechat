@@ -1,0 +1,312 @@
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ * author: 
+ */
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+[v-cloak] {
+  visibility: hidden;
+}
+.tag-manager {
+  background: #fff;
+  background-size: cover;
+}
+.tag-manager .tag-manager-in {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+.tag-manager .tag-manager-in .project_list {
+  float: left;
+  width: 119px;
+  border-right: 1px solid #dcdcdc;
+  height: 100%;
+  color: #646464;
+  text-align: center;
+}
+.tag-manager .tag-manager-in .project_list h4 {
+  height: 50px;
+  line-height: 50px;
+  font-size: 14px;
+  border-bottom: 1px solid #e3e2dd;
+}
+.tag-manager .tag-manager-in .project_list ul li {
+  position: relative;
+  line-height: 40px;
+  font-size: 14px;
+  border-left: 10px solid #fff;
+  color: #696969;
+  border-bottom: #dcdcdc solid 1px;
+  cursor: pointer;
+}
+.tag-manager .tag-manager-in .project_list ul li:hover {
+  color: #252525;
+  background: #f0efee;
+  border-left: 10px solid #fcc800;
+}
+.tag-manager .tag-manager-in .project_list ul li.active {
+  color: #252525;
+  background: #f0f0f0;
+  border-left: 10px solid #fcc800;
+}
+.tag-manager .tag-manager-in .data_list {
+  position: absolute;
+  left: 140px;
+  right: 20px;
+  top: 20px;
+  bottom: 20px;
+}
+.tag-manager .tag-manager-in .data_list dt a {
+  display: inline-block;
+  width: 80px;
+  line-height: 30px;
+  background: #fcc800;
+  color: #252525;
+  text-align: center;
+  border-radius: 999px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.tag-manager .tag-manager-in .data_list dd {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 40px;
+  bottom: 0;
+}
+.tag-manager .tag-manager-in .data_list dd .data_list_con {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 31px;
+  bottom: 0;
+  overflow-y: auto;
+}
+.tag-manager .tag-manager-in .data_list dd table {
+  width: 100%;
+  text-align: center;
+}
+.tag-manager .tag-manager-in .data_list dd table thead {
+  background: #393939;
+  color: #fff;
+}
+.tag-manager .tag-manager-in .data_list dd table tbody tr:hover {
+  background: #e2e2e2;
+}
+.tag-manager .tag-manager-in .data_list dd table tbody td {
+  text-align: center;
+  color: #6e6e6e;
+  font-size: 13px;
+  padding: 0 10px;
+  vertical-align: middle;
+}
+.tag-manager .tag-manager-in .data_list dd table tbody td em {
+  margin: 0 5px;
+  cursor: pointer;
+  background: #fcc800;
+  border-radius: 999px;
+  display: inline-block;
+  padding: 0 12px;
+  line-height: 22px;
+  color: #252525;
+}
+.tag-manager .tag-manager-in .data_list dd table td {
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #ccc;
+}
+.sel_foot {
+  height: 45px;
+  background-color: #ebebeb;
+  padding-right: 14px;
+  text-align: right;
+  padding-top: 15px;
+}
+.sel_foot span {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 20px;
+  height: 28px;
+  line-height: 28px;
+  margin-left: 10px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 4px;
+}
+.sel_foot span.sel_cancel {
+  color: #646464;
+  border: 1px solid #afafaf;
+}
+.sel_foot span.sel_sure,
+.sel_foot span.sel_isSure {
+  color: #fff;
+  border: 1px solid #ff8000;
+  background-color: #ff8000;
+}
+.sel_foot span.sel_sure.sel_nosure,
+.sel_foot span.sel_isSure.sel_nosure {
+  cursor: default;
+  border: 1px solid #c1c1c1;
+  background-color: #C9C9C9;
+}
+.sel_foot span.sel_sure em,
+.sel_foot span.sel_isSure em {
+  vertical-align: middle;
+}
+.sel_foot span.sel_isSure {
+  cursor: default;
+  border-radius: 0;
+}
+.sel_foot span.sel_set {
+  background: #ff8000;
+  border: 1px solid #ff8000;
+}
+.tag-edit {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+.tag-edit-in {
+  width: 380px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 6px;
+  padding: 0 20px;
+  font-size: 14px;
+  color: #252525;
+  line-height: 40px;
+}
+.tag-edit-in h4 {
+  text-align: center;
+  font-size: 18px;
+  color: #ffaa00;
+  position: relative;
+  line-height: 46px;
+  padding-top: 6px;
+  margin-bottom: 10px;
+}
+.tag-edit-in h4:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  border-radius: 10px;
+  background-color: #dcdcdc;
+  left: 50%;
+  margin-left: -15px;
+  bottom: 0;
+}
+.tag-edit-in dl {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.tag-edit-in dl.add_friend_info {
+  border-radius: 4px;
+}
+.tag-edit-in dl.add_friend_info dt {
+  line-height: 62px;
+}
+.tag-edit-in dl.add_friend_info .add_friend_info_in {
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  border: 1px solid #dcdcdc;
+  font-size: 16px;
+  color: #323232;
+  padding: 10px;
+  width: 270px;
+}
+.tag-edit-in dl.add_friend_info .add_friend_info_in img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+.tag-edit-in dl dt,
+.tag-edit-in dl dd {
+  float: left;
+  position: relative;
+}
+.tag-edit-in dl dt {
+  width: 72px;
+  padding-right: 10px;
+  text-align: right;
+}
+.tag-edit-in dl dd input,
+.tag-edit-in dl dd select,
+.tag-edit-in dl dd textarea {
+  border: 1px solid #e6e6e6;
+  height: 38px;
+  padding: 0 8px;
+  width: 274px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+.tag-edit-in dl dd textarea {
+  padding: 8px;
+}
+.tag-edit-in dl dd select {
+  width: 292px;
+  float: left;
+  padding: 0 4px;
+}
+.tag-edit-in dl dd.sel_foot {
+  background: none;
+  padding: 0;
+}
+.tag-edit-in dl dd.sel_foot span {
+  width: 132px;
+  height: 34px;
+  line-height: 34px;
+  padding: 0;
+  font-size: 14px;
+  margin-right: 20px;
+  margin-left: 0;
+}
+.tag-edit-in dl dd.sel_foot span.sel_sure {
+  background-color: #fcc800;
+  border-color: #fcc800;
+  color: #1e1e1e;
+}
+.tag-edit-in dl dd.sel_foot span.sel_sure.sel_nosure {
+  background-color: #c9c9c9;
+  border-color: #c1c1c1;
+  color: #fff;
+}
+.tag-edit-in dl dd.sel_foot span.sel_sure.sel_int {
+  width: 290px;
+  margin-right: 0;
+}
+.tag-edit-in dl dd.sel_foot span.sel_cancel {
+  margin-right: 0;
+  background-color: #dcdcdc;
+  border-color: #dcdcdc;
+}
+.tag-edit-in dl dd .too-long {
+  height: 30px;
+  line-height: 30px;
+  color: #c00;
+  text-align: center;
+}
+.tag-edit-in .bottom-tips {
+  height: 25px;
+  line-height: 0;
+  font-size: 12px;
+  color: #a0a0a0;
+  text-align: right;
+  margin-right: 9px;
+}

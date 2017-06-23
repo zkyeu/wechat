@@ -1,0 +1,239 @@
+@import "../common/base.less";
+@imgPath: "../../../images/wap/teacher_page/";
+.dl-hd{
+  margin:0 1.5rem;
+  height: 4.25rem;
+  line-height: 4.25rem;
+  font-size: 1.2rem;
+  img{
+    width: 6.8rem;
+    height: 2.25rem;
+  }
+  .hd-tit{
+    float: right;
+  }
+}
+.dl-cer{
+  font-size: 1.5rem;
+  .cr-img{
+    position: relative;
+    img{
+      width: 100%;
+      height: auto;
+    }
+    p{
+      position: absolute;
+      top: 2.4rem;
+      left: 0;
+      right: 0;
+      margin:0 2rem;
+      color: #5f3013;
+      line-height: 2.2rem;
+      span{
+        color: #ff3434;
+      }
+    }
+  }
+  .nav{
+    display: -webkit-box;
+    -webkit-box-align:center; 
+    height: 5.6rem;
+    border:1px #dbdee0 solid;
+    font-size: 1.3rem;
+    background-color: #fbfbfb;
+    li{
+      -webkit-box-flex: 1; 
+      text-align: center;
+      border-left:1px #dbdee0 solid;
+      &:first-child{
+        border:none;
+      }
+      span{
+        display: block;
+        margin-top:.3rem;
+        b{
+          color: #ff3434;
+        }
+      }
+    }
+  }
+  article{
+    h3{
+      font-size: 1.5rem;
+      margin-left:1.5rem;
+      margin-right:1.5rem;
+    }
+    .cr-dl{
+      font-size: 1.3rem;
+      margin:0 1.5rem;
+      dt{
+        float:left;
+        width: 5.65rem;
+        margin-top:.5rem;
+        img{
+          width: 5.65rem;
+          height: 5.65rem;
+          border-radius: 50%;
+          border:1px #dcdfe1 solid;
+        }
+      }
+      dd{
+        margin:0 0 .7rem 8rem;
+        img{
+          width: 6rem;
+          height: .9rem;
+          margin-top:-0.5rem;
+        } 
+        span{
+          color: #ff3434;
+          margin-left: .5rem;
+        }
+      }
+    }
+    .cr-word{
+      margin:0 1.5rem;
+      font-size: 1.4rem;
+      line-height: 2.2rem;
+    }
+    .wdlink{
+      height: 6.6rem;
+      overflow: hidden;
+    }
+    .cr-btn{
+      color: #eee;
+      margin:1rem 1.5rem 0 1.5rem;
+    }
+  }  
+}
+.dl-ft{
+  background-color: #323232;
+  padding:2rem 1.5rem;
+  margin-top: 2rem;
+  .tit{
+    text-align: center;
+    color: #fff;
+    font-size: 2.25rem;
+    span{
+      color: #ffd200;
+      margin-left: 0.5rem;
+    }
+  }
+  .dl-input{
+    margin:1rem 0;
+    li{
+      height: 4rem;
+      line-height: 4rem;
+      margin:1.5rem 0;
+      padding:0 1rem;
+      background-color: #fff;
+      border-radius: .5rem;
+      overflow: hidden;
+      font-size: 1.6rem;
+      input{
+        width: 100%;
+        font-size: 1.6rem;
+        color: #bbb;
+      }
+      &:last-child{
+        border:none;
+        background-color: #ff4c4c;
+        text-align: center;
+        color: #fff;
+        font-size: 1.8rem;
+        margin-top: 2rem;
+        a{
+          color: #fff;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+
+//播放
+.player{
+    display: -webkit-box;
+    background: #fff;
+    -webkit-box-flex:1;
+    box-sizing: border-box;
+    -webkit-box-align: center;
+    height: 3.3rem;
+    padding:0 1.5rem;
+    width: 100%;
+    background-color: #f6f8fa;
+    margin:2rem 0;
+   .switch-on{
+      display: -webkit-box;
+      width: 1.8rem;
+      i{
+          width: 0rem;
+          height: 0rem;
+          border-width: 0.85rem;
+          border-style:dashed dashed dashed solid;
+          border-color:transparent transparent transparent #ff8200;
+          overflow:hidden;
+          margin-left: .6rem;
+          margin-right: -6rem;
+          display: block;
+      }    
+   }
+   .switch-off{
+      display: -webkit-box;
+      i{
+          width: .4rem;
+          height: 1.5rem;
+          display: block;
+          border-left:.2rem #ff8200 solid;
+          border-right:.2rem #ff8200 solid;
+          overflow:hidden;
+          margin-left: .6rem;
+          margin-right: .4rem;
+      }
+   }
+   .controls{
+      position: relative;
+      height: .3rem;
+      display: -webkit-box;
+      -webkit-box-flex:1;
+      background-color: #b2b2b2;
+      margin-left: 1rem;
+   }
+   .cont-buff{
+      position: absolute;
+      height: .3rem;
+      overflow: hidden;
+      background: #ffe0bf;
+   }
+   .cont-prog{
+      position: absolute;
+      height: .3rem;
+      background: #ff8200;
+      &:before{
+        content: '';
+        position: absolute;
+        top: -.5rem;
+        right: -1.3rem;
+        width: 1.3rem;
+        height: 1.3em;
+        background: url('@{imgPath}ld_roll.png') no-repeat;
+        background-size: 1.3rem 1.3rem;
+      }
+   }
+   .time{
+      line-height: .325rem;
+      margin:0.7rem 2.4rem 0 1.5rem ;
+      font-size: 1.4rem;
+      color: #b2b2b2;
+   }
+   .tit{
+    color: #ff8200;
+    font-size: 1.3rem;
+    margin-left: 1.5rem;
+   }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}

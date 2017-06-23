@@ -159,7 +159,7 @@ define("weixinUtil",[],function(require,exports,module){
 
 	//滚动标题
     util.flashText = function (text,cb) {
-    	var _text = text + "";
+    	/*var _text = text + "";
 		if(!_text) return;
         var _textlen = _text.length;
 		var __text = _text + _text +_text;
@@ -173,11 +173,32 @@ define("weixinUtil",[],function(require,exports,module){
 			}else{
 				start++;
 			}
-        }, 380);
+        }, 380);*/
+
+		var interval;
 
         return {
-        	clearFlash : function () {
+        	set : function(text, cb){
+        		clearInterval(interval);
+        		var _text = text + "";
+				if(!_text) return;
+		        var _textlen = _text.length;
+				var __text = _text + _text +_text;
+				var start = 0;
+
+		        interval = setInterval(function () {
+					var ___text = __text.slice(start);
+					typeof(cb) == "function" && cb(___text);
+					if(start == _textlen){
+						start = 0;
+					}else{
+						start++;
+					}
+		        }, 380);
+        	},
+        	reset : function (cb) {
 				clearInterval(interval);
+				typeof(cb) == "function" && cb();
             }
 		}
     }

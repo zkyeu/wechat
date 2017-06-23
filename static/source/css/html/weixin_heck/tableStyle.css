@@ -52,6 +52,14 @@ body {
   font-size: 20px;
   text-align: center;
 }
+.top-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 .guide-link {
   line-height: 32px;
   font-size: 16px;
@@ -64,8 +72,12 @@ body {
   color: #ffb400;
 }
 .set-pos {
-  width: 436px;
-  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .set-pos .layui-input {
   font-size: 14px;
@@ -80,13 +92,124 @@ body {
 .set-pos.w566 {
   width: 566px;
 }
+.set-pos.set-width {
+  width: auto;
+}
 .select-time {
-  float: left;
   width: 304px;
   height: 30px;
   border: #aaa solid 1px;
   border-radius: 15px;
   background-color: #fff;
+}
+.by-time span {
+  float: left;
+  margin-left: 10px;
+  width: 100px;
+  height: 30px;
+  border: #979797 solid 1px;
+  color: #252525;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #fff;
+}
+.by-time span:hover {
+  color: #252525;
+  background: #ffd533;
+}
+.by-time span:hover a {
+  color: #252525;
+  display: block;
+}
+.by-time span.cut-sel {
+  border: #fcc800 solid 1px;
+  background: #fcc800;
+}
+.by-time span.cut-sel a {
+  color: #252525 !important;
+  display: block;
+}
+.by-time .by-time-btn {
+  float: left;
+  margin-left: 10px;
+  width: 100px;
+  height: 30px;
+  border: #979797 solid 1px;
+  color: #252525;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #fff;
+}
+.by-time .by-time-btn.cut-sel {
+  border: #fcc800 solid 1px;
+  background: #fcc800;
+}
+.by-time .by-time-btn.cut-sel a {
+  color: #252525 !important;
+  display: block;
+}
+.click-time {
+  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 20px;
+  margin: 6px 0 0 30px;
+  position: relative;
+}
+.click-time input {
+  height: 18px;
+  cursor: pointer;
+  text-align: center;
+  background-color: transparent;
+  font-size: 14px;
+}
+.click-time input.time-day {
+  width: 90px;
+}
+.click-time input.time-week {
+  width: 170px;
+}
+.click-time input.time-month {
+  width: 140px;
+}
+.click-time span {
+  height: 32px;
+  line-height: 32px;
+  padding: 0 5px;
+  font-size: 16px;
+  color: #252525;
+}
+.click-time .pre-time,
+.click-time .next-time {
+  background: url(../../../images/html/weixin_heck/arrowGroup.png?v=hT%2BEnsYZ5zBcxUU%2BOsiPkw%3D%3D) no-repeat;
+  width: 18px;
+  height: 18px;
+  font-size: 0px;
+}
+.click-time .pre-time {
+  background-position: 0 3px;
+}
+.click-time .pre-time:hover {
+  background-position: 0 -17px;
+}
+.click-time .next-time {
+  background-position: -10px 3px;
+}
+.click-time .next-time:hover {
+  background-position: -10px -17px;
+}
+.add-btn {
+  color: #252525;
 }
 .add-btn a {
   width: 120px;
@@ -98,11 +221,11 @@ body {
   font-size: 14px;
   text-align: center;
   border-radius: 16px;
+  margin-left: 20px;
 }
 .add-btn a:hover {
-  background: #ff8000;
-  color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background: #ffd533;
+  color: #252525;
 }
 .add-btn input {
   float: left;
@@ -508,7 +631,7 @@ body {
   cursor: pointer;
 }
 .chat-detail .chat-detail-list .voice.voice-play {
-  background: #fff url(../../../images/html/weixin_heck/web_wechat_voice_gray_playing.gif?v=PaLDLAqQRl7scdOx38OyRw%3D%3D) 10px 8px no-repeat;
+  background: #fff url(../../../images/html/weixin_heck/web_wechat_voice_gray_playing.gif?v=uplo8LDh%2B00QqW%2FZXAfCjA%3D%3D) 10px 8px no-repeat;
 }
 .chat-detail .chat-detail-list .article {
   width: 230px;

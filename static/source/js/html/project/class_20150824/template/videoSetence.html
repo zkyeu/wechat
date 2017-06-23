@@ -1,0 +1,63 @@
+<div class="vediolearing">
+  <div class="mask hide"></div>
+  <div class="videos">
+    <%if(data['videoMpage']==1 || data['videoMpage']==3){%>
+        <video   preload  src="<%=domain+data["mediaurl"]%>" class="video"></video>
+    <%}else{%>
+         <video   preload  src="<%=domain+data["mediaurl"]%>" class="video"></video>          
+    <%}%>
+  </div>
+  <div class="introduction">
+    <div class="content">
+        <div id="firstButtons" class="playbuttons <%=(data['videoMpage']==1)?'':'hide'%>">
+            <span id="can" class="can disable">听懂啦</span>
+            <span id="not" class="not disable">听不懂，慢速学习</span>
+        </div>
+
+         <div id="secondButtons" class="playbuttons <%=(data['videoMpage']==2)?'':'hide'%>">
+            <span  class="can disable">听懂啦</span>
+            <span  class="not disable">听不懂，查看答案</span>
+        </div>
+        <div class="lastsentences <%=(data['videoMpage']==3)?'':'hide'%>">
+            <span class="prev"></span>
+            <p class="sentence"><%=data['spell'].length!=0 ? data['spell'].replace(/\[/g, '<span style="background-color:#fa7f00">').replace(/\]/g, "</span>") : ""%></p>
+            <div class="sentence-record" >
+              <p class="record-tips hide">不再是机械的“读课文”结合画面，认真读三遍就能获得有画面感的<span style='color:#ff8200'>“说英语”</span>的感觉哦！<span class="triangle"></span>
+              </p>
+              <span pid="<%=data['id']%>" class="off" media-audio="<%=domain+data["audiourl"]%>" data-title="<%=data['spell'].length!=0 ? data['spell'].replace(/\[/g, '').replace(/\]/g, "") : ""%>"></span>
+              <%if(!data.score){%>
+                <span class="record-start"></span>
+               <%}%> 
+              <%if(data.score>=0 && data.score<=60){%>
+                  <span id="recordScore" class="bad hide"></span>
+              <%}else if(data.score>=60 && data.score<=80){%>
+                  <span id="recordScore" class="middle"><%=data.score%></span>
+              <%}else if(data.score>=80 && data.score<=100){%>
+                  <span id="recordScore" class="record-score"><%=data.score%></span>
+              <%}else{%>
+                  <span id="recordScore" class="hide"></span>
+              <%}%>    
+            </div>
+            <%if(data['historyUrl']){%>
+                <span id="replay" class="sentence-play"  media-audio="<%='http://'+data['historyUrl']%>"></span>
+            <%}else{%>
+                <span id="replay"  class="sentence-play disableplay"></span>
+            <%}%>
+            <span class="next"></span>
+        </div>  
+    </div>
+  </div>
+  <span class="waiting hide"></span>
+  <span class="replay2 hide" flage = "1"></span>
+  <span class="player2 hide"></span>
+  <span class="slowplay hide">慢速播放</span>        
+  <div class="good hide" ><img src="http://static.51talk.com/static/images/html/class_20150824/good.png"></div>
+  <div class="ytp-bezel hide" role="status" data-layer="4" aria-label="播放"  >
+        <div class="ytp-bezel-icon ytp-bezel-icon-play" >
+          <svg height="100%" version="1.1" viewBox="0 0 40 40" width="100%">
+            <path class="ytp-svg-fill" d="m 12.22,28.88 0,-17.77 16.66,8.91 -16.66,8.86 z">
+            </path>
+          </svg>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,163 @@
+@imgPathImg: "../../../images/html/level_test/theme_circus/";
+@import 'utilities.less';
+body, html {
+	@c:#3b0b37;
+	.setBackgroundColor(@c);
+}
+// 马戏团主题
+.theme-circus {
+	//题型a听力选图有音频、无音频
+	@c1_1:#ffd2fd;
+	@c1_2:#ffd2fd;
+	@c1_3:#fff0a9;
+	@b1_1:'@{imgPathImg}play_btn.png';
+	@b1_2:'@{imgPathImg}card_default.png';
+	@b1_3:'@{imgPathImg}card_click.png';
+	.create-mold-a(@c1_1, @c1_2, @c1_3, @b1_1, @b1_2, @b1_3);
+
+	//题型听力选字有音频、无音频、无音频短
+	@c2_1:#ffd2fd;
+	@c2_2:#ffd2fd;
+	@c2_3:#04b0bd;
+	@c2_4:#039989;
+	@c2_3h:#02c5d4;
+	@c2_4h:#01ab9a;
+	@c2_5:#fff0a9;
+	@c2_6:#eb4753;
+	@c2_7:#ea2930;
+	@c2_6h:#f15863;
+	@c2_7h:#f03d43;
+	@b2_1:'@{imgPathImg}play_btn.png';
+	.create-mold-b(@c2_1, @c2_2, @c2_3, @c2_4, @c2_3h, @c2_4h, @c2_5, @c2_6, @c2_7, @c2_6h, @c2_7h, @b2_1);
+
+	//公共顶部
+	@c3_1:#371741;
+	@c3_2:#c788ea;
+	@b3_1:'@{imgPathImg}header_bg.png';
+	.create-header(@c3_1, @c3_2, @b3_1);
+
+	//提交按钮
+	@b4_1:'@{imgPathImg}submit_btn.png';
+	.create-submitbtn(@b4_1);
+
+	//进度条
+	.create-progress();
+}
+
+//答题反馈
+.feedback-wrap {
+	z-index: 3;
+	display: none;
+	position:absolute;
+	left:50%;
+	width:271px;
+	height:385px;
+	margin-left:-135px;
+	.feedback {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 271px;
+		height: 389px;
+		background:url('@{imgPathImg}feedback_01.png') 0 0 no-repeat;
+		.icon {
+			position:absolute;
+			left:50%;
+			top:180px;
+			width:65px;
+			height:48px;
+			margin-left:-33px;
+			background:url('@{imgPathImg}feedback_01.png') -90px -422px no-repeat;
+		}
+		.text {
+			position:absolute;
+			top:250px;
+			width:100%;
+			font-size:32px;
+			color:#02c5d4;
+			font-weight:bold;
+			text-align:center;
+		}
+	}
+	.empty {
+		.icon {
+			display: none;
+		}
+		.text {
+			top:230px;
+			color:#ff5e0e;
+		}
+	}
+	.error {
+		.icon {
+			width:48px;
+			height:48px;
+			margin-left:-25px;
+			background-position:0 -422px;
+		}
+		.text {
+			color:#ff5e0e;
+		}
+	}
+}
+
+//完成提示
+.complete-mark {
+	z-index: 98;
+	position: fixed;
+	min-width: 1110px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	.complete-common {
+		position: relative;
+		top: 50%;
+		width: 910px;
+		height: 749px;
+		margin: -374.5px auto 0;
+		text-align: center;
+	}
+	a {
+		position: absolute;
+		top: 600px;
+		width: 158px;
+		height: 58px;
+	}
+	.answer-right-tips {
+		height: 80px;
+		padding-top: 445px;
+		font-size: 55px;
+		font-weight: bold;
+		line-height: 80px;
+		color: #ff5e0e;
+	}
+	.answer-error-tips {
+		padding-top: 10px;
+		font-size: 24px;
+		font-weight: bold;
+	}
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	@b5_1:'@{imgPathImg}try_again.png';
+	@b5_2:'@{imgPathImg}excellent.png';
+	@b5_3:'@{imgPathImg}all_right.png';
+	@b5_4:'@{imgPathImg}btn_sprite.png';
+	.create-complete-mark(@b5_1, @b5_2, @b5_3, @b5_4);
+}
+
+
+//animates
+.bounceInDownSuccess {
+	animation:bounceInDownSuccess 3s ease 0s 1 normal;
+	animation-fill-mode: both;
+}
+
+.bounceInDownError {
+	animation:bounceInDownError 3s ease 0s 1 normal;
+	animation-fill-mode: both;
+}
+
+.zoomOutUp {
+	animation:zoomOutUp 1s ease 0s 1 normal;
+	animation-fill-mode: both;
+}

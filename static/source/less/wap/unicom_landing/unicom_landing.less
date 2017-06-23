@@ -1,0 +1,58 @@
+@import '../common/reset.less';
+@imgUrl:"../../../images/wap/unicom_landing/";
+body,html{
+  margin:0px auto;
+  min-width: 320px;
+  max-width: 1080px;
+  background:url('@{imgUrl}unicom_bj.jpg') repeat-y;
+  background-size: 100%;
+}
+.unicom{
+  position: relative;
+  .unicomImg{
+    position: absolute;
+  }
+  .top-img{
+    width: 100%;
+    margin-top: 1.0185rem;
+  }
+  .unicomTop{
+    .unicomImg;
+    top: 0;
+    right: 0; 
+    width: 2.175925rem;
+    height: 4.28703rem; 
+  }
+  .unicomBom{
+    .unicomImg;
+    left: 0;
+    bottom:-0.04rem;
+    width: 2.7222rem;
+    height: 2.7222rem;
+  }
+  .unicom-input{
+    padding:0 1.27777rem 1.4537rem 1.27777rem;
+    ul li{
+      // height: 1.1574rem;
+      padding:0.268rem 0.5092rem;
+      font-size: 0.48305rem;
+      border-radius: 5px;
+      background-color: #fff;
+      margin-bottom: 0.41666rem;
+      input{
+        border:none;
+        width: 100%;
+      }
+    }
+    .unicomBtn{
+      display: block;
+      height: 1.26851rem;
+      line-height: 1.26851rem;
+      text-align: center;
+      background-color: #ffc518;
+      font-size: 0.70129rem;
+      border-radius: 0.62962rem;
+      color: #8b3202;
+    }
+  }
+}

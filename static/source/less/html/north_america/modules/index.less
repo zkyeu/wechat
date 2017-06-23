@@ -1,0 +1,471 @@
+
+.container{
+	.banner{
+		position:relative;
+		height:553px;
+		// padding-top:48px;
+		background:url('@{imgUrl}banner.jpg') center center no-repeat;
+		.nav{
+			position:absolute;
+			left:0;
+			top:0;
+			width:100%;
+			z-index:9;
+		}
+		.wrap{
+			width:1000px;
+			margin:0 auto;
+		}
+		.login-layer{
+			position:relative;
+			float:right;
+			width:270px;
+			height:350px;
+			margin-top:105px;
+			background:#3b6e90;
+			-webkit-transform-style:preserve-3d;
+    		transform-style:preserve-3d;
+    		-webkit-transition:.3s all ease-out;
+    		transition:.3s all ease-out;
+    		-webkit-transform:perspective(1000px) rotateY(0deg);
+    		transform:perspective(1000px) rotateY(0deg);
+			&:before{
+				position:absolute;
+				top:-151px;
+				display:block;
+				width:100%;
+				height:151px;
+				content:'';
+				background:url('@{imgUrl}bus.png') center center no-repeat;
+			}
+		}
+		//添加翻转
+		.rotate{
+			-webkit-transform:perspective(1000px) rotateY(180deg);
+    		transform:perspective(1000px) rotateY(180deg);
+		}
+		.from-lst{
+			position:relative;
+    		.tab{
+				color:#6ab0d4;
+				li{
+					float:left;
+					width:50%;
+					height:35px;
+					line-height:35px;
+					text-align:center;
+					border:none;
+					background:#306181;
+					font-size: 16px;
+				}
+				.current{
+					background:#3b6e90;
+					color:#fff;
+				}
+			}
+			.btn{
+				height:40px;
+				margin-top:15px;
+				line-height:40px;
+				font-size:18px;
+				color:#fff;
+				background:#db423b;
+				border-radius:5px;
+				text-align:center;
+				cursor: default;
+			}
+			.common-box{
+				padding:15px;
+				.icon{
+					display:inline-block;
+					float:left;
+					width:13px;
+					height:14px;
+					margin:10px 10px 0;
+					background:url('@{imgUrl}login_sprite.png') no-repeat;
+					vertical-align:middle;
+				}
+			}
+		}
+		//注册模块
+		.register-from-lst{
+			position:absolute;
+			width:100%;
+			min-height:350px;
+			background:#3b6e90;
+			-webkit-backface-visibility:hidden;
+    		backface-visibility:hidden;
+			li{
+				width:100%;
+				border:#fff solid 1px;
+				background:#fff;
+				margin-bottom:10px;
+				box-sizing:border-box;
+			}
+			input{
+				width:200px;
+				height:35px;
+				background:#fff;
+			}
+			.tel-box{
+				.icon{
+					height:16px;
+					background-position:0 -59px;
+				}
+				&.focus{
+					border:#ffa800 solid 1px;
+					background:#fff9f1;
+					.icon{
+						background-position:-28px -59px;
+					}
+					input{
+						background:#fff9f1;
+					}
+				}
+			}
+			.password-box{
+				.icon{
+					height:15px;
+					background-position:0 -29px;
+				}
+				&.focus{
+					border:#ffa800 solid 1px;
+					background:#fff9f1;
+					.icon{
+						background-position:-28px -29px;
+					}
+					input{
+						background:#fff9f1;
+					}
+				}
+			}
+			.email-box{
+				.icon{
+					height:15px;
+					background-position:0 -90px;
+				}
+				&.focus{
+					border:#ffa800 solid 1px;
+					background:#fff9f1;
+					.icon{
+						background-position:-28px -90px;
+					}
+					input{
+						background:#fff9f1;
+					}
+				}
+			}
+			.tips{
+				margin-top:10px;
+				color:#fff;
+				font-size:13px;
+				em{
+					color:#ffe033;
+				}
+			}
+		}
+		//登录模块
+		.login-from-lst{
+			position:absolute;
+			width:100%;
+			background:#3b6e90;
+			box-sizing:border-box;
+			-webkit-transform:scaleX(-1) translateZ(-1px);
+    		transform:scaleX(-1) translateZ(-1px);
+			li{
+				width:100%;
+				background:#fff;
+				margin-bottom:10px;
+				border:#fff solid 1px;
+				input{
+					width:200px;
+					height:35px;
+					background:#fff;
+				}
+			}
+			.tel-box{
+				&.focus{
+					border:#ffa800 solid 1px;
+					background:#fff9f1;
+					.icon{
+						background-position:-28px 0;
+					}
+					input{
+						background:#fff9f1;
+					}
+				}
+			}
+			.password-box{
+				.icon{
+					height:15px;
+					background-position:0 -29px;
+				}
+				&.focus{
+					border:#ffa800 solid 1px;
+					background:#fff9f1;
+					.icon{
+						background-position:-28px -29px;
+					}
+					input{
+						background:#fff9f1;
+					}
+				}
+			}
+			.auto-login{
+				color:#1e1e1e;
+				.auto{
+					float:left;
+				}
+				#auto{
+					vertical-align:middle;
+				}
+				.forget-pas{
+					float:right;
+					color:#b2b2b2;
+					&:hover{
+						color:#ff9600;
+					}
+				}
+			}
+			.other-login{
+				margin-top:20px;
+				padding-top:20px;
+				border-top:1px dashed #999680;
+				color:#fff;
+				p{
+					margin-bottom:10px;
+				}
+				.weibo{
+					display:inline-block;
+					width:29px;
+					height:24px;
+					margin-right:15px;
+					background:url('@{imgUrl}login_sprite.png') 0 -120px no-repeat;
+				}
+				.qq{
+					display:inline-block;
+					width:22px;
+					height:24px;
+					background:url('@{imgUrl}login_sprite.png') 0 -159px no-repeat;
+				}
+			}
+		}
+	}
+	//title style common
+	.common-style{
+		padding:65px 0;
+		.wrap{
+			width:1000px;
+			margin:0 auto;
+		}
+		.title{
+			margin:0 auto;
+			font-size:40px;
+			text-align:center;
+			white-space:nowrap;
+			&:after{
+				display:block;
+				height:20px;
+				line-height:20px;
+				content:'';
+				color:#fff;
+				font-size:14px;
+				background:url('@{imgUrl}title_sprite.png') no-repeat;
+			}
+		}
+	}
+	//slider style
+	.slider{
+		.title{
+			width:300px;
+			&:after{
+				height:23px;
+				line-height:23px;
+				background-position:0 0;
+				content:'51Talk American Academy';
+			}
+		}
+		.wrap{
+			.arr-left,.arr-right{
+				float:left;
+				width:26px;
+				height:49px;
+				margin-top:145px;
+				background:url('@{imgUrl}slider_sprite.jpg') no-repeat;
+				cursor: pointer;
+			}
+			.arr-right{
+				background-position:-26px 0;
+			}
+			.slider{
+				float:left;
+				width:735px;
+				margin:20px 100px 0;
+				text-align:center;
+				overflow:hidden;
+			}
+			.slider-wrap{
+				position:relative;
+				height:535px;
+			}
+			.slider-box{
+				position:absolute;
+				h2{
+					font-size:32px;
+					color:#3c3c3c;
+				}
+			}
+			.point{
+				position:absolute;
+				left:0;
+				bottom:0;
+				width:100%;
+				text-align:center;
+				a{
+					display:inline-block;
+					width:15px;
+					height:14px;
+					margin-right:5px;
+					background:#ccc url('@{imgUrl}slider_sprite.jpg') -15px -49px no-repeat;
+					border-radius:50%;
+				}
+				.current{
+					background:#db423b;
+					background-position:0 -49px;
+				}
+			}
+		}
+	}
+	//advantage style
+	.advantage{
+		background:#f5f5f5;
+		.title{
+			width:440px;
+			&:after{
+				background-position:0 -23px;
+				content:'Parents Trust Youth English Brand';
+			}
+		}
+		.subtitle{
+			margin-top:35px;
+			line-height:28px;
+			font-size:18px;
+			text-align:center;
+		}
+		.adv-banner{
+			margin-top:30px;
+		}
+		h3{
+			margin-top:20px;
+		}
+		.adv-lst{
+			margin-top:30px;
+			dl{
+				float:left;
+				margin-right:25px;
+				text-align:left;
+			}
+			h4{
+				margin:15px 0;
+				font-size:18px;
+				color:#3c3c3c;
+			}
+			p{
+				margin-top:5px;
+				font-size:14px;
+				color:#848484;
+			}
+		}
+	}
+	//specialty style
+	.specialty{
+		.title{
+			width:510px;
+			&:after{
+				background-position:0 -43px;
+				content:'Learning Service Support';
+			}
+		}
+		.spe-lst{
+			margin-top:40px;
+			dl{
+				float:left;
+				margin-right:25px;
+				text-align:center;
+			}
+			dd{
+				margin-top:20px;
+			}
+			h4{
+				font-size:18px;
+				color:#373737;
+			}
+			p{
+				margin-top:5px;
+				font-size:16px;
+				color:#848484;
+			}
+		}
+	}
+	//valid style
+	.valid{
+		background:#f5f5f5 url('@{imgUrl}adv_bg.png') center center no-repeat;
+		.title{
+			width:440px;
+			&:after{
+				background-position:0 -63px;
+				content:'Achieve Effective Learning Objectives';
+			}
+		}
+		.wrap{
+			margin-top:25px;
+			text-align:center;
+		}
+	}
+	//power style
+	.power{
+		background:url('@{imgUrl}power_bg.jpg') top center no-repeat;
+		.title{
+			width:200px;
+			&:after{
+				background-position:0 -83px;
+				content:'Our Power';
+			}
+		}
+		.power-lst{
+			margin-top:60px;
+			li{
+				float:left;
+				width:33.3%;
+				text-align:left;
+			}
+			em{
+				font-size:36px;
+			}
+			h3{
+				font-size:66px;
+				color:#3c3c3c;
+			}
+			p{
+				margin-left:5px;
+				font-size:16px;
+			}
+		}
+	}
+	//media style
+	.media{
+		.title{
+			width:200px;
+			&:after{
+				background-position:0 -83px;
+				content:'Media Report';
+			}
+		}
+		.wrap{
+			margin-top:35px;
+			img{
+				margin:0 20px 25px 0;
+			}
+		}
+	}
+}

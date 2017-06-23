@@ -1,0 +1,823 @@
+@import "../common/base.less";
+@imgPathImg: "../../../images/html/pull_wool24301/";
+@docWidth: 1000px;
+@bgColor: #efefef;
+@fontSize: 14px;
+@linkColor: #000;
+@hoverColor: #ff8200;
+@fontFamily: 'Microsoft YaHei','\5fae\8f6f\96c5\9ed1',Arial,Verdana,Tahoma;
+@height:2250px;
+@text-align:center;
+.i-icon{
+  display: inline-block;
+  background:url('@{imgPathImg}all_icon.png') no-repeat; 
+}
+body{
+   background: url('@{imgPathImg}m_bj.jpg') repeat;
+   overflow-x: hidden;
+}
+
+.container{
+  margin:0px auto;
+  position: relative;
+  height:@height;
+  background: url('@{imgPathImg}m_top_bj.png') top center no-repeat;
+  .word{
+    width:650px;
+    text-align:@text-align;
+    color:#fff600; 
+    position:absolute; 
+    top:180px; 
+    left:50%;
+    margin-left: -325px;
+    font-weight:bold;
+    b{
+      color: #fff;
+      display:block;
+      letter-spacing: 8px;
+      font-size: 32px;
+      margin-bottom: 28px;
+      em{color:#fff600; }
+    }
+    i{font-size: 24px;}  
+  }
+  .nav {
+    position: absolute;
+    top: 366px;
+    left: 50%;
+    margin-left: -342px;
+    height: 170px;
+    width:750px;
+  }
+  .award{
+    position:absolute; 
+    top:530px; 
+    width:@docWidth; 
+    font-size:22px;
+    left: 50%;
+    margin-left: -500px;
+    b{
+      display:block; 
+      color:#fff;
+      font-size:22px;
+      margin-left:20px;
+    }
+    ul{
+      display:block; 
+      margin:30px 0px 0px 0px;
+      li{
+        float:left; 
+        width:215px; 
+        margin:45px 0px 0px 90px;
+        _margin:45px 0px 0px 55px;
+         position:relative;
+        .icon-top{ 
+          display:block; 
+          margin-left:17px;
+          a{ 
+            background:url('@{imgPathImg}ft.png') no-repeat; 
+            display:inline-block; 
+            width:36px; 
+            height:38px; 
+            margin-left:-5px;
+            &.a1{ 
+              background-position:-36px 0px; 
+              width:40px;
+            }
+            &.a2{ 
+              background-position:-78px 0px; 
+            }
+          }
+        }
+        .round-box{ 
+          display:block; 
+          border-radius:8px; 
+          background:#e0df2d; 
+          height:140px; 
+          text-align:center; 
+          margin:-6px 0px 0px 0px; 
+          font-size:18px; 
+          color:#777600;
+          i{ 
+            line-height:70px; 
+            display:block; 
+            font-weight:bold;
+          .font{ 
+            color:#3e5534;
+            font-weight:bold;}
+          }
+          .two{ 
+            background:#fff;
+            font-size:26px; 
+            color:#ff6600; 
+            border-bottom-left-radius:8px;
+            border-bottom-right-radius:5px;
+            .font{ 
+              font-size:36px;
+              color:#ff6600;
+              margin:0 5px; 
+            }
+          }
+        }
+        .cr-icon{ 
+          position:absolute; 
+          top:95px; 
+          left:235px;
+          a{
+            background:url('@{imgPathImg}all_icon.png') no-repeat; 
+            display:inline-block; 
+            width:45px; 
+            height:36px; 
+            background-position:-12px -130px; 
+            &.a1{background-position:-100px -130px;}
+          }
+        }
+        .big-icon{ 
+           position:absolute; 
+           left:305px; 
+           top:35px;
+          .a2{
+            background:url('@{imgPathImg}all_icon.png') no-repeat;
+            display:inline-block;
+            background-position:-530px 0px; 
+            width:255px; 
+            height:170px; 
+            color:#777600; 
+            font-size:25px; 
+            padding:40px 0px 0px 40px;
+            p{ 
+              font-size:24px;
+              color:#ff6600; 
+              font-weight:bold;
+              .font{ font-size:44px;}
+            }
+          }
+        }
+      }
+    }
+    .ft-bom{
+     position:absolute; 
+     background:url('@{imgPathImg}ft_bom.png') no-repeat; 
+     width:860px;
+      height:170px; 
+      top:575px; 
+      left:75px;
+      font-size:26px; 
+      text-align:center; 
+      line-height:170px; 
+      font-size:30px; 
+      color:#777600;
+      font-weight:bold;
+      i{ 
+        color:#ff6600; 
+        font-weight:bold; 
+        font-size:24px;
+        .font{ 
+          font-size:46px;
+          margin:0 5px;
+        }
+      }
+    }
+  }
+  .reward{ 
+    position:absolute; 
+    width:1000px; 
+    font-size:22px;
+    top:1330px; 
+    left:50%; 
+    color:#FFF;
+    margin-left:-495px;
+    b{
+      letter-spacing:3px;
+      padding-left: 15px;
+      .font{
+        color:#fcff00;
+      }
+    }
+    .rew-tab{ 
+      width:1000px; 
+      background:#1f510b; 
+      height:350px; 
+      margin-top:16px;
+      .nogift{ 
+        text-align:center; 
+        padding-top:60px;}
+      dl{
+        display: block;
+        dd{
+          float:left;
+          width:32%;
+          text-align:center;
+          color:#509516;
+          margin-top:10px;
+        }
+      }
+    }
+    .others {
+      float:left;
+      overflow: hidden;
+      width: 850px;
+      height: 200px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      color: #fff;
+      border-radius: 20px;
+      background-color: #4e931c;
+      margin:20px 0px 0px 75px;
+      _margin:40px 0px 0px 30px;
+      tr {
+        width: 850px;
+        td {
+          width: 283px;
+          height: 36px;
+          line-height:36px;
+          font-size: 20px;
+          font-weight: bold;
+          .tel {
+            margin-left: 15px;
+            img{
+              margin:5px 0 0 10px;
+              float: left;
+            }
+          }
+          .status {
+            margin-left: 113px;
+          }
+          .for {
+            margin-left: 135px;
+          }
+        }
+      }
+      .act {
+        background-color: #488C17;
+      }
+      .yellow {
+        color: #FFFC00;
+        background-color: #488C17;
+      }
+    }
+  }
+  .rules{ 
+    position: absolute;
+    top:1690px; 
+    z-index:1;
+    .reward-ct{
+      width:850px; 
+      line-height:25px; 
+      font-size:15px; 
+      margin-top: -10px;
+      padding:70px 70px 60px 80px; 
+      background-image: url('@{imgPathImg}rules_bj.png');
+      p{ 
+        display:block; 
+        margin-left:23px;
+      }
+      .lt-p{margin-left: 30px;}
+    }
+    .xq{ 
+      position:absolute; 
+      top:35px; 
+      left:-10px; 
+      background:url('@{imgPathImg}lt_bj.png') no-repeat; 
+      width:180px; 
+      height:59px; 
+      padding-left:10px; 
+      line-height:48px;
+    }
+    .btm{
+      position:absolute;
+      bottom:23px; 
+      left:0px;
+    }
+  }
+}
+
+.bdshare-button-style0-16{
+  li {
+    float: left;
+    position: relative;
+    width: 123px;
+    height: 159px;
+    background: url('@{imgPathImg}li_grey.png');
+    margin-top: -40px;
+    margin-right:20px;
+    cursor: pointer;
+    span {
+      position: absolute;
+      top: 152px;
+      left: 32px;
+      font-size: 16px;
+      color:#595900;
+    }
+    .smsP {
+      position: absolute;
+      background-position: 0;
+      top: 61px;
+      left: 10px;
+      width: 67px;
+      height: 50px;
+      background-image: url('@{imgPathImg}sms_1.png');
+    }
+    .linkP {
+      position: absolute;
+      background-position: 0;
+      top: 60px;
+      left: 10px;
+      width: 72px;
+      height: 46px;
+      background-image: url('@{imgPathImg}link_1.png');
+    }
+    .bds_tsina {
+      position: absolute;
+      background-position: 0;
+      top: 56px;
+      left: 10px;
+      width: 67px;
+      height: 50px;
+      background-image: url('@{imgPathImg}sina_1.png');
+    }
+    .bds_fri {
+      position: absolute;
+      background-position: 0;
+      top: 56px;
+      left: 10px;
+      width: 67px;
+      height: 50px;
+      background-image: url('@{imgPathImg}webchat_1.png')
+    }
+    .bds_weixinF {
+      position: absolute;
+      background-position: 0;
+      top: 56px;
+      left: 10px;
+      width: 67px;
+      height: 50px;
+      background-image: url('@{imgPathImg}webchat_f_1.png');
+    }
+    .bds_weixin {
+      position: absolute;
+      background-position: 0;
+      top: 56px;
+      left: 10px;
+      width: 67px;
+      height: 50px;
+      background-image: url('@{imgPathImg}webchat_1.png');
+    }
+    .bds_tqq {
+      position: absolute;
+      background-position: 0;
+      top: 56px;
+      left: 10px;
+      width: 67px;
+      height: 50px;
+      background-image: url('@{imgPathImg}qq_1.png');
+    }
+    .smsPR {
+      position: absolute;
+      background-position: 0;
+      top: 51px;
+      left: 10px;
+      width: 72px;
+      height: 46px;
+      background-image: url('@{imgPathImg}sms_2.png');
+    }
+    .linkPR {
+      position: absolute;
+      background-position: 0;
+      top: 50px;
+      left: 10px;
+      width: 72px;
+      height: 46px;
+      background-image: url('@{imgPathImg}link_2.png');
+    }
+    .bds_tsinaR {
+      position: absolute;
+      background-position: 0;
+      top: 46px;
+      left: 10px;
+      width: 67px;
+      height: 50px;
+      background-image: url('@{imgPathImg}sina_2.png');
+    }
+    .bds_weixinR {
+      position: absolute;
+      background-position: 0;
+      top: 46px;
+      left: 10px;
+      width: 67px;
+      height: 50px;
+      background-image: url('@{imgPathImg}webchat_2.png');
+    }
+    .bds_weixinFR {
+      position: absolute;
+      background-position: 0;
+      top: 46px;
+      left: 10px;
+      width: 67px;
+      height: 50px;
+      background-image: url('@{imgPathImg}webchat_f_2.png');
+    }
+    .bds_tqqR {
+      position: absolute;
+      background-position: 0;
+      top: 46px;
+      left: 10px;
+      width: 67px;
+      height: 50px;
+      background-image: url('@{imgPathImg}qq_2.png');
+    }
+    &:hover{
+      float: left;
+      position: relative;
+      width: 123px;
+      height: 159px;
+      background: url('@{imgPathImg}li_hand.png');
+      margin-top: -40px;
+      span {
+        position: absolute;
+        top: 152px;
+        left: 32px;
+        font-size: 18px;
+        color: #f60; 
+        font-weight:bold;
+      }
+      .smsP {
+        position: absolute;
+        background-position: 0;
+        top: 51px;
+        left: 10px;
+        width: 72px;
+        height: 46px;
+        background-image: url('@{imgPathImg}sms_2.png');
+      }
+      .linkP {
+        position: absolute;
+        background-position: 0;
+        top: 50px;
+        left: 10px;
+        width: 67px;
+        height: 50px;
+        background-image: url('@{imgPathImg}link_2.png');
+      }
+      .bds_tsina {
+        position: absolute;
+        background-position: 0;
+        top: 46px;
+        left: 10px;
+        width: 67px;
+        height: 50px;
+        background-image: url('@{imgPathImg}sina_2.png');
+      }
+      .bds_fri{
+        position: absolute;
+        background-position: 0;
+        top: 46px;
+        left: 10px;
+        width: 67px;
+        height: 50px;
+        background-image: url('@{imgPathImg}webchat_2.png')
+      }
+      .bds_weixinF {
+        position: absolute;
+        background-position: 0;
+        top: 46px;
+        left: 10px;
+        width: 67px;
+        height: 50px;
+        background-image: url('@{imgPathImg}webchat_f_2.png');
+      }
+      .bds_weixin {
+        position: absolute;
+        background-position: 0;
+        top: 46px;
+        left: 10px;
+        width: 67px;
+        height: 50px;
+        background-image: url('@{imgPathImg}webchat_2.png');
+      }
+      .bds_tqq {
+        position: absolute;
+        background-position: 0;
+        top: 46px;
+        left: 10px;
+        width: 67px;
+        height: 50px;
+        background-image: url('@{imgPathImg}qq_2.png');
+      }
+    }
+  }
+}
+.face{ 
+  .i-icon;
+  width:116px; 
+  height:90px;
+  position:absolute; 
+  top:145px; 
+  left:-95px;
+  background-position:0px 0px;
+  &.r-face{
+    top:auto; 
+    left:auto; 
+    bottom:65px; 
+    right:-90px;
+    background-position:-150px 0px;
+    &.ru-face{
+      bottom:-5px; 
+      right:70px;
+      background-position:-320px -10px;
+    }
+  }
+}
+.bg {
+  background:#000;
+  position:fixed;
+  left:0;
+  top:0;
+  filter:"Alpha(opacity=20)";
+  opacity:0.2;
+  display:none;
+}
+.sms {
+  z-index: 10;
+  width:835px;
+  height:365px;
+  position:fixed;
+  top:232px;
+  left: 50%;
+  margin-left: -417px;
+  background:#F7F7F7;
+  display:none;
+  .title {
+    float: left;
+    margin-left: 30px;
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 15px;                          
+    color: #FF8200;
+  }
+  .cbtn {
+    float: right;
+    cursor: pointer;
+    width: 43px;
+    height: 43px;
+    background: url('@{imgPathImg}close.png');
+  }
+  .smsForm {
+    float: left;
+    position: relative;
+    margin-top: 36px;
+    margin-left: 20px;
+    width: 780px;
+    height: 175px;
+    background-color: #FFFFFF;
+    form {
+      position: absolute;
+      left: 30px;
+      top: 30px;
+    }
+    .info {
+      width: 260px;
+      line-height: 30px;
+      border: 1px solid #CCCCCC;
+      margin-top: 8px;
+      margin-bottom: 8px;
+      padding:0px 10px;
+      input{
+        width: 100%;
+        border:0;
+        color: #a7a7a7;
+      }
+    }
+    .inviteBtn {
+      position: absolute;
+      width: 190px;
+      height: 15px;
+      background-color: #ff8200;
+      top: 180px;
+      left: 255px;
+      text-align: center;
+      color: #fff;
+      padding-top: 10px;
+      padding-bottom: 15px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor:pointer;
+    }
+
+    .content {
+      width: 408px;
+      height: 100px;
+      position: absolute;
+      right: 30px;
+      top: 38px;
+      background: url('@{imgPathImg}sms_info.png');
+      padding: 10px;
+    }
+    .smsInfoTitle {
+      font-size: 15px;
+      font-weight: bold;
+      color: #3C9BCC;
+      position: absolute;
+      left: 30px;
+      top: 10px;
+      line-height: 25px;
+    }
+    .smsCon {
+      position: absolute;
+      left: 30px;
+      top: 35px;
+    }
+    .smsContent {
+      font-size: 10px;
+      color: #A7A7A7;
+      line-height: 20px;
+    }
+  }
+  .smsForm .smsf1 .tips{
+    display: none;
+    font-size: 10px;
+    position: absolute;
+    left: 30px;
+    top: 8px;
+    color: red;
+  }
+  .smsForm .smsf2 {
+    display: none;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    .succ {
+      font-size: 30px;
+      color: green;
+      position: absolute;
+      left: 50px;
+      top: 42px;
+      width: 120px;
+      height: 40px;
+    }
+    .sureBtn {
+      position: absolute;
+      width: 190px;
+      height: 15px;
+      background-color: #ff8200;
+      top: 180px;
+      left: 255px;
+      text-align: center;
+      color: #fff;
+      padding-top: 10px;
+      padding-bottom: 15px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: hand;
+      cursor:pointer;
+    }
+  }
+}
+
+.link {
+  z-index: 10;
+  width:835px;
+  height:290px;
+  position:fixed;
+  top:232px;
+  left: 50%;
+  margin-left: -417px;
+  background:#F7F7F7;
+  display:none;
+  .title {
+    float: left;
+    margin-left: 30px;
+    margin-top: 30px;
+    color: #FF8200;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .cbtn {
+    float: right;
+    cursor: pointer;
+    width: 43px;
+    height: 43px;
+    background: url("@{imgPathImg}close.png");
+  }
+  .linkForm {
+    float: left;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 770px;
+    height: 125px;
+    background-color: #FFFFFF;
+    .tips {
+      position: absolute;
+      top: 30px;
+      left: 20px;
+    }
+    .info {
+      position: absolute;
+      top: 60px;
+      left: 20px;
+      width: 725px;
+      height: 30px;
+      border: none;
+      outline:none;
+      padding-left: 10px;
+      border: 1px solid #CCCCCC;
+      &:focus{
+        border:1px solid #ff8200; 
+
+      }
+    }
+    .inviteBtn {
+      position: absolute;
+      width: 190px;
+      height: 15px;
+      background-color: #FF8200;
+      top: 145px;
+      left: 285px;
+      text-align: center;
+      color: #FFFFFF;
+      padding-top: 10px;
+      padding-bottom: 15px;
+      font-size: 15px;
+      cursor: hand;
+      cursor:pointer;
+      font-weight: bold;
+    }
+  }
+}
+.bdshare-button-style0-16 .red{
+  background: url('@{imgPathImg}li_red.png') repeat;
+  div{
+    position: absolute;
+    width: 74px;
+    height: 64px;
+    top: 52px;
+    left: 10px;
+  }
+  span{
+    position: absolute;
+    top: 152px;
+    left: 32px;
+    font-size: 18px;
+    color: #f60; 
+    font-weight:bold;
+    cursor: pointer;
+  }
+}
+.alert {
+  display: none;
+  position: absolute;;
+  width: 243px;
+  height: 155px;
+  top: 232px;
+  left: 50%;
+  margin-left: -150px;
+  background-color: #FFFFFF;
+  border-radius:5px;
+  box-shadow:-3px 3px 0 0 rgba(0,0,0,0.03);
+  .title{
+    position: relative;
+    width: 243px;
+    height: 30px;
+    background-color: #FF8200;
+    border-radius:5px 5px 0 0;
+    h4 {
+      position: absolute;
+      top: 5px;
+      left: 10px;
+      color:#FFFFFF;
+    }
+    a{
+      float: right;
+      width: 9px;
+      height: 9px;
+      margin:5px 10px 0 0;
+      cursor: pointer;
+    }
+  }
+  .infobox {
+    position: relative;
+    width: 232px;
+    height: 120px;
+    .info {
+      position: absolute;
+      left: 20px;
+      top: 15px;
+      line-height: 22px;
+    }
+    .btn {
+      position: absolute;
+      top: 85px;
+      left: 90px;
+      width: 70px;
+      height: 22px;
+      line-height: 22px;
+      color: #FF8200;
+      border: 1px solid #FF8200;
+      text-align: center;
+      cursor:hand;
+      cursor:pointer;
+      border-radius: 2px;
+    }
+  }
+}

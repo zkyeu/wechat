@@ -1,0 +1,318 @@
+/**
+ * 默认样式
+ * @author:  liliang（liliang05@51talk.com）
+ * @update:  2017年 5月25日 星期四 18时28分35秒 CST
+ * @note:    黑鸟项目
+ */
+@imgMpath: "../../../images/html/weixin_heck/";
+html,body{width: 100%;}
+.w90_{ width: 90vw;}
+.w95_{ width: 95vw;}
+.dn{display: none;}
+.tiyan-block{
+    font-size: 10px;
+    margin: 20px auto;
+    .tab-list{
+        height: 32px;
+        width: 200px;
+        border: solid 1px #fcc800;
+        border-radius: 4px;
+        ul{
+            display: flex;
+            justify-content: space-between;
+        }
+        li{
+            width: 200px;
+            height: 32px;
+            line-height:32px;
+            text-align: center;
+            cursor: pointer;
+            &.cut{
+                background-color:#fcc800;
+            }
+        }
+    }
+    .table-block{
+        width: 100%;
+        margin-top: 20px;
+        padding-bottom: 130px;
+        .table-control{
+            width: 100%;
+            border: solid 1px #dcdcdc;
+            th{
+                height: 36px;
+
+                line-height: 36px;
+                background-color: #393939;
+                color: #fff;
+                font-size: 14px;
+                border: solid 1px #dcdcdc;
+            }
+            td{
+                border: solid 1px #dcdcdc;
+                font-size: 12px;
+                padding: 5px 10px;
+                color: #6e6e6e;
+                text-align: center;
+                &.col-1{
+                    min-width: 86px;
+                }
+                &.col-2{
+                     min-width: 90px;
+                 }
+                &.col-3{
+                     min-width: 115px;
+                 }
+                &.col-4{
+                    min-width: 50px;
+                }
+                &.col-5{
+                    text-align: left;
+                }
+                &.col-6{
+                    min-width: 86px;
+                }
+                &.col-7{
+                    text-align: left;
+                }
+                &.col-8{
+                    min-width: 69px;
+                }
+                &.col-9{
+                    min-width: 50px;
+                }
+                p{
+                    line-height: 2;
+                    span{
+                        color: #008eff;
+                        text-decoration: underline;
+                        cursor: pointer;
+                        &.link{
+                            color: #008eff;
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }
+                    }
+                    a{
+                        color: #008eff;
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        h5{
+            text-align: center;
+            font-size: 14px;
+            color: #969696;
+            line-height: 50px;
+        }
+    }
+}
+#smsCon::-webkit-input-placeholder{
+    color:#ccc;
+}
+//短信弹层
+.sms-layer{
+    position: absolute;
+    //top:-50px;
+    right:127px;
+    width:340px;
+    height: 200px;
+    padding: 10px 0;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.08);
+    i{
+        display: block;
+        width: 0;
+        height: 2px;
+        position: absolute;
+        top:102px;
+        right: -11px;
+        border-top: transparent 5px solid;
+        border-right: transparent 5px solid;
+        border-bottom: transparent 5px solid;
+        border-left: #fff 8px solid;
+    }
+    textarea{
+        width: 320px;
+        height: 110px;
+        background: #fff;
+        padding: 10px;
+        resize: none;
+        line-height: 1.5;
+        font-size:12px;
+    }
+    .btn-send{
+        display: flex;
+        justify-content: space-between;
+        width: 285px;
+        height: 35px;
+        margin: 20px auto;
+        span{
+            width: 130px;
+            height: 38px;
+            border-radius:10px;
+            text-align: center;
+            line-height: 38px;
+            color:#252525;
+            cursor: pointer;
+        }
+        .send{
+            border: #fcc800 solid 1px;
+            background: #fcc800;
+        }
+        .close{
+            border: #9c9c9c solid 1px;
+            background: #e5e5e5;
+        }
+    }
+}
+//关闭按钮
+.close-layer-btn-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 35px;
+    height: 45px;
+    cursor: pointer;
+    em {
+        cursor: pointer;
+        &:before {
+            content: "";
+            position: absolute;
+            display: block;
+            right: -25px;
+            top: -5px;
+            width: 10px;
+            height: 31px;
+            transform: rotate(45deg);
+            border-right: #fff solid 2px;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            right: -25px;
+            top: 2px;
+            width: 10px;
+            height: 31px;
+            transform: rotate(-45deg);
+            border-right: #fff solid 2px;
+        }
+    }
+}
+
+//按钮
+.btn-global {
+    display: block;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    color: #252525;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    &.default {
+        background-color: #fcc800;
+        border: solid 1px #fcc800;
+        &:hover {
+            background-color: #ffd533;
+            border: solid 1px #ffd533;
+        }
+    }
+    &.disable {
+        border: solid 1px #e5e5e5;
+        background-color: #e5e5e5;
+        &:hover {
+            border: solid 1px #e5e5e5;
+            background-color: #e5e5e5;
+            cursor: default;
+        }
+    }
+    &.greey {
+        border: solid 1px #9c9c9c;
+        &:hover {
+            background-color: #f0f0f0;
+        }
+    }
+}
+
+.flex-mask {
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999999;
+    justify-content: center;
+    align-items: center;
+    &.dn{
+        display: none;
+    }
+}
+.helper-edit-layer{
+    position: relative;
+    width:393px;
+    height: 221px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
+    .add-remind{
+        font-size: 12px;
+        color: #252525;
+        dt{
+            float: left;
+            width: 40px;
+        }
+        dd{
+            margin-left: 40px;
+            height: 120px;
+            textarea{
+                border-radius: 4px;
+                border: solid 1px #dcdcdc;
+                height: 118px;
+                width: 347px;
+                resize: none;
+            }
+        }
+        .set-time{
+            margin: 20px 0;
+            line-height: 20px;
+            i{
+                display: inline-block;
+                width: 20px;
+                height:20px;
+                background: #fff url("@{imgMpath}powersel.png") 0 -19px no-repeat;
+                margin-bottom: -3px;
+                cursor: pointer;
+                &.cut{
+                    background-position: 0 5px;
+                }
+            }
+            .follow-time{
+                border: #dcdcdc solid 1px;
+                margin-top: -3px;
+                padding-left: 14px;
+                border-radius: 4px;
+                width: 80px;
+            }
+        }
+    }
+    .helper-add-btn{
+        display: flex;
+        padding-left: 39px;
+        justify-content: space-between;
+        span{
+            width: 167px;
+        }
+    }
+}
+
+
+

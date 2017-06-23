@@ -1,0 +1,321 @@
+@imgPath: '../../../images/wap/editor_share/';
+.m-say-header{
+    padding: 1rem 1.2rem 0.8rem;
+    background: #fff;
+    overflow: hidden;
+    img{
+        float: left;
+        width: 12.9rem;
+    }
+    a{
+        float: right;
+        width: 7.8rem;
+        padding: 0.7rem 0;
+        text-align: center;
+        font-size: 1.3rem;
+        color: #ff8200;
+        background: #fff;
+        border: 1px solid #ff8200;
+        border-radius: 5px;
+    }
+}
+.m-say-bar{
+    height: 1rem;
+    background: #f2f2f2;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.m-say-tt{
+    padding: 1.5rem 1.2rem 1.5rem 0;
+    margin-left: 1.2rem;
+    border-bottom: 1px solid #d7d7d7;
+    overflow: hidden;
+    .u-word{
+        font-size: 2rem;
+        color: #333333;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        margin-top: 0;
+    }
+    .m-day-word {
+        vertical-align: middle;
+        line-height: 1.5rem;
+    }
+    .m-day-word .from {color: #777777;}
+    .m-day-word .first{
+        float: left;
+        color: #ff5555;
+        font-size: 1.5rem;
+    }
+    .m-day-word .last{
+        float: right;
+        color: #999999;
+        font-size: 1.2rem;
+        text-align: right;
+        vertical-align: bottom;
+    }
+}
+.m-say-ct{
+    padding: 2rem 1.2rem;
+    .m-song{
+        line-height: 2.4rem;
+        font-size: 1.7rem;
+        color:#333333;
+        .en{
+            margin-bottom: 1.5rem;
+        }
+        .zh{
+            margin-bottom: 1.5rem;
+        }
+    }
+    .love{
+        display: block;
+        // width: 30.5rem;
+        width: 100%;
+        margin: 0 auto 0;
+    }
+
+}
+.m-say-audio{
+    display: flex;
+    margin-bottom: 2rem;
+    .u-paly{
+        width: 5.5rem;
+        height: 5.5rem;
+        border-radius: 9999px;
+        background: #ff8200 url("@{imgPath}/pause.png") no-repeat;
+        background-size: 1.4rem 1.75rem;
+        background-position: 2.2rem 1.95rem;
+        border: 1px solid #ff8200;
+        position: relative;
+        &.on{
+            background-image: url("@{imgPath}/play.png");
+        }
+    }
+    .m-bar{
+        margin-left: 1rem;
+        display: flex;
+        flex: 1;
+        //border: 1px solid #d7d7d7;
+        border-left: none;
+        padding: 2.7rem 0 2.6rem 1.3rem;
+        height: 0.2rem;
+        overflow: hidden;
+    }
+    .m-total{
+        flex: 1;
+        position: relative;
+        height: 0.35rem;
+        background: #b2b2b2;
+        height: 0.35rem;
+    }
+    .u-time{
+        position: relative;
+        top:-0.41rem;
+        font-size: 1.2rem;
+        color: #888;
+        width: 3.5rem;
+        height: 1rem;
+        text-align: center;
+    }
+    .m-progress{
+        float: left;
+        position: absolute;
+        display: flex;
+        height: 0.35rem;
+        background: #ff8200;
+        width: 0%;
+    }
+    .u-point{
+        position: absolute;
+        top:-0.7rem;
+        right: -0.6rem;
+        float: left;
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 9999px;
+        border: 1px solid #dadada;
+        background: #fff;
+    }
+}
+.hot-comment,.new-comment{
+    position: relative;
+    margin-left: 1.2rem;
+    .title{
+        font-size: 1.7rem;
+        color:#333;
+        border-bottom:#ebebeb solid 1px;
+        span{
+            display:inline-block;
+            padding-bottom:0.8rem;
+            border-bottom:#ff5555 solid 2px;
+        }
+    }
+    .loadmore{
+        width:100%;
+        margin:1.5rem 0;
+        font-size:1.6rem;
+        color:#777;
+        text-align:center;
+        &::after{
+            display:inline-block;
+            width:10px;
+            height:10px;
+            margin-left:5px;
+            background:#fff;
+            border-right:#777 solid 2px;
+            border-bottom:#777 solid 2px;
+            content:'';
+            vertical-align:text-top;
+            transform:rotate(45deg);
+            transform-origin:center center;
+            transition:transform ease 0.5s;
+        }
+    }
+    .current{
+        &::after{
+            display:inline-block;
+            width:10px;
+            height:10px;
+            margin-left:5px;
+            background:#fff;
+            border-right:#777 solid 2px;
+            border-bottom:#777 solid 2px;
+            content:'';
+            vertical-align:bottom;
+            transform:rotate(-135deg);
+            transform-origin:center center;
+            transition:transform ease 0.5s;
+        }
+    }
+    li{
+        display: flex;
+        padding: 1rem 1rem 0 0;
+        .img_box{
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 1.75rem;
+            overflow: hidden;
+        }
+        .u-head{
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+        .m-info{
+            overflow: hidden;
+            padding-bottom: 0.5rem;
+        }
+        .m-info{
+            font-size: 1.4rem;
+            color: #999999;
+        }
+        .m-msg{
+            flex: 1;
+            margin-left: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #ebebeb;
+            &.last{
+                border-bottom: none;
+            }
+        }
+        .time{
+            color:#aaa;
+            font-size:1.2rem;
+        }
+        .pic{
+            margin:1rem 0;
+            img{
+                max-width:100%;
+            }
+        }
+        .m-cmt-txt{
+            font-size: 1.7rem;
+            line-height: 2.4rem;
+            color:#333333;
+        }
+    }
+    .m-cmt-audio{
+        position: relative;
+        padding: 0.8rem 0 1.1rem 0.8rem;
+        margin: 1.2rem 0;
+        background: #ffb54c;
+
+        border-radius: 5px;
+        .time{
+            color: #fff;
+            font-size: 1.4rem;
+        }
+        .blink{
+            position: absolute;
+            top:1rem;
+            right: 0.8rem;
+            width: 1.15rem;
+            height: 1.7rem;
+            background: url("@{imgPath}/blink.png") no-repeat;
+            background-size:1.15rem 1.7rem;
+            &.on{
+                background-image:url("@{imgPath}/on.gif");
+            }
+            // animation: blink;
+            // animation-duration: 0.5s;
+            // animation-timing-function: linear;
+            // animation-iteration-count: infinite;
+            // animation-direction: alternate;
+            // animation-play-state: running;
+        }
+        &.long{
+            width: 19.1rem;
+        }
+        &.short{
+            width: 8.6rem;
+        }
+        &::after {
+            top: 0.8rem;
+            left: -0.5rem;
+            bottom: auto;
+            border-width: 0.4rem 0.5rem 0.4rem 0;
+            border-color: transparent #ffb54c;
+            content: "";
+            position: absolute;
+            border-style: solid;
+            display: block;
+            width: 0;
+        }
+    }
+}
+.m-say-footer{
+    padding:1.5rem 1.2rem 2.2rem 6rem;
+    overflow: hidden;
+    p{
+        float: left;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        color:#898989;
+    }
+    a{
+        float: right;
+        width: 7.3rem;
+        text-align: center;
+        line-height: 3rem;
+        height: 3rem;
+        color:#ff8200;
+        border: 1px solid #ff8200;
+        border-radius: 5px;
+    }
+}
+// 底部的下载客户端链接
+.down_client{
+    position: relative;
+    width: 100%;
+    height: 4.9rem;
+    background-color: #ff8200;
+    a{
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        line-height: 4.9rem;
+        height: 4.9rem;
+        font-size: 1.8rem;
+        color: #ffffff;
+    }
+}

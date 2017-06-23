@@ -1,0 +1,247 @@
+.box_header{
+    //background-image: url("@{imgPath}box_top_img.png");
+    width: 100%
+
+}
+.box_landing_content{
+    width: 100%;
+    //background: linear-gradient(to bottom,  #000000 0%,#ffffff 100%);
+    background-image: url("@{imgPath}box_bg.png") ;
+    background-repeat: repeat;
+    .box_course{
+        width: 90%;
+        margin:0 auto 0;
+        padding: 15px 0;
+        position: relative;
+        overflow: hidden;
+        img{
+            width: 100%;
+        }
+        .course_video{
+            position: absolute;
+            left:0;
+            top:0;
+            z-index: 10 ;
+        }
+
+        .course_video_con{
+            z-index: 3;
+            border-radius: 44px;
+            top:24px;
+        }
+    }
+    .video_box{
+        background-size: 100%;
+        background-image:url("@{imgPath}video_kuang.png");
+        height: 3.54rem;
+        background-repeat: no-repeat;
+        padding-top:0.96rem;
+        iframe{
+            width: 5.40rem;//4.90
+            height: 3.08rem;//2.76
+            margin: 0 auto;
+            display: block;
+        }
+    }
+    .box_bottom{
+        width: 100%;
+        background: url("@{imgPath}box_landing_bottom.png") left bottom no-repeat;
+        background-size: 100%;
+        padding: 30px 0 50px;
+        .sign_up{
+            width: 90%;
+            margin: 0 auto;
+            img{
+                width: 100%;
+            }
+        }
+        .sign_down{
+            width: 90%;
+            //height: 2.37rem;
+            margin: 0 auto;
+            position: relative;
+            img{
+                width: 100%;
+                margin-top: -1.4rem;
+            }
+            .has_qq{
+                padding-left: 2.07rem;
+                &:before{
+                    content: "";
+                    background: url("@{imgPath}box_qq.png") no-repeat;
+                    background-size: 100%;
+                    width: 0.6rem;
+                    height: .68rem;
+                    position: absolute;
+                    left: 1.4rem;
+                    top:-0.08rem;
+                }
+            }
+            .qq_text{
+                //text-align: center;
+                top:2.2rem;
+                padding-left: 1.3rem;
+                color: #fe3a26;
+            }
+            p{
+                position: absolute;
+                //text-align: center;
+                color:#688300;
+                font-size: 0.32rem;
+                width: 100%;
+                top:1.6rem;
+                padding-left: 0.1rem;
+                font-size: 0.36rem;
+                font-weight: 900;
+                span{
+                    color:#fe3a26;
+                }
+            }
+            // background-image:url("@{imgPath}box_parentqq.png");
+            // background-size: 100%;
+            // background-repeat: no-repeat;
+            // text-align: center;
+            // color:#688300;
+            // font-size: 0.32rem;
+            // padding-top: 1.59rem;
+        }
+    }
+    .return_bottom{
+        background: 0;
+        padding: 0;
+    }
+}
+
+.box_landing_confirm{
+    display: none;
+    position: fixed;
+    font-size: 0.25rem;
+    color:#c8c8c8;
+    width: 100%;
+    max-width: 640px;
+    bottom: 0;
+    z-index: 999;
+    background: rgba(000, 000, 000, 0.5);
+    height: 8.04rem;
+    transform:translateY(10rem);
+    transition:transform 0.4s;
+    &.box_landing_confirm_open{
+        transform:translateY(0);
+    }
+    .box_monkey{
+        width: 5.57rem;
+        height: 1.56rem;
+        margin-top: -0.8rem;
+    }
+    .box_monkey_close{
+        position: absolute;
+        right: 0.09rem;
+        width: 0.76rem;
+        height: 0.76rem;
+        top:-0.38rem;
+    }
+    .box_form{
+        ul{
+            li{
+                margin: 0.08rem auto 0.3rem;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                padding-left:0.75rem;
+                width:5.26rem;
+                height:0.97rem;
+                position: relative;
+                input{
+                    width: 100%;
+                    height: 100%;
+                    background-color: transparent;
+                    font-size: 0.25rem;
+                }
+                .err_tips{
+                    display: none;
+                    width: 0.44rem;
+                    height: 0.44rem;
+                    position: absolute;
+                    top:0.25rem;
+                    background:url("@{imgPath}box_error_tips.png") no-repeat; 
+                    background-size: 100%;
+                }
+            }
+            .box_select{
+                position: relative;
+                background-image:url("@{imgPath}box_select.png"); 
+                .select_class{
+                    height: 0.97rem;
+                    line-height: 0.97rem;
+                    span{
+                        color:red;
+                    }
+                }
+                .err_tips{
+                    left:4rem;
+                }
+                select{
+                    width: 5.2rem;
+                    position: absolute;
+                    left: 0.75rem;
+                    height: 0.97rem;
+                    line-height: 0.97rem;
+                    top:0;
+                    opacity: 0;
+                    z-index: 15;
+                    background-color: transparent;
+                }
+                .select_btn{
+                    position: absolute;
+                    right: 0;
+                    top:0;
+                    z-index: 10;
+                    width: 1.12rem;
+                    height: 0.94rem;
+                    background-image: url("@{imgPath}select_btn.png"); 
+                    background-size: 100%;
+                } 
+            }
+            .box_phone{
+               background-image: url("@{imgPath}box_phone.png"); 
+               .err_tips{
+                left:5.28rem;
+               }
+            }
+            .box_password{
+                background-image: url("@{imgPath}box_password.png");
+                .err_tips{
+                    left:5.28rem;
+                   }
+            }
+            .box_code{
+                position: relative;
+                background-image: url("@{imgPath}box_code.png");
+                .err_tips{
+                    left:3rem;
+                   }
+                .box_send_code{
+                    position: absolute;
+                    right: 0;
+                    top:0;
+                    z-index: 10;
+                    width: 2.35rem;
+                    height: 0.94rem;
+                    line-height: 0.94rem;
+                    text-align: center;
+                    background-image: url("@{imgPath}box_code_send.png"); 
+                    background-size: 100%;
+                    color:#fff;
+                }
+            }
+            .box_submit-btn{
+                height: 1.29rem;
+                background-image: url("@{imgPath}box_submit.png");
+
+            }
+        }
+    }
+}
+.box_change_height .promptDialog-in{
+    height: 300px;
+    padding: 25px;
+}

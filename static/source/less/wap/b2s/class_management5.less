@@ -1,0 +1,117 @@
+// 图片path
+@imgPath: '../../../images/wap/b2s/';
+//background: url("@{imgPath}start_bg.png") no-repeat;
+.disnone{
+    display: none;
+}
+#fontSizeLoding{
+    width: 100%;
+    min-height: 100%;
+    max-width: 640px;
+    background-color: rgba(255, 255, 255, 1);
+    position: fixed;
+    top:0; 
+    z-index: 999;
+    img{
+        width: 30px;
+        height: 30px;
+        margin-left: -15px;
+        margin-top: -15px;
+        position: absolute;
+        top:50%;
+        left:50%;
+
+    }
+}
+.class_management5{
+    background: #f5f5f5;
+    .class_title{
+        padding: 0.2rem;
+        color: #999;
+        font-size: 0.28rem;
+        i{
+            color:#ff7171;
+        }
+    }
+    table{
+        width: 100%;
+        background: #fff;
+        border-collapse:collapse;
+        tr{
+            width: 100%;
+            color: #333;
+            &:first-child{
+                td{
+                    border-bottom:1px solid #e0e0e0;
+                }
+                color:#b2b2b2;
+                border-bottom:1px solid #e0e0e0;
+                td:nth-child(2){
+                    span{
+                        display: inline-block;
+                        width: 0.3rem;
+                        height: 0.3rem;
+                        background: url("@{imgPath}app_reportWeek_share-05.png") no-repeat;
+                        background-size: 0.3rem 0.3rem;
+                        margin-left: 0.1rem;
+                    }
+                }
+            }
+            td{
+                padding:0.2rem 0;
+                font-size: 0.26rem;
+                text-align: center;
+                &:first-child{
+                    width: 20%;
+                }
+                &:nth-child(2){
+                     width: 35%;
+                }
+                &:last-child{
+                    width: 45%;
+                }
+            }
+        }
+    }
+    .no_live_title{
+        padding:0.2rem 0.6rem;
+        border-bottom:1px solid #e0e0e0;
+        background: #fff;
+        color:#b2b2b2;
+        font-size: 0.26rem;
+    }
+    .no_live{
+        color:#333;
+        padding:0.2rem 0.6rem;
+        background: #fff;
+        font-size: 0.26rem;
+    }
+    .tea-btn-wrap2 {
+        height: 0.96rem;
+        padding-bottom: 0.2rem;
+        .tea-btn-in {
+            position: fixed;
+            width: 100%;
+            max-width: 640px;
+            text-align: center;
+            padding: 0 0.2rem;
+            box-sizing: border-box;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            padding-bottom: 0.2rem;
+            z-index: 10;
+        }
+        .tea-btn {
+            width: 100%;
+            display: block;
+            height: 0.96rem;
+            line-height: 0.96rem;
+            background-color: #55cb42;
+            color: #fff;
+            font-size: 0.4rem;
+            letter-spacing: 0.04rem;
+            border-radius: 999px;
+        }
+    }
+}

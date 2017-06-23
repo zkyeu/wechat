@@ -1,0 +1,42 @@
+<%if(data.type=="teacher"){%>
+	<%if(data.sayContent){%>
+		<div class="teacher f-cb">
+			<div class="xinao-photo">
+			  <img src="<%=teacher_img%>">
+			</div>
+			<div class="xinao-message <%=data['class']?data['class']:''%>" style="<%=data.isimg?'padding:10px':''%>"><i class="jiao"></i><p><%=data.sayContent%></p></div>
+		</div>
+	<%}else{%>
+		 <div class="teacher f-cb">
+              <div class="xinao-photo">
+                  <img src="<%=teacher_img%>">
+              </div>
+              <div class="xinao-audio" audio-url="<%=data.audioUrl%>" style="width:<%=(70+data.times*10)%>px"><i class="jiao"></i><span class=""></span><i class="unactive"></i></div>
+              <div class="xinao-tip" style="cursor: pointer;"> <span><%=data.times%>"</span>( 点击播放 )</div>
+          </div>
+	<%}%>	
+<%} else if(data.type=="student"){%>
+	<div class="student f-cb">
+	      <div class="xinao-photo">
+	          <img src="<%=student_img%>">
+	      </div>
+    <div class="xinao-message <%=data['class']?data['class']:''%>" style="<%=data.isimg?'padding:10px':''%>"><i class="jiao"></i><p><%=data.sayContent%></p></div>
+<%}else if(data.type=="select"){%>
+	<div class="xinao-select">
+	      <h4>请<%=data.buttons.length>1?'选择':'点击'%>：</h4>
+	      <div class="btn-li">
+	      		<%for (var i=0;i<data.buttons.length;i++){%>
+		             <div class="xinao-message <%=data.buttons[i]['class']?data.buttons[i]['class']:''%>" 
+		             	data-xinaoFlag="<%=data.buttons[i].xinaoFlage?data.buttons[i].xinaoFlage:''%>" data-isBack = "<%=data.buttons[i].isback?data.buttons[i].isback:''%>" 
+		             	data-key="<%=data.buttons[i].key%>" >
+		             	<i class="jiao"></i>
+		             	<p><%=data.buttons[i].button%></p>
+		             </div>
+		        <%}%>     
+	      </div>
+	 </div>
+<%}else if(data.type=="end"){%>
+	<div class="xinao-end xinao-select">
+	      <div class="btn" style="padding-left:4px;">立刻体验！</div>
+	</div> 
+<%}%>	

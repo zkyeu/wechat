@@ -1,0 +1,147 @@
+/*初始化样式*/
+@import "../common/reset.less";
+@media only screen and (min-width: 481px){
+    html {
+        font-size: 94%!important;
+    }
+}
+@media only screen and (min-width: 561px){
+    html {
+        font-size: 109%!important;
+    }
+}
+@media only screen and (min-width: 641px){
+    html {
+        font-size: 125%!important;
+    }
+}
+
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+
+@charset "utf-8";
+@imgPath: "../../../images/wap/send-email/";
+/*
+* 北美H5
+* @file：   north-america.less
+* @author:  wuhao01@51talk.cn）
+* @update:  2016-08-10
+* @note:    北美H5
+*/
+/*北美H5*/
+
+html,body{
+    font-family:'Microsoft YaHei',STXihei,MingLiu;
+    min-width: 320px;
+    max-width: 640px;
+    margin:0 auto;
+}
+.header {
+    position: absolute;
+    z-index: 99;
+    .banner {width: 100%;}
+    .register {
+        margin: 1.3rem 0 0 0;
+        input {
+          margin: 0 auto;
+          display: block;
+          border: 0.05rem solid #dcdcdc;
+          border-radius: 0.5rem;
+        }
+        
+        .password {
+          margin: 0 auto 1rem;
+          padding: 0 0 0 4.5rem;
+          width: 23rem;
+          height: 4.4rem;
+          line-height: 3rem;
+          font-size: 1.3rem;
+          color: #b4b4b4;
+          -webkit-appearance:none;
+          -webkit-tap-highlight-color:rgba(0,0,0,0);
+          background-color: #fafafa;
+        }
+        
+        
+    }
+}
+.wrap{
+  width: 91.33%;
+  padding-top: 17.2rem;
+  position: relative;
+  z-index: 98;
+  margin: 0 auto;
+  top: 0;
+  -webkit-box-shadow:0 0 10px rgba(204,204,204,0.4);
+  -moz-box-shadow:0 0 10px rgba(204,204,204,0.4);
+  box-shadow:0 0 10px rgba(204,204,204,0.4);
+  background-size:59.4% auto;
+  margin-bottom: 1.5rem;
+  .describe{
+    width: 83.3%;
+    display: block;
+    margin: 0 auto;
+  }
+  .forms{
+    width: 83.3%;
+    margin: 0 auto;
+    padding-top: 1.275rem;
+    position: relative;
+    height: 32.65rem;
+    img{
+      position: absolute;
+      width: 16.4%;
+    }
+    .input-wrap{
+      width: 77.3%;
+      float: right;
+      input{
+        width: 100%;
+        margin-bottom: 0.7rem;
+        font-size: 1.3rem;
+        padding: 0.8rem 0.5rem;
+        border: 1px solid #e4e4e4;
+        border-radius: 4px;
+        	outline:none;
+         -webkit-appearance: none;
+      }
+      @media only screen and (width: 432px){
+          input{
+            margin-bottom: 1.55rem;
+          }
+      }
+      textarea{
+        width: 100%;
+        padding: 0.8rem 0.5rem;
+        font-size: 1.3rem;
+        border-radius: 4px;
+        border: 1px solid #e4e4e4;
+        height:3rem;
+      }
+    }
+    .regbtn{
+      width: 12.8rem;
+      height: 4rem;
+      background: #ffa800;
+      color: #fff;
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      -webkit-border-radius: 6px;
+      border-radius: 6px;
+      margin-left: 27.6%;
+    }
+  }
+  select{
+    background-color: transparent;
+    margin-bottom: 0.7rem;
+    font-size: 1.3rem;
+    padding: 0.8rem 0.8rem;
+    border: 1px solid #e4e4e4;
+    border-radius: 4px;
+    outline:none;
+    width: 100%;    
+  }
+  .city-select{
+    margin-right: -1rem;
+  }
+}

@@ -1,0 +1,70 @@
+<div class="g-diaglogue g-diaglogue2">
+    <div class="m-tips">
+       <h3 >提示: 可以选择完整试听全文后，进行单个句子练习，点击“读”进行发音练习后，系统会自动为你打分！</h3>
+    </div>
+    <div style="height:450px;overflow: auto;">
+        <div class="allDiag">
+       
+            <div class="diaglogue">
+                <ol class="f-cb">
+                    <%for (j=0; j<res.sentence.length; j++) {%>
+                          <%if(!res.sentence[j]['e_sentence1']){%>
+                              <li >
+                                    <div class="f-cb">
+                                      <div class="text">
+                                          <p>
+                                              <%=j+1%>.<em class="content"><%=res.sentence[j].title%></em>
+                                          </p>
+                                      </div>
+                                      <div class="operate">
+                                        <span class="listen" media-audio="<%=domain1 + res.sentence[j].url%>" data-index="100<%=j%>">听<i></i></span>
+                                        <span class="read" data-title="<%=res.sentence[j].title%>">读<i></i></span>
+                                        <span class="result"></span>
+                                      </div>
+                                    </div>
+                                    <%if(res.sentence[j].explain){%>
+                                        <div style="padding-left:17px;text-indent:14px;line-height:28px;color:#999999;width:428px;"><%=res.sentence[j].explain%></div>
+                                    <%}%>
+                              </li>
+                            <%}else{%>
+                                <li >
+                                    <div class="f-cb">
+                                      <div class="text">
+                                          <p>
+                                              <%=j+1%>.—— <em class="content"><%=res.sentence[j].title%></em>
+                                          </p>
+                                      </div>
+                                      <div class="operate">
+                                        <span class="listen" media-audio="<%=domain1 + res.sentence[j].url%>" data-index="100<%=j%>">听<i></i></span>
+                                        <span class="read" data-title="<%=res.sentence[j].title%>">读<i></i></span>
+                                        <span class="result"></span>
+                                      </div>
+                                    </div>
+                                    <%if(res.sentence[j].explain){%>
+                                        <div class="cn-des"><%=res.sentence[j].explain%></div>
+                                    <%}%>
+                                </li>
+                                <li >
+                                    <div class="f-cb" >
+                                      <div class="text">
+                                          <p style="padding-left:13px; text-indent:16px;">
+                                             ——<em class="content"><%=res.sentence[j]['e_sentence1']%></em>
+                                          </p>
+                                      </div>
+                                      <div class="operate">
+                                        <span class="listen" media-audio="<%=domain1 + res.sentence[j]['sentence1_url']%>" data-index="100<%=j+'w1'%>">听<i></i></span>
+                                        <span class="read" data-title="<%=res.sentence[j]['e_sentence1']%>">读<i></i></span>
+                                        <span class="result"></span>
+                                      </div>
+                                    </div>
+                                    <%if(res.sentence[j]['c_sentence1']){%>
+                                        <div class="cn-des"><%=res.sentence[j]['c_sentence1']%></div>
+                                    <%}%>
+                                </li>
+                            <%}%>                          
+                    <%}%>
+                </ol>
+              </div>
+            </div>
+
+</div>

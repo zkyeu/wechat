@@ -1,0 +1,144 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ */
+input,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.g-s-body {
+  background-color: #e2e2d7;
+}
+.g-s-body .g-s-content {
+  padding: 0 23px;
+}
+.g-s-body .g-s-content .content {
+  padding-top: 15px;
+  padding-bottom: 30px;
+  background-color: #ffffee;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.g-s-body .g-s-content .content .c-text {
+  font-size: 14px;
+  color: #595757;
+  text-align: center;
+}
+.g-s-body .g-s-content .content .time-box {
+  text-align: center;
+  margin-top: 5px;
+}
+.g-s-body .g-s-content .content .time-box span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 7px;
+  background: -webkit-linear-gradient(left top, #ffedaa, #ffb762);
+  font-size: 14px;
+  color: #000;
+  text-align: center;
+  line-height: 22px;
+}
+.g-s-body .g-s-content .content .time-box .t-left {
+  margin-left: -2px;
+}
+.g-s-body .g-s-content .content .time-box i {
+  position: relative;
+  top: -2px;
+  color: #313131;
+}
+.g-s-body .g-s-content .content .c-des {
+  margin-top: 10px;
+  font-size: 19px;
+  color: #595757;
+  text-align: center;
+}
+.g-s-body .g-s-content .content .group-p {
+  margin-top: 15px;
+  text-align: center;
+}
+.g-s-body .g-s-content .content .group-p li {
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+  position: relative;
+}
+.g-s-body .g-s-content .content .group-p li img {
+  width: 34px;
+  height: 34px;
+}
+.g-s-body .g-s-content .content .group-p li span {
+  font-size: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 15px;
+  background-color: #ea5514;
+  text-align: center;
+  line-height: 15px;
+  color: #fff;
+  border-radius: 10px;
+  position: absolute;
+  right: -13px;
+  top: -5px;
+}
+.g-s-body .g-s-content .group-info {
+  color: #595757;
+  font-size: 14px;
+  border-bottom: 1px solid #9d9c97;
+  padding: 15px 5%;
+}
+.g-s-body .g-s-content .group-info p {
+  line-height: 27px;
+}
+.g-s-body .g-s-content .code-box {
+  text-align: center;
+}
+.g-s-body .g-s-content .code-box .code-text {
+  font-size: 14px;
+  color: #595757;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.g-s-body .g-s-content .code-box .code-img {
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+.g-s-body .g-s-content .code-box .code-img img {
+  width: 125px;
+  height: 125px;
+}
+.share-box {
+  display: none;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.share-box .share-p {
+  width: 253px;
+  height: 264px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  margin-left: -121px;
+  background: url(../../../images/wap/group_purchase/g_37.png?v=khEAx18oY322GxXMXqxojw%3D%3D) no-repeat;
+  background-size: 253px 264px;
+}
+.share-box .share-p .close-btn {
+  display: block;
+  width: 110px;
+  height: 35px;
+  bottom: 0px;
+  position: absolute;
+  left: 43%;
+  margin-left: -55px;
+}
+.hide {
+  display: none!important;
+}

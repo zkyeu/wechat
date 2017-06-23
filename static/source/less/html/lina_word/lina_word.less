@@ -1,0 +1,430 @@
+@charset "utf-8";
+@import "../common/base.less";
+
+/*
+* 青少landing
+* @file：   index.less
+* @author:  zhangtian（zhangtian@51talk.cm）
+* @update:  2015-08-03
+* @note:    重置样式、通用变量、基础样式、功能样式、混合样式
+*/
+
+/* 公共样式 */
+@imgPath: "../../../images/html/lina_word";
+@width:1900px;
+@mWidth:981px;
+@bColor:#000;
+@wColor:#fff;
+@textColor:#666;
+@inputColor:#4a4949;
+@inputTestC:#a8a8a8;
+@homeColor:#70c191;
+@home3:#7091db;
+@home7:#75cee5;
+@home10:#eec047;
+@home13:#ec774b;
+@colorG:#5c5c5c;
+@gColor:#e9e9e9;
+@gwColor:#f6f6f6;
+@f12:12px;
+@f14:14px;
+@f15:15px;
+@f16:16px;
+@f18:18px;
+.minWidth{width:@mWidth;margin:0 auto;}
+.g_min{
+	height: 100%;
+	background: url("@{imgPath}/lev_word.jpg") center top no-repeat;
+	.g_top{
+		height: 546px;
+		position: relative;
+		.m_logo{
+			height:62px;
+			padding:16px 30px;
+			.f_logo{
+				float: left;
+				width: 159px;
+			}
+			.banWord{
+				float: left;
+				width: 240px;
+				font-size: @f16;
+				border-left: 2px #231815 solid;
+				color: #333;
+				margin:20px 0 0 10px;
+				padding-left: 5px;
+			}
+			.f_phone{
+				font-size:24px;
+				height: 68px;
+				line-height: 68px;
+				color: @bColor;
+				margin-left: 270px;
+				.u_icon{
+					margin:17px 10px 0 0;
+					*margin:0 10px 0 0;
+				}
+			}
+		}
+		.m_login{
+			width:350px;
+			position: absolute;
+			right:70px;
+			bottom:20px;
+			.m_oto{
+				padding-left:22px;
+				line-height: 38px;
+				margin-bottom: 8px;
+				strong{
+					height:38px;
+					font-size: 38px;
+					color: @wColor;
+					vertical-align: middle;
+				}
+				.s_otoC{
+					font-size: @f18;
+					background-color: #ed5741;
+					padding:8px 6px;
+					color: @wColor;
+					font-weight: bold;
+					vertical-align: middle;
+					margin-left:10px;
+
+				}
+				.s_otoN{
+					font-weight:normal;
+				}
+			}
+			.f_login{
+				background-color: @wColor;
+				border-radius: 5px;
+				height: 400px;
+				.f_loginT{
+					width:100%;
+					text-align: center;
+					font-size: 25px; 
+					border-radius: 5px 5px 0 0;
+					font-weight: bold;
+					line-height: 35px;
+					padding:20px 0;
+					span{
+						font-family: "Arial";
+						font-weight: normal;
+						margin-left: 10px;
+					}
+				}
+				.f_loginB{
+					padding: 0 30px;
+
+					.f_phoneN,.f_loginP,.f_mail{
+						width:254px;
+						height:44px;
+						_height:38px;
+						border:1px solid #00a8a8;
+						line-height: 44px;
+						padding:0 16px;
+						margin-bottom: 20px;
+						border-radius: 3px;
+						_padding-top:6px;
+						input{
+							width:190px;
+							padding-left: 5px;
+							font-size:16px;
+
+						}
+						span{
+							width: 30px;
+							height: 30px;
+							background: url("@{imgPath}/iph_ocn.jpg") center top no-repeat;
+							background-position:0 10px;
+							display: inline-block;
+							vertical-align: middle;
+						}
+						.span01{
+							background-position:0 10px;	
+						}
+						.span02{
+							background-position:0 -25px;	
+						}
+						.span03{
+							background-position:0 -63px;	
+						}
+					}
+					.f_loginBt{
+						input{
+							width:100%;
+							height:50px;
+							line-height: 50px;
+							background-color: #006ac0;
+							border-radius: 3px;
+							font-size: 28px;
+							color: @wColor;
+						}
+					}
+				}
+			}
+		}
+		
+	}
+	.g_content{
+		.r_represent{
+			.minWidth;
+			text-align:center;
+			.repImg{
+				margin-top: 55px;
+			}
+			.repBomImg{
+				margin-top: 35px;
+			}
+			.clickStepTag{
+				width: 940px;
+				margin-top: 55px;
+				height: 401px;
+				ul{
+					width: 100%;
+    			height: 160px;
+					li{
+						width: 312px;
+				    height: 160px;
+				    float: left;
+				    cursor: pointer;
+					}
+				}
+				.showStep{
+					height: 237px;
+			    width: 100%;
+			    position: relative;
+			    text-align: left;
+			    p{
+			    	width: 900px;
+				    height: auto;
+				    overflow: hidden;
+				    margin-left: 20px;
+				    margin-bottom: 15px;
+				    text-align: left;
+				    .index_input{
+				    	width: 180px;
+					    height: 18px;
+					    padding: 2px 5px;
+					    line-height: 18px;
+					    border: 1px solid #cccccc;
+					    margin-right: 10px;
+					    float: left;
+				    }
+				    .dl_a{
+				    	text-align: center;
+					    float: left;
+					    height: 24px;
+					    line-height: 24px;
+					    padding: 0 5px;
+					    display: block;
+					    background: #FFA800;
+					    color: #fff;
+					    width: 60px;
+				    }
+			    }
+			    .f_18{
+			    	font-size: 18px;
+			    }
+			    .f_y{
+			    	color: #ffa800;
+			    }
+			    .m_r20{
+			    	margin-right: 20px;
+				    position: relative;
+				    _margin-top: 4px;
+			    }
+			    .f_c{
+	    	    margin: 0 auto;
+	    	    color: #00b4d7;
+			    }
+			    .btn_a{
+			    	position: absolute;
+				    right: 10px;
+				    bottom: 10px;
+				    width: 177px;
+				    height: 28px;
+				    line-height: 28px;
+				    color: @wColor;
+				    background: #ffa800;
+				    font-size: @f16;
+				    padding: 0 10px;
+			    }
+				}
+			}
+			.picGuide1{
+				background: url("@{imgPath}/pic_guide_1.png") center top no-repeat;
+			}
+			.picGuide2{
+				background: url("@{imgPath}/pic_guide_2.png") center top no-repeat;
+			}
+			.picGuide3{
+				background: url("@{imgPath}/pic_guide_3.png") center top no-repeat;
+			}
+			.repBtn{
+				border-radius: 5px;
+				background-color: #ea5800;
+				color: @wColor;
+				margin: 65px 0 76px 15px;
+				display: inline-block;
+				font-size: 28px;
+				padding:13px 70px;
+			}
+		}
+		.m_mh{
+			margin-top: 60px;
+			background-color: #f0f0f0;
+			.m_mm{
+				padding-top: 30px;
+				.m_honor{
+					width: 100%;
+			    height: auto;
+			    overflow: hidden;
+			    margin-top: 20px;
+			    margin-bottom: 30px;
+			    .f_honor{
+			    	li{
+			    		width: 195px;
+					    float: left;
+					    text-align: center;
+					    padding: 0 20px;
+					    background: url("@{imgPath}/hLine.png") no-repeat;
+					    .span_h{
+					    	line-height: 22px;
+					    	color:#333;
+					    }
+			    	}
+			    	.borderN{
+			    		background: none;
+			    	}	
+			    }
+				}
+				.m_media{
+					margin-bottom: 34px;
+					a{
+						display: inline-block;
+						width:130px;
+						height: 60px;
+						margin-right: 30px;
+					}
+				}
+				.m_company{
+					.f_company{
+						height: 108px;
+						li{
+							float: left;
+							margin-right: 50px;
+							img{
+								margin-bottom: 8px;
+							}
+							p{
+								text-align: center;
+								font-size: @f12;
+								line-height: 18px;
+								a{
+									text-decoration: underline;
+									color: #8f8f8f;
+								}
+							}
+						}
+					}
+				}
+				h3{
+					font-size: @f18;
+					font-weight: bold;
+					height: 40px;
+					color: #838184;
+					span{
+						float: left;
+					}
+					a{
+						float: right;
+						font-size: @f14;
+						font-weight: normal;
+					}
+				}
+			}
+		}
+	}
+	.g_bottom{
+		background-color: #bebebe;
+		width: 100%;
+		height: 180px;
+		.g_bottomT{
+			padding-top: 37px;
+			height: 30px;
+			line-height: 30px;
+			font-size: 18px;
+			position: relative;
+			p{
+				float: left;
+				color: @wColor;
+			}
+			.f_bM,.f_bW,.f_bN{
+				position: relative;
+				float: left;
+				span{
+					font-size: @f12;
+					color: #dad9d9;
+					position: absolute;
+					left: 6px;
+					top:2px;
+				}
+				input{
+					height: 44px;
+					line-height: 44px;
+					width: 230px;
+					text-align: center;
+					border-radius: 5px;
+					margin-right: 5px;
+					background-color: #f1f1f1;
+					font-size: @f16;
+				}
+			}
+			a{
+				float: left;
+				width:270px;
+				height: 44px;
+				line-height: 44px;
+				text-align: center;
+				font-size: @f16;
+				background-color: #f97e1a;
+				color: @wColor;
+				position: relative;
+				border-radius: 5px;
+				font-size: 20px;
+				span{
+					position: absolute;
+					width:10px;
+					height: 8px;
+					right: 10px;
+					top:0;
+				}
+			}
+			img{
+				position: absolute;
+				left: 50%;
+				top:90px;
+				margin-left:-130px;
+			}
+		}
+		.piped{
+			text-align: center;
+			margin-top: 45px;
+			*margin-top: 20px;
+			color:@wColor; 
+			font-size: 12px;
+			i{
+				margin:0 5px 0 7px;
+			}
+			a{
+				color:@wColor;
+			}
+		}
+	}
+}
+
+
+
+
+

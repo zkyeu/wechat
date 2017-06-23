@@ -1,0 +1,454 @@
+/*初始化样式*/
+@charset "utf-8";
+body{ font-family:'Microsoft YaHei',STXihei,MingLiu;}
+cite,i,s,b{ font-style:normal;font-weight:normal;}
+body,ul,li,p,dl,dt,dd,ol,h1,h2,h3,h4,h5,h6{ margin:0px; padding: 0px;}
+h1,h2,h3,h4{  font-weight: normal;}
+li{ list-style: none;}
+img{border:0px;}
+a,a:link,a:visited{ text-decoration: none;}
+input{font-family:'Microsoft YaHei',STXihei,MingLiu;outline: none;border: none;margin:0;padding: 0;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+@imgPath: "../../../images/wap/learning20170206/";
+@fontSize16: 0.25rem;
+@fontSize18: 0.28125rem;
+@fontSize30: 0.46875rem;
+@fontSize32: 0.5rem;
+@fontSize36: 0.5625rem;
+@fontSize24: 0.375rem;
+@fontSize28: 0.4375rem;
+body,html{
+  margin:0px auto;
+  min-width: 320px;
+  // max-width: 750px;
+}
+.hide{display: none;}
+.hot-caption{
+  text-align:center;
+  padding:0.78125rem 0 0.7rem 0; 
+  line-height: 1;
+  img{width: 100%;}
+}
+.header{
+  background-color: #f66333;
+  .banner{width: 100%;}
+}
+.learn-title{
+  position: relative;
+  color: #fff;
+  text-align: center;
+  font-size:0.4375rem;
+  height: 1.2rem;
+  padding-top: 1rem;
+  i{
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-top:1px #ffb279 solid;
+  }
+  .tst{
+    position: absolute;
+    left: 50%;
+    top: 0.5rem;
+    margin-left: -3.125rem;
+    width: 6.25rem;
+    background-color: #ff7e1f;
+  }
+  p{
+    font-size:@fontSize36;
+    margin-bottom: 0.05rem;
+  }
+}
+.rota{
+  z-index: 6;
+  position: relative;
+  background-color: #ff7e1f;
+  padding: 0.315rem 0.390625rem;
+  .dial-bg{
+    width: 9.21875rem;
+    height: 9.375rem;
+    margin: 0 auto;
+    background: url('@{imgPath}dial_bg.png') no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    .l_grid{
+      margin-left: 0.71875rem;
+      margin-top: 0.71875rem;
+      li{
+        width: 2.53125rem;
+        height: 2.609375rem;
+        margin-right: 0.109375rem;
+        margin-bottom: 0.109375rem;
+        float: left;
+        background:url('@{imgPath}l_bg.png') 0 -2.8125rem no-repeat;
+        background-size: 2.53125rem 10.96875rem;
+        &.pointer{
+          background-position:0 -5.5625rem;
+        }
+        &.pointer:active{
+          background-position:0 -8.328125rem;
+        }
+        &.l_now{
+          background-position: 0 0;
+        }
+        img{
+          margin: 0.15625rem auto 0 auto;
+          height: 2.34375rem;
+          width: 2.34375rem;
+          display: block;
+        }
+      }
+    }
+  }
+  .prize_list{
+    position: relative;
+    overflow: hidden;
+    margin-top: 0.5rem;
+    .caption {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 91.525%;
+      }
+    }
+    .names{
+      background: #ffd400;
+      border-radius: 0.3125rem;
+      margin-top: 0.96875rem;
+      height: 5.9375rem;
+      .name_list {
+        padding: 1rem 0.234375rem 0 0.234375rem;
+        height: 4.609375rem;
+        overflow: hidden;
+        li {
+          color: #d45a07;
+          line-height: 0.78125rem;
+          height: 0.78125rem;
+          padding-top: 0.140625rem;
+          color: #c82401;
+          font-size: 0.4375rem;
+          border-bottom: 1px solid #d45a07;
+          &:first-child:before {
+            display: none;
+          }
+          span {
+            float: left;
+          }
+          b {
+            float: right;
+          }
+        }
+      }
+    }
+  }
+  .l_btn{
+    width: 6.15625rem;
+    height: 1.40625rem;
+    line-height: 1.40625rem;
+    background:url("@{imgPath}btn_bg_record.png") no-repeat;
+    background-size: cover;
+    color: #c82401;
+    font-size: 0.5625rem;
+    text-align: center;
+    display: block;
+    margin: 0.46875rem auto 0 auto;
+  }
+  .rules {
+    margin-top: 0.46875rem;
+    .caption {
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+    .info{
+      font-size: 0.375rem;
+      line-height: 0.625rem;
+      margin-top: 0.234375rem;
+      color: #fff;
+    }
+  }
+}
+.hot-list{
+  background-color: #ffa800;
+  .learn-title{
+    margin:0 0.4375rem;
+    i{border-top:1px #ffcb66 solid;}
+    .tst{background-color: #ffa800;}
+    span{color: #ffeecc;}
+  }
+  .course_list {
+    ul{padding: 0.46875rem;padding-top: 0;}
+    li{
+      position: relative;
+      overflow: hidden;
+      height: 2.96875rem;
+      margin-top: 0.46875rem;
+      background: #fff;
+      display: flex;
+      &:first-child {
+        margin-top: 0;
+      }
+      img {
+        width: 3.90625rem;
+        height: 2.96875rem;
+        background: #eee;
+      }
+      .text {
+        flex: 1;
+        margin: 0.27rem 0.296875rem 0 0.296875rem;
+        .package_name {
+          font-size: @fontSize30;
+          color: #333333;
+          span{margin:0 0.1rem;}
+        }
+        .desc {
+          display: inline-flex;
+          align-items: center;
+          .low {
+            font-size: @fontSize24;
+            color: #ff2728;
+          }
+          .price_new {
+            color: #ff2728;
+            font-size: @fontSize32;
+          }
+          .price_old {
+            text-decoration: line-through;
+            color: #b1b1b1;
+            font-size: @fontSize24;
+            margin-left: 0.3125rem;
+          }
+        }
+      }
+      .btn_buy {
+        position: absolute;
+        right: 0.15625rem;
+        bottom: 0.15625rem;
+        width: 2.5rem;
+        height: 0.6875rem;
+        line-height: 0.6875rem;
+        text-align: center;
+        background: #f95a52;
+        border-radius: 0.125rem;
+        color: #fff;
+        font-size: 0.375rem;
+
+
+      }
+      &:active {
+        box-shadow: 0 0 0.15625rem rgba(0, 0, 0, 0.3);
+      }
+      .label {
+        width: 1.25rem;
+        height: 1.25rem;
+        position: absolute;
+        left: 0;
+        top: 0;
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+// layer
+//获得奖品
+.dialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 21;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0,0,0,0.6);
+  .info{
+    position: relative;
+    width: 9.6718rem;
+    height: 8.2343rem;
+    left: 50%;
+    top: 50%;
+    margin:-4.117rem 0 0 -4.8359rem;
+    background: url('@{imgPath}prize_bg02.png') center no-repeat;
+    background-size: cover;
+    .box{
+      position: relative;
+      left: 0rem;
+      top: 0rem;
+      padding-top: 3.25rem;
+      text-align: center;
+      h3{
+        font-size: @fontSize30;
+        color: #e5043e;
+        margin-top: 0.4rem;
+      }
+      .close{
+        width: 1.0rem;
+        height: 1.0rem;
+        position: absolute;
+        right: 0rem;
+        top: 0;
+        background: url('@{imgPath}close2.png') no-repeat;
+        background-size: cover;
+      }
+      .detail{
+        height: 2.8125rem; 
+        img{
+          display: none;
+          width: 3.4375rem;
+          height: 2.8125rem;
+        }
+      }
+      .prize_tip {
+        color: #e5043e;
+        text-align: center;
+        width: 6.5625rem;
+        margin: 0 auto;
+        padding-top: 1.25rem;
+        line-height: 1rem;
+        .tt {
+          font-size: @fontSize36;
+        }
+        .con {
+          font-size: @fontSize30;
+          padding: 0 0.3125rem;
+        }
+        .app_btn {
+          margin-top: 1rem;
+          display: inline-block;
+          width: 100%;
+          height: 1.09375rem;
+          line-height: 1.09375rem;
+          background: #f76f4d;
+          color: #fff;
+          border-radius: 0.15625rem;
+          font-size: @fontSize32;
+        }
+      }
+    }
+  }
+}
+
+// 我的抽奖记录和未抽奖
+.dialog2 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 21;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  .tip{
+    position: relative;
+    width: 8.4375rem;
+    height: 3.78125rem;
+    left: 50%;
+    top: 50%;
+    background: #fff;
+    margin-top: -1.890625rem;
+    margin-left: -4.21875rem;
+    border-radius: 0.15625rem;
+    .close{
+      width: 1.0rem;
+      height: 1.0rem;
+      position: absolute;
+      right: 0.15625rem;
+      top: 0.15625rem;
+      background: url('@{imgPath}join_close.jpg') no-repeat;
+      background-size: cover;
+    }
+    .gold_box{
+      background: url('@{imgPath}look_detail02.png') no-repeat;
+      background-size: cover;
+      position: absolute;
+      width: 3.125rem;
+      height: 1.609375rem;
+      right: 0.15625rem;
+      bottom: -0.03125rem;
+    }
+    .text{
+      float: left;
+      color: #5e4000;
+      padding-right: 0.390625rem;
+    }
+    .text1{
+      padding-left: 0.859375rem;
+      padding-top: 1rem;
+      p{
+        line-height: 0.5rem;
+        font-size: @fontSize24;
+        font-weight: bold;
+      }
+      h3{
+        padding-top: 0.078125rem;
+        font-size: @fontSize32;
+        span{
+          font-size: @fontSize18;
+        }
+      }
+    }
+    .text2{
+      padding-left: 0.859375rem;
+      h3{
+        font-size: @fontSize24;
+        padding-top: 1.5625rem;
+      }
+    }
+  }
+}
+//分享提示框
+.dialog3 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 21;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  .tip{
+    position: relative;
+    width: 8.4375rem;
+    height: 3.78125rem;
+    left: 50%;
+    top: 50%;
+    background: #fff;
+    margin-top: -1.890625rem;
+    margin-left: -4.21875rem;
+    border-radius: 0.15625rem;
+    .close{
+      width: 1.0rem;
+      height: 1.0rem;
+      position: absolute;
+      right: -0.3125rem;
+      top: -1.40625rem;
+      background: url('@{imgPath}close2.png') no-repeat;
+      background-size: cover;
+    }
+    .text{
+      float: left;
+      margin-top: 0.78125rem;
+      color: #f76f4d;
+      font-size: @fontSize28;
+      padding: 0 0.875rem;
+      line-height: 1rem;
+      .ic_face {
+        width: 0.46875rem;
+        height: 0.46875rem;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+}

@@ -1,0 +1,222 @@
+@import "../common/www/base.less";
+@import "../common/uc_common.less";
+@import "result_header.less";
+@gray:#efefef;
+@white:#fff;
+@orange:#ff8200;
+.container{
+	margin-bottom:40px;
+	padding-top:1px;
+	background:@gray;
+	.wrap{
+		width:1000px;
+		margin:20px auto 0;
+		padding:75px 0;
+		background:@white;
+		.title{
+			font-size:40px;
+			color:@orange;
+			font-weight:bold;
+			//font-family:'NotoSansHans'	
+			text-align:center;
+			em{
+				font-weight:bold;
+			}
+		}
+		.certificate{
+			position:relative;
+			width:800px;
+			margin:0 auto;
+			padding:50px 0;
+			border-top:#e4eaee dashed 1px;
+			text-align:center;
+			.share{
+				position:absolute;
+				right:0;
+				width:24px;
+				height:130px;
+				a{
+					float:none;
+					display:inline-block;
+					width:24px;
+					height:24px;
+					margin:5px 5px 0 0;
+					padding:0;
+					background:url('@{imgUrl}icon.png') no-repeat;
+				}
+				.bds_weixin{
+					background-position:0 -19px;
+				}
+				.bds_tsina{
+					background-position:-68px -19px;
+				}
+				.bds_sqq{
+					background-position:-34px -19px;
+				}
+				.bds_qzone{
+					background-position:-105px -19px;
+				}
+			}
+		}
+		.btn-lst{
+			margin-top:30px;
+			a{
+				display:inline-block;
+				width:110px;
+				height:30px;
+				line-height:30px;
+				color:@orange;
+				border:@orange solid 1px;
+				font-size:14px;
+				text-align:center;
+			}
+			.express{
+				margin:0 50px;
+			}
+		}
+		.measure{
+			padding-top:50px;
+			border-top:#e1e1e1 solid 1px;
+			text-align:center;
+			.base{
+				margin-top:50px;
+				ul{
+					width:400px;
+					li{
+						width:25%;
+						color:#999;
+					}
+					em{
+						color:#1e1e1e;
+					}
+				}
+			}
+			.table{
+				width:770px;
+				margin:0 auto;
+				border-collapse:collapse;
+				border-spacing:0;
+				font-size:15px;
+				border-left:1px solid #e1e1e1;
+				border-top:1px solid #e1e1e1;
+				thead{
+					color:#999;
+					background:#f6f6f6;
+				}
+				tr,td{
+					padding:30px 0;
+					border-right:1px solid #e1e1e1;
+					border-bottom:1px solid #e1e1e1;
+					text-align:center;
+				}
+				em{
+					color:@orange;
+				}
+			}
+			.view{
+				display:inline-block;
+				width:220px;
+				height:45px;
+				margin-top:50px;
+				line-height:45px;
+				font-size:18px;
+				color:@white;
+				background:@orange;
+				border-radius:3px;
+			}
+		}
+	}
+	//通过并且优秀
+	.result_excellent{
+		ul{
+			width:580px;
+			margin:35px auto;
+			li{
+				float:left;
+				width:50%;
+				font-size:15px;
+				color:@orange;
+				i{
+					display:inline-block;
+					width:27px;
+					height:27px;
+					margin-right:10px;
+					background:url('@{imgUrl}img_sprite.png') no-repeat;
+					vertical-align:middle;
+				}
+			}
+			.exc{
+				i{
+					background-position:0 0;
+				}
+			}
+			.unlock{
+				i{
+					background-position:0 -27px;
+				}
+			}
+		}
+	}
+	//通过非优秀
+	.result_pass{
+		ul{
+			width:580px;
+			margin:35px auto;
+			li{
+				float:left;
+				width:50%;
+				font-size:15px;
+				color:@orange;
+				i{
+					display:inline-block;
+					width:27px;
+					height:27px;
+					margin-right:10px;
+					background:url('@{imgUrl}img_sprite.png') no-repeat;
+					vertical-align:middle;
+				}
+			}
+			.exc{
+				i{
+					background-position:0 -54px;
+				}
+			}
+			.unlock{
+				i{
+					background-position:0 -27px;
+				}
+			}
+		}
+	}
+	//未通过
+	.result_fail{
+		ul{
+			width:580px;
+			margin:35px auto;
+			li{
+				float:left;
+				width:50%;
+				font-size:15px;
+				color:#b0b0b0;
+				i{
+					display:inline-block;
+					width:27px;
+					height:27px;
+					margin-right:10px;
+					background:url('@{imgUrl}img_sprite.png') no-repeat;
+					vertical-align:middle;
+				}
+			}
+			.exc{
+				i{
+					background-position:0 -81px;
+				}
+			}
+			.unlock{
+				i{
+					background-position:0 -109px;
+				}
+			}
+		}
+	}
+}

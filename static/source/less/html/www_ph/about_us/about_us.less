@@ -1,0 +1,149 @@
+@import '../common/reset_pro.less';
+@import '../common/common.less';
+@o_y:#ffb412;
+@b_3:#333333;
+@b_9:#999999;
+@orange:ff8200;
+@imgPath:"../../../../images/html/www_ph/about_us/";
+
+
+.m_wrap{
+	.floor_au_1{
+		margin-top:97px;
+		height:860px;
+		background: url("@{imgPath}f_au_1_bg.jpg") no-repeat center center;
+		background-size:auto 860px;
+		.f_a_1{
+			width:1200px;
+			margin:0 auto;
+			text-align: center;
+			h1{
+				padding-top:243px;
+				font-size:50px;
+				color:#fff;
+			}
+			p{
+				padding-top: 33px;
+				font-size:22px;
+				color:#fefefe;
+			}
+			span{
+				display: inline-block;
+				cursor: pointer;
+				margin-top:47px;
+				width:106px;
+				height:106px;
+				background: url("@{imgPath}play_video_au.png") no-repeat center center;
+			}
+			p:last-child{
+				padding-top:214px;
+				font-size:22px;
+				line-height:36px;
+				color:#fff;
+			}
+		}
+	}
+	.floor_au_2{
+		.f_a_2{
+			width:1200px;
+			margin:0 auto;
+			dt{
+				text-align: center;
+				h1{
+					font-weight: bold;
+					padding-top:80px;
+					font-size:40px;
+					color:#303030;
+				}
+				p{
+					border-bottom:1px solid #f3f3f3;
+					padding: 28px 0 60px 0;
+					font-size: 22px;
+					color:#999999;
+				}
+			}
+			dd{
+				padding-bottom: 60px;
+				h1{
+					text-align: center;
+					padding: 52px 0 48px 0;
+					font-size:40px;
+					color:#febf00;
+				}
+				li{
+					float: left;
+					margin-right:106px;
+					width:220px;
+					height:326px;
+					text-align: center;
+					h4{
+						width:192px;
+						line-height: 192px;
+						font-size:48px;
+						color:@o_y;
+						border:1px solid @o_y;
+						font-weight: normal;
+						border-radius: 100%;
+						margin:0 auto;
+						background: #fff;
+					}
+					p{
+						padding-top:40px;
+						font-size:18px;
+						line-height: 30px;
+						color:#696969;
+					}
+				}
+				li:nth-child(4){
+					margin-right: 0;
+				}
+				li:nth-child(8){
+					margin-right: 0;
+				}
+			}
+		}
+	}
+	.floor_au_3{
+		color:#fff;
+		text-align: center;
+		height:639px;
+		background: url("@{imgPath}f_au_b_bg.jpg") no-repeat center 0;
+		h1{
+			padding-top:124px;
+			font-size:40px;
+		}
+		p{
+			padding-top: 30px;
+			width: 540px;
+			margin:0 auto;
+			font-size: 16px;
+			line-height: 26px;
+		}
+		ul{
+			box-sizing: border-box;
+			margin:0 auto;
+			font-size:20px;
+			color: #fff;
+			line-height: 64px;
+			width: 540px;
+			padding-left: 132px;
+			li{
+				text-align:left;
+				background: url("@{imgPath}f_y_1.png") no-repeat 0 center;
+				padding-left:45px;
+			}
+		}
+	}
+}
+.top_fixed{
+	position: fixed;
+	left:0;
+	top:0;
+	z-index:999;
+	width:100%;
+	filter:alpha(opacity=90);
+	background: #fff ;
+}
+.close_video_btn{
+	background:url("@{imgPath}close_pop.png") no-repeat 0 0;
+}

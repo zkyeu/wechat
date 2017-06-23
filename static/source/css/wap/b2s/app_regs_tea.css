@@ -497,6 +497,9 @@ dt {
   font-size: 14px;
   padding-top: 20px;
 }
+.app-reg-c .sear_none span {
+  font-size: 16px;
+}
 .app-reg-r {
   border-radius: 0 0 8px 8px;
 }
@@ -516,14 +519,20 @@ dt {
   border-bottom: 0;
 }
 .app-sel-ul li a {
+  width: 100%;
   color: #344758;
   padding-left: 15px;
   display: block;
   font-size: 18px;
   position: relative;
   -webkit-touch-callout: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 15px;
+  box-sizing: border-box;
 }
-.app-sel-ul li a:after {
+.app-sel-ul li .none_right:after {
   content: "";
   position: absolute;
   width: 8px;
@@ -571,6 +580,9 @@ dt {
 .app-sel-ul .app-location p {
   font-size: 18px;
   color: #344758;
+}
+.app-sel-ul .app-location a {
+  width: auto;
 }
 .app-s-search {
   height: 50px;

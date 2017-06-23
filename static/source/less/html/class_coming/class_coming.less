@@ -1,0 +1,105 @@
+@import "../common/base.less";
+@import "../common/www/w_header.less";
+@imgPathImg: "../../../images/html/class_coming/";
+.m-banner{
+    img{
+        width: 100%;
+    }
+}
+
+.m-content{
+    width: 100%;
+    background-color: #ebc899;
+    .m-center{
+        position: relative;
+        height: 2860px;
+        width: 1000px;
+        margin: 0 auto;
+        .smallCode{
+            position: absolute;
+            right: 0;
+            top: -84px;
+            padding: 12px;
+            background-color: #fff;
+            width: 143px;
+            img{
+                width: 143px;
+                height: 143px;
+            }
+            p{
+                font-size: 14px;
+                line-height: 20px;
+                text-align: center;
+            }
+        }
+        .icon1{
+            position: absolute;
+            left: -126px;
+            top: 338px;
+            width: 56px;
+            height: 60px;
+            background: url('@{imgPathImg}litIcons.png') 0 0 no-repeat;
+        }
+        .icon2{
+            position: absolute;
+            right: -30px;
+            top: 90px;
+            width: 61px;
+            height: 60px;
+            background: url('@{imgPathImg}litIcons.png') right 0px no-repeat; 
+        }
+        
+    }
+}
+
+.m-code{
+    height: 712px;
+    background-color: #ae8d6c;
+    .m-imgs{
+        position: relative;
+        height: 712px;
+        width: 1000px;
+        margin: 0 auto;
+        .join{
+            position: absolute;
+            left: 50%;
+            top: -42px;
+            margin-left: -174px;
+            width: 348px;
+            height: 84px;
+            background: url('@{imgPathImg}join.png') left top no-repeat; 
+        }
+        .code{
+            width: 547px;
+            height: 511px;
+            position: absolute;
+            left: 50%;
+            margin-left: -273px;
+            top: 47px;
+            background: url('@{imgPathImg}code_box.jpg') left top no-repeat; 
+            .inner{
+                width: 346px;
+                height: 346px;
+                background-color: #fff;
+                padding: 45px;
+                position: absolute;
+                left: 58px;
+                top: 42px;
+            }
+        }
+        .openClass{
+            position: absolute;
+            left: 270px;
+            bottom: 70px;
+        }
+    }
+}
+@import "../common/www/w_footer.less";
+
+
+
+
+
+
+
+

@@ -1,0 +1,372 @@
+/*初始化样式*/
+html{font-size:62.5%;}
+body{ font-family:'Microsoft YaHei',STXihei,MingLiu;}
+cite,i,s,b{ font-style:normal;font-weight:normal;}
+body,ul,li,p,dl,dt,dd,ol,h1,h2,h3,h4,h5,h6{ margin:0px; padding: 0px;}
+h1,h2,h3,h4{  font-weight: normal;}
+li{ list-style: none;}
+img{border:0px;}
+a,a:link,a:visited{ text-decoration: none;}
+input{font-family:'Microsoft YaHei',STXihei,MingLiu;outline: none;border: none;margin:0;padding: 0;}
+
+@media only screen and (min-width: 481px){
+  html {
+    font-size: 94%!important;
+  }
+}
+@media only screen and (min-width: 561px){
+  html {
+    font-size: 109%!important;
+  }
+}
+@media only screen and (min-width: 641px){
+  html {
+    font-size: 125%!important;
+  }
+}
+
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+
+@charset "utf-8";
+@imgPath: "../../../images/wap/learning11/";
+
+// -function
+.f-toe{overflow:hidden;word-wrap:normal;white-space:nowrap;text-overflow:ellipsis;}
+
+/*
+* 双11H5
+* @file：   learning.less
+* @author:  shaoyongkai（shaoyongkai@51talk.cn）
+* @update:  2016-10-24
+* @note:    双11H5
+*/
+/*双11H5*/
+
+html,body{
+  font-family:'Microsoft YaHei',STXihei,MingLiu;
+  min-width: 320px;
+  max-width: 640px;
+  margin:0 auto;
+}
+
+body {
+  background:#8f01b2 url('@{imgPath}bg_body.png') no-repeat;
+  background-size: 100% auto;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  .banner {width: 100%;}
+}
+
+.rota{
+  z-index: 6;
+  position: relative;
+  margin-top: 24.45rem;
+  padding: 0 1.25rem;
+  .prize_list{
+    margin-top: 1.9rem;
+    position: relative;
+    overflow: hidden;
+    .caption {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 91.525%;
+      }
+    }
+
+    .names{
+      background: #ffd400;
+      border-radius: 0.5rem;
+      margin-top: 3.0rem;
+      .name_list {
+        padding: 3.5rem 0.75rem 0 0.75rem;
+        height: 15.5rem;
+        overflow: hidden;
+        li {
+          line-height: 2.5rem;
+          height: 2.5rem;
+          padding-top: 0.45rem;
+          border-bottom: 1px solid #d45a07;
+          color: #c82401;
+          font-size: 1.4rem;
+          &:nth-child(5n) {
+            border: 0px;
+          }
+          span {
+            float: left;
+          }
+          b {
+            float: right;
+          }
+        }
+      }
+
+    }
+
+  }
+
+  .rules {
+    .caption {
+      img {
+        width: 100%;
+        display: block;
+      }
+      .title {
+
+      }
+    }
+    .info{
+      font-size: 1.2rem;
+      line-height: 2.0rem;
+      margin-top: 0.75rem;
+      color: #ffb2ff;
+    }
+  }
+
+  .l_btn{
+    margin: 1.5rem auto;
+
+  }
+
+  .dial-bg{
+    width: 9.21875rem;
+    height: 9.375rem;
+    margin: 0 auto;
+    background: url('@{imgPath}dial_bg.png') no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    .l_grid{
+      margin-left: 2.3rem;
+      margin-top: 2.3rem;
+      li{
+        width: 8.1rem;
+        height: 8.1rem;
+        margin-right: 0.35rem;
+        margin-bottom: 0.35rem;
+        float: left;
+        background:url('@{imgPath}l_bg.png') 0 -8.9rem no-repeat;
+        background-size: 8.1rem 35.1rem;
+        &.pointer{
+          background-position:0 -17.8rem;
+        }
+        &.pointer:active{
+          background-position:0 -26.65rem;
+        }
+        &.l_now{
+          background-position: 0 0;
+        }
+        img{
+          margin: 1.5rem auto 0 auto;
+          height: 5.75rem;
+          width: 5.75rem;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.pri-list {
+  .caption {
+    img {
+      width: 100%;
+      display: block;
+    }
+    .title {
+
+    }
+  }
+  .course_list {
+    background: #ffd400;
+    padding: 1.25rem;
+    li {
+      position: relative;
+      overflow: hidden;
+      height: 9.5rem;
+      background: #fff;
+      margin-top: 1.25rem;
+      display: flex;
+      &:first-child {
+        margin-top: 0;
+      }
+      img {
+        width: 12.8rem;
+        height: 9.5rem;
+        background: #eee;
+      }
+      .text {
+        flex: 1;
+        margin: 1.0rem 0 0 1.0rem;
+        .package_name {
+          font-size: 1.5rem;
+          color: #333333;
+        }
+        .desc {
+          display: inline-flex;
+          align-items: center;
+          .low {
+            font-size: 1.2rem;
+            color: #ff2728;
+          }
+          .price_new {
+            color: #ff2728;
+            font-size: 1.6rem;
+          }
+          .price_old {
+            text-decoration: line-through;
+            color: #b1b1b1;
+            font-size: 1.2rem;
+            margin-left: 0.5rem;
+          }
+        }
+      }
+      .btn_buy {
+        position: absolute;
+        right: 0.5rem;
+        bottom: 0.5rem;
+        width: 8.0rem;
+        height: 2.5rem;
+        line-height: 2.5rem;
+        text-align: center;
+        background: #ff4224;
+        border-radius: 1.25rem;
+        color: #fff;
+        font-size: 1.5rem;
+      }
+    }
+    .label {
+      width: 4.0rem;
+      height: 4.0rem;
+      position: absolute;
+      left: 0;
+      top: 0;
+      &.hot {
+        background:url('@{imgPath}label_hot.png') no-repeat;
+        background-size: cover;
+      }
+      &.discount {
+        width: 5.35rem;
+        height: 5.35rem;
+        top: -0.6rem;
+        left: -0.6rem;
+        &.discount5 {
+          background:url('@{imgPath}label_discount_5.png') no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+
+  }
+  .course_footer {
+    background: #ffd400;
+    padding-bottom: 50px;
+    .l_btn {
+      margin: 0 auto;
+    }
+  }
+}
+
+
+.footer {
+  height: 6.5rem;
+  background: #d41549;
+  .info {
+    font-size: 0.9rem;
+    color: #fff;
+    text-align: center;
+    line-height: 6.5rem;
+  }
+}
+
+// 我的抽奖记录和未抽奖
+.dialog2 {
+  display: none;
+  position: fixed;
+  _position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 21;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  .tip{
+    position: relative;
+    width: 380px;
+    height: 170px;
+    left: 50%;
+    top: 50%;
+    background: #fff;
+    margin-top: -85px;
+    margin-left: -190px;
+    border-radius: 10px;
+    .close{
+      width: 36px;
+      height: 36px;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      background: url('@{imgPath}join_close.jpg') no-repeat;
+    }
+    .gold_box{
+      background: url('@{imgPath}look_detail02.png') no-repeat;
+      position: absolute;
+      width: 109px;
+      height: 56px;
+      right: 10px;
+      bottom: -2px;
+    }
+    .text{
+      float: left;
+      color: #5e4000;
+      padding-right: 25px;
+    }
+    .text1{
+      padding-left: 24px;
+      padding-top: 32px;
+      p{
+        line-height: 32px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      h3{
+        padding-top: 5px;
+        font-size: 24px;
+        span{
+          font-size: 18px;
+        }
+      }
+    }
+    .text2{
+      padding-left: 55px;
+      h3{
+        font-size: 18px;
+        padding-top: 60px;
+      }
+    }
+  }
+  .tip-1,.tip-2{
+    display: none;
+  }
+}
+
+.l_btn{
+  width: 19.7rem;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  background:url("@{imgPath}btn_bg_record.png") no-repeat;
+  background-size: 19.7rem 4.5rem;
+  color: #c82401;
+  font-size: 1.8rem;
+  text-align: center;
+  display: block;
+}

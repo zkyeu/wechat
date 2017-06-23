@@ -1,0 +1,167 @@
+@import "../common/www/base.less";
+@import "../common/uc_common.less";
+@imgUrl:"../../../images/html/usa/";
+#usa-app{
+	padding-top:1px;
+	background:#fff;
+	.courses-wrap{
+		width:915px;
+		height:610px;
+		margin:200px auto 0;
+		.directories{
+			float:left;
+			width:171px;
+			height:510px;
+			margin-top:100px;
+			background:url("@{imgUrl}nav.png") no-repeat;
+		}
+		.content-lst{
+			position:relative;
+			float:left;
+			width:740px;
+			.level-icon{
+				position:absolute;
+				left:65px;
+				width:52px;
+				height:42px;
+				background:url('@{imgUrl}level_start.png')
+			}
+			.level1-icon{
+				left:205px;
+				top:-7px;
+			}
+			.level2-icon{
+				left:292px;
+				top:-15px;
+			}
+			.level3-icon{
+				left:390px;
+				top:-27px;
+			}
+			.level4-icon{
+				left:475px;
+				top:-27px;
+			}
+			.level5-icon{
+				left:573px;
+				top:-50px;
+			}
+			.level-end{
+				position:absolute;
+				right:-32px;
+				top:-132px;
+				width:174px;
+				height:126px;
+				background:url('@{imgUrl}level_end.png') no-repeat;
+			}
+			li{
+				position:absolute;
+				width:155px;
+				padding:0 15px;
+				color:#fff;
+				background:url('@{imgUrl}usa.png') no-repeat;
+			}
+			.level0{
+				left:0;
+				height:550px;
+				margin-top:61px;
+				background-position:-9px -686px;
+				&.level0-current{
+					left:-7px;
+					width:178px;
+					height:575px;
+					background-position:-2px -15px;
+					z-index:2;
+				}
+			}
+			.level1{
+				left:187px;
+				height:590px;
+				margin-top:39px;
+				background-position:-227px -674px;
+				&.level1-current{
+					left:172px;
+					width:180px;
+					height:600px;
+					background-position:-212px -13px;
+					z-index:2;
+				}
+			}
+			.level2{
+				left:373px;
+				height:630px;
+				margin-top:18px;
+				background-position:-453px -664px;
+				&.level2-current{
+					left:357px;
+					width:180px;
+					background-position:-439px -13px;
+					z-index:2;
+				}
+			}
+			.level3{
+				left:558px;
+				height:670px;
+				margin-top:-3px;
+				background-position:-685px -663px;
+				&.level3-current{
+					left:548px;
+					width:180px;
+					height:645px;
+					background-position:-675px -13px;
+					z-index:2;
+				}
+			}
+		}
+	}
+	.detail-lst{
+		.detail{
+			position:relative;
+			width:880px;
+			margin:20px auto;
+			padding:15px;
+			border:#33a7a4 solid 1px;
+			color:#323232;
+			font-size:14px;
+			.arr{
+				position:absolute;
+				top:-12px;
+				display:inline-block;
+				width:26px;
+				height:13px;
+				background:url('@{imgUrl}des_tri.jpg') no-repeat;
+			}
+			h3{
+				color:#323232;
+			}
+			h4{
+				margin-top:12px;
+				color:#969696;
+				em{
+					color:#33a7a4;
+				}
+			}
+			p{
+				margin-top:20px;
+			}
+			em{
+				color:#969696;
+			}
+		}
+		.dir-detail-level0{
+			.arr{
+				left:240px;
+			}
+		}
+		.dir-detail-level1{
+			.arr{
+				left:380px;
+			}
+		}
+		.dir-detail-level2{
+			.arr{
+				left:495px;
+			}
+		}
+	}
+}

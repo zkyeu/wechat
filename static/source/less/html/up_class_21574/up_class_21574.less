@@ -1,0 +1,73 @@
+@import "../common/user_center/base.less";
+/*-- author:zhangtian pms:21574  timestamp:2016/4/19--*/
+@imgComponentsPath:"../../../components/html/up_class_21574/images/";
+@import "../../../components/html/up_class_21574/less/modules/up_class_m.less";
+@import "../../../components/html/up_class_21574/less/modules/up_class_n.less";
+@import "../../../components/html/up_class_21574/less/modules/up_class_l.less";
+@import "../../../components/html/up_class_21574/less/modules/up_class_evaluate.less";
+@import "../../../components/html/up_class_21574/less/modules/up_class_record.less";
+@import "../../../components/html/my_schedule/less/modules/tipBox.less";
+body{
+    color: #000;
+    background-color: #efefef;
+}
+.g-center{
+    margin-top: 10px;
+	display: inline-block;
+	.up-class-gless{
+		width: 600px;
+        padding: 14px 24px 0;
+		border:1px solid #dbe2e5;
+		color: #1e1e1e;
+		background-color: #fff;
+        .m-top{
+            height: 44px;
+        }
+	}
+}
+
+/*
+ 弹层radio样式
+*/
+.confirmRadio{
+    padding: 0 20px;
+    border-left: 1px solid #dbdee0;
+    border-right: 1px solid #dbdee0;
+}
+.confirmRadio li{
+    height: 24px;
+    line-height: 24px;
+}
+
+.confirmRadio li .my-l-icon1 {
+    background-position: -110px -15px;
+}
+.confirmRadio li .my-l-icon2 {
+    background-position: -110px 0;
+}
+.confirmRadio li .my-l-icon1, .confirmRadio li .my-l-icon2 {
+    width: 12px;
+    height: 12px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.my-l-icon:hover{
+    cursor: pointer;
+}
+.my-s-mask{
+    position: fixed;
+    _position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    _height: ~'expression(eval(document.documentElement.clientHeight+document.documentElement.scrollTop))';
+    background-color: #000;
+    opacity: 0.5;
+    filter:alpha(opacity=50);
+    z-index: 99;
+    display: none;
+}

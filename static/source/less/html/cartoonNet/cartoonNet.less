@@ -1,0 +1,215 @@
+@charset "utf-8";
+@import "../common/www/base.less";
+body,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,p,input,select,textarea,form{margin: 0; padding: 0;}
+ul,ol{list-style: none;}
+img{border: none;}
+input,select,textarea{outline: none; border:none; background-color: transparent;}
+textarea{resize: none;}
+a{text-decoration: none;}
+h1,h2,h3,h4,h5,h6{font-size: 1em;}
+em{font-style: normal;}
+
+/*浮动*/
+.fl{float: left;}
+.fr{float: right;}
+.clearfix:after,
+.clearfix:before{content: "";display: table;}
+.clearfix:after{clear: both;}
+.clearfix{*zoom:1;}
+@imgPath: "../../../images/html/cartoonNet";
+@import "../common/www/w_footer.less";
+body{font-family: "Microsoft YaHei";}   
+.cartoonNet{
+  .cn_header{
+    height:80px;
+    width: 1000px;
+    margin:0 auto;
+    position: relative;
+    .cn_logo{
+      display: block;
+      height:50px;
+      width:306px;
+      position: absolute;
+      left:0;
+      top:15px;
+    }
+    i{
+      display: block;
+      height:55px;
+      width: 155px;
+      background:url("@{imgPath}/icon.png") no-repeat left top; 
+    }
+    span{
+      position: absolute;
+      right:0;
+      top:26%;
+      font-size: 19px;
+      em{
+         display:inline-block;
+         height:20px;
+         width:16px;
+         background:url("@{imgPath}/icon.png") no-repeat -189px -14px; 
+      }
+    }
+  }
+  .cn_white{
+    height:70px;
+  }
+  .cn_title{
+    height:120px;
+    background: #ccc;
+    text-align: center;
+    line-height: 120px;
+    font-size: 38px;
+    border-top:3px solid #FF8201;
+  }
+  .reg{
+
+  li{
+    .f_email{
+      margin-left:10px;
+    }
+    .f_password{
+      margin-left:10px;
+      width:142px;
+    }
+    .f_mobile{
+      margin-left:10px;
+      width:142px;
+    }
+    .jscheckbox{
+      float:left;
+      margin:24px 0 0 10px;
+      a{
+        color:#fff;
+      }
+    }
+  }
+}
+.centerMth{
+  width: 1000px;
+  margin:0 auto;
+}
+  .cn_banner{
+    height:520px;
+    width: 100%;
+    background:url("@{imgPath}/cn_banner.jpg") no-repeat center top;
+  }
+  .cn_nav{
+    height:80px;
+    width: 100%;
+    background:#e0e0e0;
+    margin-bottom:80px;
+    .cn_navIn{
+      width: 999px;
+      height:80px;
+      margin:0 auto;
+      a{
+        display:block;
+        float:left;
+        height:50px;
+        width:249px;
+        text-align: center;
+        font-size: 30px;
+        color:#1e1e1e;
+        margin-top:15px;
+        border-right: 1px solid #ccc;
+        line-height: 50px;
+      }
+      .border0{
+        border:0;
+      }
+      .cn_active{
+        height:76px;
+        line-height:71px;
+        border-top:5px solid #ffa800;
+        margin-top:0;
+        background:#fff;
+        margin-left:-1px;
+        border-right:0;
+        width:240px;
+      }
+    }
+  }
+  .cn_picList{
+    width: 1000px;
+    height:368px;
+    margin:0 auto;
+    .cn_picLists{
+      height:100%;
+      width:300px;
+      float:left;
+      .cn_picList_img{
+        height:265px;
+        width: 100%;
+      }
+      .cn_picList_txt{
+        height:84px;
+        width: 100%;
+        text-align: center;
+        line-height: 84px;
+        color:#1e1e1e;
+        font-size: 24px;
+      }
+    }
+    .cn_picList_center{
+      margin:0 50px;
+    }
+  }
+  .cn_footer{
+    margin-top:30px;
+    height:70px;
+    width: 100%;
+    padding-top:60px;
+    background: #303030;
+    p{
+      color:#888;
+      text-align: center;
+    }
+  }
+  .g-list{
+    background-color: #efefef;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    .list-width{
+      width: 1000px;
+      margin:0 auto;
+    }
+    ul{
+      margin-right: -50px;
+    }
+    li{
+      width: 475px;
+      float: left;
+      height: 359px;
+      margin-right: 50px;
+      margin-bottom: 50px;
+    }
+    .l-text{
+      font-size: 18px;
+      line-height: 88px;
+      height: 88px;
+      background-color: #fff;
+      text-align: center;
+      overflow: hidden;
+    }
+  }
+    .g-list{
+       .l-text1{
+        font-size: 18px;
+        line-height: 30px;
+        background-color: #fff;
+        text-align: center;
+        overflow: hidden;
+        padding-top:20px;
+    }
+    .l-text2{
+      color:#999999;
+      font-size: 16px;
+      padding-top:0;
+      padding-bottom:25px;
+    }
+  }
+
+
+}

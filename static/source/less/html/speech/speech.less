@@ -1,0 +1,249 @@
+@charset "utf-8";
+
+// Default
+@import "base.less";
+
+
+/**
+ * 公共样式
+ * @file：   common.less
+ * @author:  xyyjk（maxingguo@51talk.com）
+ * @update:  2014-11-24
+ * @note:    头部、主体、主栏、侧栏、尾部等
+ */
+ @m-width:980px;
+ .container {width: 100%;height: auto;}
+ .header {
+ 	background:#1e0c12;
+ 	text-align: center;
+ 	 }
+
+
+
+.content{
+	
+	width: @m-width;
+	margin:0 auto;
+	height:auto;
+	.tit{
+		background: #eb2424;
+		color: #fff;
+		padding: 17px 20px;
+		span{display: inline-block;}
+		.t1{font-size: 36px;margin-right: 20px;vertical-align: top;}
+		.t2{font-size: 24px;height: 24px;margin-top: 6px;}
+		.btn{color: #eb2424; width: 162px;
+			margin-top: 6px;
+			cursor: pointer;
+			text-align: center; 
+			line-height: 36px; height: 36px;
+			 font-size: 22px; background: #fff; .fm-radius(@radius:3px)}
+	}
+	.join-object{
+		padding: 30px 20px;
+		position: relative;
+		.t1,.t2{
+			color: #eb2424;
+			font-size: 30px;
+			font-weight: bold;
+			display: inline-block;
+			position: absolute;
+			font-family: "Arial Black";
+		}
+		.t1{
+			top: 26px;
+		}
+		.t2{right: 20px; bottom: 0;}
+		.describe p{
+			line-height: 48px;
+			font-size: 23px;
+			padding: 0 54px;
+		}
+	}
+
+}
+.footer{
+	height: 266px;
+	background: #372b2c;
+	text-align: center;
+	img{padding: 26px 0;}
+	p{
+		color: #fff;
+		font-size: 16px;
+		line-height: 30px;
+	}
+}
+
+//弹出层
+.m-dialog{
+  display: none;
+  position: fixed;
+  _position: absolute;
+  top: 0; right: 0;
+  bottom: 0; left: 0;
+  z-index: 1040;
+  width: 100%;
+  height: 100%;
+  _height: ~'expression(eval(document.documentElement.clientHeight+document.documentElement.scrollTop))';
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  background-color: rgba(0, 0, 0, 0.30);
+  background: url('@{imgPath}html/speech/dialog-bg.png');
+  //background: ~"url('@{imgPath}html/speech/common/dialog-bg.png')\9";
+  .in{
+
+    position: relative;
+    top: 20%; left: 50%;
+    width: 460px;
+    padding: 25px;
+    padding-bottom: 60px;
+    //margin-top: -100px;
+    margin-left: -230px;
+    overflow: hidden;
+    background-color: #f7f7f7;
+  }
+  .hd{
+    padding-top: 6px;
+    padding-bottom: 20px;
+    .close{
+      .f-ti;
+      position: absolute;
+      top: 0; right: 0;
+      width: 39px;
+      height: 39px;
+      background: url('@{imgPath}html/speech/close.png') no-repeat;
+      
+    }
+  }
+  .bd{
+    //position:relative的DIV在IE6中会随鼠标滚动而滚动
+    //BUG描述：
+    // 页面中某DIV使用了position:relative，在IE6中该DIV会随鼠标滚动而滚动。
+    // 分析：
+    // 这是IE6一个已知的BUG：当某position:relative元素 被带有overflow:auto/scroll属性的块级元素包含时，会表现出postion:absolute的行为。
+    // 解决方法：
+    // 1.为包含块元素添加属性position:relative 。
+    // 2.把该元素的position:relative属性去掉，使用默认的static定位，并通过margin-top等属性实现类似的效果。
+    position: relative;
+    color: @linkColor;
+    line-height: 1.75;
+  
+    .border{
+      background-color: #fff;
+      border: 1px solid @borderColor;
+    }
+  }
+  .ft{
+    .sibmit{
+      padding-top: 30px;
+      padding-bottom: 15px;
+    }
+    .u-btn{ margin: 0 3px; }
+  }
+}
+.OneS_logIn{
+	margin-bottom: 2.2rem;
+	right: 5rem;
+	bottom:3.4rem;
+	li{
+		text-align: center;
+		width: 286px;
+		height: 54px;
+		margin:0 auto;
+		margin-bottom:15px;
+
+		
+		position: relative;
+
+		
+
+		.speech_icon{
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			right: 4px;
+			top:5px;
+			
+			
+			background-size: cover;
+		}
+		.down{
+			background: url("@{imgPath}html/speech/down.png") right center no-repeat;
+		}
+		.up{
+			background: url("@{imgPath}html/speech/up.png") right center no-repeat;
+		}
+	}
+
+	.OneS_last{
+
+		z-index: 99;
+		
+	}
+
+	input{
+		color: #707070;
+		background-color: #fff;
+		height: 100%;
+		width: 272px;
+		text-align: center;
+		height: 48px;
+		line-height: 48px;
+		font-size: 18px;
+		color: #b2b2b2;
+		border:#a5a5a5 solid 1px; 
+		text-align: left;
+		padding: 0 10px;
+		display: -webkit-box;
+		-webkit-box-pack:center;
+		-webkit-box-align:center;
+	}
+	.uborder{border-left: #eb2424 solid 5px; width: 268px;}
+	
+	.speech_list{
+		width: 292px;
+		position: absolute;
+		left: 1px;
+		top: 49px;
+		background-color: #fff;
+		z-index: 1;
+		border:1px solid #a5a5a5;
+		margin-left: -1px;
+		z-index: 999;
+		cursor: pointer;
+		/*display: none;*/
+		li{
+			width: 100%;
+			height: 50px;
+			line-height: 50px;
+			border:none;
+			margin:0;
+			border-bottom: 1px solid #e5e5e5;
+			text-align: left;
+			padding: 0 10px;
+		}
+		
+	}
+}
+ .win_btn{
+ 	text-align: center;
+ 	padding-left: 8px;
+ 	.submit{display: inline-block;width: 294px; height: 60px;background: #eb2424;
+			line-height: 60px;
+			margin-top: 12px;
+			text-align: center;
+			font-size: 30px;
+			color: #fff;
+			.fm-radius(@radius:5px);
+		}
+ }	
+.hide{ display: none;}
+
+.win{ text-align: center;
+	img{margin-bottom:18px; }
+	p{ font-size: 30px;line-height:50px; color: #464545;}
+}
+#code{width: 155px; display: inline;}
+#vtip{color: #b2b2b2}
+#vtip a{color: #eb2424; text-decoration: underline;padding-left: 2px;}
+#vtip i{padding-left: 8px; padding-right:3px; }

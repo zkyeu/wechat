@@ -1,0 +1,424 @@
+/*初始化样式*/
+html{font-size:62.5%;}
+body{ color:#515050;font-family:'Microsoft YaHei',STXihei,MingLiu; background: #ebebeb; width: 100%;}
+cite,i,s,b{ font-style:normal;font-weight:normal;}
+body,ul,li,p,dl,dt,dd,ol,h1,h2,h3,h4,h5,h6{ margin:0px; padding: 0px;}
+h1,h2,h3,h4{  font-weight: normal;}
+li{ list-style: none;}
+img{border:0px;}
+a,a:link,a:visited{ text-decoration: none;}
+input{font-family:'Microsoft YaHei',STXihei,MingLiu;outline: none;border: none;margin:0;padding: 0;}
+
+@media only screen and (min-width: 481px){
+    html {
+        font-size: 94%!important;
+    }
+}
+@media only screen and (min-width: 561px){
+    html {
+        font-size: 109%!important;
+    }
+}
+@media only screen and (min-width: 641px){
+    html {
+        font-size: 125%!important;
+    }
+}
+
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden} 
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;} 
+
+@imgPath: "../../../images/wap/resurrection/";
+@green:#70bc4f;
+@Bgreen:#1f5967;
+@white:#fff;
+.position(r){
+    position: relative;
+}
+.position(a){
+    position:absolute;
+}
+.borderbot{
+    border-bottom: 1px #dadada solid;
+}
+
+.mb2{
+    margin-bottom: 2.1rem;
+
+}
+
+
+.teengers{
+    width: 100%;
+    position: relative;
+    min-width: 320px;
+    max-width: 640px;
+    margin:0 auto;
+    background-color: #fff;
+}
+img{
+    vertical-align: top;
+}
+.r_color{
+    color: #f96446;
+}
+/*公共标题样式*/
+.part_t{
+    background-color: #f96446;
+    color: #fff;
+    height: 3.85rem;
+    line-height: 3.85rem;
+    padding:0 2rem;
+    .part_l{
+        font-size: 1.8rem;
+        vertical-align: top;
+        margin-right: 0.7rem;
+    }
+    .part_r{
+        vertical-align: top;
+        line-height: 3.1rem;
+    }
+}
+/*公共line部分*/
+.c_bottom{
+    border-top: 1px solid #eaeaea;
+    /*height: 6.35rem;*/
+    line-height: 2.6rem;
+    text-align: center;
+    position: relative;
+    margin:0 2rem;
+    font-size: 1.1rem;
+    padding:1.9rem 0;
+    .c_obj{
+        position: absolute;
+        left: 50%;
+        top:-1.3rem;
+        margin-left: -5.75rem;
+        width: 11.5rem;
+        height: 2.7rem;
+        line-height: 2.7rem;
+        background-color: #efefef;
+        font-size: 1.5rem;
+
+    }
+}
+
+/*大赛简介*/
+.concept{
+    .c_cont{
+        margin:1rem 2rem 0rem;
+        font-size: 1.15rem;
+    }
+    .c_text{
+        margin:0 3.3rem 2.1rem;
+        line-height: 2.6rem;
+    }
+    .c_text{
+        position: relative;
+        span{
+            width: 0.6rem;
+            height: 0.5rem;
+            position: absolute;
+            background: url("@{imgPath}l_y.jpg") left top no-repeat;
+            -webkit-background-size: 100%;
+            background-size: 100%;
+            
+            &.l_y{
+                left: -1rem;
+                top:0;
+            }
+            &.r_y{
+                background-image: url("@{imgPath}r_y.jpg");
+                right: -0.2rem;
+                bottom: 2rem;
+            }
+        }
+    }
+}
+
+/*报名登录*/
+.oneSt{
+    width: 100%;
+    font-size: 0;
+    display:block;
+}
+.registration{
+    background-color: #f2f2f2;
+    /*padding-top:1.5rem;*/
+    padding-bottom: 0.5rem;
+    p{
+        margin-bottom: 1.5rem;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+}
+.ones_logIn{
+    display: block;
+    margin:0 3rem;
+    text-align: center;
+    margin-top: 2rem;
+    li{
+        width: 100%;
+        margin-bottom: 1rem;
+        text-align: center;
+        .free{
+            margin:0;
+        }
+        &.ageSelect{
+          position: relative;
+          border:1px solid #ccc;
+          color: #7a7a7a;
+          .similarSel {
+            display: block;
+            background-color: #fff;
+                height: 3.4rem;
+                line-height: 3.4rem;
+                text-align: center;
+                font-size: 1.6rem;
+                color: #7a7a7a;
+            }
+            .selOption{
+            position: absolute;
+            width: 2.5rem;
+            height: 2.5rem;
+            right: 0.4rem;
+            top: 0.4rem;
+            background:url('@{imgPath}s_grade_t.jpg') center center no-repeat;
+                background-size:100%;
+            }
+            .turnBg{
+            background-image: url('@{imgPath}s_grade_l.jpg');
+            }
+
+            .ageList{
+            border: #ccc solid 1px;
+            border-top:none;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 3.5rem;
+            background-color: #fff;
+            z-index: 10;
+            display: none;
+                span{
+                    display: block;
+                    height: 3rem;
+                    line-height: 3rem;
+                    border-bottom: 1px solid #e5e5e5;
+                    font-size: 1.2rem;
+                    &:last-child{
+                        border:none;
+                    }
+                }
+            }
+        }
+    }
+    input{
+        width: 100%;
+        padding:0.8rem 0rem;
+        text-align: center;
+        display: block;
+        font-size: 1.6rem;
+        color: #7a7a7a;
+        border-radius: 5px;
+        border:1px solid #ccc;
+        text-align: center;
+        margin:0 -1px;
+
+    }
+    .free{
+        background-color: #f96446;
+        width: 100%;
+        padding:0.8rem 0rem;
+        font-size: 1.6rem;
+        color: #fff;
+        border-radius: 5px;
+    }
+    /*select{
+        width: 100%;
+        padding:0.8rem 0;
+        font-size: 1.6rem;
+        color: #7a7a7a;
+        text-align: center;
+        font-family: "微软雅黑";
+        option{
+            padding:0.8rem 0;
+            margin:0 -1px;
+            border-bottom: 1px solid #ccc;
+        }
+    }*/
+    
+}
+/*大赛流程*/
+.schedule{
+    .s_img{
+        margin:2rem;
+    }
+    img{
+        width: 100%;
+    }
+}
+/*评选标准*/
+.selection{
+    background-color: #fff;
+    font-size: 1.15rem;
+    img{
+        width: 100%;
+        margin-top: 2rem;
+        
+    }
+    .c_text_c{
+        margin:2.1rem 2rem;
+        line-height: 2.6rem;
+    }
+    .r_color{
+        margin-left: 0.9rem;
+    }
+    .s_icon{
+        display: inline-block;
+        width: 0.25rem;
+        height: 0.25rem;
+        border:2px solid #f96446;
+        margin-right: 0.7rem;
+    }
+    .s_text{
+        text-align: left;
+    }
+}
+/*底部*/
+footer{
+    background-color: #6d6869;
+    color:#fff;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    width: 100%;
+    
+    p{
+        height: 1.8rem;
+        text-align: center;
+    }
+}
+
+.free{
+    color: #2e2d2d;
+    padding:1rem 0rem;
+    display: block;
+    margin:0 5rem;
+    font-size: 1.6rem;
+    background-color: #ffcc00;
+    border-radius: 5px;
+}
+
+
+.freeT{
+    font-size: 2rem;
+    width: 18.2rem;
+    position: absolute;
+    left:50%;
+    bottom: 10.9rem;
+    margin-left: -11.1rem;
+    text-align: center;
+    box-shadow:10px 10px 28px #444 ;
+}
+
+@media screen and (min-width: 375px) {
+    .top{
+        .OneS_logIn{
+            input{
+                width: 20rem;
+            }
+        
+           a{
+             width: 20rem;
+          
+           }        
+        }  
+    } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

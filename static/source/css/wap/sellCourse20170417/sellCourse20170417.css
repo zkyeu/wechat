@@ -266,10 +266,10 @@ body {
   display: -webkit-flex;
 }
 .selling .s_main .in .foreigner .title {
-  width: 4.6rem;
+  width: 5.0rem;
   font-size: 1.4rem;
   color: #4b5c71;
-  text-indent: 1.1rem;
+  text-indent: 1.0rem;
 }
 .selling .s_main .in .foreigner .data {
   width: 100%;
@@ -287,7 +287,7 @@ body {
   padding: 1.2rem 0.7rem;
   text-align: center;
   line-height: 1.9rem;
-  font-size: 1.0rem;
+  font-size: 1.35rem;
 }
 .selling .s_main .in .foreigner .data .active {
   background: #00c6ff;
@@ -446,4 +446,15 @@ body {
   color: #fff;
   font-size: 1.5rem;
   text-align: center;
+}
+.selling .s_main .in .time {
+  font-size: 1.4rem;
+}
+.selling .s_main .in .foreigner .data .datalist {
+  width: auto;
+}
+@media screen and (max-width: 321px) {
+  .selling .s_main .in .foreigner .data .datalist {
+    font-size: 1.2rem;
+  }
 }

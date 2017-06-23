@@ -1,0 +1,138 @@
+@imgPath: "../../../../images/html/www_new/";
+.m-medium{
+	height: 768px;
+	background: url("@{imgPath}common/bg5.jpg") center;
+	text-align: center;
+	h2{
+		color: #333;
+		font-size: 38px;
+		padding-top: 80px;
+		a{
+			padding: 0 20px;
+			color: #333;
+		}
+		a.selected{
+			color: #ffa900;
+
+		}
+		a.rongyu{
+			border-left: #b4b4b4 solid 1px;
+		}
+	}
+	.des{
+		font-size: 16px;
+		color: #666;
+		padding-top: 20px;
+	}
+	ul{
+		border-top:#e4e4e4 solid 1px;
+		border-right: #e4e4e4 solid 1px;
+		margin-left: -6px;
+		border-radius: 6px;
+
+	}
+	.list li{
+		background: #fff;
+		display: inline-block;
+		float: left;
+		width: 240px;
+		border-left:#e4e4e4 solid 1px;
+		border-bottom: #e4e4e4 solid 1px;
+	}
+	.list1{
+		padding-top: 45px;
+		li{
+			
+			height: 145px;
+			
+			a{
+				display: block;
+				width: 100%;
+				height: 100%;
+				cursor: default;
+
+			}
+			span{
+				display: inline-block;
+				height: 100%;
+				vertical-align: middle;
+			}
+			img{
+				vertical-align: middle;
+			}
+			
+		}
+	}
+	.list2{
+		padding-top: 108px;
+		li{
+			height: 200px;
+			a{
+				display: block;
+				cursor: default;
+				width: 100%;
+				height: 100%;
+
+			}
+			span{
+				display: block;
+				height: 97px;
+				width: 100%;
+				text-align: center;
+				vertical-align: middle;
+				padding-top: 26px;
+			}
+			img{
+				display: inline;
+			}
+			p{
+				padding-top: 15px;
+				color: #999;
+				line-height: 24px;
+				font-size: 14px;
+			}
+		}
+	}
+	
+	.animated{
+		.fade_in{
+			vertical-align: middle;
+			-webkit-animation-fill-mode: both;
+  			animation-fill-mode: both;
+			-webkit-animation-name:fadeIn;
+			-webkit-animation-duration:2s;    //动画持续时间
+		    animation-name:fadeIn;
+		    animation-duration:2s;
+		    
+		}
+	}
+		
+		
+	@-webkit-keyframes fadeIn {
+		  from {
+		    opacity: 0;
+		  }
+
+		  to {
+		    opacity: 1;
+		  }
+	}
+	.radius1{
+		border-top-left-radius: 6px;
+	}
+	.radius2{
+		border-bottom-left-radius: 6px;
+	}
+	.radius3{
+		border-bottom-right-radius: 6px;
+	}
+	.radius4{
+		border-top-right-radius: 6px;
+	}
+	.radius5{
+		border-radius: 6px 0 0 6px;
+	}
+	.radius6{
+		border-radius: 0 6px 6px 0;
+	}
+}

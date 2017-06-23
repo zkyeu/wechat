@@ -1,0 +1,721 @@
+@import "../common/user_center/base.less";
+@import "modules/up_g_h.less";
+@imgUrl:"../../../images/html/appoint_course/";
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+/* 公共样式开始 */
+.f-select {//-->模拟功能select--->Open状态
+	position: relative;
+	width: 173px;
+	height: 33px;
+	border: 1px solid #ebebeb;
+	border-radius: 5px;
+	cursor: pointer;
+	background: url('@{imgUrl}icons.png') 138px -208px no-repeat;
+	.f-val {
+		height: 100%;
+		padding-left: 20px;
+		line-height: 33px;
+	}
+	#advantage_val {//特殊处理,老师优点
+		width: 100px;
+		padding-right: 52px;
+		overflow: hidden;
+		text-overflow:ellipsis;
+		white-space: nowrap;
+	}
+	.f-options {
+		display: none;
+		overflow: hidden;
+		z-index: 4;
+		position: absolute;
+		top: 34px;
+		left: -1px;
+		width: 100%;
+		padding-bottom: 10px;
+		border-left: 1px solid #ebebeb;
+		border-right: 1px solid #ebebeb;
+		border-bottom: 1px solid #ebebeb;
+		border-radius: 0 0 5px 5px;
+		background-color: #fff;
+		li {
+			z-index: 3;
+			position: relative;
+			left: -1px;
+			width: 175px;
+			height: 35px;
+			padding-left: 20px;
+			line-height: 35px;
+			&:hover {
+				color: #fff;
+				background-color: #ff970f;
+			}
+		}
+		.f-cur {
+			color: #fff;
+			background-color: #ff970f;
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+	.checkbox-wrap {
+		padding-bottom: 0;
+		.f-checkbox {
+			padding-top: 5px;
+			padding-left: 15px;
+			padding-bottom: 15px;
+			overflow-y: scroll;
+			height: 188px;
+			border-bottom: 1px solid #ebebeb;
+			li {
+				overflow: hidden;
+				width: 100px;
+				margin-top: 10px;
+				padding-left: 28px;
+				height: 18px;
+				line-height: 18px;
+				background: url('@{imgUrl}icons.png') -282px 0 no-repeat;
+				&:hover {
+					color: #ff970f;
+				}
+			}
+			.f-cur {
+				color: #ff970f;
+				background: url('@{imgUrl}icons.png') -282px -28px no-repeat;
+			}
+		}
+		.advantage_sure_btn {
+			display: block;
+			width: 75px;
+			height: 25px;
+			margin: 10px auto;
+			line-height: 25px;
+			text-align: center;
+			border-radius: 5px;
+			background-color: #ff970f;
+			color: #fff;
+		}
+	}
+}
+.f-open {
+	border-radius: 5px 5px 0 0;
+	background: url('@{imgUrl}icons.png') 138px -240px no-repeat;
+	.f-options {
+		display: block;
+	}
+}
+.f-mask {//-->弹层z-index：99;
+	display: none;
+	z-index: 99;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: url('@{imgUrl}mask_bg.png') repeat;
+}
+.pagination {//-->分页样式
+	padding-top: 25px;
+	font-size: 16px;
+	color: #a0a0a0;
+	text-align: center;
+	a {
+		display: inline-block;
+		width: 35px;
+		height: 35px;
+		margin: 0 2px;
+		color: #a0a0a0;
+		line-height: 35px;
+		border-radius: 5px;
+		border: 1px solid transparent;
+		&:hover {
+			border: 1px solid #ebebeb;
+		}
+	}
+	span {
+		display: inline-block;
+		width: 35px;
+		height: 35px;
+		margin: 0 2px;
+		line-height: 35px;
+	}
+	.current {
+		display: inline-block;
+		width: 35px;
+		height: 35px;
+		margin: 0 2px;
+		line-height: 35px;
+		color: #ffffff;
+		border: 1px solid #ffbf14;
+		border-radius: 5px;
+		background-color: #ffbf14;
+	}
+	.prev {
+		background: url('@{imgUrl}icons.png') -108px -143px no-repeat;
+	}
+	.next {
+		background: url('@{imgUrl}icons.png') -136px -143px no-repeat;
+	}
+	span.prev {
+		visibility: hidden;
+	}
+	span.next {
+		visibility: hidden;
+	}
+}
+/* 公共样式结束 */
+
+/* 约课样式开始 */
+body, html {
+	background-color: #f0f0f0;
+}
+.appoint_course {
+	position: relative;
+	width: 1000px;
+	margin: auto;
+	background-color: #fff;
+}
+@fontColor:#787878;
+.choose_wrap {//-->筛选老师module
+	position: relative;
+	padding: 40px 30px; 
+	color: @fontColor;
+	background-color: #fff;
+	h3 {
+		margin-bottom: 15px;
+		font-size: 14px;
+		line-height: 14px;
+		font-weight: 600;
+		color: #3c3c3c;
+	}
+	//选择上课时间（天、时间段）选项 m表示模块选项
+	.choose_options {
+		float: left;
+		width: 570px;
+		//天选择
+		.m-day-lst {
+			float: left;
+			width: 370px;
+			text-align: center;
+			li {
+				float: left;
+				width: 108px;
+				height: 33px;
+				margin-right: 5px;
+				margin-bottom: 10px;
+				cursor: pointer;
+				line-height: 33px;
+				font-size: 14px;
+				border: 1px solid;
+				border-color: #ebebeb;
+				border-radius: 5px;
+				background-color: #fff;
+				&:hover {
+					color: #ff970f;
+					border-color: #ff970f;
+				}
+			}
+			.u-cur {
+				color: #fff;
+				border-color: #ff970f;
+				background-color: #ff970f;
+				&:hover {
+					color: #fff;
+				}
+			}
+			//后七天按钮
+			.change_day_btn {
+				color: #ff970f;
+			}
+		}
+		//时间段选择
+		.m-time-wrap {
+			float: left;
+			cursor: pointer;
+		}
+		//选择时间点
+		.m-time-lst {
+			overflow: hidden;
+			width: 190px;
+			margin-top: 16px;
+			li {
+				float: left;
+				width: 65px;
+				margin-bottom: 10px;
+				padding-left: 28px;
+				height: 18px;
+				line-height: 18px;
+				background: url('@{imgUrl}icons.png') -282px 0 no-repeat;
+				&:hover {
+					color: #ff970f;
+				}
+			}
+			.u-cur {
+				color: #ff970f;
+				background: url('@{imgUrl}icons.png') -282px -28px no-repeat;
+			}
+		}
+	}
+	//选择老师特点优点
+	.choose_teacher_advantage {
+		float: left;
+		width: 205px;
+		border-right: 1px solid #f0f0f0;
+		.m-teacher-advantage {
+			margin-top: 10px;
+		}
+		//使用AC上课按钮
+		.u-ac-btn {
+			display: block;
+			height: 18px;
+			margin-top: 26px;
+			padding-left: 28px;
+			line-height: 18px;
+			color: #ff970f;
+			background: url('@{imgUrl}icons.png') -282px -84px no-repeat;
+		}
+		.no-use-ac {
+			color: @fontColor;
+			background: url('@{imgUrl}icons.png') -282px -56px no-repeat;
+			&:hover {
+				color: #ff970f;
+			}
+		}
+	}
+	//输入老师姓名
+	.m-teacher-name {
+		width: 153px;
+		height: 27px;
+		margin-top: 10px;
+		padding: 3px 0 3px 20px;
+		line-height: 27px;
+		border-radius: 5px;
+		border: 1px solid #ebebeb;
+		color: #787878;
+	}
+	input::-webkit-input-placeholder {
+		color: #787878; 
+	}
+	:-moz-placeholder {
+	    color: #787878;
+	}
+	::-moz-placeholder { 
+	    color: #787878;
+	}
+	input:-ms-input-placeholder{
+	    color: #787878;
+	}
+	input::-webkit-input-placeholder {
+	    color: #787878;
+	}
+	//所搜按钮、div以后可扩展
+	.search_btn {
+		float: left;
+		width: 125px;
+		height: 80px;
+		margin-top: 30px;
+		margin-left: 30px;
+		color: #fff;
+		border-radius: 5px;
+		background: #ff970f url('@{imgUrl}icons.png') -135px 26px no-repeat;
+		&:hover {
+			opacity: 0.9;
+			filter:alpha(opacity=80);
+		}
+	}
+}
+.teacher_info {//-->老师信息module
+	overflow: hidden;
+	position: relative;
+	min-height: 400px;
+	padding: 30px 30px 45px;
+	margin-bottom: 80px;
+	background-color: #f8f8f8;
+	&_tips {
+		display: none;
+		overflow: hidden;
+		z-index: 3;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		background: url('@{imgUrl}teacher_info_bg.png') repeat;
+		img {
+			margin-top: 95px;
+		}
+		p {
+			width: 230px;
+			margin: 10px auto;
+			color: #a0a0a0;
+			font-size: 16px;
+			line-height: 28px;
+		}
+	}
+	&_loading {
+		display: block;
+	}
+ 	&_lst {
+		margin-left: -10px;
+		.teacher_item {
+			cursor: pointer;
+			position: relative;
+			float: left;
+			width: 227px;
+			height: 307px;
+			margin-left: 10px;
+			margin-bottom: 20px;
+			text-align: center;
+			//老师基本信息module
+			.teacher_base {
+				z-index: 1;
+				overflow: hidden;
+				position: relative;
+				width: 225px;
+				height: 100%;
+				background-color: #fff;
+				border-radius: 10px;
+				border: 1px solid #eee;
+				box-shadow: 0 2px 3px 2px #eee;
+				em {
+					position: absolute;
+					right: 0;
+					top: 0;
+					width: 50px;
+					height: 50px;
+				}
+				//标签
+				.hot_tag {
+					background: url('@{imgUrl}icons.png') 0 -149px no-repeat;
+				}
+				.heart_tag {
+					background: url('@{imgUrl}icons.png') 0 -99px no-repeat;
+				}
+				//星星
+				.u-stars {
+					position: relative;
+					z-index: 1;
+					overflow: hidden;
+					width: 120px;
+					height: 18px;
+					margin: 30px auto 0;
+					background: url('@{imgUrl}icons.png') 0 -18px no-repeat;
+					.get_stars {
+						position: absolute;
+						left: 0;
+						top: 0;
+						z-index: 2;
+						width: 50%;
+						height: 100%;
+						background: url('@{imgUrl}icons.png') 0 0 no-repeat;
+					}
+				}
+				//头像
+				.u-head {
+					overflow: hidden;
+					width: 90px;
+					height: 90px;
+					margin:10px auto;
+					border-radius: 50%;
+					img {
+						width: 90px;
+						height: 90px;
+					}
+				}
+				//名字
+				.u-name {
+					height: 16px;
+					margin-top: 10px;
+					font-size: 16px;
+					line-height: 16px;
+					color: #787878;
+					padding-left: 20px;
+					padding-right: 20px;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow:ellipsis;
+				}
+				//国家
+				.u-country {
+					height: 14px;
+					margin-top: 10px;
+					font-size: 14px;
+					line-height: 14px;
+					color: #a0a0a0;
+					padding-left: 20px;
+					padding-right: 20px;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow:ellipsis;
+				}
+				//荣誉标签
+				.honor-tags {
+					margin-top: 10px;
+					span {
+						display: inline-block;
+						height: 22px;
+						margin-top: 5px;
+						margin-left: 1px;
+						margin-right: 1px;
+						padding-left: 5px;
+						padding-right: 5px;
+						font-size: 14px;
+						line-height: 22px;
+						border-radius: 11px;
+						color: #fff;
+						background-color: #91d5ff;
+					}
+				}
+				//预约按钮
+				.appoint_btn {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					height: 40px;
+					background-color: #ff970f;
+					line-height: 40px;
+					color: #fff;
+					font-weight: 600;
+					border-bottom-right-radius: 10px;
+					border-bottom-left-radius: 10px;
+				}
+			}
+			//老师详细里的时间列表，点击立即约课显示
+			.time_wrap {
+				z-index: 2;
+				position: absolute;
+				left: 0;
+				top: 100%;
+				width: 100%;
+				height: 100%;
+				background-color: #ff970f;
+				border-radius: 10px;
+				display: -webkit-box;
+				-webkit-box-pack: center;
+				-webkit-box-align: center; 
+				display: -ms-flexbox;
+				-ms-flex-align: center;
+				-ms-flex-pack: center;
+				display: -moz-box;
+				-moz-box-align: center;
+				-moz-box-pack: center;
+				display: box;
+				box-pack: center;
+				box-align: center; 
+				.u-tit {
+					margin-top: 18px;
+					font-size: 16px;
+					line-height: 16px;
+					color: #fff;
+				}
+				.time_lst {
+					width: 100%;
+					padding-top: 20px;
+					padding-bottom: 10px;
+					li {
+						margin: 0 auto 5px;
+						a {
+							display: block;
+							width: 160px;
+							height: 35px;
+							margin: auto;
+							border-radius: 5px;
+							color: #ff970f;
+							line-height: 35px;
+							font-size: 18px;
+							background-color: #fff;
+							&:hover {
+								background-color: #ffd02e;
+								color: #fff;
+							}
+						}
+					}
+				} 
+ 			}
+ 			//老师详细信息module
+ 			.teacher_details_wrap {
+ 				display: none;
+ 				z-index: 2;
+ 				position: absolute;
+ 				top: 0;
+ 				left: 0;
+ 				width: 227px;
+ 				height: 100%;
+ 				padding-left: 10px;
+ 				background-color: transparent;
+ 				.teacher_details {
+	 				overflow: hidden;
+	 				position: relative;
+	 				top: 0;
+	 				right: 0;
+	 				width: 225px;
+	 				height: 100%;
+	 				background-color: #fff;
+	 				color: #787878;
+	 				border-radius: 10px;
+	 				border: 1px solid #eee;
+					box-shadow: 0 2px 3px 2px #eee;
+	 				text-align: center;
+	 				.detail_lst01 {
+	 					height: 74px;
+	 					margin: 34px 18px 0;
+	 					font-size: 14px;
+	 					border-bottom: 1px solid #f0f0f0;
+	 					text-align: left;
+	 					p {
+	 						margin-left: 23px;
+	 						margin-bottom: 16px;
+	 						height: 17px;
+	 						line-height: 17px;
+	 						.u-num {
+	 							display: inline-block;
+								width: 34px;
+								height: 17px;
+								padding-left: 23px;
+								color: #ff7f7f;
+								background: url('@{imgUrl}icons.png') 0 -82px no-repeat;
+	 						}	
+	 					}
+	 				}
+	 				.detail_lst02 {
+	 					text-align: center;
+	 					padding-top: 25px;
+	 					padding-left: 8px;
+	 					padding-bottom: 30px;
+	 					li {
+	 						float: left;
+	 						width: 70px;
+	 						overflow: hidden;
+	 						em {
+	 							display: inline-block;
+	 							width: 38px;
+	 							height: 38px;
+	 						}
+	 						.u-num {
+	 							margin-top: 5px;
+	 							font-size: 20px;
+	 							line-height: 20px;
+	 						}
+	 						.u-text {
+	 							margin-top: 14px;
+	 							font-size: 14px;
+	 							line-height: 14px;
+	 						}
+	 					}
+	 					//平均高于
+						.above {
+							.u-num {
+								color: #ff7f7f;
+							}
+							em {
+								background: url('@{imgUrl}icons.png') -112px -88px no-repeat;
+							}
+						}
+						//平均低于
+						.low {
+							.u-num {
+								color: #88dfba;
+							}
+							em {
+								background: url('@{imgUrl}icons.png') -150px -88px no-repeat;
+							}
+						}
+	 				}
+	 				//老师详细按钮
+					.detail_btn {
+						display: inline-block;
+						padding: 5px 9px;							
+						font-size: 14px;
+						line-height: 14px;
+						color: #a0a0a0;
+						border: 1px solid #ebebeb;
+						border-radius: 5px;
+						&:hover {
+							border: 1px solid #ff970f;
+							color: #ffab3c;
+						}
+					}
+	 			}
+ 			}
+		}
+	}
+}
+.u-arrow {//-->靠边的样式，根据权重改变样式
+	position: absolute;
+	z-index: 3;
+	left: 0;
+	top: 50%;
+	width: 10px;
+	height: 18px;
+	margin-left: 1px;
+	margin-top: -9px;
+	background: url('@{imgUrl}icons.png') -289px -118px no-repeat;
+}
+.teacher_info {
+	&_lst{
+		.right {
+			.u-arrow {
+				margin-left: -2px;
+				left: 227px;
+				background: url('@{imgUrl}icons.png') -289px -136px no-repeat;
+			}
+			.teacher_details_wrap {
+				padding-left: 0;
+				padding-right: 10px;
+			}
+		}
+	}
+}
+/* 约课样式结束 */
+
+/* 弹层样式开始 */
+.appoint_notimes_tips {//-->搜索课没有时间点数据的弹层
+	overflow: hidden;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	width: 500px;
+	height: 280px;
+	margin-top: -140px;
+	margin-left: -250px;
+	border-radius: 10px;
+	background-color: #57c2ff;
+	color: #fff;
+	.r_close_btn {
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		width: 21px;
+		height: 21px;
+		background: url('@{imgUrl}icons.png') 0 -304px no-repeat;
+	}
+	.b_close_btn {
+		position: relative;
+		display: block;
+		width: 180px;
+		height: 46px;
+		margin: 65px auto 0;
+		color: #fff;
+		border-bottom: 4px solid #ffbf14;
+		background-color: #ffd02e;
+		border-radius: 8px;
+		font-size: 24px;
+		line-height: 46px;
+		text-align: center;
+	}
+	.e_tips {
+		margin-top: 95px;
+		font-size: 20px;
+		text-align: center;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+/* 弹层样式结束 */
+
+/* 其他样式开始 */
+@import 'modules/scan_code.less';//--> 添加付费用户薅羊毛扫码弹层
+/* 其他样式结束 */

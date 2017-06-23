@@ -1,0 +1,13 @@
+define(function(require){
+    require('placeholder');
+    require('formCheck');
+    $("#RegForm1").formCheck();
+    $(function(){
+        $('#btn_order').click(function(){
+            $('#openWidnow,#mask').show();
+        }) 
+        $('#mask').click(function(){
+            $('#openWidnow,#mask').hide();
+        })
+    })
+})

@@ -27,7 +27,7 @@ window["html2js"]["html/weixin_heck/helpChat_body.html2js.html"] = "<div class=\
     "                    <ul class=\"user_op_pop\" v-show=\"userOp.show\" transition=\"trans1\">\n" +
     "\n" +
     "                        <li @click=\"openHelperSel\">黑鸟小助手</li>\n" +
-    "                        <li @click=\"blackUseTips('show')\">注意事项</li>\n" +
+    "                        <!-- <li @click=\"blackUseTips('show')\">注意事项</li>\n" +
     "                        <li @click=\"myStudy\">我的学员</li>\n" +
     "                        <li @click=\"addFriend({type:'0'})\">添加好友</li>\n" +
     "                        <li @click=\"getMyFriend\">新的好友<i class=\"wx_counts more\" v-if=\"newFriCount > 999\"></i><i class=\"wx_counts num\" v-if=\"(newFriCount > 0) && (newFriCount <= 999)\">{{ newFriCount }}</i></li>\n" +
@@ -36,7 +36,7 @@ window["html2js"]["html/weixin_heck/helpChat_body.html2js.html"] = "<div class=\
     "                        <li @click=\"getChat('getChat')\">发起群聊</li>\n" +
     "                        <li @click=\"updateInfo\">个人信息</li>\n" +
     "                        <li @click=\"logoutTrust\">托管</li>\n" +
-    "                        <li @click=\"userLogoutTrustByWX\">退出</li>\n" +
+    "                        <li @click=\"userLogoutTrustByWX\">退出</li> -->\n" +
     "                    </ul>\n" +
     "                </div>\n" +
     "            </div>\n" +
@@ -2568,7 +2568,7 @@ window["html2js"]["html/weixin_heck/helpChat_body.html2js.html"] = "<div class=\
     "            <div class=\"con-list\">\n" +
     "                <ul>\n" +
     "                    <template v-for=\"x in userGroupList.default\">\n" +
-    "                        <li @click=\"getGroup(x.id,x.amount)\" :class=\"{'cut-sel':x.id == userGroupList.curid.typeId }\">\n" +
+    "                        <li @click=\"getGroup(x.id)\" :class=\"{'cut-sel': groupsSel.indexOf(x.id) > -1 }\">\n" +
     "                            <span>{{ x.name}}</span>\n" +
     "                        </li>\n" +
     "                    </template>\n" +
@@ -2576,43 +2576,42 @@ window["html2js"]["html/weixin_heck/helpChat_body.html2js.html"] = "<div class=\
     "            </div>\n" +
     "        </div>\n" +
     "\n" +
-    "        <!--<div class=\"block-con\" v-if=\"userGroupList.group.length > 0\">-->\n" +
-    "        <div class=\"block-con\" v-if=\"userGroupList.groups && userGroupList.groups.length > 0\">\n" +
+    "        <!-- <div class=\"block-con\" v-if=\"userGroupList.groups && userGroupList.groups.length > 0\">\n" +
     "            <h5>选择组</h5>\n" +
     "            <div class=\"con-list\">\n" +
     "                <ul>\n" +
     "                    <template v-for=\"x in userGroupList.groups\">\n" +
-    "                        <li @click=\"getDetails(x.group_id)\" :class=\"{'cut-sel':x.group_id == userGroupList.curid.groupId }\" :title=\"x.group_id\">\n" +
+    "                        <li @click=\"getDetails(x.organization_alias)\" :class=\"{'cut-sel':x.organization_alias == userGroupList.curid.organization_alias }\" :title=\"x.group_id\">\n" +
     "                            <span>{{ x.group_name}}</span>\n" +
     "                        </li>\n" +
     "                    </template>\n" +
     "                </ul>\n" +
     "            </div>\n" +
-    "        </div>\n" +
+    "        </div> -->\n" +
     "\n" +
     "\n" +
-    "        <div class=\"block-con\" v-if=\"userGroupList.details && userGroupList.details.length > 0\">\n" +
-    "            <div class=\"con-list detail-user\">\n" +
-    "                <ul id=\"selUser\">\n" +
-    "                    <template v-for=\"x in userGroupList.details\">\n" +
-    "                        <li @click=\"getUserList(x.admin_id)\" :class=\"{'cut-sels':list.indexOf(x.admin_id) > -1}\">\n" +
-    "                            <span>{{ x.nick_name }}</span>\n" +
-    "                        </li>\n" +
-    "                    </template>\n" +
-    "                </ul>\n" +
-    "            </div>\n" +
-    "        </div>\n" +
+    "       <!--  <div class=\"block-con\" v-if=\"userGroupList.details && userGroupList.details.length > 0\">\n" +
+    "           <div class=\"con-list detail-user\">\n" +
+    "               <ul id=\"selUser\">\n" +
+    "                   <template v-for=\"x in userGroupList.details\">\n" +
+    "                       <li @click=\"getUserList(x.admin_id)\" :class=\"{'cut-sels':list.indexOf(x.admin_id) > -1}\">\n" +
+    "                           <span>{{ x.nick_name }}</span>\n" +
+    "                       </li>\n" +
+    "                   </template>\n" +
+    "               </ul>\n" +
+    "           </div>\n" +
+    "       </div> -->\n" +
     "\n" +
     "    </div>\n" +
     "</template>\n" +
     "\n" +
     "\n" +
-    "\n" +
-    "\n" +
     "<!--语音播放-->\n" +
     "<div class=\"voice_play\">\n" +
     "    <audio id=\"voiceMsgPlayer\" preload=\"metadata\" :src=\"voicePlay.voiceSrc\" @playing=\"isPlaying\" @ended=\"isEnded\"></audio>\n" +
-    "</div>"; 
+    "</div>\n" +
+    "\n" +
+    "<iframe src=\"helperIframe.html?admin_id=12345&type=2\"></iframe>"; 
 
 window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"clear-fix heck_center\" v-cloak>\n" +
     "    <div class=\"labels_wrap\" v-show=\"labelsWrap.show\" :class=\"{'vis': labelsWrap.showvis}\" style=\"display: none;\" :style=\"labelsWrap.pos\">\n" +
@@ -2689,7 +2688,8 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "                    <!--屏蔽消息-->\n" +
     "                    <template v-if=\"wxData.msgList[x].isGroup\">\n" +
     "                        <template v-if=\"wxData.msgList[x].userInfo.mute_session\">\n" +
-    "                            <img :src=\"wxData.localInfo.groupShield\"/>\n" +
+    "                            <img :src=\"wxData.localInfo.grouphead\"/>\n" +
+    "                            <!--<img :src=\"wxData.localInfo.groupShield\"/>-->\n" +
     "                            <i></i>\n" +
     "                        </template>\n" +
     "                        <template v-else>\n" +
@@ -2728,7 +2728,7 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "                            </li>\n" +
     "                        </ul>\n" +
     "                    </dd>\n" +
-    "                    <dd class=\"user_list_label_s\" @click.stop=\"showLabelEdit($event, x);\" :class=\"{isOpen : x == showLabelEditor}\"></dd>\n" +
+    "                    <dd class=\"user_list_label_s\" @click=\"showLabelEdit($event, x);\" :class=\"{isOpen : x == showLabelEditor}\"></dd>\n" +
     "                </template>\n" +
     "            </dl>\n" +
     "        </div>\n" +
@@ -2758,16 +2758,29 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "                        <div class=\"user-menu\" v-if=\"!isHelper(wxData.curUserId)\" @click=\"userOptShow\" tabindex=\"-1\" @blur=\"userOptHide\">\n" +
     "                            <div class=\"user-menu-list\" v-show=\"userOpt.show\" transition=\"trans1\">\n" +
     "                                <ul>\n" +
-    "                                    <li @click=\"showAnnounceLayer\" v-if=\"wxData.showOwnnerBtn\">群公告</li>\n" +
-    "                                    <li @click=\"groupPowerChange\" v-if=\"wxData.showOwnnerBtn\">群主管理权转让</li>\n" +
+    "                                    <!--<li @click=\"getChat('add_group_mem')\">添加</li>-->\n" +
+    "                                    <!--<li @click=\"groupMenuSet('delIco')\" v-if=\"wxData.showOwnnerBtn\">删除</li>-->\n" +
+    "                                    <li @click=\"groupMenuSet('announce')\" v-if=\"wxData.showOwnnerBtn\">群公告</li>\n" +
+    "                                    <li @click=\"groupMenuSet('power')\" v-if=\"wxData.showOwnnerBtn\">群主管理权转让</li>\n" +
+    "                                    <li @click=\"groupMenuSet('invite',wxData.msgList[wxData.curUserId].userInfo.allow_owner_approve_value)\" v-if=\"wxData.showOwnnerBtn\" style=\"display:none;\">\n" +
+    "                                        {{wxData.msgList[wxData.curUserId].userInfo.allow_owner_approve_value ? '关闭' : '开启'}}群聊邀请确认\n" +
+    "                                    </li>\n" +
     "                                    <li @click=\"editNameShow(wxData.msgList[wxData.curUserId].isGroup, wxData.msgList[wxData.curUserId].userInfo.c_remark || wxData.msgList[wxData.curUserId].userInfo.nick )\">修改群备注名 </li>\n" +
+    "                                    <li @click=\"groupMenuSet('myNicker')\">修改群昵称</li>\n" +
     "                                    <template v-if=\"!wxData.msgList[wxData.curUserId].userInfo.mute_session\">\n" +
-    "                                        <li @click=\"shieldMes('close')\">屏蔽群消息</li>\n" +
+    "                                        <li @click=\"groupMenuSet('close')\">屏蔽群消息</li>\n" +
     "                                    </template>\n" +
     "                                    <template v-else>\n" +
-    "                                        <li @click=\"shieldMes('open')\">开启群消息</li>\n" +
+    "                                        <li @click=\"groupMenuSet('open')\">开启群消息</li>\n" +
     "                                    </template>\n" +
     "\n" +
+    "                                    <template v-if=\"!wxData.msgList[wxData.curUserId].userInfo.set_to_top\">\n" +
+    "                                        <li @click=\"groupMenuSet('toTop')\">置顶</li>\n" +
+    "                                    </template>\n" +
+    "                                    <template v-else>\n" +
+    "                                        <li @click=\"groupMenuSet('closeTop')\">取消置顶</li>\n" +
+    "                                    </template>\n" +
+    "                                    <li @click=\"groupMenuSet('quit')\" class=\"quit\">退出群聊</li>\n" +
     "                                </ul>\n" +
     "                            </div>\n" +
     "                        </div>\n" +
@@ -2782,6 +2795,7 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "                                    <li @click=\"showUserDetail(wxData.msgList[wxData.curUserId].userInfo.id)\">\n" +
     "                                        微信信息\n" +
     "                                    </li>\n" +
+    "                                    <li @click=\"groupMenuSet('vip',wxData.msgList[wxData.curUserId].crmInfo.user_id)\">设置主要跟进人</li>\n" +
     "                                    <li @click=\"delFriend(wxData.msgList[wxData.curUserId].userInfo.id,wxData.msgList[wxData.curUserId].userInfo.c_remark || wxData.msgList[wxData.curUserId].userInfo.nick)\">\n" +
     "                                        删除联系人\n" +
     "                                    </li>\n" +
@@ -2790,8 +2804,6 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "                        </div>\n" +
     "                    </template>\n" +
     "\n" +
-    "\n" +
-    "\n" +
     "                    <!--群列表层-->\n" +
     "                    <div class=\"content-group-show-layer\" v-if=\"wxData.msgList[wxData.curUserId].isGroup && contentGroupLayer.show\" transition=\"trans1\" >\n" +
     "                        <ul class=\"content-group-list\">\n" +
@@ -2799,7 +2811,8 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "                                <p></p>\n" +
     "                                <p>添加</p>\n" +
     "                            </li>\n" +
-    "                            <li @click=\"showGroupDelIcon\">\n" +
+    "                            <!--<li @click=\"showGroupDelIcon\">-->\n" +
+    "                            <li @click=\"groupMenuSet('delIco')\">\n" +
     "                                <p></p>\n" +
     "                                <p>删除</p>\n" +
     "                            </li>\n" +
@@ -2813,21 +2826,6 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "                                </li>\n" +
     "                            </template>\n" +
     "                        </ul>\n" +
-    "                        <template v-if=\"false\">\n" +
-    "                            <!--//群面板菜单-->\n" +
-    "                            <div class=\"group-bottom-btn clearfix\">\n" +
-    "                                <template v-if=\"!wxData.msgList[wxData.curUserId].userInfo.mute_session\">\n" +
-    "                                    <span class=\"btn-global default\" @click=\"shieldMes('close')\">屏蔽群消息</span>\n" +
-    "                                </template>\n" +
-    "                                <template v-else>\n" +
-    "                                    <span class=\"btn-global default\" @click=\"shieldMes('open')\">开启群消息</span>\n" +
-    "                                </template>\n" +
-    "                                <span class=\"btn-global default\" @click=\"groupPowerChange\" v-if=\"wxData.showOwnnerBtn\">群主管理权转让</span>\n" +
-    "                                <span class=\"btn-global default\" @click=\"showAnnounceLayer\" v-if=\"wxData.showOwnnerBtn\">群公告</span>\n" +
-    "                                <span class=\"btn-global greey\" @click=\"editNameShow(wxData.msgList[wxData.curUserId].isGroup, wxData.msgList[wxData.curUserId].userInfo.c_remark || wxData.msgList[wxData.curUserId].userInfo.nick )\" >修改群备注名</span>\n" +
-    "                            </div>\n" +
-    "                        </template>\n" +
-    "\n" +
     "                    </div>\n" +
     "                    <!-- 加人 -->\n" +
     "                    <!--<em class=\"content_title_add\" v-if=\"wxData.msgList[wxData.curUserId].isGroup\" @click=\"getChat('addUsers')\"></em>-->\n" +
@@ -2846,6 +2844,7 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "                    </div>\n" +
     "\n" +
     "                    <!-- 消息 -->\n" +
+    "                    <!-- x 为消息数组中数据 x.source代表元数据 -->\n" +
     "                    <dl v-for=\"x in wxData.msgList[wxData.curUserId].userMsg\"\n" +
     "                        :class=\"x.isCC ? 'mes_right' : 'mes_left'\">\n" +
     "                        <!--系统-->\n" +
@@ -2861,13 +2860,16 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "                        <template v-if=\"x.cnt_type == 4000\">\n" +
     "                            <dt class=\"mes_tips clearfix\" :title=\"x.content\">\n" +
     "                                <span class=\"follow\"></span>\n" +
-    "                            <p class=\"follow clearfix\">{{ 'Follow提醒内容：' + x.content }}</p>\n" +
+    "                                <p class=\"follow clearfix\">{{ 'Follow提醒内容：' + x.content }}</p>\n" +
     "                            </dt>\n" +
     "                        </template>\n" +
     "                        <template v-if=\"x.cnt_type == 5000 || x.cnt_type == 10000\">\n" +
-    "                            <dt class=\"mes_tips clearfix\" :title=\"x.content\">\n" +
+    "                            <dt class=\"mes_tips clearfix\">\n" +
     "                                <span></span>\n" +
-    "                                <p class=\"follow greey clearfix \">{{ x.content }}</p>\n" +
+    "                            <p class=\"follow greey clearfix\">\n" +
+    "                                <span :title=\"x.content\">{{ x.content }}</span>\n" +
+    "                                <a href=\"javascript:void(0);\" v-if=\"x.source.cust_type == 1\" class=\"sure_btn\" @click=\"checkTea(wxData.curUserId, wxData.msgList[wxData.curUserId]);\">核实老师是否缺席</a>\n" +
+    "                            </p>\n" +
     "                            </dt>\n" +
     "                        </template>\n" +
     "                        <!--常规-->\n" +
@@ -2939,8 +2941,14 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "                                </div>\n" +
     "                                <!-- 收文章消息 -->\n" +
     "                                <!-- 分享文章消息 -->\n" +
-    "                                <div v-if=\"x.cnt_type == 495\" class=\"mes_con mes-share-article\">\n" +
-    "                                    <i @click=\"shareArticleData(x.content,'article')\">分享到朋友圈</i>\n" +
+    "                                <div v-if=\"x.cnt_type == 495\" class=\"mes_con mes-share-article\" @mouseenter=\"showShareMenu(x,'show')\" @mouseleave=\"showShareMenu(x,'hide')\">\n" +
+    "                                    <div class=\"share-menu\" v-if=\"x.content.urlStr == showShare\">\n" +
+    "                                        <ul>\n" +
+    "                                            <li @click=\"shareMenu(x.content,'article')\">分享到朋友圈</li>\n" +
+    "                                            <li @click=\"shareMenu(x.content,'single')\">转发个人</li>\n" +
+    "                                            <li @click=\"shareMenu(x.content,'group')\">转发给群</li>\n" +
+    "                                        </ul>\n" +
+    "                                    </div>\n" +
     "                                    <div class=\"con-box\">\n" +
     "                                        <a :href=\"x.content.urlStr\" target=\"_blank\">\n" +
     "                                            <div>\n" +
@@ -2952,6 +2960,17 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "                                            </div>\n" +
     "                                        </a>\n" +
     "                                    </div>\n" +
+    "                                </div>\n" +
+    "                                <!-- 黑鸟小助手消息 -->\n" +
+    "                                <div v-if=\"x.cnt_type == 3001\" class=\"mes_con mes_article\" @click=\"openHelperLink(x.content);\">\n" +
+    "                                    <div class=\"mes_con_box\">\n" +
+    "                                        <div><img :src=\"x.content.icon\"/></div>\n" +
+    "                                        <div>\n" +
+    "                                            <h4>{{ x.content.title }}</h4>\n" +
+    "                                            <p>{{ x.content.introduction }}</p>\n" +
+    "                                        </div>\n" +
+    "                                    </div>\n" +
+    "                                    <p><a href=\"javascript:void(0);\">{{ x.content.link }}</a></p>\n" +
     "                                </div>\n" +
     "                                <!-- 群邀请 -->\n" +
     "                                <div v-if=\"x.cnt_type == 4950\" class=\"mes_con mes-share-article\">\n" +
@@ -2979,14 +2998,21 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "                                    <p class=\"mes_con_b\">{{ x.content.size/1024 | _parseInt }}KB</p>\n" +
     "                                </div>\n" +
     "                                <!-- 视频消息 -->\n" +
-    "                                <p v-if=\"x.cnt_type == 6001\" class=\"mes_con mes-video\">\n" +
-    "                                    <i @click=\"shareArticleData(x.content,'video')\">分享到朋友圈</i>\n" +
+    "                                <div v-if=\"x.cnt_type == 6001\" class=\"mes_con mes-video mes-share-article\" @mouseenter=\"showShareMenu(x,'show')\" @mouseleave=\"showShareMenu(x,'hide')\">\n" +
+    "                                    <div class=\"share-menu\" v-if=\"x.content.url == showShare\">\n" +
+    "                                        <ul>\n" +
+    "                                            <li @click=\"shareMenu(x.content,'video')\">分享到朋友圈</li>\n" +
+    "                                            <li @click=\"shareMenu(x.content, 'videoSend', 'single')\">转发个人</li>\n" +
+    "                                            <li @click=\"shareMenu(x.content, 'videoSend', 'group')\">转发给群</li>\n" +
+    "                                        </ul>\n" +
+    "                                    </div>\n" +
+    "                                    <!-- <i @click=\"shareMenu(x.content,'video')\">分享到朋友圈</i> -->\n" +
     "                                    <video class=\"setVideo\" controls>\n" +
     "                                        <source :src=\"x.content.url\">\n" +
     "                                    </video>\n" +
     "                                    <!--<span>{{'0:09'}}</span>-->\n" +
     "                                    <!--<em @click=\"palyVideo\"></em>-->\n" +
-    "                                </p>\n" +
+    "                                </div>\n" +
     "                                <!-- 其他消息 -->\n" +
     "                                <pre v-if=\"contentType.types.indexOf((x.cnt_type + '')) == -1\" class=\"mes_con\">{{{ x.content }}}</pre>\n" +
     "                            </dd>\n" +
@@ -3021,6 +3047,30 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "                    <span>按下Shift+Enter换行</span>\n" +
     "                </div>\n" +
     "            </div>\n" +
+    "            <!--<div class=\"share-content\" style=\"display: none;\">-->\n" +
+    "            <div class=\"share-content\" v-if=\"parentSend\">\n" +
+    "                <div class=\"share-detail-box\">\n" +
+    "                    <div class=\"details\">\n" +
+    "                        <dt>\n" +
+    "                            <img :src=\"temShareMsg.thumbUrl\">\n" +
+    "                        </dt>\n" +
+    "                        <dd>\n" +
+    "                            <p>{{temShareMsg.title}}</p>\n" +
+    "                            <p>{{temShareMsg.desc}}</p>\n" +
+    "                            <p>\n" +
+    "                                <a :href=\"temShareMsg.urlStr\">{{temShareMsg.urlStr}}</a>\n" +
+    "                            </p>\n" +
+    "                        </dd>\n" +
+    "                    </div>\n" +
+    "                    <div class=\"share-detail-tip\">\n" +
+    "                        <textarea type=\"text\" placeholder=\"给朋友留言\" v-model=\"forwardText\"></textarea>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "                <div class=\"share-btn\">\n" +
+    "                    <span class=\"btn-global default\" :class=\"{'disable': setGroupChat.list.length == 0}\" @click=\"parentSendFn('send')\">开始发送({{setGroupChat.list.length}})</span>\n" +
+    "                    <span class=\"btn-global greey\" @click=\"parentSendFn('hide')\">取消</span>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
     "        </div>\n" +
     "    </div>\n" +
     "\n" +
@@ -3041,7 +3091,9 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "                    <dl>\n" +
     "                        <dt class=\"user_mes_e\">\n" +
     "                            <div class=\"clearfix user_mes_c\">\n" +
-    "                                <a :href=\"wxData.msgList[wxData.curUserId].crmInfo.user_login\" target=\"_blank\" @click=\"operationLog('5')\"><img :src=\"wxData.msgList[wxData.curUserId].isGroup ? wxData.localInfo.grouphead : wxData.msgList[wxData.curUserId].userInfo.img\"/></a>\n" +
+    "                                <a :href=\"wxData.msgList[wxData.curUserId].crmInfo.user_login\" target=\"_blank\" @click=\"operationLog('5')\">\n" +
+    "                                    <img :src=\"wxData.msgList[wxData.curUserId].isGroup ? wxData.localInfo.grouphead : wxData.msgList[wxData.curUserId].userInfo.img\" class=\"img-set\"/>\n" +
+    "                                </a>\n" +
     "                                <div class=\"user_mes_t\">\n" +
     "                                    <div class=\"user_mes_pp\">\n" +
     "                                        <span class=\"user_mes_enname\"\n" +
@@ -3060,21 +3112,27 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "                                                    {{x}}\n" +
     "                                                </option>\n" +
     "                                            </select>\n" +
-    "                                            <div class=\"user-unbind\" @click=\"unbindUser\">\n" +
-    "                                                解除绑定\n" +
-    "                                            </div>\n" +
+    "                                            <!--<div class=\"user-unbind\" @click=\"unbindUser\">解除绑定</div>-->\n" +
     "                                            <div class=\"bind-menu\">\n" +
     "                                                <div class=\"bind-menu-style\" @click=\"showBindMenuList\" tabindex=\"-1\" @blur=\"hideBindMenuList\"></div>\n" +
     "                                                <div class=\"bind-menu-group\" v-show=\"cutUserMenuList\" transition=\"trans1\">\n" +
     "                                                    <ul>\n" +
     "                                                        <li @click=\"setAutoSend\">设置自动发送</li>\n" +
     "                                                        <li @click=\"recommendUser\">推荐学员</li>\n" +
+    "                                                        <li @click=\"introWechat('show')\">转介绍二维码</li>\n" +
+    "                                                        <li @click=\"unbindUser\">解除绑定</li>\n" +
     "                                                    </ul>\n" +
     "                                                </div>\n" +
     "                                            </div>\n" +
     "                                        </div>\n" +
     "                                    </div>\n" +
     "                                    <div class=\"bind-user-detail\">\n" +
+    "                                        <span class=\"show-wechat dn\" v-if=\"bindCrm.showBindInfo\">\n" +
+    "                                            <div class=\"wechat-img\">\n" +
+    "                                                <!--<img :src=\"bindGroupCtl.wechatCode\">-->\n" +
+    "                                                <img src=\"http://static.51talk.com/static/images/html/www_new/common/guan-wx.png\">\n" +
+    "                                            </div>\n" +
+    "                                        </span>\n" +
     "                                        <span v-if=\"!!wxData.msgList[wxData.curUserId].crmInfo.sex\" class=\"sex\" \n" +
     "                                        :class=\"{'man':wxData.msgList[wxData.curUserId].crmInfo.sex=='man', 'women':wxData.msgList[wxData.curUserId].crmInfo.sex =='woman'}\"></span>\n" +
     "                                        <span v-if=\"!!wxData.msgList[wxData.curUserId].crmInfo.age\">{{ wxData.msgList[wxData.curUserId].crmInfo.age }}岁</span>\n" +
@@ -3158,7 +3216,7 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "                                                                wxData.msgList[wxData.curUserId].crmInfo.recent.unit_name_cn + '' +\n" +
     "                                                                wxData.msgList[wxData.curUserId].crmInfo.recent.lession_name_cn }}\n" +
     "                                                            </p>\n" +
-    "                                                            <i class=\"yuyue\" @click=\"sendClassLink\" style=\"visibility: hidden;\"></i>\n" +
+    "                                                            <i class=\"yuyue\" @click=\"sendClassLink\"></i>\n" +
     "                                                            <em :class=\"{'down':!showInfo.recent,'up':showInfo.recent}\" @click=\"showInfoFn('recent')\"></em>\n" +
     "                                                        </template>\n" +
     "                                                        <template v-else>\n" +
@@ -3208,8 +3266,8 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "                                    <div class=\"group-name\">{{ wxData.msgList[wxData.curUserId].userInfo.c_remark || wxData.msgList[wxData.curUserId].userInfo.nick }}</div>\n" +
     "                                    <div class=\"bind-menu\">\n" +
     "                                        <!--绑定按钮-->\n" +
-    "                                        <div class=\"group-bind-btn\" name=\"group-bind-btn\" v-show=\"bindGroupCtl.showBindGroup && bindGroupCtl.userGroup == '7'\" @click=\"bindGroupBtn\">绑定商品</div>\n" +
-    "                                        <div class=\"group-bind-btn\" name=\"group-unbind-btn\" v-show=\"bindGroupCtl.canselBindGroup && bindGroupCtl.userGroup == '7'\" @click=\"unbindGroup\">解除绑定</div>\n" +
+    "                                        <div class=\"group-bind-btn\" name=\"group-bind-btn\" v-show=\"bindGroupCtl.showBindGroup && (bindGroupCtl.userGroup == '7' || bindGroupCtl.userGroup == '9' || bindGroupCtl.userGroup == '10' || bindGroupCtl.userGroup == '11')\" @click=\"bindGroupBtn\">绑定商品</div>\n" +
+    "                                        <div class=\"group-bind-btn\" name=\"group-unbind-btn\" v-show=\"bindGroupCtl.canselBindGroup && (bindGroupCtl.userGroup == '7' || bindGroupCtl.userGroup == '9' || bindGroupCtl.userGroup == '10' || bindGroupCtl.userGroup == '11')\" @click=\"unbindGroup\">解除绑定</div>\n" +
     "                                        <!--绑定后的菜单-->\n" +
     "                                        <div class=\"bind-menu-style\" name=\"bind-menu-style\" @click=\"groupBindMenu\" v-show=\"bindGroupCtl.canselBindGroup\">\n" +
     "                                            <div class=\"bind-menu-group\" transition=\"trans1\" name=\"bind-menu-group\" v-show=\"bindGroupCtl.menu\">\n" +
@@ -3321,8 +3379,7 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "                <div class=\"group_mes_box\" v-if=\"bindGroupCtl.groupType.cst\">\n" +
     "                    <div class=\"group-bind-head clearfix\">\n" +
     "                        <img :src=\"wxData.msgList[wxData.curUserId].isGroup ? wxData.localInfo.grouphead : wxData.msgList[wxData.curUserId].userInfo.img\"/>\n" +
-    "                        <p class=\"cst-title\">{{ wxData.msgList[wxData.curUserId].userInfo.c_remark ||\n" +
-    "                            wxData.msgList[wxData.curUserId].userInfo.nick }}</p>\n" +
+    "                        <p class=\"cst-title\">{{ wxData.msgList[wxData.curUserId].userInfo.c_remark || wxData.msgList[wxData.curUserId].userInfo.nick }}</p>\n" +
     "                        <span class=\"cst-bind-btn\" @click=\"setGroupToClass('bind')\" v-show=\"classGroupInfo.bindBtn\">设置为班级群</span>\n" +
     "                        <span class=\"cst-bind-btn\" @click=\"setGroupToClass('unbind')\" v-show=\"!classGroupInfo.bindBtn\">取消设置</span>\n" +
     "                    </div>\n" +
@@ -3367,7 +3424,7 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "            <p class=\"result\">\n" +
     "                <input type=\"text\" placeholder=\"搜索结果\" readonly :value=\"bindCrmSearchResult\"/>\n" +
     "            </p>\n" +
-    "            <p class=\"sub_bind\">\n" +
+    "            <p class=\"sub_bind\" :class=\"{'sub_bind_dis' : bindCrm.searchResult.id == ''}\">\n" +
     "                <a href=\"javascript:void(0)\" @click=\"bindCrmFn\">绑定</a>\n" +
     "            </p>\n" +
     "        </form>\n" +
@@ -3481,12 +3538,12 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "<template id=\"weixin_edit\">\n" +
     "    <div class=\"weixin_mask\" v-if=\"editShow\">\n" +
     "        <div class=\"weixin_edit ani-pops\">\n" +
-    "            <h5>修改{{ isGroup ? '群名称' : '备注' }}</h5>\n" +
+    "            <h5>修改{{ isGroup ? (isNicker ? '群昵称': '群名称') : '备注' }}</h5>\n" +
     "            <input type=\"text\" v-model=\"editvalue\"/>\n" +
-    "            <p v-if=\"!isGroup\">备注名包含学员手机号或CRM账号系统将会自动绑定 </p>\n" +
+    "            <p v-if=\"!isGroup && !isNicker\">备注名包含学员手机号或CRM账号系统将会自动绑定 </p>\n" +
     "            <div class=\"sel_foot clearfix\">\n" +
     "                <span class=\"sel_cancel\" @click=\"selCancel\">取消</span>\n" +
-    "                <span class=\"sel_sure\" :class=\"{'sel_nosure':editValue == ''}\" @click=\"selSure\">确定</span>\n" +
+    "                <span class=\"sel_sure\" :class=\"{'sel_nosure':editValue == ''}\" @click=\"selSure(isNicker ? 'nicker' : '')\">确定</span>\n" +
     "            </div>\n" +
     "        </div>\n" +
     "    </div>\n" +
@@ -3494,7 +3551,7 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "\n" +
     "<!-- 知识库 -->\n" +
     "<template id=\"quick_con\">\n" +
-    "    <div class=\"user_mes_content\" :class=\"{'group-label-con-height':isGroup}\" v-if=\"isShow\">\n" +
+    "    <div class=\"user_mes_content\" v-if=\"isShow\">\n" +
     "        <dl class=\"user_mes_con\">\n" +
     "            <dt class=\"clearfix\">\n" +
     "                <div class=\"user_mes_sel\" tabIndex=\"-1\" @blur=\"selHide\">\n" +
@@ -3635,6 +3692,7 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "                    <dt>个人介绍</dt>\n" +
     "                    <dd>\n" +
     "                        <input type=\"text\" placeholder=\"请输入您的个人介绍\" v-model=\"wxDes\"/>\n" +
+    "                        <div class=\"too-long\" v-if=\"longStrTip\">字数超过50个字的字数限制，请精简一下</div>\n" +
     "                    </dd>\n" +
     "                </dl>\n" +
     "                <dl>\n" +
@@ -3677,6 +3735,7 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "                        <dt>个人介绍</dt>\n" +
     "                        <dd>\n" +
     "                            <input type=\"text\" placeholder=\"请输入您的个人介绍\" v-model=\"wxDes\"/>\n" +
+    "                            <div class=\"too-long\" v-if=\"longStrTip\">字数超过50个字的字数限制，请精简一下</div>\n" +
     "                        </dd>\n" +
     "                    </dl>\n" +
     "                    <dl>\n" +
@@ -3766,30 +3825,41 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "            <div class=\"send_article_box ani-pops\">\n" +
     "                <h4><span>文章</span></h4>\n" +
     "                <div class=\"send_article_inner\">\n" +
-    "                    <ul class=\"con-change clearfix\">\n" +
-    "                        <li :class=\"{'cut-tab': $index+1 == articleCurrentPage }\" v-for=\"x in navlist\" @click=\"getArticle($index+1)\">\n" +
-    "                            {{ x }}\n" +
-    "                        </li>\n" +
-    "                    </ul>\n" +
+    "                    <div class=\"top-flex\">\n" +
+    "                        <!--分类渲染-->\n" +
+    "                        <ul class=\"con-change clearfix\">\n" +
+    "                            <li :class=\"{'cut-tab': $index+1 == articleCurrentPage }\" v-for=\"x in navlist\" @click=\"getArticle($index+1)\">\n" +
+    "                                {{ x }}\n" +
+    "                            </li>\n" +
+    "                        </ul>\n" +
+    "                        <!--搜索-->\n" +
+    "                        <div class=\"search-article\">\n" +
+    "                            <input type=\"text\" placeholder=\"请输入关键词\" @keyup.enter=\"searchArticle\" v-model=\"searchKey\" />\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                    <!--等待状态-->\n" +
     "                    <span class=\"loading\" v-show=\"isLoading\"></span>\n" +
+    "                    <!--文章列表-->\n" +
     "                    <ul class=\"con-show\" v-else>\n" +
-    "                        <template v-if=\"articleListData.length > 0\">\n" +
+    "                        <template v-if=\"articleListData && (articleListData.length > 0)\">\n" +
     "                            <li v-for=\"x in articleListData\" @click=\"cutAticle($index)\"\n" +
     "                                :class=\"{'select-li': $index == curArticleIndex }\" title=\"{{x.introduction}}\">\n" +
     "                                <div class=\"up_box clearfix\">\n" +
     "                                    <div>\n" +
-    "                                        <p>{{x.title}}</p>\n" +
-    "                                        <p>{{x.introduction}}</p>\n" +
+    "                                        <p>{{{x.title | filterKey}}}</p>\n" +
+    "                                        <p>{{{x.introduction | filterKey}}}</p>\n" +
     "                                    </div>\n" +
     "                                    <div><img :src=\"x.icon\"></div>\n" +
+    "                                    <a :href=\"x.link\" target=\"_blank\" title=\"{{x.title}}\">查看</a>\n" +
     "                                </div>\n" +
-    "                                <div class=\"down_box clearfix\" :class=\"{'sel-bor': $index == curArticleIndex }\">\n" +
+    "                                <!-- <div class=\"down_box clearfix\" :class=\"{'sel-bor': $index == curArticleIndex }\">\n" +
     "                                    <a :href=\"x.link\" target=\"_blank\" title=\"{{x.title}}\">{{x.link}}</a>\n" +
-    "                                </div>\n" +
+    "                                </div> -->\n" +
     "                            </li>\n" +
     "                        </template>\n" +
     "                        <template v-else>\n" +
-    "                            <li class=\"li-none\">此分类下暂无文章</li>\n" +
+    "                            <li class=\"li-none\">此分类下暂无相关文章!</li>\n" +
     "                        </template>\n" +
     "                    </ul>\n" +
     "                </div>\n" +
@@ -3808,7 +3878,7 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "                <div class=\"btn_foot\">\n" +
     "                    <input type=\"button\" value=\"确定\" class=\"btn_sure\"\n" +
     "                           :class=\"{'btn_disable':this.curArticleIndex == null}\"\n" +
-    "                           :disabled=\"this.curArticleIndex == null\" @click.stop=\"sendArticle\"/>\n" +
+    "                           :disabled=\"this.curArticleIndex == null\" @click.stop=\"sendArticle('normal')\"/>\n" +
     "                    <input type=\"button\" class=\"btn_cancel\" value=\"取消\" @click.stop=\"hide\"/>\n" +
     "                </div>\n" +
     "            </div>\n" +
@@ -4003,17 +4073,24 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "           </div> -->\n" +
     "\n" +
     "            <div class=\"cc-err new-err\" v-show=\"errDetail\">\n" +
-    "                <dd>\n" +
-    "                    黑鸟未能自动恢复，请手动点击按钮重启\n" +
-    "                </dd>\n" +
-    "                <p class=\"reset-err\" v-if=\"resetError.send\">正在发起重启</p>\n" +
-    "                <p class=\"reset-err\" v-else :class=\"{'reset-err-i': resetError.show}\" @click=\"resetErr\">重启<span v-if=\"resetError.show\">( <em class=\"red-font\">{{ resetError.time }}秒</em>  )</span></p>\n" +
+    "                <template v-if=\"isKickOff\">\n" +
+    "                    <p class=\"reset-err\" v-if=\"resetError.send\">正在发起登录</p>\n" +
+    "                    <p class=\"reset-err\" v-else :class=\"{'reset-err-i': resetError.show}\" @click=\"resetErr\">重新登录<span v-if=\"resetError.show\">( <em class=\"red-font\">{{ resetError.time }}秒</em>  )</span></p>\n" +
+    "                </template>\n" +
+    "                <template v-else>\n" +
+    "                    <dd>\n" +
+    "                        黑鸟未能自动恢复，请手动点击按钮重启\n" +
+    "                    </dd>\n" +
+    "                    <p class=\"reset-err\" v-if=\"resetError.send\">正在发起重启</p>\n" +
+    "                    <p class=\"reset-err\" v-else :class=\"{'reset-err-i': resetError.show}\" @click=\"resetErr\">重启<span v-if=\"resetError.show\">( <em class=\"red-font\">{{ resetError.time }}秒</em>  )</span></p>\n" +
+    "                </template>\n" +
     "            </div>\n" +
     "\n" +
     "            <div class=\"err-detail\" v-show=\"showLast\">\n" +
     "                <dt class=\"fon18\">\n" +
     "                    <i></i>\n" +
-    "                    将微信账号复制后发到群里联系技术同学处理\n" +
+    "                    <!--将微信账号复制后发到群里联系技术同学处理-->\n" +
+    "                    将微信账号复制后发给技术同学处理，<span style=\"color:#f00\">不要截图</span>\n" +
     "                </dt>\n" +
     "                <dd>\n" +
     "                    微信账号 : {{ wechatId }}</br>\n" +
@@ -4058,10 +4135,14 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "<logout :sel-list=\"wxData.userListPerson.slice()\" :sel-data=\"wxData.msgList\"></logout>\n" +
     "<!-- 选择联系人模板 -->\n" +
     "<template id=\"logout\">\n" +
-    "    <div class=\"weixin_mask\" v-if=\"logoutShow\">\n" +
-    "        <div class=\"logout_sel ani-pops\">\n" +
-    "            <h5>请选择中转账号<span @click=\"selHide\">&times;</span></h5>\n" +
-    "            <div class=\"search\"><input type=\"text\" placeholder=\"搜索\" v-model=\"selFilter\"/></div>\n" +
+    "    <div class=\"flex-mask z99\" v-if=\"logoutShow\">\n" +
+    "        <div class=\"logout-sel ani-pops\">\n" +
+    "            <span @click=\"selHide\" class=\"close-layer-btn-right\"><em></em></span>\n" +
+    "            <h5>请选择中转账号</h5>\n" +
+    "            <div class=\"search\">\n" +
+    "                <input type=\"text\" placeholder=\"\" v-model=\"selFilter\"/>\n" +
+    "                <i></i>\n" +
+    "            </div>\n" +
     "            <div>\n" +
     "                <ul class=\"sel_list\">\n" +
     "                    <li v-for=\"x in selLists\" @click=\"selUser(x)\" track-by=\"$index\">\n" +
@@ -4071,11 +4152,12 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "                    </li>\n" +
     "                </ul>\n" +
     "            </div>\n" +
-    "            <div class=\"sel_foot clearfix\">\n" +
-    "                <div>\n" +
-    "                    <span class=\"sel_cancel\" @click=\"userLogout\">退出</span>\n" +
-    "                    <span class=\"sel_sure sel_set\" :class=\"{'sel_nosure':this.selSelect==''}\" @click=\"userLogoutTrust\">退出并中转</span>\n" +
-    "                </div>\n" +
+    "            <div class=\"logout-btn\">\n" +
+    "                <span class=\"btn-global default\" :class=\"{'disable': selSelect==''}\" @click=\"userLogoutTrust\">退出并中转</span>\n" +
+    "                <span class=\"btn-global greey\" @click=\"userLogout\">退出</span>\n" +
+    "            </div>\n" +
+    "            <div class=\"bottom-tips\">\n" +
+    "                备注：选择你的私人微信，黑鸟可以把你工作微信收到的信息中转到私人微信\n" +
     "            </div>\n" +
     "        </div>\n" +
     "    </div>\n" +
@@ -4331,12 +4413,15 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "                                    <div>\n" +
     "                                        <template v-if=\"x.is_friend == 0\">\n" +
     "                                            <span class=\"mark\" @click=\"crmRemarkTable(x.user_id)\">\n" +
-    "                                            <p class=\"mark-info\" v-if=\"x.remark_log\">\n" +
-    "                                                {{ x.remark_log }}\n" +
-    "                                            </p>\n" +
-    "                                        </span>\n" +
+    "                                                <p class=\"mark-info\" v-if=\"x.remark_log\">\n" +
+    "                                                    {{ x.remark_log }}\n" +
+    "                                                </p>\n" +
+    "                                            </span>\n" +
     "                                            <span class=\"tel\" @click=\"telphone(x.user_id)\"></span>\n" +
-    "                                            <span class=\"add\" @click=\"goAddFriend(x.mobile,x.user_id,'fromMyStudy')\">添加<em v-if=\"x.add_count > 0\">{{ x.add_count }}次</em></span>\n" +
+    "                                            <span class=\"add\" @click=\"goAddFriend(x.mobile,x.user_id,'fromMyStudy',cutBtn.appoint_status)\">\n" +
+    "                                                添加\n" +
+    "                                                <em v-if=\"x.add_count > 0\">{{ x.add_count }}次</em>\n" +
+    "                                            </span>\n" +
     "                                            <span class=\"status\" v-show=\"x.add_user_status == 2\" title=\"通过该手机号无法搜索到学员微信，请电话联系学员\"></span>\n" +
     "                                        </template>\n" +
     "                                        <template v-else>\n" +
@@ -4376,9 +4461,9 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "<my-friend></my-friend>\n" +
     "<template id=\"myFriend\">\n" +
     "    <div class=\"weixin_mask\" v-if=\"isShow\">\n" +
-    "        <div class=\"myfriend-box friend-box\">\n" +
+    "        <div class=\"myfriend-box\">\n" +
     "            <span class=\"close-layer-btn-right\" @click=\"hide\"><em></em></span>\n" +
-    "            <h5><span>新的好友</span></h5>\n" +
+    "            <h5>新的好友</h5>\n" +
     "            <div class=\"friend-box-in\">\n" +
     "                <template v-if=\"pending\">\n" +
     "                    <p class=\"none\">加载中...</p>\n" +
@@ -4390,16 +4475,15 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "                            <div class=\"fl friend-tit\">\n" +
     "                                <h6 title=\"{{ x.nickname }}\">{{ x.nickname }}</h6>\n" +
     "                                <p title=\"对方请求添加你为好友：{{ x.content }}\">{{ x.content }}</p>\n" +
+    "                                <p>来源：{{ x.source }}</p>\n" +
     "                            </div>\n" +
     "\n" +
     "                            <div class=\"fr friend-op\">\n" +
     "                                <template v-if=\"x.encryptusername != ''\">\n" +
     "                                    <em @click=\"accept(x.encryptusername)\" style=\"float: right\">接受</em>\n" +
-    "                                    <!--<em v-if=\"false\" @click=\"ignore(x.encryptusername)\">忽略</em>-->\n" +
     "                                </template>\n" +
     "                                <template v-else>\n" +
     "                                    <span>已接受</span>\n" +
-    "                                    <!--<span v-if=\"false\">已忽略</span>-->\n" +
     "                                </template>\n" +
     "                            </div>\n" +
     "                        </li>\n" +
@@ -4567,9 +4651,28 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "</template>\n" +
     "\n" +
     "<!-- 批改作业单人 -->\n" +
-    "<home-work-one></home-work-one>\n" +
+    "<home-work-one v-ref:homeworkone></home-work-one>\n" +
     "<!-- 批改作业单人 -->\n" +
     "<template id=\"homeWorkOne\">\n" +
+    "    <div class=\"home-work-score\" v-if=\"scoreShow\">\n" +
+    "        <div class=\"info_update info_update_homework\">\n" +
+    "            <h4>是否添加分数</h4>\n" +
+    "            <p class=\"score_tip\">该分数不会显示在批改后的图片上，黑鸟系统会将该分数存<br/>下来用于生成学生的分数曲线，该功能之后会上线。</p>\n" +
+    "            <dl>\n" +
+    "                <dd>\n" +
+    "                    <input type=\"number\" placeholder=\"请在此处输入该同学的作业分数\" v-model=\"score\"/>\n" +
+    "                </dd>\n" +
+    "            </dl>\n" +
+    "            <dl>\n" +
+    "                <dd class=\"sel_foot\">\n" +
+    "                    <span class=\"sel_sure\" :class=\"{'sel_nosure' : _score == ''}\" @click=\"sendScore\">添加分数</span>\n" +
+    "                    <a class=\"sel_force\" href=\"javascript:void(0);\" @click=\"sendScore(true)\"\n" +
+    "                       v-if=\"_score == ''\">直接发送</a>\n" +
+    "                </dd>\n" +
+    "            </dl>\n" +
+    "            <span class=\"close-btn\" @click=\"hideScore\">x</span>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
     "    <div class=\"home-work-score\" v-if=\"scoreAudioShow\">\n" +
     "        <span id=\"paintConClose\" @click=\"scoreAudioHide\"></span>\n" +
     "        <span class=\"paintConPage paintConPageLeft\" id=\"paintConPageLeft\" @click=\"editGo('l');\"></span>\n" +
@@ -4736,15 +4839,24 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "\n" +
     "                                        <ul class=\"clearfix\" v-if=\"x.length > 0\">\n" +
     "                                            <li v-for=\"xx in x\" v-if=\"$key != 'length'\">\n" +
+    "                                                <!-- 图片 -->\n" +
     "                                                <template v-if=\"xx.message_type == 1\">\n" +
     "                                                    <p class=\"mes_img\">\n" +
     "                                                        <img :src=\"xx.content\"/>\n" +
     "                                                    </p>\n" +
     "                                                </template>\n" +
     "\n" +
+    "                                                <!-- 音频 -->\n" +
     "                                                <template v-if=\"xx.message_type == 2\">\n" +
     "                                                    <p class=\"mes_voice\" @click=\"playVoice(xx.content)\"\n" +
     "                                                       :class=\"{'mes_voice_isplaying':xx.content == voicePlay.playVoiceSrc }\"></p>\n" +
+    "                                                </template>\n" +
+    "\n" +
+    "                                                <!-- 视频 -->\n" +
+    "                                                <template v-if=\"xx.message_type == 6001\">\n" +
+    "                                                    <p class=\"mes_video\">\n" +
+    "                                                        <video :src=\"getJson(xx.content).url\"></video>\n" +
+    "                                                    </p>\n" +
     "                                                </template>\n" +
     "\n" +
     "                                                <span class=\"done\">\n" +
@@ -4816,7 +4928,7 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "<div id=\"edit-img\"></div>\n" +
     "\n" +
     "<!-- 分享到朋友圈 -->\n" +
-    "<div class=\"update_mask\" v-if=\"shareArticle.show\" v-cloak>\n" +
+    "<div class=\"flex-mask z99\" v-if=\"shareArticle.show\" v-cloak>\n" +
     "    <div class=\"info_update ani-pops share-article\">\n" +
     "        <h4>分享到朋友圈</h4>\n" +
     "        <template v-if=\"shareArticle.title\">\n" +
@@ -4858,69 +4970,6 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "        <li v-show=\"allpage != current && allpage != 0 \" @click=\"current++ && goto(current++)\"><a href=\"#\">下一页</a></li>\n" +
     "    </ul>\n" +
     "</template>\n" +
-    "\n" +
-    "<!--<template id=\"datalayer\">-->\n" +
-    "    <!--<tr>-->\n" +
-    "        <!--<td v-for=\"item in items\" v-bind:class=\"{'dp-last': month!= item.month, 'dp-today': cur == item.data, 'dp-select': sel == item.data}\">-->\n" +
-    "            <!--<span @click=\"click(item)\">{{ item.day }}</span>-->\n" +
-    "        <!--</td>-->\n" +
-    "    <!--</tr>-->\n" +
-    "<!--</template>-->\n" +
-    "\n" +
-    "<!--<template id=\"startTime\">-->\n" +
-    "    <!--<div class=\"input-wrap\">-->\n" +
-    "        <!--<input type=\"text\" class=\"input middle-input\" @focus=\"foc\" @blur=\"hide\" v-model=\"sel\" :value=\"curTime\" id=\"studyStartTime\">-->\n" +
-    "    <!--</div>-->\n" +
-    "    <!--<div class=\"dp\" v-show=\"show\">-->\n" +
-    "        <!--<div class=\"dp-header\"><a class=\"dp-h-1\" @click=\"cy(-1)\">«</a><a class=\"dp-h-2\" @click=\"cm(-1)\">‹</a>-->\n" +
-    "            <!--<span class=\"dp-ym\">{{y}}年 {{m}}月</span>-->\n" +
-    "            <!--<a class=\"dp-h-3\" @click=\"cm(1)\">›</a><a class=\"dp-h-4\" @click=\"cy(1)\">»</a></div>-->\n" +
-    "        <!--<table class=\"dp-table\">-->\n" +
-    "            <!--<thead>-->\n" +
-    "            <!--<tr>-->\n" +
-    "                <!--<th><span>一</span></th>-->\n" +
-    "                <!--<th><span>二</span></th>-->\n" +
-    "                <!--<th><span>三</span></th>-->\n" +
-    "                <!--<th><span>四</span></th>-->\n" +
-    "                <!--<th><span>五</span></th>-->\n" +
-    "                <!--<th><span>六</span></th>-->\n" +
-    "                <!--<th><span>日</span></th>-->\n" +
-    "            <!--</tr>-->\n" +
-    "            <!--</thead>-->\n" +
-    "            <!--<tbody>-->\n" +
-    "            <!--<tr is=\"calendar-line\" v-for=\"cell in data\" :items=\"cell\" :month=\"m\" :cur=\"cur\" :sel=\"sel\"></tr>-->\n" +
-    "            <!--</tbody>-->\n" +
-    "        <!--</table>-->\n" +
-    "\n" +
-    "    <!--</div>-->\n" +
-    "<!--</template>-->\n" +
-    "<!--<template id=\"endTime\">-->\n" +
-    "    <!--<div class=\"input-wrap\">-->\n" +
-    "        <!--<input type=\"text\" class=\"input middle-input\" @focus=\"foc\" @blur=\"hide\" v-model=\"sel\" :value=\"curTime\" id=\"studyEndTime\">-->\n" +
-    "    <!--</div>-->\n" +
-    "    <!--<div class=\"dp\" v-show=\"show\">-->\n" +
-    "        <!--<div class=\"dp-header\"><a class=\"dp-h-1\" @click=\"cy(-1)\">«</a><a class=\"dp-h-2\" @click=\"cm(-1)\">‹</a>-->\n" +
-    "            <!--<span class=\"dp-ym\">{{y}}年 {{m}}月</span>-->\n" +
-    "            <!--<a class=\"dp-h-3\" @click=\"cm(1)\">›</a><a class=\"dp-h-4\" @click=\"cy(1)\">»</a></div>-->\n" +
-    "        <!--<table class=\"dp-table\">-->\n" +
-    "            <!--<thead>-->\n" +
-    "            <!--<tr>-->\n" +
-    "                <!--<th><span>一</span></th>-->\n" +
-    "                <!--<th><span>二</span></th>-->\n" +
-    "                <!--<th><span>三</span></th>-->\n" +
-    "                <!--<th><span>四</span></th>-->\n" +
-    "                <!--<th><span>五</span></th>-->\n" +
-    "                <!--<th><span>六</span></th>-->\n" +
-    "                <!--<th><span>日</span></th>-->\n" +
-    "            <!--</tr>-->\n" +
-    "            <!--</thead>-->\n" +
-    "            <!--<tbody>-->\n" +
-    "            <!--<tr is=\"calendar-line-now\" v-for=\"cell in data\" :items=\"cell\" :month=\"m\" :cur=\"cur\" :sel=\"sel\"></tr>-->\n" +
-    "            <!--</tbody>-->\n" +
-    "        <!--</table>-->\n" +
-    "\n" +
-    "    <!--</div>-->\n" +
-    "<!--</template>-->\n" +
     "\n" +
     "<!--个人信息二维码弹层-->\n" +
     "<div class=\"flex-mask z99\" v-show=\"personalInfo.personalMask\">\n" +
@@ -4975,6 +5024,10 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "                        <dd :title=\"details.weixinhao\">{{ details.weixinhao }}</dd>\n" +
     "                    </div>\n" +
     "                    <div class=\"jianju\">\n" +
+    "                        <dt>来源</dt>\n" +
+    "                        <dd :title=\"details.source\">{{ details.source }}</dd>\n" +
+    "                    </div>\n" +
+    "                    <div class=\"jianju\">\n" +
     "                        <dt>电话</dt>\n" +
     "                        <dd>\n" +
     "                            <p v-for=\"x in details.phonenumbers\">{{x}}</p>\n" +
@@ -4987,7 +5040,23 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "    </div>\n" +
     "</template>\n" +
     "\n" +
+    "<!--转介绍二维码-->\n" +
+    "<div class=\"flex-mask z99\" v-show=\"introImg.show\">\n" +
+    "    <div class=\"intro-wechat\">\n" +
+    "        <span class=\"close-layer-btn-right\" @click=\"introWechat('close')\"><em></em></span>\n" +
+    "        <h5 class=\"yellow-title\">\n" +
+    "            转介绍二维码\n" +
+    "        </h5>\n" +
+    "        <div class=\"intro-wechat-img\">\n" +
+    "            <img :src=\"introImg.img\"/>\n" +
+    "        </div>\n" +
     "\n" +
+    "        <div class=\"intro-wechat-btn\">\n" +
+    "            <span class=\"btn-global default\" @click=\"introWechatImg\">发送</span>\n" +
+    "            <span class=\"btn-global greey\" @click=\"introWechat('close')\">取消</span>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</div>\n" +
     "<!--被迫掉线-->\n" +
     "<div class=\"flex-mask repeat-enter-layer\"  v-show=\"wxData.repeatEnter\">\n" +
     "    <div class=\"net-err repeat-enter\">\n" +
@@ -5084,6 +5153,7 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "                    <span class=\"sel_cancel\" @click=\"hide\">取消</span>\n" +
     "                </dd>\n" +
     "            </dl>\n" +
+    "            <div class=\"bottom-tips\">备注：托管可以把你黑鸟里的学员交由其他人代为服务</div>\n" +
     "        </div>\n" +
     "    </div>\n" +
     "</template>\n" +
@@ -5153,6 +5223,22 @@ window["html2js"]["html/weixin_heck/weixin_body.html2js.html"] = "<div class=\"c
     "                </li>\n" +
     "            </ul>\n" +
     "        </template>\n" +
+    "    </div>\n" +
+    "</template>\n" +
+    "\n" +
+    "<!-- 小助手消息弹层 -->\n" +
+    "<helper-link></helper-link>\n" +
+    "<template id=\"helperLink\">\n" +
+    "    <div class=\"weixin_mask helper-link\" v-if=\"show\">\n" +
+    "        <div class=\"home-work\">\n" +
+    "            <span class=\"home-work-close\" @click=\"close\"></span>\n" +
+    "            <h4>{{ data.title }}</h4>\n" +
+    "            <div class=\"home-work-in\">\n" +
+    "                <iframe :src=\"data.link\" frameborder=\"0\">\n" +
+    "\n" +
+    "                </iframe>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
     "    </div>\n" +
     "</template>\n" +
     "\n" +

@@ -67,6 +67,8 @@ define("heckCircle",["plupload","niceScroll","fancybox"],function(require,export
     var $ifr = $(".ifr"),
         $iframe = $ifr.find("iframe");
     $(".Circle_library").on("click",function () {
+        var $iframe = $ifr.find("iframe");
+        $iframe.attr("src", $iframe.attr("data-src"));
         $ifr.show();
     });
     $ifr.find("span").click(function () {
@@ -589,8 +591,8 @@ define("heckCircle",["plupload","niceScroll","fancybox"],function(require,export
                 imgSrc : imgSrc.join(","),
                 imgCirSrc :　imgCirArr.join(","),
                 // arrShow :　arrShow
-                // arrShow :　selArr
-                arrShow :　['all']
+                arrShow :　selArr
+                // arrShow :　['all']
             }
             submit({
                 data : data
@@ -647,22 +649,28 @@ define("heckCircle",["plupload","niceScroll","fancybox"],function(require,export
         _text = $.trim($text.val());
         //if(_text == "") return alert("发布内容不能为空！");
         var length = uploader.files.length;
-        // if(!testCircle()){
-        //     if($(".choose-show").length == 0 && $(".choose-show2").length == 0){
-        //         return alert("请勾选至少一个朋友圈可见标签！");
-        //     }
-        // }
+        if(!testCircle()){
+            if($(".choose-show").length == 0 && $(".choose-show2").length == 0){
+                return alert("请勾选至少一个朋友圈可见标签！");
+            }
+        }
         //获取选择的标签
         // var selOn = $(".choose-show[label-value != all]");
-        selArr = ['all'];
-        var selOn = $(".choose-show");
-        $.each(selOn,function (a,b) {
-            var demo = $(b).attr("label-value");
-            selArr.push(demo);
-        });
-        if($(".choose-show2").length){
-            selArr=["all"];
+
+        if($(".choose-show2").length > 0){
+            selArr = "";
+        }else{
+            selArr = [];
+            var selOn = $(".choose-show");
+            $.each(selOn,function (a,b) {
+                var demo = $(b).attr("label-value");
+                selArr.push(demo);
+            });
         }
+
+        // if($(".choose-show2").length){
+        //     selArr=["all"];
+        // }
         console.log("标签是:"+selArr);
         // 准备提交 打开遮罩
         if(length == 0){
@@ -677,8 +685,8 @@ define("heckCircle",["plupload","niceScroll","fancybox"],function(require,export
                 text : _text,
                 imgCirSrc :　imgCirArr.join(","),
                 // arrShow : arrShow
-                // arrShow : selArr
-                arrShow : ['all']
+                arrShow : selArr
+                // arrShow : ['all']
             }
             console.log(data);
             submit({
@@ -819,53 +827,92 @@ define("heckCircle",["plupload","niceScroll","fancybox"],function(require,export
                 }
             }
         };
-        var selElm = $(".show-lable span[label-value=all]");
-        var selElm2 = $(".show-lable span[label-value!=all]");
-        selElm.on("click",function(){
-            if(!selElm2.hasClass("choose-show")){
-                if(selElm.hasClass("choose-show2")){
-                    selElm.removeClass("choose-show2");
-                    selElm2.removeClass("choose-show");
-                } else{
-                    selElm.addClass("choose-show2");
-                }
-            }
-        });
-        selElm2.on("click",function(){
-            var that = $(this);
-            if(!selElm.hasClass("choose-show2")){
-                if(that.hasClass("choose-show")){
-                    that.removeClass("choose-show");
-                } else{
-                    that.addClass("choose-show");
-                }
-            }else{
-            }
-        });
         // var selElm = $(".show-lable span[label-value=all]");
         // var selElm2 = $(".show-lable span[label-value!=all]");
-        //
         // selElm.on("click",function(){
-        //     if(selElm.hasClass("choose-show2")){
-        //         selElm.removeClass("choose-show2");
-        //         selElm2.removeClass("choose-show");
-        //     } else{
-        //         selElm.addClass("choose-show2");
-        //         selElm2.addClass("choose-show");
+        //     if(!selElm2.hasClass("choose-show")){
+        //         if(selElm.hasClass("choose-show2")){
+        //             selElm.removeClass("choose-show2");
+        //             selElm2.removeClass("choose-show");
+        //         } else{
+        //             selElm.addClass("choose-show2");
+        //         }
         //     }
         // });
         // selElm2.on("click",function(){
         //     var that = $(this);
-        //     if(that.hasClass("choose-show")){
-        //         that.removeClass("choose-show");
-        //     } else{
-        //         that.addClass("choose-show");
-        //     }
-        //     if(selElm2.length != $(".choose-show").length){
-        //         selElm.removeClass("choose-show2");
+        //     if(!selElm.hasClass("choose-show2")){
+        //         if(that.hasClass("choose-show")){
+        //             that.removeClass("choose-show");
+        //         } else{
+        //             that.addClass("choose-show");
+        //         }
         //     }else{
-        //         selElm.addClass("choose-show2");
         //     }
         // });
+
+
+        // $(".show-lable span[label-value=all]").click(function () {
+        //     var rel = $(this).hasClass("choose-show");
+        //     if(rel){ //取消选中
+        //         $(".choose-show[label-value != all]").removeClass("choose-show")
+        //     }else { //选中
+        //         $.each($(".show-lable [label-value != all]"),function (a,b) {
+        //             if($(b).attr("label-value")){
+        //                 $(b).addClass("choose-show");
+        //             }
+        //         })
+        //     }
+        // });
+
+
+        var selElm = $(".show-lable span[label-value=all]");
+        var selElm2 = $(".show-lable span[label-value!=all]");
+
+        selElm.on("click",function(){
+            if(selElm.hasClass("choose-show2")){
+                selElm.removeClass("choose-show2");
+                selElm2.removeClass("choose-show");
+            } else{
+                selElm.addClass("choose-show2");
+                selElm2.addClass("choose-show");
+            }
+        });
+        selElm2.on("click",function(){
+            var that = $(this);
+            if(that.hasClass("choose-show")){
+                that.removeClass("choose-show");
+            } else{
+                that.addClass("choose-show");
+            }
+            if(selElm2.length != $(".choose-show").length){
+                selElm.removeClass("choose-show2");
+            }else{
+                selElm.addClass("choose-show2");
+            }
+        });
     })();
+
+    //点击学员头像
+    // ;(function () {
+    //     var studentPhoto = $(".already_img_mes img");
+    //     studentPhoto.on('click', function () {
+    //         var wechatId  = $(this).closest(".already_img_mes").data("wechat");
+    //         $.ajax({
+    //             url:'/CircleFriend/studentFriendCircle',
+    //             data:{
+    //                 wechatId:wechatId
+    //             },
+    //             datatype:'json',
+    //             type:'POST',
+    //             success: function (data) {
+    //                 console.log("发送给后端当前学员微信ID:" + wechatId);
+    //             }
+    //         });
+    //         $('.wait-layer').show();
+    //         setTimeout(function () {
+    //             $('.wait-layer').hide();
+    //         },5000);
+    //     });
+    // })();
 });

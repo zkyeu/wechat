@@ -1,0 +1,603 @@
+@import "../common/www/base.less";
+@imgPath: "../../../images/html/flbJobs_landing/";
+.flbJobs{
+  width: 100%;
+  height:auto;
+  background: #ffc600;
+  padding-bottom:160px;
+  .tip{
+    display:none;
+  }
+  .fj_banner{
+    height:690px;
+    width: 100%;
+    background: url("@{imgPath}/fj_banner.jpg") no-repeat center top;
+    .fj_bannerIn{
+      width: 1000px;
+      height:690px;
+      margin:0 auto;
+      position: relative;
+      .fj_tit{
+        width: 480px;
+        text-align: center;
+        font-size:45px;
+        position: absolute;
+        right:48px;
+        top:130px;
+        span{
+          color:#f23063;
+          font-size:64px;
+          font-weight:900;
+        }
+      }
+      .fj_apply{
+        display:block;
+        height:68px;
+        width: 308px;
+        text-align: center;
+        line-height: 68px;
+        color:#fff;
+        background: #f13163;
+        font-size: 40px;
+        border-radius: 20px;
+        font-weight:900;
+        position: absolute;
+        top:285px;
+        right:130px;
+      }
+    }
+  }
+  .fj_main{
+    width: 1200px;
+    background: #fff;
+    margin:0 auto;
+    h3{
+      font-size:48px;
+      font-weight:900;
+      color:#474747;
+      text-align: center;
+    }
+    .fj_join_part{
+      width: 1000px;
+      margin:0 auto;
+      .fj_join{
+        height:590px;
+        text-align: center;
+        padding-top:76px;
+        p{
+          color:#ffc600;
+          font-size:30px;
+          margin-top:12px;
+        }
+        .fj_joinList{
+          width: 100%;
+          margin-top:40px;
+          li{
+            width: 25%;
+            float:left;
+            .icon{
+              height:178px;
+              i{
+                display: block;
+                height:150px;
+                width: 150px;
+                margin:0 auto;
+                background: url("@{imgPath}/icon.png") center top;
+              }
+              .i2{
+                background: url("@{imgPath}/icon.png") center -150px;
+              }
+              .i3{
+                background: url("@{imgPath}/icon.png") center -300px;
+              }
+              .i4{
+                background: url("@{imgPath}/icon.png") center -450px;
+              }
+            }
+            .p1{
+              color:#000;
+              font-size:24px;
+              font-weight:900;
+              line-height: 30px;
+              height:75px;
+            }
+            .p2{
+              color:#333;
+              font-size: 18px;
+              line-height: 22px;
+            }
+          }
+        }
+      }
+    }
+   .fj_require_part{
+      width: 1200px;
+      height:484px;
+      background:#f3f3f3;
+      .fj_require{
+        width: 1000px;
+        height:450px;
+        margin:0 auto;
+        padding-top:35px;
+        .fj_require_list{
+          margin-top:20px;
+         li{
+            line-height: 38px;
+            font-size:16px;
+            text-indent:20px;
+            position: relative;
+            i{
+              display: inline-block;
+              height:4px;
+              width: 4px;
+              background: url("@{imgPath}/fj_point.png") center top; 
+              position: absolute;
+              top:50%;
+              margin-top:-2px;
+              left:10px;
+            }
+          }
+        }
+
+      }
+    }
+    .fj_register{
+      padding:40px 0 140px;
+      p{
+        color:#ffc600;
+        font-size:30px;
+        margin-top:12px;
+        text-align: center;
+        margin-bottom:60px;
+      }
+      .fj_group{
+        width: 100%;
+        height:65px;
+        .fj_group_left{
+          width: 510px;
+          height:60px;
+          float:left;
+          font-size:16px;
+          text-indent: 320px;
+          padding-top:5px;
+          span{
+            color:#f00;
+          }
+        }
+        .fj_group_right{
+          width: 690px;
+          height:100%;
+          float:left;
+          .fj_input{
+            height:12px;
+            width: 338px;
+            border:1px solid #ccc;
+            // line-height: 32px;
+            padding:10px 7px;
+            font-size:14px;
+          }
+          .fj_select{
+            height:32px;
+            line-height: 32px;
+            width: 355px;
+            padding:0;
+          }
+          em{
+            color:#f00;
+          }
+        }
+        .fj_submit{
+          display: block;
+          height:48px;
+          width: 196px;
+          margin:0 auto;
+          background:#ffd800;
+          border-radius: 4px;
+          color:#64442d;
+          font-weight: 900;
+          line-height: 48px;
+          text-align: center;
+          font-size: 27px;
+        }
+      }
+      .fj_group_check{
+        .fj_group_left{
+          width:580px;
+        }
+        .fj_group_right{
+          width: 620px;
+          position: relative;
+          span{
+            display: inline-block;
+            width: 60px;
+            height:32px;
+            line-height: 32px;
+            text-align: right;
+            margin-right:20px;
+            position: relative;
+            i{
+              display:block;
+              height:15px;
+              width: 15px;
+              background: url("@{imgPath}/sprite.png") center bottom;
+              background-size: 100%;
+              position: absolute;
+              left:0;
+              top:50%;
+              margin-top:-7px;
+            }
+            .btn_active{
+              background: url("@{imgPath}/sprite.png") center top;
+              background-size: 100%;
+            }
+          }
+          .checkTip{
+            position: absolute;
+            bottom:16px;
+            left:0;
+          }
+        }
+      }
+    }
+  }
+}
+// 新form开始
+select{
+  margin:0;
+  padding:0;
+}
+.online_form {
+    background-color: #ffc600;
+    margin-top:-360px;
+    padding-bottom:100px;
+}
+.online_form .o_cont .o_c_c {
+    background-color: #fff;
+    padding-top: 10px;
+    // height: 955px;
+
+}
+
+.online_form .o_cont .o_c_c ul {
+    width: 600px;
+    margin: 0 auto;
+    font-size: 13px
+}
+
+.online_form .o_cont .o_c_c ul li {
+    height: 25px;
+    margin-bottom: 10px
+}
+
+.online_form .o_cont .o_c_c ul li.connection_s {
+    height: 17px;
+    line-height: 17px
+}
+
+.online_form .o_cont .o_c_c ul li.certificate_s {
+    height: 48px;
+}
+
+.online_form .o_cont .o_c_tit {
+    font-size: 40px;
+    color: #000;
+    text-align: center;
+    height: 52px;
+    font-weight: bold;
+    line-height: 1
+}
+
+.online_form .o_cont .o_c_text {
+    text-align: center;
+    font-size: 16px
+}
+
+.online_form .o_cont .o_c_text span {
+    color: #ff8200
+}
+
+.online_form .o_cont .o_c_l {
+    padding-top: 27px
+}
+
+.online_form .o_cont .c_l_l {
+    width: 194px;
+    margin-right: 10px;
+    float: left;
+    line-height: 25px;
+    text-align: right
+}
+
+.online_form .o_cont .c_l_r {
+    float: left;
+    width: 372px;
+    font-size: 0
+}
+
+.online_form .o_cont .c_l_r div {
+    float: left;
+    // height: 23px;
+    border: 1px solid #ccc;
+    padding: 0 10px
+}
+
+.online_form .o_cont .c_l_r div.firstN {
+    width: 130px;
+    margin-right: 11px
+}
+
+.online_form .o_cont .c_l_r div.firstN input {
+    width: 100%;
+    height: 23px;
+    padding: 0;
+    background-color: transparent
+}
+
+.online_form .o_cont .c_l_r div.lastN {
+    width: 187px
+}
+
+.online_form .o_cont .c_l_r div.lastN input {
+    width: 100%;
+    height: 23px;
+    padding: 0;
+    background-color: transparent
+}
+
+.online_form .o_cont .c_l_r .c_l_t {
+    width: 95px;
+    line-height: 23px;
+    position: relative;
+    float: left;
+    margin-right: 10px
+}
+
+.online_form .o_cont .c_l_r .c_l_t.last_s {
+    margin-right: 0
+}
+
+.online_form .o_cont .c_l_r .c_l_t i {
+    width: 9px;
+    height: 5px;
+    overflow: hidden;
+    position: absolute;
+    // background: url(../images_landing_20160425/online_s.png) left top no-repeat;
+    // background: url("@{imgPath}/online_s.png") left top no-repeat;
+    right: 9px;
+    top: 9px
+}
+
+.online_form .o_cont .c_l_r .c_l_t .c_l_list {
+    display: none
+}
+
+.online_form .o_cont .c_l_r .dress {
+    width: 350px;
+    border: 1px solid #ccc;
+    position: relative
+}
+
+.online_form .o_cont .c_l_r .dress input {
+    width: 100%;
+    height: 23px;
+    padding: 0
+}
+
+.online_form .o_cont .c_l_r .dress .u_browse {
+    display: block;
+    height: 23px;
+    width: 54px;
+    border: 1px solid #ff8200;
+    position: absolute;
+    line-height: 23px;
+    text-align: center;
+    color: #ff8200;
+    font-size: 10px;
+    right: -1px;
+    top: -1px;
+    cursor: pointer
+}
+
+.online_form .o_cont .c_l_r .dress .u_browse .u_box {
+    position: absolute;
+    height: 23px;
+    width: 54px;
+    line-height: 23px;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+    color: #ff8200;
+    font-size: 13px;
+    cursor: pointer;
+    right: -1px;
+    top: -1px;
+    border-color: #ff8200
+}
+
+.online_form .o_cont .c_l_r .dress .u_browse .u_box input {
+    position: absolute;
+    width: 119px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 23px;
+    opacity: 0;
+    filter: "alpha(opacity=0)";
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    left: -5px;
+    top: -2px;
+    cursor: pointer;
+    z-index: 2
+}
+
+.online_form .o_cont .c_l_r select {
+    width: 117px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    font-size: 13px;
+    height: 25px
+}
+
+.online_form .o_cont .c_l_r select.o_last {
+    margin-right: 0;
+}
+.online_form .o_cont .c_l_r select.oSelect{
+  float:right;
+  width: 180px;
+}
+.online_form .o_cont .location_s select {
+    width: 178px;
+   
+}
+
+.online_form .o_cont .educational_s .o_s_1 {
+    width: 137px;
+    margin-right:16px;
+}
+
+.online_form .o_cont .educational_s .o_s_2 {
+    width: 107px
+}
+
+.online_form .o_cont .educational_s .o_last {
+    width: 97px;
+   
+}
+
+.online_form .o_cont .desired_s select {
+    width: 372px;
+    margin-right: 0
+}
+
+.online_form .o_cont .connection_s {
+    overflow: hidden
+}
+
+.online_form .o_cont .connection_s .c_l_l {
+    line-height: 1
+}
+
+.online_form .o_cont .connection_s .type_list {
+    height: 17px
+}
+
+.online_form .o_cont .connection_s .type_list li {
+    float: left;
+    width: 134px;
+    height: 17px;
+    line-height: 17px
+}
+
+.online_form .o_cont .connection_s .type_list input {
+    margin: 0;
+    padding: 0;
+    margin-right: 6px;
+    float: left;
+    margin-top: 2px
+}
+
+.online_form .o_cont .premium {
+    width: 600px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
+    padding-top: 15px
+}
+
+.online_form .o_cont .premium .premium_top {
+    width: 231px;
+    text-align: center;
+    background-color: #999;
+    height: 27px;
+    line-height: 27px;
+    font-size: 15px;
+    color: #fff;
+    margin: 0 auto;
+    border-radius: 3px 3px 0 0
+}
+
+.online_form .o_cont .certificate_s .type_list {
+    width: 372px;
+    height: 38px
+}
+
+.online_form .o_cont .certificate_s .type_list li {
+    width: 103px;
+    height: 17px;
+    line-height: 1;
+    margin-bottom: 5px
+}
+
+.online_form .o_cont .certificate_s .type_list li.minWidth {
+    width: 63px
+}
+
+.online_form .o_cont .certificate_s .type_list li.bottomN {
+    margin-bottom: 0
+}
+
+.online_form .o_cont .o_bottom {
+    padding-top: 20px;
+    height: 123px;
+    background-color: #fff;
+    text-align: center
+}
+
+.online_form .o_cont .o_bottom .o_sub {
+    display: inline-block;
+    width: 200px;
+    height: 52px;
+    line-height: 52px;
+    text-align: center;
+    background-color: #ffc600;
+    color: #000;
+    font-size: 24px;
+    border-radius: 3px;
+    font-weight:900;
+}
+
+.online_form .o_cont .o_done {
+    height: 960px;
+    padding: 50px 50px 0;
+    background-color: #fff;
+    color: #333;
+    display: none
+}
+
+.online_form .o_cont .o_done .o_done_top {
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1;
+    height: 50px
+}
+
+.online_form .o_cont .o_done .o_done_b {
+    font-size: 16px;
+    line-height: 36px
+}
+
+.online_form .o_cont .o_done .o_done_b span {
+    color: #f67620
+}
+ 
+.inpp {
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    font-size: 13px;
+    height: 21px;
+    width: 178px;
+    float:left;
+}
+.flbJobs .fj_main .fj_register .o_c_text{
+  font-size:16px;
+  color:#000;
+  span{
+    color:#ff8200;
+  }
+}
+.u_left{
+  float:left;
+}
+.u_right{
+  float:right;
+}

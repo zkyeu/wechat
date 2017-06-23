@@ -1,0 +1,383 @@
+/*初始化样式*/
+html{font-size:62.5%;}
+body{ color:#515050;font-family:'Microsoft YaHei',STXihei,MingLiu; background: #ebebeb; width: 100%;}
+cite,i,s,b{ font-style:normal;font-weight:normal;}
+body,ul,li,p,dl,dt,dd,ol,h1,h2,h3,h4,h5,h6{ margin:0px; padding: 0px;}
+h1,h2,h3,h4{  font-weight: normal;}
+li{ list-style: none;}
+img{border:0px;}
+a,a:link,a:visited{ text-decoration: none;}
+input{font-family:'Microsoft YaHei',STXihei,MingLiu;outline: none;border: none;margin:0;padding: 0;}
+
+@media only screen and (min-width: 481px){
+    html {
+        font-size: 94%!important;
+    }
+}
+@media only screen and (min-width: 561px){
+    html {
+        font-size: 109%!important;
+    }
+}
+@media only screen and (min-width: 641px){
+    html {
+        font-size: 125%!important;
+    }
+}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden} 
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;} 
+
+@imgPath: "../../../images/wap/tenngers20150817";
+@green:#70bc4f;
+@Bgreen:#1f5967;
+@white:#fff;
+.position(r){
+    position: relative;
+}
+.position(a){
+    position:absolute;
+}
+.borderbot{
+    border-bottom: 1px #dadada solid;
+}
+
+.mb2{margin-bottom: 2.1rem;}
+
+
+.teengers{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-width: 320px;
+    max-width: 640px;
+    margin:0 auto;
+}
+
+//第一屏
+.OneSt{
+    width: 100%;
+    font-size: 0;
+    display:block;
+}
+.OneS{
+    background-color: @green;
+    display: -webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+    padding:0 6rem 2rem;
+    height: 14rem;
+}
+.OneS_logIn{
+    width: 100%;
+    li{
+        display: -webkit-box;
+        width: 90%;
+        padding-bottom: 1rem;
+        text-align: center;
+        -webkit-box-align:center;
+        -webkit-box-pack:center;
+        margin: auto;
+    }
+    input{
+        width: 100%;
+        padding:0.9rem 0;
+        text-align: center;
+        display: block;
+        font-size: 1.6rem;
+        border-radius: 0.4rem;
+        color: #f30;
+
+    }
+    .free{
+        width:12rem;
+        height: 3.6rem;
+        background-position: 0 0;
+        display: inline-block;
+        background:url("@{imgPath}/lgoIn.jpg") left top no-repeat;
+        background-size:100%;
+    }
+}
+
+
+//第二屏
+.TwS{
+    width:100%;
+    height:40.5rem ;
+    background-color:@white;
+    padding-top: 1.6rem;
+    padding-bottom: 0.5rem;
+    overflow: hidden;
+    position: relative;
+    .TwS_title{
+        font-size: 1.5rem;
+        font-weight: bold;
+        height: 2.9rem;
+        text-align: center;
+        color:@green;
+    }
+    .TwS_list{
+        width: 20rem;
+        position: absolute;
+        left: 50%;
+        margin-left: -10rem;
+        top: 4rem;
+        li{
+            width: 100%;
+            margin-bottom: 1.3rem;
+            display: -webkit-box;
+            -webkit-box-align:center;
+            -webkit-box-pack:center;
+        }
+        img{
+            width:8rem;
+        }
+        .list_tit{
+            width:12rem;
+            display: -webkit-box;
+            line-height: 1.5rem;
+            font-size: 1.4rem;
+            text-align: center;
+            margin-left: 1.6rem;
+            -webkit-box-align:center;
+
+        }
+    }
+}
+
+//第三屏
+.TrS{
+    width: 100%;
+    height: 13.4rem;
+    background: url("@{imgPath}/n3.jpg") left top no-repeat;
+    background-size:100% 100%;
+    padding-top: 2rem;
+    .TrS_t{
+        width:15.3rem;
+        position: absolute;
+        left: 40%;
+    }
+    hgroup{
+        color:@Bgreen;
+    }
+    
+}
+
+.TrS_titT{
+    font-size: 1.5rem;
+    font-weight: bold;
+    height: 2rem;
+    display: -webkit-box;
+    -webkit-box-flex:1;
+    -webkit-box-pack:center;
+}
+.TrS_titB{
+    font-size: 0.8rem;
+    color: #0fabaf;
+    /*height: 1.4rem;*/
+    display: -webkit-box;
+    -webkit-box-flex:1;
+    -webkit-box-pack:center;
+}
+.TrS_titBL{
+    -webkit-box-pack:start;
+}
+.TrS_text{
+    line-height: 1.8rem;
+    color: @white;
+}
+
+
+//第四屏
+.FoS{
+    background-color: @Bgreen;
+    height: 12.7rem;
+    padding-top: 2.2rem;
+    .TrS_titT{
+        height: 2rem;
+        color: #27e0e6;
+    }
+    .TrS_titB{
+        font-size:0.8rem;
+    }
+    .FoS_text{
+        width:100%;
+        display: -webkit-box;
+        -webkit-box-pack:center;
+        -webkit-box-align:center;
+    }
+    .TrS_text{
+        position: relative;
+        width: 16.1rem;
+        margin-top: .7rem;
+        .FoS_pl,.FoS_pr{
+            width:2.2rem;
+            height:0.85rem;
+            background: url("@{imgPath}/d.png") left top no-repeat;
+            background-size:50%;
+            position: absolute;
+        }
+        .FoS_pl{
+            left: -2.5rem;
+            top: 0;
+        }
+        .FoS_pr{
+            right: -2rem;
+            bottom: 0;
+        }
+    }
+}
+
+
+
+//第五屏
+.SiS{
+    background-color: #f5b120;
+    padding-top: 1.5rem;
+    padding-bottom: 5.2rem;
+    position: relative;
+    color: @white;
+    .SiS_pb{
+        width:6.1rem;
+        height: 4.6rem;
+        background:url("@{imgPath}/bird.png") left top no-repeat;
+        background-size:100%;
+        position:absolute;
+        right:2rem;
+        top:-2.5rem; 
+    }
+    .SiS_text{
+        height: 2.5rem;
+        font-size: 1.4rem;
+        display: -webkit-box;
+        -webkit-box-flex:1;
+        -webkit-box-pack:center;
+    }
+    .SiS_dl{
+        display: -webkit-box;
+        -webkit-box-flex:1;
+        -webkit-box-pack:center;
+        -webkit-box-align:center;
+        .SiS_l,.SiS_r{
+            display: -webkit-box;
+        }
+        .SiS_r{
+            font-size: 1.6rem;
+            margin-left: 2rem;
+        }
+        img{
+            width:8rem;
+        }
+    }
+    .SiS_fb{
+        padding:0 7.5rem;
+        display: -webkit-box;
+        -webkit-box-flex:1;
+        -webkit-box-pack:center;
+        -webkit-box-align:center;
+        img{
+            width:11rem;
+        }
+    }
+    .SiS_now{
+        display: -webkit-box;
+        -webkit-box-pack:center;
+        -webkit-box-align:center;
+        width: 100%;
+        padding:1rem 0;
+        border:2px solid @white;
+        border-radius: 0.4rem;
+        color: @white;
+        font-size: 1.6rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

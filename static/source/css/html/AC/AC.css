@@ -343,8 +343,8 @@ body {
   position: relative;
 }
 body .mask {
-  position: absolute;
-  z-index: 999998;
+  position: fixed;
+  z-index: 9999;
   left: 0;
   top: 0;
   bottom: 0;
@@ -463,11 +463,11 @@ body .defaultTip .refreshBtn span {
   background: #fff;
 }
 .teacher .day-left li {
-  width: 79px;
+  width: 82px;
   height: 44px;
   line-height: 19px;
   font-size: 13px;
-  margin-right: 16px;
+  margin-right: 14px;
   float: left;
   cursor: pointer;
 }
@@ -549,10 +549,10 @@ body .defaultTip .refreshBtn span {
   color: #fff;
   display: inline-block;
   margin-left: 4px;
-  height: 16px;
-  width: 16px;
+  height: 18px;
+  width: 18px;
   border-radius: 8px;
-  line-height: 16px;
+  line-height: 18px;
 }
 .teacher .pass-list li.to-pass {
   color: #c9cfd6;
@@ -1197,7 +1197,7 @@ body .defaultTip .refreshBtn span {
   padding-left: 12px;
   display: inline-block;
   height: 16px;
-  width: 560px;
+  width: 520px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1667,6 +1667,12 @@ body .defaultTip .refreshBtn span {
 	    top: 50%;
 	    left: 50%;
 	    transform:translate(-50%,-50%);*/
+}
+.outerWindow #lesson-dialog .loading-inner {
+  display: block;
+  padding: 60px 40px 40px;
+  width: 96px;
+  margin: 0 auto;
 }
 .outerWindow #lesson-dialog .bd {
   height: 355px;

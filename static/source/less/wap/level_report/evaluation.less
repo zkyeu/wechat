@@ -1,0 +1,180 @@
+@charset "utf-8";
+@imgPath: "../../../images/wap/level_report/";
+.evaluation {
+	background-color: #f0f0f0;
+	min-width: 320px;
+    max-width: 640px;
+    .lesson {
+    	margin: 1rem 0 0;
+    	padding: 0 1.5rem 40px;
+    	background-color: #fff;
+    	.lesson-list {
+    		padding: 0;
+    	}
+    }
+}
+.course {
+	padding: 1.5rem 1.5rem 0.5rem;
+	display: flex;
+	background-color: #fff;
+	.text {
+		flex: 1;
+		.title {
+			font-size: 1.4rem;
+			line-height: 2.5rem;
+			color: #333;
+		}
+		.content {
+			p {
+				font-size: 1.6rem;
+				line-height: 2rem;
+				color: #3b6bd0;
+			}
+		}
+	}
+	.logo {
+		margin: 1.4rem 0 0;
+		width: 9.1rem;
+		height: 6.85rem;
+		background: url("@{imgPath}/logo.png") no-repeat 0 0;
+		background-size: 9.1rem auto;
+	}
+}
+.comment {
+	margin: 1rem 0 0;
+	padding: 0 1.5rem;
+	background-color: #fff;
+	.user-top {
+		padding: 1.5rem 0 1rem;
+		background-color: #fff;
+		.user-cont {
+			padding: 0;
+		}
+		dl {
+			background: none;
+			color: #333;
+		}
+	}
+}
+.lesson .tit,
+.comment .tit,
+.performance .tit {
+	line-height: 3.5rem;
+	font-size: 1.6rem;
+}
+
+.comment .tit,
+.performance .tit {
+	border-bottom: 1px solid #ebebeb;
+}
+.performance {
+	margin: 1rem 0 0;
+	padding: 0 1.5rem;
+	background-color: #fff;
+	ul {
+		margin: -1px 0 0 ;
+		padding: 0 0 1rem 0;
+	}
+	li {
+		padding: 1.5rem 0 1rem 5.3rem;
+		border-top: 1px solid #ebebeb;
+		.subtit {
+			font-size: 1.5rem;
+			line-height: 1.5rem;
+		}
+		.stars {
+			margin: 0.8rem 0 0 0;
+			span {
+				display: inline-block;
+				margin: 0 0.2rem 0 0;
+				width: 1.55rem;
+				height: 1.5rem;
+			}
+			.full {
+				background: url('@{imgPath}/full.png') no-repeat 0 0;
+				background-size: 1.55rem auto;
+			}
+			.empty {
+				background: url('@{imgPath}/empty.png') no-repeat 0 0;
+				background-size: 1.55rem auto;
+			}
+		}
+		.remark {
+			margin: 1.3rem 0 0;
+			font-size: 1.4rem;
+			line-height: 2rem;
+		}
+	}
+	.interact {
+		background: url('@{imgPath}/interact.png') no-repeat 0 1.5rem;
+		background-size: 4rem auto;
+	}
+	.speak {
+		background: url('@{imgPath}/speak.png') no-repeat 0 1.5rem;
+		background-size: 4rem auto;
+	}
+	.listen {
+		background: url('@{imgPath}/listen.png') no-repeat 0 1.5rem;
+		background-size: 4rem auto;
+	}
+	.read {
+		background: url('@{imgPath}/read.png') no-repeat 0 1.5rem;
+		background-size: 4rem auto;
+	}
+}
+.weixin-share-tips {
+	position:fixed;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:40px;
+	line-height:40px;
+	background:rgba(80,166,255,0.8);
+	color:#fff;
+	font-size:1.4rem;
+	text-align:center;
+	.icon {
+		display:inline-block;
+		width:18px;
+		height:17px;
+		margin-right:5px;
+		background:url('@{imgPath}gift.png') no-repeat;
+		background-size:cover;
+		vertical-align:text-top;
+		content:'';
+	}
+}
+.mask {
+	display:none;
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	background:rgba(0,0,0,0.85);
+	.share-guide {
+		&__arr {
+			position:absolute;
+			top:15px;
+			right:20px;
+			width:77px;
+			height:66px;
+			background:url('@{imgPath}share_arr.png') no-repeat;
+			background-size:cover;
+		}
+		&__info {
+			margin-top:8%;
+			text-align:center;
+			img {
+				max-width:80%;
+			}
+		}
+		&__close {
+			width:4.4rem;
+			height:4.4rem;
+			margin:0.8rem auto 0;
+			background:url('@{imgPath}share_close.png') no-repeat;
+			background-size:cover;
+		}
+	}
+}

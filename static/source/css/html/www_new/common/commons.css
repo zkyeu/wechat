@@ -1,6 +1,8 @@
 /*!
  * http://www.51Talk.com
  * copyright (c) 2015 51Talk
+ * author: 
+ * update: Fri May 26 2017 16:13:48 GMT+0800 (中国标准时间)
  */
 .animated {
   -webkit-animation-duration: 1s;
@@ -2921,6 +2923,8 @@
 /*!
  * http://www.51Talk.com
  * copyright (c) 2015 51Talk
+ * author: 
+ * update: Fri May 26 2017 16:13:50 GMT+0800 (中国标准时间)
  */
 /**
  * 默认样式
@@ -3270,7 +3274,7 @@ img {
   border-width: 1px;
 }
 .iconImg {
-  background: url(../../../../images/html/www_new/common/icon.png?v=wQqayFRvzwAmMNm%2BVLIB3A%3D%3D) no-repeat;
+  background: url(../../../../images/html/www_new/common/icon.png?v=7vBOff2LLTvTxzj5voXQPg%3D%3D) no-repeat;
   display: inline-block;
 }
 .play {
@@ -3320,7 +3324,7 @@ img {
 .play .switch li {
   float: left;
   margin-left: 5px;
-  background: url(../../../../images/html/www_new/common/icon.png?v=wQqayFRvzwAmMNm%2BVLIB3A%3D%3D) no-repeat;
+  background: url(../../../../images/html/www_new/common/icon.png?v=7vBOff2LLTvTxzj5voXQPg%3D%3D) no-repeat;
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -3357,7 +3361,7 @@ img {
   right: -22px;
   width: 30px;
   height: 30px;
-  background: transparent url(../../../../images/html/www_new/vedio_close.png?v=K6eianSdlRFQBbhCpXs3hw%3D%3D);
+  background: transparent url(../../../../images/html/www_new/vedio_close.png?v=BwQogo2vbqkM%2BpMQEm1PFg%3D%3D);
 }
 #j-mask {
   position: absolute;
@@ -3824,7 +3828,7 @@ img {
   width: 35px;
 }
 .sign-cha .centerMth .change .lt i {
-  background: url(../../../../images/html/www_new/common/icon.png?v=wQqayFRvzwAmMNm%2BVLIB3A%3D%3D) no-repeat;
+  background: url(../../../../images/html/www_new/common/icon.png?v=7vBOff2LLTvTxzj5voXQPg%3D%3D) no-repeat;
   display: inline-block;
   width: 35px;
   height: 65px;
@@ -3838,7 +3842,7 @@ img {
   width: 35px;
 }
 .sign-cha .centerMth .change .rt i {
-  background: url(../../../../images/html/www_new/common/icon.png?v=wQqayFRvzwAmMNm%2BVLIB3A%3D%3D) no-repeat;
+  background: url(../../../../images/html/www_new/common/icon.png?v=7vBOff2LLTvTxzj5voXQPg%3D%3D) no-repeat;
   display: inline-block;
   width: 35px;
   height: 65px;
@@ -3854,7 +3858,7 @@ img {
   margin-left: -45px;
 }
 .sign-cha .centerMth .video_play .video i {
-  background: url(../../../../images/html/www_new/common/icon.png?v=wQqayFRvzwAmMNm%2BVLIB3A%3D%3D) no-repeat;
+  background: url(../../../../images/html/www_new/common/icon.png?v=7vBOff2LLTvTxzj5voXQPg%3D%3D) no-repeat;
   display: inline-block;
   width: 90px;
   height: 90px;
@@ -3890,6 +3894,8 @@ img {
 /*!
  * http://www.51Talk.com
  * copyright (c) 2015 51Talk
+ * author: 
+ * update: Fri May 26 2017 16:13:50 GMT+0800 (中国标准时间)
  */
 /**
  * 默认样式
@@ -4242,6 +4248,8 @@ img {
 /*!
  * http://www.51Talk.com
  * copyright (c) 2015 51Talk
+ * author: 
+ * update: Fri May 26 2017 16:13:50 GMT+0800 (中国标准时间)
  */
 .info {
   background: #303030;
@@ -4312,6 +4320,8 @@ img {
 /*!
  * http://www.51Talk.com
  * copyright (c) 2015 51Talk
+ * author: 
+ * update: Fri May 26 2017 16:13:51 GMT+0800 (中国标准时间)
  */
 .wrap-header {
   height: 30px;
@@ -4450,6 +4460,11 @@ img {
 .wrap-nav .logo b span {
   display: block;
   margin: 0 0 9px 0;
+}
+.wrap-nav .logo_usa i {
+  width: 222px;
+  height: 50px;
+  background: url("http://static.51talk.com/static/images/html/www_new/common/log_usa.png");
 }
 .wrap-nav .nav {
   position: relative;
@@ -4654,9 +4669,23 @@ img {
 .rt-side-bar .bar-list .w-wx .b-up {
   background-position: -32px 0;
 }
+.rt-side-bar .bar-list .mobile {
+  height: 114px;
+}
 .rt-side-bar .bar-list .mobile .b-up {
   height: 114px;
   background-position: -64px 0;
+}
+.rt-side-bar .ipad {
+  position: relative;
+  width: 32px;
+  height: 96px;
+}
+.rt-side-bar .ipad .b-up {
+  float: left;
+  width: 32px;
+  height: 96px;
+  background: url(../../../../images/html/www_new/common/ipad.png?v=nTzSmxGviu5qiBKgRakwOQ%3D%3D) 0 0 no-repeat;
 }
 .rt-side-bar .b-hover {
   position: absolute;
@@ -4664,7 +4693,7 @@ img {
   right: 30px;
   width: 139px;
   height: 142px;
-  background: url(../../../../images/html/www_new/common/rt_banner_icon.png?v=%2BW70xcBbLe%2FO1nBCIgEGcg%3D%3D) no-repeat;
+  background: url(../../../../images/html/www_new/common/rt_banner_icon.png?v=JTpY%2FyTVWmBDmIIhZAQCAg%3D%3D) no-repeat;
   background-position: -96px 0;
   display: none;
   z-index: 20;
@@ -4844,15 +4873,20 @@ img {
   z-index: 5;
   border-radius: 0 0 5px 5px;
 }
+.wrap-nav .nav-list.ad-list .list-ct ul li {
+  width: 240px;
+}
 
 /*!
  * http://www.51Talk.com
  * copyright (c) 2015 51Talk
+ * author: 
+ * update: Fri May 26 2017 16:13:51 GMT+0800 (中国标准时间)
  */
 .index-m6 {
   height: 400px;
   color: #fff;
-  background: url(../../../../images/html/www_new/common/bg3.jpg?v=RqcMN0huJXeWmvqrD%2Bpe2g%3D%3D) no-repeat;
+  background: url(../../../../images/html/www_new/common/bg3.jpg?v=DeAw%2F2iiWwFp0Yw2qQw3Sg%3D%3D) no-repeat;
   background-attachment: fixed;
   background-position: 50%;
   background-repeat: no-repeat;
@@ -4895,10 +4929,12 @@ img {
 /*!
  * http://www.51Talk.com
  * copyright (c) 2015 51Talk
+ * author: 
+ * update: Fri May 26 2017 16:13:51 GMT+0800 (中国标准时间)
  */
 .m-medium {
   height: 768px;
-  background: url(../../../../images/html/www_new/common/bg5.jpg?v=gB9sX1AqbKSJFAua%2F%2FxX4A%3D%3D) center;
+  background: url(../../../../images/html/www_new/common/bg5.jpg?v=QqIKLbquFcixvfGHPkVcjg%3D%3D) center;
   text-align: center;
 }
 .m-medium h2 {
@@ -5023,6 +5059,8 @@ img {
 /*!
  * http://www.51Talk.com
  * copyright (c) 2015 51Talk
+ * author: 
+ * update: Fri May 26 2017 16:13:51 GMT+0800 (中国标准时间)
  */
 .m-partner {
   height: 408px;
@@ -5089,6 +5127,8 @@ img {
 /*!
  * http://www.51Talk.com
  * copyright (c) 2015 51Talk
+ * author: 
+ * update: Fri May 26 2017 16:13:51 GMT+0800 (中国标准时间)
  */
 .study-step {
   height: 555px;
@@ -5181,11 +5221,13 @@ img {
 /*!
  * http://www.51Talk.com
  * copyright (c) 2015 51Talk
+ * author: 
+ * update: Fri May 26 2017 16:13:51 GMT+0800 (中国标准时间)
  */
 .m-weixin {
   height: 614px;
   color: #fff;
-  background: url(../../../../images/html/www_new/common/bg_l.jpg?v=w%2BqDtTfF%2BgpsFpYExCcbpw%3D%3D) no-repeat;
+  background: url(../../../../images/html/www_new/common/bg_l.jpg?v=Zjmfe%2FAJJO%2BcMGFyKZC6FA%3D%3D) no-repeat;
   background-attachment: fixed;
   background-position: 50%;
   background-repeat: no-repeat;
@@ -5227,10 +5269,13 @@ img {
   color: #333;
   line-height: 1;
 }
+.m-weixin .li_usa {
+  float: none;
+}
 .m-weixin-index {
   height: 614px;
   color: #fff;
-  background: url(../../../../images/html/www_new/common/bg4.jpg?v=3M6mXYI1fq%2FmqlMSYYC8AA%3D%3D) no-repeat;
+  background: url(../../../../images/html/www_new/common/bg4.jpg?v=lsRu9uOlj9hTCT%2B2JL7tNQ%3D%3D) no-repeat;
   background-attachment: fixed;
   background-position: 50%;
   background-repeat: no-repeat;

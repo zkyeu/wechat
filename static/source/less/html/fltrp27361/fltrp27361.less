@@ -1,0 +1,83 @@
+@import "../common/base.less";
+@import "../common/www/w_header.less";
+@import "../common/www/w_footer.less";
+@imgPathImg: "../../../images/html/fltrp27361/";
+.widthMain{
+  margin:0px auto;
+  width:@docWidth;
+  position: relative;
+}
+.flt-icon{
+  display: inline-block;
+  background: url('@{imgPathImg}flt_icon.png') no-repeat;  
+  margin-top: 20px;
+}
+.flt-t{
+  font-size: 48px;
+  font-family: "Noto Sans S chinese thin";
+  margin-bottom: 30px;
+  text-align: center;
+}
+.flt-ht{padding:100px 0;}
+.flt-top{
+  height: 540px;
+  background: url('@{imgPathImg}flt_top.jpg') center #3b8dff no-repeat;
+}
+.flt-cp{
+  .flt-ht;
+  text-align: center;
+}
+.flt-exam{
+  height: 600px;
+  background: url('@{imgPathImg}flt_bg.png') center #5293ff no-repeat;
+  padding:40px 0;
+  .flt-t{
+    color: #fff;
+    padding-top: 85px;
+  }
+  .exam-list{
+    overflow: hidden;
+    text-align: center;
+    li{
+      float: left;
+      width: 272px;
+      height: 360px;
+      background-color: #fff;
+      border-radius: 5px;
+      margin-right: 60px;
+      span{
+        display: block;
+      }
+      .icon01{
+        width: 140px;
+        height: 120px;
+        background-position: 0 0;
+      }
+      .icon02{
+        width: 165px;
+        height: 120px;
+        background-position: -145px 0;
+      }
+      .icon03{
+        width: 180px;
+        height: 120px;
+        background-position: -293px 0;
+      }
+      .t1,.t2{
+        color: #3b8dff;
+        font-size: 28px;
+      }
+      .t2{font-size: 18px;}
+      .nr{
+        margin:20px 25px 0 25px;
+        padding-top: 20px;
+        line-height: 25px;
+        font-size: 15px;
+        border-top:1px #3b8dff dashed;
+      }
+    }
+    .last{
+      margin-right: 0;
+    }
+  }
+}

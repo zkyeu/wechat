@@ -95,7 +95,8 @@ define("chartChat",["echarts.min","layui"],function(require,exports,module){
                 web_send_num:[],
                 phone_send_num:[],
                 sys_send_num:[],
-                mid_send_num:[]
+                mid_send_num:[],
+                hint_num:[]
             }
         };
         var html = '';
@@ -105,13 +106,13 @@ define("chartChat",["echarts.min","layui"],function(require,exports,module){
             dataRquest.xData.push(lable);
 
             //Y轴数据
-            var yTemData =[];
             var receive_num = (data[i].receive_num == undefined) ? 0 : data[i].receive_num;
             var send_num = (data[i].send_num == undefined) ? 0 : data[i].send_num;
             var web_send_num = (data[i].web_send_num == undefined) ? 0 : data[i].web_send_num;
             var phone_send_num = (data[i].phone_send_num == undefined) ? 0 : data[i].phone_send_num;
             var sys_send_num = (data[i].sys_send_num == undefined) ? 0 : data[i].sys_send_num;
             var mid_send_num = (data[i].mid_send_num == undefined) ? 0 : data[i].mid_send_num;
+            var hint_num = (data[i].hint_num == undefined) ? 0 : data[i].hint_num;
 
             html += '<tr>';
             html += '<td>' + lable + '</td>';
@@ -121,6 +122,7 @@ define("chartChat",["echarts.min","layui"],function(require,exports,module){
             html += '<td>' + mid_send_num + '</td>';
             html += '<td>' + phone_send_num + '</td>';
             html += '<td>' + sys_send_num + '</td>';
+            html += '<td>' + hint_num + '</td>';
             html += '</tr>';
 
             dataRquest.yData.receive_num.push(receive_num);
@@ -129,6 +131,7 @@ define("chartChat",["echarts.min","layui"],function(require,exports,module){
             dataRquest.yData.mid_send_num.push(mid_send_num);
             dataRquest.yData.phone_send_num.push(phone_send_num);
             dataRquest.yData.sys_send_num.push(sys_send_num);
+            dataRquest.yData.hint_num.push(hint_num);
 
         }
         // console.log(dataRquest.yData);
@@ -143,19 +146,20 @@ define("chartChat",["echarts.min","layui"],function(require,exports,module){
             // xAxis:['成人CC','成人SS','青少CC','青少SS','美小CC','美小CST','达拉斯','B2S'],
             xAxis:dataRquest.xData,
             // 图例显示
-            legend:['收到消息数','发送消息汇总','通过网页发送数','中转发送数','手机发送数','自动发送数'],
+            legend:['收到消息数','发送消息汇总','通过网页发送数','中转发送数','手机发送数','自动发送数','提示消息数'],
             barData:{
                 receive_num:dataRquest.yData.receive_num,
                 send_num:dataRquest.yData.send_num,
                 web_send_num:dataRquest.yData.web_send_num,
                 mid_send_num:dataRquest.yData.mid_send_num,
                 phone_send_num:dataRquest.yData.phone_send_num,
-                sys_send_num:dataRquest.yData.sys_send_num
+                sys_send_num:dataRquest.yData.sys_send_num,
+                hint_num:dataRquest.yData.hint_num
 
             },
             //图标相关
             normal:{
-                colorList:['#ff6565','#ffc800','#37b0ff','#1ecfb0','#96d23a','#bebebe'],
+                colorList:['#ff6565','#ffc800','#37b0ff','#1ecfb0','#96d23a','#bebebe','#FF4DFF'],
                 show: true,//显示
                 position: 'top'//bottom top inside
 
@@ -333,6 +337,29 @@ define("chartChat",["echarts.min","layui"],function(require,exports,module){
                         normal : {
                             barBorderRadius:[10, 10, 0, 0],
                             color: dataBase.normal.colorList[5]
+                        }
+                    },
+                    label: {
+                        normal : {
+                            show: dataBase.normal.show,
+                            position: dataBase.normal.position,
+                            textStyle: {
+                                fontWeight:'bolder',
+                                fontSize : '14',
+                                fontFamily : '微软雅黑',
+                                fontStyle:'normal'
+                            }
+                        }
+                    }
+                },
+                {
+                    name: dataBase.legend[6],
+                    type: 'bar',
+                    data: dataBase.barData.hint_num,
+                    itemStyle: {
+                        normal : {
+                            barBorderRadius:[10, 10, 0, 0],
+                            color: dataBase.normal.colorList[6]
                         }
                     },
                     label: {

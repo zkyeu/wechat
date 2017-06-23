@@ -1,0 +1,227 @@
+/*初始化样式*/
+@charset "utf-8";
+@import "../common/base.less";
+@imgPath: "../../../images/wap/learning20170303/";
+h1,h2,h3,h4,h5,h6{ margin:0 ;}
+a{-webkit-tap-highlight-color:transparent;}
+img{display: block;}
+.width100{width: 100%;}
+.container{
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+  position: relative;
+  .l_title{
+      width: 22.5rem;
+      height:0.3rem;
+      margin:0 auto;
+      border-bottom:2px solid #fff;
+      text-align: center;
+      h2{
+        display: inline-block;
+        color:#fff;
+        font-size:1.7rem;
+        font-weight: bold;
+        margin-top:-0.5rem;
+        background: #f66333;
+        padding:0 1.0rem;
+      }
+    } 
+ .scholar{
+  background: #f66333;
+  padding:2.3rem 0 1.0rem;
+    .scholar_list{
+      margin-top:2.75rem;
+      a{
+        display:block;
+        height:8.7rem;
+        width: 23.2rem;
+        margin:0 auto 1.5rem;
+      }
+      .scholar500{
+        background: url("@{imgPath}scholar500_1.png") no-repeat center;
+        background-size: cover;
+      }
+      .scholar500_2{
+        background: url("@{imgPath}scholar500_2.png") no-repeat center;
+        background-size: cover;
+      }
+      .scholar800{
+        background: url("@{imgPath}scholar800_1.png") no-repeat center;
+        background-size: cover;
+      }
+      .scholar800_2{
+        background: url("@{imgPath}scholar800_2.png") no-repeat center;
+        background-size: cover;
+      }
+      .scholar1000{
+        background: url("@{imgPath}scholar1000_1.png") no-repeat center;
+        background-size: cover;
+      }
+      .scholar1000_2{
+        background: url("@{imgPath}scholar1000_2.png") no-repeat center;
+        background-size: cover;
+      }
+    }
+ }
+ .group{
+  background: #b96bee;
+  padding:2.3rem 0 2.0rem;
+    .l_title{
+      h2{
+        background: #b96bee;
+      }
+    }
+    .group_list{
+      margin-top:3.0rem;
+      padding:0 1.2rem;
+      box-sizing: border-box;
+      overflow: hidden;
+      .list{
+        display: -webkit-box;  
+        display: -moz-box;  
+        display: -ms-flexbox;  
+        display: -webkit-flex; 
+        display: flex; 
+        margin-bottom:1.5rem;
+        height: 9.5rem;
+        .pic{
+          height:9.5rem;
+          width: 12.5rem;
+        }
+        .intro{
+          -webkit-box-flex: 1.0;
+          -moz-flex-grow: 1;
+          -webkit-flex-grow: 1;
+          flex-grow: 1;
+          background: #fff;
+          height: 8.5rem;
+          padding:1.0rem 0 0 1.0rem;
+          position: relative;
+          h3{
+            color:#333333;
+            font-size:1.5rem;
+            margin-bottom:1.0rem;
+          }
+          span{
+            font-size: 1.6rem;
+            color:#f95a52;
+          }
+          .goBuy{
+            position: absolute;
+            bottom:0.5rem;
+            right:0.5rem;
+            color:#fff;
+            font-size: 1.4rem;
+            background:#fa756e;
+            display:block;
+            height:2.25rem;
+            width: 8.0rem;
+            line-height: 2.25rem;
+            text-align: center;
+            border-radius: 0.4rem;
+          }
+        }
+      } 
+    }
+    .readMore{
+      margin-top:1.0rem;
+        a{
+          display: block;
+          margin: 0 auto;
+          height:4.5rem;
+          width:19.7rem;
+          background: url("@{imgPath}readMore.png") no-repeat center;
+          background-size:cover;
+        }
+    }
+ }
+ footer{
+  color:#fff;
+  font-size:0.9rem;
+  background: #303030;
+  text-align: center;
+  padding:1.9rem 0;
+ }
+ .mask{
+  position: fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background: #000;
+  opacity: 0.6;
+  filter:alpha(opacity=60);
+  z-index: 3;
+  display: none;
+}
+.scholarship{
+  position: fixed;
+  top:10%;
+  width: 35.0rem;
+  height:29.1rem;
+  background: url("@{imgPath}flower.png") no-repeat center;
+  background-size: cover;
+  z-index: 4;
+  left:50%;
+  margin-left: -17.5rem;
+  display: none;
+  .wincon{
+    height:12.0rem;
+    background:#f9ce37 ;
+    width: 24.3rem;
+    position: absolute;
+    top:7.8rem;
+    left:50%;
+    margin-left:-12.15rem;
+    i{
+      position: absolute;
+      display:block;
+      height:100%;
+      width: 0.3rem;
+      background: url("@{imgPath}bleft.png") repeat-y center;
+      left:-0.3rem;
+      z-index: 5;
+    }
+    .borderright{
+      background: url("@{imgPath}bleftw.png") repeat-y center;
+      left:auto;
+      right:-0.3rem;
+    }
+    .top{
+      height:1.2rem;
+      border-bottom:2px dashed #e8825d;
+    }
+    .bot{
+      height:1.25rem;
+      width: 100%;
+      border-top:2px dashed #e8825d;
+      position: absolute;
+      bottom:0;
+      z-index: 6;
+    }
+    .main{
+      color:#fff;
+      font-size:1.3rem;
+      padding:1.5rem 1.0rem;
+      em{
+        color:#e46436;
+        font-size: 2.0rem;
+      }
+      span{
+        color:#e46436;
+      }
+    }
+    .close{
+      display: block;
+      height:2.5rem;
+      width: 2.5rem;
+      background: url("@{imgPath}close.png") center no-repeat;
+      background-size: cover;
+      position: absolute;
+      top:-3.0rem;
+      right:-3.0rem;
+    }
+  }
+}
+}

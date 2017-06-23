@@ -3816,7 +3816,6 @@ body {
 }
 .weixin_circle .heck_center .content .already_mes .persondetail {
   position: relative;
-  height: 67px;
   border-bottom: #dcdcdc solid 1px;
 }
 .weixin_circle .heck_center .content .already_mes .persondetail .detail-left {
@@ -3836,7 +3835,6 @@ body {
 .weixin_circle .heck_center .content .already_mes .persondetail .detail-right {
   margin-left: 0;
   width: 900px;
-  height: 67px;
 }
 .weixin_circle .heck_center .content .already_mes .persondetail .detail-right p:first-child {
   font-size: 15px;
@@ -3849,25 +3847,25 @@ body {
   font-size: 13px;
   font-weight: 100;
 }
-.weixin_circle .heck_center .content .already_mes .persondetail .detail-right p:last-child {
+.weixin_circle .heck_center .content .already_mes .persondetail .detail-right div {
   color: #323232;
   width: 800px;
-  height: 20px;
   overflow: hidden;
   margin-top: 3px;
+  padding: 10px 0;
 }
-.weixin_circle .heck_center .content .already_mes .persondetail .detail-right p:last-child span {
+.weixin_circle .heck_center .content .already_mes .persondetail .detail-right div span {
   display: block;
   float: left;
   line-height: 19px;
   font-size: 13px;
 }
-.weixin_circle .heck_center .content .already_mes .persondetail .detail-right p:last-child i {
+.weixin_circle .heck_center .content .already_mes .persondetail .detail-right div i {
   display: block;
   color: #fff;
   background: #b4b4b4;
   float: left;
-  margin-right: 10px;
+  margin: 0 8px 5px 0;
   border-radius: 3px;
   font-size: 12px;
   height: 18px;

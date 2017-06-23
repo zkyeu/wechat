@@ -1,0 +1,282 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ */
+input,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.bg-c {
+  background-color: #f7f8f8;
+}
+.fix-box {
+  position: fixed;
+  max-width: 640px;
+  z-index: 1;
+  width: 100%;
+  padding-top: 16px;
+  background-color: #f7f8f8;
+}
+.fix-box .tab-box {
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #595757;
+  display: -webkit-flex;
+}
+.fix-box .tab-box li {
+  -webkit-flex: 1;
+  padding: 5px 10px;
+  border-bottom: 1px solid #bdbdbe;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+}
+.fix-box .tab-box li.current {
+  border-bottom: 1px solid #f4a640;
+}
+.fix-box .date-box {
+  font-size: 14px;
+  margin-left: 19px;
+  margin-right: 19px;
+  margin-top: 18px;
+  background: -webkit-linear-gradient(#e2e2d7, #e1e1d6, #cecebd);
+  height: 36px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  position: relative;
+  color: #595757;
+}
+.fix-box .date-box .date {
+  line-height: 36px;
+  padding-left: 25px;
+}
+.fix-box .date-box .date input {
+  background: none;
+}
+.fix-box .date-box .filter-btn {
+  display: inline-block;
+  border-left: 1px solid #b5b5b6;
+  height: 24px;
+  padding-left: 23px;
+  position: absolute;
+  right: 25px;
+  line-height: 24px;
+  top: 6px;
+}
+.appoinment-box {
+  padding: 102px 10px 16px;
+}
+.appoinment-box .tea-list .tea-l {
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.appoinment-box .tea-list ul li {
+  margin-bottom: 2px;
+  background-color: #ffffee;
+  padding: 15px 18px;
+  position: relative;
+}
+.appoinment-box .tea-list ul li .tea-info {
+  width: 300px;
+}
+.appoinment-box .tea-list ul li .tea-info .tea-icon {
+  position: absolute;
+  left: 15px;
+  top: 12px;
+}
+.appoinment-box .tea-list ul li .tea-info .tea-icon img {
+  width: 55px;
+  height: 55px;
+  border-radius: 30px;
+  border: 1px solid #f9bf00;
+}
+.appoinment-box .tea-list ul li .tea-info .tea-icon .mask-img {
+  width: 57px;
+  height: 57px;
+  background-color: #000;
+  opacity: 0.5;
+  display: block;
+  border-radius: 30px;
+  position: absolute;
+  top: 0;
+}
+.appoinment-box .tea-list ul li .tea-info .tea-icon i {
+  display: block;
+  position: absolute;
+  width: 37px;
+  height: 16px;
+  background-color: #ea5514;
+  font-size: 10px;
+  color: #fff;
+  border-radius: 9px;
+  padding-left: 5px;
+  padding-right: 5px;
+  top: 48px;
+  left: 5px;
+  text-align: center;
+}
+.appoinment-box .tea-list ul li .tea-info .tea-des {
+  margin-left: 70px;
+}
+.appoinment-box .tea-list ul li .tea-info .tea-des .tea-name {
+  font-size: 14px;
+  color: #4b4848;
+}
+.appoinment-box .tea-list ul li .tea-info .tea-des .score .score-v {
+  color: #ea5514;
+  font-size: 12px;
+}
+.appoinment-box .tea-list ul li .tea-info .tea-des .score .star-box {
+  display: inline-block;
+  position: relative;
+  top: -2px;
+}
+.appoinment-box .tea-list ul li .tea-info .tea-des .score .star-box .grey-s .star-g,
+.appoinment-box .tea-list ul li .tea-info .tea-des .score .star-box .yellow-s .star-g {
+  display: inline-block;
+  width: 7px;
+  height: 6px;
+}
+.appoinment-box .tea-list ul li .tea-info .tea-des .score .star-box .grey-s .star-g {
+  background: url(../../../images/wap/junior_service_number/star3.png?v=XG4Tc5mQmHlea0yImteDbg%3D%3D) no-repeat;
+  background-size: 7px 6px;
+}
+.appoinment-box .tea-list ul li .tea-info .tea-des .score .star-box .yellow-s {
+  position: absolute;
+}
+.appoinment-box .tea-list ul li .tea-info .tea-des .score .star-box .yellow-s .star-g {
+  background: url(../../../images/wap/junior_service_number/star1.png?v=oO25S4dKpXNU4mHbQDqquQ%3D%3D) no-repeat;
+  background-size: 7px 6px;
+}
+.appoinment-box .tea-list ul li .tea-info .tea-des .score .star-box .yellow-s .half-star-g {
+  display: inline-block;
+  width: 4px;
+  height: 6px;
+  background: url(../../../images/wap/junior_service_number/star2.png?v=vW5KoTddVQOL1vwt5lkaRA%3D%3D) no-repeat;
+  background-size: 4px 6px;
+}
+.appoinment-box .tea-list ul li .tea-info .tea-des .level {
+  font-size: 12px;
+  color: #595757;
+}
+.appoinment-box .tea-list ul li .appointment-btn,
+.appoinment-box .tea-list ul li .appointment-btn-g {
+  position: absolute;
+  right: 10px;
+  top: 27px;
+  width: 65px;
+  height: 24px;
+  display: block;
+  font-size: 16px;
+  color: #fff;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 10px;
+}
+.appoinment-box .tea-list ul li .appointment-btn {
+  background-color: #f4a640;
+}
+.appoinment-box .tea-list ul li .appointment-btn-g {
+  background-color: #b5b5b6;
+}
+.appoinment-box .tea-list ul li:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.showtips_layer {
+  display: none;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.showtips_layer .showtips {
+  position: absolute;
+  color: #595757;
+  top: 50%;
+  left: 50%;
+  margin-top: -85px;
+  margin-left: -135px;
+  width: 270px;
+  height: 170px;
+  background-color: #f7f8f8;
+}
+.showtips_layer .showtips .tit {
+  height: 30px;
+  font-size: 14px;
+  background: #e2e2d7;
+  line-height: 30px;
+}
+.showtips_layer .showtips .tit span {
+  margin-left: 10px;
+}
+.showtips_layer .showtips .tit a {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  font-size: 12px;
+  color: #fff;
+  display: block;
+  width: 48px;
+  height: 18px;
+  line-height: 17px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #f4a640;
+}
+.showtips_layer .showtips .content {
+  font-size: 12px;
+  padding: 20px 10px;
+}
+.showtips_layer .showtips .content .class {
+  margin-top: 10px;
+}
+.showtips_layer .showtips .content .left-t {
+  float: left;
+  width: 50px;
+}
+.showtips_layer .showtips .content .right-c {
+  margin-left: 62px;
+}
+.showtips_layer .showtips .content .right-c a {
+  display: inline-block;
+  width: 70px;
+  height: 14px;
+  border: 1px solid #f4a640;
+  line-height: 14px;
+  text-align: center;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-bottom: 7px;
+}
+.showtips_layer .showtips .content .right-c .class-s {
+  width: 124px;
+}
+.showtips_layer .showtips .content .right-c span {
+  display: inline-block;
+  width: 60px;
+}
+.showtips_layer .showtips .content .right-c span i {
+  display: inline-block;
+  width: 14px;
+  height: 13px;
+  background: url(../../../images/wap/junior_service_number/icons_t.png?v=1sGrKLQEElwMGru%2FO1jD9A%3D%3D) -25px 0;
+  background-size: 250px 250px;
+  position: relative;
+  top: 3px;
+  margin-right: 10px;
+}
+.showtips_layer .showtips .content .right-c span .s-current {
+  background-position: 0 0;
+}

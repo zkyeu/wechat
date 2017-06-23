@@ -1,7 +1,7 @@
 <% include ../common/top_b2s_n.ejs %>
     <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>1v1_choose_class_new.css">
 </head>
-<body data-init="" class="choose_class">
+<body data-init="share_pop" class="choose_class">
 <div class="top_message">
     <p class="font1">购买成功，完成以下三步开始上课</p>
     <p class="font2">请选择2节中教预习课的班级<br>6节1对1外教课将在中教课开始后充入账户</p>
@@ -20,6 +20,10 @@
             <p class="text_intro">下载客户端，登录孩子上课账号，预约课程按时出席。</p>
         </div>
         <!-- <a href="" class="choose_class_btn">下载"51Talk无忧英语"预约课程</a> -->
+    </div>
+    <div class="choose_class_share">
+        <a href=""></a>
+       <img src="<%= imagessrc%>choose_class_share.png">
     </div>
     <div class="class_step_after">
         <div class="right_step_1">
@@ -144,6 +148,13 @@
     <p class="text_mes_show">1对1外教全程托管班，中外教课程不能单独退费，并只可在上课前申请退费。</p>
     <p class="text_mes_show">如有问题请咨询服务微信号：Cy51talk123 客服电话：4006635151</p>
 </div>
+<div class="btn-bottom">
+    <a href="">咨询求助</a>
+</div>
+<div class="share_pop disnone">
+    <img src="<%= imagessrc%>1v4_share.png">
+</div>
+
 
 <!-- loading -->
 <div id="fontSizeLoding">

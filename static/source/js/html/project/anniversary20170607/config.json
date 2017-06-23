@@ -1,0 +1,7 @@
+{
+	"define":[
+		"js/html/common/sea.min.js",
+		"js/html/common/jquery-1.8.2.min.js",
+		"js/html/project/anniversary20170607/config.js"
+	]
+}

@@ -1,0 +1,99 @@
+@charset "utf-8";
+@import "../common/reset.less";
+@imgUrl: '../../../images/wap/future_edu/';
+.future_edu{
+	.topbar{
+		padding:3rem 0 1rem;
+		background:#ebecec;
+		color:#0378b0;
+		font-size:1rem;
+		text-align:center;
+	}
+	.register{
+		padding:2rem;
+		text-align:center;
+		li{
+			margin-bottom:1rem;
+		}
+		input{
+			width:70%;
+			padding:0.5rem 0;
+			text-align:center;
+		}
+		.btn{
+			display:block;
+			width:70%;
+			margin:0 auto;
+			padding:1rem 0;
+			color:#fff;
+			border-radius:1.5rem;
+			box-shadow:0 0 0 3px rgba(0, 154, 228, 0.15);
+			font-size:1.6rem;
+			background:#009ae4;
+			text-align:center;
+		}
+	}
+	.logo{
+		ul{
+			display:flex;
+		}
+		li{
+			display:flex;
+			flex:1;
+			justify-content:center;
+			align-items:center;
+			box-sizing:border-box;
+			&:first-child{
+				padding:0 1rem;
+				background:#202242;
+			}
+			&:last-child{
+				padding:1rem;
+				background:#ffe13e;
+			}
+		}
+	}
+	.slogan{
+		padding:1.5rem 1rem;
+	}
+	.star{
+		margin-top:3rem;
+		text-align:center;
+		h2{
+			font-size:1.8rem;
+			color:#6c6c6c;
+		}
+		h3{
+			font-size:1.6rem;
+			padding-bottom:1.2rem;
+			margin-bottom:3rem;
+			color:#b1b1b1;
+			background:url('@{imgUrl}arr.jpg') center 105% no-repeat;
+			background-size:50% 35%;
+		}
+	}
+	.btn-wrap{
+		margin-top:-1px;
+		padding:3rem;
+		background:#ebecec;
+		.btn{
+			display:block;
+			padding:1rem 0;
+			color:#fff;
+			border-radius:1.5rem;
+			box-shadow:0 0 0 3px rgba(0, 154, 228, 0.15);
+			font-size:1.6rem;
+			background:#009ae4;
+			text-align:center;
+		}
+	}
+}
+@media screen and (min-width:375px) {
+	.future_edu{
+		.star{
+			h3{
+				background-size:40% 35%;
+			}
+		}
+	}
+}

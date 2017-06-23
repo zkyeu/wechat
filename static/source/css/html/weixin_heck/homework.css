@@ -527,6 +527,35 @@ body {
   max-width: 100%;
   border-radius: 6px;
 }
+.home-work .home-work-info > ul > li > ul > li > dl dd .li-audio-v {
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  margin-left: 4px;
+  width: 54%;
+  height: 120px;
+  position: relative;
+  display: inline-block;
+  background: url(../../../images/html/weixin_heck/hw-video-bg.jpg?v=5moQfpRmiUIHGUQ8w%2FUJeA%3D%3D) no-repeat 50% 50%;
+  background-size: cover;
+}
+.home-work .home-work-info > ul > li > ul > li > dl dd .li-audio-v:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: url(../../../images/html/weixin_heck/hw-video-btn.png?v=KMQVPBS%2FaeXB3TTKb8czJw%3D%3D) no-repeat;
+  background-size: 100%;
+}
+.home-work .home-work-info > ul > li > ul > li > dl dd .li-audio-v .hw-arr.arr-r {
+  border-left-color: #dcdcdc;
+}
+.home-work .home-work-info > ul > li > ul > li > dl dd .li-audio-v .hw-arr.arr-r:after {
+  border-left-color: #fff;
+}
 .home-work .home-work-info > ul > li > ul > li > dl.dl-r {
   text-align: right;
 }
@@ -586,6 +615,22 @@ body {
   left: 2px;
   top: 50%;
   margin-top: -4px;
+}
+.hw-video {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  display: none;
+}
+.hw-video video {
+  width: 100%;
+  height: 100%;
+}
+.h-w-video {
+  display: none;
 }
 @-webkit-keyframes shake {
   0% {

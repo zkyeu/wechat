@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="description"  content="领取学习礼包，来51Talk玩转英语">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="<%= csslink%>">
+     <link rel="stylesheet" type="text/css" href="<%= csslinkb2s%>class.css">
+    
+</head>
+<body id="container" data-init="class">
+    <div class="class-box">
+        <div class="img-box bg"><img src="<%= imagessrc%>l011.png"/></div>
+        <a class="hide" href="javascript:;" name="purchase" ></a>
+        <div class="form-box bg">
+            <div class="input-box">
+                <input id="phoneId" class="phone" type="text" placeholder="输入您的手机号"/>
+            </div>
+            <div class="input-box">
+                <input id="imgCode" class="input-w" type="text" placeholder="输入图片验证码"/>
+                <span class="code-box"><img id="verifycode" src="http://www.51talk.com/passport/authCode"/></span>
+            </div>
+            <div class="input-box">
+                <input id="smsCode" class="input-w" type="text" placeholder="获取短信验证码"/>
+                <span class="code-box" >    
+                    <a class="get-code" href="javascript:;" id="codeBtn">获取验证码</a>
+                    <a href="javascript:;" class="count-down" id="countDown">重新发送(60)</a>
+                </span>
+
+            </div>
+            <div class="input-box">
+               <select id="selectId">
+                    <option value="">请选择孩子年级</option>
+                    <option value="0">幼儿园</option>
+                    <option value="1">一年级</option>
+                    <option value="2">二年级</option>
+                    <option value="3">三年级</option>
+                    <option value="4">四年级</option>
+                    <option value="5">五年级</option>
+                    <option value="6">六年级</option>
+               </select>
+            </div>
+            <a class="btn" id="payId" href="javascript:;">
+                立 即 抢 购
+            </a>
+        </div>
+       
+        <div class="img-box"><img src="<%= imagessrc%>l03.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l04.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l05.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l06.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l07.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l08.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l09.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l10.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l11.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l12.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l13.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l14.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l15.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l16.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l17.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l18.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l19.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l20.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l21.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l22.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l23.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l24.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l25.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l26.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l27.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l28.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l29.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l30.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l31.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l32.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l33.png"/></div>
+        <div class="img-box"><img src="<%= imagessrc%>l34.png"/></div>
+    </div>
+    <div class="bottom" id="purchaseId">
+            <span class="o-price">原价1399</span>
+            <span class="n-price">￥148元</span>
+            <a href="#purchase">立即抢购</a>
+    </div>
+    <input id="gradeId" type="hidden"/>
+    <input id="register_from" type="hidden"/>
+</body>
+<!--公共尾部结束-->
+<script id="seajsnode" src="<%= jssrc%>"></script>
+</html>

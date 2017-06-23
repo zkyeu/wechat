@@ -1,0 +1,224 @@
+// 图片path
+@imgMpath: "../../../images/html/ac_class_list/";
+
+.ac-box{
+	font-size: 14px;
+	width: 870px;
+	height:auto;
+	padding-bottom:15px;
+	background-color: #fff;
+	border-radius: 7px;
+	/*position: relative;
+	top: 50%;
+	left: 50%;
+	margin-left: -435px;
+	margin-top: -300px;*/
+	.banner-box{
+		position: relative;
+		.close-btn{
+			width:26px;
+			height:26px;
+			background:url("@{imgMpath}ac_icons.png") -150px 0 no-repeat;
+			position: absolute;
+			right:8px;
+			top:8px;
+			display: block;
+		}
+	}
+	.ac-main{
+		.ac-main-l{
+			float:left;
+			margin-left:85px;
+			width:345px;
+			height: auto;
+			.ac-class-tit{
+				color:#012345;
+				font-size: 16px;
+				margin-top:10px;
+				margin-bottom: 5px;
+
+			}
+			table{
+				width:100%;
+				thead{
+					td{
+						background-color: #eff7fc;
+						color:#012345;
+						height:40px;
+						line-height: 40px;
+						text-align: center;
+					}
+				}
+				tbody{
+					color:#747474;
+					.chose-i{
+						text-align: left;
+						padding-left:15px;
+						span{
+							width:16px;
+							height:16px;
+							display: inline-block;
+							position: relative;
+							top: 2px;
+							left: -5px;
+							background: url("@{imgMpath}ac_icons.png") -50px 0 no-repeat;
+						}
+					}
+					td{
+						text-align: center;
+						border:1px solid #c5e8fe;
+						height: 50px;
+						vertical-align: middle;
+
+						.current{
+							background-position: 0 0;
+						}
+						.o-price{
+							
+							text-decoration: line-through;
+						}
+						.p-price{
+							font-weight: bold;
+							color:#ff5555;
+						}
+					}
+					.l-td{
+						height: 34px;
+
+					}
+					
+				}
+				
+			}
+		}
+		.ac-main-r{
+			color:#012345;
+			float:left;
+			margin-left:30px;
+			.top-s{
+				margin-top:70px;
+			}
+			.top-st{
+				margin-top:80px;
+			}
+			.pay-money{
+				&.pay-money-vip{
+					div i{
+						display: none;
+					}
+				}
+	            &.pay-money-chosen{
+                    #boutiqueClass,#preferentialId{
+                        color: #727272;
+                    }
+	            }
+				.em-1{
+					display: none;
+				}
+				&.pay-money-t{
+					#optionId{
+						visibility: hidden;
+					}
+					.preferential{
+						display: none;
+					}
+					#boutiqueClass{
+						display: none;
+					}
+					em{
+						display: none;
+					}
+					.em-1{
+						display: inline;
+					}
+				}
+				padding-left:30px;
+				padding-bottom:16px;
+				width:330px;
+				border-bottom:1px solid #e8f6ff;
+				
+				div{
+					line-height: 25px;
+					position: relative;
+					i{
+						width:18px;
+						height:18px;
+						display: inline-block;
+						position: absolute;
+						left: -27px;
+						top: 4px;
+						background: url("@{imgMpath}ac_icons.png") -100px 0 no-repeat;
+					}
+					.option-i{
+						background-position: -300px 0;
+					}
+					span{
+						position: absolute;
+						right:0;
+					}
+				}
+				
+			}
+			.pay-money-text{
+				font-size: 16px;
+				text-align: right;
+				margin-top:15px;
+				span{
+					font-size: 18px;
+					color:#ff5555;
+					font-weight: bold;
+				}
+			}
+			.pay-btn{
+				text-align: right;
+				margin-top:20px;
+				a{
+					display: inline-block;
+					width:170px;
+					height:40px;
+					color:#fff;
+					font-size: 18px;
+					background-color: #ff8200;
+					border-radius: 4px;
+					line-height: 40px;
+					text-align: center;
+				}
+			}
+			.grey-btn{
+				a{
+					background-color:#dcdcdc;
+
+				}
+				
+			}
+		}
+	}
+	.ac-introduction{
+		padding-top:10px;
+		width:760px;
+		height:auto;
+		padding-bottom:10px;
+		background-color:#f8f9fc;
+		border-radius: 7px; 
+		margin:15px auto 0;
+		text-align: center;
+		ul{
+			width:680px;
+			margin:9px auto 0;
+			color:#203955;
+			li{
+				float:left;
+				width:170px;
+				text-align: center;
+				p{
+					margin-top:1px;
+				}
+			}
+		}
+	}
+	
+
+}
+
+
+

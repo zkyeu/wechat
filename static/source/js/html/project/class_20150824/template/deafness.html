@@ -1,0 +1,31 @@
+<div class="vediolearing">
+  <div class="mask hide"></div>
+  <div class="videos">
+    <%for(var i=0;i<data['datalist'].length;i++){%>
+        <video  style="display:<%=i!=0?'none':'block'%>" preload  src="<%=domain+data['datalist'][i]['mediaurl']%>" class="video"></video> 
+    <%}%>
+  </div>
+  <div class="introduction">
+    <div class="content">
+      <p class="deafness-chitext">盲听：通过情景理解对话，摆脱中文</p>
+      <%if(data['butstatus']){%>
+        <span class="learning">逐句学习</span> 
+      <%}else{%>
+           <span class="learning disablelearning">逐句学习</span> 
+      <%}%>              
+    </div>
+  </div>
+  <span id="deafness"></span>
+  <span class="replay2 hide"></span>
+  <span class="waiting hide"></span>
+  <span class="player2 hide"></span>
+  <span class="countdown">3</span>
+  <div class="ytp-bezel hide" role="status" data-layer="4" aria-label="播放"  >
+        <div class="ytp-bezel-icon ytp-bezel-icon-play" >
+          <svg height="100%" version="1.1" viewBox="0 0 40 40" width="100%">
+            <path class="ytp-svg-fill" d="m 12.22,28.88 0,-17.77 16.66,8.91 -16.66,8.86 z">
+            </path>
+          </svg>
+        </div>
+    </div>
+</div>

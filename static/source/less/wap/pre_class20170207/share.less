@@ -1,0 +1,351 @@
+@imgPath: "../../../images/wap/pre_class20170207/";
+.report {
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+	&_bg {
+		position: relative;
+		left: 0;
+		top: 0;
+		z-index: 0;
+		width: 100%;
+		overflow: hidden;
+		.bg_img{
+			width: 100%;
+		}
+	}
+	&_introduce {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: auto;
+		.get_stars{
+			margin: 2.5rem auto 0;
+			width: 13.75rem;
+			height: 5.65rem;
+		}
+		.get_star_0{
+			background: url('@{imgPath}get_star_0.png') no-repeat;
+			background-size: cover;
+		}
+		.get_star_1{
+			background: url('@{imgPath}get_star_1.png') no-repeat;
+			background-size: cover;
+		}
+		.get_star_2{
+			background: url('@{imgPath}get_star_2.png') no-repeat;
+			background-size: cover;
+		}
+		.get_star_3{
+			background: url('@{imgPath}get_star_3.png') no-repeat;
+			background-size: cover;
+		}
+		.get_star_4{
+			background: url('@{imgPath}get_star_4.png') no-repeat;
+			background-size: cover;
+		}
+		.get_star_5{
+			background: url('@{imgPath}get_star_5.png') no-repeat;
+			background-size: cover;
+		}
+		.head_img{
+			width: 18.7%;
+			margin-top: -2rem;
+			border-radius: 50%;
+		}
+		.name_warp{
+			margin-top: 0.6rem;
+			p{
+				display: inline-block;
+				height: 2rem;
+				padding: 0 0.9rem;
+				color: #fff;
+				background-color: #ff6535;
+				border-radius: 1rem;
+				font-size: 1.6rem;
+				line-height: 2rem;
+			}
+		}
+		.result_img{
+			margin-top: 2rem;
+			max-height: 7rem;
+			max-width: 75%;
+		}
+	}
+	&_learn {
+		position: relative;
+		top: -3rem;
+		z-index: 2;
+		color: #fff;
+		.tit_level {
+			height: 2.6rem;
+			font-size: 2.6rem;
+			line-height: 2.6rem;
+		}
+		.tit_unit {
+			margin-top: 1.5rem;
+			font-size: 2.4rem;
+			line-height: 2.4rem;
+			color: #fff;
+		}
+		.tit_word {
+			margin-top: 2.5rem;
+			font-size: 1.5rem;
+		}
+		.words_wrap {
+			margin-top: 1.25rem;
+			padding: 0 2.5rem;
+			text-align: center;
+			overflow: hidden;
+			span{
+				display: inline-block;
+				margin:0 0.5rem 0.75rem 0;
+				padding: 0 1rem;
+				line-height:1.7;
+				border-radius: 1rem;
+				color: #dbf0ff;
+				font-size: 1.4rem;
+				border: 1px solid #92b0fd;
+			}
+		}
+		.tit_important {
+			margin-top: 2.2rem;
+			font-size: 1.5rem;
+			line-height: 1.5rem;
+		}
+		.important_content{
+			margin-top: 1rem;
+			padding: 0 2.5rem;
+			text-align: left;
+			font-size: 1.4rem;
+			line-height: 2.1rem;
+			color: #dbf0ff;
+		}
+	}
+}
+.slide{
+	position: relative;
+	padding: 3rem 0;
+	overflow: hidden;
+	text-align: center;
+	background: #638efc url('@{imgPath}sound_slider_bg.png') left bottom no-repeat;
+	background-size: 100% auto;
+	h1 {
+		margin: 0;
+		width: 100%;
+		text-align: center;
+		img {
+			width:26.15rem;
+		}
+	}
+	.show_star {
+		position: absolute;
+		top: -5rem;
+		left: 50%;
+		width: 19.5rem;
+		height: 3.4rem;
+		margin-left: -9.75rem;
+	}
+	.show_star_0 {
+		background:url('@{imgPath}show_star_0.png') no-repeat;
+		background-size:100% 100%;
+	}
+	.show_star_1 {
+		background:url('@{imgPath}show_star_1.png') no-repeat;
+		background-size:100% 100%;
+	}
+	.show_star_2 {
+		background:url('@{imgPath}show_star_2.png') no-repeat;
+		background-size:100% 100%;
+	}
+	.show_star_3 {
+		background:url('@{imgPath}show_star_3.png') no-repeat;
+		background-size:100% 100%;
+	}
+	.show_star_4 {
+		background:url('@{imgPath}show_star_4.png') no-repeat;
+		background-size:100% 100%;
+	}
+	.show_star_5 {
+		background:url('@{imgPath}show_star_5.png') no-repeat;
+		background-size:100% 100%;
+	}
+	.left_page {
+		position: absolute;
+		top: 1.7rem;
+		left: 1.7rem;
+		z-index: 2;
+		font-size: 1.8rem;
+		color: #bbceff;
+		font-weight: 600;
+	}
+    .card_wrap {
+    	position: relative;
+    	top: 1.2rem;
+    	z-index: 1;
+		margin: 0 1rem;
+		max-width: 100%;
+		height: 92%;
+		font-family: 'Arial';
+		.eng_card {
+    		position:absolute;
+    		left:-4px;
+    		top:-4px;
+    		width: 100%;
+    		height: 100%;
+    		border: 4px solid #c9ddff;
+			border-radius: 1rem;
+    		-webkit-transition: 0.6s ease-in-out;
+			-moz-transition: 0.6s ease-in-out;
+			-ms-transition: 0.6s ease-in-out;
+			-o-transition: 0.6s ease-in-out;
+			transition: 0.6s ease-in-out;
+			.eng_btn {
+	    		position: absolute;
+	    		right: 0rem;
+	    		bottom: 0rem;
+	    		width: 6rem;
+	    		height: 6rem;
+	    		span {
+	    			position: absolute;
+	    			right: 0.5rem;
+	    			bottom: 0.5rem;
+	    			width: 3.2rem;
+	    			height: 3.2rem;
+					background:url('@{imgPath}eng_btn.png') no-repeat;
+					background-size:100% 100%;
+	    		}
+	    	}
+			.listen_wrap {
+				position: absolute;
+				bottom: 2rem;
+				left: 50%;
+				margin-left: -3.25rem;
+				width: 6.5rem;
+				height: 6.5rem;
+				overflow: hidden;
+				border-radius: 50%;
+				.listen_btn {
+					position: absolute;
+					left: 0;
+					top: 0;
+					z-index: 2;
+					width: 100%;
+					height: 100%;
+					background:url('@{imgPath}share_play.png') no-repeat;
+					background-size: 100% 100%;
+				}
+				.pause_btn {
+					position: absolute;
+					left: 0;
+					top: 0;
+					z-index: 2;
+					width: 100%;
+					height: 100%;
+					background:url('@{imgPath}share_stop.png') no-repeat;
+					background-size: 100% 100%;
+				}
+				img{
+					position: absolute;
+					left: 0;
+					top: 0;
+					z-index: 1;
+					width: 100%;
+					height: 100%;
+				}
+			}
+    	}
+    	.chi_card {
+    		display: none;
+    		position:absolute;
+    		left:-4px;
+    		top:-4px;
+    		width: 100%;
+    		height: 100%;
+    		border: 4px solid #c9ddff;
+			border-radius: 1rem;
+			background-color: #edf2ff;
+    		-webkit-transition: 0.6s ease-in-out;
+			-moz-transition: 0.6s ease-in-out;
+			-ms-transition: 0.6s ease-in-out;
+			-o-transition: 0.6s ease-in-out;
+			transition: 0.6s ease-in-out;
+			.chi_btn {
+	    		position: absolute;
+	    		right: 0rem;
+	    		bottom: 0rem;
+	    		width: 6rem;
+	    		height: 6rem;
+	    		span {
+	    			position: absolute;
+	    			right: 0.5rem;
+	    			bottom: 0.5rem;
+	    			width: 3.2rem;
+	    			height: 3.2rem;
+					background:url('@{imgPath}chi_btn.png') no-repeat;
+					background-size:100% 100%;
+	    		}
+	    	}
+	    	.content {
+	    		height: 25rem;
+	    	}
+    	}
+    	.content {
+    		overflow-y:scroll;
+	    	display: -ms-flexbox;
+			-ms-flex-align: center;
+			-ms-flex-pack: center;
+			display: -moz-box;
+			-moz-box-align: center;
+			-moz-box-pack: center;
+			display: -webkit-box;
+			-webkit-box-pack: center;
+			-webkit-box-align: center;
+	    	height: 17rem;
+	    	margin: 1.65rem 2.5rem 0;
+	    	font-size: 1.6rem;
+	    	font-weight: 600;
+	    	line-height: 2.5rem;
+	    	color: #638efc;
+	    	p {
+				text-align: left;
+				word-wrap:break-word;
+				word-break:break-all;
+				span {
+					display: block;
+					width: 100%;
+					text-align: center;
+				}
+	    	}
+	   	}
+    }
+    .swiper-container {
+    	width: 100%;
+    	height: 35rem;
+    	padding-top: 5rem;
+    	margin-top: 2.5rem;
+    	.swiper-slide {
+		    width: 82%;
+		    height: 35rem;
+		    background-color: #edf2ff;
+	    	height: 30.7rem;
+	    	border-radius: 2rem;
+
+		    .swiper-slide-shadow-left {
+		    	background-image: -webkit-gradient(linear,left top,right top,from(rgba(99,142,252,.8)),to(rgba(0,0,0,0)));
+		        background-image: -webkit-linear-gradient(right,rgba(99,142,252,.8),rgba(0,0,0,0));
+		        background-image: -moz-linear-gradient(right,rgba(99,142,252,.8),rgba(0,0,0,0));
+		        background-image: -o-linear-gradient(right,rgba(99,142,252,.8),rgba(0,0,0,0));
+		        background-image: linear-gradient(to left,rgba(99,142,252,.8),rgba(0,0,0,0));
+		    }
+		    .swiper-slide-shadow-right {
+				background-image: -webkit-gradient(linear,right top,left top,from(rgba(99,142,252,.8)),to(rgba(0,0,0,0)));
+		        background-image: -webkit-linear-gradient(left,rgba(99,142,252,.8),rgba(0,0,0,0));
+		        background-image: -moz-linear-gradient(left,rgba(99,142,252,.8),rgba(0,0,0,0));
+		        background-image: -o-linear-gradient(left,rgba(99,142,252,.8),rgba(0,0,0,0));
+		        background-image: linear-gradient(to right,rgba(99,142,252,.8),rgba(0,0,0,0))
+		    }
+		}
+	}
+}

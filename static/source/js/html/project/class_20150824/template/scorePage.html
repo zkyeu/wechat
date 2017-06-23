@@ -1,0 +1,47 @@
+<div class="scorePage" first-page="<%=data.page%>">
+	<%if (data.score <= 60) {%>
+	      <dl class="score01">
+	        <dt id="resultScore" color-value="#FF5B5B"><%=data.score%></dt>
+	        <dd>
+	          <ul>
+	            <li><h3>上课时，<span style="color: #ff3737">极可能出现以下问题：</span></h3></li>
+	            <li><p>1. 教材的问题回答不上来<br>2. 本课的词汇和句型很快遗忘，无法脱口而出！</p></li>
+	            <li><a href="javascript:;" class="scoreBtn">我要提高分数！</a></li>
+	          </ul>
+	        </dd>
+	      </dl>
+    <%} else if (data.score>60 && data.score<80) {%>
+      <dl class="score02">
+                <dt id="resultScore" color-value="#FF8200"><%=data.score%></dt>
+                <dd>
+                  <ul>
+                    <li><h3>上课效果<span style="color: #fa7f00">有提升</span>，<br>建议提高分数获得更好效果：</h3></li>
+                    <li><p>1. 教材的问题轻松回答！<br>2. 本课的词汇和句型记忆深刻，脱口而出！</p></li>
+                    <li><a href="javascript:;" class="scoreBtn">我要提高分数！</a></li>
+                  </ul>
+                </dd>
+              </dl>
+    <%} else if (data.score>=80 && data.score<100) {%>
+      <dl class="score03">
+                <dt id="resultScore" color-value="#4EBC23"><%=data.score%></dt>
+                <dd>
+                  <ul>
+                    <li><h3>上课效果<span style="color: #4ebc23;">有明显提升</span>，<br>基本可以做到：</h3></li>
+                    <li><p>1. 教材的问题轻松回答！<br>2. 本课的词汇和句型记忆深刻，脱口而出！</p></li>
+                    <li><a href="javascript:;" class="scoreBtn">我要追求更高分！</a></li>
+                  </ul>
+                </dd>
+              </dl>
+    <%} else if (data.score>=90 && data.score<=100) {%>
+      <dl class="score04">
+                <dt id="resultScore" color-value="#4EBC23"><%=data.score%></dt>
+                <dd>
+                  <ul>
+                    <li><h3>上课效果将<span style="color: #4ebc23;">有极大提升</span>，</li>
+                    <li><p>1. 教材的问题轻松回答！<br>2. 本课的词汇和句型记忆深刻，脱口而出！</p></li>
+                  </ul>
+                </dd>
+              </dl>
+     <%}%>         
+<p class="fotWord"><i></i>本环节成绩取[看图说话]的平均分</p>
+</div>

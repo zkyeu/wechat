@@ -1,0 +1,112 @@
+@import "../common/base.less";
+@imgPathImg: "../../../images/html/future_web/";
+@docWidth: 1000px;
+@bgColor: #efefef;
+@fontSize: 13px;
+@textColor: #999;
+@linkColor: #000;
+@hoverColor: #ff8200;
+@borderColor: #dbdee0;
+@fontFamily: 'Microsoft YaHei','\5fae\8f6f\96c5\9ed1',Arial,Verdana,Tahoma;
+input{
+  background-color: transparent;
+}
+.widthMain{
+  margin:0px auto;
+  width:@docWidth;
+  position: relative;
+}
+.future{
+  .f_top{
+    position: absolute;
+    left: 50%;
+    top:0;
+    margin-left: -638px;
+  }
+  .plane{
+    position: absolute;
+    right: 62px;
+    bottom:-70px;
+  }
+  .top{
+    height:577px;
+    background-color: #61d6f2;
+    .widthMain{
+      height: 100%;
+    }
+  }
+  .bottom{
+    height: 1862px;
+    background-color: #fff200;
+    .widthMain{
+      height: 100%;
+    }
+  }
+  .cont{
+    position: absolute;
+    left:50%;
+    top:0;
+    margin-left: -638px;
+  }
+  .hat{
+    position: absolute;
+    right:155px;
+    top:-23px;
+    z-index: 2;
+  }
+  .login{
+    height: 515px;
+    background-color: #e6e6e6;
+    .widthMain{
+      padding:106px 261px 0;
+      width:478px;
+    }
+  }
+  .list{
+    width: 476px;
+    .phone,.password{
+      background-color: #fff;
+      border:1px solid #a5a5a5;
+      height: 76px;
+      padding:0 42px;
+      input{
+        width: 100%;
+        height: 74px;
+        font-size: 30px;
+      }
+    }
+    .phone{
+      margin-bottom: 18px;
+    }
+    .password{
+      margin-bottom: 26px;
+    }
+    .sure{
+      height: 83px;
+      background-color: #eb6100;
+      border-radius: 10px;
+      margin-bottom: 28px;
+      input{
+        font-size: 36px;
+        color: #fff;
+        text-align: center;
+        height: 83px;
+        width: 100%;
+      }
+    }
+    .link{
+      height: 34px;
+      text-align: center;
+      span{
+        padding-bottom: 2px;
+        border-bottom: 2px solid #eb6100;
+      }
+      a{
+        color: #eb6100;
+        font-size: 30px; 
+        line-height: 1;
+        display: inline-block;
+      }
+    }
+  }
+}

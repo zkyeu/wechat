@@ -1,0 +1,99 @@
+@import "module/reset.less";
+@imgPath: "../../../images/html/ac_popup/";
+// 清除选中
+.clearSelect{
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    /* No support for these yet, use at own risk */
+    -o-user-select: none;
+    user-select: none;
+}
+
+.tc {
+text-align:justify;
+text-justify:inter-ideograph;
+-webkit-text-align-last:justify;/*chrome 20+*/
+}
+
+.acLoading-mask{
+	position:fixed;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	background:#fff;
+}
+
+.acLoading-content{
+	position: fixed;
+	left: 50%;
+	top: 250px;
+	width: 120px;
+	height: 120px;
+	margin: -60px 0 0 -60px;
+	background: url('../../../images/html/ac_dialog/acloading.gif') no-repeat;
+	background-size: 100%;
+}
+
+.ac-popup-wrap{
+	width: 830px;
+	padding: 0 20px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.ac-popup-header{
+	height: 50px;
+	line-height: 50px;
+	font-size: 15px;
+	.a-close{
+		font-size: 13px;
+		text-decoration: underline;
+	}
+	overflow: hidden;
+}
+
+.ac-popup-content{
+	height: 450px;
+	background-color: #fff;
+	overflow: hidden;
+}
+
+.ac-popup-bottom{
+	padding-top: 22px;
+	text-align: center;
+	position: relative;
+	.btn-teasend{
+		display: inline-block;
+		height: 38px;
+		line-height: 38px;
+		width: 160px;
+		color: #fff;
+		font-size: 16px;
+		background-color: #ff8200;
+		border-radius: 4px;
+		cursor: pointer;
+		&.btn-disabled{
+			background-color: #cdcdde;
+		}
+	}
+}
+
+// ac_to_meeting
+.ac-to-meeting{
+	.to-meeting{
+		color: #012345;
+		text-align: center;
+		font-size: 18px;
+	}
+	.meeting-timmer{
+		padding: 130px 0 30px 0;
+		span{
+			font-size: 30px;
+			color: #ea3005;
+		}
+	}
+}
+@import "module/stu_question.less";
+@import "module/stu_service_number.less";

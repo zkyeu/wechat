@@ -229,7 +229,7 @@ define("defaultAm",["weixinUtil","echarts.min"],function(require,exports,module)
                         barBorderRadius:[4, 4, 4, 4],
                         // color: dataBase.normal.colorList[3]
                         color: function (params){
-                            var colorList = ['#18aeff','#45fff2','#ff4b6d'];
+                            var colorList = ['#18aeff','#45fff2','#ff4b6d','#96d23a'];
                             return colorList[params.dataIndex];
                         }
                     }
@@ -253,23 +253,4 @@ define("defaultAm",["weixinUtil","echarts.min"],function(require,exports,module)
 
     // 使用刚指定的配置项和数据显示图表。
     myChart.setOption(option);
-    // var persent = 0;
-    // $.get('/WechatStats/loginStat').done(function (data) {
-    //     var getData = JSON.parse(data);
-    //     var hand= parseInt(getData.hand_send);
-    //     var auto = parseInt(getData.auto_send);
-    //     persent = (auto/hand*100).toFixed(2);
-    //     var options = {
-    //         useEasing : true,
-    //         useGrouping : true,
-    //         separator : ',',
-    //         decimal : '.',
-    //         prefix : '',
-    //         suffix : ''
-    //     };
-    //     var demo = new CountUp("myTargetElement", 1, persent, 2, 4, options);
-    //     $(function(){
-    //         demo.start();
-    //     })
-    // });
 });

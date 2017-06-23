@@ -1,0 +1,457 @@
+@import "../common/www/base.less";
+@import "../common/usa_header.less";
+@imgUrl:"../../../images/html/introduction_usa/";
+.introduction{
+	.banner{
+		height:590px;
+		background:url("@{imgUrl}banner.jpg") center center no-repeat;
+	}
+	.container{
+		//所有h2标题背景引入
+		 > div{
+		 	padding:50px 0;
+		 	.title{
+		 		margin:0 auto;
+		 		background:url('@{imgUrl}title_sprite.png') no-repeat;
+		 	}
+		 }
+		 //全程同步美国小学
+		.sync{
+			height:458px;
+			background:url('@{imgUrl}sync_bg.jpg') top right no-repeat;
+			.title{
+				width:396px;
+				height:46px;
+				background-position:0 0;
+			}
+			.wrap{
+				width:1000px;
+				margin:50px auto;
+				.slider{
+					float:left;
+					position:relative;
+					width:550px;
+					height:350px;
+					overflow:hidden;
+					ul{
+						position:absolute;
+						left:0;
+						top:0;
+						width:400%;
+					}
+					li{
+						float:left;
+					}
+					.point{
+						position:absolute;
+						bottom:40px;
+						width:100%;
+						text-align:center;
+						a{
+							display:inline-block;
+							width:10px;
+							height:10px;
+							margin-right:10px;
+							background:url('@{imgUrl}dot.png') -20px 0 no-repeat;
+						}
+						.current{
+							width:20px;
+							background-position:0 0;
+						}
+					}
+				}
+				.content{
+					float:left;
+					position:relative;
+					width:368px;
+					height:270px;
+					padding:40px 15px;
+					background:url('@{imgUrl}sync_content.jpg') left top no-repeat;
+					color:#fff;
+					font-size:20px;
+					p{
+						margin-bottom:30px;
+					}
+					.icon{
+						position:absolute;
+						right:-45px;
+						top:-36px;
+						display:inline-block;
+						width:118px;
+						height:73px;
+						background:url('@{imgUrl}sync_icon.png') no-repeat;
+					}
+				}
+			}
+		}
+		//同步美国小学教师
+		.sync-teacher{
+			height:1146px;
+			background:url("@{imgUrl}sync_teacher.jpg") center center no-repeat;
+			.title{
+				width:393px;
+				height:46px;
+				background-position:0 -46px;
+			}
+			.teacher-lst{
+				width:1000px;
+				margin:50px auto;
+				li{
+					float:left;
+					width:190px;
+					height:315px;
+					margin-right:20px;
+					padding:20px;
+					overflow:hidden;
+					background:#fff;
+					border-bottom:#00a0db solid 6px;
+					text-align:center;
+					.icon{
+						display:inline-block;
+						width:34px;
+						height:20px;
+						margin-right:5px;
+						background:url('@{imgUrl}sync_teacher.png') 0  -159px no-repeat;
+						vertical-align:bottom;
+					}
+				}
+				.name{
+					font-size:20px;
+				}
+				.address,.school{
+					margin-top:5px;
+					font-size:14px;
+				}
+				.header{
+					width:150px;
+					height:150px;
+					margin:0 auto;
+					background:url('@{imgUrl}sync_teacher.png') no-repeat;
+				}
+				.andrew{
+					background-position:0 0;
+				}
+				.gianne{
+					background-position:-150px 0;
+				}
+				.nicole{
+					background-position:-300px 0;
+				}
+				.rhonda{
+					background-position: -450px 0;
+				}
+				.base{
+					margin-top:25px;
+					font-size:14px;
+					color:#969696;
+				}
+			}
+			.teacher-wrap{
+				width:1000px;
+				margin:60px auto;
+				text-align:center;
+				li{
+					position:relative;
+					float:left;
+					width:179px;
+					height:180px;
+					padding:35px;
+					background:#fff;
+					border-right:#dcdcdc solid 1px;
+					a{
+						display:block;
+						width:160px;
+						height:160px;
+						margin:10px auto;
+						background:#fff url('@{imgUrl}quality.png') no-repeat;
+					}
+					.arr{
+						display:none;
+						position:absolute;
+						left:110px;
+						bottom:-30px;
+						width:0;
+					    height:0;
+					    border-left:16px solid transparent;
+					    border-right:16px solid transparent;
+					    border-top:16px solid #0096ff;
+					    z-index:9;
+					}
+				}
+				.hover{
+					width:180px;
+					background:#0096ff;
+					border-right:#0096ff;
+					a{
+						width:180px;
+						height:180px;
+						background:#0096ff url('@{imgUrl}quality.png') no-repeat;
+					}
+					.arr{
+						display:block;
+					}
+				}
+				.rate{
+					&.hover{
+						a{
+							background-position:0 -160px;
+						}
+					}
+				}
+				.cert{
+					&.hover{
+						a{
+							background-position:-186px -160px;
+						}
+					}
+					a{
+						background-position:-160px 0;
+					}
+				}
+				.education{
+					&.hover{
+						a{
+							background-position:-377px -160px;
+						}
+					}
+					a{
+						background-position:-320px 0;
+					}
+				}
+				.from{
+					&.hover{
+						a{
+							background-position:-578px -160px;
+						}
+					}
+					a{
+						background-position:-480px 0;
+					}
+				}
+				.base{
+					padding:15px 0;
+					background:#0096ff;
+				}
+			}
+		}
+		//同步美国小学课程体系
+		.sync-course{
+			.title{
+				width:493px;
+				height:46px;
+				background-position:0 -92px;
+			}
+			.wrap{
+				width:1000px;
+				margin:50px auto;
+				text-align:center;
+			}
+		}
+		//同步美国小学教材
+		.sync-textbook{
+			background:#f3f3f3;
+			.wrap{
+				width:1000px;
+				margin:0 auto;
+				color:#969696;
+				font-size:16px;
+				.title{
+					width:237px;
+					height:29px;
+					margin:0;
+					background-position:0 -138px;
+				}
+				.con{
+					margin-top:45px;
+				}
+				.describe{
+					float:left;
+					width:420px;
+					margin-right:10px;
+					p{
+						margin-bottom:40px;
+						line-height:25px;
+					}
+				}
+				.slider{
+					position:relative;
+					float:left;
+					width:513px;
+					height:368px;
+					padding:62px 0 0 47px;
+					background:url('@{imgUrl}textbook_slider.png') no-repeat;
+					.img-lst{
+						position:relative;
+						width:480px;
+						height:270px;
+						overflow:hidden;
+					}
+					ul{
+						position:absolute;
+						left:0;
+						top:0;
+						width:400%;
+					}
+					li{
+						float:left;
+					}
+					.icon{
+						position:absolute;
+						left:25px;
+						top:35px;
+						display:inline-block;
+						width:91px;
+						height:98px;
+						background:url('@{imgUrl}textbook_icon.png') no-repeat;
+						z-index:9;
+					}
+					.point{
+						text-align:center;
+						a{
+							display:inline-block;
+							width:10px;
+							height:10px;
+							margin-right:5px;
+							background:url('@{imgUrl}dot.png') -50px 0 no-repeat;
+						}
+						.current{
+							width:20px;
+							background-position:-30px 0;
+						}
+					}
+				}
+			}
+		}
+		//51talk教学流程
+		.teaching-process{
+			text-align:center;
+			.title{
+				width:346px;
+				height:46px;
+				background-position:0 -167px;
+			}
+			.des{
+				margin-top:40px;
+				font-size:16px;
+				color:#646464;
+			}
+			.wrap{
+				width:1000px;
+				margin:50px auto;
+				li{
+					float:left;
+					margin:0 40px 30px 0;
+				}
+			}
+		}
+		//51talk课堂展示
+		.class-show{
+			height:537px;
+			background:url("@{imgUrl}show_bg.jpg") center center no-repeat;
+			.title{
+				width:345px;
+				height:46px;
+				background-position:0 -213px;
+			}
+			.wrap{
+				width:1000px;
+				margin:50px auto;
+				text-align:center;
+			}
+		}
+		//51talk家长说
+		.parents{
+			background:#f3f3f3;
+			.wrap{
+				width:1000px;
+				margin:50px auto;
+				li{
+					float:left;
+					width:240px;
+					height:440px;
+					margin-right:10px;
+					border-bottom:#c9c9c9 solid 6px;
+					background:#fff;
+					font-size:14px;
+					p{
+						padding:10px;
+						line-height:25px;
+					}
+				}
+				.sign{
+					padding:15px;
+					text-align:right;
+					p{
+						padding:0;
+					}
+				}
+			}
+			.title{
+				width:296px;
+				height:46px;
+				background-position:0 -259px;
+			}
+		}
+		//51talk专属优势
+		.advantage{
+			.title{
+				width:346px;
+				height:46px;
+				background-position:0 -305px;
+			}
+			.adv-wrap{
+				width:1000px;
+				height:360px;
+				margin:50px auto;
+			}
+			li{
+				position:relative;
+				float:left;
+				width:249px;
+				height:360px;
+				margin-right:1px;
+				background:url("@{imgUrl}advantage.jpg") no-repeat;
+				overflow:hidden;
+				transition:width .5s ease;
+				transform-origin:right top;
+			}
+			.adv-course{
+				background-position:0 0;
+			}
+			.adv-time{
+				background-position:0 -360px;
+			}
+			.adv-classroom{
+				background-position:0 -720px;
+			}
+			.mask{
+				display:block;
+				width:100%;
+				height:100%;
+				background:rgba(0,0,0,.3)
+			}
+			.hover{
+				width:499px;
+				.mask{
+					display:none;
+				}
+			}
+			.buy{
+				display:block;
+				width:400px;
+				height:74px;
+				margin:0 auto;
+				line-height:70px;
+				font-size:32px;
+				font-weight:600;
+				color:#fff;
+				background:url('@{imgUrl}title_sprite.png') 0 -351px no-repeat;
+				text-align:center;
+			}
+		}
+	}
+	.media-footer{
+		height:615px;
+		background:url('@{imgUrl}media.jpg') center center no-repeat;
+	}
+}

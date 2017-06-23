@@ -1,0 +1,504 @@
+@import "../common/base.less";
+@import "../common/www/w_header.less";
+@import "../common/www/w_footer.less";
+@imgPathImg: "../../../images/html/back_carnival/";
+.widthMain{margin:0px auto;width:@docWidth;position: relative;}
+.clearfix{*zoom: 1;}
+.clearfix:after{content: "";display: block;clear: both;}
+// 公共头部
+.pri-header{
+  background-color: #fff;
+  .header{
+    .hr-lt{
+      cursor: pointer;
+    }
+  }
+}
+// 主体内容
+.pri-main{
+  position: relative;
+  background-color: #35be78;
+  // banner
+  .banner{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 494px;
+    background: url('@{imgPathImg}banner.jpg') top center no-repeat;
+  }
+  .pri-list01,.pri-list02,.pri-list03,.pri-list04,.pri-list05,.pri-list06{
+    position: relative;
+    z-index: 2;
+    .widthMain{
+      position: relative;
+      z-index: 2;
+    }
+    .u-btn{
+      z-index: 99;
+      position: absolute;
+      left: 50%;
+      bottom: 78px;
+      display: inline-block;
+      width: 350px;
+      height: 60px;
+      margin-left: -175px;
+      background: url('@{imgPathImg}icon-btn.png') top center no-repeat;
+    }
+  }
+  // 开始抽奖
+  .pri-list01{
+    height: 780px;
+    background: url('@{imgPathImg}pri01_bg.jpg') center center no-repeat;
+    .widthMain{
+      height: 745px;
+      background: url('@{imgPathImg}rota_bg.png') top center no-repeat;
+      .lt{
+        float: left;
+        position: relative;
+        left: -39px;
+        top:235px;
+        width: 522px;
+        color: #b43e08;
+        z-index: 9;
+        .prize_list{
+            margin-top: 20px;
+            height: 185px;
+            .names{
+                padding-left: 110px;
+                padding-top: 4px;
+                height: 169px;
+                line-height: 32px;
+                font-size: 16px;
+                overflow: hidden;
+                color: #f65b57;
+            }
+        }       
+        .tit{
+          font-size: 12px;
+          line-height: 20px;
+          margin-top: 15px;
+          margin-bottom: 16px;
+          margin-left: 69px;
+          color: #ea4e00;
+        }
+        .rota_more{
+          font-size: 16px;
+          margin-left: 69px;
+          cursor:pointer;
+          width: 90px;
+          color: #ea4e00;
+        }
+      }
+      .dial-bg{
+        width: 396px;
+        height:396px;
+        padding:32px;
+        position: absolute;
+        top:156px;
+        right: 30px;
+        background: url('@{imgPathImg}dial_bg.png') no-repeat;
+        overflow: hidden;
+        .l_grid{
+          margin-right: -6px;
+          li{
+            width: 127px;
+            height: 132px;
+            margin-right: 6px;
+            margin-bottom: 2px;
+            float: left;
+            background:url('@{imgPathImg}l_bg.png') 0 -136px no-repeat;
+            &.pointer{
+              background-position:0 -274px;
+            }
+            &.pointer:active{
+              background-position:0 -412px;
+            }
+            &.l_now{
+              background-position: 0 0;
+            }
+            img{
+              margin-left: 5px;
+              margin-top: 10px;
+            }
+          }
+        }  
+      }
+    }
+    .u-btn{background-position: 0 0;}
+  }
+  // 老师列表
+  .pri-list02{
+    height: 790px;
+    background: url('@{imgPathImg}pri02_bg.jpg') center center no-repeat;
+    .widthMain{
+      position: relative;
+      height: 755px;
+      background: url('@{imgPathImg}teacher_bg.png') top center no-repeat;
+      overflow: hidden;
+        .m-list{
+          .clearfix;
+          margin-top: 160px;
+          position: relative;
+          width: 100%;
+          height: 490px;
+          overflow: hidden;
+        }
+        .m-list .m-list01{
+          position: relative;
+          text-align: left;
+          li a{ 
+            color: #086896;
+            font-size: 14px;
+            line-height: 24px;
+          }
+          .tit{
+            margin-top: 12px;
+            font-size: 16px;
+            line-height: 30px;
+            margin-bottom: 10px;
+            height: 60px;
+            span{font-weight: 600;}
+          }
+        }
+        .m-list>li{
+          float: left;
+          position: relative;
+          width: 200px;
+          color: #086896;
+          font-size: 14px;
+          line-height: 24px;
+          padding-left: 25px;
+          padding-right: 25px;
+          text-align: center;
+        }
+        .m-list01 .m-list01-ul{
+          display: none;
+          width: 190px;
+          height: 213px;
+          position: absolute;
+          left: -5px;
+          top: 68px;
+          padding: 15px 5px 10px;
+          background: url('@{imgPathImg}tit_bg.png') top center no-repeat;
+          color: #fff;
+          font-size: 14px;
+          line-height: 24px;
+          text-align: left;
+        }
+    }
+    .u-btn{background-position: 0 -60px;}
+  }
+  // 推荐送次卡
+  .pri-list03{
+    height: 780px;
+    background: url('@{imgPathImg}pri03_bg.jpg') center center no-repeat;
+    .widthMain{
+      position: relative;
+      height: 745px;
+      background: url('@{imgPathImg}recommend_bg.png') top center no-repeat;
+    }
+    .u-btn{background-position: 0 -120px;}
+  }
+  // 爆款课程
+  .pri-list04{
+    height: 719px;
+    background: url('@{imgPathImg}pri04_bg.jpg') center center no-repeat;
+    z-index: 99;
+    .widthMain{
+      position: relative;
+      z-index: 2;
+      height: 685px;
+      background: url('@{imgPathImg}best_class_bg.png') top center no-repeat;
+      .u-tit{
+        position: absolute;
+        bottom: 133px;
+        width: 100%;
+        color: #ea4e00;
+        font-size: 30px;
+        line-height: 48px;
+        text-align: center; 
+        span{
+          font-weight: 600;
+        }
+      }
+    }
+    .u-btn{background-position: 0 -180px;}
+  }
+  // 美国小学展示
+  .pri-list05{
+    height: 657px;
+    background: url('@{imgPathImg}pri05_bg.jpg') center center no-repeat;
+    .widthMain{
+      position: relative;
+      height: 655px;
+      background: url('@{imgPathImg}north_school_bg.png') top center no-repeat;
+    }
+    .u-btn{background-position: 0 -240px; bottom: 45px;}
+  }
+  .pri-list06{
+    .widthMain{
+      position: relative;
+      height: 241px;
+      img{
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        margin-left: -206px;
+      }
+    }
+  }
+}
+
+// 获得奖品
+.dialog {
+    display: none;
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 21;
+    width: 100%;
+    height: 100%;
+    filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#99000000', endColorstr='#99000000');
+    background-color:rgba(0,0,0,0.6);
+    .info{
+        position: relative;
+        width: 812px;
+        height: 583px;
+        left: 50%;
+        top: 50%;
+        margin-top: -350px;
+        margin-left: -406px;
+        background: url('@{imgPathImg}prize_bg02.png') center no-repeat;
+        .box{
+            position: relative;
+            left: 171px;
+            top: 196px;
+            width: 450px;
+            height: 357px;
+            text-align: center;
+            h3{
+                font-size: 18px;
+                color: #5e4000;
+                margin-bottom: 30px;
+            }
+            .close{
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                right: 40px;
+                top: -54px;
+            }
+            img{
+              display: none;
+            }
+        }
+    }
+}
+// 我的抽奖记录和未抽奖
+.dialog2 {
+    display: none;
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 21;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    .tip{
+        position: relative;
+        width: 380px;
+        height: 170px;
+        left: 50%;
+        top: 50%;
+        background: #fff;
+        margin-top: -85px;
+        margin-left: -190px;
+        border-radius: 10px;
+        .close{
+            width: 36px;
+            height: 36px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background: url('@{imgPathImg}join_close.jpg') no-repeat;
+        }
+        .gold_box{
+          background: url('@{imgPathImg}look_detail02.png') no-repeat;
+          position: absolute;
+          width: 109px;
+          height: 56px;
+          right: 10px;
+          bottom: -2px;
+        }
+        .text{
+            float: left;
+            color: #ee6400;
+            padding-right: 25px;
+        }
+        .text1{
+            padding-left: 24px;
+            padding-top: 32px;
+            p{
+                line-height: 32px;
+                font-size: 16px;
+                font-weight: bold;
+            }
+            h3{
+                padding-top: 5px;
+                font-size: 24px;
+                span{
+                  font-size: 18px;
+                }
+            }
+        }
+        .text2{
+            padding-left: 55px;
+            h3{
+                font-size: 18px;
+                padding-top: 60px;
+            }
+        }
+    }
+    .tip-1,.tip-2{
+      display: none;
+    }
+}
+// 更多规则
+.dialog3 {
+    display: none;
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 21;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    .tip{
+        position: relative;
+        width: 540px;
+        height: 282px;
+        left: 50%;
+        top: 50%;
+        background: #fff;
+        margin-top: -200px;
+        margin-left: -270px;
+        border-radius: 10px;
+        .close{
+            width: 36px;
+            height: 36px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background: url('@{imgPathImg}join_close.jpg') no-repeat;
+        }
+       h3{
+        font-size: 18px;
+        color: #ee6400;
+        padding: 30px 0 15px 55px;
+        font-weight: 600;
+       }
+       .line{
+        margin-left: 4px;
+        width: 531px;
+        height: 4px;
+        background: url('@{imgPathImg}point_bg.png') no-repeat;
+       }
+       .details{
+        padding-left: 55px;
+        padding-top: 18px;
+        font-size: 14px;
+        line-height: 24px;
+        color:#ee6400;
+        ul{
+          padding-left: 10px;
+        }
+       }
+    }
+}
+.dialog4 {
+    display: none;
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index:21;
+    width: 100%;
+    height: 100%;
+    filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#99000000', endColorstr='#99000000');
+    background-color:rgba(0,0,0,0.6);
+    z-index: 1000;
+    .add_info{
+        position: relative;
+        width: 963px;
+        height: 548px;
+        left: 50%;
+        top: 50%;
+        margin-top: -320px;
+        margin-left: -481px;
+        background-color: transparent;
+        .close{
+          position: absolute;
+          left: 730px;
+          top: 90px;
+          width: 64px;
+          height: 64px;
+          background: url('@{imgPathImg}close03.png') center no-repeat;
+        }
+    }
+}
+.sysInfo{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: none;
+  .dtInfo{
+    position: absolute;
+    width: 234px;
+    top: 50%;
+    left: 50%;
+    margin:-100px 0 0 -117px;
+    .tit{
+      height: 30px;
+      line-height: 30px;
+      background-color: #ff8200;
+      padding:0 12px;
+      color: #fff;
+      border-top-right-radius: 3px;
+      border-top-left-radius: 3px;
+    }
+    .test{
+      text-align: center;
+      padding:20px 0;
+      border: 1px #e4eaee solid;
+      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+    background-color: #fff;
+      .down{
+        display: block;
+        width: 72px;
+        height: 24px;
+        line-height: 24px;
+        color: #fff;
+        text-align: center;
+        background-color: #ff8200;
+        margin:30px 0 0 80px;
+      }
+    }
+  }
+}

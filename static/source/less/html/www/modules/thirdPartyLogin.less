@@ -1,0 +1,310 @@
+
+/* 第三方登录 */
+
+.u-err{
+  background-color: #ff3434;
+  color: #fff;
+  padding:0 9px;
+  height: 0;
+  overflow: hidden;
+}
+
+
+
+.thirdParty{
+  background-color: @bgColor;
+  padding-top:150px;
+  .t_p_inner{
+    width: @docWidth;
+    margin:0 auto;
+    height: 470px;
+    .inner_left{
+      float: left;
+    }
+    .inner_right{
+      margin-left: 610px;
+      width: 310px;
+      overflow: hidden;
+      .inner_tit{
+        height: 36px;
+        span{
+          float: left;
+          font-size: 17px;
+          color: #1e1e1e;
+        }
+        a{
+          float: right;
+          color: #ffa800;
+          font-size: 15px;
+        }
+      }
+      .inner_reg{
+        li{
+          /*height: 49px;*/
+          /*line-height: 49px;*/
+          margin-bottom: 14px;
+          overflow: hidden;
+          border:1px solid #e7e7e7;
+        }
+        .inner_r_icon{
+          background: url("@{imgPath}sp_login.png") left -1px no-repeat;
+          float: left;
+          width: 13px;
+          height: 13px;
+          margin-top: 18px;
+          margin-right: 20px;
+          &.inner_r_icon2{
+            background-position: 0 -29px;
+            height: 15px;
+          }
+        }
+        .inner_reg_top{
+          padding:0 15px;
+          height: 49px;
+        }
+        .u-error{
+          border:1px solid #ff3434;
+          /*transition:all 0.5s;*/
+          .u-err{
+           transition:height 0.5s;
+            width: 292px;
+            height: 20px;
+          }
+
+        }
+        input{
+          width: 240px;
+          float: left;
+          font-size: 16px;
+          height: 48px;
+          background-color: transparent;
+          line-height: 48px\9;
+        }
+      }
+      .inner_safe{
+        height: 37px;
+        .u-auto{
+          float: left;
+          color: #1e1e1e;
+        }
+        .u-forget{
+          float: right;
+          a{
+            color: #ffa800;
+          }
+        }
+      }
+      .inner_logIn{
+        height: 42px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+        a{
+          width: 100%;
+          height: 42px;
+          line-height: 42px;
+          background-color: #ffa800;
+          float: left;
+          color:  @bgColor;
+          font-size: 18px;
+          border-radius: 5px;
+        }
+      }
+      .inner_third{
+        height: 103px;
+        margin-right: -50px;
+        li{
+          float: left;
+          width: 70px;
+          text-align: center;
+          margin-right: 50px;
+        }
+        .i_third_icon{
+          width: 70px;
+          height: 70px;
+          float: left;
+          background:url("@{imgPath}third_p.jpg") left top no-repeat;
+          &.i_third_icon2{
+            background-position: -75px 0;
+          }
+          &.i_third_icon3{
+            background-position: -150px 0;
+          }
+        }
+        p{
+          height: 33px;
+          line-height: 33px;
+          color: #999;
+        }
+      }
+    }
+  }
+}
+
+/*微信二维码*/
+.WeChatCode{
+  background-color: #333;
+  min-height: 1000px;
+  text-align: center;
+  img{
+    margin-top: 115px;
+  }
+}
+/*绑定成功*/
+.bindingSuccess{
+  text-align: center;
+  height: 626px;
+  position: relative;
+  img{
+    margin-top: 165px;
+  }
+  p{
+    font-size: 24px;
+    color: #ff8200;
+    margin-top: 30px;
+  }
+  .bd_link{
+    width: @docWidth;
+    margin:0 auto;
+  }
+  ul{
+    height: 30px;
+    width: 378px;
+    margin-top: 40px;
+    margin-left: 311px;
+    *margin-left:0;
+    li{
+      float: left;
+      margin-right: 12px;
+    }
+    a{
+      float: left;
+      width: 112px;
+      height: 28px;
+      line-height: 28px;
+      text-align: center;
+      color: #ff8200;
+      border:1px solid #ff8200;
+    }
+  }
+}
+
+/* qq登录页 */
+
+.QQ_login{
+  padding: 124px 0 76px;
+  .qq_inner{
+    width: 1000px;
+    margin: 0 auto;
+  }
+  .qq_inner_l{
+    width:500px;
+    float: left;
+    h3,p,ul{
+      padding:0 88px 0 100px;
+    }
+    h3{
+      color: #1e1e1e;
+      font-size: 24px;
+      height: 38px;
+      line-height: 1;
+    }
+    p{
+      font-size: 14px;
+      color: #999;
+      height: 44px;
+      line-height: 1;
+    }
+  }
+
+  input{
+    height: 38px;
+    width: 290px;
+    padding:0 9px;
+    background-color: transparent;
+  }
+  li{
+    margin-bottom: 20px;
+    border: 1px solid #d2d2d2;
+    &.qq_login{
+      border:none;
+      input{
+        background-color: #ff3434;
+        border-color: #ff3434;
+        width: 100%;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 3px;
+        margin-top: 10px;
+        cursor:pointer;
+      }
+    }
+  }
+  .u-error{
+    border:1px solid #ff3434;
+    /*transition:all 0.5s;*/
+    .u-err{
+     transition:height 0.5s;
+      height: 20px;
+      /*width: 238px;*/
+    }
+
+  }
+
+  .qq_inner_r{
+    float: left;
+    width:332px;
+    /*padding-right: 58px;*/
+    margin-right: 58px;
+    background:url("@{imgPath}third_qq_bg.jpg") right bottom no-repeat;
+    height: 428px;
+    padding-left: 110px;
+    ul{
+      padding-left: 73px;
+      border-left: 1px solid #eee;
+      height: 370px;
+
+    }
+    h3{
+      color: #818181;
+      font-size: 16px;
+      height: 45px;
+      line-height: 1;
+      border-left: 1px solid #eee;
+      padding-left: 73px;
+    }
+    input{
+      width: 236px;
+    }
+    li{
+      /*border:1px solid #d2d2d2;*/
+      &.qq_login{
+        border:none;
+        a{
+          display: inline-block;
+          width: 100%;
+          height:38px;
+          border:1px solid #ff9600;
+          background-color: #fff;
+          color: #ff9600;
+          text-align: center;
+          line-height: 38px;
+          font-size: 18px;
+          border-radius: 3px;
+        }
+      }
+    }
+    .u-error{
+      border:1px solid #ff3434;
+      /*transition:all 0.5s;*/
+      .u-err{
+       transition:height 0.5s;
+        height: 20px;
+        /*width: 238px;*/
+      }
+
+    }
+  }
+}
+
+input::-ms-clear, input::-ms-reveal{display: none;}

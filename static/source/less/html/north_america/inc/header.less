@@ -1,0 +1,84 @@
+@headerUrl:"../../../images/html/north_america/";
+.header{
+	width:1000px;
+	height:65px;
+	margin:15px auto 0;
+	.logo{
+		float:left;
+	}
+	.talk-logo{
+		position:relative;
+		float:left;
+		display:inline-block;
+		width:143px;
+		height:48px;
+		margin-right:20px;
+		background:url('@{headerUrl}talk_logo.jpg') center center no-repeat;
+		&:after{
+			display:inline-block;
+			position:absolute;
+			right:-10px;
+			top:5px;
+			width:1px;
+			height:40px;
+			background:#e1e1e1;
+			content:'';
+		}
+	}
+	.item-logo{
+		display:inline-block;
+		width:118px;
+		height:42px;
+		margin-top:5px;
+		background:url('@{headerUrl}item_logo.jpg') center top no-repeat;
+	}
+	.subnav{
+		float:right;
+		text-align:right;
+		.subnav-lst{
+			position:relative;
+			li{
+				float:left;
+			}
+		}
+		.weixin-dialog,.weibo-dialog{
+			display:none;
+			position:absolute;
+		}
+		.weibo-dialog {
+			right:-9px;
+			width:120px;
+			height:50px;
+			background:url('@{headerUrl}icon.png') center center no-repeat;
+			z-index:99;
+			a{
+				display:block;
+				width:100%;
+				height:100%;
+				margin:0;
+			}
+		}
+		.weixin-dialog{
+			right:-50px;
+			z-index:99;
+		}
+		a{
+			margin-left:10px;
+		}
+		.member-center,.quit{
+			margin-left:5px;
+		}
+		.tel{
+			margin-top:5px;
+			font-size:18px;
+			&:before{
+				display:inline-block;
+				width:16px;
+				height:16px;
+				margin-right:5px;
+				background:url('@{headerUrl}tel.jpg') center center no-repeat;
+				content:'';
+			}
+		}
+	}
+}

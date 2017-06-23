@@ -1,0 +1,1 @@
+define("lazyLoad",[],function(r,o,t){!function(r,o){var t,c,n,e;t=r("[_src]"),c=r(o),n=c.height(),e=function(){0==t.filter("[_src]").length&&c.off("scroll.k");var o=c.scrollTop();t.each(function(t,c){var e=r(c),f=e.attr("_src");if(f){var a=e.offset().top,i=e.height(),l=o+n>a,s=a+i>o;l&&s&&e.attr("src",f).removeAttr("_src")}})},c.on("scroll.k load",e)}(jQuery,window)});

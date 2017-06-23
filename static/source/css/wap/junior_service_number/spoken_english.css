@@ -1,0 +1,143 @@
+@charset "utf-8";
+/*!
+ * http://www.51Talk.com
+ * copyright (c) 2015 51Talk
+ */
+input,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.class-box .bg {
+  background-color: #ffc602;
+}
+.class-box .form-box {
+  height: auto;
+  font-size: 1.4rem;
+  color: #727171;
+  padding: 18px 33px 20px;
+}
+.class-box .form-box .input-box {
+  margin-bottom: 10px;
+  height: 3.3rem;
+  line-height: 3.1rem;
+  border-radius: 3px;
+  background-color: #fff;
+  position: relative;
+}
+.class-box .form-box .input-box input {
+  font-size: 1.4rem;
+  color: #000;
+  padding-left: 10px;
+}
+.class-box .form-box .input-box select {
+  -webkit-appearance: none;
+  background: url(../../../images/wap/junior_service_number/down.png?v=zGmXenFqkoIakGhRhEZt5A%3D%3D) no-repeat 95% transparent;
+  background-size: 20px 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #000;
+  width: 100%;
+  font-size: 1.4rem;
+}
+.class-box .form-box .input-box select option {
+  padding-left: 10px;
+}
+.class-box .form-box .input-box .phone {
+  width: 90%;
+}
+.class-box .form-box .input-box .input-w {
+  width: 55%;
+}
+.class-box .form-box .code-img {
+  margin-bottom: 10px;
+  position: relative;
+}
+.class-box .form-box .code-img .c-l-box {
+  height: 3.3rem;
+  line-height: 3.1rem;
+  border-radius: 3px;
+  background-color: #fff;
+  margin-right: 9.5rem;
+}
+.class-box .form-box .code-img .c-l-box input {
+  font-size: 1.4rem;
+  color: #000;
+  padding-left: 10px;
+  width: 90%;
+}
+.class-box .form-box .code-img .c-r-box {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  width: 9rem;
+  height: 3.3rem;
+  line-height: 3.1rem;
+  border-radius: 3px;
+  background-color: #dfe0e0;
+  right: 0;
+}
+.class-box .form-box .code-img .c-r-box .get-code {
+  height: 3.3rem;
+  line-height: 3.5rem;
+  background-color: #c102cd;
+  color: #fff;
+  display: block;
+  border-radius: 3px;
+}
+.class-box .form-box .code-img .c-r-box img {
+  width: 80px;
+}
+.class-box .form-box .code-img .c-r-box .count-down {
+  display: none;
+}
+.class-box .form-box .btn {
+  display: block;
+  text-align: center;
+  height: 3.3rem;
+  line-height: 3.3rem;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  background-color: #c102cd;
+  border-radius: 3px;
+}
+.class-box .img-box img {
+  width: 100%;
+  display: block;
+  vertical-align: bottom;
+}
+.bottom {
+  position: fixed;
+  height: 45px;
+  display: none;
+  line-height: 45px;
+  width: 100%;
+  background-color: #919292;
+  font-size: 18px;
+  max-width: 640px;
+  bottom: 0;
+}
+.bottom span {
+  display: inline-block;
+}
+.bottom a {
+  display: inline-block;
+  width: 145px;
+  background-color: #c102cd;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+}
+.bottom .o-price {
+  color: #231815;
+  margin-left: 20px;
+  text-decoration: line-through;
+}
+.bottom .n-price {
+  color: #fff;
+}
+.hide {
+  display: block;
+}

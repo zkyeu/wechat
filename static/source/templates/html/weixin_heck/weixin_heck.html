@@ -28,7 +28,8 @@ if(user != "1420"){
         groupheader : "/images/html/weixin_heck/groupheader.jpg",
         groupShield : "/images/html/weixin_heck/groupshield.jpg",
         v_code : '',
-        ws_host: 'yafwechat.51talk.com:8801',
+        ws_host: '',
+        isLocal: true,
         fileicon : "/images/html/weixin_heck/file_icon.png",
         user_group:'2',
         userGroupList:[{"id":"1","name":"\u6210\u4ebaCC","amount":"0"},{"id":"2","name":"\u6210\u4ebaSS","amount":"0"},{"id":"3","name":"\u9752\u5c11CC","amount":"29"},{"id":"4","name":"\u9752\u5c11SS","amount":"0"},{"id":"5","name":"\u7f8e\u5c0fCC","amount":"13"},{"id":"6","name":"\u7f8e\u5c0fCST","amount":"0"},{"id":"7","name":"\u8fbe\u62c9\u65af","amount":"0"},{"id":"8","name":"B2S","amount":"0"}],
@@ -36,32 +37,16 @@ if(user != "1420"){
         nick_name:'liliang小号',
         is_trust:'0',//1为替代者。0为正常登陆
         trust_user:'0',
-        admin_type : "is", //cc 或者is
+        admin_type : "cc", //cc 或者is
 //        labelList : ["\u65b0\u8d2d\u4e70","\u5feb\u5230\u671f","\u5df2\u8fc7\u671f","\u65ad\u8bfe","\u9ad8\u9891"]
       labelList : {
           "1": [{"id": "14", "tag_name": "已付费", "type": "1", "user_group": "3", "status": "1", "tag_short": "付", "tag_brief": "付费的学员", "tag_class": "1", "tag_posion": "1"}, {"id": "15", "tag_name": "已体验", "type": "1", "user_group": "3", "status": "1", "tag_short": "体", "tag_brief": "", "tag_class": "1", "tag_posion": "2"}, {"id": "16", "tag_name": "已约课", "type": "1", "user_group": "3", "status": "1", "tag_short": "约", "tag_brief": "", "tag_class": "1", "tag_posion": "3"}, {"id": "17", "tag_name": "未约课", "type": "1", "user_group": "3", "status": "1", "tag_short": "未", "tag_brief": "", "tag_class": "1", "tag_posion": "4"}, {"id": "36", "tag_name": "缺席与取消", "type": "1", "user_group": "3", "status": "1", "tag_short": "缺", "tag_brief": "", "tag_class": "1", "tag_posion": "5"} ], "2": [{"id": "18", "tag_name": "高意向", "type": "1", "user_group": "3", "status": "2", "tag_short": "高", "tag_brief": "", "tag_class": "2", "tag_posion": "1"}, {"id": "19", "tag_name": "中意向", "type": "1", "user_group": "3", "status": "2", "tag_short": "中", "tag_brief": "", "tag_class": "2", "tag_posion": "2"}, {"id": "20", "tag_name": "低意向", "type": "1", "user_group": "3", "status": "2", "tag_short": "低", "tag_brief": "", "tag_class": "2", "tag_posion": "3"} ]
       },
       // 微信小助手
-      wxHelper : [
-          {
-              id : "999",
-              c_remark : "黑鸟小助手1",
-              c_type : "0",
-              img : "/images/html/weixin_heck/wxHelperHead.jpg",
-              label : "",
-              nick : "黑鸟小助手",
-              type :"ios"
-          },
-          {
-              id : "998",
-              c_remark : "黑鸟小助手2",
-              c_type : "0",
-              img : "/images/html/weixin_heck/wxHelperHead.jpg",
-              label : "",
-              nick : "黑鸟小助手",
-              type :"ios"
-          }
-      ]
+      wxHelper : {
+          id : "999",
+          nick : "黑鸟小助手"
+      }
   }
 }else{
   localInfo = {

@@ -434,6 +434,26 @@ define("helperChat", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
             // console.log(id, wxHeck.wxInit.wxData.userList);
             return $.inArray(id, wxHeck.wxInit.wxData.userList) > -1;
         }
+
+        wxHeck.flashTitle = wxHeck.Util.flashText();
+
+        wxHeck.flashTitleFn = (function(){
+            var title = document.title;
+            return {
+                set : function(text){
+                   wxHeck.flashTitle.set(text, function (flashText) {
+                        document.title = flashText;
+                    });
+                },
+                reset : function(cb){
+                    wxHeck.flashTitle.reset(function(){
+                        document.title = title;
+                        typeof(cb) == "function" && cb();
+                    });
+                }
+            }
+        })();
+
         // 联系人搜索框组件
         var userSel = Vue.extend({
             template: "#weixin_sel_bom",
@@ -4299,40 +4319,54 @@ define("helperChat", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                         curid:{
                             typeId:'',
                             groupId:'',
-                            userList:[]
+                            userList:[],
+                            organization_alias:''
                         }
-                    }
+                    },
+                    groupsData : {},
+                    groupsSel : []
                 }
             },
             methods:{
-                getGroup: function(id,num){
-                    this.userGroupList.curid.typeId = id;
-                    if(!num){
-                        //当前类型暂无组别
-                    }
+                getGroup: function(id){
                     var that = this;
-                    wxHeck.getData({
-                        url:'/BlackBirdHelper/ajaxUserGroupList',
-                        data:{
-                            user_group:id
-                        },
-                        success:function(data){
-                            if(data.status !=10000) return _alert(data.message);
-                            that.userGroupList.groups = data.message;
+                    var data = that.groupsData[id];
+                    if(!data){
+                        wxHeck.getData({
+                            url:'/BlackBirdHelper/ajaxUserGroupList',
+                            data:{
+                                user_group:id
+                            },
+                            success:function(data){
+                                if(data.status !=10000) return _alert(data.message);
+                                var adminIdList = $.map(data.message, function(ele, index){
+                                    return ele.admin_id;
+                                });
+                                that.groupsData[id] = adminIdList;
+                                that.list = that.list.concat(adminIdList);
+                                that.groupsSel.push(id);
+                            }
+                        });
+                    }else{
+                        if(that.groupsSel.indexOf(id) > -1){
+                            $.map(that.groupsData[id], function(ele, index){
+                                that.list.$remove(ele);
+                            });
+                            that.groupsSel.$remove(id);
+                        }else{
+                            that.list = that.list.concat(data);
+                            that.groupsSel.push(id);
                         }
-                    });
-                    this.$nextTick(function(){
-                        $(".helper-sel").wxScroll();
-                    });
-                },
-                getDetails:function(id){
-                    this.userGroupList.curid.groupId = id;
+                    }
+                }
+                /*getDetails:function(id){
+                    this.userGroupList.curid.organization_alias = id;
                     var that = this;
                     wxHeck.getData({
                         url:'/BlackBirdHelper/ajaxUserGroupList',
                         data:{
                             user_group:that.userGroupList.curid.typeId,
-                            group_id:id
+                            organization_alias:id
                         },
                         success:function(data){
                             if(data.status !=10000) return _alert(data.message);
@@ -4348,7 +4382,7 @@ define("helperChat", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                         this.list.push(id);
                     }
 
-                }
+                }*/
             },
             events : {
                 helperSelOpen : function(){
@@ -4365,7 +4399,8 @@ define("helperChat", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                     this.$root.changeUser(this.curUserIdMark);
                     this.curUserIdMark = "";
                     this.list = this.userGroupList.groups = this.userGroupList.details = [];
-                    this.userGroupList.curid.typeId = this.userGroupList.curid.groupId = "";
+                    this.userGroupList.curid.typeId = this.userGroupList.curid.organization_alias = "";
+                    this.groupsSel = [];
                     this.show = false;
                 }
             },
@@ -5859,8 +5894,8 @@ define("helperChat", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                                 $.map(r.message, function (ele, index) {
                                     ;
                                     (function () {
-                                        // 如果为获取未读 则不需要给score赋值
-                                        if (configs.isGetNoRead) return;
+                                        /*// 如果为获取未读 则不需要给score赋值
+                                        if (configs.isGetNoRead) return;*/
                                         // 取第一条的时间戳作为新的score
                                         if (index == r.message.length - 1) {
                                             that.wxData.msgList[curUserId].historyMsg.score = ele.time;
@@ -6545,13 +6580,9 @@ define("helperChat", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                 },
                 noReadAll: function (value) {
                     if (value > 0) {
-                        wxHeck.flashText && wxHeck.flashText.clearFlash();
-                        wxHeck.flashText = wxHeck.Util.flashText("您有新的消息！", function (text) {
-                            document.title = text;
-                        });
+                        wxHeck.flashTitleFn.set("您有新的消息！");
                     } else {
-                        wxHeck.flashText && wxHeck.flashText.clearFlash();
-                        document.title = wxHeck.title;
+                        wxHeck.flashTitleFn.reset();
                     }
                 }
             }
@@ -6607,6 +6638,8 @@ define("helperChat", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                 }
                 // 登入成功
                 that.enter = function (data) {
+                    // enter时间
+                    wxHeck.enterTime = data.time || (new Date).getTime();
                     wxHeck.wxInit.userProgress.isFirst = false;
                     // 假数据
                     /*wxHeck.msgHandler.add_users_res({
@@ -6850,7 +6883,7 @@ define("helperChat", ["niceScroll", "vm", "fancybox", "weixinUtil", "editImg", "
                                         // 是否拉取完所有的历史纪录
                                         isGetAll: false,
                                         // score
-                                        score: Date.parse(new Date())
+                                        score: wxHeck.enterTime
                                     },
                                     // 未读消息中的第一条的时间戳
                                     time: time,

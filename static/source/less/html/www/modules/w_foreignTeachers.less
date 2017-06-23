@@ -1,0 +1,209 @@
+.teachers{
+  .teacherT_tit{
+    .tac;
+    margin-bottom: 50px;
+  }
+  .teacherT{
+    width: @docWidth;
+    margin:0 auto;
+    margin-bottom: 77px;
+    padding-top: 80px;
+    .tac;
+    .c_orange{
+      color:@titleColor;
+    }
+  }
+  .teacherT_text{
+    margin-bottom: 50px;
+    .tac;
+    a{
+      padding:14px 19px;
+      line-height: 58px;
+      color: @white;
+      font-size: 22px;
+      background-color: @oraBtn;
+      border-radius: 5px;
+    }
+    a:hover{
+      background-color: @oraBtnHover;
+    }
+    a:active{
+      background-color:@oraBtnActive;
+    }
+  }
+  .teacherT_list{
+    height: 370px;
+    li{
+      width: 284px;
+      float: left;
+      .tac;
+      &.teacherT_l_w{
+        width: 432px;
+
+      }
+    }
+    .teacherT_img{
+      width: 170px;
+      height: 170px;
+      margin:0 auto;
+      margin-bottom: 20px;
+      &.teacherT_img1{
+        background-position: 0 0;
+      }
+      &.teacherT_img2{
+        background-position: -170px 0;
+      }
+      &.teacherT_img3{
+        background-position: -340px 0;
+      }
+    }
+    h3{
+      line-height: 1;
+      font-size: 24px;
+      height: 53px;
+      color:@titleColor;
+    }
+    .teacher_b{
+      line-height: 1;
+      font-size: 16px;
+      height: 28px;
+      color: @textColor;
+    }
+    .teacher_c{
+      width: 284px;
+      margin:0 auto;
+      color: @textColorGay;
+      font-size: 13px;
+      line-height: 24px;
+    }
+  }
+  .teacherB{
+    padding-top: 80px;
+    background-color: #efefef;
+    .teacherB_width{
+      width: @docWidth;
+      margin:0 auto;
+    }
+  }
+  .teacherB_cont{
+    overflow: hidden;
+  }
+  .teacherB_list{
+    height: 472px;
+    margin-right: -32px;
+    margin-bottom: 42px;
+    li{
+      width: 140px;
+      height: 236px;
+      float: left;
+      margin-right: 32px;
+      .tac;
+    }
+    h3{
+      font-size: 14px;
+      height: 26px;
+      line-height: 1;
+      color: @textColor;
+    }
+  }
+  .teacherB_img{
+    width: 140px;
+    height: 140px;
+    margin-bottom: 16px;
+    position: relative;
+    span{
+      width: 43px;
+      height: 43px;
+      position: absolute;
+      right: 8px;
+      bottom: 8px;
+      background-position: -394px -173px;
+    }
+    img{
+      width: 140px;
+    }
+  }
+  .teacherB_star{
+    height: 14px;
+    overflow: hidden;
+    span{
+      display: inline-block;
+      width: 15px;
+      height: 14px;
+      background-position: -481px -193px;
+      margin:0 1px;
+      vertical-align: top;
+    }
+  }
+}
+// 青少外教改动
+.ten_teacherT_list{
+  .teacherT{
+    .teacherT_img{
+      background-image: url("@{imgPath}teachersIcon.png");
+      &.teacherT_img2{
+          background-position: -340px 0;
+        }
+      &.teacherT_img3{
+         background-image: url("@{imgPath}teachersIcon01.png");
+        background-position: -340px 0;
+      }
+    }
+  }
+  .teacherT_text{
+    text-align: left;
+    text-indent: 34px;
+    margin-bottom: 70px;
+    a{
+      width: 350px;
+      height: 50px;
+      line-height: 50px;
+      color: @white;
+      font-size: 22px;
+      position: relative;
+      display: block;
+      margin:0 auto;
+      background-image: url("@{imgPath}teachersIcon.png");
+      background-repeat: no-repeat;
+      background-position: 0 -171px;
+      border:none;
+      background-color:transparent;
+      padding:0;
+      border-radius:0;
+    }
+    a:hover{
+      background-color: transparent;
+      background-position: 0 -332px;
+    }
+    a:active{
+      background-color: transparent;
+      background-position: 0 -279px;
+    }
+    .teacher_icon{
+      width: 36px;
+      height: 36px;
+      position: absolute;
+      right: 6px;
+      top:6px;
+      background-image: url("@{imgPath}teachersIcon.png");
+      background-repeat: no-repeat;
+      background-position:-355px -177px;
+    }
+  }
+  .teacherT_list{
+    height: 304px;
+    width: 100%;
+    li{
+      width: 33.3%;
+    }
+    h3{
+      height: 42px;
+      line-height: 1;
+    }
+    p{
+      font-size: 16px;
+      line-height: 24px;
+      color: @textColor;
+    }
+  }
+}

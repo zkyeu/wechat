@@ -1,0 +1,311 @@
+@imgUrl:"../../../images/html/group_class/";
+@optionBg:#ffffee;
+@orange:#ff6d02;
+@border:#dec125;
+.fourth-grade{
+	margin-top:10px;
+	.common-bg{
+		width:785px;
+		height:540px;
+		padding:50px 85px 0 130px;
+		background-position:top center;
+		h2{
+			font-size:24px;
+			color:@orange;
+			font-weight:bold;
+		}
+		.play-wrap{
+			height:125px;
+			margin:15px 0;
+			.play-btn{
+				float:left;
+				display:inline-block;
+				width:80px;
+				height:80px;
+				margin:20px 30px 0 0;
+				background:url('@{imgUrl}play-normal.png') no-repeat;
+				cursor:pointer;
+				&:hover{
+					margin-top:17px;
+				}
+			}
+			.playing{
+				background:url('@{imgUrl}playing.gif') no-repeat;
+			}
+			.pic{
+				float:left;
+				width:140px;
+				height:118px;
+				background:#fff url('@{imgUrl}fourth_grade.png') no-repeat;
+				border:@border solid 2px;
+			}
+		}
+		h3{
+			font-size:20px;
+			color:#666;
+			font-weight:bold;
+		}
+		.option{
+			ul{
+				counter-reset:li;
+			}
+			li{
+				height:45px;
+				line-height:45px;
+				margin-top:8px;
+				padding-left:25px;
+				font-size:20px;
+				color:#dbbc09;
+				font-weight:bold;
+				border-radius:10px;
+				background:@optionBg;
+				border:@border solid 2px;
+				&:before{
+					margin-right:5px;
+					content:counter(li,upper-latin) + ': ';
+					counter-increment:li;
+				}
+				&:hover{
+					border:#efa500 solid 2px;
+				}
+			}
+			.current{
+				border:#ea7118 solid 2px;
+				background:#ea7118;
+				color:#fff;
+				&:hover{
+					border-color:#ea7118;
+				}
+			}
+		}
+	}
+	.first-question{
+		.play-wrap{
+			.pic{
+				background-position:-167px 0;
+			}
+		}
+	}
+	.second-question{
+		.play-wrap{
+			.pic{
+				background-position:-173px -180px;
+			}
+		}
+	}
+	.third-question{
+		.play-wrap{
+			.pic{
+				background-position:-663px 0;
+			}
+		}
+	}
+	.fourth-question{
+		.play-wrap{
+			.pic{
+				background-position:-333px 0;
+			}
+		}
+	}
+	.fifth-question{
+		.play-wrap{
+			.pic{
+				background-position:-10px -180px;
+			}
+		}
+	}
+	.sixth-question, .seventh-question, .eighth-question, .ninth-question, .tenth-question, .eleventh-question, .twelfth-question, .thirteenth-question{
+		h3{
+			margin:10px 0 15px;
+		}
+		.option{
+			li{
+				margin-top:15px;
+			}
+		}
+	}
+	.fourteenth-question{
+		position:relative;
+		.content{
+			margin-top:15px;
+			font-size:20px;
+			font-weight:bold;
+			color:#dbbc09;
+			.pic{
+				float:right;
+				width:140px;
+				height:118px;
+				margin-left:15px;
+				background:url('@{imgUrl}fourth_grade.png') no-repeat;
+			}
+		}
+		.list-select{
+			.list{
+				display:none;
+				position:absolute;
+				z-index: 999;
+				background: #fff;
+				color: #f8d200;
+				border: #f8d200 solid 2px;
+				font-size: 20px;
+				font-weight: bold;
+				padding: 0px 8px;
+				width: 180px;
+				cursor: pointer;
+			}
+			ul{
+				counter-reset:li;
+			}
+			li{
+				line-height: 38px;
+				height: 38px;
+				&:hover{
+					color: #efa500;
+				}
+				&:before{
+					content:counter(li,upper-latin) + ':';
+					counter-increment:li;
+				}
+			}
+		}
+		p{
+			padding:15px 0;
+			font-size:20px;
+			font-weight:bold;
+			color:#666;
+			span{
+			    display: inline-block;
+			    padding:0 15px;
+			    color: #dbbc09;
+			    border-bottom: solid 2px #dbbc09;
+			    position: relative;
+			    cursor: pointer;
+			    font-size: 18px;
+			    height: 20px;
+			    text-align: center;
+			    &:after{
+			    	width: 12px;
+					height: 8px;
+					content: "1";
+					text-indent: -10000px;
+					display: block;
+					background:url('@{imgUrl}jiao.png') 0 0 no-repeat;
+					position: absolute;
+					top: 10px;
+					right: 0;
+			    }
+			}
+		}
+	}
+	.fifteenth-question{
+		.content{
+			margin-top:15px;
+			font-size:20px;
+			font-weight:bold;
+			color:#dbbc09;
+			.pic{
+				float:right;
+				width:140px;
+				height:118px;
+				margin-left:15px;
+				background:url('@{imgUrl}fourth_grade.png') -496px 0 no-repeat;
+			}
+		}
+		.lastone{
+			li{
+				float:left;
+				margin:0;
+				margin-right:20px;
+				padding:0;
+				font-size:18px;
+				border:none;
+				background:none;
+				cursor:default;
+				&:hover{
+					background:none;
+					color:#efa500;
+					border:none;
+				}
+			}
+			.current{
+				background:none;
+				color:#ea7118;
+				border:none;
+				&:hover{
+					background:none;
+					border:none;
+				}
+			}
+		}
+		.eighteenth-question{
+			margin-top:15px;
+		}
+	}
+	.sixteenth-question{
+		.content{
+			font-size:20px;
+			font-weight:bold;
+			color:#dbbc09;
+			.pic{
+				float:right;
+				width:140px;
+				height:118px;
+				margin-left:15px;
+				background:url('@{imgUrl}fourth_grade.png') -496px 0 no-repeat;
+			}
+		}
+		.nineteenth-question{
+			.lastone{
+				li{
+					&:after{
+						display:inline-block;
+						width:113px;
+						height:29px;
+						content:'';
+						background:url('@{imgUrl}fourth_grade.png') no-repeat;
+						vertical-align:text-bottom;
+					}
+					&:nth-child(1){
+						&:after{
+							width:122px;
+							background-position:-346px -223px;
+						}
+					}
+					&:nth-child(2){
+						&:after{
+							background-position:-516px -224px;
+						}
+					}
+					&:nth-child(3){
+						&:after{
+							background-position:-683px -223px;
+						}
+					}
+					&:nth-child(4){
+						&:after{
+							background-position:-18px -414px;
+						}
+					}
+				}
+				.current{
+					color:#fff;
+				}
+			}
+
+		}
+	}
+	.seventeenth-question{
+		.content{
+			font-size:20px;
+			font-weight:bold;
+			color:#dbbc09;
+			.pic{
+				float:right;
+				width:140px;
+				height:118px;
+				margin-left:15px;
+				background:url('@{imgUrl}fourth_grade.png') -496px 0 no-repeat;
+			}
+		}
+	}
+}

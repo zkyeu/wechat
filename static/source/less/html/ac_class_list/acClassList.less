@@ -1,0 +1,321 @@
+// 图片path
+@imgMpath: "../../../images/html/ac_class_list/";
+
+.acClassList{
+    min-width: 840px;
+    padding: 10px;
+    .banner{
+        width: 740px;
+        height: 68px;
+        line-height: 68px;
+        padding-left: 100px;
+        margin: 0px auto 0px;
+        color:#ff8020;
+        font-size: 16px;
+        border-radius: 8px;
+        border:1px solid #ff8020;
+        background:url("@{imgMpath}notice.png") no-repeat left;
+    }
+    .class_number{
+        font-size: 16px;
+        padding:30px 0 20px;
+        span{
+            color: #a3a3a3;
+        }
+    }
+    .find_class_list{
+        border-bottom: 1px solid #e5e5e5;
+        padding-bottom: 10px;
+        .float{
+            font-size: 16px;
+            float: left;
+            padding-right:10px;
+            line-height: 30px;
+            border-radius: 4px;
+            border:1px solid #e5e5e5;
+            height: 30px;
+            margin-right: 10px;
+            p{
+                padding-right: 20px;
+                padding-left:10px; 
+                background:url("@{imgMpath}select.png") no-repeat right;
+                cursor: pointer;
+            }
+            .both_s{
+                background-position-x:140px; 
+            }
+            ul{
+                background: #fff;
+                text-align: center;
+                border-radius: 4px;
+                border:1px solid #e5e5e5;
+                position: relative;
+                top:11px;
+                display: none;
+                z-index: 999;
+                li{
+                    cursor: pointer;
+                    color:#8e8e8e;
+                    &:hover{
+                        background-color: #f1f1f1;
+                        color:#3a3a3a;
+                    }
+                }
+                &:after{
+                    position: absolute;
+                    content: "";
+                    width: 22px;
+                    height: 9px;
+                    top:-9px;
+                    background: url("@{imgMpath}raduis.png") no-repeat;
+                }
+            }
+        }
+        .choose_class{
+            width: 95px;            
+            ul{
+                width: 105px;
+            }
+            
+        }
+        .choose_time{
+            width: 120px;
+            ul{
+                width: 130px;
+            }
+        }
+        .choose_classTap{
+            width: 95px;
+            ul{
+                width: 105px;
+            }
+        }
+        .choose_select{
+            width: 360px;
+            position: relative;
+            p{
+                background-color: #eeeeee;
+                //background-position: 100px;
+            }
+            ul{
+                width: 130px;
+            }
+            .select_box{
+                float: left;
+                width: 165px;
+            }
+            input{
+                position: absolute;
+                height: 26px;
+                width: 170px;
+                top:0;
+                width: 193px;
+                padding-left: 10px;
+                border: 1px solid #fff;
+                &.cli{
+                    border: 1px solid #ff8020;
+                }
+            }
+        }
+        .search{
+            padding: 0 15px;
+            background-color:#ff8020;
+            color:#fff;
+            cursor: pointer;
+            margin-right: 0;
+        }
+        .sub_btn{
+            display: none;
+        }
+    }
+    .class_message{
+        .class_box{
+            font-size: 16px;
+            //padding:10px 0;
+            .start_time{
+                float: left;
+                padding:10px 0;
+                color: #ff8020;
+                padding-left: 24px;
+                padding-right: 10px;
+                background: url("@{imgMpath}icon-ra.png") no-repeat left;
+            }
+            .time_gray{
+                color:#d7d7d7;
+                background: url("@{imgMpath}icon_gray.png") no-repeat left;
+            }
+            .class_right{
+                padding:15px 0 10px 0;
+                border-bottom: 1px dotted #e6e6e6;
+                margin-left: 78px;
+                .lesson_image{
+                    position: relative;
+                    width: 130px;
+                    height: 100px;
+                    float: left;
+                    img{
+                        width: 130px;
+                        height: 100px;
+                    }
+                    p{
+                        width: 100%;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        height: 18px;
+                        line-height: 18px;
+                        text-align: center;
+                        color: #fff;
+                        font-size: 12px;
+                        background-color: rgba(0, 0, 0, 0.6) 
+                    }
+                    span{
+                        position: absolute;
+                        top:-4px;
+                        left: -4px;
+                        display: block;
+                        width: 56px;
+                        height: 56px;
+                        background: url("@{imgMpath}lesson-icon.png") no-repeat;
+                    }
+                    .icon_1{
+                        background-position: 0 0;
+                    }
+                    .icon_2{
+                        background-position: 0 -70px;
+                    }
+                    .icon_3{
+                        background-position: 0 -145px;
+                    }
+                    .icon_4{
+                        background-position: 0 -218px;
+                    }
+                }
+                .lesson_mesage{
+                    float: left;
+                    padding-left: 15px;
+                    max-width: 470px;
+                    .title{
+                        font-size: 16px;
+                        color:#474747;
+                        padding-bottom: 50px;
+                        max-width: 470px;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        cursor: pointer;
+                    }
+                    .inter_class{
+                        position: relative;
+                        .tips{
+                            display: none;
+                            z-index: 88;
+                            position: absolute;
+                            width: 310px;
+                            height: 108px;
+                            border: 1px solid #cccccc;
+                            background: #fff;
+                            left:40px;
+                            top:-127px;
+                            padding: 10px 0 0 10px;
+                            &:before{
+                                content: "";
+                                position: absolute;
+                                bottom: -6px;
+                                left: 122px;
+                                width: 12px;
+                                height: 6px;
+                                background: url("@{imgMpath}t-icon.png") no-repeat;
+                            }
+                            p{
+                                font-size: 12px;
+                                color:#b2b2b2;
+                                line-height: 32px;
+                                
+                                a{
+                                    color:#08008c;
+                                }
+                            }
+                            span{
+                                position: absolute;
+                                top:0px;
+                                right: 7px;
+                                cursor: pointer;
+                            }
+                        }
+                        .canot_in,.btn_in,.canot_do{
+                            float: left;
+                            display: block;
+                            height: 30px;
+                            line-height: 30px;
+                            text-align: center;   
+                        }
+                        .btn_in{
+                            width: 100px;
+                            
+                            background: #ff8020;
+                            color:#fff;
+                            font-size: 16px;
+                            border-radius: 4px;
+                        } 
+                        .canot_in{
+                            color:#b2b2b2;
+                            padding:0 8px 0 28px;
+                            position: relative;
+                            &:before{
+                                content: "";
+                                width: 1px;
+                                height: 14px;
+                                background: #b2b2b2;
+                                position: absolute;
+                                right: 0;
+                                top:9px;
+                            }
+                            &:hover{
+                                //background: #ccc;
+                            }
+                        }
+                        .in_gray{
+                            background:#d6d6d6; 
+                            color:#aeaeae;
+                        }
+                        .canot_do{
+                            color:#b2b2b2;
+                            padding-left: 10px;  
+                        }
+                    }
+                }
+                .lesson_school{
+                    text-align: center;
+                    width: 150px;
+                    float: right;
+                    border-left: 1px dotted #e6e6e6; 
+                    height: 100px;
+                    p{
+                        text-align: center;
+                        padding:20px 5px 15px 5px;
+                    }
+                    .more{
+                        cursor: pointer;
+                    }
+                    span{
+                        //display: block;
+                        border-radius: 999px;
+                        border:1px solid #ff8020;
+                        text-align: center;
+                        //min-width: 60px;
+                        padding: 3px 10px;
+                        height: 30px;
+                        line-height: 30px;
+                        color:#ff8020;
+                        margin: 0 auto;
+                    }
+                }
+                .lesson_class{
+                    padding-top: 30px;
+                    height: 70px;
+                }
+            }
+        }
+    }
+}
